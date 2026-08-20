@@ -6,35 +6,37 @@ Written for **developer advocates, DevRel leads, community managers and OSS main
 
 ## 📚 Related Collections
 
-- [`developer-platform-skills`](https://github.com/samber/developer-platform-skills) — Platform & SDK developer experience — _for platform engineers, DX engineers, SDK authors, API product managers, DevRel engineers_
-- [`dev-event-organizer-skills`](https://github.com/samber/dev-event-organizer-skills) — Technical event operations — _for event organizers, conference producers, hackathon leads, community builders_
+- [`developer-platform-skills`](https://github.com/samber/developer-platform-skills): Platform & SDK developer experience: _for platform engineers, DX engineers, SDK authors, API product managers, DevRel engineers_
+- [`dev-event-organizer-skills`](https://github.com/samber/dev-event-organizer-skills): Technical event operations: _for event organizers, conference producers, hackathon leads, community builders_
 
 _Part of the [samber skills ecosystem](https://github.com/samber?tab=repositories&q=skills)_
 
 ## Install
 
-Install every skill in this repo, not just one. Skills here are atomic by design and reference each other freely — picking a single skill leaves its sibling skills uninstalled, so cross-references and routed handoffs go nowhere.
+Install every skill in this repo, not just one. Skills here are atomic by design and reference each other freely: picking a single skill leaves its sibling skills uninstalled, so cross-references and routed handoffs go nowhere.
 
-**skills.sh (universal)** — works with any Agent Skills-compatible tool:
+**skills.sh (universal)**: works with any Agent Skills-compatible tool:
 
 ```bash
 npx skills add samber/developer-relations-skills
 ```
 
-**Claude Code** — install the plugin:
+**Claude.ai**: add as a plugin marketplace: open **Settings -> Capabilities -> Plugins**, click **Add -> Add marketplace -> Add from a repository**, enter `samber/developer-relations-skills`, then **Sync**.
+
+**Claude Code**: install the plugin:
 
 ```bash
 /plugin marketplace add samber/cc
 /plugin install developer-relations-skills@samber
 ```
 
-**Codex (OpenAI)** — install via the Codex CLI:
+**Codex (OpenAI)**: install via the Codex CLI:
 
 ```bash
 codex plugin add github:samber/developer-relations-skills
 ```
 
-**Cursor** — copy into Cursor's skills directory:
+**Cursor**: copy into Cursor's skills directory:
 
 ```bash
 git clone https://github.com/samber/developer-relations-skills.git ~/.cursor/skills/developer-relations-skills
@@ -42,7 +44,7 @@ git clone https://github.com/samber/developer-relations-skills.git ~/.cursor/ski
 
 Cursor auto-discovers skills from `.agents/skills/` and `.cursor/skills/`.
 
-**Gemini CLI** — install as a Gemini extension:
+**Gemini CLI**: install as a Gemini extension:
 
 ```bash
 gemini extensions install https://github.com/samber/developer-relations-skills
@@ -54,11 +56,11 @@ Update with `gemini extensions update developer-relations-skills`.
 
 This collection covers the full developer-relations surface. Start here:
 
-- [`developer-relations-kickoff`](./developer-relations-kickoff) — Routes the current DevRel task to the right skill of this collection, or says plainly that none fits, then bootstraps or resumes the project's shared context artifact.
-- [`devrel-career`](./devrel-career) — Plans a DevRel career from the candidate side: portfolio audit against real hiring signals, the six-rung IC ladder, interview-loop prep, and offer evaluation.
-- [`devrel-hiring`](./devrel-hiring) — Plans DevRel hiring from the employer side: job posting and scorecard, interview loop and question bank, portfolio scoring, and a 30-60-90 ramp plan.
-- [`devrel-team-structure`](./devrel-team-structure) — Designs the DevRel org: the reporting line and what it starves, the team shape, the coverage map, the interlocks, and the trigger for the next re-org.
-- [`devrel-radar`](./devrel-radar) — Builds a time-budgeted watch list of DevRel podcasts, newsletters, communities, conferences and practitioners, plus the routine that keeps it verified and fresh.
+- [`developer-relations-kickoff`](./developer-relations-kickoff): Routes the current DevRel task to the right skill of this collection, or says plainly that none fits, then bootstraps or resumes the project's shared context artifact.
+- [`devrel-career`](./devrel-career): Plans a DevRel career from the candidate side: portfolio audit against real hiring signals, the six-rung IC ladder, interview-loop prep, and offer evaluation.
+- [`devrel-hiring`](./devrel-hiring): Plans DevRel hiring from the employer side: job posting and scorecard, interview loop and question bank, portfolio scoring, and a 30-60-90 ramp plan.
+- [`devrel-team-structure`](./devrel-team-structure): Designs the DevRel org: the reporting line and what it starves, the team shape, the coverage map, the interlocks, and the trigger for the next re-org.
+- [`devrel-radar`](./devrel-radar): Builds a time-budgeted watch list of DevRel podcasts, newsletters, communities, conferences and practitioners, plus the routine that keeps it verified and fresh.
 
 ### Strategy & planning
 
