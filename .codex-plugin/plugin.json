@@ -18,9 +18,13 @@
         "developer-advocacy",
         "oss",
         "developer-content",
-        "ai-agent-skills",
-        "agentic",
-        "skills"
+        "agent-skills",
+        "claude-code",
+        "claude-skills",
+        "codex",
+        "cursor",
+        "gemini-cli-extension",
+        "skills-sh"
     ],
     "skills": "./skills/",
     "interface": {
@@ -28,7 +32,9 @@
         "shortDescription": "AI agent skills for developer relations practice",
         "developerName": "Samuel Berthe",
         "category": "Developer",
-        "capabilities": ["Read"],
+        "capabilities": [
+            "Read"
+        ],
         "websiteURL": "https://github.com/samber/developer-relations-skills"
     }
 }

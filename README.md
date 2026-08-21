@@ -21,7 +21,12 @@ Install every skill in this repo, not just one. Skills here are atomic by design
 npx skills add samber/developer-relations-skills
 ```
 
-**Claude.ai**: add as a plugin marketplace: open **Settings -> Capabilities -> Plugins**, click **Add -> Add marketplace -> Add from a repository**, enter `samber/developer-relations-skills`, then **Sync**.
+**Claude.ai**:
+
+1. add as a plugin marketplace: open **Settings -> Capabilities -> Plugins**
+2. click **Add -> Add marketplace -> Add from a repository**
+3. enter `samber/developer-relations-skills`
+4. then **Sync**
 
 **Claude Code**: install the plugin:
 
