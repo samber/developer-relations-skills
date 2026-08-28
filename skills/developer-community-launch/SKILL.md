@@ -37,7 +37,7 @@ Ask these one at a time, multiple-choice when the options are knowable. Stop ask
 6. Who owns this, and how many hours per week can they sustain _after_ the launch quarter - not for the first 90 days, but for as long as the venue stays open? Can they be present most days, or only in batches?
 7. By what date must the first result land, and who judges it then?
 8. Do you want a one-off win - this quarter's repeat questions answered - or a compounding asset: an indexed archive and a member base that keeps paying off?
-9. Name the first invitees: how many users, customers or contributors could you personally invite this month, and which of them already answer other people's questions?
+9. Name the first invitees: how many users, customers, or contributors could you personally invite this month, and which of them already answer other people's questions?
 10. Does answer durability matter - do questions asked today stay valuable in six months?
 11. Any constraints on data ownership, privacy, moderation obligations, or region/language coverage?
 12. What would make you shut it down, and who gets to make that call?
