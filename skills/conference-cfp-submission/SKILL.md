@@ -181,7 +181,7 @@ Patterns worth using:
 Rules:
 
 - Respect the character cap; count the characters out loud.
-- Specific beats vague.
+- Prefer specific over vague.
 - Drop question marks, which are almost always weaker than the declarative version.
 - Drop puns that need explaining.
 - Drop product names at vendor-neutral events.
