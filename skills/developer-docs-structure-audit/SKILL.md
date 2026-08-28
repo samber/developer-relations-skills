@@ -118,7 +118,7 @@ Two disagreement types follow:
 - A page whose assigned mode disagrees with its section is a placement finding.
 - A page holding two modes is a mixing finding.
 
-Read [./references/diataxis-classification.md](./references/diataxis-classification.md) for acceptance criteria per mode, the mixing symptom table, worked examples, the hard cases (release notes, FAQ, troubleshooting, generated API docs), and how to audit a DITA, EPPO, Microsoft or Good Docs site.
+Read [./references/diataxis-classification.md](./references/diataxis-classification.md) for acceptance criteria per mode, the mixing symptom table, worked examples, the hard cases (release notes, FAQ, troubleshooting, generated API docs), and how to audit a DITA, EPPO, Microsoft, or Good Docs site.
 
 Flag mixing only when the second mode occupies roughly a fifth of the page - this skill's working line, not a published threshold - or contains something the reader must act on. Flagging every stray sentence produces a report nobody triages.
 
