@@ -143,7 +143,7 @@ Two well-sourced numbers beat six loose ones. Ratios travel better than absolute
 Don't:
 
 - Compute a number the customer did not confirm.
-- Annualise a one-month result.
+- Annualize a one-month result.
 - Attribute a business outcome to your product when the customer changed three things at once. Say what else changed.
 
 Hold this skill's own numbers to the same rule. [./references/evidence-and-sources.md](./references/evidence-and-sources.md) splits every threshold in this file into sourced or self-set. Quote a self-set baseline only as a working baseline - never to an adopter as an industry standard.
