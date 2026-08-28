@@ -59,9 +59,14 @@ Update with `gemini extensions update developer-relations-skills`.
 
 ## 📦 Skills
 
-This collection covers the full developer-relations surface. Start here:
+This collection covers the full developer-relations surface.
 
-- [`developer-relations-kickoff`](./developer-relations-kickoff): Routes the current DevRel task to the right skill of this collection, or says plainly that none fits, then bootstraps or resumes the project's shared context artifact.
+### Start here
+
+[`developer-relations-kickoff`](./developer-relations-kickoff): Routes the current DevRel task to the right skill of this collection, or says plainly that none fits, then bootstraps or resumes the project's shared context artifact.
+
+### Meta
+
 - [`devrel-career`](./devrel-career): Plans a DevRel career from the candidate side: portfolio audit against real hiring signals, the six-rung IC ladder, interview-loop prep, and offer evaluation.
 - [`devrel-hiring`](./devrel-hiring): Plans DevRel hiring from the employer side: job posting and scorecard, interview loop and question bank, portfolio scoring, and a 30-60-90 ramp plan.
 - [`devrel-team-structure`](./devrel-team-structure): Designs the DevRel org: the reporting line and what it starves, the team shape, the coverage map, the interlocks, and the trigger for the next re-org.
