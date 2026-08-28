@@ -191,7 +191,7 @@ Announce a deprecation in a release that removes nothing, naming the replacement
 
 ## Messy history
 
-Most real repositories have no commit convention - roughly 90% of projects in the SmartNote sample enforce none, and only 54% of 900 open-source projects surveyed by Jiang et al. generate notes from pull requests at all. Assume the log is squash merges, `wip` and `fix tests` until you see otherwise.
+Most real repositories have no commit convention - roughly 90% of projects in the SmartNote sample enforce none, and only 54% of 900 open-source projects surveyed by Jiang et al. generate notes from pull requests at all. Assume the log is squash merges, `wip`, and `fix tests` until you see otherwise.
 
 - Work from the diff and the pull-request titles and bodies, not the commit subjects.
 - Group changed files into features by reading the code, then confirm each grouping with the user before writing entries for it.
