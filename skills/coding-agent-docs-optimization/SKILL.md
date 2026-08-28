@@ -170,7 +170,7 @@ A handful of spec fields decide whether an agent picks the right call and fills 
 
    An unconstrained field is where an invented value goes, and each constraint is a one-line edit that removes a whole class of them.
 
-3. Curate before the spec gets converted into tools, when a conversion is planned. Cheap, and skipped entirely otherwise. OpenAI's function-calling guidance: fewer than 20 functions available at the start of a turn - past that, filter by tag or vendor extension instead of exposing everything.
+3. Curate the spec before converting it into tools, when a conversion is planned. Cheap, and skipped entirely otherwise. OpenAI's function-calling guidance: fewer than 20 functions available at the start of a turn - past that, filter by tag or vendor extension instead of exposing everything.
 4. Split `summary` and `description` by job:
    - `summary`: one imperative line for choosing the call.
    - `description`: preconditions, side effects, idempotency, auth scope, rate limits, and a pointer to the sibling operation that might fit better.
