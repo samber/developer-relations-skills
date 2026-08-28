@@ -27,7 +27,7 @@ Check what the user actually needs:
 - Designing the issue/PR triage workflow itself (labels, templates, stale policy) → `samber/developer-relations-skills@oss-issue-triage`.
 - Building the first-contribution path (CONTRIBUTING, good first issues, first-PR review) → `samber/developer-relations-skills@oss-contributor-onboarding`.
 - Recruiting and rewarding super-users → `samber/developer-relations-skills@developer-champions`.
-- Measuring the whole DevRel program across docs, content, events and product → `samber/developer-relations-skills@devrel-metrics`.
+- Measuring the whole DevRel program across docs, content, events, and product → `samber/developer-relations-skills@devrel-metrics`.
 - Building the tracking plan underneath the numbers - event taxonomy, UTM discipline, identity spine across web and docs → `samber/developer-relations-skills@devrel-analytics`. Define community metrics here. Instrument them there.
 
 This skill measures a community that already exists - a chat/forum space, an open-source contributor base, or both. Say which skill fits and stop if it is not this one.
