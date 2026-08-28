@@ -195,7 +195,7 @@ Say which audience the advice was written for instead of asserting the field agr
 Answer each of these before publishing. Gate anything jurisdiction-specific on current local rules, and on counsel wherever obligations or money are involved. The first three decide whether a named candidate can join at all - ask them at intake, not after acceptance:
 
 - **Employer approval**: ask whether the member needs employer sign-off to hold a vendor title, and whether their employer competes with you.
-- **Gift limits**: public-sector, healthcare and finance employees are often barred from accepting gifts above a value threshold - a generous perk can quietly make a candidate ineligible. Let any member decline any perk without penalty.
+- **Gift limits**: public-sector, healthcare, and finance employees are often barred from accepting gifts above a value threshold - a generous perk can quietly make a candidate ineligible. Let any member decline any perk without penalty.
 - **Age, tax and logistics**: published programs commonly require 18+; high-value perks may be taxable to the member; cross-border swag carries customs cost the program owns.
 - **Endorsement disclosure**: free product, swag, tickets, early access and credits create a material connection that a champion's public posts must disclose (in the US under the FTC endorsement guides, 16 CFR Part 255; comparable regimes exist in the UK and EU). Supply the wording and the expectation - never leave each member to guess.
 - **Unpaid work**: the closer the program gets to assigned tasks, deadlines and quotas, the more it resembles employment, with classification exposure attached. Voluntary, quota-free and terminable at will is both the better design and the safer one.
