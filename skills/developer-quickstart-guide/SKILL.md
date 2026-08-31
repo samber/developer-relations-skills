@@ -176,7 +176,7 @@ Bad:   Run `npm install` to install dependencies.
 Good:  npm install @acme/client@3
 ```
 
-The bad line looks complete and fails verbatim: no package name, and an assumed package manager the page never stated. See [./references/worked-examples.md](./references/worked-examples.md) for the full page-length pair, which exercises the rest of this list.
+The bad line looks complete and fails when run verbatim: no package name, and an assumed package manager the page never stated. See [./references/worked-examples.md](./references/worked-examples.md) for the full page-length pair, which exercises the rest of this list.
 
 ## Pass threshold
 
