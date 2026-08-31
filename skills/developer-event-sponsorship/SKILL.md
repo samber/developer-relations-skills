@@ -217,7 +217,7 @@ Cost the sponsorship fully - fee, add-ons, booth build, shipping, swag, prizes, 
 
 Then fix the threshold **before** signing: a target cost per qualified conversation, plus a minimum conversation count that makes the trip worth staffing. Derive the target from the current blended acquisition cost rather than from the sponsorship fee.
 
-Only one unit survives comparison across a hackathon, a community day and a mega-conference: the qualified conversation - someone who has the problem, holds or influences the decision, and agreed to a named next step. Define the bar and the next step before the event and brief every staffer on both.
+Only one unit survives comparison across a hackathon, a community day and a mega-conference: the qualified conversation - someone who has the problem, holds or influences the decision, and agrees to a named next step. Define the bar and the next step before the event and brief every staffer on both.
 
 Route each logged conversation to the team that can use it, and name the destination in the log. Mary Thengvall's DevRel Qualified Lead (2019) gives the routing table:
 
