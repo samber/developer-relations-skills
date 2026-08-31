@@ -149,7 +149,7 @@ The tiers are numbered by evidence strength - how directly each source observes 
 - value: the tier numbering above, strongest first
 - compliance cost (heaviest review first): tier 3 > tier 4 > tier 2 > tier 5 > tier 1 == tier 6 == tier 7 == tier 8
 
-Two ties worth defending. Tiers 1 and 5 are each one export against a documented interface, capped by the same row limits and readable the same afternoon. The four-way compliance tie is every source carrying no customer content: a query string, a download count, an autocomplete suggestion and a tool's index name nobody and quote no one.
+Two ties worth defending. Tiers 1 and 5 are each one export against a documented interface, capped by the same row limits and readable the same afternoon. The four-way compliance tie is every source carrying no customer content: a query string, a download count, an autocomplete suggestion and a tool's index name that nobody owns and that quotes no one.
 
 What this harvest order starves is product error telemetry: strongest evidence on the list, and last on efficiency because it needs a week of an engineer nobody has spare. Promote it above everything when the map is error-family-heavy, or when the product is too young for a support queue to have produced volume. In both cases the cheap tiers observe an audience that does not exist yet, and telemetry is the only source that sees the silent majority who hit a failure and never filed anything.
 
