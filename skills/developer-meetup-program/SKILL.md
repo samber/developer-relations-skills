@@ -210,7 +210,7 @@ Free RSVPs are cheap, so a share of them will not turn up. Plan on roughly **30%
 - **Remind** two days and two hours before, and explicitly ask people who cannot make it to release their spot. Frame it as freeing a seat for someone else, not as guilt.
 - **Count heads at the door.** Attendance, not registrations, goes in the log - every threshold and trend in this skill depends on the real number, and CNCF's own activity bar is written in attendees for the same reason.
 - **Promote the speaker and the topic**, not the venue or the food (CNCF marketing guidance). The talk is the reason people come; the pizza is the reason they stay.
-- **Announce early**, across the group listing, adjacent meetups, community channels, local newsletters and the speaker's own network - a speaker who shares their slot brings their audience.
+- **Announce early**, across the group listing, adjacent meetups, community channels, local newsletters, and the speaker's own network - a speaker who shares their slot brings their audience.
 
 See [./references/promotion-and-no-show-plan.md](./references/promotion-and-no-show-plan.md) for the reminder schedule, the overbooking arithmetic worked through, and a weak-versus-strong announcement pair.
 
