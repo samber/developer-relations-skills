@@ -121,7 +121,7 @@ Three rules hold at every tier:
 - Be able to drop a tier in about 20 seconds - this skill's budget, not a measured figure - from a keystroke, without hunting through a file browser.
 - Harden the setup, never the output.
 
-On that third rule: seeded data, pinned versions, pre-pulled images, replayed third-party responses and a private network all remove variance the audience never had to trust. A stubbed counter, a verification query with the failure case filtered out, or a recording described as live are faked results, and getting caught costs exactly the credibility the demo was buying. When the claim can only be met by faking, the claim is wrong - narrow it.
+On that third rule: seeded data, pinned versions, pre-pulled images, replayed third-party responses, and a private network all remove variance the audience never had to trust. A stubbed counter, a verification query with the failure case filtered out, or a recording described as live are faked results, and getting caught costs exactly the credibility the demo was buying. When the claim can only be met by faking, the claim is wrong - narrow it.
 
 [`references/demo-risk-register.md`](./references/demo-risk-register.md) works this boundary through paired examples.
 
