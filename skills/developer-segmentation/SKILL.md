@@ -176,7 +176,7 @@ Settle the company shape first - it decides how often that happens:
 Only the two labels are documented (see [references/published-findings.md](./references/published-findings.md)); the operating mechanics on either side are not, so treat everything past the labels as your own judgement.
 
 - **Individual adoption** - the user is the buyer, or no purchase exists (hobbyists, indie developers, small teams, students, OSS maintainers). Segment on motivation, ecosystem and workload. Success appears as usage before revenue.
-- **Company adoption** - a developer evaluates; an architect, platform lead, security reviewer or budget owner decides. Segment on firmographics _and_ on which of those roles exists. Success appears as evaluations that survive review.
+- **Company adoption** - a developer evaluates; an architect, platform lead, security reviewer, or budget owner decides. Segment on firmographics _and_ on which of those roles exists. Success appears as evaluations that survive review.
 
 Most products have both paths. Rank them; never average them. The role table - what each role is convinced by and why each says no - is in [references/decision-unit.md](./references/decision-unit.md).
 
