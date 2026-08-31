@@ -137,7 +137,7 @@ Check what each surface can physically report before promising a signal. Three c
 
 - **Analytics blocking.** Plausible measured 58% of a tech audience blocking a third-party analytics script (82.3% on Linux, 88.3% on Firefox), in an August 2021 measurement on one site carrying Hacker News and Reddit traffic, read against Plausible's own proxied script. That makes it a single-site measurement by an interested vendor, but the only public one. Absolute traffic numbers on developer surfaces are therefore wrong by a factor that varies page by page; only ratios inside one source survive.
 - **Retention windows.** Repository traffic endpoints keep 14 days, npm downloads 18 months, PyPI series 180 days (GitHub REST Metrics/Traffic and pypistats docs). Snapshot any signal drawn from them from the day it is defined; expired data cannot be backfilled.
-- **Referrer loss.** Aggregators, chat clients, privacy browsers and AI assistants strip referrers - roughly 70% of AI-assistant traffic arrives with none, a newsletter estimate (Demand Curve #331), not a study. A large "direct" bucket is the normal case, not an instrumentation bug.
+- **Referrer loss.** Aggregators, chat clients, privacy browsers, and AI assistants strip referrers - roughly 70% of AI-assistant traffic arrives with none, a newsletter estimate (Demand Curve #331), not a study. A large "direct" bucket is the normal case, not an instrumentation bug.
 
 [references/evidence-and-signals.md](./references/evidence-and-signals.md) lists what to look for per stage, the candidate signals, which team usually owns each surface, the friction-log and exit-interview protocols, and the full per-surface instrumentation reality.
 
