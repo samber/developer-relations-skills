@@ -185,7 +185,7 @@ Influenced pipeline is what this order starves:
 
 Three things to say out loud in every report:
 
-- A large "direct" bucket is normal, not a bug. Aggregators, chat clients, privacy browsers and AI assistants strip referrers; roughly 70% of AI-assistant traffic arrives with no referrer and lands in "direct" (Demand Curve newsletter #331 - one newsletter's figure, so treat the number as directional).
+- A large "direct" bucket is normal, not a bug. Aggregators, chat clients, privacy browsers, and AI assistants strip referrers; roughly 70% of AI-assistant traffic arrives with no referrer and lands in "direct" (Demand Curve newsletter #331 - one newsletter's figure, so treat the number as directional).
 - Enterprise cycles push any pipeline answer two to four quarters out. Name the leading indicator carrying the interim.
 - Two teams must never claim the same revenue as sourced. Influenced is shared by definition.
 
