@@ -94,7 +94,7 @@ Sort every euro or dollar into four buckets before allocating anything:
 - **Borrowed** - devrel work paid from another team's line. Real capacity, foreign control, can disappear without notice. List it, mark the owner, never depend on it for a critical line.
 - **In-kind** - engineer hours, exec time, product credits, donated infrastructure. No invoice, hard ceiling.
 
-Then state the hours envelope alongside the cash: per named person, hours per week available for devrel work after support, meetings and their other job. Total it for the period and subtract 20-30% before planning against it - support load, launches and incidents always arrive.
+Then state the hours envelope alongside the cash: per named person, hours per week available for devrel work after support, meetings, and their other job. Total it for the period and subtract 20-30% before planning against it - support load, launches and incidents always arrive.
 
 Write both totals at the top of the deliverable. A plan that never states its hours envelope will overspend it, and nobody will notice until the quarter fails while the cash is intact.
 
