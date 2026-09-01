@@ -256,7 +256,7 @@ Identify which of three shapes you were given before answering. The wrong delive
 - See [./references/worked-examples.md](./references/worked-examples.md) for good/bad pairs on steps, fading, checkpoints and audit output.
 - See [./references/verification-protocol.md](./references/verification-protocol.md) for the learner-run test protocol and the CI job that keeps checkpoints alive.
 - See [./references/published-findings.md](./references/published-findings.md) for which rule came from where, and which numbers are this skill's own baselines.
-- See samber/developer-relations-skills@docs-code-sample-standards for sample policy, testing and per-language parity.
+- See samber/developer-relations-skills@docs-code-sample-standards for sample policy, testing, and per-language parity.
 - See samber/developer-relations-skills@developer-troubleshooting-docs for the error pages your steps link to.
 - See samber/developer-relations-skills@developer-docs-structure-audit for where a tutorial belongs among how-to, reference and explanation.
 - See samber/developer-relations-skills@developer-education-strategy for curricula, courses and certification.
