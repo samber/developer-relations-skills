@@ -150,7 +150,7 @@ Rules that survive a year:
 - Redirect chains, shorteners and OAuth hops must preserve the query string, or the tag dies at the hop.
 - Off-web surfaces cannot be tagged at all. Give each talk or episode a short speakable vanity path, each event a QR code resolving to a tagged URL, and keep one short self-reported source field at signup whose answer list stays stable across quarters.
 
-Expect "direct" to remain the largest bucket regardless. Aggregators, chat clients, privacy browsers, PDFs and slide decks all strip referrers, and roughly 70% of AI-assistant traffic arrives with no referrer at all (Demand Curve #331). A large direct bucket during a launch week is the normal case, not an instrumentation defect.
+Expect "direct" to remain the largest bucket regardless. Aggregators, chat clients, privacy browsers, PDFs, and slide decks all strip referrers, and roughly 70% of AI-assistant traffic arrives with no referrer at all (Demand Curve #331). A large direct bucket during a launch week is the normal case, not an instrumentation defect.
 
 ## Quality gate
 
