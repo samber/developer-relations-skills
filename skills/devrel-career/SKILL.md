@@ -164,7 +164,7 @@ Rung definitions, the five dimensions with Douglas's full quote, the per-level s
 
 DevRel postings fail candidates in two named patterns - Joe Nash's gatekeeper/pit-trap taxonomy. Test every posting against both before applying, and again before accepting.
 
-- **Gatekeeper** - describes an impossible person: a long engineering career across several stacks plus OSS contribution, technical writing, community building and event organising, advertised at entry level and entry pay.
+- **Gatekeeper** - describes an impossible person: a long engineering career across several stacks plus OSS contribution, technical writing, community building, and event organising, advertised at entry level and entry pay.
 - **Pit trap** - "founding DevRel, no background required": ground-floor ownership of docs, SDKs, community, support, sales engineering and training on one person, no resources, no ladder, no stated goal.
 
 Three symptoms identify both:
