@@ -157,7 +157,7 @@ Google's own localized-versions documentation settles four `hreflang` questions 
 - Every language version lists itself as well as all the others; include `x-default` for the no-match case.
 - Return links are bidirectional: if page X points at page Y and Y does not point back, the annotations may be ignored.
 - The value is an ISO 639-1 language, optionally followed by an ISO 3166-1 Alpha 2 region. A region alone is invalid.
-- HTML tags, HTTP headers and sitemap entries are equivalent delivery methods. Google states no preference, large site or not.
+- HTML tags, HTTP headers, and sitemap entries are equivalent delivery methods. Google states no preference, large site or not.
 
 Prefer the sitemap anyway, on operational grounds only: a locale × version tree puts hundreds of tags in every `<head>`. Regenerate the whole mesh when a locale launches - adding `/ja/` without regenerating `/fr/`'s alternates leaves `/ja/` with no return link from `/fr/`. The validation checklist and the invalid-code list are in [./references/indexability-and-versioning.md](./references/indexability-and-versioning.md).
 
