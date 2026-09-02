@@ -59,7 +59,7 @@ Record the answers. If your harness has persistent memory, store the product sur
 Three answers eliminate archetypes before brainstorming starts, and getting them wrong invalidates everything below. State all three out loud before proposing anything.
 
 - **The licence already shipped.** Published releases stay licensed forever. A model that needs a licence the project does not have requires relicensing, consent from every copyright holder, and a fork risk with documented precedent (see the outcomes in [references/model-archetypes.md](./references/model-archetypes.md)). Treat this as the only genuinely irreversible lever.
-- **Where the software runs.** If compliance, data gravity or air-gapping forces customer-side deployment, hosted models are out and support, licensing and open-core models are in. If you operate it, hosting is monetizable.
+- **Where the software runs.** If compliance, data gravity or air-gapping forces customer-side deployment, hosted models are out, and support, licensing and open-core models are in. If you operate it, hosting is monetizable.
 - **Who signs.** An individual paying by card and an organization surviving procurement buy different things. Almost every model below monetizes organizations. Individuals monetize as convenience: small amounts, fast churn.
 
 ## Step 2, Brainstorm the model space, do not jump to an answer
