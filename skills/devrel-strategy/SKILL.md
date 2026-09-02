@@ -61,7 +61,7 @@ Never skip questions 12 to 14, however obvious the driver already looks: they se
 - "Compounding asset" promotes community-first and contributor-first, which lose every efficiency round on their own.
 - An effort ceiling made of spare hours from people with other jobs deletes every shape that needs a standing job.
 
-Ask question 11 even when it feels administrative. Budget ownership is a named input to goal selection in Leggetter's own framework, and in the _State of Developer Relations 2024_ survey (DevRel.Agency, 310 respondents) 60% of program budgets exclude salaries while 33.5% of practitioners cannot state their budget at all. A plan built on the wrong side of that line proposes work nobody can pay for.
+Ask question 11 even when it feels administrative. Budget ownership is a named input to goal selection in Leggetter's own framework, and in the _State of Developer Relations 2024_ survey (DevRel.Agency, 310 respondents), 60% of program budgets exclude salaries while 33.5% of practitioners cannot state their budget at all. A plan built on the wrong side of that line proposes work nobody can pay for.
 
 Record the answers. If your harness has persistent memory, store these there:
 
