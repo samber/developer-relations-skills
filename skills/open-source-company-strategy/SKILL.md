@@ -164,7 +164,7 @@ The cost of this strategy concentrates at whatever future moment the line moves.
 
 **A decision-rights line.** Separate "should we open this?" - a business-context call - from "is this compliant to open?" - a specialist review.
 
-Google assigns the first to the launch creator's manager, on the stated ground that its open source office lacks the business context, and runs licensing, patent and privacy review as parallel approvers. GitLab routes large tiering decisions through a named matrix in which the CEO decides. Write down who plays each part here, even if two parts are one person.
+Google assigns the first to the launch creator's manager, on the stated ground that its open source office lacks the business context, and runs licensing, patent, and privacy review as parallel approvers. GitLab routes large tiering decisions through a named matrix in which the CEO decides. Write down who plays each part here, even if two parts are one person.
 
 **A non-reversal commitment.** State in public what the company promises never to close. GitLab publishes eleven such promises - including that an open-sourced feature will never move to a paid tier - and has run a proprietary tier for a decade with comparatively little sustained backlash.
 
