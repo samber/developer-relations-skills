@@ -263,7 +263,7 @@ The craft above is identical everywhere. What changes is the surrounding obligat
 
 Derive a public bug-hunt or outage post from the internal review; never copy it. Run a redaction pass before drafting:
 
-- Remove individual names and handles, internal service codenames, ticket IDs and wiki links.
+- Remove individual names and handles, internal service codenames, ticket IDs, and wiki links.
 - Decide deliberately whether impact figures ship.
 - Keep the blameless framing - the post explains what conditions allowed the failure, not who typed the commit.
 
