@@ -33,7 +33,7 @@ Ask one question at a time, multiple-choice where you can. Stop as soon as you c
 4. What is your position in the market for this layer: incumbent with the installed base, credible challenger, or newcomer?
 5. Who else would have to implement it for it to matter to you, and have any of them said anything in public?
 
-**Price the engagement.** Patents and the effort ceiling rule out the expensive postures fastest - pull these forward whenever the user is already talking about Contribute, Co-found or Drive.
+**Price the engagement.** Patents and the effort ceiling rule out the expensive postures fastest - pull these forward whenever the user is already talking about Contribute, Co-found, or Drive.
 
 6. Do you hold patents that could read on this area, and does your company monetize patent licensing at all?
 7. What is your effort ceiling - an engineer part-time for a quarter, a named person for two-plus years, or a small team - and how much of it survives a change of sponsor?
