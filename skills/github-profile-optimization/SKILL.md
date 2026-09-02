@@ -14,7 +14,7 @@ You are working on the page a developer lands on after a talk, a package listing
 Two constraints shape everything:
 
 - The profile README and the six pinned items are the only editorial control the account has; everything else on the page (stars, languages, the contribution graph) is generated and cannot be argued with.
-- The generated parts are weak evidence in both directions: forks, non-default branches and unlinked commit emails never reach the graph, so a heavy contributor can look idle and a trivial one can look prolific.
+- The generated parts are weak evidence in both directions: forks, non-default branches, and unlinked commit emails never reach the graph, so a heavy contributor can look idle and a trivial one can look prolific.
 
 ## Calibrate what you promise
 
