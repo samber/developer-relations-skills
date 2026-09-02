@@ -41,7 +41,7 @@ Ask these one at a time. Wait for each answer before the next. Offer the options
 5. "Which mediums do you actually consume? Pick up to two." - (a) audio, (b) text, (c) video, (d) live community.
 6. "Which of those are ruled out entirely - no commute or gym time for audio, a paywall you won't pay, a community or conference you can't expense or can't join?"
 7. "Which developer ecosystem are you in?" - e.g. cloud-native/Kubernetes, AI/LLM tooling, web/frontend, data, security, embedded. Ecosystem sources sit next to practice sources, never instead of them.
-8. "Who buys and who adopts?" - (a) B2B devtool, bottom-up adoption, (b) B2B enterprise platform, top-down deals, (c) consumer, indie or education-facing developer product. See B2B and B2C scope.
+8. "Who buys and who adopts?" - (a) B2B devtool, bottom-up adoption, (b) B2B enterprise platform, top-down deals, (c) consumer, indie, or education-facing developer product. See B2B and B2C scope.
 9. "Do you need to speak, sponsor or organise events this year?" - (a) no, (b) submitting talks, (c) sponsoring or hosting. A yes turns the event calendar from optional to core.
 
 Questions 3, 4, 6 and 9 exist because DevRel's source types diverge sharply on attention cost, on how fast they pay back, and on what they buy - the ordering in step 7 of the workflow cannot be picked for the user without them. Ask them here, in the interview, never beside the ranking. Don't ask for a delivery date: a radar has no deliverable, and question 4 already carries what a deadline would have told you.
