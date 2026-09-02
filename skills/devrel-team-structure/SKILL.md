@@ -132,7 +132,7 @@ Promote it anyway when all four hold:
 
 Missing any one of the four, embedded buys feedback with nothing left to turn it into work.
 
-Delete the shapes the answers rule out instead of demoting them, and say which you deleted. Under roughly ten full-time people, split, embedded and hub-and-spoke are all gone, and centralized is the only candidate left. That ten-person line is this skill's baseline, not a published finding. What the survey supports is the context: 69% of teams are under ten people, so every other shape spends headcount on coordination the common case does not have. A ruled-out shape parked at the bottom of a list reappears as scope a quarter later.
+Delete the shapes the answers rule out instead of demoting them, and say which you deleted. Under roughly ten full-time people, split, embedded, and hub-and-spoke are all gone, and centralized is the only candidate left. That ten-person line is this skill's baseline, not a published finding. What the survey supports is the context: 69% of teams are under ten people, so every other shape spends headcount on coordination the common case does not have. A ruled-out shape parked at the bottom of a list reappears as scope a quarter later.
 
 The ordering is a default, not a law: it shifts with context and with who executes it. Re-rank it against what you already know:
 
