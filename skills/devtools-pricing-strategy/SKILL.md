@@ -204,7 +204,7 @@ Predictability is a pricing feature, and in this market it is the one that gets 
 - Itemized invoices: quantity, unit rate, subtotal, plan fee and credits, separately.
 - A written policy on what happens at the limit, and a pre-approved credit for runaway usage caused by an obvious defect or an attack. The credit is always cheaper than the story about the bill.
 
-Reason from the documented case: Netlify's $104K bandwidth bill of February 2024, from 190TB of traffic against a 3MB file on a free-tier site. Netlify forgave the bill and published a standing policy - the right response after the fact, and no substitute for the cap, the alert and the anomaly detection that would have prevented it.
+Reason from the documented case: Netlify's $104K bandwidth bill of February 2024, from 190TB of traffic against a 3MB file on a free-tier site. Netlify forgave the bill and published a standing policy - the right response after the fact, and no substitute for the cap, the alert, and the anomaly detection that would have prevented it.
 
 ## Step 6 - Plan the change (only when repricing)
 
