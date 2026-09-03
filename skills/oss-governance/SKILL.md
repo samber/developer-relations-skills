@@ -276,7 +276,7 @@ Iterate until 1-4 pass before committing the document, schedule the check for 5,
 ## Common failure modes
 
 - **Buying the most expensive model for someone else's reasons.** Lapsed terms are worse than no elections - they remove the accountability elections were meant to add. Adopting a committee weeks before a foundation review, with no history of use, is a recognized anti-pattern (worked case in the template reference).
-- **Titles instead of authority.** Roles spread across organizations while decisions stay in one company's internal channel is cosmetic diversity, detected as readily as **neutrality by press release**.
+- **Titles instead of authority.** Roles spread across organizations while decisions stay in one company's internal channel are cosmetic diversity, detected as readily as **neutrality by press release**.
 - **A constitution instead of a repair.** Writing new governance during a live trust conflict relocates the fight - one major project produced an elected committee and two forks the same year. Address the conflict first, publish the structure after.
 - **No deadlock rule.** Without an escalation path, the loudest objector wins by attrition.
 - **Promoting to fix burnout.** Handing keys to whoever is available invites takeovers; reduce scope or pause releases first.
