@@ -1,6 +1,6 @@
 ---
 name: oss-sponsors-brand-strategy
-description: Builds a company's open-source sponsorship portfolio  -  which projects and maintainers to fund, through which allocation model, at what amount each, and how to prove it worked. Use whenever a company, OSPO, DevRel lead or engineering leader asks which open-source projects to sponsor, how much to budget for open-source funding, whether sponsoring maintainers is worth it, how to run an employee-nominated FOSS fund, how to fund dependencies at scale, how to pick a sponsorship tier on a maintainer's ladder, or how to measure the return on money paid to maintainers  -  even if they only say they want to give back. Not the maintainer side of raising sponsorship  -  use samber/developer-relations-skills@oss-sponsors-fundraising. Not event sponsorship.
+description: Builds a company's open-source sponsorship portfolio - which projects and maintainers to fund, through which allocation model, at what amount each, and how to prove it worked. Use whenever a company, OSPO, DevRel lead or engineering leader asks which open-source projects to sponsor, how much to budget for open-source funding, whether sponsoring maintainers is worth it, how to run an employee-nominated FOSS fund, how to fund dependencies at scale, how to pick a sponsorship tier on a maintainer's ladder, or how to measure the return on money paid to maintainers - even if they only say they want to give back. Not the maintainer side of raising sponsorship - use samber/developer-relations-skills@oss-sponsors-fundraising. Not event sponsorship.
 license: MIT
 metadata:
   author: Samuel Berthe
@@ -215,7 +215,7 @@ Check the payment path before any target list is final - a portfolio designed ar
 
 Write these down before the first payment, and publish them where maintainers and employees can read them. An unpublished policy reads as favouritism from the outside.
 
-- Sponsorship buys visibility, sustainability and a relationship - never roadmap position, merged pull requests, or priority outcomes. Priority triage can be negotiated; priority outcomes cannot.
+- Sponsorship buys visibility, sustainability, and a relationship - never roadmap position, merged pull requests, or priority outcomes. Priority triage can be negotiated; priority outcomes cannot.
 - No pressure on a maintainer to accept money, to advertise the sponsorship, or to produce gratitude on a schedule.
 - Employees who publicly advocate for a project the company funds disclose the relationship.
 - State the eligibility and conflict-of-interest rules: which projects qualify, whether employee-owned projects are excluded, who decides, and how a decision is appealed.
