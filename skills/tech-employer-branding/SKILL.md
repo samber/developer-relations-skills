@@ -36,7 +36,7 @@ Typical invocations:
 
 ## Interview
 
-Ask one question at a time. Offer multiple-choice options where you can. Stop once you can name the stage, the seniority target, the instrumentation state and the answers to 11 to 13: confirm the rest as you go.
+Ask one question at a time. Offer multiple-choice options where you can. Stop once you can name the stage, the seniority target, the instrumentation state, and the answers to 11 to 13: confirm the rest as you go.
 
 1. Who is accountable for engineering hiring outcomes: a head of engineering, a talent or recruiting lead, a founder, or someone wearing the hat part-time?
 2. What stage is the company: early-stage with no brand to speak of, a scale-up, a large established company, or an OSS-first company whose product is open source?
@@ -114,7 +114,7 @@ No engineer-specific validated EVP framework exists. The **EmpAt scale** (Bertho
 4. Check every claim against the four mismatch patterns that erode trust fastest:
    - claimed flat hierarchy vs. real hierarchy
    - claimed balance vs. real on-call
-   - claimed autonomy vs. process overhead
+   - claimed autonomy vs. real process overhead
    - diversity marketing vs. retention reality
 
    Anonymous forums surface each of these within one review cycle.
