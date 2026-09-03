@@ -173,7 +173,7 @@ Build 5-8 stories (a self-set default, like every unattributed count in this ski
 
 Apply two shaping rules borrowed from storytelling practice:
 
-- **Find the five-second moment.** Matthew Dicks argues every story is really about one five-second flip - a transformation ("I used to be one kind of engineer, now I'm another") or a realisation ("I used to think X, then this happened"). Cut everything that does not build to that flip, and open the story at the _opposite_ of it so the telling has somewhere to go.
+- **Find the five-second moment.** Matthew Dicks argues every story is really about one five-second flip - a transformation ("I used to be one kind of engineer, now I'm another") or a realization ("I used to think X, then this happened"). Cut everything that does not build to that flip, and open the story at the _opposite_ of it so the telling has somewhere to go.
 - **Prefer the up-down-up shape.** Vonnegut's "Man in a Hole" - somebody gets into trouble and gets out, ending higher than they started - was tested against 6,174 movie scripts by Del Vecchio, Kharlamov, Parry and Pogrebna (arXiv 1807.02221, 2018). They found it correlated with the highest box offices, and specifically with the most _talked about_ films rather than the most liked. For a guest, talked-about is the goal: that is the story that gets clipped and quoted.
 
 Tag each story with the questions it can answer, so the user never gropes for an example live. Reusing one story for two answers in the same episode reads as a canned pitch - the tags exist so the user can reach for a different one.
@@ -251,7 +251,7 @@ For a hostile or off-limits question, use **ABC** - Acknowledge, Bridge, Content
 
 Never "no comment" and never a non-answer. Both read as evasion, and the clip outlives the episode.
 
-The classes worth preparing every time: competitor comparison, "why not just use X", a licensing or pricing change, a public outage or CVE, AI-hype scepticism, monetizing an open-source project, and "who is this _not_ for". Nothing earns trust faster than that last one: naming where the tool is the wrong choice buys credibility for everything else the user says.
+The classes worth preparing every time: competitor comparison, "why not just use X", a licensing or pricing change, a public outage or CVE, AI-hype scepticism, monetising an open-source project, and "who is this _not_ for". Nothing earns trust faster than that last one: naming where the tool is the wrong choice buys credibility for everything else the user says.
 
 See [./references/question-bank.md](./references/question-bank.md) for the question classes with prompts, concessions and failure patterns.
 
