@@ -233,7 +233,7 @@ Re-run `triage-baseline.py` monthly for the first quarter, and iterate against t
 
 Iterate until they hold, or lower the published promise to one that does.
 
-Never read a count metric alone. CHAOSS's guidance restricts these measures to activity "primarily driven by humans", and under machine-generated volume closure ratios and time-to-close can improve while real maintainer burden rises. Pair every count with a human-driven signal: first response with bots and author self-replies excluded, and how many people could cover triage if one person left.
+Never read a count metric alone. CHAOSS's guidance restricts these measures to activity "primarily driven by humans", and, under machine-generated volume, closure ratios and time-to-close can improve while real maintainer burden rises. Pair every count with a human-driven signal: first response with bots and author self-replies excluded, and how many people could cover triage if one person left.
 
 With persistent memory available, store the durable decisions:
 
@@ -279,7 +279,7 @@ Each row names a failure the steps do not already spell out; the fix is the whol
 | Dormant rotation - a documented rota nobody has run in a year | Give it an owner and a liveness check; retire it loudly if it lapses |
 | Priority theatre - everything is `priority/high`              | Two or three levels, defined by consequence                          |
 | Big-bang migration - new labels, old forms, old saved views   | Migrate labels, forms, views and automation in one pass              |
-| Triage as fixing - a session spent debugging one item         | Time-box the pass; triage schedules work, it is not the work         |
+| Triage as fixing - a session spent debugging one item         | Time-box the pass; triage schedules work; it is not the work         |
 | Unmeasured redesign - new process, no idea whether it helped  | Re-run the baseline monthly                                          |
 
 ## References
