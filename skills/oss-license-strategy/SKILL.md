@@ -30,7 +30,7 @@ Ask one question at a time, multiple-choice where you can. Stop as soon as you c
 7. Is there a business model attached now or plausibly later? If yes: which one, and who is the competitor you fear?
 8. Any constraint fixed in advance - an employer's open-source policy, a funder, a foundation you plan to join, a customer's procurement rules, a license your ecosystem effectively requires?
 9. How many people have already contributed code that is still present, and can you reach them?
-10. Who maintains this in two years, and could they change the license without you? (Succession itself belongs to `oss-governance`; ask only because the answer decides whether a CLA that pre-grants relicensing rights is worth its friction.)
+10. Who maintains this in two years, and could they change the license without you? (Succession itself belongs to `samber/developer-relations-skills@oss-governance`; ask only because the answer decides whether a CLA that pre-grants relicensing rights is worth its friction.)
 11. Is there a date this has to be settled by - a release, a launch, a customer's review, a foundation deadline?
 12. Is this a one-off decision for this repository, or the policy every future repository inherits?
 13. What friction can you actually impose: none at all, a commit trailer, a signature wall, an agreement drafted by counsel? And how much irreversibility are you willing to accept?
@@ -261,5 +261,5 @@ These six checks are this skill's own bar, not a published standard. Say so when
 - samber/developer-relations-skills@oss-contributor-onboarding - the contributing guide the policy lands in.
 - samber/developer-relations-skills@devtools-business-model - the model the licensing lever serves.
 - samber/developer-relations-skills@oss-launch - trademark clearance timing and for announcing a licensing change during a launch window.
-- samber/developer-relations-skills@tech-press-relations - the licence-change press playbook and the hostile-coverage precedent to plan against.
+- samber/developer-relations-skills@tech-press-relations - the license-change press playbook and the hostile-coverage precedent to plan against.
 - samber/developer-relations-skills@oss-distribution-strategy - the channels that will read the license metadata you ship.
