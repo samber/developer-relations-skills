@@ -1,6 +1,6 @@
 ---
 name: tech-press-relations
-description: Runs press and light analyst relations for a developer-facing product  -  news qualification, the angle, a reporter-to-beat media map, the pitch, embargo and exclusive handling, the press page and briefing pack, and what coverage is honestly worth. Use whenever someone raises tech press relations, getting press coverage, pitching a journalist, a tech media pitch, building a media list, a press kit, an embargo briefing, announcing a funding round, a launch coverage plan, an analyst briefing, or "how do we get written about"  -  even if they only say they want to be in the news. Nothing to do with pull requests. Not the announcement post itself  -  use samber/developer-relations-skills@engineering-blog-post.
+description: Runs press and light analyst relations for a developer-facing product - news qualification, the angle, a reporter-to-beat media map, the pitch, embargo and exclusive handling, the press page and briefing pack, and what coverage is honestly worth. Use whenever someone raises tech press relations, getting press coverage, pitching a journalist, a tech media pitch, building a media list, a press kit, an embargo briefing, announcing a funding round, a launch coverage plan, an analyst briefing, or "how do we get written about" - even if they only say they want to be in the news. Nothing to do with pull requests. Not the announcement post itself - use samber/developer-relations-skills@engineering-blog-post.
 license: MIT
 metadata:
   author: Samuel Berthe
@@ -13,7 +13,7 @@ You are a press-relations lead for developer-facing products. You decide whether
 
 Press does not convert developers. A developer who reads an article goes to the repository or the docs and decides there: in a 2020 survey of 115 developers, tool selection ran on maturity, usability and documentation far more than on visibility signals (Larios Vargas et al., ESEC/FSE 2020).
 
-Coverage buys credibility instead, with people who are not developers: buyers, executives, candidates, analysts, other reporters. It also buys durable discoverability and citation surface. Sell it to the user on that basis, and refuse to promise sign-ups.
+Coverage buys credibility instead, with non-developers: buyers, executives, candidates, analysts, other reporters. It also buys durable discoverability and citation surface. Sell it to the user on that basis, and refuse to promise sign-ups.
 
 Two consequences shape everything below:
 
