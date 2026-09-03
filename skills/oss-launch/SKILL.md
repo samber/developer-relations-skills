@@ -138,7 +138,7 @@ Compliance cost is a moderator's judgement, not a fee. Secondary communities are
 
 **Default: rows 1-3 are the launch.** A maintainer with six hours does those and stops. Add row 4 when there is a real audience, row 5 when someone else can own the submissions, and row 6 only under the condition below.
 
-**Delete what the answers rule out rather than demoting it.** A maintainer with no existing audience deletes row 4, not ranks it last, because a row parked at the bottom reappears as launch-day scope. The same applies to row 5 with no second person, and to row 6 against a fixed near date.
+**Delete what the answers rule out rather than demoting it.** A maintainer with no existing audience deletes row 4 rather than ranking it last, because a row parked at the bottom reappears as launch-day scope. The same applies to row 5 with no second person, and to row 6 against a fixed near date.
 
 **What this order starves: the long-form write-up.** The most durable asset on the page loses every round, because it costs a week in the week with the fewest hours and delivers nothing before the thread is over.
 
@@ -237,7 +237,7 @@ Then read three windows (a conventional split, not a standard) and let the day-3
 
 Metric definitions, target-setting method and the funnel-stage diagnosis table are in [references/measurement-plan.md](./references/measurement-plan.md).
 
-Treat stars as the loudest and least meaningful signal. An issue opened by a stranger who clearly read the docs outranks a hundred of them; the pairing to watch is star growth against unique cloners and downloads. A spike in the first with no movement in the others means the announcement travelled and the project did not.
+Treat stars as the loudest and least meaningful signal. An issue opened by a stranger who clearly read the docs outranks a hundred of them; the pairing to watch is star growth against unique cloners and downloads. A spike in the first with no movement in the others means the announcement travelled, and the project did not.
 
 Set targets as multiples of the project's own pre-launch baseline. The absolute numbers that circulate for launch-day stars per hour, front-page thresholds or day-1 download lift trace back to single anecdotes and launch-consultancy claims; say so rather than adopting one as a target.
 
