@@ -1,6 +1,6 @@
 ---
 name: oss-sponsors-fundraising
-description: Designs a maintainer-side open-source sponsorship program  -  the tier ladder and its pricing for individual and corporate sponsors, rewards that stay deliverable at ten times the sponsor count, funding-goal and sustainability framing, and the invoice-and-entity path a company needs before it can pay. Use whenever a maintainer asks how to get sponsors or funding for a project, sets up or fixes GitHub Sponsors, Open Collective or FUNDING.yml, writes sponsor tiers, rewards or a sponsorship page, wonders why nobody sponsors a widely used project, considers sponsorware, or wants a company to fund maintenance work  -  even if they only say the project is unsustainable. Not the company side  -  use samber/developer-relations-skills@oss-sponsors-brand-strategy.
+description: Designs a maintainer-side open-source sponsorship program - the tier ladder and its pricing for individual and corporate sponsors, rewards that stay deliverable at ten times the sponsor count, funding-goal and sustainability framing, and the invoice-and-entity path a company needs before it can pay. Use whenever a maintainer asks how to get sponsors or funding for a project, sets up or fixes GitHub Sponsors, Open Collective or FUNDING.yml, writes sponsor tiers, rewards or a sponsorship page, wonders why nobody sponsors a widely used project, considers sponsorware, or wants a company to fund maintenance work - even if they only say the project is unsustainable. Not the company side - use samber/developer-relations-skills@oss-sponsors-brand-strategy.
 license: MIT
 metadata:
   author: Samuel Berthe
@@ -34,7 +34,7 @@ Ask one question at a time, multiple-choice where you can, and stop as soon as y
 6. Can you name three companies that depend on it, and how you know they do?
 7. What is already in place: GitHub Sponsors, Open Collective, Ko-fi, a FUNDING.yml, nothing?
 8. What is your effort ceiling: how much sponsor-facing work can you absorb per month, in a bad month - hours, not intentions? Would you sign a commitment you cannot walk back?
-9. Do you have a legal entity, or would money arrive to you personally? Which country?
+9. Do you have a legal entity, or would money come to you personally? Which country?
 10. What surfaces do you control, with rough numbers: repository traffic, docs site, newsletter, social following, conference talks?
 11. Is anything commercial attached already - paid support, a hosted product, an employer with a claim on the work?
 12. What would you refuse to sell at any price?
