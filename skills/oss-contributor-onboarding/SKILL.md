@@ -174,7 +174,7 @@ Run the finished prose through your preferred humanizer skill. A contributing gu
 3. **Review in a fixed order:** scope, then correctness and tests, then design with the reasoning attached, then style - and only the style the formatter missed. Anything a machine can fix must never appear as a human review comment.
 4. **Label blocking versus optional** on every comment. An unlabelled mix reads as a wall of failures.
 5. **Decline fast and kindly** when you must: thank them, name the scope rule, link where it was published, offer an alternative issue, close. A quick no beats a pull request rotting for six months.
-6. **Credit at merge**: preserve the contributor as author, name them in the release notes, and record non-code contributions somewhere the commit graph cannot - docs, triage and design work are otherwise invisible.
+6. **Credit at merge**: preserve the contributor as author, name them in the release notes, and record non-code contributions somewhere the commit graph cannot - docs, triage, and design work are otherwise invisible.
 7. **Invite the second contribution explicitly**, with a named next issue. This is the moment a drive-by becomes a contributor, and it almost never happens on its own.
 8. **Write down what happens when a pull request stalls**, from both sides, and offer to finish it yourself rather than letting a bot close it.
 
