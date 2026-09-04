@@ -46,7 +46,7 @@ Answers to 10, 11 and 12 re-rank the arc and demo menus below. Say which moved w
 2. Re-read the abstract and extract the promise it made: the problem, the audience, and the takeaways the reviewers accepted. Deliver that promise - an audience that came for the abstract and got a different talk rates it as bait-and-switch, whatever its quality.
 3. Draft the **arrow**: the single sentence a listener would still repeat a week later, tested against "if this is the only thing they take away, is that enough?" Everything that does not serve the arrow is a candidate for the cut list. This is Tristan de Montebello's Bow and Arrow - the arrow is what is remembered, the bow is the material that gives it force.
 4. Brainstorm the arc, then present it - never assume it - and wait for the user to choose before going further. See [`references/narrative-arcs.md`](./references/narrative-arcs.md) for the full gate and ranking axes.
-   - Gate: drop every arc the material, the audience's starting belief, or the slot makes infeasible - that filter removes options, not deprioritizes them.
+   - Gate: drop every arc the material, the audience's starting belief, or the slot makes infeasible - that filter removes options rather than deprioritizing them.
    - Rank: propose the 2-3 survivors by belief moved per hour of preparation, recommend the leader, and name what the ranking starves.
 5. Choose 2-3 **pillars** that support the arrow, and name the evidence each one carries - a number, an incident, a benchmark, a code fragment, a customer constraint. A pillar with no evidence is an opinion and will be challenged in Q&A. Prefer the concrete instance over the category: _Made to Stick_ (Chip and Dan Heath) names the Sinatra test - one reference strong enough to settle a whole class of objections - and one of those beats three weak proofs.
 6. Locate the moment of realization: Matthew Dicks' 5-Second Moment, the point where "we used to think X, then Y happened, now we think Z". This is the emotional spine of a technical talk. Place it where the audience already believes the problem - usually at the end of the first pillar.
@@ -113,7 +113,7 @@ Estimate a section's minutes from its word count only with the speaker's measure
 
 Guo et al.'s study of 6.9 million edX instructional-video sessions found engagement rising with speaking rate, though its authors call rate a surface feature that tracks enthusiasm rather than a lever to pull. They advise against forcing faster delivery.
 
-The "185-254 wpm band" often quoted from that study is just its fastest quintile, not a target the paper sets. A rate measured on the speaker's second language differs again.
+The "185-254 wpm band" often quoted from that study is just its fastest quintile, not a target the paper sets. A rate measured on the speaker's second language differs.
 
 ## Demo placement
 
