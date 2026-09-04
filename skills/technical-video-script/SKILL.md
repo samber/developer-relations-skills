@@ -167,7 +167,7 @@ The script controls pacing, not the editor. Write these decisions into the beats
 - **Show the diff, not two files.** Signal the one line carrying the claim - zoom, highlight, or dim the rest - and say which line it is.
 - **Smallest fragment that carries the point.** A full file on screen highlights nothing.
 - **Weed the frame.** Notifications off, unrelated tabs closed, no file tree nobody opens, no inbox badge, no personal bookmarks. Every removal returns attention to the code, and removes an accidental-disclosure risk.
-- **Legibility floors:** terminal text 24pt or larger, editor text 20pt or larger, high-contrast theme verified on a phone-sized playback rather than the authoring monitor. Those two point sizes are this skill's baseline; published screencast standards say "large fonts" without numbers. Never carry meaning by colour alone.
+- **Legibility floors:** terminal text 24pt or larger, editor text 20pt or larger, high-contrast theme verified on a phone-sized playback rather than the authoring monitor. Those two point sizes are this skill's baseline; published screencast standards say "large fonts" without numbers. Never carry meaning by color alone.
 
 Work the signaling hard, because the format starts behind. Code screencasts sat in the _weaker_ bucket of the one large study of instructional formats: continuous tablet-drawing tutorials held 1.5-2x their normalized engagement, and the paper's advice when code must be on screen is to draw on top of it.
 
@@ -202,7 +202,7 @@ Also:
 - Short declarative sentences. Subordinate clauses survive on the page and die in the ear.
 - Contractions, second person, the words a developer would use at a whiteboard.
 - Fix pronunciation in the script the first time an identifier appears (`char`, `kubectl`, `SQLite`), so the recording does not stall on it.
-- Do not pad for comprehension. Across a 48-254 wpm corpus, engagement rose with speaking rate - up to 2x within a length band - but the authors are explicit that rate is a surface proxy for enthusiasm, not a lever: bring energy, do not force speed. Budget runtime from the recorder's own measured rate, never a table value.
+- Do not pad for comprehension. Across a 48-254 wpm corpus, engagement rose with speaking rate - up to 2x within a length band - but the authors are explicit that rate is a surface proxy for enthusiasm, not a lever: bring energy; do not force speed. Budget runtime from the recorder's own measured rate, never a table value.
 - Verbatim script or bullet outline is the recorder's choice. Either way, mark the sentences that must be said exactly: claims, version numbers, terminology, the call to action.
 - Write the narration so it stands alone. Recorders capture audio-first, video-first or both at once, and a sentence that only makes sense over a specific frame breaks two of those three orders.
 
