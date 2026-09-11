@@ -31,8 +31,8 @@ npx skills add samber/developer-relations-skills
 **Claude Code**: install the plugin:
 
 ```bash
-/plugin marketplace add samber/cc
-/plugin install developer-relations-skills@samber
+/plugin marketplace add samber/developer-relations-skills
+/plugin install developer-relations-skills@developer-relations-skills
 ```
 
 **Codex (OpenAI)**: install via the Codex CLI:
