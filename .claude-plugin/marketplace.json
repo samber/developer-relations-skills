@@ -9,7 +9,6 @@
             "name": "developer-relations-skills",
             "source": "./",
             "description": "Skills for developer relations practice — DevRel strategy, open source distribution and governance, community programs, content and technical writing, events and sponsorships, metrics, and developer GTM.",
-            "version": "1.0.0",
             "author": {
                 "name": "Samuel Berthe",
                 "email": "dev@samuel-berthe.fr"
