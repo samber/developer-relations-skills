@@ -104,18 +104,18 @@ Score the four artefacts against these checks before final delivery. Iterate unt
 
 Not ranked, deliberately: every row is a defect with one mandatory fix.
 
-| Failure                                              | Fix                                                                                                                             |
-| ----------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
-| Gatekeeper posting                                    | Cut the off-core requirement list to what the pillar mix actually needs; re-price the level against the real requirement        |
-| Pit-trap posting                                      | State the resources, the ladder and the twelve-month goal explicitly, or postpone the hire until they exist                     |
-| Copying a generic engineering or marketing JD template| Rebuild from the funding driver and pillar mix; DevRel's outcomes and competencies do not map onto either template              |
-| Judging by resume instead of shipped work             | Run the six-signal portfolio evaluation before any conversational round                                                         |
-| Unpaid spec-work audition                             | Offer a paid live working session or judge the existing public portfolio instead                                               |
-| One blended gut score after a group debrief           | Independent, evidence-noted scores before any discussion, combined mechanically                                                |
-| Applying the same loop to every DevRel sub-role       | Choose formats and questions per the target sub-role's actual screened requirements                                             |
-| "Competitive compensation", no range, no reason       | Publish a range or state explicitly why it is gated, checked against the jurisdiction's own current requirement                |
-| Ramp plan with no artefact milestone                  | Anchor day 30 on a shipped friction log, day 60 on a shipped pillar artefact, day 90 on self-directed ownership                 |
-| Treating a title as portable across company types     | Recalibrate the whole scorecard against Q1's company-type row before reusing any prior posting                                 |
+| Failure                                                | Fix                                                                                                                      |
+| ------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ |
+| Gatekeeper posting                                     | Cut the off-core requirement list to what the pillar mix actually needs; re-price the level against the real requirement |
+| Pit-trap posting                                       | State the resources, the ladder and the twelve-month goal explicitly, or postpone the hire until they exist              |
+| Copying a generic engineering or marketing JD template | Rebuild from the funding driver and pillar mix; DevRel's outcomes and competencies do not map onto either template       |
+| Judging by resume instead of shipped work              | Run the six-signal portfolio evaluation before any conversational round                                                  |
+| Unpaid spec-work audition                              | Offer a paid live working session or judge the existing public portfolio instead                                         |
+| One blended gut score after a group debrief            | Independent, evidence-noted scores before any discussion, combined mechanically                                          |
+| Applying the same loop to every DevRel sub-role        | Choose formats and questions per the target sub-role's actual screened requirements                                      |
+| "Competitive compensation", no range, no reason        | Publish a range or state explicitly why it is gated, checked against the jurisdiction's own current requirement          |
+| Ramp plan with no artefact milestone                   | Anchor day 30 on a shipped friction log, day 60 on a shipped pillar artefact, day 90 on self-directed ownership          |
+| Treating a title as portable across company types      | Recalibrate the whole scorecard against Q1's company-type row before reusing any prior posting                           |
 
 ## Reference
 
