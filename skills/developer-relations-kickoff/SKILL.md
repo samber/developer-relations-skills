@@ -147,7 +147,7 @@ These tables are deliberately unranked, and must stay that way - inside a block 
 | --------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
 | `samber/developer-relations-skills@devrel-radar`                | Build the personal watch list - podcasts, newsletters, communities, conferences, people |
 | `samber/developer-relations-skills@devrel-career`               | Candidate side - portfolio scoring, skill-gap roadmap, interview prep, IC vs management |
-| `samber/developer-relations-skills@devrel-hiring`                | Employer side - job posting and scorecard, interview loop, portfolio scoring, ramp plan |
+| `samber/developer-relations-skills@devrel-hiring`               | Employer side - job posting and scorecard, interview loop, portfolio scoring, ramp plan |
 | `samber/developer-relations-skills@developer-relations-kickoff` | This skill: project start, periodic check-in, "which skill do I need", re-routing       |
 
 Disambiguate before routing wherever clusters collide on keywords:

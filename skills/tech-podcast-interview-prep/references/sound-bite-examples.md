@@ -76,9 +76,9 @@ Cold-read test, passing on the first listen: "Once it says it's there, it's alwa
 
 Same idea at two depths, occurring naturally in one interview rather than constructed for contrast:
 
-| Listener              | Version                                                                                                                                                                                       |
-| --------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Non-technical, product | "It's the thing that if you don't do it correctly, that is actually accidentally placing an order twice when you did try to place it once."                                                    |
+| Listener               | Version                                                                                                                                                                                                                                                                       |
+| ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Non-technical, product | "It's the thing that if you don't do it correctly, that is actually accidentally placing an order twice when you did try to place it once."                                                                                                                                   |
 | Staff, architects      | "If you have extremely fine-grained durability, if you're recording every individual step as durable in the system, and when it comes back, it can tell you exactly like 'This was the last step that you recorded' - then you just have a very small amount of uncertainty." |
 
 Real speech carries more hedging and self-repair than a written line ("in a way, almost", "like") - trim filler when clipping for a written pull-quote, never when quoting on-air, and never past the point the guest would still recognize it as what they said.

@@ -25,13 +25,13 @@ Second test - reachability: can you name a venue, list, registry, event or searc
 
 Both tests are the developer-specific form of the classic segment-validity criteria, which are worth running as a checklist when a cut feels arguable:
 
-| Criterion      | Question for a developer cut                                                                                | Typical failure                                          |
-| -------------- | ------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------- |
-| Measurable     | can you tell which side a given developer is on, and roughly how many sit on the smaller side, from data you already hold or can ask for in one question | "innovative teams" - no observable marker, no headcount   |
-| Substantial    | is the smaller side big enough to justify its own artefacts                                                  | a segment of nine companies                                |
-| Accessible     | is there a channel that reaches one side and not the other                                                   | a real trait with no venue attached                        |
-| Differentiable | would the two sides actually react differently to the same offer                                             | both sides want the same quickstart                        |
-| Actionable     | does the cut change a decision you are about to make                                                         | interesting, but nothing downstream consumes it            |
+| Criterion      | Question for a developer cut                                                                                                                             | Typical failure                                         |
+| -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------- |
+| Measurable     | can you tell which side a given developer is on, and roughly how many sit on the smaller side, from data you already hold or can ask for in one question | "innovative teams" - no observable marker, no headcount |
+| Substantial    | is the smaller side big enough to justify its own artefacts                                                                                              | a segment of nine companies                             |
+| Accessible     | is there a channel that reaches one side and not the other                                                                                               | a real trait with no venue attached                     |
+| Differentiable | would the two sides actually react differently to the same offer                                                                                         | both sides want the same quickstart                     |
+| Actionable     | does the cut change a decision you are about to make                                                                                                     | interesting, but nothing downstream consumes it         |
 
 These criteria come from general market-segmentation practice - Kotler and Armstrong's textbook formulation, not from developer research - use them as a checklist, never cite them as a developer-audience standard.
 

@@ -208,20 +208,20 @@ The engineering above is identical for every audience. The demo data and the acc
 
 ## Failure modes
 
-| Symptom                                            | Cause                                       | Fix                                                         |
-| -------------------------------------------------- | ------------------------------------------- | ----------------------------------------------------------- |
-| Demo dies with the venue Wi-Fi                     | The stack was never local                   | Move to tier 2; hotspot only for what cannot be local       |
-| One error and the whole demo is abandoned          | Segments chained on each other's output     | Give every segment its own restore point                    |
-| Two minutes lost debugging on stage                | No switch rule and no rehearsed fallback    | One repair attempt, then drop a tier                        |
-| Demo runs double its budget                        | Never timed segment by segment              | Time each segment; cut the longest, pre-fill boilerplate    |
-| Nobody in row ten can read it                      | Rehearsed at desk distance on a dark theme  | 24pt+, high contrast, checked from the back row             |
-| A notification or a token appears on screen        | Demo run from the daily-driver profile      | Fresh profile, Do Not Disturb, cleared history              |
-| A customer name, internal URL or real data leaks    | Demo repo is the team repo; data anonymised not synthetic | Dedicated demo repo, synthetic fixtures, share a window not the desktop - see `references/surface-exposure.md` |
-| Second run behaves differently from the first      | Reset is manual or non-idempotent           | One rehearsed reset command from a cold state               |
-| Demo works, nobody remembers why                   | The demo showed features, not a claim       | Re-anchor every segment to the one claim                    |
-| Speaker's laptop dies, session ends                | No human redundancy                         | A buddy in the front row with a clone of everything         |
-| Audience asks "is that real?" and the answer is no | Setup hardening slid into faking the output | Narrow the claim to what the system does, or drop to tier 4 |
-| Runbook's commands no longer match the product     | No owner, no last-verified date             | Date every clean cold run; re-verify before each event      |
+| Symptom                                            | Cause                                                     | Fix                                                                                                            |
+| -------------------------------------------------- | --------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| Demo dies with the venue Wi-Fi                     | The stack was never local                                 | Move to tier 2; hotspot only for what cannot be local                                                          |
+| One error and the whole demo is abandoned          | Segments chained on each other's output                   | Give every segment its own restore point                                                                       |
+| Two minutes lost debugging on stage                | No switch rule and no rehearsed fallback                  | One repair attempt, then drop a tier                                                                           |
+| Demo runs double its budget                        | Never timed segment by segment                            | Time each segment; cut the longest, pre-fill boilerplate                                                       |
+| Nobody in row ten can read it                      | Rehearsed at desk distance on a dark theme                | 24pt+, high contrast, checked from the back row                                                                |
+| A notification or a token appears on screen        | Demo run from the daily-driver profile                    | Fresh profile, Do Not Disturb, cleared history                                                                 |
+| A customer name, internal URL or real data leaks   | Demo repo is the team repo; data anonymised not synthetic | Dedicated demo repo, synthetic fixtures, share a window not the desktop - see `references/surface-exposure.md` |
+| Second run behaves differently from the first      | Reset is manual or non-idempotent                         | One rehearsed reset command from a cold state                                                                  |
+| Demo works, nobody remembers why                   | The demo showed features, not a claim                     | Re-anchor every segment to the one claim                                                                       |
+| Speaker's laptop dies, session ends                | No human redundancy                                       | A buddy in the front row with a clone of everything                                                            |
+| Audience asks "is that real?" and the answer is no | Setup hardening slid into faking the output               | Narrow the claim to what the system does, or drop to tier 4                                                    |
+| Runbook's commands no longer match the product     | No owner, no last-verified date                           | Date every clean cold run; re-verify before each event                                                         |
 
 ## References
 

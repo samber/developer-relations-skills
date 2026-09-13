@@ -74,8 +74,8 @@ This collection covers the full developer-relations surface.
 
 ### Strategy & planning
 
-| Skill                                                            | Description                                                                                                                                                                    |
-| ---------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Skill                                                                   | Description                                                                                                                                                                    |
+| ----------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | [`devrel-strategy`](./skills/devrel-strategy)                           | Designs a DevRel program from the top: the business driver that funds it, the two goals it serves, the pillar mix, the staffing sequence, and a written refused list.          |
 | [`developer-first-gtm`](./skills/developer-first-gtm)                   | Designs the go-to-market motion for a developer product: the adoption model, the self-serve entry, the developer-to-buyer handoff rule, and the land-and-expand path.          |
 | [`developer-ecosystem-strategy`](./skills/developer-ecosystem-strategy) | Decides whether and how far a developer product opens into a platform other companies build on, and what that permanently obliges you to.                                      |
@@ -86,16 +86,16 @@ This collection covers the full developer-relations surface.
 
 ### Measurement
 
-| Skill                                                        | Description                                                                                                                                                            |
-| ------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Skill                                                               | Description                                                                                                                                                            |
+| ------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [`devrel-metrics`](./skills/devrel-metrics)                         | Builds a DevRel measurement framework: metrics tiered from reach to business impact, each with an attribution rule, a baseline-derived target, an owner and an action. |
 | [`devrel-analytics`](./skills/devrel-analytics)                     | Builds the tracking plan behind those metrics: an event taxonomy, an identity spine, link-tagging discipline, source-confidence labelling, and funnel views.           |
 | [`devrel-competitor-analysis`](./skills/devrel-competitor-analysis) | Benchmarks a competitor's DevRel motion from publicly observable signals and returns a gap plan with a close, ignore or counter verdict per row.                       |
 
 ### Content & editorial
 
-| Skill                                                          | Description                                                                                                                                                                        |
-| -------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Skill                                                                 | Description                                                                                                                                                                        |
+| --------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [`devrel-content-calendar`](./skills/devrel-content-calendar)         | Plans a quarter of DevRel content as dated slots with named owners and reviewers, mixed by surface, pillar and shelf life, sized against real writing capacity.                    |
 | [`engineering-blog-post`](./skills/engineering-blog-post)             | Writes or edits a technical post a skeptical developer audience believes: evidence behind every claim, published trade-offs, runnable snippets, and no marketing voice.            |
 | [`developer-case-study`](./skills/developer-case-study)               | Turns a customer's production deployment into a technical case study engineers believe: measured numbers, before-and-after architecture, published limitations, cleared approvals. |
@@ -105,8 +105,8 @@ This collection covers the full developer-relations surface.
 
 ### Documentation
 
-| Skill                                                                | Description                                                                                                                                                                        |
-| -------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Skill                                                                       | Description                                                                                                                                                                        |
+| --------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [`developer-docs-structure-audit`](./skills/developer-docs-structure-audit) | Audits a documentation set's structure against the Diátaxis modes, scores it on a TechDocs rubric, and returns a prioritized remediation queue.                                    |
 | [`developer-quickstart-guide`](./skills/developer-quickstart-guide)         | Writes or audits a quickstart that carries a reader from zero to one verified success: a minimal path, expected output per step, fail branches, and a cold-run time budget.        |
 | [`developer-tutorial`](./skills/developer-tutorial)                         | Writes or audits a teaching tutorial: one concept per step, checkpoints the learner can verify and resume from, guidance that fades, and a demonstrable skill at the end.          |
@@ -118,8 +118,8 @@ This collection covers the full developer-relations surface.
 
 ### Discoverability & SEO
 
-| Skill                                                          | Description                                                                                                                                                                 |
-| -------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Skill                                                                 | Description                                                                                                                                                                 |
+| --------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [`docs-seo`](./skills/docs-seo)                                       | Runs on-page and technical SEO for a documentation site: indexability, canonicals and hreflang across versions and translations, redirects, and an owner-assigned fix list. |
 | [`developer-keyword-research`](./skills/developer-keyword-research)   | Builds a prioritized keyword list for technical queries, mined from docs search logs, support tickets and issue trackers rather than keyword-tool volume.                   |
 | [`readme-optimization`](./skills/readme-optimization)                 | Audits and rewrites a repository README into a bail-fast funnel, with every claim verified against the source and badges that earn nothing pruned.                          |
@@ -127,8 +127,8 @@ This collection covers the full developer-relations surface.
 
 ### Community
 
-| Skill                                                                | Description                                                                                                                                                                           |
-| -------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Skill                                                                       | Description                                                                                                                                                                           |
+| --------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [`developer-community-launch`](./skills/developer-community-launch)         | Decides whether, where and when to launch a developer community, then plans its seeding, first 90 days, go/no-go criteria and shutdown criteria.                                      |
 | [`developer-community-health`](./skills/developer-community-health)         | Designs a community health measurement framework: activity, responsiveness, contributor-funnel and sentiment metrics, honest instrumentation, and a report ending in decisions.       |
 | [`developer-community-moderation`](./skills/developer-community-moderation) | Writes a community's code of conduct and the moderation playbook behind it: enforcement ladder, reporting channels, incident runbook, moderator roster, platform controls.            |
@@ -137,8 +137,8 @@ This collection covers the full developer-relations surface.
 
 ### Events & speaking
 
-| Skill                                                          | Description                                                                                                                                                                 |
-| -------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Skill                                                                 | Description                                                                                                                                                                 |
+| --------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [`conference-cfp-submission`](./skills/conference-cfp-submission)     | Turns a talk idea into a submission-ready proposal for one specific event: track fit, title options, abstract, takeaways, credibility package, and a committee self-review. |
 | [`tech-talk-outline`](./skills/tech-talk-outline)                     | Turns an accepted abstract into a rehearsable outline: the one-sentence takeaway, a narrative arc, a minute-by-minute time budget, demo placement, and a slide skeleton.    |
 | [`developer-live-demo-design`](./skills/developer-live-demo-design)   | Engineers a technical demo so it survives the stage: risk triage, enterable checkpoints, a one-command reset, offline mode, and a recorded fallback, shipped as a runbook.  |
@@ -146,8 +146,8 @@ This collection covers the full developer-relations surface.
 
 ### Open source
 
-| Skill                                                            | Description                                                                                                                                                                              |
-| ---------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Skill                                                                   | Description                                                                                                                                                                              |
+| ----------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [`oss-launch`](./skills/oss-launch)                                     | Plans and runs an open-source launch end to end: name and license clearance, the readiness gate, positioning, channel sequencing, the launch-day war room, and measurement.              |
 | [`oss-license-strategy`](./skills/oss-license-strategy)                 | Chooses a project's license and contribution policy as one decision: copyleft strength, dependency compatibility, DCO versus CLA, dual licensing, and relicensing fork risk.             |
 | [`oss-governance`](./skills/oss-governance)                             | Chooses and documents a project's governance model: decision rights, maintainer promotion, voting rules, conflict escalation, succession, trademark control, and foundation options.     |
@@ -159,22 +159,22 @@ This collection covers the full developer-relations surface.
 
 ### OSS funding
 
-| Skill                                                          | Description                                                                                                                                                                     |
-| -------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Skill                                                                 | Description                                                                                                                                                                     |
+| --------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [`oss-sponsors-fundraising`](./skills/oss-sponsors-fundraising)       | Designs a maintainer-side sponsorship program: the tier ladder and its pricing, rewards that stay deliverable at scale, and the invoice-and-entity path a company needs to pay. |
 | [`oss-sponsors-brand-strategy`](./skills/oss-sponsors-brand-strategy) | Builds a company's open-source sponsorship portfolio: which projects and maintainers to fund, through which allocation model, at what amount each, and how to prove it worked.  |
 
 ### Business model
 
-| Skill                                                      | Description                                                                                                                                                                 |
-| ---------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Skill                                                             | Description                                                                                                                                                                 |
+| ----------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [`devtools-business-model`](./skills/devtools-business-model)     | Chooses the business model for a developer tool, from open core to consumption metering to OEM licensing, and the go-to-market each one forces.                             |
 | [`devtools-pricing-strategy`](./skills/devtools-pricing-strategy) | Designs a developer tool's pricing and packaging: the value metric, free-tier limits, the tier ladder, price points bounded by real ceilings, and a safe price-change plan. |
 
 ### Brand & press
 
-| Skill                                                | Description                                                                                                                                                                   |
-| ---------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Skill                                                       | Description                                                                                                                                                                   |
+| ----------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [`tech-press-relations`](./skills/tech-press-relations)     | Runs press and light analyst relations for a developer product: news qualification, the angle, a reporter-to-beat media map, the pitch, embargo handling, and the press page. |
 | [`tech-employer-branding`](./skills/tech-employer-branding) | Designs an employer-brand strategy for attracting software engineers: the engineering EVP, the channel plan, a verification-surface audit, and the measurement baseline.      |
 
