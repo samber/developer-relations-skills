@@ -4,7 +4,7 @@ description: Builds a developer relations measurement framework - a handful of m
 license: MIT
 metadata:
   author: Samuel Berthe
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # DevRel Metrics
@@ -34,6 +34,7 @@ Name which skill fits, and stop if it is not this one.
 
 Ask one question at a time, multiple-choice where the options are knowable. Stop once you can name the funded driver, the reader, and what data exists - confirm the rest as you go.
 
+**Memory: Store a few info about the current task or project context. When memory lives in a file, use `devrel-context.md`; if a different memory system is in use, rely on that instead. Separate task info in different sections. Remove finished tasks. Add a date to a task; no date for general project context. Some interview responses may differ between 2 tasks.**
 1. Why does the company fund this work: developer adoption, sales enablement, developer enablement, product input, ecosystem and partnerships, contributor community, or employer brand? Which would the person holding the budget name first?
 2. Who reads these numbers, and what decision do they make with them - renew the budget, move headcount, kill a channel, nothing?
 3. Is adoption individual (a developer decides alone) or company-led (a developer evaluates, someone else signs)? Or an open-source project with no purchase at all?

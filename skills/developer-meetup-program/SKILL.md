@@ -4,7 +4,7 @@ description: Designs and runs a recurring developer meetup or user group - purpo
 license: MIT
 metadata:
   author: Samuel Berthe
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # Developer Meetup Program
@@ -43,6 +43,7 @@ Say which kind a number is whenever you quote one: a baseline presented as an in
 
 Ask one question at a time, multiple-choice where possible, and skip whatever the user has already answered. Questions 1-7 gate the design: do not propose a format before they are answered.
 
+**Memory: Store a few info about the current task or project context. When memory lives in a file, use `devrel-context.md`; if a different memory system is in use, rely on that instead. Separate task info in different sections. Remove finished tasks. Add a date to a task; no date for general project context. Some interview responses may differ between 2 tasks.**
 1. Is this a new group or an existing one? If existing: how many editions so far, and what is the attendance trend?
 2. Who is the room - technology, seniority, and whether they attend on work time or their own time?
 3. Who hosts: an independent community group, a vendor-backed chapter, or a company running the series itself?

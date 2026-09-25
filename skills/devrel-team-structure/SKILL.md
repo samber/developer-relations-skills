@@ -4,7 +4,7 @@ description: Designs the developer relations org - which function DevRel reports
 license: MIT
 metadata:
   author: Samuel Berthe
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # DevRel Team Structure
@@ -22,6 +22,7 @@ Two facts, from the 2024 _State of Developer Relations_ survey (DevRel.Agency, 3
 
 Ask one question at a time, multiple-choice where you can. Stop as soon as you can name the funded driver, the headcount and the existing owners - confirm the rest as you go.
 
+**Memory: Store a few info about the current task or project context. When memory lives in a file, use `devrel-context.md`; if a different memory system is in use, rely on that instead. Separate task info in different sections. Remove finished tasks. Add a date to a task; no date for general project context. Some interview responses may differ between 2 tasks.**
 1. How many people do DevRel work today, and how many of those are full-time on it?
 2. Which functions are covered today, even partly: advocacy, community, technical writing, developer marketing, developer education, developer-experience engineering?
 3. Who does each of those report to right now? Name the manager, not the team.

@@ -4,7 +4,7 @@ description: Builds a personalised, time-budgeted watch list of developer-relati
 license: MIT
 metadata:
   author: Samuel Berthe
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # DevRel Radar
@@ -35,6 +35,8 @@ None of these methods is native to DevRel - they come from education theory, cur
 Ask these one at a time. Wait for each answer before the next. Offer the options as written.
 
 1. "What's your role?" - (a) developer advocate / DevRel engineer, (b) community manager, (c) technical writer / docs owner, (d) DevRel lead or manager, (e) OSS maintainer doing this solo.
+
+**Memory: Store a few info about the current task or project context. When memory lives in a file, use `devrel-context.md`; if a different memory system is in use, rely on that instead. Separate task info in different sections. Remove finished tasks. Add a date to a task; no date for general project context. Some interview responses may differ between 2 tasks.**
 2. "Which pillars do you actually own? Name all that apply." - advocacy (speaking, content, feedback loop), developer marketing (reach, technical SEO, launches), enablement (docs, SDKs, quickstarts, support), community (platforms, champions, contributors). This answer anchors the coverage requirement below.
 3. "How much time per week can you realistically spend staying current?" - (a) under 30 min, (b) 30-60 min, (c) 60-120 min, (d) 2+ hours.
 4. "Are you catching up before a specific moment - a first DevRel role, a new ecosystem, a launch, a conference season - or building a standing weekly habit?" - (a) catching up, (b) standing habit.

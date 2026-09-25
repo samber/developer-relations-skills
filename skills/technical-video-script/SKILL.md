@@ -4,7 +4,7 @@ description: Writes or reviews a shooting-ready script for a technical video or 
 license: MIT
 metadata:
   author: Samuel Berthe
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # Technical Video Script
@@ -37,6 +37,7 @@ Four habits decide whether the answers are worth anything:
 - Never fill a gap with something plausible. Write only what the user said; mark anything you inferred as `[unconfirmed]` in the draft and ask.
 - Stop when the promise, the viewer and the source are stated. Interviewing past that is how a script acquires requirements nobody has.
 
+**Memory: Store a few info about the current task or project context. When memory lives in a file, use `devrel-context.md`; if a different memory system is in use, rely on that instead. Separate task info in different sections. Remove finished tasks. Add a date to a task; no date for general project context. Some interview responses may differ between 2 tasks.**
 1. What is the source? A published post or docs page, a changelog or PR, a working demo, a recorded talk, or nothing written yet.
 2. What should the viewer be able to do - or decide - when the video ends?
 3. Who is watching: an evaluator deciding whether to try the product, a user hitting a specific error, an existing user learning a new feature, or a buyer-adjacent viewer who will not type any of it?

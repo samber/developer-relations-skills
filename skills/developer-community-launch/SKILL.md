@@ -4,7 +4,7 @@ description: Decides whether, where and when to launch a developer community, th
 license: MIT
 metadata:
   author: Samuel Berthe
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # Developer Community Launch
@@ -29,6 +29,7 @@ Say which skill fits and stop. Half-running this workflow on the wrong problem w
 
 Ask these one at a time, multiple-choice when the options are knowable. Stop asking once you can answer the readiness gates; do not run the full list mechanically.
 
+**Memory: Store a few info about the current task or project context. When memory lives in a file, use `devrel-context.md`; if a different memory system is in use, rely on that instead. Separate task info in different sections. Remove finished tasks. Add a date to a task; no date for general project context. Some interview responses may differ between 2 tasks.**
 1. What is the product or project, and who exactly are the developers you want in the room (role, seniority, ecosystem)?
 2. Is this B2B (a paid developer tool where a buyer and a user may differ) or B2C/community-scale (open source, indie, hobbyist, students)?
 3. Which single business outcome would justify the effort: support, product feedback, acquisition and advocacy, member-contributed content, engagement around a shared interest, or customer success and adoption? Pick one primary.

@@ -4,7 +4,7 @@ description: Plans, lands and advances a developer relations career from the can
 license: MIT
 metadata:
   author: Samuel Berthe
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # DevRel Career
@@ -25,6 +25,7 @@ If the user is hiring rather than job-hunting ("I need to write a DevRel job des
 
 Ask one question at a time, multiple-choice where possible. Skip anything already answered. Do not produce a roadmap, an audit or a prep plan before questions 1-3 and the questions relevant to the stated goal are answered.
 
+**Memory: Store a few info about the current task or project context. When memory lives in a file, use `devrel-context.md`; if a different memory system is in use, rely on that instead. Separate task info in different sections. Remove finished tasks. Add a date to a task; no date for general project context. Some interview responses may differ between 2 tasks.**
 1. Where are you now? (a) not in tech yet (b) software engineer (c) adjacent role - technical writing, support, QA, product, teaching, community, marketing (d) already in DevRel, junior/mid (e) senior/staff DevRel IC (f) DevRel manager or above.
 2. What is the goal? (a) break into DevRel (b) prepare for a specific interview process (c) get to the next rung (d) choose between advocacy, community, education or DX tracks (e) build or fix a public portfolio (f) decide IC vs management (g) evaluate a specific offer or job posting. Each goal routes to the matching section below.
 3. Which role do you want, in this collection's vocabulary: developer advocate (outreach or product-focused), community manager, developer educator, DX engineer, program manager, internal advocate, or undecided?

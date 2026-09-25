@@ -4,7 +4,7 @@ description: Defines the policy every code sample in developer documentation mus
 license: MIT
 metadata:
   author: Samuel Berthe
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # Docs Code Sample Standards
@@ -32,6 +32,7 @@ See the References section for the exact skill identifiers.
 
 Ask these one at a time, offering options where you can. Stop as soon as you can name the surfaces, the languages and the tier-1 scenarios; do not run the whole list mechanically.
 
+**Memory: Store a few info about the current task or project context. When memory lives in a file, use `devrel-context.md`; if a different memory system is in use, rely on that instead. Separate task info in different sections. Remove finished tasks. Add a date to a task; no date for general project context. Some interview responses may differ between 2 tasks.**
 1. Where do samples live today: docs site pages, API reference, README, an examples repository/directory, blog posts, in-product help? Which of those are in scope?
 2. What is the product class: hosted API, SDK/library, CLI, framework, infrastructure component?
 3. Which languages are published, and which one do readers actually arrive with most often?

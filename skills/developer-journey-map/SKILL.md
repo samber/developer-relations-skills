@@ -4,7 +4,7 @@ description: Maps the developer journey for one audience segment - discovery, tr
 license: MIT
 metadata:
   author: Samuel Berthe
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # Developer Journey Map
@@ -63,6 +63,7 @@ The deliverable is always a single markdown document with seven headings, shown 
 
 Ask one question at a time and offer options where you can. Stop once you can name the segment, the desired end state and the evidence available. Confirm the rest while drafting.
 
+**Memory: Store a few info about the current task or project context. When memory lives in a file, use `devrel-context.md`; if a different memory system is in use, rely on that instead. Separate task info in different sections. Remove finished tasks. Add a date to a task; no date for general project context. Some interview responses may differ between 2 tasks.**
 1. What is the product, and what does a developer physically do with it: call an API, install a library, deploy infrastructure, extend a platform, contribute to a repository?
 2. Which single audience segment is this map for? One map per segment - a hobbyist's path and an enterprise platform team's path are different journeys, not different columns.
 3. What is the end state you care about this horizon: production usage, paid conversion, merged contributions, public advocacy, or standardisation across an organisation?

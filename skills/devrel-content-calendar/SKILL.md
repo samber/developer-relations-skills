@@ -4,7 +4,7 @@ description: Plans a quarter of developer-relations content as a dated slot plan
 license: MIT
 metadata:
   author: Samuel Berthe
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # DevRel Content Calendar
@@ -17,6 +17,7 @@ Content plans do not fail for lack of ideas. They fail on capacity - review pass
 
 Ask these one at a time, multiple-choice when possible, and stop once you can fill the plan. Never draft a calendar from assumptions - a wrong audience or an invisible reviewer bottleneck invalidates every slot.
 
+**Memory: Store a few info about the current task or project context. When memory lives in a file, use `devrel-context.md`; if a different memory system is in use, rely on that instead. Separate task info in different sections. Remove finished tasks. Add a date to a task; no date for general project context. Some interview responses may differ between 2 tasks.**
 1. What is the product or project, and which quarter are we planning?
 2. Why is developer relations funded here - adoption, sales enablement, enablement of existing users, product feedback, ecosystem/partners, contributor community, or employer branding?
 3. Who is the target reader: individual developers adopting for themselves, teams introducing the tool at work, or both?

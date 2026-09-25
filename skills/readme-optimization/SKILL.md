@@ -4,7 +4,7 @@ description: Audits and rewrites a repository README so a developer who has neve
 license: MIT
 metadata:
   author: Samuel Berthe
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # README Optimization
@@ -59,6 +59,7 @@ The rewrite follows only after the user agrees with that diagnosis. The full rep
 
 Ask one question at a time, multiple-choice where you can, and skip anything you can determine yourself by reading the repository. Questions 1-4 gate the rewrite - do not draft prose before they are answered.
 
+**Memory: Store a few info about the current task or project context. When memory lives in a file, use `devrel-context.md`; if a different memory system is in use, rely on that instead. Separate task info in different sections. Remove finished tasks. Add a date to a task; no date for general project context. Some interview responses may differ between 2 tasks.**
 1. Which repository, and can I read it and run commands in it?
 2. What is the project: library or SDK, CLI tool, application or service, framework or platform, or template and learning resource?
 3. Who lands on this page: developers in one language ecosystem, polyglot developers, platform or ops engineers, or non-developer evaluators such as security and procurement?

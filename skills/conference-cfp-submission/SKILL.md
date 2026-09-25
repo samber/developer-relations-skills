@@ -4,7 +4,7 @@ description: Turns a talk idea into a submission-ready conference proposal for o
 license: MIT
 metadata:
   author: Samuel Berthe
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # Conference CFP
@@ -49,6 +49,7 @@ Show a character count next to every capped field. Never hand back prose paragra
 
 Ask one question at a time, multiple-choice where possible, and skip anything already answered. Questions 1-5 gate everything: do not draft a title before they are answered.
 
+**Memory: Store a few info about the current task or project context. When memory lives in a file, use `devrel-context.md`; if a different memory system is in use, rely on that instead. Separate task info in different sections. Remove finished tasks. Add a date to a task; no date for general project context. Some interview responses may differ between 2 tasks.**
 1. Which event, and where is the CFP page? Paste it if you can. If the user has not chosen an event yet, work through [Step 0](#step-0---choosing-which-conferences-to-target) first, then return here.
 2. Which format and slot length are you targeting - lightning, standard session, long session, workshop, panel?
 3. What is the talk about, in the words you would use to a colleague?

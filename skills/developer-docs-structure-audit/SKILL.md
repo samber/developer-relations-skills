@@ -4,7 +4,7 @@ description: Audits an existing developer documentation set's structure - a page
 license: MIT
 metadata:
   author: Samuel Berthe
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # Docs Structure Audit
@@ -36,6 +36,7 @@ Two things follow:
 
 Ask one question at a time, multiple-choice where you can, and skip anything already answered. Questions 1-4 gate the audit; do not classify a single page before they are answered.
 
+**Memory: Store a few info about the current task or project context. When memory lives in a file, use `devrel-context.md`; if a different memory system is in use, rely on that instead. Separate task info in different sections. Remove finished tasks. Add a date to a task; no date for general project context. Some interview responses may differ between 2 tasks.**
 1. Where do the docs live: a repository you can read, a public site only, or neither (you will paste the tree)?
 2. Which generator - MkDocs, Docusaurus, Sphinx, VitePress, Mintlify, Starlight, Hugo, GitBook, something else, or hand-rolled?
 3. Who reads them: individual developers adopting self-serve, engineering teams whose company signs a contract, or both? Which ecosystems or languages?

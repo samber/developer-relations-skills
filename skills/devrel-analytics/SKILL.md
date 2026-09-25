@@ -4,7 +4,7 @@ description: Builds the tracking plan that instruments developer-relations surfa
 license: MIT
 metadata:
   author: Samuel Berthe
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # DevRel Analytics
@@ -27,6 +27,7 @@ Hold that line in everything you write. The first reviewer who catches a self-se
 
 Ask these one at a time, multiple-choice where you can. Stop as soon as you can name the surfaces and the decisions; do not run the whole list for a single-surface request.
 
+**Memory: Store a few info about the current task or project context. When memory lives in a file, use `devrel-context.md`; if a different memory system is in use, rely on that instead. Separate task info in different sections. Remove finished tasks. Add a date to a task; no date for general project context. Some interview responses may differ between 2 tasks.**
 1. Which decisions should this data change? Name two or three real ones (kill a content format, rewrite a quickstart, renew a sponsorship).
 2. Which surfaces do you own? Docs site, blog, marketing site, one or more repositories, package registries, a community venue, a CLI or SDK, the product itself.
 3. Which surfaces do you _not_ own but still get traffic from? Talks, podcasts, other people's posts, aggregators.

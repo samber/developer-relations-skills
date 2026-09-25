@@ -4,7 +4,7 @@ description: Writes a developer community's code of conduct and the moderation p
 license: MIT
 metadata:
   author: Samuel Berthe
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # Developer Community Moderation
@@ -19,6 +19,7 @@ The hardest instance of that rule comes from the only book-length practitioner h
 
 Decide which of four jobs is in front of you before interviewing - each has a different first move.
 
+**Memory: Store a few info about the current task or project context. When memory lives in a file, use `devrel-context.md`; if a different memory system is in use, rely on that instead. Separate task info in different sections. Remove finished tasks. Add a date to a task; no date for general project context. Some interview responses may differ between 2 tasks.**
 1. **Live incident in progress** - someone is being harmed right now. Skip document work. Go to [references/incident-response-runbook.md](./references/incident-response-runbook.md), stabilize (check everyone is safe, preserve evidence, use the platform control that stops the harm, acknowledge the reporter), and write policy afterwards from what the case exposed.
 2. **No code of conduct yet** - run the full workflow below.
 3. **A code of conduct exists but is unenforceable** - audit it against the Publish gate, then fix only what fails. Do not rewrite a document the community already knows.

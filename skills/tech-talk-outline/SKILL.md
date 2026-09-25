@@ -4,7 +4,7 @@ description: Turns an accepted conference talk abstract into a rehearsable outli
 license: MIT
 metadata:
   author: Samuel Berthe
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # Conference Talk Outline
@@ -21,6 +21,7 @@ Most numbers in this skill are its own defaults, not research. [`references/sour
 
 Ask these one at a time, multiple-choice where possible. Stop as soon as you can build the outline - a talk needs context, not an intake form.
 
+**Memory: Store a few info about the current task or project context. When memory lives in a file, use `devrel-context.md`; if a different memory system is in use, rely on that instead. Separate task info in different sections. Remove finished tasks. Add a date to a task; no date for general project context. Some interview responses may differ between 2 tasks.**
 1. Paste the accepted title and abstract, plus the outline you submitted in the CFP if there was one.
 2. How long is the slot, and is Q&A inside it or after it?
 3. Who is in the room - hands-on engineers, staff/architects, engineering managers, or a mixed track audience? Which conference track?

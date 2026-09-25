@@ -4,7 +4,7 @@ description: Designs a company's developer relations program from the top - the 
 license: MIT
 metadata:
   author: Samuel Berthe
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # DevRel Strategy
@@ -40,6 +40,7 @@ Return one artefact: a **DevRel charter**, presented section by section in the c
 
 Ask one question at a time. Offer multiple-choice options where you can. Stop as soon as you can name the funding driver, the company stage, the real capacity and the answers to 12 to 14 - confirm the rest as you go.
 
+**Memory: Store a few info about the current task or project context. When memory lives in a file, use `devrel-context.md`; if a different memory system is in use, rely on that instead. Separate task info in different sections. Remove finished tasks. Add a date to a task; no date for general project context. Some interview responses may differ between 2 tasks.**
 1. What is the product, and what does a developer actually do with it - call an API, install a library, run infrastructure, extend a platform, learn a method?
 2. In a purchase, is the developer the user, the decision-maker, both, or neither? Who signs?
 3. Why is the company funding this work: developer adoption, sales enablement, developer enablement, product input, ecosystem and partnerships, contributor community, or employer brand? Which one would the funder name first?

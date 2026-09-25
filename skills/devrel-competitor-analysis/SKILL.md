@@ -4,7 +4,7 @@ description: Benchmarks a competitor's developer relations motion from publicly 
 license: MIT
 metadata:
   author: Samuel Berthe
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # DevRel Competitor Analysis
@@ -21,6 +21,7 @@ Three named methods are worth borrowing from (see Named methods). Each is one co
 
 Ask one question per message, multiple choice where possible. Skip anything the user has already stated or that lives in memory from an earlier run.
 
+**Memory: Store a few info about the current task or project context. When memory lives in a file, use `devrel-context.md`; if a different memory system is in use, rely on that instead. Separate task info in different sections. Remove finished tasks. Add a date to a task; no date for general project context. Some interview responses may differ between 2 tasks.**
 1. Which product or project is the benchmark for? (name and URL)
 2. Which competitors, if you already have a list? If not, propose 3-5 and get them confirmed.
 3. What decision does this feed? (next-quarter plan, budget or headcount case, positioning argument, board or exec slide, "we keep losing evaluators and don't know why")

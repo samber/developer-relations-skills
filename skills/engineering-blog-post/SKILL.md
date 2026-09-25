@@ -4,7 +4,7 @@ description: Writes or edits a technical blog post a skeptical developer audienc
 license: MIT
 metadata:
   author: Samuel Berthe
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # Engineering Blog Post
@@ -43,6 +43,7 @@ Chris Wolfgang, editor at Draft.dev, edits subject-matter-expert drafts for tech
 
 Ask one question at a time, multiple-choice when you can, and stop as soon as you can pick a pattern and judge the evidence. Do not run the list mechanically.
 
+**Memory: Store a few info about the current task or project context. When memory lives in a file, use `devrel-context.md`; if a different memory system is in use, rely on that instead. Separate task info in different sections. Remove finished tasks. Add a date to a task; no date for general project context. Some interview responses may differ between 2 tasks.**
 1. What actually happened? Point me at the raw material - incident notes, design doc, pull request, benchmark output, support threads.
 2. Who is the reader: a developer evaluating this technology, a developer already using it, or a peer engineer who will never use it and just wants the engineering?
 3. Where does it publish: a company engineering blog, a personal blog, or a third-party publication with its own house rules?

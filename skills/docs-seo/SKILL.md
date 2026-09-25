@@ -4,7 +4,7 @@ description: Runs on-page and technical SEO for a documentation site - indexabil
 license: MIT
 metadata:
   author: Samuel Berthe
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # Docs SEO
@@ -37,6 +37,7 @@ Typical invocations:
 
 Ask one question at a time, multiple-choice where you can, and skip whatever the user already told you. Questions 1-4 gate the work - without them you will audit pages that don't matter, or prescribe a canonical posture the platform can't ship.
 
+**Memory: Store a few info about the current task or project context. When memory lives in a file, use `devrel-context.md`; if a different memory system is in use, rely on that instead. Separate task info in different sections. Remove finished tasks. Add a date to a task; no date for general project context. Some interview responses may differ between 2 tasks.**
 1. What is the docs URL, and does the site also resolve on a platform host (`*.readthedocs.io`, `*.github.io`, `*.pages.dev`) or a second domain?
 2. Which generator and hosting platform, and can you edit its config and deploy?
 3. Is the documentation versioned? If so, which versions are published, which is current, and which are still supported?

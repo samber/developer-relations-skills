@@ -4,7 +4,7 @@ description: Designs an unpaid, perks-only developer champions or ambassador pro
 license: MIT
 metadata:
   author: Samuel Berthe
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # Developer Champions
@@ -36,6 +36,7 @@ Label every number you hand the user as sourced or self-set. Sourced numbers com
 
 Ask one question at a time, multiple-choice where possible, and skip whatever the user already answered. Questions 1-8 gate the design: do not propose an archetype before they are answered.
 
+**Memory: Store a few info about the current task or project context. When memory lives in a file, use `devrel-context.md`; if a different memory system is in use, rely on that instead. Separate task info in different sections. Remove finished tasks. Add a date to a task; no date for general project context. Some interview responses may differ between 2 tasks.**
 1. Is this a new program, or a repair of an existing one? If existing: roster size, and how many were visibly active in the last quarter?
 2. Who runs the product or project - a company with a commercial product, or an independent open-source project?
 3. Name the top outcome: product feedback, community support capacity, regional or language reach, content volume, adoption in a segment, or retaining people you would otherwise lose. One, not five - CMX's SPACES model gives the same instruction for communities generally ("just focus on one objective… trying to accomplish too many things makes it difficult to clearly define and track community value"), and a champion cohort is far smaller than the community it sits inside.
