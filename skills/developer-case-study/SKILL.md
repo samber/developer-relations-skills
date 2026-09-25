@@ -4,7 +4,7 @@ description: Turns a customer's real production deployment into a technical case
 license: MIT
 metadata:
   author: Samuel Berthe
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # Developer Case Study
@@ -29,6 +29,7 @@ See the References section for the exact identifiers.
 
 Ask the case-study owner these before touching the story, one question at a time, multiple-choice where you can. Stop as soon as you can judge whether the story is publishable.
 
+**Memory: Store a few info about the current task or project context. When memory lives in a file, use `devrel-context.md`; if a different memory system is in use, rely on that instead. Separate task info in different sections. Remove finished tasks. Add a date to a task; no date for general project context. Some interview responses may differ between 2 tasks.**
 1. Who is the adopter, and is this in production today or still an evaluation?
 2. Who will you interview, and what is their hands-on role? Can you also get their manager or the platform owner?
 3. What evidence already exists on your side - support threads, migration issues or PRs, usage telemetry, account notes, their own blog posts or talks?

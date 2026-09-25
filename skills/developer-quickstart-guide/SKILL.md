@@ -4,7 +4,7 @@ description: Writes or audits a developer quickstart that carries a reader from 
 license: MIT
 metadata:
   author: Samuel Berthe
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # Developer Quickstart Guide
@@ -44,6 +44,7 @@ Exact skill identifiers are in the References section.
 
 Ask these one at a time, multiple-choice whenever you can offer options. Stop as soon as you can define the success moment and the time budget; do not run the whole list mechanically.
 
+**Memory: Store a few info about the current task or project context. When memory lives in a file, use `devrel-context.md`; if a different memory system is in use, rely on that instead. Separate task info in different sections. Remove finished tasks. Add a date to a task; no date for general project context. Some interview responses may differ between 2 tasks.**
 1. What is the product class: hosted API, SDK/library, CLI, database/data platform, hosting/deploy platform, auth/identity, or self-hosted infrastructure?
 2. What single thing should the reader see working at the end? Offer 2-3 candidate success moments and ask them to pick.
 3. Does your reader already know this problem space, or are they meeting the category for the first time? A first-timer needs a getting-started guide; route per the scope check.

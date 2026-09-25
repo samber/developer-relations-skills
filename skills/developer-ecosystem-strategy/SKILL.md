@@ -4,7 +4,7 @@ description: Decides whether, when and how far a developer product should open i
 license: MIT
 metadata:
   author: Samuel Berthe
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # Developer Ecosystem Strategy
@@ -50,6 +50,7 @@ Ask one question at a time, multiple-choice where you can. Confirm the rest as y
 - The complement customers are missing.
 - Who would build it.
 
+**Memory: Store a few info about the current task or project context. When memory lives in a file, use `devrel-context.md`; if a different memory system is in use, rely on that instead. Separate task info in different sections. Remove finished tasks. Add a date to a task; no date for general project context. Some interview responses may differ between 2 tasks.**
 1. What is the product, and who uses it day to day?
 2. Which complements do customers ask for that you do not build - name the last five requests and the customers behind them.
 3. Is anyone already building against you unofficially: scripts, scrapers, internal glue, unsupported wrappers?

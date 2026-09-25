@@ -4,7 +4,7 @@ description: Decides how a company engages a named open standard or protocol - i
 license: MIT
 metadata:
   author: Samuel Berthe
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # Open Standards Strategy
@@ -24,6 +24,7 @@ Ask one question at a time, multiple-choice where you can. Stop as soon as you c
 
 **Name the standard and the trigger.**
 
+**Memory: Store a few info about the current task or project context. When memory lives in a file, use `devrel-context.md`; if a different memory system is in use, rely on that instead. Separate task info in different sections. Remove finished tasks. Add a date to a task; no date for general project context. Some interview responses may differ between 2 tasks.**
 1. Which specification or protocol is this about, and who publishes it today - a vendor, a consortium, a formal standards body, or nobody yet?
 2. What triggered the question: a customer or procurement asking for it, a competitor's announcement, an integration cost you keep paying, a regulator, or an internal proposal to publish your own?
 

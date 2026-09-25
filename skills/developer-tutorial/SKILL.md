@@ -4,7 +4,7 @@ description: Writes or audits a teaching tutorial for a developer product - one 
 license: MIT
 metadata:
   author: Samuel Berthe
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # Developer Tutorial
@@ -35,6 +35,7 @@ See the References section for the exact skill identifiers.
 
 Ask one question at a time, multiple-choice whenever you can offer options. Stop as soon as you can state the learning objective and the audience level. Infer the rest and confirm it later.
 
+**Memory: Store a few info about the current task or project context. When memory lives in a file, use `devrel-context.md`; if a different memory system is in use, rely on that instead. Separate task info in different sections. Remove finished tasks. Add a date to a task; no date for general project context. Some interview responses may differ between 2 tasks.**
 1. What should the learner be able to _do_ afterwards that they cannot do now? Push for a demonstrable capability, not a topic.
 2. What will they build while learning it? Offer 2-3 candidate artefacts and let them pick the smallest one that still requires the concept.
 3. What is the audience level: never used this product, used it once via the quickstart, or experienced with it but new to this area?

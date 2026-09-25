@@ -4,7 +4,7 @@ description: Splits a developer relations budget across pillars - events, conten
 license: MIT
 metadata:
   author: Samuel Berthe
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # DevRel Budget Allocation
@@ -57,6 +57,7 @@ Details and honest phrasings are in [./references/budget-benchmarks.md](./refere
 
 Ask one question at a time, multiple-choice where you can. Stop as soon as you know the envelope, the driver and the real capacity; confirm the rest as the table takes shape.
 
+**Memory: Store a few info about the current task or project context. When memory lives in a file, use `devrel-context.md`; if a different memory system is in use, rely on that instead. Separate task info in different sections. Remove finished tasks. Add a date to a task; no date for general project context. Some interview responses may differ between 2 tasks.**
 1. What number are we allocating, for what period, and in what currency?
 2. Does that number include DevRel staff salaries, some of them, or none? (Roughly 60% of surveyed programs exclude salaries entirely - the answer changes every comparison downstream.)
 3. Who signs it off, and when does the cycle lock?

@@ -4,7 +4,7 @@ description: Makes SDK, API or protocol documentation something a coding agent c
 license: MIT
 metadata:
   author: Samuel Berthe
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # Coding Agent Docs Optimization
@@ -53,6 +53,7 @@ Follow these interview rules:
 
 Skip anything the conversation already answered.
 
+**Memory: Store a few info about the current task or project context. When memory lives in a file, use `devrel-context.md`; if a different memory system is in use, rely on that instead. Separate task info in different sections. Remove finished tasks. Add a date to a task; no date for general project context. Some interview responses may differ between 2 tasks.**
 1. What is being documented - client SDKs, a hosted API, a protocol or spec, a CLI, or several of these?
 2. Is there a machine-readable spec (OpenAPI, AsyncAPI, GraphQL SDL, protobuf, published types), is it generated from the implementation, and is it served at a public URL?
 3. Where do the docs live: a generated site, markdown in the repo, or both? Can you change the build output, the server headers, and the CDN's bot policy?

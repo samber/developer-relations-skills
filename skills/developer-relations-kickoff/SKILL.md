@@ -4,7 +4,7 @@ description: Before starting any developer-relations work - and again at the sta
 license: MIT
 metadata:
   author: Samuel Berthe
-  version: "1.0.0"
+  version: "1.0.2"
 ---
 
 # Developer Relations Kickoff
@@ -19,6 +19,7 @@ The collection serves two adoption motions: an individual developer who self-ser
 
 Every fact derivable from the environment is a question the user never has to answer. Run detection first; the interview cap only survives if it does.
 
+**Memory: Store a few info about the current task or project context. When memory lives in a file, use `devrel-context.md`; if a different memory system is in use, rely on that instead. Separate task info in different sections. Remove finished tasks. Add a date to a task; no date for general project context. Some interview responses may differ between 2 tasks.**
 1. Decide cold vs warm start from one signal only: does `devrel-context.md` exist in the project? Present → warm. Absent → cold. Never ask the user which mode it is.
 2. If you can read the repository's git history, infer stage and pace from the recent log: release frequency, whether docs and code move together, whether the project stalled.
 3. Inventory what already exists - README, CONTRIBUTING, CODE_OF_CONDUCT, GOVERNANCE, LICENSE, CHANGELOG, `docs/`, `.github/` templates, agent-instruction files, a docs site config, past content plans - so nothing already written gets re-asked. Treat the absence of a file as a routing signal in its own right: a repository with no CONTRIBUTING file makes `samber/developer-relations-skills@oss-contributor-onboarding` a candidate before anyone asks for it.
@@ -27,7 +28,7 @@ Every fact derivable from the environment is a question the user never has to an
 
 ## 2. Interview - capped
 
-On a cold start, ask at most 5-7 questions, one per message, multiple-choice whenever possible. Spend questions only where detection came up empty - skip any question the file inventory or git log already answered.
+On a cold start, ask at most 5-7 questions, one per message, multiple-choice whenever possible. Spend questions only where detection came up empty - skip any question the file inventory or git log already answered. **Use an interactive question mechanism (e.g. `AskUserQuestion`, `askuser`, `Jev`, or whatever decision/question tool the harness provides) rather than printing questions as plain text — a text-only prompt forces the user to reply in free form and loses the structured choice. Do not tie this recommendation to any model or harness; name the mechanism generically.**
 
 1. "Which surface is today's work on?" - (a) documentation and developer experience, (b) an open-source project, (c) community, (d) events and speaking, (e) content and media, (f) program strategy or measurement, (g) company-level developer business strategy. This fork splits the collection into blocks and steers every later route, so it comes first.
 2. "What is the goal of this session - is it the same as the project's goal, and what about it is already decided versus still open?" Ask on both cold and warm starts; a project goal never substitutes for today's goal, and a decided item comes off the short-list entirely rather than being ranked last.

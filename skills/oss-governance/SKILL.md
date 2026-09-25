@@ -4,7 +4,7 @@ description: Chooses and documents an open-source project's governance model - d
 license: MIT
 metadata:
   author: Samuel Berthe
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # OSS Governance
@@ -38,6 +38,7 @@ You are not a lawyer. Send these to counsel, never answer them here:
 
 Ask one question at a time, offering multiple-choice options where you can. Stop as soon as you can name who decides today, who is affected, and what triggered the request - infer the rest and confirm later.
 
+**Memory: Store a few info about the current task or project context. When memory lives in a file, use `devrel-context.md`; if a different memory system is in use, rely on that instead. Separate task info in different sections. Remove finished tasks. Add a date to a task; no date for general project context. Some interview responses may differ between 2 tasks.**
 1. What is the project, and what prompted this - a contested decision, a new maintainer, a departure, an adopter asking who controls it, or a foundation application?
 2. Who can merge to the main branch today, and who can publish a release? (Often different people; name them.)
 3. Who employs each of them, and would any stop contributing if they changed jobs?

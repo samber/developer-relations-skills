@@ -4,7 +4,7 @@ description: Builds a developer-event sponsorship plan - which conferences, meet
 license: MIT
 metadata:
   author: Samuel Berthe
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # Developer Event Sponsorship
@@ -26,6 +26,7 @@ Route the user elsewhere when this is the wrong table:
 
 Ask one question at a time, multiple-choice where you can. Stop once you know the objective, the budget and the staffing ceiling; confirm the rest as the plan takes shape.
 
+**Memory: Store a few info about the current task or project context. When memory lives in a file, use `devrel-context.md`; if a different memory system is in use, rely on that instead. Separate task info in different sections. Remove finished tasks. Add a date to a task; no date for general project context. Some interview responses may differ between 2 tasks.**
 1. Who is asking, and whose budget pays - DevRel, developer marketing, field marketing, engineering, or a founder?
 2. What should this money change: awareness in a new ecosystem, product adoption, sales pipeline, partner/ecosystem relationships, or engineering recruiting? Rank your top two.
 3. Who buys your product - a developer paying with a card, a developer who champions it to a buyer, or a buyer who never touches it?

@@ -4,7 +4,7 @@ description: Turns raw commits, pull requests and tickets into release notes dev
 license: MIT
 metadata:
   author: Samuel Berthe
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # Changelog Writing
@@ -28,6 +28,7 @@ Writing the notes and linking out to a migration guide is in scope; writing that
 
 Ask one at a time, multiple-choice where you can. Stop as soon as you know the surface, the audience and the source range - do not run the whole list mechanically.
 
+**Memory: Store a few info about the current task or project context. When memory lives in a file, use `devrel-context.md`; if a different memory system is in use, rely on that instead. Separate task info in different sections. Remove finished tasks. Add a date to a task; no date for general project context. Some interview responses may differ between 2 tasks.**
 1. Which surface is this for: repository `CHANGELOG.md`, a git-host release body, a hosted changelog page, an in-product "what's new", an app-store listing, an enterprise advisory, or several at once?
 2. Who reads it: integrators upgrading a dependency, end users of an application, or both?
 3. What is the version range - previous tag to `HEAD`, a milestone, a date window?

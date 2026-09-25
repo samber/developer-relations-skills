@@ -4,7 +4,7 @@ description: Builds a company's open-source sponsorship portfolio - which projec
 license: MIT
 metadata:
   author: Samuel Berthe
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # OSS Sponsors Brand Strategy
@@ -32,6 +32,7 @@ See [references/sourced-numbers.md](./references/sourced-numbers.md) for the sou
 
 Ask one question at a time, multiple-choice where you can, and stop once you know the mandate, the budget and the ecosystem. Confirm the rest as the portfolio takes shape.
 
+**Memory: Store a few info about the current task or project context. When memory lives in a file, use `devrel-context.md`; if a different memory system is in use, rely on that instead. Separate task info in different sections. Remove finished tasks. Add a date to a task; no date for general project context. Some interview responses may differ between 2 tasks.**
 1. Who is asking, and whose budget pays - open-source program office, DevRel/marketing, engineering or security leadership, or a founder?
 2. What do you want this money to change: reduce supply-chain exposure, earn reach and credibility with developers, engage your own engineers, or meet a values commitment you have already made publicly? Rank your top two.
 3. How much per year, and how many developers do you employ? Is the budget new or moved from an existing line?

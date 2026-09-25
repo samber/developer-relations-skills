@@ -4,7 +4,7 @@ description: Runs press and light analyst relations for a developer-facing produ
 license: MIT
 metadata:
   author: Samuel Berthe
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # Tech Press Relations
@@ -48,6 +48,7 @@ Boundaries, so you route instead of duplicating:
 
 Ask one question at a time, multiple-choice where possible, and stop as soon as you can name the news, the audience and the date. Questions 1-3 gate everything - draft nothing before they are answered.
 
+**Memory: Store a few info about the current task or project context. When memory lives in a file, use `devrel-context.md`; if a different memory system is in use, rely on that instead. Separate task info in different sections. Remove finished tasks. Add a date to a task; no date for general project context. Some interview responses may differ between 2 tasks.**
 1. What happened or is about to happen, in one sentence, in plain language?
 2. When must the coverage land: a fixed date you cannot move, a window, or unscheduled?
 3. Who has to believe this - individual developers choosing their own tools, engineering leaders and buyers approving spend, investors and the market, or candidates? Rank them.

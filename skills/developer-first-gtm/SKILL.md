@@ -4,7 +4,7 @@ description: Designs the go-to-market motion for a developer-facing product - bo
 license: MIT
 metadata:
   author: Samuel Berthe
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # Developer-First GTM
@@ -28,6 +28,7 @@ This is a strategy skill. You produce a motion decision with its handoff rules, 
 
 Ask one question at a time, multiple-choice where you can. Stop as soon as you can name the product surface, the current adoption evidence and who signs; confirm the rest as you go.
 
+**Memory: Store a few info about the current task or project context. When memory lives in a file, use `devrel-context.md`; if a different memory system is in use, rely on that instead. Separate task info in different sections. Remove finished tasks. Add a date to a task; no date for general project context. Some interview responses may differ between 2 tasks.**
 1. What does a developer install, call or run - a library, CLI, self-hosted server, hosted API, IDE/agent extension, platform?
 2. What has to happen before they get value the first time: an account, a credit card, an API key, infrastructure, a security review, a colleague?
 3. Is the value visible to one developer alone, or only once a team or org uses it?

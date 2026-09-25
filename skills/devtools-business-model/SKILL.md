@@ -4,7 +4,7 @@ description: Chooses the business model for a developer tool - proprietary SaaS,
 license: MIT
 metadata:
   author: Samuel Berthe
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # Devtools Business Model
@@ -29,6 +29,7 @@ Whatever the entry point, the deliverable is the memo in step 6, constraints, re
 
 Ask one question at a time. Offer multiple-choice options where you can. Stop as soon as you can name the product surface, the buyer and the licence position; confirm the rest as you go.
 
+**Memory: Store a few info about the current task or project context. When memory lives in a file, use `devrel-context.md`; if a different memory system is in use, rely on that instead. Separate task info in different sections. Remove finished tasks. Add a date to a task; no date for general project context. Some interview responses may differ between 2 tasks.**
 1. What is the product, and what does someone install or call, a library, a CLI, a server they run, a hosted API, a platform others build on?
 2. Who runs it in production: your infrastructure, the customer's, or both?
 3. Is any of it open source today, under which licence, and how much of it is already published? (Anything already released stays released.)

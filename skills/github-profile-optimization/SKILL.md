@@ -4,7 +4,7 @@ description: Audits and rebuilds a personal or organization profile on GitHub as
 license: MIT
 metadata:
   author: Samuel Berthe
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # GitHub Profile Optimization
@@ -43,6 +43,7 @@ Some asks deserve a redirect rather than a rewrite. "Get me more stars" and "fil
 
 Ask one question at a time, offer choices where you can, and skip anything you can determine yourself from the audit output. Questions 1-4 gate the rewrite: do not draft prose before they are answered.
 
+**Memory: Store a few info about the current task or project context. When memory lives in a file, use `devrel-context.md`; if a different memory system is in use, rely on that instead. Separate task info in different sections. Remove finished tasks. Add a date to a task; no date for general project context. Some interview responses may differ between 2 tasks.**
 1. Which account, and is it a personal profile or an organization?
 2. Are you a maintainer after adoption and contributors, a company building developer awareness, or an engineer whose profile faces hiring scrutiny? Everything downstream branches on this answer.
 3. What is the one outcome this page should produce more of: project adoption, contributors, inbound from companies, speaking and collaboration invitations, job or client leads, or sponsorship?

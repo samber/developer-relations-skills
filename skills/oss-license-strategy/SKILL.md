@@ -4,7 +4,7 @@ description: Chooses an open-source project's license and contribution policy as
 license: MIT
 metadata:
   author: Samuel Berthe
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # OSS License Strategy
@@ -21,6 +21,7 @@ Three rules govern everything below:
 
 Ask one question at a time, multiple-choice where you can. Stop as soon as you can name the artifact, the dependency situation and the goal - confirm the rest as you go.
 
+**Memory: Store a few info about the current task or project context. When memory lives in a file, use `devrel-context.md`; if a different memory system is in use, rely on that instead. Separate task info in different sections. Remove finished tasks. Add a date to a task; no date for general project context. Some interview responses may differ between 2 tasks.**
 1. What is the project, and does it already have a license? (New project, unlicensed public repo, or a change to an existing license - each is a different job.)
 2. What ships to users: a library, an application or CLI, a hosted service, a plugin for a host product, a spec or schema, or several of these in one repository?
 3. Who wrote the code, and under what circumstances - personal time, employer time, a mix, contractors, an existing team?

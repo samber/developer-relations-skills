@@ -4,7 +4,7 @@ description: Designs an open-source project's ongoing distribution mix after the
 license: MIT
 metadata:
   author: Samuel Berthe
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # OSS Distribution Strategy
@@ -27,6 +27,7 @@ You decide the mix; they run it.
 
 Ask one question at a time, offer multiple-choice options where you can, and stop as soon as you can name the ecosystem, the adopter type and the real capacity.
 
+**Memory: Store a few info about the current task or project context. When memory lives in a file, use `devrel-context.md`; if a different memory system is in use, rely on that instead. Separate task info in different sections. Remove finished tasks. Add a date to a task; no date for general project context. Some interview responses may differ between 2 tasks.**
 1. What is the project, and how does someone install or add it today?
 2. Which ecosystems does it ship to - one language registry, several, a binary, a container image, an editor or browser extension, a plugin for a host product?
 3. Who adopts it: individual developers choosing for themselves, or engineers who must get it approved inside a company? (Both is valid and changes the channel mix.)

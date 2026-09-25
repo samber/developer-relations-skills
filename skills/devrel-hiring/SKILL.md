@@ -4,7 +4,7 @@ description: Employer-side DevRel hiring - writes the job posting and outcome-ba
 license: MIT
 metadata:
   author: Samuel Berthe
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # DevRel Hiring
@@ -24,6 +24,7 @@ If the user is job-hunting rather than hiring ("how do I prep for a DevRel inter
 
 Ask one question at a time, multiple-choice where possible. Skip anything already answered. Questions 8-10 re-rank the artefacts below before any is built - ask them before producing anything.
 
+**Memory: Store a few info about the current task or project context. When memory lives in a file, use `devrel-context.md`; if a different memory system is in use, rely on that instead. Separate task info in different sections. Remove finished tasks. Add a date to a task; no date for general project context. Some interview responses may differ between 2 tasks.**
 1. Company type: (a) early startup, pre-seed-A, this will be a team of one (b) growth/scale-up, B-D (c) big-tech enterprise (d) OSS-first company or foundation.
 2. Role target: (a) developer advocate, outreach-focused (b) developer advocate, product-focused (c) community manager (d) developer educator (e) DX engineer (f) not sure - recommend one from the funding driver.
 3. What funds this role - the driver behind the budget: developer adoption, sales enablement, developer enablement, product input, ecosystem/partnerships, contributor community, or employer branding?

@@ -4,7 +4,7 @@ description: Designs and verifies the path a stranger walks to their first merge
 license: MIT
 metadata:
   author: Samuel Berthe
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # Contributor Onboarding
@@ -64,6 +64,7 @@ A recommendation with no evidence attached is an opinion, and a maintainer will 
 
 Ask one question at a time, multiple-choice where possible, and skip anything you can answer yourself by reading the repository. Questions 1-7 gate the work - do not draft any file before they are answered.
 
+**Memory: Store a few info about the current task or project context. When memory lives in a file, use `devrel-context.md`; if a different memory system is in use, rely on that instead. Separate task info in different sections. Remove finished tasks. Add a date to a task; no date for general project context. Some interview responses may differ between 2 tasks.**
 1. Which repository, and can I read it and run commands inside it?
 2. What do you actually want more of: code contributions, documentation and translation help, triage and support help, or co-maintainers who can share the load?
 3. Is this a volunteer or solo-maintained project, or is it corporate-backed or foundation-hosted? The answer changes the response target, the legal gate, and the ladder you can promise - the split is tabled in [./references/contributing-file-outline.md](./references/contributing-file-outline.md) §3.

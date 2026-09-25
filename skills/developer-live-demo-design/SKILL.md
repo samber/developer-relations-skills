@@ -4,7 +4,7 @@ description: Engineers a technical demo so it survives the stage - risk triage, 
 license: MIT
 metadata:
   author: Samuel Berthe
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # Live Demo Design
@@ -39,6 +39,7 @@ Every number in this skill is labelled at the point of use as either sourced or 
 
 Ask these one at a time, multiple-choice where possible. Stop as soon as you can build the runbook - this is a design conversation, not an intake form.
 
+**Memory: Store a few info about the current task or project context. When memory lives in a file, use `devrel-context.md`; if a different memory system is in use, rely on that instead. Separate task info in different sections. Remove finished tasks. Add a date to a task; no date for general project context. Some interview responses may differ between 2 tasks.**
 1. What exactly does the demo have to prove? One sentence, phrased as a claim the audience should believe afterwards.
 2. Where does it run - conference stage, meetup, workshop, webinar, recorded video, sales call, booth, internal all-hands?
 3. How many minutes does it get, and what happens to the talk if it eats double that?

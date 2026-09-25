@@ -4,7 +4,7 @@ description: Designs a maintainer-side open-source sponsorship program - the tie
 license: MIT
 metadata:
   author: Samuel Berthe
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # OSS Sponsors Fundraising
@@ -26,6 +26,7 @@ If the user is a company deciding which projects to fund and at what tier, this 
 
 Ask one question at a time, multiple-choice where you can, and stop as soon as you know the project, the goal amount, and the honest delivery capacity. Confirm the rest as you design.
 
+**Memory: Store a few info about the current task or project context. When memory lives in a file, use `devrel-context.md`; if a different memory system is in use, rely on that instead. Separate task info in different sections. Remove finished tasks. Add a date to a task; no date for general project context. Some interview responses may differ between 2 tasks.**
 1. Which project, and what is your role - sole maintainer, one of a team, or a company employee maintaining it on work time?
 2. What do you want the money to change: buy back hours, cover infrastructure costs, fund a specific deliverable, or replace a salary? Name a monthly number, even a rough one.
 3. By what date does that money have to be arriving - this quarter, this year, no deadline?

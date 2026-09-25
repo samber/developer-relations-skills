@@ -4,7 +4,7 @@ description: Turns support tickets, issue history and error telemetry into troub
 license: MIT
 metadata:
   author: Samuel Berthe
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # Developer Troubleshooting Docs
@@ -33,6 +33,7 @@ Name these four published frameworks to the user, so the skill's choices are aud
 
 Ask one question at a time, multiple-choice when you can, and skip what the user already answered. Questions 1-4 gate the work - without them you will write pages for failures nobody hits:
 
+**Memory: Store a few info about the current task or project context. When memory lives in a file, use `devrel-context.md`; if a different memory system is in use, rely on that instead. Separate task info in different sections. Remove finished tasks. Add a date to a task; no date for general project context. Some interview responses may differ between 2 tasks.**
 1. Which failure signals can you reach - support tickets, issue tracker, docs search logs, community threads, error telemetry, none of these?
 2. Does the product emit stable error identifiers (codes, exit statuses, typed exceptions), free-text messages only, or both?
 3. Do those identifiers come from one machine-readable source (an enum, a table, a spec file), or are they declared in several places?

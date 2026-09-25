@@ -4,7 +4,7 @@ description: Designs a sustainable build-in-public practice for an open-source p
 license: MIT
 metadata:
   author: Samuel Berthe
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # Build in Public
@@ -23,6 +23,7 @@ Before designing anything, confirm this is the practice the user wants: three pr
 
 Ask one question at a time, offer multiple-choice options where you can, and stop as soon as you can name the goal, the audience, the deadline and the real capacity. Confirm the rest later.
 
+**Memory: Store a few info about the current task or project context. When memory lives in a file, use `devrel-context.md`; if a different memory system is in use, rely on that instead. Separate task info in different sections. Remove finished tasks. Add a date to a task; no date for general project context. Some interview responses may differ between 2 tasks.**
 1. What is the project, and who maintains it - one person, a small team, or a funded company?
 2. What outcome do you want from being public: contributors, users, sponsors or funding, a hiring or credibility signal for yourself, or a commercial funnel? (Rank the top two.)
 3. Who is the audience: individual developers choosing tools for themselves, or engineers who must get a tool approved inside a company? (Both is a valid answer.)

@@ -4,7 +4,7 @@ description: Designs an employer-brand strategy for attracting software engineer
 license: MIT
 metadata:
   author: Samuel Berthe
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # Tech Employer Branding
@@ -38,6 +38,7 @@ Typical invocations:
 
 Ask one question at a time. Offer multiple-choice options where you can. Stop once you can name the stage, the seniority target, the instrumentation state, and the answers to 11 to 13: confirm the rest as you go.
 
+**Memory: Store a few info about the current task or project context. When memory lives in a file, use `devrel-context.md`; if a different memory system is in use, rely on that instead. Separate task info in different sections. Remove finished tasks. Add a date to a task; no date for general project context. Some interview responses may differ between 2 tasks.**
 1. Who is accountable for engineering hiring outcomes: a head of engineering, a talent or recruiting lead, a founder, or someone wearing the hat part-time?
 2. What stage is the company: early-stage with no brand to speak of, a scale-up, a large established company, or an OSS-first company whose product is open source?
 3. Which seniority tier must the next hires come from (junior/early-career, mid, senior/staff/principal, or a mix), and which is hardest to land today?

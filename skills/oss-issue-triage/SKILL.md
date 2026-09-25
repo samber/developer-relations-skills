@@ -4,7 +4,7 @@ description: Designs an issue and pull-request triage system a maintainer team c
 license: MIT
 metadata:
   author: Samuel Berthe
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # OSS Issue Triage
@@ -27,6 +27,7 @@ Do not triage individual items, curate the first-contribution queue, review code
 
 Ask one at a time, multiple-choice where you can, skipping what the user already answered. Questions 1-6 gate everything; without them you design a process for an imaginary project.
 
+**Memory: Store a few info about the current task or project context. When memory lives in a file, use `devrel-context.md`; if a different memory system is in use, rely on that instead. Separate task info in different sections. Remove finished tasks. Add a date to a task; no date for general project context. Some interview responses may differ between 2 tasks.**
 1. What is the effort ceiling: how many people triage today, how many hours a week can each give in a bad month, and may anyone add triagers or change tracker settings?
 2. Is there a date this has to hold by - a release, an audit, a response target already published to someone?
 3. Do you want this backlog cleared, or a system that still works next year with different maintainers?

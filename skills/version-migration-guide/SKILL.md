@@ -4,7 +4,7 @@ description: Writes or audits the migration guide for a breaking change - what b
 license: MIT
 metadata:
   author: Samuel Berthe
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # Version Migration Guide
@@ -42,6 +42,7 @@ Default to the library/SDK shape this skill describes. Schema, cloud, mobile and
 
 Ask one at a time, multiple-choice where you can. Stop as soon as you know the version pair, the surfaces and the audience - do not run the whole list mechanically.
 
+**Memory: Store a few info about the current task or project context. When memory lives in a file, use `devrel-context.md`; if a different memory system is in use, rely on that instead. Separate task info in different sections. Remove finished tasks. Add a date to a task; no date for general project context. Some interview responses may differ between 2 tasks.**
 1. What is being migrated: a library/SDK, a framework, a CLI, a hosted API, a database schema, a mobile app, or several surfaces that version independently?
 2. Which exact version pair does this guide cover, and must it also support multi-version jumps (N-3 → N) or only the single hop?
 3. Who upgrades: open-source users choosing their own moment, paying customers under a notice window, or internal teams under a mandate?

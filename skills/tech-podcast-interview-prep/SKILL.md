@@ -4,7 +4,7 @@ description: Prepares a guest for someone else's technical podcast, YouTube inte
 license: MIT
 metadata:
   author: Samuel Berthe
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # Podcast Interview Prep
@@ -38,6 +38,7 @@ The brief's sections, in order: header block (show, format, hosts, audience, boo
 
 Ask one question at a time, multiple-choice where you can. Skip anything the user already answered. Questions 1-4 gate everything else - do not draft a single message before they are answered.
 
+**Memory: Store a few info about the current task or project context. When memory lives in a file, use `devrel-context.md`; if a different memory system is in use, rely on that instead. Separate task info in different sections. Remove finished tasks. Add a date to a task; no date for general project context. Some interview responses may differ between 2 tasks.**
 1. Which show, and what format: audio-only, video, or livestream? Recorded-and-edited, or live with no retakes?
 2. Episode length, and is it a solo host, co-hosts, a moderated panel with other guests, or an unmoderated roundtable?
 3. Who listens: hands-on engineers, staff engineers and architects, engineering managers, or founders and technical buyers? Which language or platform ecosystem?

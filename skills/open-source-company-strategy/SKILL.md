@@ -4,7 +4,7 @@ description: Decides what a company open-sources and what stays proprietary, nam
 license: MIT
 metadata:
   author: Samuel Berthe
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # Open Source Company Strategy
@@ -38,6 +38,7 @@ Overlap is normal - this skill sets the line those skills execute against. Hand 
 
 Ask one question at a time, offer choices where you can, and stop once you can name the product being sold, the candidate assets, the motive and the decider. Confirm the rest later.
 
+**Memory: Store a few info about the current task or project context. When memory lives in a file, use `devrel-context.md`; if a different memory system is in use, rely on that instead. Separate task info in different sections. Remove finished tasks. Add a date to a task; no date for general project context. Some interview responses may differ between 2 tasks.**
 1. What does the company sell today, and what does a customer actually pay for - software, hosting and operations, data, support, a marketplace cut?
 2. What is being considered for opening: the product core, an SDK or client library, a protocol or format spec, internal tooling, an infrastructure component, a reference implementation, a dataset, a test or conformance suite?
 3. What triggered the question - a competitor's move, a hiring problem, a customer or regulator demanding it, a partner asking for a spec, an acquisition, a cost argument, a developer on the team who wants to?

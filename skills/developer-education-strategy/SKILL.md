@@ -4,7 +4,7 @@ description: Decides whether and how to invest in structured developer education
 license: MIT
 metadata:
   author: Samuel Berthe
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # Developer Education Strategy
@@ -33,6 +33,7 @@ Route away: "write the lesson on webhooks" goes to the tutorial skill, "our docs
 
 Answer in this order:
 
+**Memory: Store a few info about the current task or project context. When memory lives in a file, use `devrel-context.md`; if a different memory system is in use, rely on that instead. Separate task info in different sections. Remove finished tasks. Add a date to a task; no date for general project context. Some interview responses may differ between 2 tasks.**
 1. Gate verdict, in one sentence.
 2. Tier recommendation, with the rejected rungs.
 3. Operating model.

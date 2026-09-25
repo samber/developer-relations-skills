@@ -4,7 +4,7 @@ description: Designs the pricing and packaging architecture of a developer tool 
 license: MIT
 metadata:
   author: Samuel Berthe
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # Devtools Pricing Strategy
@@ -36,6 +36,7 @@ Say which numbers are sourced and which are this skill's own baselines every tim
 
 Ask one question at a time, multiple-choice where you can, and stop as soon as you can name the value metric candidates, the buyer, and the cost per unit. Confirm the rest as you go.
 
+**Memory: Store a few info about the current task or project context. When memory lives in a file, use `devrel-context.md`; if a different memory system is in use, rely on that instead. Separate task info in different sections. Remove finished tasks. Add a date to a task; no date for general project context. Some interview responses may differ between 2 tasks.**
 1. What is the product, and what does a customer install or call?
 2. Which business model is already decided - hosted service, open core, self-hosted licence, support subscription, metered API, something else?
 3. Who pays: an individual developer on a card, a team lead with a budget, or an organization with procurement?

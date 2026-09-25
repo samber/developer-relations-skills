@@ -4,7 +4,7 @@ description: Cuts a developer audience into a few named, sized and ranked segmen
 license: MIT
 metadata:
   author: Samuel Berthe
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # Developer Segmentation
@@ -27,6 +27,7 @@ Two facts drive the method:
 
 Ask one question at a time, offer options where you can, and stop as soon as you can name the product shape, the funded driver and the evidence available. Confirm the rest while drafting.
 
+**Memory: Store a few info about the current task or project context. When memory lives in a file, use `devrel-context.md`; if a different memory system is in use, rely on that instead. Separate task info in different sections. Remove finished tasks. Add a date to a task; no date for general project context. Some interview responses may differ between 2 tasks.**
 1. What is the product, and what does a developer physically do with it - call an API, install a library, run infrastructure, extend a platform, adopt a method?
 2. Why is the company funding developer-facing work: developer adoption, sales enablement, developer enablement, product input, ecosystem and partnerships, contributor community, or employer brand? Which would the funder name first?
 3. Who uses it today, in the plainest terms someone in support would use?

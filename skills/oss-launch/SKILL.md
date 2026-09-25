@@ -4,7 +4,7 @@ description: Plans and runs an open-source project launch end to end - name and 
 license: MIT
 metadata:
   author: Samuel Berthe
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # OSS Launch
@@ -25,6 +25,7 @@ Fogel's pre-announcement inventory is the source behind the readiness gate in St
 
 Ask one question at a time, in this order, with multiple-choice options wherever you can. Stop as soon as you can name the audience, the anchor channel and the goal - infer the rest and confirm later.
 
+**Memory: Store a few info about the current task or project context. When memory lives in a file, use `devrel-context.md`; if a different memory system is in use, rely on that instead. Separate task info in different sections. Remove finished tasks. Add a date to a task; no date for general project context. Some interview responses may differ between 2 tasks.**
 1. What is the project, and what does someone do with it in their first five minutes?
 2. Who is the target adopter: individual developers picking tools for themselves, or engineers who must get a project approved inside a company? (Both is valid - it changes what you ship, not whether you launch.)
 3. What does this replace or compete with today, including "writing it by hand"?

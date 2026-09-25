@@ -4,7 +4,7 @@ description: Builds a prioritized keyword list for technical search queries (err
 license: MIT
 metadata:
   author: Samuel Berthe
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # Developer Keyword Research
@@ -21,6 +21,7 @@ Every figure this skill quotes is traceable: [./references/published-findings.md
 
 Ask these one at a time, multiple-choice where possible, and stop as soon as you can act. Skip any question the conversation already answered.
 
+**Memory: Store a few info about the current task or project context. When memory lives in a file, use `devrel-context.md`; if a different memory system is in use, rely on that instead. Separate task info in different sections. Remove finished tasks. Add a date to a task; no date for general project context. Some interview responses may differ between 2 tasks.**
 1. What is the product, and what does a developer do with it in the first hour?
 2. Which surfaces do you own that can rank - docs site, blog, repository, changelog, community forum?
 3. Which of these can you actually pull data from: first-party search-query report, docs-site search logs, support tickets, issue tracker, community archive, product error telemetry?
