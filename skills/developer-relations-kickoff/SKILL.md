@@ -365,7 +365,7 @@ If the harness has no scheduled routines, fall back to one recurring calendar re
 Before ending the session, check every item. If any fails, fix it and re-check - do not close the session on a failing bar.
 
 1. Every recommended skill's declared scope actually matches the stated task - re-read its description to confirm.
-2. Zero routes to a name outside the 55 skills in the tables above.
+2. Zero routes to a name outside the tables above.
 3. Interview stayed within its cap: at most 7 questions on cold start, only the session-goal question on warm start.
 4. `devrel-context.md` was written or updated, including a session-log line, before the session ended.
 5. Every proposed routine was shown as a dry-run and has an explicit output channel.
