@@ -4,6 +4,8 @@ Skills for the people who run **developer relations**: documentation, open sourc
 
 Written for **developer advocates, DevRel leads, community managers and OSS maintainers**. Every skill ends in **a decision or a shippable artifact**, never a list of best practices.
 
+<img width="1904" height="640" alt="image" src="https://github.com/user-attachments/assets/d43bd887-44f1-4387-8ce4-ee692367dcfe" />
+
 ## 📚 Related Collections
 
 - [`developer-platform-skills`](https://github.com/samber/developer-platform-skills): Platform & SDK developer experience: _for platform engineers, DX engineers, SDK authors, API product managers, DevRel engineers_
