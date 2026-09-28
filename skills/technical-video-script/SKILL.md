@@ -342,7 +342,7 @@ Treat spikes with suspicion: a rewatched segment can mean "that was great" or "I
 
 - [./references/script-template.md](./references/script-template.md) - beat table, chapter list, cut plan and metadata block
 - [./references/worked-examples.md](./references/worked-examples.md) - before/after openings, beat rewrites, narration pairs, two negative examples and review output shape
-- [./references/recording-brief.md](./references/recording-brief.md) - handoff for the recorder: starting states, machine hygiene, music licensing, take plan, captions, description with CTA
+- [./references/recording-brief.md](./references/recording-brief.md) - handoff for the recorder: starting states, machine hygiene, music licensing, AI voiceover selection, take plan, captions, description with CTA
 - [./references/published-findings.md](./references/published-findings.md) - source for every figure, stated limitations, and thresholds
 - samber/developer-relations-skills@developer-live-demo-design when the demo is performed live rather than recorded
 - samber/developer-relations-skills@developer-tutorial when the artefact is a written teaching tutorial instead

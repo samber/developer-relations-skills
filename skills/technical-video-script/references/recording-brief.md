@@ -5,6 +5,7 @@ The page the recorder reads before shooting. It ships with the script; the scrip
 - [Starting states](#starting-states)
 - [Machine hygiene](#machine-hygiene)
 - [Music](#music)
+- [AI voiceover](#ai-voiceover)
 - [Off-limits list](#off-limits-list)
 - [Take plan](#take-plan)
 - [After the shoot](#after-the-shoot)
@@ -38,6 +39,18 @@ Every state must be reachable by one command from a cold machine, and rehearsed 
 - Never use commercial or copyrighted music without written clearance: a rights claim can mute or block the video long after it ships.
 - Cut music to the beats the script flags with a music cue or transition, and keep it under the narration, never competing with it.
 - An AI music generator is a third option alongside a licensed library or a composer: check its output license before using the track commercially, since generated-music terms vary by tool and by plan.
+
+## AI voiceover
+
+Applies only when the interview answer to voiceover is AI-synthesized, not a human recorder.
+
+- Generate the opening beat through 2-3 candidate voices before the full narration pass, and pick by ear. A synthesis engine's default voice rarely fits the video's tone.
+- Favor a plain, confident, conversational reading over an expressive or performative one. A technical viewer trusts a steady presenter, not a narrator selling something.
+- Tune the delivery, not just the voice: a setting that maximizes consistency reads flat and robotic, one that maximizes expressiveness can drift staged or uneven - dial between the two by ear, not by default.
+- Prefer a model built for narration and long-form consistency over one optimized for real-time latency. A pre-rendered voiceover has no latency constraint to trade naturalness against.
+- Check the voice's commercial-use license before publishing, same as any licensed asset (see Music above).
+
+Optional integration note: ElevenLabs' `eleven_multilingual_v2` model is a common narration-grade choice, tuned via `stability`, `similarity_boost` and `style` - moderate stability and a low style value read closest to a steady presenter.
 
 ## Off-limits list
 
