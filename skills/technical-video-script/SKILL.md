@@ -4,7 +4,7 @@ description: Writes or reviews a shooting-ready script for a technical video or 
 license: MIT
 metadata:
   author: Samuel Berthe
-  version: "1.1.1"
+  version: "1.1.2"
 ---
 
 # Technical Video Script
@@ -130,7 +130,9 @@ The order is a default, not a law: it shifts with context and with who records. 
 - A recorder who is already fast at motion graphics moves the concept explainer up, and the motion design explainer further: the concept explainer still works as plain diagrams, while the motion design explainer needs animation capability, not just diagram literacy.
 - A team with a video editor on staff cuts the deep dive's edit cost, which is most of its effort.
 
-The effort, value, opening and depth columns reflect craft experience from video production, and a user may adjust any cell to fit their own context.
+The effort, value, opening and depth columns reflect video-production craft experience; a user may adjust any cell to their context.
+
+**Short-form and long-form reach viewers on different clocks.** The feed pushes a short-form clip to non-subscribers fast, so its reach spikes and is spent within days. The dominant video platform shows a long-form video to subscribers first, and widens it to non-subscribers only as watch time accumulates: that slow ramp is why it compounds.
 
 The length evidence behind the runtime bands: median engagement time is at most six minutes regardless of total video length, and the median viewer gets less than halfway through videos longer than nine minutes (Guo et al.). Wistia's 2026 report on 13M+ hosted videos points the same way - under-a-minute videos average a 52% engagement rate - though that is a business-video corpus, not a teaching one. Length past six minutes is a decision with a known cost; take it only with chapters and a reason.
 
@@ -282,9 +284,9 @@ Narration words ÷ measured rate + per-beat dead time = estimate vs target.
 
 ## Audience context
 
-The beats are the same; three things shift with who arrives and how the video travels. Adjust the script for your audience's constraints and viewing context.
+The beats are the same; three things shift with who arrives and how the video travels.
 
-**Individual adoption / self-serve (PLG B2B hybrid).** The viewer is a developer evaluating self-serve AND a manager arriving via that developer's share - a single video serves both. Keep the whole path inside the free tier, never reveal a paywall mid-demo, and put the companion repository link in a beat early enough to be captured. Also apply the B2B redaction rules below: redact or seed every screen showing customer names, tenant IDs, internal hostnames and pricing; state versions and limitations aloud; expect the video to be replayed in a procurement or security review where "it depends" is not visible.
+**Individual adoption / self-serve (PLG B2B hybrid).** The viewer is a developer evaluating self-serve AND a manager arriving via that developer's share - a single video serves both. Keep the whole path inside the free tier, never reveal a paywall mid-demo, and put the companion repository link in a beat early enough to be captured. Also apply the three sales-led rules below.
 
 **Sales-led B2B, enterprise or buyer-adjacent.** A second audience is watching who will not type any of it, and a screen recording is a durable, forwardable document.
 
