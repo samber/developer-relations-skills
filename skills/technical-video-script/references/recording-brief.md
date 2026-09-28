@@ -2,6 +2,16 @@
 
 The page the recorder reads before shooting. It ships with the script; the script is not finished without it.
 
+- [Starting states](#starting-states)
+- [Machine hygiene](#machine-hygiene)
+- [Music](#music)
+- [Off-limits list](#off-limits-list)
+- [Take plan](#take-plan)
+- [After the shoot](#after-the-shoot)
+- [Description and CTA](#description-and-cta)
+- [Captions and translations](#captions-and-translations)
+- [Publication checks](#publication-checks)
+
 ## Starting states
 
 One row per beat, copied from the script's Starting state column and made executable.
@@ -21,6 +31,13 @@ Every state must be reachable by one command from a cold machine, and rehearsed 
 - Shell prompt shortened; no directory paths containing customer or employer names.
 - Secrets: use throwaway keys that will be rotated after recording. Assume every frame is a screenshot someone keeps.
 - Everything slow happens before recording: installs, builds, image pulls, index builds, account verification.
+
+## Music
+
+- Take every track from an open-source or Creative Commons-licensed music library, and read that track's license: some variants forbid commercial use or derivatives, and a product video is commercial.
+- Never use commercial or copyrighted music without written clearance: a rights claim can mute or block the video long after it ships.
+- Cut music to the beats the script flags with a music cue or transition, and keep it under the narration, never competing with it.
+- An AI music generator is a third option alongside a licensed library or a composer: check its output license before using the track commercially, since generated-music terms vary by tool and by plan.
 
 ## Off-limits list
 
@@ -48,15 +65,49 @@ For a B2B or enterprise audience this is not politeness - a recording is forward
 
 The script already contains everything below; this list exists so nothing gets re-derived from the video.
 
-| Artefact            | Source in the script                                                                  |
-| ------------------- | ------------------------------------------------------------------------------------- |
-| Chapter list        | Segment titles + final timecodes (first `00:00`, three or more, each ≥10s, ascending) |
-| Description         | Opening beat's problem statement, prerequisites line, links named in beats            |
-| Captions            | Auto-generate, then correct against the narration column - never re-transcribe        |
-| Caption fix list    | The identifiers, flags and package names flagged in the metadata block                |
-| Short-form clips    | Beats marked clip-able                                                                |
-| Companion page      | Beats in order, rewritten as a how-to                                                 |
-| Claims to re-verify | Version numbers, benchmark figures, pricing statements                                |
+| Artefact            | Source in the script                                                                           |
+| ------------------- | ---------------------------------------------------------------------------------------------- |
+| Chapter list        | Segment titles + final timecodes (first `00:00`, three or more, each ≥10s, ascending)          |
+| Description         | Opening beat's problem statement, promise, prerequisites, chapters, links, one CTA - see below |
+| Captions            | Auto-generate, then correct against the narration column - never re-transcribe. For another language, see below |
+| Caption fix list    | The identifiers, flags and package names flagged in the metadata block                         |
+| Short-form clips    | Beats marked clip-able                                                                         |
+| Companion page      | Beats in order, rewritten as a how-to                                                          |
+| Claims to re-verify | Version numbers, benchmark figures, pricing statements                                         |
+
+## Description and CTA
+
+```text
+<hook: the opening beat's problem statement, in the viewer's words>
+<promise: one line, what the viewer has working or decided by the end>
+
+Prerequisites: <versions, accounts, prior knowledge>
+
+Chapters:
+00:00 <task-shaped title>
+<mm:ss> <next title>
+
+Links:
+- <every link named in the narration, in the order it is named>
+
+Music: <track, author, license, credited exactly as the license asks>
+
+<one call to action: the next step, with its link>
+```
+
+- Put the hook first. The platform shows only the opening lines above the "more" fold, and the problem statement is what the searching viewer recognizes.
+- Take the call to action from the destination the interview already set: try the product, read the docs, star the repository. State it as one plain instruction.
+- Keep exactly one primary call to action. Other links sit in the Links list as references, never phrased as asks, so the next step stays unambiguous.
+- Reuse the chapter list from the row above verbatim. A second, edited copy drifts from the video's real timecodes.
+- For a short-form clip, drop the chapters block entirely. Most short-form surfaces truncate or hide the description behind a tap, and few viewers read it before swiping on - keep the description to the hook line and the call to action, nothing else survives the fold.
+
+## Captions and translations
+
+Correct the primary-language captions against the narration column first, the same pass already described above - the script already fixed every deictic sentence and every pronunciation, so this pass is verification, not authoring.
+
+Pick target languages from the channel's own viewer-language breakdown (the video platform and the docs site both report one), never from a generic list of world languages - a devtools audience skews toward whichever languages its actual developer base reads, which a global ranking does not predict.
+
+To add another language, translate the corrected transcript, never the raw audio and never the source material. Machine-translate a first pass, then have a fluent or native speaker in that language check every identifier, flag and package name - translation engines mangle these the same way a raw auto-caption does, just in a language nobody else on the team can catch by ear. Upload each language as its own caption track; never rely on a platform's live auto-translate, which the viewer cannot correct and the team cannot review before it ships.
 
 ## Publication checks
 
@@ -66,3 +117,5 @@ The script already contains everything below; this list exists so nothing gets r
 4. The video plays intelligibly with the screen off (the audio-only pass, re-run on the real recording).
 5. Code on screen is readable at phone size.
 6. No off-limits item appears in any frame - scrub at 4x with the off-limits list open.
+7. The description opens with the problem statement above the fold and carries exactly one primary call to action.
+8. Every published caption language is a reviewed translation of the corrected transcript, not a raw machine translation of the audio or an unreviewed auto-translated track.
