@@ -72,6 +72,7 @@ The script already contains everything below; this list exists so nothing gets r
 | Captions            | Auto-generate, then correct against the narration column - never re-transcribe. For another language, see below |
 | Caption fix list    | The identifiers, flags and package names flagged in the metadata block                         |
 | Short-form clips    | Beats marked clip-able                                                                         |
+| Link overlays       | Same one CTA as the description - see below                                                    |
 | Companion page      | Beats in order, rewritten as a how-to                                                          |
 | Claims to re-verify | Version numbers, benchmark figures, pricing statements                                         |
 
@@ -98,6 +99,7 @@ Music: <track, author, license, credited exactly as the license asks>
 - Put the hook first. The platform shows only the opening lines above the "more" fold, and the problem statement is what the searching viewer recognizes.
 - Take the call to action from the destination the interview already set: try the product, read the docs, star the repository. State it as one plain instruction.
 - Keep exactly one primary call to action. Other links sit in the Links list as references, never phrased as asks, so the next step stays unambiguous.
+- Point any on-screen link overlay at the same one CTA, timed to a beat where the narration has already earned it - not the opening beat. A second, different destination splits a decision the description already resolved.
 - Reuse the chapter list from the row above verbatim. A second, edited copy drifts from the video's real timecodes.
 - For a short-form clip, drop the chapters block entirely. Most short-form surfaces truncate or hide the description behind a tap, and few viewers read it before swiping on - keep the description to the hook line and the call to action, nothing else survives the fold.
 
