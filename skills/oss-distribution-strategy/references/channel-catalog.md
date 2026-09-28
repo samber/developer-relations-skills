@@ -51,6 +51,7 @@ The numbering is a table of contents, not a ranking. The efficiency order, the p
 - The `sindresorhus/awesome` rules sub-lists inherit in spirit: 30+ days old before submitting upward, passes `awesome-lint`, not AI-generated, carries a Contents table, `contributing.md`, the awesome badge and a Creative Commons license (CC0 recommended). Entries take one fixed shape, `- [Name](URL#readme) - Description.` The bar is explicitly "the best, not everything", excluding unmaintained, archived or thinly documented projects by policy.
 - For any target list, read its `contributing.md` and last merged PRs, match the entry format exactly, place it in the right section. Format failures are rejected before the project is judged.
 - Contributing first - dead-link fixes, other projects, section improvements - improves the reception of a later self-submission and costs less than it.
+- Wait for independent usage before submitting - real stars, issues opened by strangers, an outside contributor - not the week it ships. "The best, not everything" is judged against comparable already-listed projects, and a zero-traction repo reads as unproven no matter how well the entry is formatted.
 
 **Selection test** - do target developers browse it; is the link dofollow on a domain with real authority; was the list touched recently; are comparable projects listed; can arrivals be measured.
 
@@ -62,6 +63,7 @@ The numbering is a table of contents, not a ranking. The efficiency order, the p
   - Abandoned lists.
   - Paid placement with no visible audience.
   - One description reused verbatim everywhere.
+  - Submitting a brand-new, zero-traction project - rejected on the "best, not everything" policy even when the PR itself is well-formed.
 
 ## 4. Downstream packaging and mirrors
 
