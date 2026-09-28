@@ -4,7 +4,7 @@ description: Plans and runs an open-source project launch end to end - name and 
 license: MIT
 metadata:
   author: Samuel Berthe
-  version: "1.0.1"
+  version: "1.0.3"
 ---
 
 # OSS Launch
