@@ -4,7 +4,7 @@ description: Designs an open-source project's ongoing distribution mix after the
 license: MIT
 metadata:
   author: Samuel Berthe
-  version: "1.0.1"
+  version: "1.0.2"
 ---
 
 # OSS Distribution Strategy

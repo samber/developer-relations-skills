@@ -115,7 +115,7 @@ Some also gate on traction you must already have, which makes them structurally 
 
 - Submit before launch day: weekly issues are assembled days in advance.
 - Give the curator a ready-to-paste 2-3 sentence description and a link to a page that explains the project without a login.
-- Listing sites and awesome-lists are long-tail distribution, not a launch spike - handle them after the window, and let the ongoing distribution work own them.
+- Listing sites and awesome-lists are long-tail distribution, not a launch spike - handle them after the window, once the project has independent usage to show a curator, and let the ongoing distribution work own them.
 
 ## Individual vs company adoption
 
