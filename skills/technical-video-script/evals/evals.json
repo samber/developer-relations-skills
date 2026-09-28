@@ -349,7 +349,7 @@
     { "query": "Run technical SEO on our documentation site", "should_trigger": false },
     { "query": "Design our developer education and certification program", "should_trigger": false },
     { "query": "Plan a recurring developer meetup in Lisbon", "should_trigger": false },
-    { "query": "Render this animation with Remotion", "should_trigger": false },
+    { "query": "Render this animation to MP4", "should_trigger": false },
     { "query": "Generate a video from this still image with an AI model", "should_trigger": false },
     { "query": "Cut the dead air out of my recording in DaVinci Resolve", "should_trigger": false },
     { "query": "Convert my screen recording to an animated GIF", "should_trigger": false },
