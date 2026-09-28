@@ -72,6 +72,7 @@ Before handing the skeleton over, verify:
 
 - Every slide has one idea, and its title is the takeaway sentence rather than a topic label.
 - Nothing is on screen that the speaker is not about to say.
+- The speaker's line is never the slide's own words read aloud - it comments on what the slide already shows.
 - Each section has a marker slide, and the never-cut slides are marked.
 - Every code fragment passes the font-size and highlight-the-diff rules.
 - No meaning depends on color alone.

@@ -120,7 +120,7 @@ This collection covers the full developer-relations surface.
 - [`engineering-blog-post`](./skills/engineering-blog-post): Writes or edits a technical post a skeptical developer audience believes: evidence behind every claim, published trade-offs, runnable snippets, and no marketing voice.
 - [`developer-case-study`](./skills/developer-case-study): Turns a customer's production deployment into a technical case study engineers believe: measured numbers, before-and-after architecture, published limitations, cleared approvals.
 - [`build-in-public`](./skills/build-in-public): Designs a sustainable build-in-public practice: how far up the disclosure ladder to go, a cadence the maintainer can hold, the platform mix, and the boundaries.
-- [`technical-video-script`](./skills/technical-video-script): Writes a shooting-ready two-column script for a technical video: a 30-second hook, code-on-screen pacing, chapters, a runtime budget, and a pre-decided cut list.
+- [`technical-video-script`](./skills/technical-video-script): Writes a shooting-ready script for a technical video or motion design explainer: a 30-second hook, code-on-screen pacing, chapters, and a pre-decided cut list.
 - [`tech-podcast-interview-prep`](./skills/tech-podcast-interview-prep): Prepares a guest for someone else's podcast, interview or panel: show reconnaissance, a message spine, a self-contained opening answer, and clip-safe sound bites.
 
 ### Documentation

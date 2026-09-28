@@ -137,7 +137,7 @@ These tables are deliberately unranked, and must stay that way - inside a block 
 | --------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
 | `samber/developer-relations-skills@engineering-blog-post`       | Write or edit a technical post for a skeptical developer reader                     |
 | `samber/developer-relations-skills@developer-case-study`        | Turn a customer deployment into a technical case study engineers believe            |
-| `samber/developer-relations-skills@technical-video-script`      | A shooting-ready screencast script - beat sheet, code pacing, chapters, cut list    |
+| `samber/developer-relations-skills@technical-video-script`      | A shooting-ready screencast or motion design explainer script - beat sheet, chapters, cut list |
 | `samber/developer-relations-skills@tech-podcast-interview-prep` | Prepare to be the guest on someone else's podcast, interview or livestream          |
 | `samber/developer-relations-skills@devrel-content-calendar`     | Plan a quarter of content around fixed anchors, capacity and mix                    |
 | `samber/developer-relations-skills@tech-press-relations`        | Press and light analyst relations - angle, reporter map, pitch, embargo, press page |

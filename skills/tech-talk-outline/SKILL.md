@@ -143,6 +143,7 @@ Per slide, run these tests:
 - One idea. A slide with no single point should not exist, or should become several slides.
 - The title is the takeaway sentence, not a topic label - "Retries amplified the outage", not "Retry behaviour".
 - Nothing on screen that the speaker is not about to say. The audience reads faster than the speaker talks, and everything else on the slide competes with them.
+- The speaker's line is not the slide's own words read aloud. The slide names the point; the speaker comments on it - why it matters, what it costs, what's surprising.
 
 Give each section a marker slide so a listener who drifted can re-enter the talk, and put the repository, docs and handle on a slide that appears twice - once where it becomes useful, once at the end where it gets photographed.
 
