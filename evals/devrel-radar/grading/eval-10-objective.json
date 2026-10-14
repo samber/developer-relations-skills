@@ -1,0 +1,154 @@
+{
+  "with_skill": {
+    "expectations": [
+      {
+        "text": "Delivers the list rather than refusing, drawing on its bundled source entries with each one's recorded status and date.",
+        "evidence": "Full tables of sources are delivered, e.g. 'The New Stack | thenewstack.io | text, daily | all four | 10 | ... | ad-supported media | active, 26 Aug 2026' and 'Tessa Kriesel | tessakriesel.com | text, blog | advocacy, marketing | 5 | ... | active, 31 Jul 2026'.",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "States clearly and prominently that it could not re-verify anything in this environment.",
+        "evidence": "'I built your list from that snapshot and I'm telling you plainly, per the skill's own rule for this situation: **I did not re-verify anything today (2026-09-23).**'",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Carries each entry's previously recorded status and date rather than presenting any of them as freshly confirmed.",
+        "evidence": "Entries carry old dates such as 'active, 26 Aug 2026', 'active, 31 Jul 2026', 'verified, format-changed \u2014 not weekly anymore' rather than today's date (2026-09-23); the preamble states 'Every status below is carried from the skill's last confirmed dates (mostly 31 Jul \u2013 2 Sep 2026)'.",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Hands the user the manual check as explicit steps: open each URL, find the newest dated item, confirm the owner, apply the classifications.",
+        "evidence": "'For each source above: open the URL, find the newest dated item, confirm who currently runs it (ownership changes faster than content dies in this field...), and apply \u2014 active if \u2264~3 months old, stale if >~6 months, dead if parked/resold/unrelated, unverified if it 403s or renders no date.'",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Gives the thresholds to apply: a dated item within roughly three months is active, and a newest dated item older than roughly six months is stale.",
+        "evidence": "'apply \u2014 active if \u2264~3 months old, stale if >~6 months, dead if parked/resold/unrelated, unverified if it 403s or renders no date.'",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "States that the three- and six-month windows are a self-set baseline rather than an industry standard, and should be widened for annual surveys and tightened for a daily news site.",
+        "evidence": "The transcript only calls the windows 'this skill's own ~3-month \"active\" window' and 'this skill's own 6-month stale threshold' without ever framing them as a self-set baseline versus an industry standard, and never states the thresholds should be widened for annual sources (CMX Report, Octoverse) or tightened for the daily The New Stack entry.",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "Flags the age of the source snapshot it is working from and warns that a snapshot older than roughly six months needs re-verification before being relied on.",
+        "evidence": "The transcript flags snapshot age only as 'Verification snapshot: 17 Aug \u2013 2 Sep 2026, not re-checked today' and 'still inside its own ~3-month \"active\" window as of today, but treat that as a snapshot, not a live check' \u2014 it never states a general rule that a snapshot older than roughly six months needs re-verification before being relied on.",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "Labels no entry verified-active on the strength of a remembered date.",
+        "evidence": "Despite disclaiming any re-verification today, the transcript still labels entries 'verified-active, governance repo commit 28 Aug 2026' and sums up 'Verified-active: 6 of 6 listed' purely from the remembered snapshot dates.",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "Invents no source to fill a pillar gap.",
+        "evidence": "'No vector-database or AI/LLM-tooling-specific source exists in this skill's verified audit... I'm not filling this with a guess (that's the failure mode this skill exists to prevent: inventing a plausible-sounding source).'",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Covers advocacy and community with at least one source each.",
+        "evidence": "Advocacy is covered by 'Tessa Kriesel | ... | advocacy, marketing' and community by 'DRF community mailing list | ... | community' and 'Developer Relations Foundation | ... | all four'.",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Excludes video entirely and names the deletion with the constraint that caused it.",
+        "evidence": "'Dropped: Video \u2014 entirely, per \"absolutely no video.\" No conference-talk archive or channel appears anywhere above, bench included.'",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Opens the artifact by saying what it is not - a reading list verified on one date, not a monitoring service that alerts the user when a source dies.",
+        "evidence": "The opening explains the snapshot is 'a pre-verified, date-stamped audit, not a live fetch' but never frames the artifact itself as a reading list verified on one date as opposed to a monitoring service that alerts the user when a source dies.",
+        "passed": false,
+        "graded": true
+      }
+    ]
+  },
+  "without_skill": {
+    "expectations": [
+      {
+        "text": "Delivers the list rather than refusing, drawing on its bundled source entries with each one's recorded status and date.",
+        "evidence": "The transcript builds a fresh generic list (changelogs, subreddits, podcasts) with no reference to any prior bundled entries carrying recorded status/date fields.",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "States clearly and prominently that it could not re-verify anything in this environment.",
+        "evidence": "The verification caveat only appears buried mid-document: '(Illustrative rows only \u2014 I have no live network access to verify current release notes or thread content...)' rather than up front.",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "Carries each entry's previously recorded status and date rather than presenting any of them as freshly confirmed.",
+        "evidence": "No entry in the source list carries any status or date field at all.",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "Hands the user the manual check as explicit steps: open each URL, find the newest dated item, confirm the owner, apply the classifications.",
+        "evidence": "No explicit manual-check steps (open URL, find newest date, confirm owner) are given to the user.",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "Gives the thresholds to apply: a dated item within roughly three months is active, and a newest dated item older than roughly six months is stale.",
+        "evidence": "No freshness thresholds are stated anywhere in the transcript.",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "States that the three- and six-month windows are a self-set baseline rather than an industry standard, and should be widened for annual surveys and tightened for a daily news site.",
+        "evidence": "Not addressed anywhere in the transcript.",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "Flags the age of the source snapshot it is working from and warns that a snapshot older than roughly six months needs re-verification before being relied on.",
+        "evidence": "No snapshot-age warning of this kind is given; only a generic no-network-access caveat on the illustrative example.",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "Labels no entry verified-active on the strength of a remembered date.",
+        "evidence": "No entry in the deliverable is labeled 'verified-active' at all.",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Invents no source to fill a pillar gap.",
+        "evidence": "All named sources (Pinecone, Weaviate, Qdrant, Milvus/Zilliz, Chroma, LanceDB, turbopuffer, r/vectordatabase, Latent Space, etc.) are real, known entities.",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Covers advocacy and community with at least one source each.",
+        "evidence": "Community is covered via Reddit/HN, but no advocacy-specific source is included; the list is competitive-intelligence and topic-podcast focused.",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "Excludes video entirely and names the deletion with the constraint that caused it.",
+        "evidence": "'Skip entirely: YouTube launch videos, conference talk recordings, webinar replays...' tied to 'the no-video rule' stated at the top.",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Opens the artifact by saying what it is not - a reading list verified on one date, not a monitoring service that alerts the user when a source dies.",
+        "evidence": "The opening is 'Yes \u2014 the network block doesn't actually threaten this...Here's the radar, ready to run,' with no statement distinguishing a one-date reading list from an alerting service.",
+        "passed": false,
+        "graded": true
+      }
+    ]
+  }
+}

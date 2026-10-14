@@ -1,0 +1,154 @@
+{
+  "with_skill": {
+    "expectations": [
+      {
+        "text": "Strikes the competitor benchmark from the menu outright rather than ranking it last, because the effort ceiling excludes producing new evidence",
+        "evidence": "'**(c) Benchmarks \u2014 struck outright.** SKILL.md is explicit...struck from the menu, not parked at the bottom.'",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Says the strikes out loud instead of silently omitting the struck option",
+        "evidence": "Entire 'Ranking and strikes' section explicitly explains the strike with quoted skill rule.",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "States the ranking of the surviving options explicitly rather than implying it by order",
+        "evidence": "'the efficiency order (`bug hunt > explainer > how we built it > rewrote it in X > lessons learned > thoughts on trends > ...`) puts Bug Hunt ahead of it by five positions'",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Names the hard date as the answer that promotes Bug Hunt and Thoughts on Trends",
+        "evidence": "'A hard date \"promotes Bug Hunt and Thoughts on Trends, whose material is already written down or already in your head\"'",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Recommends the outage write-up, as a Bug Hunt, as the highest surviving option",
+        "evidence": "'**(a) Bug Hunt \u2014 wins.**'",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Gives the reason that the internal incident review already exists, which makes this post near-zero effort",
+        "evidence": "'Effort per the table: \"an hour, on top of an incident review already written.\" You have the incident review.'",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Notes that Thoughts on Trends rests on the weakest evidence class and buys a reach spike with a short shelf life",
+        "evidence": "No mention of 'evidence class' or 'reach spike'/'shelf life' anywhere regarding Thoughts on Trends.",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "Requires a steelman of the opposing view if the eBPF opinion is written",
+        "evidence": "'a steelman good enough that an eBPF advocate would recognize their own position \u2014 that's real drafting time against a 6-hour budget' and 'the steelman needs the time it needs.'",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Declines to combine two of the three into one post, and recommends publishing separately and linking them",
+        "evidence": "No explicit statement about declining to combine or linking separate posts together appears.",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "Notes that a competitor benchmark carries a legal or compliance review the other two options do not",
+        "evidence": "No mention of legal or compliance review anywhere in this section.",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "Names the conditions under which the benchmark would be worth promoting anyway",
+        "evidence": "'If the competitive benchmark is a real compounding asset for you, it deserves a quarter and a harness, not a squeeze into this week.'",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Does not recommend the benchmark for the nine-day deadline",
+        "evidence": "Benchmark struck outright and resequenced as 'a separate project once the keynote is behind you, not compressed to fit it.'",
+        "passed": true,
+        "graded": true
+      }
+    ]
+  },
+  "without_skill": {
+    "expectations": [
+      {
+        "text": "Strikes the competitor benchmark from the menu outright rather than ranking it last, because the effort ceiling excludes producing new evidence",
+        "evidence": "'(c) Competitive benchmark \u2014 dead on arrival... Park it \u2014 do it properly post-keynote as its own launch.'",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Says the strikes out loud instead of silently omitting the struck option",
+        "evidence": "The 'Why the other two are out, fast' section explicitly explains why (b) and (c) are excluded.",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "States the ranking of the surviving options explicitly rather than implying it by order",
+        "evidence": "'Verdict: the outage postmortem (a). Ship the outage writeup. Not close.'",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Names the hard date as the answer that promotes Bug Hunt and Thoughts on Trends",
+        "evidence": "The terms 'Bug Hunt' and 'Thoughts on Trends' never appear anywhere in the transcript.",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "Recommends the outage write-up, as a Bug Hunt, as the highest surviving option",
+        "evidence": "The outage post is recommended as top choice but never labeled 'Bug Hunt.'",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "Gives the reason that the internal incident review already exists, which makes this post near-zero effort",
+        "evidence": "'(a) Outage postmortem \u2014 the analysis is already done. Your 6 hours go entirely into shaping and writing, not investigating.'",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Notes that Thoughts on Trends rests on the weakest evidence class and buys a reach spike with a short shelf life",
+        "evidence": "The eBPF discussion says 'you have an opinion, not a piece' but never names the pattern or discusses reach-spike shelf life.",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "Requires a steelman of the opposing view if the eBPF opinion is written",
+        "evidence": "No request for a steelman appears anywhere.",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "Declines to combine two of the three into one post, and recommends publishing separately and linking them",
+        "evidence": "No discussion of combining or cross-linking ideas appears.",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "Notes that a competitor benchmark carries a legal or compliance review the other two options do not",
+        "evidence": "The only legal mention, 'flag to whoever owns comms/legal,' concerns the postmortem's root-cause section, not the benchmark.",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "Names the conditions under which the benchmark would be worth promoting anyway",
+        "evidence": "'Park it \u2014 do it properly post-keynote as its own launch' names post-keynote/properly-built conditions.",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Does not recommend the benchmark for the nine-day deadline",
+        "evidence": "'(c) Competitive benchmark \u2014 dead on arrival... Park it' clearly excludes it from the 6-hour keynote deadline.",
+        "passed": true,
+        "graded": true
+      }
+    ]
+  }
+}

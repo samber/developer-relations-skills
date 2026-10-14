@@ -1,0 +1,130 @@
+{
+  "with_skill": {
+    "expectations": [
+      {
+        "text": "Declines to attribute revenue or pipeline to the single post",
+        "evidence": "'Single-touch attribution of pipeline to one blog post isn't defensible \u2014 no deal closes because of one asset, and a manufactured figure will fall apart...'",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "States that overclaiming attribution costs credibility with exactly the audience this post serves",
+        "evidence": "No statement ties overclaiming attribution to credibility with the post's actual reader audience (developers); the credibility concerns raised are about internal staff/VP scrutiny.",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "States that no honest public benchmark exists for engineering-blog read-through",
+        "evidence": "'There is no honest public benchmark for engineering-blog read-through rate.'",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Derives the read-through target from the team's own analytics baseline instead of an external figure",
+        "evidence": "'Set the target from your own baseline instead: Pull scroll depth / read-through on your last 5\u201310 engineering posts of comparable length.'",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Does not invent or cite a specific industry read-through percentage",
+        "evidence": "'inventing one is wrong in a way nobody can check today...' \u2014 no percentage is cited anywhere in the response.",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Recommends scroll depth and read-through measured against the post's length rather than pageviews alone",
+        "evidence": "'Scroll depth / read-through rate, measured against this post's own length.'",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Recommends tracking referrals from developer surfaces such as aggregators, community threads and newsletters",
+        "evidence": "'Referrals from developer surfaces \u2014 Hacker News, Lobsters, community threads, newsletters...'",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Recommends tracking click-through to the artefacts the post links, such as the repository, docs or benchmark scripts",
+        "evidence": "'Click-through to the repo, docs, or benchmark scripts the post links.'",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Counts qualitative replies, such as engineers sending their own numbers or corrections, as signal that outweighs a traffic spike",
+        "evidence": "'one substantive reply outweighs a traffic spike.'",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Recommends tracking inbound mentions of the post in job applications when the post is recruiting-oriented",
+        "evidence": "No mention of job applications or recruiting anywhere in the transcript.",
+        "passed": false,
+        "graded": true
+      }
+    ]
+  },
+  "without_skill": {
+    "expectations": [
+      {
+        "text": "Declines to attribute revenue or pipeline to the single post",
+        "evidence": "'Don't hand her a single \"this post generated $X\" number. No model can honestly assign 100% credit for a deal to one blog post in a multi-touch B2B journey.'",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "States that overclaiming attribution costs credibility with exactly the audience this post serves",
+        "evidence": "The stated risk is that 'that number gets challenged the first time someone asks how it was calculated,' not a statement tied to the post's reader audience.",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "States that no honest public benchmark exists for engineering-blog read-through",
+        "evidence": "'there is no standardized, cross-industry benchmark for blog read-through... a storage-rewrite post read mostly by engineers won't behave like a media site's average article.'",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Derives the read-through target from the team's own analytics baseline instead of an external figure",
+        "evidence": "'Measure this post's own read-through this month as your baseline... Set next quarter's target as a delta off that baseline.'",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Does not invent or cite a specific industry read-through percentage",
+        "evidence": "The '40-45%' figure is cited only to debunk it as vendor-sourced and undefined, not asserted as valid.",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Recommends scroll depth and read-through measured against the post's length rather than pageviews alone",
+        "evidence": "'Instrument scroll-depth / active-read-time now if not already tracked (GA4 scroll events, or a custom \"article complete\" event at ~90% scroll).'",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Recommends tracking referrals from developer surfaces such as aggregators, community threads and newsletters",
+        "evidence": "No mention of aggregators, community threads, or newsletters anywhere.",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "Recommends tracking click-through to the artefacts the post links, such as the repository, docs or benchmark scripts",
+        "evidence": "No mention of tracking clicks to repo/docs/benchmark scripts.",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "Counts qualitative replies, such as engineers sending their own numbers or corrections, as signal that outweighs a traffic spike",
+        "evidence": "No mention of qualitative replies as a signal class.",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "Recommends tracking inbound mentions of the post in job applications when the post is recruiting-oriented",
+        "evidence": "No mention of recruiting-related tracking anywhere.",
+        "passed": false,
+        "graded": true
+      }
+    ]
+  }
+}

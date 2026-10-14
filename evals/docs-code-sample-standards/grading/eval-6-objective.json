@@ -1,0 +1,154 @@
+{
+  "with_skill": {
+    "expectations": [
+      {
+        "text": "Answers no: the badge cannot honestly cover all 180 samples",
+        "evidence": "\"Can Ridgeline badge all 180 samples 'Verified'? No \u2014 only 124 of them.\"",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Explains that a Go example function without an // Output: comment is compiled but never actually executed",
+        "evidence": "\"'Example functions without output comments are compiled but not executed.' \u2014 Go blog\"",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "States that those 56 pass CI while claiming more than they prove",
+        "evidence": "\"it passes CI while claiming more than it proves\"",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Assigns the 124 samples carrying // Output: to tier Run",
+        "evidence": "\"Run | 124 | 68.9% | Compiled, executed, stdout diffed against `// Output:`\"",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Assigns the 56 samples without it to tier Compile-only",
+        "evidence": "\"Compile-only | 56 | 31.1%\"",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Gives the Compile-only reader signal - valid, but not run for you - as the honest badge wording for those 56",
+        "evidence": "\"use a second, honestly-different label matching the tier's actual reader signal \u2014 e.g. 'Compiles against current SDK' \u2014 not a visually-similar checkmark\"",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Confirms that preferring the language's native doctest facility over a bespoke harness was the right call, and locates the trap in the opt-in assertion rather than in the tooling choice",
+        "evidence": "\"None of these need the samples to move out of `example_test.go` or need a CI harness you don't already have\"",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "States that any of the 56 sitting on the primary adoption path must be reworked to tier Run rather than badged, because adoption-path samples must be Run and green in CI",
+        "evidence": "\"those get the option-1/option-3 rewrite first regardless of effort ratio, per this skill's rule that Run is promoted ahead of the effort ranking on the adoption path\"",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Defines freshness as the age of the last successful run rather than the last edit",
+        "evidence": "Freshness is not discussed anywhere in this transcript",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "States that an edited sample nobody has run is not fresher than before",
+        "evidence": "Not mentioned in this transcript",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "Cites the executable-documentation guarantee that documented information does not go out of date as the API changes, as the reason the 124 hold",
+        "evidence": "No such guarantee is cited; reasoning is based on the Go testing mechanism instead",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "Classifies a sample claiming tier Run that CI does not actually run as a P1 finding rather than a P2",
+        "evidence": "\"'a \"Run\" sample that CI does not run is a P1, not a P2.'\"",
+        "passed": true,
+        "graded": true
+      }
+    ]
+  },
+  "without_skill": {
+    "expectations": [
+      {
+        "text": "Answers no: the badge cannot honestly cover all 180 samples",
+        "evidence": "'Short answer: No \u2014 not for all 180, not as things stand today.'",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Explains that a Go example function without an // Output: comment is compiled but never actually executed",
+        "evidence": "'Example functions without output comments are compiled but not executed.'",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "States that those 56 pass CI while claiming more than they prove",
+        "evidence": "'\"CI is green on every push\" is true for both groups, but it's proving two different things... Putting \"Verified\" next to all 180 overstates what's true for the 56.'",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Assigns the 124 samples carrying // Output: to tier Run",
+        "evidence": "'Option A \u2014 badge only what's actually verified today. Ship \"Verified\" on the 124' treats the 124 as the fully-run/verified group.",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Assigns the 56 samples without it to tier Compile-only",
+        "evidence": "'leave the other 56 unbadged (or with a lesser label like \"Compiles\" / \"Syntax-checked\")'.",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Gives the Compile-only reader signal - valid, but not run for you - as the honest badge wording for those 56",
+        "evidence": "'leave the other 56 unbadged (or with a lesser label like \"Compiles\" / \"Syntax-checked\")' provides an honest, weaker signal for the unrun 56.",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Confirms that preferring the language's native doctest facility over a bespoke harness was the right call, and locates the trap in the opt-in assertion rather than in the tooling choice",
+        "evidence": "The transcript never discusses whether using Go's native testing/Example facility versus a bespoke harness was the right tooling choice.",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "States that any of the 56 sitting on the primary adoption path must be reworked to tier Run rather than badged, because adoption-path samples must be Run and green in CI",
+        "evidence": "No discussion of 'primary adoption path' or a requirement to rework specific samples to Run appears; Option B proposes reworking all 56 uniformly, not based on adoption-path status.",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "Defines freshness as the age of the last successful run rather than the last edit",
+        "evidence": "Freshness/last-run-age framing is not discussed anywhere in the transcript.",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "States that an edited sample nobody has run is not fresher than before",
+        "evidence": "No such statement appears in the transcript.",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "Cites the executable-documentation guarantee that documented information does not go out of date as the API changes, as the reason the 124 hold",
+        "evidence": "The transcript implies this via 'If the SDK's CreateNode call... started silently returning a malformed object tomorrow, any of the 56... could be dead wrong and CI would never notice' but never explicitly names or cites this as an 'executable documentation guarantee.'",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "Classifies a sample claiming tier Run that CI does not actually run as a P1 finding rather than a P2",
+        "evidence": "No P0/P1/P2 severity classification scheme is used anywhere in this transcript.",
+        "passed": false,
+        "graded": true
+      }
+    ]
+  }
+}

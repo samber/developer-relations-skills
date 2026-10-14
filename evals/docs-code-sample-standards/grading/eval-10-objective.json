@@ -1,0 +1,166 @@
+{
+  "with_skill": {
+    "expectations": [
+      {
+        "text": "Refuses to plan verification for all 1,400 samples as stated, and runs triage before any verification planning",
+        "evidence": "Structure runs \"## 1. Inventory\" then \"## 2. ROT triage\" before tier/verification planning, reducing 1,400 to 1,290",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Classifies the roughly 700 single-call one-liners as Trivial under ROT triage",
+        "evidence": "\"These look like ROT's 'trivial' category (single API call, no scenario)\"",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "States that cutting samples is a legitimate outcome of triage rather than a failure",
+        "evidence": "\"cut lower-value Segment C samples rather than lower the bar \u2014 a deleted sample costs a reader nothing\"",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Names the resistance pattern: teams keep trivial snippets because the snippets are not wrong, while they remain maintenance debt with no reader payoff",
+        "evidence": "No such resistance-pattern framing appears; Segment A is instead argued to have reader value (endpoint discoverability)",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "Cites the preference for samples covering broader scenarios and use cases over snippets covering only individual API calls",
+        "evidence": "\"Guides prefer multi-step scenarios; no new single-call snippet gets hand-written once generation exists.\"",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Classifies the roughly 120 duplicated auth snippets as Redundant and reconciles them to a single source",
+        "evidence": "\"Segment B \u2014 120 auth snippets = **Redundant**... Reconcile to one canonical, tested sample\"",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "States that every duplicate copy is a future divergence",
+        "evidence": "\"every variation was a future divergence waiting to happen\"",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Applies the rule that auth setup lives in one place other samples link to rather than being repeated with variations",
+        "evidence": "\"'Keep auth setup in one place that other samples link to, rather than repeating it with variations.'\"",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Recommends generating the single-call reference snippets from the API description rather than hand-maintaining them",
+        "evidence": "\"route these through verification pattern 3, **generate from spec**\"",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "States that generated snippets guarantee parity and freshness at near-zero marginal cost per added language",
+        "evidence": "Only \"'near-zero marginal cost per language'\" is quoted; freshness guarantee is not explicitly connected to generation",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "States that generated snippets express single calls only, so multi-step idiomatic usage still needs hand-written tested samples",
+        "evidence": "Segment A (generated, single-call) is kept distinct from Segment C (\"quickstarts, guides, tutorials, multi-step SDK examples\") which is hand-remediated",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Requires the policy to state which surface uses generated snippets and which uses hand-written ones, so the team does not hand-maintain what a generator already covers",
+        "evidence": "\"pattern 3 (generate from spec) for Segment A; pattern 1 (compilable source + transclusion) for Segments B and C\"",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "States that when the 80%-tested threshold cannot be met, samples get cut rather than the bar lowered, because a deleted sample costs a reader nothing while an untested one costs them an afternoon",
+        "evidence": "\"cut lower-value Segment C samples rather than lower the bar \u2014 a deleted sample costs a reader nothing, an untested one that claims to work costs them an afternoon\"",
+        "passed": true,
+        "graded": true
+      }
+    ]
+  },
+  "without_skill": {
+    "expectations": [
+      {
+        "text": "Refuses to plan verification for all 1,400 samples as stated, and runs triage before any verification planning",
+        "evidence": "The plan fully engages with testing all 1,400 (via tiers A/B/C) and computes an explicit 80% target of 1,120 samples tested, rather than refusing the mandate.",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "Classifies the roughly 700 single-call one-liners as Trivial under ROT triage",
+        "evidence": "Tier A (700 one-liners) is labeled 'Reference one-liners' and slated for full automated testing ('automate, don't hand-test'), not classified as Trivial/disposable under an ROT scheme.",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "States that cutting samples is a legitimate outcome of triage rather than a failure",
+        "evidence": "The plan never proposes cutting/deleting samples; the untested remainder is left as 'the lowest-risk tail by construction,' not removed.",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "Names the resistance pattern: teams keep trivial snippets because the snippets are not wrong, while they remain maintenance debt with no reader payoff",
+        "evidence": "No such resistance-pattern discussion appears in the transcript.",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "Cites the preference for samples covering broader scenarios and use cases over snippets covering only individual API calls",
+        "evidence": "'Tier C is where real product risk lives \u2014 multi-step state, less-common paths, the samples someone actually copy-pastes into a working integration. Tiers A and B are high-count but low-complexity.'",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Classifies the roughly 120 duplicated auth snippets as Redundant and reconciles them to a single source",
+        "evidence": "'Cluster all 120 by language + auth flow... Pick one canonical sample per cluster, test it for real against the sandbox. Diff every other member of the cluster against its canonical version.'",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "States that every duplicate copy is a future divergence",
+        "evidence": "'the risk in 120 copy-pasted snippets isn't \"does auth work,\" it's \"did someone's copy-paste silently drift\" \u2014 a stale field name, an outdated scope, a token format nobody updated.'",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Applies the rule that auth setup lives in one place other samples link to rather than being repeated with variations",
+        "evidence": "The plan keeps testing each cluster's existing duplicated copies via diffing rather than consolidating auth setup into one canonical page that others link to.",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "Recommends generating the single-call reference snippets from the API description rather than hand-maintaining them",
+        "evidence": "The plan proposes automated testing/execution of existing Tier A snippets via a harness, not generating the snippet content itself from an API spec.",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "States that generated snippets guarantee parity and freshness at near-zero marginal cost per added language",
+        "evidence": "No generation-based parity/freshness claim appears in the transcript.",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "States that generated snippets express single calls only, so multi-step idiomatic usage still needs hand-written tested samples",
+        "evidence": "No generation-vs-hand-written distinction is made; Tier C's need for human involvement is framed around complexity, not a generated/hand-written split.",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "Requires the policy to state which surface uses generated snippets and which uses hand-written ones, so the team does not hand-maintain what a generator already covers",
+        "evidence": "No such policy requirement appears anywhere in the transcript.",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "States that when the 80%-tested threshold cannot be met, samples get cut rather than the bar lowered, because a deleted sample costs a reader nothing while an untested one costs them an afternoon",
+        "evidence": "The transcript explicitly accepts an untested remainder instead of cutting: 'the *untested remainder is the lowest-risk tail by construction*... it's a defensible thing to say to leadership if you don't clear all 580.'",
+        "passed": false,
+        "graded": true
+      }
+    ]
+  }
+}

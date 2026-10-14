@@ -1,0 +1,24 @@
+{
+  "with_skill": {
+    "expectations": [
+      {
+        "text": "Orders the fix-list items by trust damage rather than by their position in the document",
+        "evidence": "The fix list is explicitly tiered by consequence, not location: \"Blocking (fix before Thursday)\" \u2192 \"Strong (fix unless the author disagrees)\" \u2192 \"Optional\", plus a separate \"Handoff \u2014 needs the author\" bucket. Ordering demonstrably departs from document sequence: the vendor-disclosure item concerns the top of the post (\"Confirm early in the post... title says 'Kestrel Data engineering blog'\") yet is ranked last as Optional, while the mid/late-document benchmark chart and code snippet are ranked #2 and #3. Within Blocking the order (intro superlative \u2192 results chart \u2192 snippet \u2192 paragraph four) i",
+        "score": 4,
+        "passed": true,
+        "graded": true
+      }
+    ]
+  },
+  "without_skill": {
+    "expectations": [
+      {
+        "text": "Orders the fix-list items by trust damage rather than by their position in the document",
+        "evidence": "The six fixes are numbered in strict document order \u2014 \"1. Intro\", \"2. Results section\", \"3. Paragraph four\", \"4. Code snippet\", \"5. Closing paragraph\", \"6. New section ... Insert before the closing paragraph\" \u2014 a walk from the top of the draft to the bottom, with no stated severity ranking or reordering. Severity is even acknowledged in passing but not acted on: item 4 says the renamed method is \"the single most credibility-damaging kind of error, because it's the one detail readers will actually try to execute,\" yet it still sits fourth, behind a superlative adjective and an install-base clai",
+        "score": 1,
+        "passed": false,
+        "graded": true
+      }
+    ]
+  }
+}

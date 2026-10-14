@@ -1,0 +1,154 @@
+{
+  "with_skill": {
+    "expectations": [
+      {
+        "text": "Declines to deliver an ecosystem-only list and explains why: following only your own technology's sources leaves the practice itself unlearned.",
+        "evidence": "The transcript instead complies with dropping practice sources entirely: 'Dropped \u2014 the entire generic-DevRel-practice source set this skill's reference file otherwise recommends: ... Constraint: cloud-native-only scope, your explicit request.' It only flags the tradeoff and offers to add one back on request, rather than declining to deliver an ecosystem-only list.",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "States that ecosystem sources sit next to practice sources, never instead of them.",
+        "evidence": "The transcript explicitly delivers ecosystem sources instead of practice sources: 'dropping every practice-of-DevRel source means you stay current on Kubernetes/CNCF/eBPF but not on DevRel itself as a discipline \u2014 say the word and I'll add one back.' No practice source is included by default.",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "Includes at least one source about the DevRel practice itself despite the user's instruction.",
+        "evidence": "All practice-of-DevRel sources (DeveloperRelations.com guides, Community Pulse, DevRel Weekly, Scaling DevTools, Console.dev, CMX, Write the Docs, DevRel Collective Slack, and named practitioners) are listed only under 'Dropped', none appear in the weekly/monthly/annual/bench lists.",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "Frames those practice sources as craft rather than career content, distinguishing them from what the user dismissed.",
+        "evidence": "No practice source is included in the delivered list, so no such framing occurs; the dropped practice sources are only named in a single aside sentence with no craft-vs-career distinction.",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "Adds the cloud-native ecosystem's own foundation and conference sources for the platform and standards layer.",
+        "evidence": "Includes 'CNCF Blog', 'Kubernetes Blog', 'Kubernetes SIG Storage' ('the standards-body seat a storage vendor needs a voice in'), 'CNCF Ambassador Program', 'CNCF Landscape', and KubeCon conference entries as foundation/standards-layer sources.",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Turns the event calendar from optional into core because the user is submitting talks, and gives one CFP target with a confirmed date and a confirmed organiser.",
+        "evidence": "It does state 'You said you're submitting talks this year, so this section is core, not optional,' but the CFP target has no confirmed date: 'CFP target: KubeCon + CloudNativeCon Europe, next edition (likely 2027) ... Not confirmed this session; check before you write the abstract.'",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "Gives one attend-or-sponsor candidate alongside the CFP target, also with a confirmed date and organiser.",
+        "evidence": "The attend candidate's date is explicitly unconfirmed: 'Attend: KubeCon + CloudNativeCon North America, Salt Lake City, 9\u201312 Nov \u2014 carried from this skill's own reference file, which already flags \"year not rendered on the page, confirm before booking.\"'",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "Promotes long-form on the stated ground that submitting talks makes conferences the work rather than a reading cost.",
+        "evidence": "No statement in the transcript frames long-form content or conferences as 'the work rather than a reading cost'; the events section only justifies its core status via 'you said you're submitting talks this year.'",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "Does not amortise a conference into a weekly minutes figure.",
+        "evidence": "The weekly core table's Min column (8+7+8+10+8+25+10) sums to the stated 'Totals \u2014 76 of 90 weekly minutes', and the Events section (KubeCon, Rejekts) is listed separately with no minutes value, confirming events aren't folded into the weekly budget.",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Carries at least one verified-active source for advocacy and at least one for community.",
+        "evidence": "The transcript itself states: 'Pillar coverage: advocacy \u2014 candidates present, none verified-active yet. Community \u2014 candidates present, none verified-active yet. Not met at the verified-active bar until the click-through below happens.' Only one entry (The New Stack) is verified-active, and the document explicitly denies pillar coverage at that bar.",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "States the ordering used and totals estimated weekly minutes against the 90-minute budget.",
+        "evidence": "'Ordered by value per attention-minute: blogs/newsletters tie highest efficiency, community sits mid-table but gets extra weight here...' and 'Totals \u2014 76 of 90 weekly minutes (16% headroom, not force-filled).'",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Attaches a what-they're-selling flag, a status and a date to every entry.",
+        "evidence": "The weekly core table has a 'Selling' and 'Status' column, but the Monthly table drops the Selling column entirely (e.g. 'CNCF Ambassador Program | cncf.io ... | advocacy | ... | unverified this session' has no selling flag), and most statuses read only 'unverified this session' with no date attached.",
+        "passed": false,
+        "graded": true
+      }
+    ]
+  },
+  "without_skill": {
+    "expectations": [
+      {
+        "text": "Declines to deliver an ecosystem-only list and explains why: following only your own technology's sources leaves the practice itself unlearned.",
+        "evidence": "The transcript fully complies with the ecosystem-only request: 'No general DevRel/career content\u2014everything below is Kubernetes/CNCF/eBPF-specific.'",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "States that ecosystem sources sit next to practice sources, never instead of them.",
+        "evidence": "Practice content is explicitly deferred, not included alongside: 'If you later get more time, TAG Storage's recorded meetings and the Kubernetes Podcast from Google are the next things to add.'",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "Includes at least one source about the DevRel practice itself despite the user's instruction.",
+        "evidence": "'What I deliberately left off: No general \"how to be a DevRel\" newsletters...none of that fits a 90-minute, storage-and-eBPF-focused budget.'",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "Frames those practice sources as craft rather than career content, distinguishing them from what the user dismissed.",
+        "evidence": "No practice source is included, so no such framing occurs.",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "Adds the cloud-native ecosystem's own foundation and conference sources for the platform and standards layer.",
+        "evidence": "'CNCF TAG Storage / SIG Storage' and 'KubeWeekly [CNCF's own curated weekly digest]' are included as foundation-affiliated sources.",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Turns the event calendar from optional into core because the user is submitting talks, and gives one CFP target with a confirmed date and a confirmed organiser.",
+        "evidence": "'CFP dates move every cycle and I can't verify current 2026/2027 deadlines right now...check sessionize.com and dok.community directly' \u2014 no confirmed date or organiser is given for any CFP target.",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "Gives one attend-or-sponsor candidate alongside the CFP target, also with a confirmed date and organiser.",
+        "evidence": "No attend/sponsor candidate is given with a confirmed date and organiser anywhere in the transcript.",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "Promotes long-form on the stated ground that submitting talks makes conferences the work rather than a reading cost.",
+        "evidence": "No such reasoning is stated anywhere in the transcript.",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "Does not amortise a conference into a weekly minutes figure.",
+        "evidence": "The Friday slot is framed as a CFP-window scan ('Only spend this slot when a CFP window is actually open'), not as attending-time amortised weekly.",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Carries at least one verified-active source for advocacy and at least one for community.",
+        "evidence": "No status/verification tags accompany any source, and no advocacy-pillar source appears at all given the explicit exclusion of DevRel-practice content.",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "States the ordering used and totals estimated weekly minutes against the 90-minute budget.",
+        "evidence": "The daily blocks (20+20+20+15+15=90) total correctly but no explicit statement of an ordering methodology (e.g. value per minute) is given.",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "Attaches a what-they're-selling flag, a status and a date to every entry.",
+        "evidence": "No selling flag, status, or date is attached to any listed source.",
+        "passed": false,
+        "graded": true
+      }
+    ]
+  }
+}

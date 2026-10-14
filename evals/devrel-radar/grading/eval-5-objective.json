@@ -1,0 +1,154 @@
+{
+  "with_skill": {
+    "expectations": [
+      {
+        "text": "Leads with the Developer Relations Foundation at dev-rel.org and identifies it as the field's only vendor-neutral practice body.",
+        "evidence": "\"One entry actually is the exception, and it goes first: **Developer Relations Foundation** (dev-rel.org), hosted by the Linux Foundation. No product, no course, no agency behind it \u2014 it's the field's only vendor-neutral practice body.\"",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "States that the Foundation is hosted by the Linux Foundation, and explains why that makes it the exception rather than one neutral option among several.",
+        "evidence": "\"hosted by the Linux Foundation. No product, no course, no agency behind it \u2014 it's the field's only vendor-neutral practice body. Everything else on this list, treat as 'useful and interested.'\"",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Refuses to filter conflicted sources out of the list, and explains that doing so would empty it because almost every strong voice in this field runs an agency, a startup or a paid community.",
+        "evidence": "\"I'm not filtering those out \u2014 that would empty the list, since most of the field's real expertise sits inside people who also sell something adjacent to it.\"",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Attaches a specific what-they're-selling category to every entry - agency, tool vendor, course or community, conference, platform-official, foundation, or independent media - rather than a single blanket disclaimer.",
+        "evidence": "The intro claims 'Every entry below carries a what they're selling column instead,' but only the weekly-core table actually has a 'Selling' column (4 entries). The Monthly table (e.g. Di\u00e1taxis, DevRel Weekly), Annual table (GitHub Octoverse, JetBrains survey), and Bench section (Scaling DevTools, Console.dev tagged only 'Marketing pillar') carry no explicit selling-category tag at all, contradicting the blanket claim of universal coverage.",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "Frames the flag as disclosure so the user can weigh advice, explicitly not as grounds for disqualification.",
+        "evidence": "\"Every entry below carries a **what they're selling** column instead, so you can weigh it rather than assume neutrality that isn't there.\"",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Includes at least one foundation or platform-official source beyond the Foundation itself, such as an open community-health metrics project or a code host's maintainer guides.",
+        "evidence": "\"**DRF Metrics Index** (github.com/DevRel-Foundation/metrics-index) \u2014 vendor-neutral metric definitions; the counterpart to a tool vendor's own measurement blog.\" and \"**GitHub Octoverse** \u2014 annual ecosystem trends, 2025 edition, published 28 Oct 2025.\"",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Does not present a vendor's content arm or a VC firm's podcast network as neutral.",
+        "evidence": "\"Open Source Ready (Heavybit) \u2014 open-source/maintainer economics, Ep 41, 30 Jul 2026\" is listed in the Bench section under the blanket 'treat as useful and interested' framing, never called neutral; only the Foundation is called the neutral exception.",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Flags at least one source whose angle changed after an acquisition, noting that cadence can survive an acquisition while the DevRel angle does not.",
+        "evidence": "No mention of any acquisition anywhere in the transcript; the closest analogous note is 'The agency that wrote them (Hoopy) wound down in 2026; the hub survived it' about DeveloperRelations.com guides, which is a shutdown, not an acquisition.",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "Keeps at least one commercially conflicted source in the final list with its incentive disclosed, rather than removing it.",
+        "evidence": "Community Pulse is kept in the Weekly core table with 'Selling: hosts' consulting' disclosed rather than dropped.",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "States that embedded or IoT ecosystem sources sit next to the practice sources rather than replacing them.",
+        "evidence": "\"plus 6 explicitly unverified ecosystem candidates (not counted as part of the list)\" and \"This skill's own source audit covers general DevRel practice and B2B devtool sources densely. It has no embedded/IoT ecosystem entries at all... What I can do honestly: name candidates...\" \u2014 presented as a supplementary gap-fill section separate from, not replacing, the core practice list.",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Totals estimated weekly minutes against the 75-minute budget.",
+        "evidence": "\"Estimated weekly minutes: 66 of 75 (88%) \u2014 slack is intentional, reserved for the commute question above.\"",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Orders the entries by value per attention-minute and says so in the output.",
+        "evidence": "\"Ordered by value per attention-minute, highest first.\"",
+        "passed": true,
+        "graded": true
+      }
+    ]
+  },
+  "without_skill": {
+    "expectations": [
+      {
+        "text": "Leads with the Developer Relations Foundation at dev-rel.org and identifies it as the field's only vendor-neutral practice body.",
+        "evidence": "The transcript opens with 'No \u2014 almost none of it is funnel-free' and never mentions dev-rel.org or a Developer Relations Foundation.",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "States that the Foundation is hosted by the Linux Foundation, and explains why that makes it the exception rather than one neutral option among several.",
+        "evidence": "No mention of the Linux Foundation or any foundation anywhere in the transcript.",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "Refuses to filter conflicted sources out of the list, and explains that doing so would empty it because almost every strong voice in this field runs an agency, a startup or a paid community.",
+        "evidence": "The text argues motive 'never disappears' and keeps Embedded.fm despite its consultancy, but never states that filtering all conflicted sources out would empty the list.",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "Attaches a specific what-they're-selling category to every entry - agency, tool vendor, course or community, conference, platform-official, foundation, or independent media - rather than a single blanket disclaimer.",
+        "evidence": "Each source gets its own incentive note: Amp Hour 'ad revenue is component/tool sponsorships', Embedded.fm 'they run a consultancy', Jay Carlson 'he's not selling the comparison, he built the boards', Memfault's Interrupt 'as content marketing that happens to clear the bar.'",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Frames the flag as disclosure so the user can weigh advice, explicitly not as grounds for disqualification.",
+        "evidence": "'worth reading as content marketing you understand the incentive of \u2014 that's different from pretending it's neutral research.'",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Includes at least one foundation or platform-official source beyond the Foundation itself, such as an open community-health metrics project or a code host's maintainer guides.",
+        "evidence": "All five recommended sources are podcasts, personal sites, or an ad-supported aggregator/vendor blog \u2014 no foundation or platform-official source is included.",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "Does not present a vendor's content arm or a VC firm's podcast network as neutral.",
+        "evidence": "Memfault's Interrupt is explicitly flagged 'knowingly, as content marketing that happens to clear the bar, not as neutral research.'",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Flags at least one source whose angle changed after an acquisition, noting that cadence can survive an acquisition while the DevRel angle does not.",
+        "evidence": "No acquisition-related angle change is discussed anywhere in the transcript.",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "Keeps at least one commercially conflicted source in the final list with its incentive disclosed, rather than removing it.",
+        "evidence": "'Embedded.fm...worth naming honestly: they run a consultancy, so it's not incentive-free' is kept in the recommended list.",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "States that embedded or IoT ecosystem sources sit next to the practice sources rather than replacing them.",
+        "evidence": "The entire source list (Amp Hour, Embedded.fm, Jay Carlson, EmbeddedRelated, Memfault) is embedded/IoT-specific; no DevRel practice source is included at all.",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "Totals estimated weekly minutes against the 75-minute budget.",
+        "evidence": "'~30 min...~20 min...~25 min' sums to the stated 'Your 75 minutes, split three ways, weekly.'",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Orders the entries by value per attention-minute and says so in the output.",
+        "evidence": "The three time blocks are organized by content type (podcast, primary source, practitioner post), with no explicit statement that this is a value-per-attention-minute ordering.",
+        "passed": false,
+        "graded": true
+      }
+    ]
+  }
+}

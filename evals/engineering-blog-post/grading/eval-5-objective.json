@@ -1,0 +1,130 @@
+{
+  "with_skill": {
+    "expectations": [
+      {
+        "text": "Tests the topic against the topic filters before drafting and names them",
+        "evidence": "'I angled it instead at what passes *Recognition* (...) and *Counter-narrative* (...)' stated before the draft.",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "States that the topic as given passes none of the filters",
+        "evidence": "'a generic \"how PKCE works\" explainer is the most duplicated post in this genre and would fail every filter \u2014 accurate and unread.'",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Names the principle of writing from what was hard rather than from what is already mastered",
+        "evidence": "No statement of this principle appears anywhere in the transcript.",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "Predicts that a post written from mastery will be accurate and unread",
+        "evidence": "'would fail every filter \u2014 accurate and unread.'",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Does not deliver a finished explainer of the authorization code flow with PKCE",
+        "evidence": "A complete, publish-ready post ('Authorization Code + PKCE: The Parts the Sequence Diagram Leaves Out') with full sections and snippets is delivered, with only byline/date as placeholders.",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "Asks what surprised, confused or cost the author time across those eight years in order to find an angle",
+        "evidence": "No such question is posed anywhere in the visible transcript.",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "Names at least one specific filter a reworked angle could pass, such as counter-intuitive, counter-narrative, surprising capability, elegant articulation or recognition",
+        "evidence": "'what passes *Recognition* (...) and *Counter-narrative* (...)'",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Requires a misconceptions section covering what people get wrong and why the wrong model is tempting, if the Explainer pattern is kept",
+        "evidence": "'## Common misconceptions' section listing wrong models and corrections.",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Warns against opening the post with a definition",
+        "evidence": "No explicit warning against opening with a definition appears in the transcript.",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "Requires every concept the post leans on to be either a stated prerequisite or introduced earlier in the post",
+        "evidence": "No explicit statement of this requirement appears anywhere in the transcript.",
+        "passed": false,
+        "graded": true
+      }
+    ]
+  },
+  "without_skill": {
+    "expectations": [
+      {
+        "text": "Tests the topic against the topic filters before drafting and names them",
+        "evidence": "No filters are named or tested; the transcript opens directly with the article title.",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "States that the topic as given passes none of the filters",
+        "evidence": "No such statement appears anywhere.",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "Names the principle of writing from what was hard rather than from what is already mastered",
+        "evidence": "No such principle is stated.",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "Predicts that a post written from mastery will be accurate and unread",
+        "evidence": "No such prediction appears.",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "Does not deliver a finished explainer of the authorization code flow with PKCE",
+        "evidence": "The transcript delivers a complete explainer, '# Authorization Code Flow with PKCE, Explained,' through to 'Where this leaves you.'",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "Asks what surprised, confused or cost the author time across those eight years in order to find an angle",
+        "evidence": "No such question is asked.",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "Names at least one specific filter a reworked angle could pass, such as counter-intuitive, counter-narrative, surprising capability, elegant articulation or recognition",
+        "evidence": "No filter names (counter-intuitive, surprising capability, etc.) appear anywhere.",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "Requires a misconceptions section covering what people get wrong and why the wrong model is tempting, if the Explainer pattern is kept",
+        "evidence": "No dedicated misconceptions section exists; closest is the brief aside 'state doesn't fix this.'",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "Warns against opening the post with a definition",
+        "evidence": "No such warning or meta-commentary on structure appears anywhere.",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "Requires every concept the post leans on to be either a stated prerequisite or introduced earlier in the post",
+        "evidence": "No prerequisites section exists, and terms like 'SHA-256 preimage resistance' are used without definition.",
+        "passed": false,
+        "graded": true
+      }
+    ]
+  }
+}

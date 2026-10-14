@@ -1,0 +1,154 @@
+{
+  "with_skill": {
+    "expectations": [
+      {
+        "text": "Refuses to rank by follower count and explains that social rating measures reach in an adjacent audience rather than standing in this one.",
+        "evidence": "\"Reject social rating - likes, shares, follower counts - because it measures reach in an adjacent audience rather than standing in this one, and most of it is unobservable here anyway.\"",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "States that follower and subscriber counts are largely unobservable in this field anyway.",
+        "evidence": "\"...because it measures reach in an adjacent audience rather than standing in this one, and most of it is unobservable here anyway.\"",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Ranks by cross-surface recurrence instead - the same person appearing as podcast host, conference speaker and practice-hub author.",
+        "evidence": "\"It ranks by cross-surface recurrence instead (same person as podcast host + speaker + hub author = durability), which correlates with actual influence in DevRel far better than a vanity number.\"",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Gives each person a fetchable verifying surface - a podcast feed or episode page, a company site, a talk listing, a foundation project page - rather than a social profile.",
+        "evidence": "Most rows cite podcasts/company sites (e.g. \"Community Pulse Ep 105 (17 Aug 2026); marythengvall.com\"), but two rows (#4 Jayson DeLancey, #5 Arun Gupta) list only \"GitHub `@j12y`\" and \"GitHub `@arun-gupta`\" as 'Verified via' \u2014 a bare handle-style citation rather than an episode/site/talk-listing/foundation-project-page surface, despite the claim of leading foundation projects.",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "States that short-post and professional social networks block automated checking, so nobody can be verified through a social profile.",
+        "evidence": "\"DevRel conversation lives largely on short-post and professional social networks, which block automated checking, so nobody below is verified through a social profile.\"",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Labels any handle it does record as stated on the page where it appeared, never independently verified.",
+        "evidence": "The table records \"GitHub `@j12y`\" and \"GitHub `@arun-gupta`\" as handles with no caveat attached to them; the only labeling disclaimer given (\"I'm not going to paste a Twitter/LinkedIn handle here I haven't actually fetched and confirmed myself\") applies to handles NOT recorded, not to the GitHub handles that were recorded.",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "Attaches a what-they're-selling disclosure to every person listed.",
+        "evidence": "Every row in the table has a filled 'Selling' column, e.g. \"Consulting (Persea)\", \"Employer (Semgrep) + foundation role\", \"Startup (Paper Compute)\", \"Positioning consulting\", etc., for all 10 listed people.",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Frames that disclosure as weighing advice rather than disqualifying anyone, noting that nearly everyone in this field sells something.",
+        "evidence": "No statement in the transcript frames the 'Selling' disclosures as advisory rather than disqualifying, nor notes that nearly everyone in the field sells something; the column is presented without any such framing narrative.",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "Filters the people list to the community and advocacy pillars the user owns rather than returning an undifferentiated roster.",
+        "evidence": "\"All 10 cover your two owned pillars (advocacy, community); 4-5, 6-10 lean toward your devtool/API-gateway ecosystem specifically.\"",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Marks anyone whose only surface is stale as stale with its approximate age, rather than presenting them as current.",
+        "evidence": "Every row's Status column reads \"active, [date]\" (e.g. \"active, 2026-08-26\", \"active, 2026-09-10\") with no entry ever labeled stale or given an approximate staleness age, and no discussion of what would happen if a surface were stale.",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "Does not link a personal domain without confirming that the page's content is actually about developer relations.",
+        "evidence": "Personal domains like \"marythengvall.com\", \"wesleyfaulkner.com\", \"emilyomier.com/podcast\", and \"tessakriesel.com\" are listed as verification sources with no statement in the transcript about confirming their page content is actually about developer relations.",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "States that a role change is a source change, because the expertise survives the move while the incentive shifts.",
+        "evidence": "The transcript contains no statement about role changes constituting source changes or about expertise surviving a move while incentives shift; roles are only listed statically in the 'Selling' column (e.g. \"Employer (Appwrite) + newsletter\").",
+        "passed": false,
+        "graded": true
+      }
+    ]
+  },
+  "without_skill": {
+    "expectations": [
+      {
+        "text": "Refuses to rank by follower count and explains that social rating measures reach in an adjacent audience rather than standing in this one.",
+        "evidence": "'I ranked by combined public recognition + reach across X and LinkedIn' explicitly ranks by reach/follower-adjacent criteria.",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "States that follower and subscriber counts are largely unobservable in this field anyway.",
+        "evidence": "The caveat given is session-specific tool unavailability ('that tool isn't authorized in this session'), not a structural claim about unobservability in the field.",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "Ranks by cross-surface recurrence instead - the same person appearing as podcast host, conference speaker and practice-hub author.",
+        "evidence": "The stated ranking method is 'combined public recognition + reach across X and LinkedIn,' not cross-surface recurrence.",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "Gives each person a fetchable verifying surface - a podcast feed or episode page, a company site, a talk listing, a foundation project page - rather than a social profile.",
+        "evidence": "Each entry only provides 'X: @handle \u00b7 LinkedIn: linkedin.com/in/...' \u2014 social profiles, not fetchable verifying surfaces.",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "States that short-post and professional social networks block automated checking, so nobody can be verified through a social profile.",
+        "evidence": "The caveat is about session tool authorization, not a structural claim about social networks blocking automated checks.",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "Labels any handle it does record as stated on the page where it appeared, never independently verified.",
+        "evidence": "The caveat is generic ('I could not verify live follower counts or confirm every handle is still current') rather than framing each handle as 'stated on the page where it appeared.'",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "Attaches a what-they're-selling disclosure to every person listed.",
+        "evidence": "Most entries (e.g. Kelsey Hightower, Scott Hanselman, Addy Osmani) give only job titles/employers, with no systematic 'what they sell' disclosure.",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "Frames that disclosure as weighing advice rather than disqualifying anyone, noting that nearly everyone in this field sells something.",
+        "evidence": "No such disclosure framework is stated anywhere in the transcript.",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "Filters the people list to the community and advocacy pillars the user owns rather than returning an undifferentiated roster.",
+        "evidence": "'favoring people whose actual job/identity is developer relations, developer advocacy, or DX leadership (relevant to a community/advocacy lead at an API gateway company).'",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Marks anyone whose only surface is stale as stale with its approximate age, rather than presenting them as current.",
+        "evidence": "No staleness markers or approximate ages are attached to any of the 10 entries.",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "Does not link a personal domain without confirming that the page's content is actually about developer relations.",
+        "evidence": "No personal domain links are given at all \u2014 only X/LinkedIn handles \u2014 so none is linked without confirmation.",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "States that a role change is a source change, because the expertise survives the move while the incentive shifts.",
+        "evidence": "Even where a role change is mentioned (e.g. 'now at Contenda' for Cassidy Williams), no statement connects the move to a shift in incentive/source status.",
+        "passed": false,
+        "graded": true
+      }
+    ]
+  }
+}

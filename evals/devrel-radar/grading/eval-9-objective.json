@@ -1,0 +1,166 @@
+{
+  "with_skill": {
+    "expectations": [
+      {
+        "text": "Re-asks which pillars the user owns, and treats the newly acquired developer marketing pillar as voiding the coverage guarantee until a source covers it.",
+        "evidence": "The transcript only declaratively restates pillars: 'Pillars owned: community (existing) + developer marketing (new this quarter) \u00b7 advocacy/enablement \u2014 not owned, deliberately empty' with no question or confirmation request attached (contrast with the ecosystem line, which does get a 'flag if that's wrong' hedge). While it does treat the new pillar as needing coverage ('Developer marketing needs its own verified-active source, on the same 60 min. Something had to give.'), it never re-asks the user to confirm pillar ownership, so the conjunction fails.",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "Adds at least one verified-active developer marketing source to restore pillar coverage.",
+        "evidence": "Console.dev is added with 'Pillar: marketing... Status: active, 20 Aug 2026' and Scaling DevTools with 'Pillar: marketing, advocacy... Status: active, Ep 197, 20 Aug 2026', and the totals line states 'developer marketing \u2705 (Console.dev, Scaling DevTools) \u2014 every owned pillar has a verified-active source.'",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Re-resolves every URL on the existing list, including the ones that worked last time, to catch renames, acquisitions and resold domains.",
+        "evidence": "The transcript explicitly states no live re-verification occurred: 'I didn't get web-fetch access this session, so nothing below was re-verified live. I'm carrying forward sources.md's own last-confirmed dates (26 Aug\u201310 Sep 2026)...' \u2014 URLs were carried forward, not re-resolved.",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "Re-runs the freshness and ownership check: downgrades newly stale entries, removes dead ones, and retries previously unverified ones.",
+        "evidence": "Same admission applies: 'nothing below was re-verified live... a real re-fetch is still owed, especially on the Berlin trip's price/dates before you book anything.' No freshness/ownership re-check was actually run this session; dates and statuses are carried forward from the prior snapshot.",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "Drops the two unread newsletters, on the stated ground that an unread source costs attention anyway.",
+        "evidence": "'Dropped: DevRel Weekly and DevRel Newsletter (developerrelations.com) \u2014 unopened all quarter. An unread source costs attention anyway, so both are deleted, not parked.'",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Re-ranks against the new conference budget and states that a budget turns an event from a personal expense into a cleared slot.",
+        "evidence": "'\u20ac4k conference budget turns an event from a personal expense into a cleared slot (per the skill's own re-rank rule) \u2014 the event line goes from empty to funded.' followed by 'Funded by the \u20ac4k: WeAreDevelopers World Congress, Berlin...'",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Names which new fact moved which source, rather than presenting a silently reordered list.",
+        "evidence": "The 'What moved, and why' section attributes each change to a specific fact, e.g. 'DevRel Collective (Slack) re-ranked, not joined... Your teammate being a member now doesn't make it joinable by you' and 'New pillar \u2192 promote long-form, per this skill's own rule: you just added developer marketing... so the marketing pillar gets the one long-form slot this quarter.'",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Treats the colleague inside the gated community as someone to ask, rather than as a reason to join the community.",
+        "evidence": "'DevRel Collective (Slack) re-ranked, not joined. It was ruled out originally as application-gated with no way in. Your teammate being a member now doesn't make it joinable by you \u2014 it makes it askable: get a weekly highlights recap from them instead of monitoring it yourself.'",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Does not re-offer any source previously deleted for a constraint unless the user has said that constraint lifted.",
+        "evidence": "Common Room blog, despite looking date-fresh, is explicitly kept off the list: 'still \"active\" by date, but no longer a strong pillar fit. Named here so it doesn't get added on reputation alone at the next refresh.' The newly dropped newsletters are also explicitly not re-offered ('deleted rather than re-offered').",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Refreshes the event calendar on a twice-yearly rather than quarterly cadence, because CFP deadlines land months before the event.",
+        "evidence": "'Check developerrelations.com and cmxhub.com before the twice-yearly event-calendar refresh \u2014 CFPs close months ahead, so sitting on this costs you a speaking slot, not just a reading slot.'",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Asks the peer community and the newest additions for one candidate discovery each, and verifies it before promoting it to the bench or the list.",
+        "evidence": "No such discovery-request step appears anywhere in the transcript; the only use of the colleague/community is for a passive 'weekly highlights recap,' not for soliciting and verifying a new candidate source before adding it to the bench or list.",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "Checks the consumption bar - that the user consumed at least two thirds of the entries - and reports the result against it.",
+        "evidence": "The transcript reports 'Verified-active: 12 of 13 listed' (a freshness metric) but never reports a consumption ratio or checks it against a two-thirds bar; the only consumption note is qualitative ('unopened all quarter') for the two dropped newsletters, with no aggregate consumption figure given.",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "Re-totals estimated weekly minutes against the 60-minute budget and trims any overflow.",
+        "evidence": "The weekly table sums to exactly 60 (8+7+5+40) and the totals line confirms: '60 of 60 weekly minutes; 4 weekly + 2 monthly + 2 annual + 1 funded event + 1 open CFP gap + 4 bench.'",
+        "passed": true,
+        "graded": true
+      }
+    ]
+  },
+  "without_skill": {
+    "expectations": [
+      {
+        "text": "Re-asks which pillars the user owns, and treats the newly acquired developer marketing pillar as voiding the coverage guarantee until a source covers it.",
+        "evidence": "The transcript allocates '20 min (new)' to 'Dev marketing pulse' without asking any clarifying question or naming an actual source, and doesn't flag the coverage as void.",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "Adds at least one verified-active developer marketing source to restore pillar coverage.",
+        "evidence": "Only a generic time block 'Dev marketing pulse: 20 min (new)' is given with no specific named source at all.",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "Re-resolves every URL on the existing list, including the ones that worked last time, to catch renames, acquisitions and resold domains.",
+        "evidence": "'No saved radar found...Nothing on disk. Rebuilding allocation logic straight from your 5 deltas' \u2014 no URL re-resolution is performed.",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "Re-runs the freshness and ownership check: downgrades newly stale entries, removes dead ones, and retries previously unverified ones.",
+        "evidence": "No freshness/ownership verification pass is described or performed anywhere in the transcript.",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "Drops the two unread newsletters, on the stated ground that an unread source costs attention anyway.",
+        "evidence": "'Two dead newsletters \u2192 cut. Zero opens all quarter = zero signal. Reclaim their minutes fully, no partial credit.'",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Re-ranks against the new conference budget and states that a budget turns an event from a personal expense into a cleared slot.",
+        "evidence": "The conference is moved to a quarterly slot ('Needs a quarterly slot instead') but no statement about a budget converting it from personal expense to a cleared slot is made.",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "Names which new fact moved which source, rather than presenting a silently reordered list.",
+        "evidence": "'What each change does to the budget: 1. Two dead newsletters \u2192 cut...2. Dev marketing pillar added \u2192 needs its own real slot...3. Gated Slack access...promote to active rotation.'",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Treats the colleague inside the gated community as someone to ask, rather than as a reason to join the community.",
+        "evidence": "'Gated Slack access via colleague \u2192 promote to active rotation. Was blocked/backlog before, now actionable.' treats the access as a reason to join/monitor the Slack itself, not to query the colleague directly.",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "Does not re-offer any source previously deleted for a constraint unless the user has said that constraint lifted.",
+        "evidence": "No previously-deleted source is reintroduced anywhere in the response.",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Refreshes the event calendar on a twice-yearly rather than quarterly cadence, because CFP deadlines land months before the event.",
+        "evidence": "'add one quarterly 30\u201345 min slot to map conference calendar + CFP deadlines' explicitly uses a quarterly, not twice-yearly, cadence.",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "Asks the peer community and the newest additions for one candidate discovery each, and verifies it before promoting it to the bench or the list.",
+        "evidence": "No such discovery-request process is described anywhere in the transcript.",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "Checks the consumption bar - that the user consumed at least two thirds of the entries - and reports the result against it.",
+        "evidence": "No consumption-rate check or report appears anywhere in the transcript.",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "Re-totals estimated weekly minutes against the 60-minute budget and trims any overflow.",
+        "evidence": "'Community pulse: 20 min...Dev marketing pulse: 20 min...Gated Slack check-in: 10 min...Buffer/overflow: 10 min' sums exactly to the stated '60 min, budget-neutral' target.",
+        "passed": true,
+        "graded": true
+      }
+    ]
+  }
+}

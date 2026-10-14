@@ -1,0 +1,166 @@
+{
+  "with_skill": {
+    "expectations": [
+      {
+        "text": "Declines to ship CODEOWNERS and fix SLAs as the first step",
+        "evidence": "\"Both deliverables below, ready to use.\" \u2014 the files are delivered, not withheld, despite caveats",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "States that assigning owners to hand-pasted Markdown gives them responsibility with no mechanism to discharge it",
+        "evidence": "\"CODEOWNERS assigns a name to fix a red sample, but nothing here can turn red: there's no build, no compile check, no test.\"",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Names this as the common mistake of reversing the migration order",
+        "evidence": "\"This is the exact sequencing mistake the governance model warns against.\"",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Gives the migration order: census and secret scan, then automated compile and run gates, then move samples into compilable source published by transclusion, then metadata records and schema validation, then code owners and fix SLAs",
+        "evidence": "No such full ordered list appears; only census/secret-scan urgency is discussed",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "Puts the secret scan first because credential leaks are the only findings that cannot wait",
+        "evidence": "\"A secret scan cannot wait for CODEOWNERS... a P0 credential leak doesn't wait for org process.\"",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Identifies moving samples into compilable source and publishing by transclusion as the single highest-leverage investment here, because every later guarantee depends on it",
+        "evidence": "\"compilable source\" and \"transclusion\" are never mentioned anywhere in this transcript",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "Requires snippet tags with globally unique, hierarchical identifiers carrying language, product area and example name, kept identical across languages",
+        "evidence": "Not mentioned in this transcript",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "Requires example metadata records holding at minimum title, synopsis, category, the languages the example exists in, the SDK version targeted, the source location and the snippet tags composed",
+        "evidence": "Only a CODEOWNERS path \"/sample-metadata/\" is mentioned, no field definitions given",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "States that a snippet tag alone cannot tell a renderer which page or which language variant to use, which is what the metadata record is for",
+        "evidence": "Not discussed in this transcript",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "Presents the three ownership models - a dedicated examples team, DevRel or community with expert vetting, and product engineers co-owning - with the cost of each rather than recommending one blindly",
+        "evidence": "Only a specific internal-vs-community CODEOWNERS mapping is given; no comparison of three named ownership models",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "Recommends picking an ownership model per surface rather than one model for the whole corpus",
+        "evidence": "CODEOWNERS differentiates internal paid languages from unpaid community languages with different owner structures per language directory",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "States that community or outside-contributor maintenance is a funding model rather than a free one, and requires paid capacity behind it",
+        "evidence": "\"a 48-hour SLA is a demand on someone's paid time. An unpaid outside contributor cannot be held to it... Twilio's own community sample catalogue was backstopped by *contracted, paid* engineers\"",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Writes into the ownership section that bug fixes and security issues take priority over authoring new code examples",
+        "evidence": "Not stated anywhere in this transcript",
+        "passed": false,
+        "graded": true
+      }
+    ]
+  },
+  "without_skill": {
+    "expectations": [
+      {
+        "text": "Declines to ship CODEOWNERS and fix SLAs as the first step",
+        "evidence": "The transcript explicitly ships both artifacts now: 'Ship the interim file below by Friday. Open a follow-up ticket for snippet extraction' and delivers the full CODEOWNERS file and SLA table.",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "States that assigning owners to hand-pasted Markdown gives them responsibility with no mechanism to discharge it",
+        "evidence": "The transcript frames the limitation as a routing granularity problem ('CODEOWNERS cannot tell \"the Python tab changed\" from \"the Java tab changed\"'), not as owners being given responsibility with no mechanism to discharge it.",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "Names this as the common mistake of reversing the migration order",
+        "evidence": "No 'migration order' framework or naming of this as a common mistake appears anywhere in the transcript.",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "Gives the migration order: census and secret scan, then automated compile and run gates, then move samples into compilable source published by transclusion, then metadata records and schema validation, then code owners and fix SLAs",
+        "evidence": "No such ordered migration sequence is given; the transcript instead ships CODEOWNERS/SLA immediately with a follow-up ticket for snippet extraction.",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "Puts the secret scan first because credential leaks are the only findings that cannot wait",
+        "evidence": "The secret scan appears as the first bullet under a 'Before this merges' checklist positioned after the CODEOWNERS and SLA sections, with the stated reason being reputational risk to named owners, not that credential leaks are the only thing that cannot wait.",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "Identifies moving samples into compilable source and publishing by transclusion as the single highest-leverage investment here, because every later guarantee depends on it",
+        "evidence": "Snippet extraction is called 'the only path to true per-language enforcement and automation later' \u2014 scoped narrowly to CODEOWNERS routing, not framed as the single highest-leverage investment underlying all later guarantees.",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "Requires snippet tags with globally unique, hierarchical identifiers carrying language, product area and example name, kept identical across languages",
+        "evidence": "No snippet-tag identifier scheme is specified anywhere in the transcript.",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "Requires example metadata records holding at minimum title, synopsis, category, the languages the example exists in, the SDK version targeted, the source location and the snippet tags composed",
+        "evidence": "No metadata record schema is discussed in the transcript.",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "States that a snippet tag alone cannot tell a renderer which page or which language variant to use, which is what the metadata record is for",
+        "evidence": "This point is not addressed anywhere in the transcript.",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "Presents the three ownership models - a dedicated examples team, DevRel or community with expert vetting, and product engineers co-owning - with the cost of each rather than recommending one blindly",
+        "evidence": "No three-model ownership framework is presented; the transcript only distinguishes paid SDK-team owners from unpaid volunteer maintainers.",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "Recommends picking an ownership model per surface rather than one model for the whole corpus",
+        "evidence": "The CODEOWNERS file assigns different owners by surface: per-language quickstarts and reference pages get language-specific owners, while mixed tabbed pages get a page-level content-owner: '# ---- Mixed-language tabbed pages (API reference, guides): page-level only ----'.",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "States that community or outside-contributor maintenance is a funding model rather than a free one, and requires paid capacity behind it",
+        "evidence": "'the other two get a staff-owned fallback that keeps published docs honest (pull or flag, don't silently leave a broken sample live) without making the SLA a demand on someone unpaid' \u2014 a paid staff owner backstops the volunteer-maintained languages.",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Writes into the ownership section that bug fixes and security issues take priority over authoring new code examples",
+        "evidence": "No such prioritization statement appears in the transcript.",
+        "passed": false,
+        "graded": true
+      }
+    ]
+  }
+}
