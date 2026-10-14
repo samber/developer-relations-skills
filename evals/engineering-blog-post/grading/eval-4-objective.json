@@ -1,0 +1,166 @@
+{
+  "with_skill": {
+    "expectations": [
+      {
+        "text": "States that the public post is derived from the internal review and never a copy of it",
+        "evidence": "'This is an incident-derived post' and 'the condensed postmortem you pasted has no investigation narrative to fill 30% of the post' treats the internal doc as source material to be transformed, not copied.",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Runs a redaction pass before drafting anything",
+        "evidence": "'## Redaction pass (per the skill's \"Incident-derived posts\" rule)' appears before the claim ledger and draft.",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Removes the individual name \"mreynolds\" and any handles",
+        "evidence": "'`mreynolds` | Cut \u2014 no individual named, blameless framing'",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Removes the internal service codename \"Falcon\"",
+        "evidence": "Draft uses 'our routing tier' throughout; table shows Falcon mapped to that public name.",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Removes the ticket identifiers PROJ-8812 and #4471",
+        "evidence": "'`PROJ-8812` | Cut' and '`change #4471` | Cut \u2014 \"a routine config change\"'",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Removes the internal wiki link go/falcon-postmortem-aug3",
+        "evidence": "'`go/falcon-postmortem-aug3` | Cut \u2014 internal wiki link'",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Treats the 118 customers and 1.2M failed requests figures as a deliberate publish-or-not decision rather than carrying them across automatically",
+        "evidence": "'This is the \"decide deliberately\" fork the skill asks for \u2014 my default is publish these...' and handoff item 6 requiring a human decision.",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Keeps blameless framing by explaining the conditions that allowed the failure instead of who deployed the change",
+        "evidence": "'The bug here wasn't in the code we reviewed and deployed \u2014 it was in a code path the deploy *woke up* without going through the same scrutiny.'",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Adds a reason for a reader who was not affected to keep reading, which the internal document never has to supply",
+        "evidence": "'An internal postmortem never has to earn this \u2014 a public one does. One sentence a reader repeats to a colleague.'",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Selects the Bug Hunt pattern",
+        "evidence": "'**Mode / pattern:** Draft mode. Pattern = **Bug Hunt**'",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "States that the wrong turns and dead ends of the investigation are the value of this pattern, and asks for them",
+        "evidence": "'This section is the reason readers stay on a Bug Hunt post \u2014 the wrong turns, not just the answer...Pull it in before publishing: what you tried that didn't pan out...'",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Requires the post to end on a lesson that generalises beyond this bug rather than on the fix",
+        "evidence": "Outline: '...Root cause 20% \u2192 Fix 15% (placeholder) \u2192 Lesson 10%.' and draft places '## What generalizes' after '## What we're changing'.",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Requires a security and customer-confidentiality review before publishing",
+        "evidence": "Only customer-confidentiality is explicitly required ('A decision, from whoever owns customer confidentiality...'); no mention of a 'security' review anywhere in the transcript.",
+        "passed": false,
+        "graded": true
+      }
+    ]
+  },
+  "without_skill": {
+    "expectations": [
+      {
+        "text": "States that the public post is derived from the internal review and never a copy of it",
+        "evidence": "'Here's a public-facing version of the postmortem, adapted for external readers. I removed internal-only details that don't belong on a public page...'",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Runs a redaction pass before drafting anything",
+        "evidence": "The redaction list is stated before the postmortem draft: 'I removed... the individual engineer's name... the internal ticket ID and wiki link, the internal deploy/change number, and the internal system codename.'",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Removes the individual name \"mreynolds\" and any handles",
+        "evidence": "States removal of 'the individual engineer's name'; the final draft contains no personal names.",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Removes the internal service codename \"Falcon\"",
+        "evidence": "States removal of 'the internal system codename'; final draft says only 'our routing layer.'",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Removes the ticket identifiers PROJ-8812 and #4471",
+        "evidence": "States removal of 'the internal ticket ID'; none appear in the final draft.",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Removes the internal wiki link go/falcon-postmortem-aug3",
+        "evidence": "States removal of 'the internal wiki link'; none appears in the final draft.",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Treats the 118 customers and 1.2M failed requests figures as a deliberate publish-or-not decision rather than carrying them across automatically",
+        "evidence": "'generalized the customer-impact figures so they don't risk identifying specific accounts. The technical root cause, duration, and failure-rate numbers are kept since those are genuinely useful.'",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Keeps blameless framing by explaining the conditions that allowed the failure instead of who deployed the change",
+        "evidence": "'the individual engineer's name (postmortems should stay blameless and this isn't relevant to users)'; Root Cause discusses only the mechanism, never an individual.",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Adds a reason for a reader who was not affected to keep reading, which the internal document never has to supply",
+        "evidence": "The draft proceeds directly through Summary, Timeline, Root Cause, Impact, Remediation with no such hook.",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "Selects the Bug Hunt pattern",
+        "evidence": "No pattern name is mentioned anywhere in the transcript.",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "States that the wrong turns and dead ends of the investigation are the value of this pattern, and asks for them",
+        "evidence": "Timeline is terse ('The team identified that the deployed change had altered which configuration key...') with no dead ends requested or included.",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "Requires the post to end on a lesson that generalises beyond this bug rather than on the fix",
+        "evidence": "Post ends with 'If you have questions about how this incident affected your account specifically, please reach out to your support contact,' not a generalized lesson.",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "Requires a security and customer-confidentiality review before publishing",
+        "evidence": "No such review step is mentioned anywhere.",
+        "passed": false,
+        "graded": true
+      }
+    ]
+  }
+}

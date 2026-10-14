@@ -1,0 +1,154 @@
+{
+  "with_skill": {
+    "expectations": [
+      {
+        "text": "Refuses to rank by subscriber count, and explains that social rating measures reach in an adjacent audience rather than standing in this one.",
+        "evidence": "The transcript refuses to rank by subscriber count (\"Wouldn't use it if I could. This method ranks by value returned per minute spent, not audience size\"), but the stated rationale is a value-per-minute methodology argument, not an explanation that subscriber counts measure reach in an adjacent audience rather than standing within this practice community.",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "States that subscriber counts and upload dates on video platforms are not observable to an automated check, because the platform answers with a consent wall or redirect.",
+        "evidence": "\"Can't observe it. YouTube blocks automated checks with a consent wall \u2014 no subscriber count or upload date is fetchable.\"",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Asserts no subscriber count for any channel.",
+        "evidence": "\"no subscriber count or upload date is fetchable. Any number here would be invented.\" \u2014 no subscriber counts appear anywhere in the tables.",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Does not invent or list a plausible-sounding channel name to fill the gap.",
+        "evidence": "The 'Weekly core' section is explicitly left empty (\"No verified, weekly-cadence, video-native DevRel-practice source exists in this audit\") rather than inventing a channel to fill it; named entries (Jono Bacon, DevRelCon archive) are flagged as verified/unobserved rather than presented as fabricated fills.",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Recommends a fetchable conference-talk archive as the substitute for an unverifiable channel, naming the DevRelCon talk archive published on developerrelations.com as an example.",
+        "evidence": "\"DevRelCon talk archive | developerrelations.com | video (talks) | all four | ... | Only fetchable, corroborated video surface for the practice itself\"",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Labels any channel it does name as channel itself unobserved, or an equivalent, and names the companion surface that corroborates it - the creator's own site or a conference programme.",
+        "evidence": "\"Jono Bacon | Cross-surface recurrence explicitly includes video, alongside books + blog | community | masterclass/consulting | stale (~19 months) \u2014 channel itself unobserved, corroborated only via jonobacon.com\"",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "States that video sits last on the efficiency ordering and last on the value ordering.",
+        "evidence": "\"strict video-only DevRel-practice content barely exists and is verified as the *worst* medium on both value and efficiency in this method\"",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Tells the user plainly that a video-only radar is the weakest configuration available and says what it costs them.",
+        "evidence": "\"a 120 min/week budget can't be filled from it\" and \"Weekly minutes used: 0 of 120... Coverage bar fails as delivered... this radar stays this thin \u2014 that's the honest state, not a partial draft.\"",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Costs a conference-talk video as tens of minutes, an order of magnitude rather than a precise figure.",
+        "evidence": "\"~60\u201390 min, batched once or twice/year around conference dates\" \u2014 a rounded range rather than a precise figure.",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Does not quietly substitute text sources the user said they will not consume without naming the trade-off.",
+        "evidence": "\"DevRel Weekly, Console.dev, EveryDeveloper, Draft.dev, Tessa Kriesel, The New Stack, DeveloperRelations.com guides, Di\u00e1taxis, CHAOSS \u2014 all text, ruled out by no-text constraint.\"",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Attaches a what-they're-selling flag, a status and a date to every entry it does deliver.",
+        "evidence": "Only the DevRelCon row carries an explicit date (\"verified-active, NY edition confirmed 22\u201323 Jul 2026\"); the Jono Bacon row gives only a relative age (\"stale (~19 months)\") and the KubeCon/WeAreDevelopers row gives no explicit date at all (\"event dates verified; video archive itself unverified this pass\").",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "Offers at least one live or community surface - a conference, a meetup, a recurring community call - as a non-text, non-channel way to cover the gap.",
+        "evidence": "Live-community surfaces are explicitly excluded rather than offered as a gap-filler: \"DevRel Collective Slack, r/devrel, CMX, Write the Docs community \u2014 live-community medium, not picked.\" The 'Next action' instead proposes adding audio podcasts, not a live/community surface.",
+        "passed": false,
+        "graded": true
+      }
+    ]
+  },
+  "without_skill": {
+    "expectations": [
+      {
+        "text": "Refuses to rank by subscriber count, and explains that social rating measures reach in an adjacent audience rather than standing in this one.",
+        "evidence": "The deliverable is explicitly titled '## DevRel YouTube channels, ranked by subscribers' with a table sorted by subscriber count.",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "States that subscriber counts and upload dates on video platforms are not observable to an automated check, because the platform answers with a consent wall or redirect.",
+        "evidence": "The caveat given is 'this session has no live web access,' not a structural claim about platforms blocking automated checks via consent walls.",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "Asserts no subscriber count for any channel.",
+        "evidence": "The table lists specific ranges for every channel, e.g. 'Google for Developers | ~2.0\u20132.5M'.",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "Does not invent or list a plausible-sounding channel name to fill the gap.",
+        "evidence": "All 17 listed channels (Google for Developers, AWS, Microsoft Developer, GitHub, Postman, etc.) are real, well-known company channels, not fabricated names.",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Recommends a fetchable conference-talk archive as the substitute for an unverifiable channel, naming the DevRelCon talk archive published on developerrelations.com as an example.",
+        "evidence": "No conference-talk archive or developerrelations.com is mentioned anywhere in the transcript.",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "Labels any channel it does name as channel itself unobserved, or an equivalent, and names the companion surface that corroborates it - the creator's own site or a conference programme.",
+        "evidence": "Only a single blanket caveat at the top is given; no per-channel corroborating surface is named.",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "States that video sits last on the efficiency ordering and last on the value ordering.",
+        "evidence": "The entire deliverable is a video-channel ranking with no statement that video should rank last in an efficiency ordering.",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "Tells the user plainly that a video-only radar is the weakest configuration available and says what it costs them.",
+        "evidence": "No such statement appears; the transcript treats the video-channel exercise as the primary deliverable without cost commentary.",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "Costs a conference-talk video as tens of minutes, an order of magnitude rather than a precise figure.",
+        "evidence": "No conference-talk video is discussed; costs are precise per-channel minute figures (e.g. '~48', '~90').",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "Does not quietly substitute text sources the user said they will not consume without naming the trade-off.",
+        "evidence": "The deliverable stays entirely within the requested video/YouTube medium and does not substitute text sources.",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Attaches a what-they're-selling flag, a status and a date to every entry it does deliver.",
+        "evidence": "Entries carry subscriber counts, cadence, and a 'why it matters' note but no selling flag, status, or date.",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "Offers at least one live or community surface - a conference, a meetup, a recurring community call - as a non-text, non-channel way to cover the gap.",
+        "evidence": "No conference, meetup, or community call is offered anywhere in the transcript.",
+        "passed": false,
+        "graded": true
+      }
+    ]
+  }
+}

@@ -1,0 +1,178 @@
+{
+  "with_skill": {
+    "expectations": [
+      {
+        "text": "Classifies the post as benchmarketing because it compares the author's own product against a competitor, and states that class owes the most disclosure",
+        "evidence": "'classified as Benchmarketing (own product vs. a named competitor \u2014 the highest-scrutiny, least-benefit-of-the-doubt class this skill defines).'",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "States that benchmark readers start from disbelief, so the post is guilty until proven innocent",
+        "evidence": "No such statement appears; the transcript discusses 'traps' and being 'dismantled' but not a disbelief/guilty-until-innocent framing.",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "Requires the methodology to appear before the results rather than in an appendix",
+        "evidence": "Draft structure places '### How we measured' immediately before '### Results'.",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Names tuning only your own side as the specific move that gets a benchmark post publicly dismantled",
+        "evidence": "'\"Tuning your own side while leaving the comparison at defaults is the specific move that gets a post publicly dismantled.\"'",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Requires either re-running with both sides tuned fairly, or stating which side is untuned and labelling the result indicative rather than conclusive",
+        "evidence": "'This is a tuned-vs-default comparison, not a tuned-vs-tuned one' and 'read the number below as indicative, not stable.'",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Rejects a single run per side and requires multiple runs with their variance reported",
+        "evidence": "'**Runs:** 1 per engine. We have not re-run for variance...' and handoff 'At least 3 runs per side, to report a spread instead of a point.'",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Requires absolute ingest numbers alongside the 3x ratio",
+        "evidence": "'absolute ingest throughput (records/sec or MB/s) for either engine | Missing | **Blocking**'",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Requires the disclosure to name the hardware or instance type",
+        "evidence": "'**Hardware:** 1 \u00d7 `m6i.2xlarge` (8 vCPU, 32 GiB), [region/AZ]'",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Requires the disclosure to name the version of both systems compared",
+        "evidence": "'**Versions:** vantagedb [version], Northlake TSDB [version], tested [date]'",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Requires the disclosure to describe the workload and the dataset",
+        "evidence": "'**Workload:** [client, concurrency, batch size, total volume]' and dataset description bracket.",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Requires the disclosure to state the configuration and tuning applied to each side",
+        "evidence": "'**Configuration:** vantagedb: our production tuning profile...Northlake TSDB: install defaults, unmodified'",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Requires a link to the benchmark scripts so a reader can reproduce the run",
+        "evidence": "'**Reproduce:** [link scripts/config, or say none exist yet]'",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Requires at least one chart rather than a table alone",
+        "evidence": "'*(Chart goes here \u2014 this pattern is read visually, not as a bare table.)*'",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Flags the extra compliance cost of naming a competitor, such as a legal read and the difficulty of withdrawing the claim once it is quoted",
+        "evidence": "'a legal/competitor-naming read, since this names a competitor directly.'",
+        "passed": true,
+        "graded": true
+      }
+    ]
+  },
+  "without_skill": {
+    "expectations": [
+      {
+        "text": "Classifies the post as benchmarketing because it compares the author's own product against a competitor, and states that class owes the most disclosure",
+        "evidence": "The word 'benchmarketing' never appears, and there is no comparative statement that this class 'owes the most disclosure.'",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "States that benchmark readers start from disbelief, so the post is guilty until proven innocent",
+        "evidence": "Closest text is 'invites the most scrutiny,' not a 'guilty until proven innocent' framing.",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "Requires the methodology to appear before the results rather than in an appendix",
+        "evidence": "In the drafted replacement, '**Headline result:** ... ingested 3x more data per second...' precedes the '## What we tested' methodology section.",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "Names tuning only your own side as the specific move that gets a benchmark post publicly dismantled",
+        "evidence": "'Tuned-vs-default isn't a speed comparison, it's a tuning-guide comparison... You measured your ceiling against their floor.'",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Requires either re-running with both sides tuned fairly, or stating which side is untuned and labelling the result indicative rather than conclusive",
+        "evidence": "Draft states 'Northlake config: default install, no tuning applied' and 'This is not a claim that Vantage's engine is inherently 3x faster... We didn't test that,' while recommendation #2 proposes tuning Northlake too.",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Rejects a single run per side and requires multiple runs with their variance reported",
+        "evidence": "'N=1, one instance type, no variance reported... run 5 repeated trials instead of 1... turns \"3x\" into \"3x \u00b1 0.Xx across 5 runs.\"'",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Requires absolute ingest numbers alongside the 3x ratio",
+        "evidence": "No requirement anywhere for absolute throughput figures; only the ratio '3x more data per second' is discussed.",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "Requires the disclosure to name the hardware or instance type",
+        "evidence": "'**Hardware:** 1x AWS m6i.2xlarge, single run per engine'",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Requires the disclosure to name the version of both systems compared",
+        "evidence": "No mention anywhere of disclosing software version numbers for Vantage or Northlake.",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "Requires the disclosure to describe the workload and the dataset",
+        "evidence": "'**Workload:** [describe dataset: cardinality, point rate, batch size, write pattern]'",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Requires the disclosure to state the configuration and tuning applied to each side",
+        "evidence": "'**Vantage config:** our production tuning profile... **Northlake config:** default install, no tuning applied'",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Requires a link to the benchmark scripts so a reader can reproduce the run",
+        "evidence": "'## Reproducing this - Vantage config: [link] - Benchmark harness: [link] - Dataset generator: [link]'",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Requires at least one chart rather than a table alone",
+        "evidence": "No mention anywhere of requiring a chart.",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "Flags the extra compliance cost of naming a competitor, such as a legal read and the difficulty of withdrawing the claim once it is quoted",
+        "evidence": "'Named-competitor superiority claims are the ones most likely to get legally or publicly contested... you're the one who has to walk it back, on your own blog, weeks after everyone's already shared the headline.'",
+        "passed": true,
+        "graded": true
+      }
+    ]
+  }
+}

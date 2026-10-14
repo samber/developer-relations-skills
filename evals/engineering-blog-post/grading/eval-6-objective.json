@@ -1,0 +1,166 @@
+{
+  "with_skill": {
+    "expectations": [
+      {
+        "text": "Selects the Non-markety Product Perspectives pattern",
+        "evidence": "'**Pattern:** Non-markety Product Perspectives (own product, company blog, PLG audience...)'",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Leads with the engineering problem stated in terms an engineer outside Riverbend also has, rather than with the announcement",
+        "evidence": "'## The problem with scaling on CPU' is the first substantive section after the brief disclosure paragraph, framing a problem 'true for compute-heavy work' generally.",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Rejects or reworks the suggested announcement-style title",
+        "evidence": "'a version like \"Why CPU is the wrong autoscaling signal for queue-bound work\" tests better against a skeptical developer audience \u2014 same post, different door.'",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Keeps \"who we are\" to one plain sentence about what the company builds and sells",
+        "evidence": "'We build Riverbend Cloud, a compute platform your services run on.'",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Gives the largest share of the post to how the mechanism actually works rather than to a feature list",
+        "evidence": "'## How it actually works' with YAML config and detailed bullets on cooldowns, evaluation window, in-flight accounting, stale-metric fallback.",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Includes a section on what the design cost: trade-offs accepted, work abandoned, and the parts still unfinished",
+        "evidence": "'## What it cost' with five bullets on limitations/trade-offs including unfinished capability ('No mixed-signal policies yet').",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Applies the test that deleting every product name must still leave something behind, and says so",
+        "evidence": "'body is written so deleting \"Riverbend\" from it still leaves an engineering story standing.'",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "States the commercial interest once, plainly and early in the post, not in a footer",
+        "evidence": "'we sell the thing this post describes, and we'd like you to use it.' \u2014 stated in the opening paragraph.",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Optimises the call to action for trying it immediately rather than contacting sales, because the audience is product-led",
+        "evidence": "'change `metric: cpu` to `metric: queue_depth`...and deploy. No ticket, no call \u2014 same as everything else on Riverbend.'",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Attributes the post to named engineers rather than publishing it unsigned",
+        "evidence": "'Company-blog rule requires a named engineer, not anonymous marketing copy' with byline placeholder '[ENGINEER NAME]' to be filled with a real name.",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Asks what an engineer who will never buy Riverbend takes home from the post",
+        "evidence": "No such question appears anywhere in the transcript.",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "Notes that a marketing sign-off requirement raises this pattern's effort and lowers its rank",
+        "evidence": "No such statement appears in this section.",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "Includes a limitation naming where queue-depth-based autoscaling is the wrong choice",
+        "evidence": "'It's a worse default for compute-heavy workloads...CPU-based scaling is still the right tool there.'",
+        "passed": true,
+        "graded": true
+      }
+    ]
+  },
+  "without_skill": {
+    "expectations": [
+      {
+        "text": "Selects the Non-markety Product Perspectives pattern",
+        "evidence": "No mention of this pattern name or any pattern-selection statement.",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "Leads with the engineering problem stated in terms an engineer outside Riverbend also has, rather than with the announcement",
+        "evidence": "Opens with '# Introducing Riverbend Autoscaling 2.0' and 'Today we're rolling out Riverbend Autoscaling 2.0' \u2014 an announcement lead.",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "Rejects or reworks the suggested announcement-style title",
+        "evidence": "The announcement-style title 'Introducing Riverbend Autoscaling 2.0' is kept as-is.",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "Keeps \"who we are\" to one plain sentence about what the company builds and sells",
+        "evidence": "No sentence describing what Riverbend builds and sells appears anywhere in the post.",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "Gives the largest share of the post to how the mechanism actually works rather than to a feature list",
+        "evidence": "The 'How it works' section details the jobs-per-worker ratio, cooldowns, min_workers, hybrid strategy, and per-queue policies at greater depth than the other sections.",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Includes a section on what the design cost: trade-offs accepted, work abandoned, and the parts still unfinished",
+        "evidence": "No section discusses trade-offs accepted or work left unfinished; 'What's next' is forward-looking roadmap only.",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "Applies the test that deleting every product name must still leave something behind, and says so",
+        "evidence": "No mention of such a test anywhere.",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "States the commercial interest once, plainly and early in the post, not in a footer",
+        "evidence": "Commercial interest is never explicitly disclosed; only promotional framing like 'no sales call, no plan upgrade, just a toggle' is used.",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "Optimises the call to action for trying it immediately rather than contacting sales, because the audience is product-led",
+        "evidence": "'Try it on one service today \u2014 flip the strategy, watch the Scaling History chart, and see your queue latency flatten out.'",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Attributes the post to named engineers rather than publishing it unsigned",
+        "evidence": "No author byline or named attribution appears anywhere.",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "Asks what an engineer who will never buy Riverbend takes home from the post",
+        "evidence": "No such question is posed.",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "Notes that a marketing sign-off requirement raises this pattern's effort and lowers its rank",
+        "evidence": "No mention of marketing sign-off anywhere.",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "Includes a limitation naming where queue-depth-based autoscaling is the wrong choice",
+        "evidence": "'CPU-based scaling isn't gone. If your workload genuinely is CPU-bound (image processing, video transcoding...), you can keep `strategy: cpu`.'",
+        "passed": true,
+        "graded": true
+      }
+    ]
+  }
+}

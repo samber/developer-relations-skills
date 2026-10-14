@@ -1,0 +1,166 @@
+{
+  "with_skill": {
+    "expectations": [
+      {
+        "text": "Adds a budget compressor first, because the budget sits under roughly 60 minutes a week.",
+        "evidence": "The weekly core table's first row is 'The New Stack | ... | 10 (skim) | Budget compressor \u2014 one skim replaces tracking several vendor blogs individually, which a 25-min week can't afford to do', and the transcript repeatedly frames the constraint as a '25-minute budget' / '25 of 25 min' \u2014 well under 60 minutes.",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Defines the compressor as one daily developer-news site or weekly roundup that substitutes for following several vendor blogs individually, and names a specific one.",
+        "evidence": "'The New Stack | thenewstack.io | news site | all four | 10 (skim) | Budget compressor \u2014 one skim replaces tracking several vendor blogs individually, which a 25-min week can't afford to do'",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Answers the DevRel Weekly question directly: the newsletter changed format and should be listed as sporadic or occasional, not weekly.",
+        "evidence": "'DevRel Weekly is still alive but no longer weekly ... and replaced it with an occasional \"DevRel Thoughts Shared Randomly\" format. Worth bookmarking, not worth a slot in a 25-minute budget ... It's in the Bench below, not the core list.'",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Attributes that change to the curator's own announced wind-down of the weekly cadence, explicitly not to the site being dead or to an infrastructure failure.",
+        "evidence": "The transcript says 'Mary Thengvall wound down the strict cadence herself \u2014 a Twitter/X platform change broke the RSS workflow the roundup was built on \u2014 and replaced it with an occasional format,' explicitly citing an infrastructure failure (the Twitter/X platform change breaking the RSS workflow) as a cause, rather than attributing the change purely to the curator's own decision as the rubric requires.",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "Deletes every audio source outright and names the deletion with the constraint that caused it.",
+        "evidence": "'All podcasts (Community Pulse, Scaling DevTools, Open Source Ready, everything audio) \u2014 no desk listening, no commute to spend it on.'",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Stops when the 25-minute budget is spent, even though strong sources remain unlisted.",
+        "evidence": "'Weekly minutes: 24 of 25 (96%).' with a Bench section explicitly holding back sources like Write the Docs ('Too costly for now; worth it the day you get any community/conference budget') and DevRelCon ('Parked here only because I assumed no event budget this year').",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Names 2-3 bench substitutes and defines the bench as verified sources the budget could not fit.",
+        "evidence": "'## Bench (verified, not in budget \u2014 swap in if something above doesn't stick)' lists DevRel Weekly, Console.dev, Write the Docs, and DevRelCon as verified alternates not in the weekly budget.",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Carries at least one verified-active source for enablement and at least one for community.",
+        "evidence": "EveryDeveloper (enablement pillar) is marked 'active \u2014 page asset 12 May 2026'; DRF community list (community pillar) is marked 'active \u2014 Touchpoint restart announced 2 Sep 2026'.",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Places the field's evergreen docs framework or maintainer guides outside the weekly budget as a one-time read, not as a weekly line item.",
+        "evidence": "Di\u00e1taxis appears under '## Monthly \u2014 evergreen, sits outside the weekly budget' with 'Why: The tutorial/how-to/reference/explanation split your own docs get measured against \u2014 read once, reopen only when restructuring'.",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "States the efficiency ordering explicitly rather than implying it by row order.",
+        "evidence": "'## Weekly core \u2014 24 of 25 min. Ordered by value per attention-minute, highest first.'",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Does not rank a five-minute newsletter first merely because it is the cheapest option available.",
+        "evidence": "The first-ranked item, The New Stack, costs 10 minutes \u2014 more expensive than the 7-minute EveryDeveloper and DRF entries ranked below it \u2014 so the top slot was not given to the cheapest option.",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Totals the estimated weekly minutes against the 25-minute budget.",
+        "evidence": "'## Totals\\n\\n- Weekly minutes: 24 of 25 (96%).'",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Attaches a what-they're-selling flag, a status and a date to every entry.",
+        "evidence": "The weekly core table has Selling/Status columns for every row, but the Monthly table drops the Selling column entirely \u2014 e.g. Di\u00e1taxis has only 'Why' and 'Status: evergreen, undated' with no selling flag, and 'DeveloperRelations.com guides' likewise has no selling info, so not every entry carries all three attributes.",
+        "passed": false,
+        "graded": true
+      }
+    ]
+  },
+  "without_skill": {
+    "expectations": [
+      {
+        "text": "Adds a budget compressor first, because the budget sits under roughly 60 minutes a week.",
+        "evidence": "The compressor-like item (DevRel Weekly) appears only at the very end of the document as an answer to a specific question, not first.",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "Defines the compressor as one daily developer-news site or weekly roundup that substitutes for following several vendor blogs individually, and names a specific one.",
+        "evidence": "'DevRel Weekly...a link roundup of DevRel articles curated by Matthew Revell...skimmable in 2-3 minutes, no audio/video, no long reads required.'",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Answers the DevRel Weekly question directly: the newsletter changed format and should be listed as sporadic or occasional, not weekly.",
+        "evidence": "'I can't confirm from here whether it's still actively publishing right now in September 2026' is a generic uncertainty hedge, not a direct answer that the format changed to sporadic.",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "Attributes that change to the curator's own announced wind-down of the weekly cadence, explicitly not to the site being dead or to an infrastructure failure.",
+        "evidence": "No wind-down announcement or cause is discussed anywhere in the transcript.",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "Deletes every audio source outright and names the deletion with the constraint that caused it.",
+        "evidence": "No audio source is discussed or explicitly dropped with a named constraint anywhere in the transcript.",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "Stops when the 25-minute budget is spent, even though strong sources remain unlisted.",
+        "evidence": "'2 min...15 min...5 min...3 min' sums to 25, followed by 'That's it. That's the whole program.'",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Names 2-3 bench substitutes and defines the bench as verified sources the budget could not fit.",
+        "evidence": "No bench section or alternate substitute sources are listed anywhere in the transcript.",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "Carries at least one verified-active source for enablement and at least one for community.",
+        "evidence": "No source in the transcript carries an explicit verified-active status; DevRel Weekly's own status is stated as unconfirmed.",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "Places the field's evergreen docs framework or maintainer guides outside the weekly budget as a one-time read, not as a weekly line item.",
+        "evidence": "No docs framework or maintainer guides (e.g. Diataxis) are mentioned anywhere in the transcript.",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "States the efficiency ordering explicitly rather than implying it by row order.",
+        "evidence": "The four weekly steps are presented as a triage workflow, with no explicit statement that they are ordered by attention-minute value.",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "Does not rank a five-minute newsletter first merely because it is the cheapest option available.",
+        "evidence": "DevRel Weekly is discussed last, as a separate answer to a specific question, not ranked first in the main weekly plan.",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Totals the estimated weekly minutes against the 25-minute budget.",
+        "evidence": "'1...(2 min)...2...(15 min)...3...(5 min)...4...(3 min)' sums to exactly the stated '25 min' weekly block.",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Attaches a what-they're-selling flag, a status and a date to every entry.",
+        "evidence": "DevRel Weekly is described by curator and format only, with no selling flag, status, or date field attached.",
+        "passed": false,
+        "graded": true
+      }
+    ]
+  }
+}

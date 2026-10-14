@@ -1,0 +1,166 @@
+{
+  "with_skill": {
+    "expectations": [
+      {
+        "text": "Classifies devrelx.com as dead or resold and instructs the user never to link it, because the destination is an unrelated business even though the URL resolves.",
+        "evidence": "Row 1: 'Loads fine, but it's a brewing company' \u2192 '\u274c Bin \u2014 dead' \u2014 'Confirmed resold. It now points to showmebrewing.com, an unrelated business. Nothing to salvage here... Delete outright, don't bookmark the new site by accident.'",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "States explicitly that a resolving URL is not evidence the entity behind it is intact, and that the destination's content must be confirmed rather than only that the URL loads.",
+        "evidence": "Row 1 shows the URL 'Loads fine' yet is verdict 'dead' because it 'points to showmebrewing.com, an unrelated business' \u2014 resolving is explicitly treated as insufficient; content mismatch is what drives the 'dead' call.",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Classifies Karl Hughes as unverified rather than inactive, on the ground that a parked personal domain is evidence about the domain, not about the person.",
+        "evidence": "The transcript states 'He runs Draft.dev, which was confirmed actively publishing in 2026 (a Common Room acquisition breakdown among recent posts, 3,000+ newsletter subscribers claimed)' \u2014 this is presented as confirmed/active, not as an 'unverified' status; the opening text also explicitly rejects the unverified framing ('the verdicts below are solid, not guesses').",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "Points at the person's company surface, draft.dev, as where to track him instead of the parked personal domain.",
+        "evidence": "Row 2: '**Swap your bookmark to `draft.dev/learn`.**'",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Treats the devrelfoundation.org DNS failure as evidence about the guessed domain, not about the organisation.",
+        "evidence": "Row 3: 'That domain was always a guess, never the real one \u2014 hence NXDOMAIN, not evidence the org died.'",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Identifies the Developer Relations Foundation as alive at dev-rel.org and hosted by the Linux Foundation.",
+        "evidence": "Row 3: 'The actual Developer Relations Foundation is alive at **`dev-rel.org`**, hosted by the Linux Foundation, with a governance repo commit (28 Aug 2026)...'",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Describes finding an organisation through its code-host organisation page - its declared website field, its repositories sorted by last push, and its repository descriptions - instead of guessing another domain.",
+        "evidence": "No mention of a code-host organisation page, a declared website field, repositories sorted by last push, or repository descriptions anywhere in the transcript; only a single undescribed 'governance repo commit (28 Aug 2026)' data point is cited.",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "Classifies the DeveloperWeek 403 as unverified and explicitly not dead, recording the bot-block as the reason.",
+        "evidence": "Row 4: '\u26a0\ufe0f **Keep, unresolved \u2014 don't bin yet**' \u2014 'A 403 is a bot/WAF block, never proof of death... Don't delete on this signal alone.'",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Classifies the Scaling DevTools 403 as unverified for the homepage while naming the podcast feed as the surface that does carry dates.",
+        "evidence": "Row 5: 'the marketing homepage 403s every automated fetcher, but the podcast is alive. Check the **feed** instead of the site: `feeds.transistor.fm/scaling-devtools` \u2014 last confirmed at Episode 197 (20 Aug 2026)...'",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "States that podcast feeds beat marketing homepages for establishing dates.",
+        "evidence": "Row 5: 'Check the feed instead of the site... last confirmed at Episode 197 (20 Aug 2026), Jack Bridger still hosting. Never judge this one by its homepage again.'",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Reports none of the five as verified-active without a dated item actually observed.",
+        "evidence": "Row 2 reports Karl Hughes/Draft.dev as 'confirmed actively publishing in 2026' citing only 'a Common Room acquisition breakdown among recent posts, 3,000+ newsletter subscribers claimed' \u2014 no actual date is given, unlike rows 3 and 5 which cite specific dates (28 Aug 2026; Episode 197, 20 Aug 2026).",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "Assigns each of the five an explicit verdict from the active / stale / dead / unverified classification rather than a narrative judgement.",
+        "evidence": "Verdicts used are narrative/action phrases \u2014 'Bin \u2014 dead', 'Keep the person, bin the URL', 'Keep the org, bin the URL', 'Keep, unresolved \u2014 don't bin yet', 'Keep \u2014 wrong surface, not a dead show' \u2014 not a fixed active/stale/dead/unverified taxonomy.",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "Records a reason alongside every unverified verdict.",
+        "evidence": "Row 4's unresolved verdict is paired with 'A 403 is a bot/WAF block, never proof of death \u2014 that's true even hitting it from a real browser: could be a CDN/WAF rule, a temporary block, or geo/IP reputation...'",
+        "passed": true,
+        "graded": true
+      }
+    ]
+  },
+  "without_skill": {
+    "expectations": [
+      {
+        "text": "Classifies devrelx.com as dead or resold and instructs the user never to link it, because the destination is an unrelated business even though the URL resolves.",
+        "evidence": "'devrelx.com | Loads, but it's a brewery | \ud83d\udd34 Bin | Classic expired-domain-recycled pattern...Nothing to salvage at that URL.'",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "States explicitly that a resolving URL is not evidence the entity behind it is intact, and that the destination's content must be confirmed rather than only that the URL loads.",
+        "evidence": "'an unrelated buyer picked up the domain after it lapsed. Nothing to salvage at that URL' shows the resolving URL's content, not just its loading, was checked and found unrelated.",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Classifies Karl Hughes as unverified rather than inactive, on the ground that a parked personal domain is evidence about the domain, not about the person.",
+        "evidence": "'Karl Hughes is a real, still-active voice in DevRel/technical content marketing...A parked personal domain usually means he consolidated elsewhere, not that he stopped writing.'",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Points at the person's company surface, draft.dev, as where to track him instead of the parked personal domain.",
+        "evidence": "'Before dropping him entirely, check **draft.dev** and his current LinkedIn/newsletter.'",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Treats the devrelfoundation.org DNS failure as evidence about the guessed domain, not about the organisation.",
+        "evidence": "'DNS not resolving means nobody's even paying for the domain anymore...No recovery path' bins the source outright without considering the organisation might exist under a different domain.",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "Identifies the Developer Relations Foundation as alive at dev-rel.org and hosted by the Linux Foundation.",
+        "evidence": "No mention of dev-rel.org or the Linux Foundation anywhere in the transcript.",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "Describes finding an organisation through its code-host organisation page - its declared website field, its repositories sorted by last push, and its repository descriptions - instead of guessing another domain.",
+        "evidence": "No such method is described; the transcript only discusses DNS/parked-page/403 reasoning.",
+        "passed": false,
+        "graded": true
+      },
+      {
+        "text": "Classifies the DeveloperWeek 403 as unverified and explicitly not dead, recording the bot-block as the reason.",
+        "evidence": "'developerweek.com | 403 | \ud83d\udfe2 Keep, pending a manual recheck |...a bare 403...is far more consistent with Cloudflare/WAF bot-blocking than with the whole conference having shut down.'",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Classifies the Scaling DevTools 403 as unverified for the homepage while naming the podcast feed as the surface that does carry dates.",
+        "evidence": "'Check Spotify/Apple Podcasts/YouTube directly for recent episode dates \u2014 those platforms aren't behind the same bot-wall and will give you a real activity signal in under a minute.'",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "States that podcast feeds beat marketing homepages for establishing dates.",
+        "evidence": "'a 403 tells you the site blocked this specific request, not that the show is dead. Check Spotify/Apple Podcasts/YouTube directly for recent episode dates...same intel, less time' effectively states podcast platforms are the better date source than the blocked homepage.",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Reports none of the five as verified-active without a dated item actually observed.",
+        "evidence": "All five get 'Bin', 'Keep, pending a manual recheck', or 'Keep provisionally, verify elsewhere' verdicts \u2014 none are declared confirmed active.",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Assigns each of the five an explicit verdict from the active / stale / dead / unverified classification rather than a narrative judgement.",
+        "evidence": "The table assigns each source an explicit color-coded verdict (\ud83d\udd34 Bin, \ud83d\udfe2 Keep pending recheck, \ud83d\udfe1 Keep provisionally) rather than free-form narrative only.",
+        "passed": true,
+        "graded": true
+      },
+      {
+        "text": "Records a reason alongside every unverified verdict.",
+        "evidence": "'a bare 403 from an automated fetch is far more consistent with Cloudflare/WAF bot-blocking...Don't bin on this signal alone' and 'Same logic: a 403 tells you the site blocked this specific request, not that the show is dead.'",
+        "passed": true,
+        "graded": true
+      }
+    ]
+  }
+}
