@@ -13,7 +13,7 @@ Read this before routing any task that could plausibly match two skills. Every d
 
 ## Boundary forks
 
-### Docs authoring - four skills, four jobs
+### Docs authoring - five skills, five jobs
 
 Ask what the reader is trying to do, not what the page will be called.
 
@@ -21,12 +21,12 @@ Ask what the reader is trying to do, not what the page will be called.
 | ---------------------------------------------------------- | ------------------------------------------------------------------ | ------------------------------------------------------------------ |
 | Has never run the thing; needs one verified success fast   | `samber/developer-relations-skills@developer-quickstart-guide`     | `samber/developer-relations-skills@developer-tutorial`             |
 | Wants to learn a concept by building something             | `samber/developer-relations-skills@developer-tutorial`             | `samber/developer-relations-skills@developer-quickstart-guide`     |
-| Already competent; needs one specific task done            | no skill - see Coverage gaps                                       | either of the above                                                |
+| Already competent; needs one specific task done            | `samber/developer-relations-skills@developer-how-to-guide`         | `samber/developer-relations-skills@developer-tutorial`             |
 | Landed on the repository and is deciding whether to bother | `samber/developer-relations-skills@readme-optimization`            | `samber/developer-relations-skills@developer-quickstart-guide`     |
 | Pasted an error string into a search box                   | `samber/developer-relations-skills@developer-troubleshooting-docs` | `samber/developer-relations-skills@developer-docs-structure-audit` |
 | A coding agent, not a human, reading unattended            | `samber/developer-relations-skills@coding-agent-docs-optimization` | `samber/developer-relations-skills@developer-docs-structure-audit` |
 
-Conflating a tutorial with a how-to guide fails both readers: the learner gets an unexplained recipe, the working developer gets a lecture. When the task is a how-to guide, say the collection has no skill for it rather than routing to the nearest neighbour.
+Conflating a tutorial with a how-to guide fails both readers: the learner gets an unexplained recipe, the working developer gets a lecture. Route a how-to guide to `samber/developer-relations-skills@developer-how-to-guide`, never to the nearest neighbour. A breaking-change upgrade is a how-to with its own ordering rules and stays with `samber/developer-relations-skills@version-migration-guide`.
 
 `samber/developer-relations-skills@developer-docs-structure-audit` operates on the whole docs set, never on one page. When the user asks "where should this page live", that is a structure question. When they ask "how do I write this page", route by reader state above.
 
@@ -148,7 +148,7 @@ Offer a chain only when the task genuinely decomposes. Every chain below is in d
 
 - **First DevRel hire, nothing exists:** `samber/developer-relations-skills@developer-segmentation` → `samber/developer-relations-skills@devrel-strategy` → `samber/developer-relations-skills@devrel-metrics` → `samber/developer-relations-skills@devrel-content-calendar`.
 - **Open-sourcing a project:** `samber/developer-relations-skills@oss-license-strategy` → `samber/developer-relations-skills@readme-optimization` → `samber/developer-relations-skills@oss-contributor-onboarding` → `samber/developer-relations-skills@oss-launch` → `samber/developer-relations-skills@oss-distribution-strategy`.
-- **Docs overhaul:** `samber/developer-relations-skills@developer-docs-structure-audit` → `samber/developer-relations-skills@developer-quickstart-guide` → `samber/developer-relations-skills@docs-code-sample-standards` → `samber/developer-relations-skills@docs-seo`.
+- **Docs overhaul:** `samber/developer-relations-skills@developer-docs-structure-audit` → `samber/developer-relations-skills@developer-quickstart-guide` → `samber/developer-relations-skills@developer-how-to-guide` → `samber/developer-relations-skills@docs-code-sample-standards` → `samber/developer-relations-skills@docs-seo`.
 - **Major version release:** `samber/developer-relations-skills@version-migration-guide` → `samber/developer-relations-skills@changelog-writing` → `samber/developer-relations-skills@engineering-blog-post`.
 - **Conference season:** `samber/developer-relations-skills@conference-cfp-submission` → `samber/developer-relations-skills@tech-talk-outline` → `samber/developer-relations-skills@developer-live-demo-design`.
 - **Community from zero:** `samber/developer-relations-skills@developer-community-launch` → `samber/developer-relations-skills@developer-community-moderation` → `samber/developer-relations-skills@developer-community-health` → `samber/developer-relations-skills@developer-champions`.
@@ -161,7 +161,7 @@ Each link hands the next one a named artifact. If you cannot say what gets hande
 
 State these plainly as gaps. Do not route to a neighbour.
 
-- Task-oriented how-to guides, and API reference completeness.
+- API reference completeness.
 - The versioning and deprecation policy itself (as opposed to documenting one migration).
 - The exec-facing DevRel report narrative and budget defense.
 - Monetizing one open-source project, and maintainer burnout as a subject of its own. Succession and bus-factor planning are _not_ a gap - `samber/developer-relations-skills@oss-governance` owns them (contributor absence factor, trust ladder, inactivity rule, emeritus).

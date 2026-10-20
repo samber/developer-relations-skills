@@ -9,7 +9,7 @@ metadata:
 
 # Developer Relations Kickoff
 
-You are the router for the 55-skill developer-relations-skills collection. Route the current DevRel task to exactly one sibling skill - or say plainly that none fits - and leave the next session warm instead of cold. Never perform a sibling's job yourself; everything else in this file serves the routing.
+You are the router for the 56-skill developer-relations-skills collection. Route the current DevRel task to exactly one sibling skill - or say plainly that none fits - and leave the next session warm instead of cold. Never perform a sibling's job yourself; everything else in this file serves the routing.
 
 Run this skill at every project start, even when the collection's skills are already in daily use elsewhere - a new project is a new context. On later sessions of the same project, re-run it to resummarize and re-route, never to re-interview.
 
@@ -83,6 +83,7 @@ These tables are deliberately unranked, and must stay that way - inside a block 
 | `samber/developer-relations-skills@readme-optimization`            | One repository's README - first impression, bail-fast funnel, badge pruning                    |
 | `samber/developer-relations-skills@developer-quickstart-guide`     | Zero to one verified success - minimal path, copy-paste commands, expected output              |
 | `samber/developer-relations-skills@developer-tutorial`             | A teaching tutorial - one concept per step, checkpoints, a demonstrable skill at the end       |
+| `samber/developer-relations-skills@developer-how-to-guide`         | A how-to guide - one real task for a competent reader, variants, guarded risky steps, verification |
 | `samber/developer-relations-skills@developer-docs-structure-audit` | The docs set's information architecture - Diátaxis classification, misplacement, coverage gaps |
 | `samber/developer-relations-skills@docs-code-sample-standards`     | Sample policy and a corpus audit - runnability, testing, language parity, copy-paste safety    |
 | `samber/developer-relations-skills@developer-troubleshooting-docs` | Error-reference and troubleshooting pages built from tickets, issues and telemetry             |
@@ -153,7 +154,7 @@ These tables are deliberately unranked, and must stay that way - inside a block 
 
 Disambiguate before routing wherever clusters collide on keywords:
 
-- **Docs authoring** - four skills that all look like "write a getting-started page"
+- **Docs authoring** - five skills that all look like "write a getting-started page"
 - **Release communication** - changelog vs migration guide
 - **Measurement** - metrics vs analytics vs community health
 - **OSS visibility** - launch vs distribution vs build-in-public
@@ -167,7 +168,7 @@ Disambiguate strictly from each skill's declared scope - never from a guess abou
 
 Name the gap explicitly when the task needs something no skill covers. Collection v1 has no skill for:
 
-- task-oriented how-to guides (as distinct from tutorials and quickstarts), or API reference completeness
+- API reference completeness
 - the versioning and deprecation policy itself, as opposed to documenting one migration
 - hiring or interviewing DevRel staff - the role definitions and the interview loop, not the engineering employer brand, which `samber/developer-relations-skills@tech-employer-branding` covers - or the exec-facing DevRel report
 - monetizing one open-source project, or maintainer burnout as a subject of its own - succession and bus-factor planning belong to `oss-governance`, which also owns who holds the trademark, domains and registry accounts; only a third-party trademark _usage and enforcement_ policy is uncovered
@@ -198,12 +199,12 @@ Deliver the routing result in this shape, every time:
 
 ### Ordering the short-list
 
-The user's question at that moment is never "which of these 55 exists" but "which one do I run first, and is it worth the session". Only a ratio answers that. Default class order, highest value per unit of effort first:
+The user's question at that moment is never "which of these 56 exists" but "which one do I run first, and is it worth the session". Only a ratio answers that. Default class order, highest value per unit of effort first:
 
 1. **Diagnosis** - `developer-journey-map`, `developer-docs-structure-audit`, `devrel-competitor-analysis`, `developer-keyword-research`. Buys a named, evidenced answer to which class below is actually the problem, instead of a hunch. Costs one session over docs and signals already available; needs no engineering time and publishes nothing.
 2. **First-run surfaces** - `readme-optimization`, `developer-quickstart-guide`, `oss-contributor-onboarding`, `github-profile-optimization`, `docs-code-sample-standards`. Buys the bail-fast funnel for every developer who arrives after it ships: fewer abandonments between landing and first successful call. Costs an editing session plus one merged pull request, and it is reversible by another commit.
 3. **Release and support cadence** - `changelog-writing`, `version-migration-guide`, `developer-troubleshooting-docs`, `oss-issue-triage`. Buys users who can upgrade and self-serve their own errors instead of opening an issue. Costs a pass per release and a maintainer answering what the triage surfaces - it never finishes; it is a standing job, not a fix.
-4. **Content and visibility** - `engineering-blog-post`, `developer-tutorial`, `technical-video-script`, `developer-case-study`, `docs-seo`, `devrel-content-calendar`, `build-in-public`, `oss-launch`, `oss-distribution-strategy`, `tech-press-relations`, `tech-podcast-interview-prep`. Buys reach that compounds - a post or a registry listing keeps earning for years. Costs a full production cycle per artefact plus review, and the payoff arrives a quarter after the work, not the week of it.
+4. **Content and visibility** - `engineering-blog-post`, `developer-tutorial`, `developer-how-to-guide`, `technical-video-script`, `developer-case-study`, `docs-seo`, `devrel-content-calendar`, `build-in-public`, `oss-launch`, `oss-distribution-strategy`, `tech-press-relations`, `tech-podcast-interview-prep`. Buys reach that compounds - a post or a registry listing keeps earning for years. Costs a full production cycle per artefact plus review, and the payoff arrives a quarter after the work, not the week of it.
 5. **Community and events** - `developer-community-launch`, `developer-community-moderation`, `developer-champions`, `developer-community-health`, `developer-meetup-program`, `developer-event-sponsorship`, `conference-cfp-submission`, `tech-talk-outline`, `developer-live-demo-design`, `oss-sponsors-fundraising`, `oss-sponsors-brand-strategy`. Buys the relationships nothing else in the collection produces. Costs the longest lead time here - a calendar someone else controls, a standing moderation duty, and months between opening a space and it being worth reading.
 6. **Program and company foundations** - `devrel-strategy`, `developer-segmentation`, `devrel-metrics`, `devrel-analytics`, `devrel-budget-allocation`, `devrel-team-structure`, `developer-education-strategy`, `devtools-business-model`, `devtools-pricing-strategy`, `developer-first-gtm`, `open-source-company-strategy`, `developer-ecosystem-strategy`, `open-standards-strategy`, `oss-governance`, `oss-license-strategy`, `tech-employer-branding`. Buys the rule every later session is decided against: what the program is judged on, who may merge, what the company gives away. Costs sign-off outside DevRel - engineering, legal, exec - and most of it is reversible only by another negotiation.
 
@@ -345,7 +346,7 @@ If the harness has no scheduled routines, fall back to one recurring calendar re
 ## 9. Failure modes
 
 - **Forcing a match.** Stretching the nearest skill onto a task it doesn't cover wastes a session and hides the gap. Say "none fits" and name the gap.
-- **Routing every docs question to the same skill.** Quickstart, tutorial, how-to and reference are four different jobs - and the collection has no how-to skill at all. Check § Docs-authoring fork in the routing reference first.
+- **Routing every docs question to the same skill.** Quickstart, tutorial, how-to and reference are four different jobs, and the collection has no reference skill. Check § Docs-authoring fork in the routing reference first.
 - **Force-fitting platform or event-production tasks.** API design, webhooks, SDK strategy and marketplace operations belong to `samber/developer-platform-skills`; organizing your own conference belongs to `samber/dev-event-organizer-skills`. Recommend the sibling collection instead.
 - **Re-interviewing on a warm start.** The artifact exists precisely so questions aren't repeated. Ask only the session goal.
 - **Routing from a guessed scope.** Route only from the declared scopes in the routing reference; a plausible guess misroutes confidently.

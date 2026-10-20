@@ -239,7 +239,7 @@ Agree on a review cadence and final-authority rule with the team instead of assu
 | Error output shown with no fix path                       | Add a one-line fail branch per documented error                       |
 | Environment setup swells the page                         | Split it into its own page, linked from step 1                        |
 | Quickstart still works only on the author's machine       | Cold run per the pass threshold; automate it in CI                    |
-| Page grew past the budget over time                       | Re-cut scope to one success moment; split the rest into how-to guides |
+| Page grew past the budget over time                       | Re-cut scope to one success moment; split the rest into how-to guides (samber/developer-relations-skills@developer-how-to-guide) |
 | Named vendor tools listed as required tooling             | Describe the capability, not the vendor; the page outlives the tool   |
 | Language tabs added, only one tab ever verified           | Cold-run every tab; each is its own quickstart sharing a layout       |
 
@@ -274,7 +274,7 @@ Watch for the first example silently requiring a paid feature.
 - samber/developer-relations-skills@coding-agent-docs-optimization when the consumer is an agent, not a human.
 - samber/developer-relations-skills@developer-troubleshooting-docs for the error pages the fail branches link to.
 - samber/developer-relations-skills@developer-journey-map for the stage this guide's first-success rate feeds.
-- samber/developer-relations-skills@developer-education-strategy for structured learning beyond a single quickstart's scope.
+- samber/developer-relations-skills@developer-how-to-guide for the task pages a reader needs once the first success lands.
 
 Named sources behind this skill:
 

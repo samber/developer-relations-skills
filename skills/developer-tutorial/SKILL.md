@@ -23,7 +23,7 @@ Every number in this skill is one of two kinds, classified in `references/publis
 Confirm the task is really a tutorial before starting. Route elsewhere when:
 
 - The goal is one fast proof that the product works, with no skill transfer → quickstart skill.
-- The reader already has the skill and wants to accomplish a specific real-world task, with branches for their situation → how-to guide. Say so out loud instead of absorbing the request. Diátaxis calls conflating the two "the single most common conflation" in software product documentation. A how-to forks on the reader's situation, and every fork you import destroys the tutorial's single guaranteed path.
+- The reader already has the skill and wants to accomplish a specific real-world task, with branches for their situation → how-to guide skill. Say so out loud instead of absorbing the request. Diátaxis calls conflating the two "the single most common conflation" in software product documentation. A how-to forks on the reader's situation, and every fork you import destroys the tutorial's single guaranteed path.
 - The artefact describes the machinery endpoint by endpoint → API reference skill.
 - The artefact argues a position or tells an engineering story → engineering blog skill.
 - The artefact is spoken and recorded → video script skill.
@@ -262,4 +262,4 @@ Identify which of three shapes you were given before answering. The wrong delive
 - See samber/developer-relations-skills@developer-docs-structure-audit for where a tutorial belongs among how-to, reference and explanation.
 - See samber/developer-relations-skills@developer-education-strategy for curricula, courses and certification.
 - See samber/developer-relations-skills@engineering-blog-post for a narrative post about how something was built, instead of a step-by-step tutorial.
-- See samber/developer-relations-skills@devrel-content-calendar for scheduling this tutorial's publish date alongside other content.
+- See samber/developer-relations-skills@developer-how-to-guide for the goal-oriented how-to a competent reader needs, instead of a tutorial.
