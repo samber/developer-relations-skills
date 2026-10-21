@@ -227,3 +227,4 @@ This was measured on instructional video, where viewers can skip. A seated room 
 - samber/developer-relations-skills@conference-cfp-submission for writing the abstract this skill starts from
 - samber/developer-relations-skills@developer-live-demo-design for making the placed demo failure-resistant
 - samber/developer-relations-skills@technical-video-script for turning the recorded talk into a scripted video
+- samber/dev-event-organizer-skills@event-speaker-coaching for the organizer's side: the dry runs and feedback an event offers accepted speakers
