@@ -273,3 +273,4 @@ Company evaluation lands on limits, security, compliance, self-hosting and migra
 ## References
 
 - samber/developer-platform-skills@api-reference-quality for the content quality of an API reference tree once this skill has made it indexable
+- samber/developer-relations-skills@docs-localization-strategy for whether a locale should exist at all, which pages it translates, and when a stale translation is retired

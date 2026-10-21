@@ -90,6 +90,7 @@ These tables are deliberately unranked, and must stay that way - inside a block 
 | `samber/developer-relations-skills@changelog-writing`              | Release notes for one release, from commits and pull requests                                  |
 | `samber/developer-relations-skills@version-migration-guide`        | The breaking-change migration guide - blast radius, detection signals, before/after, timeline  |
 | `samber/developer-relations-skills@coding-agent-docs-optimization` | Make docs machine-readable so a coding agent can integrate unattended                          |
+| `samber/developer-relations-skills@docs-localization-strategy`     | Whether and how to translate the docs - locale evidence, page set, drift pins, locale ownership |
 
 **Search demand for technical content:**
 

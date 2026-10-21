@@ -32,6 +32,8 @@ Conflating a tutorial with a how-to guide fails both readers: the learner gets a
 
 `samber/developer-relations-skills@docs-code-sample-standards` owns the policy every sample obeys and the audit of an existing corpus. A single snippet inside one page being written belongs to whichever authoring skill owns that page.
 
+`samber/developer-relations-skills@docs-localization-strategy` decides whether a language gets translated docs, which pages, and how translations stay current. Translating one file on request needs no skill. hreflang, canonicals and indexing of translated pages stay with `samber/developer-relations-skills@docs-seo`.
+
 ### Release communication - changelog vs migration guide
 
 - `samber/developer-relations-skills@changelog-writing` - one release, everything that shipped, one line of action per breaking entry.
