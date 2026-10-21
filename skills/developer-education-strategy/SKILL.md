@@ -1,10 +1,10 @@
 ---
 name: developer-education-strategy
-description: Decides whether and how to invest in structured developer education, such as learning paths, a developer academy, hands-on labs, badges or a full certification program - instead of more ad-hoc content, then designs its operating model, staffing, refresh cadence, measurement and kill rules. Use whenever someone mentions a developer academy, certification, a developer curriculum, training for developers, learning paths, skill badges or credentials, "should we certify our users", partner or SI enablement training, or scaling developer onboarding beyond docs - even if they only say "we need more training content". Covers B2B, partner and bottom-up motions. Never writes the courses themselves. Use samber/developer-relations-skills@developer-tutorial for a lesson.
+description: Decides whether and how to invest in structured developer education, such as learning paths, a developer academy, hands-on labs, or a badge or certification rung on top - instead of more ad-hoc content, then designs its operating model, staffing, refresh cadence, measurement and kill rules. Use whenever someone mentions a developer academy, a developer curriculum, training for developers, learning paths, partner or SI enablement training, or scaling developer onboarding beyond docs - even if they only say "we need more training content". Covers B2B, partner and bottom-up motions. Never writes courses - use samber/developer-relations-skills@developer-tutorial. Do NOT use for designing the credential itself - use samber/developer-relations-skills@developer-certification-program.
 license: MIT
 metadata:
   author: Samuel Berthe
-  version: "1.0.1"
+  version: "1.1.0"
 ---
 
 # Developer Education Strategy
@@ -192,7 +192,7 @@ Match rigor to consequence:
 - **Skill badge** - proves one assessed task. Needs a graded lab and a defensible threshold for that task only.
 - **Certification** - proves role competence. Needs a job task analysis, a standard-setting study for the cut score, item security, an appeals path and a funded recertification cycle, forever.
 
-Read [./references/certification-program-design.md](./references/certification-program-design.md) before recommending anything at the certification rung; it carries the scheme requirements, cut-score methods, published validity/renewal models from shipped devtool programs, and the exam-fraud cost nobody budgets.
+Hand the design of any badge or certification you recommend to `samber/developer-relations-skills@developer-certification-program`. Read [./references/certification-program-design.md](./references/certification-program-design.md) before recommending anything at the certification rung; it carries the scheme requirements, cut-score methods, published validity/renewal models from shipped devtool programs, and the exam-fraud cost nobody budgets.
 
 ## Operating model
 

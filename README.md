@@ -107,6 +107,7 @@ This collection covers the full developer-relations surface.
 - [`developer-journey-map`](./skills/developer-journey-map): Maps one segment's journey from discovery to advocacy, each stage carrying an exit event, an owner and a signal, then names the single leak worth fixing next.
 - [`devrel-budget-allocation`](./skills/devrel-budget-allocation): Splits a DevRel budget into line items that each carry a cost, a return threshold, a review date and a reallocation rule, plus a ranked cut list.
 - [`developer-education-strategy`](./skills/developer-education-strategy): Decides whether to invest in structured developer education (learning paths, labs, certification), then designs its operating model, staffing, refresh cadence and kill rules.
+- [`developer-certification-program`](./skills/developer-certification-program): Plans a developer certification or badge program: whether a credential is worth issuing, its tier, exam format, proctoring, renewal, fees, verification and retirement.
 
 ### Measurement
 
