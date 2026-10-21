@@ -117,6 +117,7 @@ Three related, narrower skills: `samber/developer-relations-skills@devtools-pric
 - `samber/developer-relations-skills@conference-cfp-submission`, `samber/developer-relations-skills@tech-talk-outline`, `samber/developer-relations-skills@developer-live-demo-design` - you are on someone else's stage.
 - `samber/developer-relations-skills@developer-event-sponsorship` - you are paying to appear at someone else's event.
 - `samber/developer-relations-skills@developer-meetup-program` - you run a small recurring local group yourself: format, cadence, speaker pipeline, venue sponsor, health.
+- `samber/developer-relations-skills@devrel-webinar-program` - you run a recurring online technical webinar series yourself: format mix, seasons, topic backlog, speakers, replay, and the lead-handoff contract with sales. A Q&A-only series goes to the office-hours skill instead; one-off production mechanics go to `samber/dev-event-organizer-skills`.
 
 Ask who owns the event before routing. A conference or hackathon you organize is not `samber/developer-relations-skills@developer-meetup-program` - that is organizer work and belongs to `samber/dev-event-organizer-skills` (see below).
 

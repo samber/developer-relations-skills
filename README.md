@@ -161,6 +161,7 @@ This collection covers the full developer-relations surface.
 - [`tech-talk-outline`](./skills/tech-talk-outline): Turns an accepted abstract into a rehearsable outline: the one-sentence takeaway, a narrative arc, a minute-by-minute time budget, demo placement, and a slide skeleton.
 - [`developer-live-demo-design`](./skills/developer-live-demo-design): Engineers a technical demo so it survives the stage: risk triage, enterable checkpoints, a one-command reset, offline mode, and a recorded fallback, shipped as a runbook.
 - [`developer-event-sponsorship`](./skills/developer-event-sponsorship): Builds a developer-event sponsorship plan: which events to sponsor at which tier, the on-site activation, and how to prove the money worked.
+- [`devrel-webinar-program`](./skills/devrel-webinar-program): Designs a recurring technical webinar series for developers: the series' one job, ranked formats, seasons sized to speaker capacity, attendance diagnosis, a replay plan, and a consent-bounded handoff contract with sales.
 
 ### Open source
 

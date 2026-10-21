@@ -32,6 +32,7 @@ Scope is the standing program. Siblings cover adjacent jobs:
 - Code of conduct and enforcement: samber/developer-relations-skills@developer-community-moderation
 - Onboarding code contributors: samber/developer-relations-skills@oss-contributor-onboarding
 - Producing a one-off virtual event: samber/dev-event-organizer-skills@virtual-event-production
+- A recurring webinar series mixing demos, labs and talks, with a sales handoff: samber/developer-relations-skills@devrel-webinar-program
 
 Typical invocations:
 

@@ -124,6 +124,7 @@ These tables are deliberately unranked, and must stay that way - inside a block 
 | `samber/developer-relations-skills@tech-talk-outline`           | Turn an accepted abstract into a rehearsable outline and slide skeleton                 |
 | `samber/developer-relations-skills@developer-live-demo-design`  | Make a demo survive the stage - fidelity tier, checkpoints, fallbacks, runbook          |
 | `samber/developer-relations-skills@developer-meetup-program`    | Run a recurring meetup or user group - format, cadence, speakers, venue sponsor, health |
+| `samber/developer-relations-skills@devrel-webinar-program`      | Run a recurring online webinar series - formats, seasons, replay, sales handoff contract |
 | `samber/developer-relations-skills@developer-event-sponsorship` | Buy sponsorship - which events, which tier, which activation, what ROI proof            |
 
 **Community:**
