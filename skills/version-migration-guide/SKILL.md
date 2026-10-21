@@ -240,5 +240,6 @@ Start hard enforcement (brownouts, forced removal, closing the enterprise escape
 - See [./references/sources.md](./references/sources.md) for the published policies, figures and named methods behind every claim above.
 - samber/developer-relations-skills@developer-tutorial (when the reader must learn the new version's concepts, not just port their code)
 - samber/developer-relations-skills@tech-press-relations (press handling for a major version with breaking changes)
+- samber/developer-relations-skills@oss-release-policy (the deprecation window, support end dates and breaking-change definition this guide applies)
 - samber/developer-relations-skills@developer-docs-structure-audit (where the guide belongs in the docs site)
 - samber/developer-platform-skills@api-versioning-policy (choosing the version scheme, deprecation windows and sunset timelines)

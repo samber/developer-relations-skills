@@ -192,4 +192,5 @@ Then, in order: the internal note to co-responders, the reporter reply, continge
 ## References
 
 - `samber/developer-relations-skills@developer-community-moderation` - when a reporter's conduct turns into harassment.
+- `samber/developer-relations-skills@oss-release-policy` - which release lines are supported, so which ones get the backport and the advisory's patched ranges.
 - `samber/developer-platform-skills@sdk-package-publishing` - registry-side release, yank or retract, deprecation and rollback of a bad version, if that collection is installed.

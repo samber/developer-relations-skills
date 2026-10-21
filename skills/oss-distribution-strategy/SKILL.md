@@ -289,5 +289,6 @@ Per-family traps - self-submitting to curated code-host surfaces, treating a dow
 - [references/published-findings.md](./references/published-findings.md) - the studies and policies behind every sourced claim, and what each does not prove.
 - `samber/developer-relations-skills@readme-optimization` - the repository surface every channel points at.
 - `samber/developer-relations-skills@changelog-writing` - the release notes this channel broadcasts.
+- `samber/developer-relations-skills@oss-release-policy` - the cadence model, version scheme and support windows behind each release this skill broadcasts.
 - `samber/developer-relations-skills@coding-agent-docs-optimization` - execution for family 10 (machine and agent-readable surfaces).
 - `samber/developer-platform-skills@github-presence-playbook` - GitHub-specific execution for family 2 and Step 6: release notifications, Discussions, topics, star policy.
