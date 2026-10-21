@@ -39,6 +39,13 @@ Conflating a tutorial with a how-to guide fails both readers: the learner gets a
 
 A major version usually needs both, in that order. A patch release needs only the first. Neither owns the versioning policy itself - that is a gap (see below).
 
+### Security reports - the routing entry vs the pipeline
+
+- `samber/developer-relations-skills@oss-issue-triage` - keeps security reports out of the public tracker: the chooser entry and the rule that a misfiled report is an emergency.
+- `samber/developer-relations-skills@oss-security-disclosure` - everything behind that entry: SECURITY.md, private reporting, triage and scoring, embargo, CVE and advisory, patched release, downstream notice.
+
+A security fix release still gets its notes from `samber/developer-relations-skills@changelog-writing`, after the advisory is public.
+
 ### Measurement - three skills, three layers
 
 - `samber/developer-relations-skills@devrel-metrics` - which numbers deserve a target, the attribution rule, and what gets cut. The framework layer.
@@ -128,6 +135,7 @@ Ask who is hiring whom.
 - Debugging a live production incident → not `samber/developer-relations-skills@developer-troubleshooting-docs`; that skill writes the page afterwards.
 - Reviewing the product's own source code or error strings → outside the collection.
 - Triaging one specific issue → not `samber/developer-relations-skills@oss-issue-triage`; that skill designs the system.
+- Reporting a vulnerability in someone else's project, or patching CVEs in the user's own dependencies → not `samber/developer-relations-skills@oss-security-disclosure`, which is maintainer-side only; outside the collection.
 - Legal sign-off on a license, CLA, trademark or contract → every relevant skill is a decision framework and says so.
 - Recruiting or interviewing DevRel staff → route to `samber/developer-relations-skills@devrel-hiring`, not `samber/developer-relations-skills@devrel-career` (candidate side only) or `samber/developer-relations-skills@tech-employer-branding` (engineering employer brand, not a role's interview loop).
 - Writing courses or lesson content → `samber/developer-relations-skills@developer-education-strategy` stops at the operating model.

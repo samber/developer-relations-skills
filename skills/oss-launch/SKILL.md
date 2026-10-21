@@ -207,7 +207,7 @@ One kind of comment bypasses the rotation entirely: a security report, or anythi
 4. Patch on a private branch.
 5. Publish the advisory crediting them.
 
-Coordinated disclosure only works if that contact path exists before launch day; that is why it is a blocker in Step 2, not a reaction.
+Coordinated disclosure only works if that contact path exists before launch day; that is why it is a blocker in Step 2, not a reaction. The full pipeline - policy, embargo, identifiers, release order - is samber/developer-relations-skills@oss-security-disclosure.
 
 ## Step 7 - Concentrate velocity, never manufacture it
 
