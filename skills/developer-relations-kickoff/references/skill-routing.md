@@ -74,6 +74,14 @@ A security fix release still gets its notes from `samber/developer-relations-ski
 
 "Adoption flattened after launch" is distribution, not a second launch. "What should I post every week" is build-in-public. `samber/developer-relations-skills@tech-press-relations` handles journalists and embargoes for any of the three; it never owns the announcement post itself.
 
+### Maintainer load - the person vs the project
+
+- `samber/developer-relations-skills@oss-maintainer-sustainability` - the maintainer's own capacity: time budget, published limits, maintenance-only mode, recruiting help, stepping down, handover or archive.
+- `samber/developer-relations-skills@oss-governance` - the project's rules: decision rights, trust ladder, credential inventory, emeritus.
+- `samber/developer-relations-skills@oss-issue-triage` - the queue's system: labels, response targets, staleness policy.
+
+"I'm burned out and want to stop" routes to maintainer sustainability, which hands the ladder to governance and the queue design to triage. "We need a GOVERNANCE.md" never routes there.
+
 ### Sponsorship - who is paying whom
 
 - `samber/developer-relations-skills@oss-sponsors-fundraising` - the maintainer wants money in.
@@ -189,7 +197,7 @@ Each link hands the next one a named artifact. If you cannot say what gets hande
 State these plainly as gaps. Do not route to a neighbour.
 
 - The exec-facing DevRel report narrative and budget defense.
-- Monetizing one open-source project, and maintainer burnout as a subject of its own. Succession and bus-factor planning are _not_ a gap - `samber/developer-relations-skills@oss-governance` owns them (contributor absence factor, trust ladder, inactivity rule, emeritus).
+- Monetizing one open-source project. Maintainer burnout is _not_ a gap - `samber/developer-relations-skills@oss-maintainer-sustainability` owns it - and neither are succession and bus-factor planning - `samber/developer-relations-skills@oss-governance` owns them (contributor absence factor, trust ladder, inactivity rule, emeritus).
 - A trademark _usage and enforcement_ policy aimed at third parties. Who holds the mark, the domains and the registry accounts belongs to `samber/developer-relations-skills@oss-governance`; clearing a name before launch belongs to `samber/developer-relations-skills@oss-launch`.
 - Organizing your own conference or hackathon, conference booth operations, post-event follow-up.
 - Student and campus programs. A developer newsletter is _not_ a gap at programme level - `samber/developer-relations-skills@devrel-newsletter-program` owns it; writing an issue, list growth, inbox placement and selling sponsor slots remain gaps.

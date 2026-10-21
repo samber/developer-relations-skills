@@ -350,3 +350,4 @@ Produce a program brief, presented section by section with agreement on each bef
 - `samber/developer-relations-skills@readme-optimization` for the README real estate the ask competes for.
 - `samber/developer-relations-skills@oss-distribution-strategy` for growing the audience a visibility tier is priced against.
 - `samber/developer-relations-skills@devtools-business-model` for whether sponsorship income can substitute for a revenue model at all.
+- `samber/developer-relations-skills@oss-maintainer-sustainability` for when the real problem is the maintainer's load, which money alone does not cut.
