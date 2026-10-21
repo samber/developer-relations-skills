@@ -111,7 +111,7 @@ Never audit from memory of what good READMEs look like.
    - placeholder text
    - missing content categories
 3. Read the repository around the README: manifests for the real runtime requirements, the licence file, recent commit dates, open-issue volume, and whether the examples it references exist on disk.
-4. If your environment can browse the web, open the project's package-registry page and compare it to the code-host render. Relative links and raw HTML frequently break there, and that page is often the higher-traffic one.
+4. If your environment can browse the web, open the project's package-registry page and compare it to the code-host render. Relative links and raw HTML frequently break there, and that page is often the higher-traffic one. A README missing from the published package itself is a packaging fault: hand it to `samber/developer-platform-skills@sdk-package-publishing`.
 5. If your environment has persistent memory, reuse any stored positioning statement, audience definition, or competitor list for this project instead of re-deriving it.
 
 Optionally add a structural README scorer and the code host's community-standards checklist as a second opinion, treating both as hygiene baselines - see the validity ceiling in [./references/tooling-and-measurement.md](./references/tooling-and-measurement.md). The script reports facts, not judgements: a section count of 25 is a question to answer, not a verdict.

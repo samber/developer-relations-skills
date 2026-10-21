@@ -19,7 +19,7 @@ A stale listing, a two-year-old distro package, a description written before the
 
 - The one-time launch event belongs to `samber/developer-relations-skills@oss-launch`.
 - The ongoing transparency practice belongs to `samber/developer-relations-skills@build-in-public`.
-- Per-registry execution belongs to the playbooks in `samber/developer-platform-skills`.
+- Per-registry publishing execution (credentials, provenance, dist-tags, package shape) belongs to `samber/developer-platform-skills@sdk-package-publishing`.
 
 You decide the mix; they run it.
 
