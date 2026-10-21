@@ -4,7 +4,7 @@ description: Before starting any developer-relations work - and again at the sta
 license: MIT
 metadata:
   author: Samuel Berthe
-  version: "1.0.6"
+  version: "1.0.7"
 ---
 
 # Developer Relations Kickoff
