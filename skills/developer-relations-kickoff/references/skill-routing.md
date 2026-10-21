@@ -218,7 +218,7 @@ Same owner, separate collections. Recommend installing one; never depend on it.
 | SDK portfolio decisions, developer portal design, OAuth for third-party apps                  | `samber/developer-platform-skills`  |
 | Building your own connector marketplace, app review, listing standards, marketplace economics | `samber/developer-platform-skills`  |
 | Which sample repos, reference apps and templates exist, who owns them, when they retire       | `samber/developer-platform-skills@sample-app-strategy` |
-| Publishing SDK packages to a registry, trusted publishing, rolling back a bad version         | `samber/developer-platform-skills@sdk-package-publishing` |
+| Publishing SDK packages or CLI binaries (npm, PyPI, Maven, NuGet, Go, crates.io, pub.dev, RubyGems, Packagist, Hex, SwiftPM, CocoaPods, Homebrew, winget, Scoop), CI auto-publishing, trusted publishing, rolling back a bad version | `samber/developer-platform-skills@sdk-package-publishing` |
 | The public CLI wrapping the API: commands, `--json` and exit codes, CLI login, agent-safe use | `samber/developer-platform-skills@cli-interface-design` |
 | Shipping an Agent Skill (SKILL.md) inside an SDK or CLI repo, versioned with each release     | `samber/developer-platform-skills@agent-skill-offering` |
 | Whether and how to publish the roadmap, commitment wording, voting boards                     | `samber/developer-platform-skills@public-roadmap-strategy` |

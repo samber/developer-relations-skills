@@ -187,7 +187,7 @@ Say "the collection has no skill for this" - never promise a skill exists or inv
 
 Some tasks that land here aren't a true gap - they belong to the same owner's sibling collections:
 
-- Public API surface design, webhooks, the public CLI wrapping the API, an Agent Skill shipped inside an SDK or CLI repo and versioned with its releases, SDK portfolios and package publishing, sample-app portfolios, public roadmaps, developer-portal design, OAuth for third-party apps, and connector-marketplace operations belong to `samber/developer-platform-skills`.
+- Public API surface design, webhooks, the public CLI wrapping the API, an Agent Skill shipped inside an SDK or CLI repo and versioned with its releases, SDK portfolios, package and CLI binary publishing to any registry or channel, sample-app portfolios, public roadmaps, developer-portal design, OAuth for third-party apps, and connector-marketplace operations belong to `samber/developer-platform-skills`.
 - Endpoint-level API reference completeness belongs to `samber/developer-platform-skills@api-reference-quality`; the versioning and deprecation policy itself, as opposed to documenting one migration, belongs to `samber/developer-platform-skills@api-versioning-policy`.
 - Organizing your own event - venue, ticketing, sponsor sales, run of show, speaker sourcing as the organizer - belongs to `samber/dev-event-organizer-skills`.
 
