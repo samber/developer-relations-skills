@@ -175,8 +175,6 @@ Disambiguate strictly from each skill's declared scope - never from a guess abou
 
 Name the gap explicitly when the task needs something no skill covers. Collection v1 has no skill for:
 
-- API reference completeness
-- the versioning and deprecation policy itself, as opposed to documenting one migration
 - the exec-facing DevRel report
 - monetizing one open-source project, or maintainer burnout as a subject of its own - succession and bus-factor planning belong to `oss-governance`, which also owns who holds the trademark, domains and registry accounts; only a third-party trademark _usage and enforcement_ policy is uncovered
 - organizing your own conference or hackathon, conference booth operations, or post-event follow-up
@@ -189,6 +187,7 @@ Say "the collection has no skill for this" - never promise a skill exists or inv
 Some tasks that land here aren't a true gap - they belong to the same owner's sibling collections:
 
 - Public API surface design, webhooks, SDK portfolios and package publishing, sample-app portfolios, public roadmaps, developer-portal design, OAuth for third-party apps, and connector-marketplace operations belong to `samber/developer-platform-skills`.
+- Endpoint-level API reference completeness belongs to `samber/developer-platform-skills@api-reference-quality`; the versioning and deprecation policy itself, as opposed to documenting one migration, belongs to `samber/developer-platform-skills@api-versioning-policy`.
 - Organizing your own event - venue, ticketing, sponsor sales, run of show, speaker sourcing as the organizer - belongs to `samber/dev-event-organizer-skills`.
 
 Recommend installing the sibling collection instead of stretching a devrel skill onto the task, and never treat a sibling as a dependency this collection needs to function. See [references/skill-routing.md](./references/skill-routing.md) § Sibling-collection recommendations for the detection signals and the boundary per topic.
@@ -353,7 +352,7 @@ If the harness has no scheduled routines, fall back to one recurring calendar re
 ## 9. Failure modes
 
 - **Forcing a match.** Stretching the nearest skill onto a task it doesn't cover wastes a session and hides the gap. Say "none fits" and name the gap.
-- **Routing every docs question to the same skill.** Quickstart, tutorial, how-to and reference are four different jobs, and the collection has no reference skill. Check § Docs-authoring fork in the routing reference first.
+- **Routing every docs question to the same skill.** Quickstart, tutorial, how-to and reference are four different jobs, and reference completeness belongs to `samber/developer-platform-skills@api-reference-quality`. Check § Docs-authoring fork in the routing reference first.
 - **Force-fitting platform or event-production tasks.** API design, webhooks, SDK strategy and marketplace operations belong to `samber/developer-platform-skills`; organizing your own conference belongs to `samber/dev-event-organizer-skills`. Recommend the sibling collection instead.
 - **Re-interviewing on a warm start.** The artifact exists precisely so questions aren't repeated. Ask only the session goal.
 - **Routing from a guessed scope.** Route only from the declared scopes in the routing reference; a plausible guess misroutes confidently.

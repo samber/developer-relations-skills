@@ -34,12 +34,14 @@ Conflating a tutorial with a how-to guide fails both readers: the learner gets a
 
 `samber/developer-relations-skills@docs-localization-strategy` decides whether a language gets translated docs, which pages, and how translations stay current. Translating one file on request needs no skill. hreflang, canonicals and indexing of translated pages stay with `samber/developer-relations-skills@docs-seo`.
 
+`samber/developer-relations-skills@developer-keyword-research` decides which pages to write from what developers actually search - error strings, task queries, integration intents - and never writes them. On-page and docs-site SEO stays with `samber/developer-relations-skills@docs-seo`.
+
 ### Release communication - changelog vs migration guide
 
 - `samber/developer-relations-skills@changelog-writing` - one release, everything that shipped, one line of action per breaking entry.
 - `samber/developer-relations-skills@version-migration-guide` - one breaking change set, blast-radius ordering, before/after code, deprecation timeline, verified by upgrading a real project.
 
-A major version usually needs both, in that order. A patch release needs only the first. Neither owns the versioning policy itself - that is a gap (see below).
+A major version usually needs both, in that order. A patch release needs only the first. Neither owns the versioning policy itself - that belongs to `samber/developer-platform-skills@api-versioning-policy`.
 
 ### Security reports - the routing entry vs the pipeline
 
@@ -61,6 +63,7 @@ A security fix release still gets its notes from `samber/developer-relations-ski
 - "We want to run a State of X survey and publish the numbers" routes to `samber/developer-relations-skills@developer-survey-design`; community-health supplies the sentiment items if the survey carries them.
 - "Feature requests pile up in Discord and product never sees them" routes to `samber/developer-relations-skills@developer-feedback-loop` - it carries requests to a product decision and back; community health only measures the venue.
 - Feature requests filed as code-host issues split in two: labels, response targets and staleness stay with `samber/developer-relations-skills@oss-issue-triage`; the product decision and the public reply go to `samber/developer-relations-skills@developer-feedback-loop`. Publishing the roadmap those decisions feed belongs to `samber/developer-platform-skills@public-roadmap-strategy`.
+- "We lose developers somewhere between trial and production" routes to `samber/developer-relations-skills@developer-journey-map` - it names the leaking stage; `samber/developer-relations-skills@devrel-metrics` sets targets once the leak is known.
 - "How do we compare to a competitor" routes to `samber/developer-relations-skills@devrel-competitor-analysis` - it looks outward; the other four look inward.
 
 ### Open source visibility - launch, distribution, transparency
@@ -101,6 +104,11 @@ A community that has not run 90 days has no health baseline; route measurement a
 Chain them rather than choosing between them when the user is genuinely at zero: model → GTM → strategy → team → budget.
 
 Three related, narrower skills: `samber/developer-relations-skills@devtools-pricing-strategy` sets the value metric and price points inside the business model; `samber/developer-relations-skills@open-source-company-strategy` decides which assets stay open; `samber/developer-relations-skills@oss-license-strategy` picks the license text for one project.
+
+Two more sound like strategy and are not interchangeable with the five above:
+
+- `samber/developer-relations-skills@developer-ecosystem-strategy` - whether and how far the product opens into a platform others build on. The revenue model stays with `samber/developer-relations-skills@devtools-business-model`; running the marketplace belongs to `samber/developer-platform-skills@connector-marketplace-strategy`.
+- `samber/developer-relations-skills@open-standards-strategy` - how to engage one named standard or protocol: ignore, consume, certify, extend, contribute, co-found or drive. Governing your own project stays with `samber/developer-relations-skills@oss-governance`.
 
 ### Speaking and media - sequence, not competition
 
@@ -144,6 +152,7 @@ Ask who is hiring whom.
 - Debugging a live production incident → not `samber/developer-relations-skills@developer-troubleshooting-docs`; that skill writes the page afterwards.
 - Reviewing the product's own source code or error strings → outside the collection.
 - Triaging one specific issue → not `samber/developer-relations-skills@oss-issue-triage`; that skill designs the system.
+- Tracking a rival vendor's DevRel motion → not `samber/developer-relations-skills@devrel-radar`, which builds a personal watch list of sources; route to `samber/developer-relations-skills@devrel-competitor-analysis`.
 - Reporting a vulnerability in someone else's project, or patching CVEs in the user's own dependencies → not `samber/developer-relations-skills@oss-security-disclosure`, which is maintainer-side only; outside the collection.
 - Legal sign-off on a license, CLA, trademark or contract → every relevant skill is a decision framework and says so.
 - Recruiting or interviewing DevRel staff → route to `samber/developer-relations-skills@devrel-hiring`, not `samber/developer-relations-skills@devrel-career` (candidate side only) or `samber/developer-relations-skills@tech-employer-branding` (engineering employer brand, not a role's interview loop).
@@ -179,8 +188,6 @@ Each link hands the next one a named artifact. If you cannot say what gets hande
 
 State these plainly as gaps. Do not route to a neighbour.
 
-- API reference completeness.
-- The versioning and deprecation policy itself (as opposed to documenting one migration).
 - The exec-facing DevRel report narrative and budget defense.
 - Monetizing one open-source project, and maintainer burnout as a subject of its own. Succession and bus-factor planning are _not_ a gap - `samber/developer-relations-skills@oss-governance` owns them (contributor absence factor, trust ladder, inactivity rule, emeritus).
 - A trademark _usage and enforcement_ policy aimed at third parties. Who holds the mark, the domains and the registry accounts belongs to `samber/developer-relations-skills@oss-governance`; clearing a name before launch belongs to `samber/developer-relations-skills@oss-launch`.
@@ -197,6 +204,8 @@ Same owner, separate collections. Recommend installing one; never depend on it.
 | Signal in the task                                                                            | Belongs to                          |
 | --------------------------------------------------------------------------------------------- | ----------------------------------- |
 | Public API surface design, versioning policy, error shape, rate limits, idempotency           | `samber/developer-platform-skills`  |
+| Endpoint-level reference completeness, undocumented operations, spec-to-docs drift            | `samber/developer-platform-skills@api-reference-quality` |
+| Version scheme, breaking-change definition, deprecation notice windows, sunset signalling     | `samber/developer-platform-skills@api-versioning-policy` |
 | Webhooks, sandbox and test mode, integration observability, API status communication          | `samber/developer-platform-skills`  |
 | SDK portfolio decisions, developer portal design, OAuth for third-party apps                  | `samber/developer-platform-skills`  |
 | Building your own connector marketplace, app review, listing standards, marketplace economics | `samber/developer-platform-skills`  |
