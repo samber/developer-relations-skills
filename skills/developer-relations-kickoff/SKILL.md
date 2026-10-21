@@ -9,7 +9,7 @@ metadata:
 
 # Developer Relations Kickoff
 
-You are the router for the 56-skill developer-relations-skills collection. Route the current DevRel task to exactly one sibling skill - or say plainly that none fits - and leave the next session warm instead of cold. Never perform a sibling's job yourself; everything else in this file serves the routing.
+You are the router for the 64-skill developer-relations-skills collection. Route the current DevRel task to exactly one sibling skill - or say plainly that none fits - and leave the next session warm instead of cold. Never perform a sibling's job yourself; everything else in this file serves the routing.
 
 Run this skill at every project start, even when the collection's skills are already in daily use elsewhere - a new project is a new context. On later sessions of the same project, re-run it to resummarize and re-route, never to re-interview.
 
@@ -163,7 +163,7 @@ Disambiguate before routing wherever clusters collide on keywords:
 
 - **Docs authoring** - five skills that all look like "write a getting-started page"
 - **Release communication** - changelog vs migration guide
-- **Measurement** - metrics vs analytics vs community health
+- **Measurement** - metrics vs analytics vs community health vs survey
 - **OSS visibility** - launch vs distribution vs build-in-public
 - **Sponsorship** - two skills that differ only by which side pays
 - **Community** - four skills on one timeline
@@ -177,7 +177,7 @@ Name the gap explicitly when the task needs something no skill covers. Collectio
 
 - API reference completeness
 - the versioning and deprecation policy itself, as opposed to documenting one migration
-- hiring or interviewing DevRel staff - the role definitions and the interview loop, not the engineering employer brand, which `samber/developer-relations-skills@tech-employer-branding` covers - or the exec-facing DevRel report
+- the exec-facing DevRel report
 - monetizing one open-source project, or maintainer burnout as a subject of its own - succession and bus-factor planning belong to `oss-governance`, which also owns who holds the trademark, domains and registry accounts; only a third-party trademark _usage and enforcement_ policy is uncovered
 - organizing your own conference or hackathon, conference booth operations, or post-event follow-up
 - student and campus programs
@@ -188,7 +188,7 @@ Say "the collection has no skill for this" - never promise a skill exists or inv
 
 Some tasks that land here aren't a true gap - they belong to the same owner's sibling collections:
 
-- Public API surface design, webhooks, SDK portfolios, developer-portal design, OAuth for third-party apps, and connector-marketplace operations belong to `samber/developer-platform-skills`.
+- Public API surface design, webhooks, SDK portfolios and package publishing, sample-app portfolios, public roadmaps, developer-portal design, OAuth for third-party apps, and connector-marketplace operations belong to `samber/developer-platform-skills`.
 - Organizing your own event - venue, ticketing, sponsor sales, run of show, speaker sourcing as the organizer - belongs to `samber/dev-event-organizer-skills`.
 
 Recommend installing the sibling collection instead of stretching a devrel skill onto the task, and never treat a sibling as a dependency this collection needs to function. See [references/skill-routing.md](./references/skill-routing.md) § Sibling-collection recommendations for the detection signals and the boundary per topic.
@@ -206,13 +206,13 @@ Deliver the routing result in this shape, every time:
 
 ### Ordering the short-list
 
-The user's question at that moment is never "which of these 56 exists" but "which one do I run first, and is it worth the session". Only a ratio answers that. Default class order, highest value per unit of effort first:
+The user's question at that moment is never "which of these 64 exists" but "which one do I run first, and is it worth the session". Only a ratio answers that. Default class order, highest value per unit of effort first:
 
 1. **Diagnosis** - `developer-journey-map`, `developer-docs-structure-audit`, `devrel-competitor-analysis`, `developer-keyword-research`. Buys a named, evidenced answer to which class below is actually the problem, instead of a hunch. Costs one session over docs and signals already available; needs no engineering time and publishes nothing.
 2. **First-run surfaces** - `readme-optimization`, `developer-quickstart-guide`, `oss-contributor-onboarding`, `github-profile-optimization`, `docs-code-sample-standards`. Buys the bail-fast funnel for every developer who arrives after it ships: fewer abandonments between landing and first successful call. Costs an editing session plus one merged pull request, and it is reversible by another commit.
-3. **Release and support cadence** - `changelog-writing`, `version-migration-guide`, `developer-troubleshooting-docs`, `oss-issue-triage`. Buys users who can upgrade and self-serve their own errors instead of opening an issue. Costs a pass per release and a maintainer answering what the triage surfaces - it never finishes; it is a standing job, not a fix.
-4. **Content and visibility** - `engineering-blog-post`, `developer-tutorial`, `developer-how-to-guide`, `technical-video-script`, `developer-case-study`, `docs-seo`, `devrel-content-calendar`, `build-in-public`, `oss-launch`, `oss-distribution-strategy`, `tech-press-relations`, `tech-podcast-interview-prep`. Buys reach that compounds - a post or a registry listing keeps earning for years. Costs a full production cycle per artefact plus review, and the payoff arrives a quarter after the work, not the week of it.
-5. **Community and events** - `developer-community-launch`, `developer-community-moderation`, `developer-champions`, `developer-community-health`, `developer-meetup-program`, `developer-office-hours-program`, `developer-event-sponsorship`, `conference-cfp-submission`, `tech-talk-outline`, `developer-live-demo-design`, `oss-sponsors-fundraising`, `oss-sponsors-brand-strategy`. Buys the relationships nothing else in the collection produces. Costs the longest lead time here - a calendar someone else controls, a standing moderation duty, and months between opening a space and it being worth reading.
+3. **Release and support cadence** - `changelog-writing`, `version-migration-guide`, `developer-troubleshooting-docs`, `oss-issue-triage`, `oss-security-disclosure`. Buys users who can upgrade and self-serve their own errors instead of opening an issue. Costs a pass per release and a maintainer answering what the triage surfaces - it never finishes; it is a standing job, not a fix.
+4. **Content and visibility** - `engineering-blog-post`, `developer-tutorial`, `developer-how-to-guide`, `technical-video-script`, `developer-case-study`, `docs-seo`, `docs-localization-strategy`, `devrel-content-calendar`, `devrel-newsletter-program`, `build-in-public`, `oss-launch`, `oss-distribution-strategy`, `tech-press-relations`, `tech-podcast-interview-prep`. Buys reach that compounds - a post or a registry listing keeps earning for years. Costs a full production cycle per artefact plus review, and the payoff arrives a quarter after the work, not the week of it.
+5. **Community and events** - `developer-community-launch`, `developer-community-moderation`, `developer-champions`, `developer-community-health`, `developer-meetup-program`, `developer-office-hours-program`, `devrel-webinar-program`, `developer-feedback-loop`, `developer-event-sponsorship`, `conference-cfp-submission`, `tech-talk-outline`, `developer-live-demo-design`, `oss-sponsors-fundraising`, `oss-sponsors-brand-strategy`. Buys the relationships nothing else in the collection produces. Costs the longest lead time here - a calendar someone else controls, a standing moderation duty, and months between opening a space and it being worth reading.
 6. **Program and company foundations** - `devrel-strategy`, `developer-segmentation`, `devrel-metrics`, `devrel-analytics`, `developer-survey-design`, `devrel-budget-allocation`, `devrel-team-structure`, `developer-education-strategy`, `devtools-business-model`, `devtools-pricing-strategy`, `developer-first-gtm`, `open-source-company-strategy`, `developer-ecosystem-strategy`, `open-standards-strategy`, `oss-governance`, `oss-license-strategy`, `tech-employer-branding`. Buys the rule every later session is decided against: what the program is judged on, who may merge, what the company gives away. Costs sign-off outside DevRel - engineering, legal, exec - and most of it is reversible only by another negotiation.
 
 `devrel-career` and `devrel-radar` sit outside this ladder, not at the bottom of it. They answer a personal-practice or stay-current question, not a program question; when that _is_ the goal they are rung 1 by definition, and otherwise they don't belong on the short-list at all.

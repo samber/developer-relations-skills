@@ -30,7 +30,7 @@ Conflating a tutorial with a how-to guide fails both readers: the learner gets a
 
 `samber/developer-relations-skills@developer-docs-structure-audit` operates on the whole docs set, never on one page. When the user asks "where should this page live", that is a structure question. When they ask "how do I write this page", route by reader state above.
 
-`samber/developer-relations-skills@docs-code-sample-standards` owns the policy every sample obeys and the audit of an existing corpus. A single snippet inside one page being written belongs to whichever authoring skill owns that page.
+`samber/developer-relations-skills@docs-code-sample-standards` owns the policy every sample obeys and the audit of an existing corpus. A single snippet inside one page being written belongs to whichever authoring skill owns that page. The portfolio of sample repos itself - which exist, who owns them, when they retire - belongs to `samber/developer-platform-skills@sample-app-strategy`.
 
 `samber/developer-relations-skills@docs-localization-strategy` decides whether a language gets translated docs, which pages, and how translations stay current. Translating one file on request needs no skill. hreflang, canonicals and indexing of translated pages stay with `samber/developer-relations-skills@docs-seo`.
 
@@ -46,9 +46,9 @@ A major version usually needs both, in that order. A patch release needs only th
 - `samber/developer-relations-skills@oss-issue-triage` - keeps security reports out of the public tracker: the chooser entry and the rule that a misfiled report is an emergency.
 - `samber/developer-relations-skills@oss-security-disclosure` - everything behind that entry: SECURITY.md, private reporting, triage and scoring, embargo, CVE and advisory, patched release, downstream notice.
 
-A security fix release still gets its notes from `samber/developer-relations-skills@changelog-writing`, after the advisory is public.
+A security fix release still gets its notes from `samber/developer-relations-skills@changelog-writing`, after the advisory is public. Shipping the patched package to its registry belongs to `samber/developer-platform-skills@sdk-package-publishing`.
 
-### Measurement - three skills, three layers
+### Measurement - four skills, four layers
 
 - `samber/developer-relations-skills@devrel-metrics` - which numbers deserve a target, the attribution rule, and what gets cut. The framework layer.
 - `samber/developer-relations-skills@devrel-analytics` - how those numbers get collected: event taxonomy, identity spine, link tagging, surface register. The instrumentation layer.
@@ -60,7 +60,8 @@ A security fix release still gets its notes from `samber/developer-relations-ski
 - "Is our Discord dying" routes to `samber/developer-relations-skills@developer-community-health`.
 - "We want to run a State of X survey and publish the numbers" routes to `samber/developer-relations-skills@developer-survey-design`; community-health supplies the sentiment items if the survey carries them.
 - "Feature requests pile up in Discord and product never sees them" routes to `samber/developer-relations-skills@developer-feedback-loop` - it carries requests to a product decision and back; community health only measures the venue.
-- "How do we compare to a competitor" routes to `samber/developer-relations-skills@devrel-competitor-analysis` - it looks outward; the other three look inward.
+- Feature requests filed as code-host issues split in two: labels, response targets and staleness stay with `samber/developer-relations-skills@oss-issue-triage`; the product decision and the public reply go to `samber/developer-relations-skills@developer-feedback-loop`. Publishing the roadmap those decisions feed belongs to `samber/developer-platform-skills@public-roadmap-strategy`.
+- "How do we compare to a competitor" routes to `samber/developer-relations-skills@devrel-competitor-analysis` - it looks outward; the other four look inward.
 
 ### Open source visibility - launch, distribution, transparency
 
@@ -117,7 +118,7 @@ Three related, narrower skills: `samber/developer-relations-skills@devtools-pric
 - `samber/developer-relations-skills@conference-cfp-submission`, `samber/developer-relations-skills@tech-talk-outline`, `samber/developer-relations-skills@developer-live-demo-design` - you are on someone else's stage.
 - `samber/developer-relations-skills@developer-event-sponsorship` - you are paying to appear at someone else's event.
 - `samber/developer-relations-skills@developer-meetup-program` - you run a small recurring local group yourself: format, cadence, speaker pipeline, venue sponsor, health.
-- `samber/developer-relations-skills@devrel-webinar-program` - you run a recurring online technical webinar series yourself: format mix, seasons, topic backlog, speakers, replay, and the lead-handoff contract with sales. A Q&A-only series goes to the office-hours skill instead; one-off production mechanics go to `samber/dev-event-organizer-skills`.
+- `samber/developer-relations-skills@devrel-webinar-program` - you run a recurring online technical webinar series yourself: format mix, seasons, topic backlog, speakers, replay, and the lead-handoff contract with sales. A Q&A-only series goes to the office-hours skill instead; platform, streaming and moderation mechanics go to `samber/dev-event-organizer-skills@virtual-event-production`.
 
 Ask who owns the event before routing. A conference or hackathon you organize is not `samber/developer-relations-skills@developer-meetup-program` - that is organizer work and belongs to `samber/dev-event-organizer-skills` (see below).
 
@@ -199,10 +200,14 @@ Same owner, separate collections. Recommend installing one; never depend on it.
 | Webhooks, sandbox and test mode, integration observability, API status communication          | `samber/developer-platform-skills`  |
 | SDK portfolio decisions, developer portal design, OAuth for third-party apps                  | `samber/developer-platform-skills`  |
 | Building your own connector marketplace, app review, listing standards, marketplace economics | `samber/developer-platform-skills`  |
+| Which sample repos, reference apps and templates exist, who owns them, when they retire       | `samber/developer-platform-skills@sample-app-strategy` |
+| Publishing SDK packages to a registry, trusted publishing, rolling back a bad version         | `samber/developer-platform-skills@sdk-package-publishing` |
+| Whether and how to publish the roadmap, commitment wording, voting boards                     | `samber/developer-platform-skills@public-roadmap-strategy` |
 | Organizing your own conference, meetup logistics at production scale, hackathon operations    | `samber/dev-event-organizer-skills` |
 | Selling sponsorship as the organizer, prospectus, pricing, fulfillment                        | `samber/dev-event-organizer-skills` |
 | Running a CFP as the organizer, talk selection, speaker sourcing and hospitality              | `samber/dev-event-organizer-skills` |
 | Venue, ticketing, schedule design, run of show, attendee experience                           | `samber/dev-event-organizer-skills` |
+| Virtual event platform, remote-speaker setup, live chat and Q&A moderation staffing           | `samber/dev-event-organizer-skills@virtual-event-production` |
 
 The line for events runs through who is paying: this collection covers the speaker and the sponsor; the event collection covers the organizer. The line for platforms runs through who builds the surface: this collection covers documenting and evangelizing it; the platform collection covers designing it.
 
