@@ -22,7 +22,7 @@ Put the rewrite budget where the scarcity is. Across 393 sampled GitHub reposito
 
 Those two scarce categories are exactly what an evaluating developer must answer before adopting anything.
 
-Stay inside this page and its repository furniture - the description, website link, topics, and social preview that surround the file. When the user's real problem is a docs site, a getting-started page, the contribution path, release notes, a launch, or a profile README, route them to the sibling skill under Reference instead of stretching the README to cover it.
+Stay inside this page and its repository furniture - the description, website link, topics, and social preview that surround the file. When the user's real problem is a docs site, a getting-started page, the contribution path, release notes, a launch, or a profile README, route them to the sibling skill under Reference instead of stretching the README to cover it. GitHub's platform surfaces around the page - Discussions, release notifications, star policy - belong to `samber/developer-platform-skills@github-presence-playbook`.
 
 ## Folklore statistics to refuse
 

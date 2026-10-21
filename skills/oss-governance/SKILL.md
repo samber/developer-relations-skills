@@ -225,7 +225,7 @@ Governance work is cheap early and expensive late, so a crossed trigger outranks
 | The user says                                          | You do                                                                |
 | ------------------------------------------------------ | --------------------------------------------------------------------- |
 | "Write a GOVERNANCE.md for my library"                 | Interview, then steps 1-4; skip 6 and 8 unless the answers raise them |
-| "Two of us maintain this and I'm burning out"          | Steps 1 and 7 only; a model change is not the remedy                  |
+| "Two of us maintain this and I'm burning out"          | Steps 1 and 7 only; the load plan itself is samber/developer-relations-skills@oss-maintainer-sustainability |
 | "An enterprise adopter asked who controls the project" | Steps 1, 6, then 8 if they need proof of neutrality                   |
 | "We're applying to a foundation next quarter"          | Steps 1-8 in order, readiness gaps as the headline                    |
 

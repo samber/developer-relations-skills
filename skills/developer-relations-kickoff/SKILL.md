@@ -9,7 +9,7 @@ metadata:
 
 # Developer Relations Kickoff
 
-You are the router for the 56-skill developer-relations-skills collection. Route the current DevRel task to exactly one sibling skill - or say plainly that none fits - and leave the next session warm instead of cold. Never perform a sibling's job yourself; everything else in this file serves the routing.
+You are the router for the 64-skill developer-relations-skills collection. Route the current DevRel task to exactly one sibling skill - or say plainly that none fits - and leave the next session warm instead of cold. Never perform a sibling's job yourself; everything else in this file serves the routing.
 
 Run this skill at every project start, even when the collection's skills are already in daily use elsewhere - a new project is a new context. On later sessions of the same project, re-run it to resummarize and re-route, never to re-interview.
 
@@ -59,6 +59,7 @@ These tables are deliberately unranked, and must stay that way - inside a block 
 | `samber/developer-relations-skills@devrel-budget-allocation`     | Split the budget across pillars into line items with a return threshold and a cut list                                                                              |
 | `samber/developer-relations-skills@devrel-metrics`               | Which KPIs deserve a target - tiered framework, attribution rule, baselines, vanity cuts                                                                            |
 | `samber/developer-relations-skills@devrel-analytics`             | The tracking plan that instruments the surfaces - event taxonomy, identity spine, UTM discipline                                                                    |
+| `samber/developer-relations-skills@developer-survey-design`      | A recurring developer or "State of" survey - question cuts, recruitment and calibration sample, privacy, defensible published percentages                            |
 | `samber/developer-relations-skills@developer-journey-map`        | Map the journey stage by stage - discover, try, adopt, contribute, advocate as a working spine, not a published framework - and locate the single leak worth fixing |
 | `samber/developer-relations-skills@developer-segmentation`       | Cut the developer audience into named, sized, ranked segments plus an anti-segment                                                                                  |
 | `samber/developer-relations-skills@developer-education-strategy` | Whether and how to invest in structured education - academy, curriculum, labs, certification                                                                        |
@@ -90,6 +91,7 @@ These tables are deliberately unranked, and must stay that way - inside a block 
 | `samber/developer-relations-skills@changelog-writing`              | Release notes for one release, from commits and pull requests                                  |
 | `samber/developer-relations-skills@version-migration-guide`        | The breaking-change migration guide - blast radius, detection signals, before/after, timeline  |
 | `samber/developer-relations-skills@coding-agent-docs-optimization` | Make docs machine-readable so a coding agent can integrate unattended                          |
+| `samber/developer-relations-skills@docs-localization-strategy`     | Whether and how to translate the docs - locale evidence, page set, drift pins, locale ownership |
 
 **Search demand for technical content:**
 
@@ -97,6 +99,7 @@ These tables are deliberately unranked, and must stay that way - inside a block 
 | -------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
 | `samber/developer-relations-skills@developer-keyword-research` | What developers actually search - error strings, task queries, integration intents, demand sizing |
 | `samber/developer-relations-skills@docs-seo`                   | On-page and technical SEO of a docs site - indexing, canonicals, templates, internal links        |
+| `samber/developer-relations-skills@developer-docs-ai-visibility` | Docs cited at the current version in AI assistant and AI search answers - pipeline diagnosis, prompt panel |
 
 **Open source:**
 
@@ -107,9 +110,12 @@ These tables are deliberately unranked, and must stay that way - inside a block 
 | `samber/developer-relations-skills@build-in-public`             | The recurring transparency practice - disclosure ladder, cadence, platform mix, boundaries                                                           |
 | `samber/developer-relations-skills@oss-contributor-onboarding`  | The stranger-to-first-merge path - CONTRIBUTING, good first issues, cold-runnable setup                                                              |
 | `samber/developer-relations-skills@oss-issue-triage`            | The triage system - queue measurement, labels, response targets, intake forms, staleness policy                                                      |
+| `samber/developer-relations-skills@oss-security-disclosure`     | A vulnerability report or disclosure deadline, SECURITY.md, private reporting, CVE and advisory, embargo, patched release, EU CRA reporting check    |
+| `samber/developer-relations-skills@oss-maintainer-sustainability` | The maintainer's own load - burnout, time budget, published limits, recruiting a co-maintainer, stepping down, handover or archive |
 | `samber/developer-relations-skills@oss-governance`              | Decision rights, maintainer roles, voting, conflict escalation, succession and bus-factor planning, trademark and asset control, foundation donation |
 | `samber/developer-relations-skills@oss-license-strategy`        | License choice plus CLA/DCO, dual licensing, source-available options, relicensing risk                                                              |
 | `samber/developer-relations-skills@github-profile-optimization` | A personal or organization profile on a code host - profile README, pins, contribution signals                                                       |
+| `samber/developer-relations-skills@oss-monetization`            | One project's maintainers earning a living from it - paid add-on, support, content, hosting or license moves, gated on hours, ownership and trust     |
 | `samber/developer-relations-skills@oss-sponsors-fundraising`    | Maintainer side - build a sponsorship program, tiers, rewards, the invoice path                                                                      |
 | `samber/developer-relations-skills@oss-sponsors-brand-strategy` | Company side - which projects to fund, how much, and how to prove it worked                                                                          |
 
@@ -121,6 +127,7 @@ These tables are deliberately unranked, and must stay that way - inside a block 
 | `samber/developer-relations-skills@tech-talk-outline`           | Turn an accepted abstract into a rehearsable outline and slide skeleton                 |
 | `samber/developer-relations-skills@developer-live-demo-design`  | Make a demo survive the stage - fidelity tier, checkpoints, fallbacks, runbook          |
 | `samber/developer-relations-skills@developer-meetup-program`    | Run a recurring meetup or user group - format, cadence, speakers, venue sponsor, health |
+| `samber/developer-relations-skills@devrel-webinar-program`      | Run a recurring online webinar series - formats, seasons, replay, sales handoff contract |
 | `samber/developer-relations-skills@developer-event-sponsorship` | Buy sponsorship - which events, which tier, which activation, what ROI proof            |
 
 **Community:**
@@ -131,6 +138,8 @@ These tables are deliberately unranked, and must stay that way - inside a block 
 | `samber/developer-relations-skills@developer-community-moderation` | Code of conduct, enforcement ladder, reporting channels, incident runbook, moderator roster |
 | `samber/developer-relations-skills@developer-champions`            | A champions or ambassador program - intake, criteria, obligations, perks, terms, scorecard  |
 | `samber/developer-relations-skills@developer-community-health`     | Measure the community - activity, responsiveness, contributor funnel, sentiment, thresholds |
+| `samber/developer-relations-skills@developer-feedback-loop`        | Route developer feedback to product and back - record of truth, decision review, status replies, saying no |
+| `samber/developer-relations-skills@developer-office-hours-program` | Run recurring office hours or an AMA - format, time-zone slot, engineer rotation, scope card, write-up loop |
 
 **Content and media:**
 
@@ -141,6 +150,7 @@ These tables are deliberately unranked, and must stay that way - inside a block 
 | `samber/developer-relations-skills@technical-video-script`      | A shooting-ready screencast or motion design explainer script - beat sheet, chapters, cut list |
 | `samber/developer-relations-skills@tech-podcast-interview-prep` | Prepare to be the guest on someone else's podcast, interview or livestream          |
 | `samber/developer-relations-skills@devrel-content-calendar`     | Plan a quarter of content around fixed anchors, capacity and mix                    |
+| `samber/developer-relations-skills@devrel-newsletter-program`   | A developer newsletter as a programme - start, keep or stop, cadence, template, owner and backup, sunset |
 | `samber/developer-relations-skills@tech-press-relations`        | Press and light analyst relations - angle, reporter map, pitch, embargo, press page |
 
 **Meta and personal practice:**
@@ -156,7 +166,7 @@ Disambiguate before routing wherever clusters collide on keywords:
 
 - **Docs authoring** - five skills that all look like "write a getting-started page"
 - **Release communication** - changelog vs migration guide
-- **Measurement** - metrics vs analytics vs community health
+- **Measurement** - metrics vs analytics vs community health vs survey
 - **OSS visibility** - launch vs distribution vs build-in-public
 - **Sponsorship** - two skills that differ only by which side pays
 - **Community** - four skills on one timeline
@@ -168,20 +178,19 @@ Disambiguate strictly from each skill's declared scope - never from a guess abou
 
 Name the gap explicitly when the task needs something no skill covers. Collection v1 has no skill for:
 
-- API reference completeness
-- the versioning and deprecation policy itself, as opposed to documenting one migration
-- hiring or interviewing DevRel staff - the role definitions and the interview loop, not the engineering employer brand, which `samber/developer-relations-skills@tech-employer-branding` covers - or the exec-facing DevRel report
-- monetizing one open-source project, or maintainer burnout as a subject of its own - succession and bus-factor planning belong to `oss-governance`, which also owns who holds the trademark, domains and registry accounts; only a third-party trademark _usage and enforcement_ policy is uncovered
+- the exec-facing DevRel report
+- a third-party trademark _usage and enforcement_ policy - who holds the trademark, domains and registry accounts belongs to `oss-governance`; registering the name before selling anything is a step in `oss-monetization`
 - organizing your own conference or hackathon, conference booth operations, or post-event follow-up
-- a developer newsletter, student and campus programs, or an office-hours program
-- choosing a docs platform, or brand-mention monitoring
+- student and campus programs
+- choosing a docs platform, or brand-mention monitoring, including brand share in AI answers (docs cited at the right version is covered by `developer-docs-ai-visibility`)
 - writing the slides, editing the video, or legal sign-off on anything
 
 Say "the collection has no skill for this" - never promise a skill exists or invent one.
 
 Some tasks that land here aren't a true gap - they belong to the same owner's sibling collections:
 
-- Public API surface design, webhooks, SDK portfolios, developer-portal design, OAuth for third-party apps, and connector-marketplace operations belong to `samber/developer-platform-skills`.
+- Public API surface design, webhooks, the public CLI wrapping the API, an Agent Skill shipped inside an SDK or CLI repo and versioned with its releases, SDK portfolios, package and CLI binary publishing to any registry or channel, sample-app portfolios, public roadmaps, developer-portal design, OAuth for third-party apps, connector-marketplace operations, a repository's engagement on GitHub after launch (Discussions, release notifications, topics, star policy), and a vendor's product tag on Stack Overflow (staff answering, disclosure, backlog triage) belong to `samber/developer-platform-skills`.
+- Endpoint-level API reference completeness belongs to `samber/developer-platform-skills@api-reference-quality`; the versioning and deprecation policy itself, as opposed to documenting one migration, belongs to `samber/developer-platform-skills@api-versioning-policy`.
 - Organizing your own event - venue, ticketing, sponsor sales, run of show, speaker sourcing as the organizer - belongs to `samber/dev-event-organizer-skills`.
 
 Recommend installing the sibling collection instead of stretching a devrel skill onto the task, and never treat a sibling as a dependency this collection needs to function. See [references/skill-routing.md](./references/skill-routing.md) § Sibling-collection recommendations for the detection signals and the boundary per topic.
@@ -199,14 +208,14 @@ Deliver the routing result in this shape, every time:
 
 ### Ordering the short-list
 
-The user's question at that moment is never "which of these 56 exists" but "which one do I run first, and is it worth the session". Only a ratio answers that. Default class order, highest value per unit of effort first:
+The user's question at that moment is never "which of these 64 exists" but "which one do I run first, and is it worth the session". Only a ratio answers that. Default class order, highest value per unit of effort first:
 
 1. **Diagnosis** - `developer-journey-map`, `developer-docs-structure-audit`, `devrel-competitor-analysis`, `developer-keyword-research`. Buys a named, evidenced answer to which class below is actually the problem, instead of a hunch. Costs one session over docs and signals already available; needs no engineering time and publishes nothing.
 2. **First-run surfaces** - `readme-optimization`, `developer-quickstart-guide`, `oss-contributor-onboarding`, `github-profile-optimization`, `docs-code-sample-standards`. Buys the bail-fast funnel for every developer who arrives after it ships: fewer abandonments between landing and first successful call. Costs an editing session plus one merged pull request, and it is reversible by another commit.
-3. **Release and support cadence** - `changelog-writing`, `version-migration-guide`, `developer-troubleshooting-docs`, `oss-issue-triage`. Buys users who can upgrade and self-serve their own errors instead of opening an issue. Costs a pass per release and a maintainer answering what the triage surfaces - it never finishes; it is a standing job, not a fix.
-4. **Content and visibility** - `engineering-blog-post`, `developer-tutorial`, `developer-how-to-guide`, `technical-video-script`, `developer-case-study`, `docs-seo`, `devrel-content-calendar`, `build-in-public`, `oss-launch`, `oss-distribution-strategy`, `tech-press-relations`, `tech-podcast-interview-prep`. Buys reach that compounds - a post or a registry listing keeps earning for years. Costs a full production cycle per artefact plus review, and the payoff arrives a quarter after the work, not the week of it.
-5. **Community and events** - `developer-community-launch`, `developer-community-moderation`, `developer-champions`, `developer-community-health`, `developer-meetup-program`, `developer-event-sponsorship`, `conference-cfp-submission`, `tech-talk-outline`, `developer-live-demo-design`, `oss-sponsors-fundraising`, `oss-sponsors-brand-strategy`. Buys the relationships nothing else in the collection produces. Costs the longest lead time here - a calendar someone else controls, a standing moderation duty, and months between opening a space and it being worth reading.
-6. **Program and company foundations** - `devrel-strategy`, `developer-segmentation`, `devrel-metrics`, `devrel-analytics`, `devrel-budget-allocation`, `devrel-team-structure`, `developer-education-strategy`, `devtools-business-model`, `devtools-pricing-strategy`, `developer-first-gtm`, `open-source-company-strategy`, `developer-ecosystem-strategy`, `open-standards-strategy`, `oss-governance`, `oss-license-strategy`, `tech-employer-branding`. Buys the rule every later session is decided against: what the program is judged on, who may merge, what the company gives away. Costs sign-off outside DevRel - engineering, legal, exec - and most of it is reversible only by another negotiation.
+3. **Release and support cadence** - `changelog-writing`, `version-migration-guide`, `developer-troubleshooting-docs`, `oss-issue-triage`, `oss-security-disclosure`, `oss-maintainer-sustainability`. Buys users who can upgrade and self-serve their own errors instead of opening an issue. Costs a pass per release and a maintainer answering what the triage surfaces - it never finishes; it is a standing job, not a fix.
+4. **Content and visibility** - `engineering-blog-post`, `developer-tutorial`, `developer-how-to-guide`, `technical-video-script`, `developer-case-study`, `docs-seo`, `developer-docs-ai-visibility`, `docs-localization-strategy`, `devrel-content-calendar`, `devrel-newsletter-program`, `build-in-public`, `oss-launch`, `oss-distribution-strategy`, `tech-press-relations`, `tech-podcast-interview-prep`. Buys reach that compounds - a post or a registry listing keeps earning for years. Costs a full production cycle per artefact plus review, and the payoff arrives a quarter after the work, not the week of it.
+5. **Community and events** - `developer-community-launch`, `developer-community-moderation`, `developer-champions`, `developer-community-health`, `developer-meetup-program`, `developer-office-hours-program`, `devrel-webinar-program`, `developer-feedback-loop`, `developer-event-sponsorship`, `conference-cfp-submission`, `tech-talk-outline`, `developer-live-demo-design`, `oss-sponsors-fundraising`, `oss-sponsors-brand-strategy`. Buys the relationships nothing else in the collection produces. Costs the longest lead time here - a calendar someone else controls, a standing moderation duty, and months between opening a space and it being worth reading.
+6. **Program and company foundations** - `devrel-strategy`, `developer-segmentation`, `devrel-metrics`, `devrel-analytics`, `developer-survey-design`, `devrel-budget-allocation`, `devrel-team-structure`, `developer-education-strategy`, `devtools-business-model`, `devtools-pricing-strategy`, `developer-first-gtm`, `open-source-company-strategy`, `developer-ecosystem-strategy`, `open-standards-strategy`, `oss-governance`, `oss-license-strategy`, `oss-monetization`, `tech-employer-branding`. Buys the rule every later session is decided against: what the program is judged on, who may merge, what the company gives away. Costs sign-off outside DevRel - engineering, legal, exec - and most of it is reversible only by another negotiation.
 
 `devrel-career` and `devrel-radar` sit outside this ladder, not at the bottom of it. They answer a personal-practice or stay-current question, not a program question; when that _is_ the goal they are rung 1 by definition, and otherwise they don't belong on the short-list at all.
 
@@ -346,7 +355,7 @@ If the harness has no scheduled routines, fall back to one recurring calendar re
 ## 9. Failure modes
 
 - **Forcing a match.** Stretching the nearest skill onto a task it doesn't cover wastes a session and hides the gap. Say "none fits" and name the gap.
-- **Routing every docs question to the same skill.** Quickstart, tutorial, how-to and reference are four different jobs, and the collection has no reference skill. Check § Docs-authoring fork in the routing reference first.
+- **Routing every docs question to the same skill.** Quickstart, tutorial, how-to and reference are four different jobs, and reference completeness belongs to `samber/developer-platform-skills@api-reference-quality`. Check § Docs-authoring fork in the routing reference first.
 - **Force-fitting platform or event-production tasks.** API design, webhooks, SDK strategy and marketplace operations belong to `samber/developer-platform-skills`; organizing your own conference belongs to `samber/dev-event-organizer-skills`. Recommend the sibling collection instead.
 - **Re-interviewing on a warm start.** The artifact exists precisely so questions aren't repeated. Ask only the session goal.
 - **Routing from a guessed scope.** Route only from the declared scopes in the routing reference; a plausible guess misroutes confidently.

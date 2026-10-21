@@ -21,6 +21,8 @@ Do not triage individual items, curate the first-contribution queue, review code
 - Repeat questions into docs: samber/developer-relations-skills@developer-troubleshooting-docs
 - Hostile behaviour: samber/developer-relations-skills@developer-community-moderation
 - Who decides scope: samber/developer-relations-skills@oss-governance
+- The maintainer's own capacity, stepping back or handing over: samber/developer-relations-skills@oss-maintainer-sustainability
+- Feature requests' product decision and the reply to requesters: samber/developer-relations-skills@developer-feedback-loop
 - The wider measurement framework: samber/developer-relations-skills@developer-community-health
 
 ## Interview
@@ -137,7 +139,7 @@ Efficiency starves option 2: highest recurring value, most setup, so a maintaine
 - a named, size-capped response team
 - an embargo mechanism for coordinated disclosure
 
-Apache instructs committers never to enter vulnerability details in a public tracker. With no security list, the code host's private vulnerability reporting is the default.
+Apache instructs committers never to enter vulnerability details in a public tracker. With no security list, the code host's private vulnerability reporting is the default. Running the pipeline itself - SECURITY.md, embargo, advisory, CVE, patched release - belongs to samber/developer-relations-skills@oss-security-disclosure.
 
 Form capabilities, chooser configuration, the full security path and the volume-gating options: [./references/issue-intake-and-routing.md](./references/issue-intake-and-routing.md) - read it before writing form YAML.
 

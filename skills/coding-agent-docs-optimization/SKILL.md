@@ -1,6 +1,6 @@
 ---
 name: coding-agent-docs-optimization
-description: Makes SDK, API or protocol documentation something a coding agent can integrate from unattended - crawler access, machine-readable entry points (llms.txt, markdown endpoints, OpenAPI and JSON Schema files), self-contained copy-paste-safe pages, and a measured first-attempt agent success rate. Use whenever the user mentions agent-readable or AI-ready docs, agent experience or AX, llms.txt or llms-full.txt, docs for coding agents, agents inventing API calls that do not exist, or asks whether an agent could wire up their SDK from the docs alone - even if they never say "agent". Not for AI-search citation, nor a repo's own contributor-facing agent instructions. For human docs architecture use samber/developer-relations-skills@developer-docs-structure-audit.
+description: Makes SDK, API or protocol documentation something a coding agent can integrate from unattended - crawler access, machine-readable entry points (llms.txt, markdown endpoints, OpenAPI and JSON Schema files), self-contained copy-paste-safe pages, and a measured first-attempt agent success rate. Use whenever the user mentions agent-readable or AI-ready docs, agent experience or AX, llms.txt or llms-full.txt, docs for coding agents, agents inventing API calls that do not exist, or asks whether an agent could wire up their SDK from the docs alone - even if they never say "agent". Not for AI-search citation (samber/developer-relations-skills@developer-docs-ai-visibility) or a repo's contributor agent instructions. For human docs architecture use samber/developer-relations-skills@developer-docs-structure-audit.
 license: MIT
 metadata:
   author: Samuel Berthe
@@ -38,7 +38,7 @@ Cover the vendor side: the surfaces a developer's agent reads while wiring your 
 
 Leave out:
 
-- Getting cited by AI search engines. That is a visibility problem with different metrics.
+- Getting cited by AI search engines. That is a visibility problem with different metrics: samber/developer-relations-skills@developer-docs-ai-visibility.
 - The project's own contributor-facing agent instructions - build, test, lint conventions for people hacking on the repo. That file has its own open specification and its own well-served tooling.
 - Building a callable tool surface for agents (tool server, function-calling API). Operating the server is product work. Curating a spec down before conversion stays in scope.
 - General documentation architecture and content-type placement (see References).
@@ -229,6 +229,7 @@ Produce one audit report, not a pile of page edits:
 - `samber/developer-relations-skills@docs-code-sample-standards` - runnable-sample policy, language parity, and sample testing
 - `samber/developer-relations-skills@developer-docs-structure-audit` - content-type placement and site information architecture
 - `samber/developer-relations-skills@developer-troubleshooting-docs` - building the error-to-fix pages this skill assumes exist
+- `samber/developer-platform-skills@agent-skill-offering` - see also: shipping an Agent Skill inside the SDK or CLI repo, versioned with each release
 - `samber/developer-relations-skills@version-migration-guide` - the upgrade guides an agent needs when a major version lands
 - `samber/developer-platform-skills@api-reference-quality` - endpoint-level reference completeness audited against the spec surface
 - `samber/developer-platform-skills` - API design questions and agent-callable tool surface operations

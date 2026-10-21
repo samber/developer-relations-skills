@@ -112,6 +112,7 @@ This collection covers the full developer-relations surface.
 
 - [`devrel-metrics`](./skills/devrel-metrics): Builds a DevRel measurement framework: metrics tiered from reach to business impact, each with an attribution rule, a baseline-derived target, an owner and an action.
 - [`devrel-analytics`](./skills/devrel-analytics): Builds the tracking plan behind those metrics: an event taxonomy, an identity spine, link-tagging discipline, source-confidence labelling, and funnel views.
+- [`developer-survey-design`](./skills/developer-survey-design): Designs a recurring developer survey, from the decisions it informs to published results that state who answered, how many, and what the numbers can claim.
 - [`devrel-competitor-analysis`](./skills/devrel-competitor-analysis): Benchmarks a competitor's DevRel motion from publicly observable signals and returns a gap plan with a close, ignore or counter verdict per row.
 
 ### Content & editorial
@@ -119,6 +120,7 @@ This collection covers the full developer-relations surface.
 - [`devrel-content-calendar`](./skills/devrel-content-calendar): Plans a quarter of DevRel content as dated slots with named owners and reviewers, mixed by surface, pillar and shelf life, sized against real writing capacity.
 - [`engineering-blog-post`](./skills/engineering-blog-post): Writes or edits a technical post a skeptical developer audience believes: evidence behind every claim, published trade-offs, runnable snippets, and no marketing voice.
 - [`developer-case-study`](./skills/developer-case-study): Turns a customer's production deployment into a technical case study engineers believe: measured numbers, before-and-after architecture, published limitations, cleared approvals.
+- [`devrel-newsletter-program`](./skills/devrel-newsletter-program): Designs a developer newsletter as a standing programme: whether to run one at all, a cadence the team's supply can fill, a section template, an owner with a backup, and pause and sunset rules.
 - [`build-in-public`](./skills/build-in-public): Designs a sustainable build-in-public practice: how far up the disclosure ladder to go, a cadence the maintainer can hold, the platform mix, and the boundaries.
 - [`technical-video-script`](./skills/technical-video-script): Writes a shooting-ready script for a technical video or motion design explainer: a 30-second hook, code-on-screen pacing, chapters, and a pre-decided cut list.
 - [`tech-podcast-interview-prep`](./skills/tech-podcast-interview-prep): Prepares a guest for someone else's podcast, interview or panel: show reconnaissance, a message spine, a self-contained opening answer, and clip-safe sound bites.
@@ -134,10 +136,12 @@ This collection covers the full developer-relations surface.
 - [`changelog-writing`](./skills/changelog-writing): Turns raw commits, pull requests and tickets into release notes developers actually read: what shipped, what it means in practice, and what breaks.
 - [`version-migration-guide`](./skills/version-migration-guide): Writes or audits a breaking-change migration guide ordered by blast radius, with per-entry detection signals, before/after code, and a deprecation timeline.
 - [`coding-agent-docs-optimization`](./skills/coding-agent-docs-optimization): Makes SDK, API or protocol docs something a coding agent integrates from unattended: crawler access, machine-readable entry points, self-contained pages, a measured success rate.
+- [`docs-localization-strategy`](./skills/docs-localization-strategy): Decides whether and how to localize developer docs per language: evidence that the source language is the barrier, a ranked translation ladder, the page set, source-commit pins with a bundled drift check, and an ownership gate before launch.
 
 ### Discoverability & SEO
 
 - [`docs-seo`](./skills/docs-seo): Runs on-page and technical SEO for a documentation site: indexability, canonicals and hreflang across versions and translations, redirects, and an owner-assigned fix list.
+- [`developer-docs-ai-visibility`](./skills/developer-docs-ai-visibility): Gets developer docs cited at the current version in AI assistant and AI search answers: pipeline diagnosis, version signals, owned and third-party corrections, and a repeated prompt panel scoring version-correct answers.
 - [`developer-keyword-research`](./skills/developer-keyword-research): Builds a prioritized keyword list for technical queries, mined from docs search logs, support tickets and issue trackers rather than keyword-tool volume.
 - [`readme-optimization`](./skills/readme-optimization): Audits and rewrites a repository README into a bail-fast funnel, with every claim verified against the source and badges that earn nothing pruned.
 - [`github-profile-optimization`](./skills/github-profile-optimization): Rebuilds a personal or organization profile on a code host as a DevRel surface: the profile README, the pinned items, the bio fields, and the contribution signals.
@@ -147,7 +151,9 @@ This collection covers the full developer-relations surface.
 - [`developer-community-launch`](./skills/developer-community-launch): Decides whether, where and when to launch a developer community, then plans its seeding, first 90 days, go/no-go criteria and shutdown criteria.
 - [`developer-community-health`](./skills/developer-community-health): Designs a community health measurement framework: activity, responsiveness, contributor-funnel and sentiment metrics, honest instrumentation, and a report ending in decisions.
 - [`developer-community-moderation`](./skills/developer-community-moderation): Writes a community's code of conduct and the moderation playbook behind it: enforcement ladder, reporting channels, incident runbook, moderator roster, platform controls.
+- [`developer-feedback-loop`](./skills/developer-feedback-loop): Designs how developer feedback reaches product and comes back: one record of truth, problem-first records, a product-owned decision review, public status replies including the no, and loop metrics.
 - [`developer-champions`](./skills/developer-champions): Designs an unpaid, perks-only champions program: intake, published selection criteria, behaviour-based obligations, an access-first perk ladder, fixed terms, and a cohort scorecard.
+- [`developer-office-hours-program`](./skills/developer-office-hours-program): Designs a recurring developer office-hours or AMA program: format choice, a slot covering the users' time zones, a capped engineer rotation, a published scope card, empty-room and recording rules, and a write-up loop turning repeat questions into docs fixes.
 - [`developer-meetup-program`](./skills/developer-meetup-program): Designs a recurring developer meetup or user group: host model, format menu, cadence, speaker pipeline, in-kind sponsors, the co-organizer ladder, and a health scorecard.
 
 ### Events & speaking
@@ -156,6 +162,7 @@ This collection covers the full developer-relations surface.
 - [`tech-talk-outline`](./skills/tech-talk-outline): Turns an accepted abstract into a rehearsable outline: the one-sentence takeaway, a narrative arc, a minute-by-minute time budget, demo placement, and a slide skeleton.
 - [`developer-live-demo-design`](./skills/developer-live-demo-design): Engineers a technical demo so it survives the stage: risk triage, enterable checkpoints, a one-command reset, offline mode, and a recorded fallback, shipped as a runbook.
 - [`developer-event-sponsorship`](./skills/developer-event-sponsorship): Builds a developer-event sponsorship plan: which events to sponsor at which tier, the on-site activation, and how to prove the money worked.
+- [`devrel-webinar-program`](./skills/devrel-webinar-program): Designs a recurring technical webinar series for developers: the series' one job, ranked formats, seasons sized to speaker capacity, attendance diagnosis, a replay plan, and a consent-bounded handoff contract with sales.
 
 ### Open source
 
@@ -164,12 +171,15 @@ This collection covers the full developer-relations surface.
 - [`oss-governance`](./skills/oss-governance): Chooses and documents a project's governance model: decision rights, maintainer promotion, voting rules, conflict escalation, succession, trademark control, and foundation options.
 - [`oss-contributor-onboarding`](./skills/oss-contributor-onboarding): Designs and verifies the path from stranger to first merged contribution: the CONTRIBUTING file, the good-first-issue queue, a cold clone-to-passing-tests command, and the review loop.
 - [`oss-issue-triage`](./skills/oss-issue-triage): Designs a triage system maintainers can sustain: response targets sized to real capacity, a label taxonomy, intake cuts, triage duty, and a closing and staleness policy.
+- [`oss-maintainer-sustainability`](./skills/oss-maintainer-sustainability): Plans how a maintainer carries a project without burning out, or leaves it without stranding users: time budget, published limits, co-maintainers, and a clean exit.
+- [`oss-security-disclosure`](./skills/oss-security-disclosure): Runs coordinated vulnerability disclosure from the maintainer side: SECURITY.md and private reporting, triage and CVSS scoring, embargo negotiation, CVE and advisory, patched releases, downstream notice, and EU CRA checks.
 - [`oss-distribution-strategy`](./skills/oss-distribution-strategy): Designs a project's ongoing distribution mix after launch: registries, discovery surfaces, curated lists, downstream packaging and release cadence, ranked against maintainer capacity.
 - [`open-source-company-strategy`](./skills/open-source-company-strategy): Decides what a company open-sources and what stays proprietary, names the motive for each side of the line, says who owns the decision, and what it never closes.
 - [`open-standards-strategy`](./skills/open-standards-strategy): Decides how a company engages a named standard or protocol, in which venue, under which patent-licensing mode, with a conformance plan and a kill rule.
 
 ### OSS funding
 
+- [`oss-monetization`](./skills/oss-monetization): Chooses how one open-source project earns money for its own maintainers: the offer a company can buy, the paid boundary, ownership and license checks, and the hours it costs.
 - [`oss-sponsors-fundraising`](./skills/oss-sponsors-fundraising): Designs a maintainer-side sponsorship program: the tier ladder and its pricing, rewards that stay deliverable at scale, and the invoice-and-entity path a company needs to pay.
 - [`oss-sponsors-brand-strategy`](./skills/oss-sponsors-brand-strategy): Builds a company's open-source sponsorship portfolio: which projects and maintainers to fund, through which allocation model, at what amount each, and how to prove it worked.
 

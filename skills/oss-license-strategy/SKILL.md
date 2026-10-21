@@ -155,7 +155,7 @@ The monetization axis is go-to-market motion, not buyer type:
 
 - **B2C / individual-facing** - no license term converts an individual. The license is a trust and distribution decision; money, if any, comes from sponsorship or hosted convenience. Recommend the permissive or copyleft choice that maximizes trust and leave the terms alone.
 
-If source-available or delayed-open-source terms are genuinely on the table, work through [references/business-model-licensing.md](./references/business-model-licensing.md): dual licensing, open core, BUSL and FSL parameters, the Fair Source definition, and what each documented license change actually produced.
+When the license question is really "how do I get paid for this project", choose the offer first with `samber/developer-relations-skills@oss-monetization`, then return here for the license text. If source-available or delayed-open-source terms are genuinely on the table, work through [references/business-model-licensing.md](./references/business-model-licensing.md): dual licensing, open core, BUSL and FSL parameters, the Fair Source definition, and what each documented license change actually produced.
 
 Enforce the vocabulary throughout: source-available is not open source. The OSI board's own wording for the failure is worth repeating to a user who wants both labels - "the hallmark of a fauxpen source license is that those who made the switch claim that their product continues to remain 'open' under the new license, but the new license actually has taken away user rights". Calling it open source costs the audience the project was built for, and it fails the procurement filters that check OSI approval directly.
 

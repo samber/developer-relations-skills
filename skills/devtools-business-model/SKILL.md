@@ -21,6 +21,7 @@ Produce a model decision with its consequences and a validation plan, not a pric
 - "Should we go open core or sell a managed cloud?" → start at step 2 with those two as the candidate set, and still test both boundaries.
 - "A cloud provider just launched a managed version of our project. Do we relicense?" → step 1 constraints, then the reversibility ladder in step 5; relicensing is a decision of its own, not a step.
 - "What should stay free forever?" → step 3 alone; output the always-free list and the reasoning behind it.
+- "I maintain this library alone and companies use it, how do I get paid?" → not this skill: one project's maintainers with no company behind them belong to `samber/developer-relations-skills@oss-monetization`.
 - "Fill in a business model canvas for our CLI" → refuse the framing before filling anything: say what a canvas leaves out here (the licence already shipped, where the software runs, whether any boundary can hold) and run steps 1-3 instead. Produce the canvas afterwards if the user still wants one.
 
 Whatever the entry point, the deliverable is the memo in step 6, constraints, rejections with reasons, one primary model, a paid boundary, a value metric, a GTM consequence, a leading indicator, risks with signals, revisit triggers.
