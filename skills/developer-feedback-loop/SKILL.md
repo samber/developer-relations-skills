@@ -164,6 +164,8 @@ Never publish a date product has not published, and treat "next cycle" or a cycl
 
 If question 9 allows a public roadmap, start it only after two review cycles have produced statuses: a roadmap built before decisions exist is a list of hopes. Show statuses, and dates only where product committed and published them. Product approves each public reason; the person question 9 names approves publication.
 
+For the roadmap's posture, commitment vocabulary, exclusion gate and sales guardrails, see `samber/developer-platform-skills@public-roadmap-strategy`.
+
 Templates per status, the public feedback policy page and privacy rules: [./references/close-the-loop-replies.md](./references/close-the-loop-replies.md).
 
 ## Step 7 - Measure the loop
