@@ -298,3 +298,4 @@ Never hand back a perk list with no term, exit or bar attached - that is the fai
 - samber/developer-relations-skills@developer-community-health for measuring community-wide engagement.
 - samber/developer-relations-skills@oss-contributor-onboarding for code-contribution pathways in open-source.
 - samber/developer-relations-skills@developer-meetup-program for local user-group organizing.
+- samber/developer-relations-skills@developer-feedback-loop for routing champions' product feedback to a decision.

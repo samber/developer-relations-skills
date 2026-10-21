@@ -131,6 +131,7 @@ These tables are deliberately unranked, and must stay that way - inside a block 
 | `samber/developer-relations-skills@developer-community-moderation` | Code of conduct, enforcement ladder, reporting channels, incident runbook, moderator roster |
 | `samber/developer-relations-skills@developer-champions`            | A champions or ambassador program - intake, criteria, obligations, perks, terms, scorecard  |
 | `samber/developer-relations-skills@developer-community-health`     | Measure the community - activity, responsiveness, contributor funnel, sentiment, thresholds |
+| `samber/developer-relations-skills@developer-feedback-loop`        | Route developer feedback to product and back - record of truth, decision review, status replies, saying no |
 
 **Content and media:**
 

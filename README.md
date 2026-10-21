@@ -147,6 +147,7 @@ This collection covers the full developer-relations surface.
 - [`developer-community-launch`](./skills/developer-community-launch): Decides whether, where and when to launch a developer community, then plans its seeding, first 90 days, go/no-go criteria and shutdown criteria.
 - [`developer-community-health`](./skills/developer-community-health): Designs a community health measurement framework: activity, responsiveness, contributor-funnel and sentiment metrics, honest instrumentation, and a report ending in decisions.
 - [`developer-community-moderation`](./skills/developer-community-moderation): Writes a community's code of conduct and the moderation playbook behind it: enforcement ladder, reporting channels, incident runbook, moderator roster, platform controls.
+- [`developer-feedback-loop`](./skills/developer-feedback-loop): Designs how developer feedback reaches product and comes back: one record of truth, problem-first records, a product-owned decision review, public status replies including the no, and loop metrics.
 - [`developer-champions`](./skills/developer-champions): Designs an unpaid, perks-only champions program: intake, published selection criteria, behaviour-based obligations, an access-first perk ladder, fixed terms, and a cohort scorecard.
 - [`developer-meetup-program`](./skills/developer-meetup-program): Designs a recurring developer meetup or user group: host model, format menu, cadence, speaker pipeline, in-kind sponsors, the co-organizer ladder, and a health scorecard.
 

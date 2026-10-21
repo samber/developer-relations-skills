@@ -21,6 +21,7 @@ Do not triage individual items, curate the first-contribution queue, review code
 - Repeat questions into docs: samber/developer-relations-skills@developer-troubleshooting-docs
 - Hostile behaviour: samber/developer-relations-skills@developer-community-moderation
 - Who decides scope: samber/developer-relations-skills@oss-governance
+- Feature requests' product decision and the reply to requesters: samber/developer-relations-skills@developer-feedback-loop
 - The wider measurement framework: samber/developer-relations-skills@developer-community-health
 
 ## Interview

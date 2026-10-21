@@ -48,6 +48,7 @@ A major version usually needs both, in that order. A patch release needs only th
 - "Our numbers disagree between tools" routes to `samber/developer-relations-skills@devrel-analytics`.
 - "Leadership isn't convinced" routes to `samber/developer-relations-skills@devrel-metrics`.
 - "Is our Discord dying" routes to `samber/developer-relations-skills@developer-community-health`.
+- "Feature requests pile up in Discord and product never sees them" routes to `samber/developer-relations-skills@developer-feedback-loop` - it carries requests to a product decision and back; community health only measures the venue.
 - "How do we compare to a competitor" routes to `samber/developer-relations-skills@devrel-competitor-analysis` - it looks outward; the other three look inward.
 
 ### Open source visibility - launch, distribution, transparency
