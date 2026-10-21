@@ -219,6 +219,7 @@ Same owner, separate collections. Recommend installing one; never depend on it.
 | Building your own connector marketplace, app review, listing standards, marketplace economics | `samber/developer-platform-skills`  |
 | Which sample repos, reference apps and templates exist, who owns them, when they retire       | `samber/developer-platform-skills@sample-app-strategy` |
 | Publishing SDK packages to a registry, trusted publishing, rolling back a bad version         | `samber/developer-platform-skills@sdk-package-publishing` |
+| The public CLI wrapping the API: commands, `--json` and exit codes, CLI login, agent-safe use | `samber/developer-platform-skills@cli-interface-design` |
 | Whether and how to publish the roadmap, commitment wording, voting boards                     | `samber/developer-platform-skills@public-roadmap-strategy` |
 | Organizing your own conference, meetup logistics at production scale, hackathon operations    | `samber/dev-event-organizer-skills` |
 | Selling sponsorship as the organizer, prospectus, pricing, fulfillment                        | `samber/dev-event-organizer-skills` |
