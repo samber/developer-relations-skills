@@ -108,6 +108,7 @@ Three related, narrower skills: `samber/developer-relations-skills@devtools-pric
 - `samber/developer-relations-skills@engineering-blog-post` is the written form.
 - `samber/developer-relations-skills@developer-case-study` is the customer's story rather than yours.
 - `samber/developer-relations-skills@devrel-content-calendar` plans the quarter these pieces land in and never writes them.
+- `samber/developer-relations-skills@devrel-newsletter-program` designs a standing newsletter as a programme - whether to run one, cadence, template, owner, sunset - and never writes an issue. Release notes stay with `samber/developer-relations-skills@changelog-writing`; the quarter's slot plan stays with the calendar.
 
 ### Events - speak, sponsor, or run it yourself
 
@@ -180,7 +181,7 @@ State these plainly as gaps. Do not route to a neighbour.
 - Monetizing one open-source project, and maintainer burnout as a subject of its own. Succession and bus-factor planning are _not_ a gap - `samber/developer-relations-skills@oss-governance` owns them (contributor absence factor, trust ladder, inactivity rule, emeritus).
 - A trademark _usage and enforcement_ policy aimed at third parties. Who holds the mark, the domains and the registry accounts belongs to `samber/developer-relations-skills@oss-governance`; clearing a name before launch belongs to `samber/developer-relations-skills@oss-launch`.
 - Organizing your own conference or hackathon, conference booth operations, post-event follow-up.
-- A developer newsletter, an office-hours program, student and campus programs.
+- An office-hours program, student and campus programs. A developer newsletter is _not_ a gap at programme level - `samber/developer-relations-skills@devrel-newsletter-program` owns it; writing an issue, list growth, inbox placement and selling sponsor slots remain gaps.
 - Choosing a docs platform, and monitoring brand mentions across developer channels.
 - Producing any final asset: slides, video files, rendered graphics, published pages.
 - Legal advice of any kind.

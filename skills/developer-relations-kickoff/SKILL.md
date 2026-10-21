@@ -145,6 +145,7 @@ These tables are deliberately unranked, and must stay that way - inside a block 
 | `samber/developer-relations-skills@technical-video-script`      | A shooting-ready screencast or motion design explainer script - beat sheet, chapters, cut list |
 | `samber/developer-relations-skills@tech-podcast-interview-prep` | Prepare to be the guest on someone else's podcast, interview or livestream          |
 | `samber/developer-relations-skills@devrel-content-calendar`     | Plan a quarter of content around fixed anchors, capacity and mix                    |
+| `samber/developer-relations-skills@devrel-newsletter-program`   | A developer newsletter as a programme - start, keep or stop, cadence, template, owner and backup, sunset |
 | `samber/developer-relations-skills@tech-press-relations`        | Press and light analyst relations - angle, reporter map, pitch, embargo, press page |
 
 **Meta and personal practice:**
@@ -177,7 +178,7 @@ Name the gap explicitly when the task needs something no skill covers. Collectio
 - hiring or interviewing DevRel staff - the role definitions and the interview loop, not the engineering employer brand, which `samber/developer-relations-skills@tech-employer-branding` covers - or the exec-facing DevRel report
 - monetizing one open-source project, or maintainer burnout as a subject of its own - succession and bus-factor planning belong to `oss-governance`, which also owns who holds the trademark, domains and registry accounts; only a third-party trademark _usage and enforcement_ policy is uncovered
 - organizing your own conference or hackathon, conference booth operations, or post-event follow-up
-- a developer newsletter, student and campus programs, or an office-hours program
+- student and campus programs, or an office-hours program
 - choosing a docs platform, or brand-mention monitoring
 - writing the slides, editing the video, or legal sign-off on anything
 
