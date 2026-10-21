@@ -4,7 +4,7 @@ description: Turns an accepted conference talk abstract into a rehearsable outli
 license: MIT
 metadata:
   author: Samuel Berthe
-  version: "1.0.1"
+  version: "1.0.2"
 ---
 
 # Conference Talk Outline
