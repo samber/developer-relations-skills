@@ -4,7 +4,7 @@ description: Runs on-page and technical SEO for a documentation site - indexabil
 license: MIT
 metadata:
   author: Samuel Berthe
-  version: "1.0.1"
+  version: "1.0.2"
 ---
 
 # Docs SEO

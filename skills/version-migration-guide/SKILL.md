@@ -4,7 +4,7 @@ description: Writes or audits the migration guide for a breaking change - what b
 license: MIT
 metadata:
   author: Samuel Berthe
-  version: "1.0.2"
+  version: "1.0.3"
 ---
 
 # Version Migration Guide

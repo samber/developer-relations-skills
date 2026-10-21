@@ -4,7 +4,7 @@ description: "Decides whether, where and how to localize developer documentation
 license: MIT
 metadata:
   author: Samuel Berthe
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # Docs Localization Strategy
