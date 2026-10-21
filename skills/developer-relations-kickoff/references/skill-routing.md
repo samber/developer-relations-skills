@@ -82,15 +82,16 @@ A security fix release still gets its notes from `samber/developer-relations-ski
 - `samber/developer-relations-skills@oss-governance` - the project's rules: decision rights, trust ladder, credential inventory, emeritus.
 - `samber/developer-relations-skills@oss-issue-triage` - the queue's system: labels, response targets, staleness policy.
 
-"I'm burned out and want to stop" routes to maintainer sustainability, which hands the ladder to governance and the queue design to triage. "We need a GOVERNANCE.md" never routes there.
+"I'm burned out and want to stop" routes to maintainer sustainability, which hands the ladder to governance and the queue design to triage. "We need a GOVERNANCE.md" never routes there. "I want to earn a living from it" routes to `samber/developer-relations-skills@oss-monetization`, unless the honest goal is fewer hours, which stays with maintainer sustainability.
 
 ### Sponsorship - who is paying whom
 
-- `samber/developer-relations-skills@oss-sponsors-fundraising` - the maintainer wants money in.
+- `samber/developer-relations-skills@oss-monetization` - the maintainers of one project choose what to sell: paid add-on, support, content, hosting or a license move.
+- `samber/developer-relations-skills@oss-sponsors-fundraising` - the maintainer wants sponsorship or grant money in.
 - `samber/developer-relations-skills@oss-sponsors-brand-strategy` - the company decides which projects to fund.
 - `samber/developer-relations-skills@developer-event-sponsorship` - the company buys conference, meetup or hackathon sponsorship.
 
-Read the question's subject. "Which tier should we pick on this maintainer's page" is the company side, not the maintainer side.
+Read the question's subject. "Which tier should we pick on this maintainer's page" is the company side, not the maintainer side. "Should I sell a Pro version" is monetization, not sponsorship; "set up GitHub Sponsors tiers" is sponsorship.
 
 ### Community - four skills on one timeline
 
@@ -114,6 +115,8 @@ A community that has not run 90 days has no health baseline; route measurement a
 Chain them rather than choosing between them when the user is genuinely at zero: model → GTM → strategy → team → budget.
 
 Three related, narrower skills: `samber/developer-relations-skills@devtools-pricing-strategy` sets the value metric and price points inside the business model; `samber/developer-relations-skills@open-source-company-strategy` decides which assets stay open; `samber/developer-relations-skills@oss-license-strategy` picks the license text for one project.
+
+`samber/developer-relations-skills@oss-monetization` is the maintainer-scale counterpart of `devtools-business-model`: one project, its own maintainers, no outside funding, with hours and contributor trust as constraints. A funded company choosing its revenue model stays with `devtools-business-model`.
 
 Two more sound like strategy and are not interchangeable with the five above:
 
@@ -200,8 +203,7 @@ Each link hands the next one a named artifact. If you cannot say what gets hande
 State these plainly as gaps. Do not route to a neighbour.
 
 - The exec-facing DevRel report narrative and budget defense.
-- Monetizing one open-source project. Maintainer burnout is _not_ a gap - `samber/developer-relations-skills@oss-maintainer-sustainability` owns it - and neither are succession and bus-factor planning - `samber/developer-relations-skills@oss-governance` owns them (contributor absence factor, trust ladder, inactivity rule, emeritus).
-- A trademark _usage and enforcement_ policy aimed at third parties. Who holds the mark, the domains and the registry accounts belongs to `samber/developer-relations-skills@oss-governance`; clearing a name before launch belongs to `samber/developer-relations-skills@oss-launch`.
+- A trademark _usage and enforcement_ policy aimed at third parties. Who holds the mark, the domains and the registry accounts belongs to `samber/developer-relations-skills@oss-governance`; clearing a name before launch belongs to `samber/developer-relations-skills@oss-launch`; registering it before selling belongs to `samber/developer-relations-skills@oss-monetization`. Monetizing one open-source project is _not_ a gap - `samber/developer-relations-skills@oss-monetization` owns it - nor are maintainer burnout (`samber/developer-relations-skills@oss-maintainer-sustainability`) or succession and bus-factor planning (`samber/developer-relations-skills@oss-governance`: contributor absence factor, trust ladder, inactivity rule, emeritus).
 - Organizing your own conference or hackathon, conference booth operations, post-event follow-up.
 - Student and campus programs. A developer newsletter is _not_ a gap at programme level - `samber/developer-relations-skills@devrel-newsletter-program` owns it; writing an issue, list growth, inbox placement and selling sponsor slots remain gaps.
 - Choosing a docs platform, and monitoring brand mentions across developer channels or brand share in AI answers. Docs cited at the right version in AI answers is _not_ a gap - `samber/developer-relations-skills@developer-docs-ai-visibility` owns it.

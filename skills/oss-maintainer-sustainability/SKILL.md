@@ -80,7 +80,7 @@ Default order for "stay, lighter": `publish the contract > declare a maintenance
 
 The order starves move 7: highest long-term value, highest effort, net negative for the first months. Promote it to first when the destination is (b), when a trusted candidate already exists, or when the exit is more than a quarter away and the users would gain from a handover.
 
-Move 8 converts an existing willingness to work into paid time; it does not reduce inflow. Donations rarely reach a salary: core-js's author reported about $400 a month in early 2023, for 250 million monthly downloads and about 250 hours of work a month. Prefer time-based money (an employer's hours, a fellowship, a support contract with a company that demands service levels) over donations, and hand the program design to `samber/developer-relations-skills@oss-sponsors-fundraising`.
+Move 8 converts an existing willingness to work into paid time; it does not reduce inflow. Donations rarely reach a salary: core-js's author reported about $400 a month in early 2023, for 250 million monthly downloads and about 250 hours of work a month. Prefer time-based money (an employer's hours, a fellowship, a support contract with a company that demands service levels) over donations, and hand the program design to `samber/developer-relations-skills@oss-sponsors-fundraising`. When the user wants the project to pay a salary through something companies buy, use `samber/developer-relations-skills@oss-monetization`; it adds load, so run it only after the contract and tier moves above.
 
 The order is a default, not a law; re-rank it with the interview answers above. A user who enjoys mentoring makes move 7 cheaper than it looks.
 

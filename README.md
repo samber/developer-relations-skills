@@ -179,6 +179,7 @@ This collection covers the full developer-relations surface.
 
 ### OSS funding
 
+- [`oss-monetization`](./skills/oss-monetization): Chooses how one open-source project earns money for its own maintainers: the offer a company can buy, the paid boundary, ownership and license checks, and the hours it costs.
 - [`oss-sponsors-fundraising`](./skills/oss-sponsors-fundraising): Designs a maintainer-side sponsorship program: the tier ladder and its pricing, rewards that stay deliverable at scale, and the invoice-and-entity path a company needs to pay.
 - [`oss-sponsors-brand-strategy`](./skills/oss-sponsors-brand-strategy): Builds a company's open-source sponsorship portfolio: which projects and maintainers to fund, through which allocation model, at what amount each, and how to prove it worked.
 
