@@ -20,6 +20,7 @@ Scope is the recurring program. These sibling skills cover adjacent tasks:
 - De-risking a demo: samber/developer-relations-skills@developer-live-demo-design
 - Buying a sponsor slot at another organizer's event: samber/developer-relations-skills@developer-event-sponsorship
 - An online community space: samber/developer-relations-skills@developer-community-launch
+- Recurring online Q&A sessions with the team: samber/developer-relations-skills@developer-office-hours-program
 - Full-scale conference production, once the program outgrows an evening: samber/dev-event-organizer-skills
 
 Typical invocations:

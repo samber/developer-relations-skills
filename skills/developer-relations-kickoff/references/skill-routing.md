@@ -85,6 +85,8 @@ Read the question's subject. "Which tier should we pick on this maintainer's pag
 3. `samber/developer-relations-skills@developer-community-health` - measurement, once there is enough activity to have a baseline.
 4. `samber/developer-relations-skills@developer-champions` - recognition and obligations for the top members, once a reliable top exists.
 
+Recurring question sessions sit beside this timeline, not on it: `samber/developer-relations-skills@developer-office-hours-program` designs office hours or a standing AMA at any stage - format, time-zone slot, engineer rotation, scope card, write-up loop. "Our office hours get three people" routes there, not to community health; the requests those sessions surface route on to `samber/developer-relations-skills@developer-feedback-loop`.
+
 A community that has not run 90 days has no health baseline; route measurement asks there to "not now" with that unblocking condition. `samber/developer-relations-skills@oss-contributor-onboarding` is the code-contribution equivalent of a community funnel and belongs to the open-source block, not here.
 
 ### Strategy - five skills that all sound like "what should we do"
@@ -181,7 +183,7 @@ State these plainly as gaps. Do not route to a neighbour.
 - Monetizing one open-source project, and maintainer burnout as a subject of its own. Succession and bus-factor planning are _not_ a gap - `samber/developer-relations-skills@oss-governance` owns them (contributor absence factor, trust ladder, inactivity rule, emeritus).
 - A trademark _usage and enforcement_ policy aimed at third parties. Who holds the mark, the domains and the registry accounts belongs to `samber/developer-relations-skills@oss-governance`; clearing a name before launch belongs to `samber/developer-relations-skills@oss-launch`.
 - Organizing your own conference or hackathon, conference booth operations, post-event follow-up.
-- An office-hours program, student and campus programs. A developer newsletter is _not_ a gap at programme level - `samber/developer-relations-skills@devrel-newsletter-program` owns it; writing an issue, list growth, inbox placement and selling sponsor slots remain gaps.
+- Student and campus programs. A developer newsletter is _not_ a gap at programme level - `samber/developer-relations-skills@devrel-newsletter-program` owns it; writing an issue, list growth, inbox placement and selling sponsor slots remain gaps.
 - Choosing a docs platform, and monitoring brand mentions across developer channels.
 - Producing any final asset: slides, video files, rendered graphics, published pages.
 - Legal advice of any kind.

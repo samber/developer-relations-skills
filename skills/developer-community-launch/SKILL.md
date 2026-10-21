@@ -21,6 +21,7 @@ Check what the user actually needs before running the workflow:
 - Community already exists and needs measurement or diagnosis → `samber/developer-relations-skills@developer-community-health`.
 - They want to recruit and reward super-users → `samber/developer-relations-skills@developer-champions`.
 - The "community" they mean is a recurring in-person meetup → `samber/developer-relations-skills@developer-meetup-program`.
+- The "community" they mean is a recurring session where users bring questions to the team → `samber/developer-relations-skills@developer-office-hours-program`.
 - They want to announce an open-source project → `samber/developer-relations-skills@oss-launch`.
 
 Say which skill fits and stop. Half-running this workflow on the wrong problem wastes the user's time.

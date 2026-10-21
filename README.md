@@ -152,6 +152,7 @@ This collection covers the full developer-relations surface.
 - [`developer-community-moderation`](./skills/developer-community-moderation): Writes a community's code of conduct and the moderation playbook behind it: enforcement ladder, reporting channels, incident runbook, moderator roster, platform controls.
 - [`developer-feedback-loop`](./skills/developer-feedback-loop): Designs how developer feedback reaches product and comes back: one record of truth, problem-first records, a product-owned decision review, public status replies including the no, and loop metrics.
 - [`developer-champions`](./skills/developer-champions): Designs an unpaid, perks-only champions program: intake, published selection criteria, behaviour-based obligations, an access-first perk ladder, fixed terms, and a cohort scorecard.
+- [`developer-office-hours-program`](./skills/developer-office-hours-program): Designs a recurring developer office-hours or AMA program: format choice, a slot covering the users' time zones, a capped engineer rotation, a published scope card, empty-room and recording rules, and a write-up loop turning repeat questions into docs fixes.
 - [`developer-meetup-program`](./skills/developer-meetup-program): Designs a recurring developer meetup or user group: host model, format menu, cadence, speaker pipeline, in-kind sponsors, the co-organizer ladder, and a health scorecard.
 
 ### Events & speaking
