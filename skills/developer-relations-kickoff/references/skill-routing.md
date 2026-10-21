@@ -223,6 +223,7 @@ Same owner, separate collections. Recommend installing one; never depend on it.
 | Shipping an Agent Skill (SKILL.md) inside an SDK or CLI repo, versioned with each release     | `samber/developer-platform-skills@agent-skill-offering` |
 | Whether and how to publish the roadmap, commitment wording, voting boards                     | `samber/developer-platform-skills@public-roadmap-strategy` |
 | Flat GitHub stars after launch, Discussions, release notifications, topics, star-buying asks  | `samber/developer-platform-skills@github-presence-playbook` |
+| A vendor's product tag on Stack Overflow, staff answering, self-promotion flags, unanswered backlog | `samber/developer-platform-skills@stackoverflow-playbook` |
 | Organizing your own conference, meetup logistics at production scale, hackathon operations    | `samber/dev-event-organizer-skills` |
 | Selling sponsorship as the organizer, prospectus, pricing, fulfillment                        | `samber/dev-event-organizer-skills` |
 | Running a CFP as the organizer, talk selection, speaker sourcing and hospitality              | `samber/dev-event-organizer-skills` |

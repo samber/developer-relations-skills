@@ -32,6 +32,7 @@ Stay out of neighbouring jobs:
 - Writing the release note a shipped request links to: samber/developer-relations-skills@changelog-writing
 - Who the segments are: samber/developer-relations-skills@developer-segmentation
 - The high-influence members whose feedback carries furthest: samber/developer-relations-skills@developer-champions
+- Running the product tag on Stack Overflow, where bug reports and requests also surface: samber/developer-platform-skills@stackoverflow-playbook
 
 ## Interview
 

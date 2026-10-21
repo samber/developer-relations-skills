@@ -304,3 +304,4 @@ Stop and report at the queue if the user has not agreed the ranking, and at the 
 - samber/developer-relations-skills@devrel-metrics - The wider measurement framework
 - samber/developer-relations-skills@developer-how-to-guide - Goal-oriented task pages, when the reader arrives with a goal rather than an error
 - samber/developer-relations-skills@oss-issue-triage - Routes a repeat-question issue into a new troubleshooting entry instead of leaving it open
+- samber/developer-platform-skills@stackoverflow-playbook - Publishing the same recurring error as a disclosed canonical Q&A in the product's Stack Overflow tag

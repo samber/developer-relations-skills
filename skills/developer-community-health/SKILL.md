@@ -30,6 +30,7 @@ Check what the user actually needs:
 - Getting the community's feature requests to a product decision and back → `samber/developer-relations-skills@developer-feedback-loop`.
 - Running the yearly survey that carries the sentiment items - sampling, length, privacy, publishing the percentages → `samber/developer-relations-skills@developer-survey-design`. Define the items here. Field them there.
 - Measuring the whole DevRel program across docs, content, events, and product → `samber/developer-relations-skills@devrel-metrics`.
+- Running the vendor's Stack Overflow tag itself - staff answering, backlog triage, canonical Q&A → `samber/developer-platform-skills@stackoverflow-playbook`. Measure it here as one channel among several.
 - Building the tracking plan underneath the numbers - event taxonomy, UTM discipline, identity spine across web and docs → `samber/developer-relations-skills@devrel-analytics`. Define community metrics here. Instrument them there.
 
 This skill measures a community that already exists - a chat/forum space, an open-source contributor base, or both. Say which skill fits and stop if it is not this one.
