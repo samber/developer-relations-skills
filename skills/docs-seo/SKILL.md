@@ -22,6 +22,7 @@ You fix what the site publishes: what search engines can crawl, which URL wins a
 - Page coverage and placement across the docs set: samber/developer-relations-skills@developer-docs-structure-audit
 - Error and troubleshooting page content: samber/developer-relations-skills@developer-troubleshooting-docs
 - Machine-parseable surfaces for coding agents: samber/developer-relations-skills@coding-agent-docs-optimization
+- Assistants citing old-version docs, and measuring AI-answer correctness: samber/developer-relations-skills@developer-docs-ai-visibility
 - The tracking plan across all devrel surfaces: samber/developer-relations-skills@devrel-analytics
 
 Typical invocations:
@@ -110,7 +111,7 @@ Anything in items 1-6 is a blocking defect: it goes at the top of the fix list a
 
 Item 7 is a policy call, not a defect. Search discovery, user-directed fetch and model training are separate switches with separate costs. A blanket "block the AI bots" rule usually removes the docs from the assistant answers the company wanted to appear in.
 
-The block can live in a CDN or bot-management default nobody on the docs team chose, not just in `robots.txt`. Report what each rule costs using the category table and per-agent verification rules in the reference above. Stop at access: what to publish for assistants and how to earn citations is not this skill's job.
+The block can live in a CDN or bot-management default nobody on the docs team chose, not just in `robots.txt`. Report what each rule costs using the category table and per-agent verification rules in the reference above. Stop at access: what to publish for assistants and how to earn correct citations belongs to samber/developer-relations-skills@developer-docs-ai-visibility.
 
 ## Step 3 - Settle the version and translation posture
 

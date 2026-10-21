@@ -141,6 +141,7 @@ This collection covers the full developer-relations surface.
 ### Discoverability & SEO
 
 - [`docs-seo`](./skills/docs-seo): Runs on-page and technical SEO for a documentation site: indexability, canonicals and hreflang across versions and translations, redirects, and an owner-assigned fix list.
+- [`developer-docs-ai-visibility`](./skills/developer-docs-ai-visibility): Gets developer docs cited at the current version in AI assistant and AI search answers: pipeline diagnosis, version signals, owned and third-party corrections, and a repeated prompt panel scoring version-correct answers.
 - [`developer-keyword-research`](./skills/developer-keyword-research): Builds a prioritized keyword list for technical queries, mined from docs search logs, support tickets and issue trackers rather than keyword-tool volume.
 - [`readme-optimization`](./skills/readme-optimization): Audits and rewrites a repository README into a bail-fast funnel, with every claim verified against the source and badges that earn nothing pruned.
 - [`github-profile-optimization`](./skills/github-profile-optimization): Rebuilds a personal or organization profile on a code host as a DevRel surface: the profile README, the pinned items, the bio fields, and the contribution signals.

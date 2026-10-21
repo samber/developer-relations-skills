@@ -36,6 +36,8 @@ Conflating a tutorial with a how-to guide fails both readers: the learner gets a
 
 `samber/developer-relations-skills@developer-keyword-research` decides which pages to write from what developers actually search - error strings, task queries, integration intents - and never writes them. On-page and docs-site SEO stays with `samber/developer-relations-skills@docs-seo`.
 
+`samber/developer-relations-skills@developer-docs-ai-visibility` owns how AI assistants and AI search cite the docs: which pipeline (training recall, search retrieval, live fetch) produced a wrong or old-version answer, the version signals and corrections that fix it, and a repeated prompt panel measuring version-correct answers. Crawl policy, canonicals and version-tree posture stay with `samber/developer-relations-skills@docs-seo`; machine-readable surfaces and unattended agent integration stay with `samber/developer-relations-skills@coding-agent-docs-optimization`; referral channel setup stays with `samber/developer-relations-skills@devrel-analytics`.
+
 ### Release communication - changelog vs migration guide
 
 - `samber/developer-relations-skills@changelog-writing` - one release, everything that shipped, one line of action per breaking entry.
@@ -167,6 +169,7 @@ Ask who is hiring whom.
 - Writing courses or lesson content → `samber/developer-relations-skills@developer-education-strategy` stops at the operating model.
 - Building the slides, editing the video, running the camera → outside the collection.
 - Product-user onboarding (in-app) → not `samber/developer-relations-skills@oss-contributor-onboarding`, which is about code contribution.
+- Brand or marketing-page share in AI answers, or the docs site's own AI assistant → not `samber/developer-relations-skills@developer-docs-ai-visibility`, which covers third-party assistants citing the docs; outside the collection.
 
 ## Host auto-selection
 
@@ -201,7 +204,7 @@ State these plainly as gaps. Do not route to a neighbour.
 - A trademark _usage and enforcement_ policy aimed at third parties. Who holds the mark, the domains and the registry accounts belongs to `samber/developer-relations-skills@oss-governance`; clearing a name before launch belongs to `samber/developer-relations-skills@oss-launch`.
 - Organizing your own conference or hackathon, conference booth operations, post-event follow-up.
 - Student and campus programs. A developer newsletter is _not_ a gap at programme level - `samber/developer-relations-skills@devrel-newsletter-program` owns it; writing an issue, list growth, inbox placement and selling sponsor slots remain gaps.
-- Choosing a docs platform, and monitoring brand mentions across developer channels.
+- Choosing a docs platform, and monitoring brand mentions across developer channels or brand share in AI answers. Docs cited at the right version in AI answers is _not_ a gap - `samber/developer-relations-skills@developer-docs-ai-visibility` owns it.
 - Producing any final asset: slides, video files, rendered graphics, published pages.
 - Legal advice of any kind.
 
