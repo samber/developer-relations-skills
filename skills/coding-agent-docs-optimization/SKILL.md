@@ -229,6 +229,7 @@ Produce one audit report, not a pile of page edits:
 - `samber/developer-relations-skills@docs-code-sample-standards` - runnable-sample policy, language parity, and sample testing
 - `samber/developer-relations-skills@developer-docs-structure-audit` - content-type placement and site information architecture
 - `samber/developer-relations-skills@developer-troubleshooting-docs` - building the error-to-fix pages this skill assumes exist
+- `samber/developer-platform-skills@agent-skill-offering` - see also: shipping an Agent Skill inside the SDK or CLI repo, versioned with each release
 - `samber/developer-relations-skills@version-migration-guide` - the upgrade guides an agent needs when a major version lands
 - `samber/developer-platform-skills@api-reference-quality` - endpoint-level reference completeness audited against the spec surface
 - `samber/developer-platform-skills` - API design questions and agent-callable tool surface operations
