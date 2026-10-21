@@ -153,7 +153,7 @@ Ask who is hiring whom.
 
 ### Profile surfaces
 
-`samber/developer-relations-skills@readme-optimization` owns one repository's README. `samber/developer-relations-skills@github-profile-optimization` owns the personal or organization profile page and which repositories get pinned. When both are in play, fix the pinned repositories' READMEs first - the profile sends traffic into them.
+`samber/developer-relations-skills@readme-optimization` owns one repository's README. `samber/developer-relations-skills@github-profile-optimization` owns the personal or organization profile page and which repositories get pinned. When both are in play, fix the pinned repositories' READMEs first - the profile sends traffic into them. The repository's GitHub surfaces beyond the page - Discussions, release notifications, topics, star policy - belong to `samber/developer-platform-skills@github-presence-playbook`.
 
 ## Do-not-route signals
 
@@ -222,6 +222,7 @@ Same owner, separate collections. Recommend installing one; never depend on it.
 | The public CLI wrapping the API: commands, `--json` and exit codes, CLI login, agent-safe use | `samber/developer-platform-skills@cli-interface-design` |
 | Shipping an Agent Skill (SKILL.md) inside an SDK or CLI repo, versioned with each release     | `samber/developer-platform-skills@agent-skill-offering` |
 | Whether and how to publish the roadmap, commitment wording, voting boards                     | `samber/developer-platform-skills@public-roadmap-strategy` |
+| Flat GitHub stars after launch, Discussions, release notifications, topics, star-buying asks  | `samber/developer-platform-skills@github-presence-playbook` |
 | Organizing your own conference, meetup logistics at production scale, hackathon operations    | `samber/dev-event-organizer-skills` |
 | Selling sponsorship as the organizer, prospectus, pricing, fulfillment                        | `samber/dev-event-organizer-skills` |
 | Running a CFP as the organizer, talk selection, speaker sourcing and hospitality              | `samber/dev-event-organizer-skills` |
