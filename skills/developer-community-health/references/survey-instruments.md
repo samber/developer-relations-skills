@@ -26,7 +26,7 @@ Corroborate the score with implicit signals from the same period - responsivenes
 
 ## Annual survey
 
-Add the newcomer and belonging items once a year, filtered to people who joined in the last 12 months:
+Add the newcomer and belonging items once a year, filtered to people who joined in the last 12 months. When they ride inside a larger developer survey, `samber/developer-relations-skills@developer-survey-design` owns recruitment, length, privacy and publication:
 
 - "I feel welcome in the community." (Likert)
 - "The community treats new members well." (Likert)

@@ -28,6 +28,7 @@ Check what the user actually needs:
 - Building the first-contribution path (CONTRIBUTING, good first issues, first-PR review) → `samber/developer-relations-skills@oss-contributor-onboarding`.
 - Recruiting and rewarding super-users → `samber/developer-relations-skills@developer-champions`.
 - Getting the community's feature requests to a product decision and back → `samber/developer-relations-skills@developer-feedback-loop`.
+- Running the yearly survey that carries the sentiment items - sampling, length, privacy, publishing the percentages → `samber/developer-relations-skills@developer-survey-design`. Define the items here. Field them there.
 - Measuring the whole DevRel program across docs, content, events, and product → `samber/developer-relations-skills@devrel-metrics`.
 - Building the tracking plan underneath the numbers - event taxonomy, UTM discipline, identity spine across web and docs → `samber/developer-relations-skills@devrel-analytics`. Define community metrics here. Instrument them there.
 

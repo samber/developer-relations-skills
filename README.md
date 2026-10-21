@@ -112,6 +112,7 @@ This collection covers the full developer-relations surface.
 
 - [`devrel-metrics`](./skills/devrel-metrics): Builds a DevRel measurement framework: metrics tiered from reach to business impact, each with an attribution rule, a baseline-derived target, an owner and an action.
 - [`devrel-analytics`](./skills/devrel-analytics): Builds the tracking plan behind those metrics: an event taxonomy, an identity spine, link-tagging discipline, source-confidence labelling, and funnel views.
+- [`developer-survey-design`](./skills/developer-survey-design): Designs a recurring developer survey, from the decisions it informs to published results that state who answered, how many, and what the numbers can claim.
 - [`devrel-competitor-analysis`](./skills/devrel-competitor-analysis): Benchmarks a competitor's DevRel motion from publicly observable signals and returns a gap plan with a close, ignore or counter verdict per row.
 
 ### Content & editorial

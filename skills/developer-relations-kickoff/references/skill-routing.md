@@ -53,10 +53,12 @@ A security fix release still gets its notes from `samber/developer-relations-ski
 - `samber/developer-relations-skills@devrel-metrics` - which numbers deserve a target, the attribution rule, and what gets cut. The framework layer.
 - `samber/developer-relations-skills@devrel-analytics` - how those numbers get collected: event taxonomy, identity spine, link tagging, surface register. The instrumentation layer.
 - `samber/developer-relations-skills@developer-community-health` - the community venue only: activity, responsiveness, contributor funnel, sentiment.
+- `samber/developer-relations-skills@developer-survey-design` - asking developers directly: a recurring survey, its sample, its privacy handling, and what its published percentages may claim.
 
 - "Our numbers disagree between tools" routes to `samber/developer-relations-skills@devrel-analytics`.
 - "Leadership isn't convinced" routes to `samber/developer-relations-skills@devrel-metrics`.
 - "Is our Discord dying" routes to `samber/developer-relations-skills@developer-community-health`.
+- "We want to run a State of X survey and publish the numbers" routes to `samber/developer-relations-skills@developer-survey-design`; community-health supplies the sentiment items if the survey carries them.
 - "Feature requests pile up in Discord and product never sees them" routes to `samber/developer-relations-skills@developer-feedback-loop` - it carries requests to a product decision and back; community health only measures the venue.
 - "How do we compare to a competitor" routes to `samber/developer-relations-skills@devrel-competitor-analysis` - it looks outward; the other three look inward.
 
