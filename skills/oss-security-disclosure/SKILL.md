@@ -4,7 +4,7 @@ description: "Runs coordinated vulnerability disclosure for an open-source proje
 license: MIT
 metadata:
   author: Samuel Berthe
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # OSS Security Disclosure

@@ -4,7 +4,7 @@ description: Turns raw commits, pull requests and tickets into release notes dev
 license: MIT
 metadata:
   author: Samuel Berthe
-  version: "1.0.1"
+  version: "1.0.2"
 ---
 
 # Changelog Writing
