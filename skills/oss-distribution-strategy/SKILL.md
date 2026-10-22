@@ -4,7 +4,7 @@ description: Designs an open-source project's ongoing distribution mix after the
 license: MIT
 metadata:
   author: Samuel Berthe
-  version: "1.0.4"
+  version: "1.0.5"
 ---
 
 # OSS Distribution Strategy
@@ -291,4 +291,4 @@ Per-family traps - self-submitting to curated code-host surfaces, treating a dow
 - `samber/developer-relations-skills@changelog-writing` - the release notes this channel broadcasts.
 - `samber/developer-relations-skills@oss-release-policy` - the cadence model, version scheme and support windows behind each release this skill broadcasts.
 - `samber/developer-relations-skills@coding-agent-docs-optimization` - execution for family 10 (machine and agent-readable surfaces).
-- `samber/developer-platform-skills@github-presence-playbook` - GitHub-specific execution for family 2 and Step 6: release notifications, Discussions, topics, star policy.
+- `samber/developer-platform-skills@github-engagement-playbook` - GitHub-specific execution for family 2 and Step 6: release notifications, Discussions, topics, star policy.
