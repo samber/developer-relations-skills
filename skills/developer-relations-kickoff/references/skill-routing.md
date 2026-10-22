@@ -227,6 +227,7 @@ Same owner, separate collections. Recommend installing one; never depend on it.
 | Publishing SDK packages or CLI binaries (npm, PyPI, Maven, NuGet, Go, crates.io, pub.dev, RubyGems, Packagist, Hex, SwiftPM, CocoaPods, Homebrew, winget, Scoop), CI auto-publishing, trusted publishing, rolling back a bad version | `samber/developer-platform-skills@sdk-package-publishing` |
 | The public CLI wrapping the API: commands, `--json` and exit codes, CLI login, agent-safe use | `samber/developer-platform-skills@cli-interface-design` |
 | Shipping an Agent Skill (SKILL.md) inside an SDK or CLI repo, versioned with each release     | `samber/developer-platform-skills@agent-skill-offering` |
+| Building, adopting or publishing the product's own Terraform/OpenTofu provider            | `samber/developer-platform-skills@terraform-provider-offering` |
 | Whether and how to publish the roadmap, commitment wording, voting boards                     | `samber/developer-platform-skills@public-roadmap-strategy` |
 | Flat GitHub stars after launch, Discussions, release notifications, topics, star-buying asks  | `samber/developer-platform-skills@github-presence-playbook` |
 | A vendor's product tag on Stack Overflow, staff answering, self-promotion flags, unanswered backlog | `samber/developer-platform-skills@stackoverflow-playbook` |

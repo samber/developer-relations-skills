@@ -4,7 +4,7 @@ description: Before starting any developer-relations work - and again at the sta
 license: MIT
 metadata:
   author: Samuel Berthe
-  version: "1.0.5"
+  version: "1.0.7"
 ---
 
 # Developer Relations Kickoff
@@ -190,7 +190,7 @@ Say "the collection has no skill for this" - never promise a skill exists or inv
 
 Some tasks that land here aren't a true gap - they belong to the same owner's sibling collections:
 
-- Public API surface design, webhooks, the public CLI wrapping the API, an Agent Skill shipped inside an SDK or CLI repo and versioned with its releases, SDK portfolios, package and CLI binary publishing to any registry or channel, sample-app portfolios, public roadmaps, developer-portal design, OAuth for third-party apps, connector-marketplace operations, a repository's engagement on GitHub after launch (Discussions, release notifications, topics, star policy), a vendor's product tag on Stack Overflow (staff answering, disclosure, backlog triage), the vendor's official GitHub Action and CI integrations (orbs, GitLab components), and the vendor's own Zapier integration (triggers, Platform CLI code, review and beta, Zap templates, versioning) belong to `samber/developer-platform-skills`.
+- Public API surface design, webhooks, the public CLI wrapping the API, an Agent Skill shipped inside an SDK or CLI repo and versioned with its releases, SDK portfolios, package and CLI binary publishing to any registry or channel, sample-app portfolios, public roadmaps, API preview, beta and design-partner programs, developer-portal design, OAuth for third-party apps, connector-marketplace operations, a repository's engagement on GitHub after launch (Discussions, release notifications, topics, star policy), a vendor's product tag on Stack Overflow (staff answering, disclosure, backlog triage), the vendor's official GitHub Action and CI integrations (orbs, GitLab components), the vendor's own Zapier integration (triggers, Platform CLI code, review and beta, Zap templates, versioning), and the vendor's own Terraform/OpenTofu provider (build, signed Registry releases, deprecation) belong to `samber/developer-platform-skills`.
 - Endpoint-level API reference completeness belongs to `samber/developer-platform-skills@api-reference-quality`; a hosted API's versioning and deprecation policy belongs to `samber/developer-platform-skills@api-versioning-policy`. A package's or project's release policy stays here, in `samber/developer-relations-skills@oss-release-policy`.
 - Organizing your own event - venue, ticketing, sponsor sales, run of show, speaker sourcing as the organizer - belongs to `samber/dev-event-organizer-skills`.
 
