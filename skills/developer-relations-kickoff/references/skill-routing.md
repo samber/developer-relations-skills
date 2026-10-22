@@ -162,6 +162,10 @@ Ask who is hiring whom.
 
 `samber/developer-relations-skills@readme-optimization` owns one repository's README. `samber/developer-relations-skills@github-profile-optimization` owns the personal or organization profile page and which repositories get pinned. When both are in play, fix the pinned repositories' READMEs first - the profile sends traffic into them. The repository's GitHub surfaces beyond the page - Discussions, release notifications, topics, star policy - belong to `samber/developer-platform-skills@github-presence-playbook`.
 
+### Education - the program vs the credential
+
+`samber/developer-relations-skills@developer-education-strategy` decides whether to invest in structured education and which rung - curated path, curriculum with labs, badge, certification. `samber/developer-relations-skills@developer-certification-program` designs the credential once one is on the table, mostly for freelancers and IT services firms selling consulting: the outside consumer gate, tier, exam format, proctoring and identity, renewal tied to product versions, fees, verification, the expert directory, revocation and retirement, plus the prep course hosted on a MOOC or edtech platform and the training and exam-delivery partners. A prep course for one credential stays here; a curriculum or academy beyond it is education strategy. Run education strategy first when no curriculum exists yet; go straight to the certification skill when the ask is about an exam, a badge or its renewal.
+
 ## Do-not-route signals
 
 - Debugging a live production incident → not `samber/developer-relations-skills@developer-troubleshooting-docs`; that skill writes the page afterwards.
@@ -173,6 +177,8 @@ Ask who is hiring whom.
 - Legal sign-off on a license, CLA, trademark or contract → every relevant skill is a decision framework and says so.
 - Recruiting or interviewing DevRel staff → route to `samber/developer-relations-skills@devrel-hiring`, not `samber/developer-relations-skills@devrel-career` (candidate side only) or `samber/developer-relations-skills@tech-employer-branding` (engineering employer brand, not a role's interview loop).
 - Writing courses or lesson content → `samber/developer-relations-skills@developer-education-strategy` stops at the operating model.
+- Writing exam items, running exam delivery, or preparing as a candidate for someone else's exam → not `samber/developer-relations-skills@developer-certification-program`, which designs the issuer's program; outside the collection.
+- Certifying a partner's app or connector rather than a person → not `samber/developer-relations-skills@developer-certification-program`; recommend `samber/developer-platform-skills@app-marketplace-review`.
 - Building the slides, editing the video, running the camera → outside the collection.
 - Product-user onboarding (in-app) → not `samber/developer-relations-skills@oss-contributor-onboarding`, which is about code contribution.
 - Brand or marketing-page share in AI answers, or the docs site's own AI assistant → not `samber/developer-relations-skills@developer-docs-ai-visibility`, which covers third-party assistants citing the docs; outside the collection.
