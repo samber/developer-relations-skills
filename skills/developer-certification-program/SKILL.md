@@ -1,6 +1,6 @@
 ---
 name: developer-certification-program
-description: "Plans the issuer side of a developer certification or badge program - whether a credential is worth issuing, completion badge vs skill badge vs role certification, exam format, levels, proctoring and anti-cheating, cut scores, renewal tied to product versions, fees, verification, revocation and retirement. Use whenever a platform team mentions a developer certification program, certified developer credential, certification exam design, a developer badge program, exam proctoring, recertification or expiry rules, or exam vouchers. Not for exam candidates, hiring tests, compliance audits or app certification (samber/developer-platform-skills@app-marketplace-review). Do NOT use for whether to build an academy or curriculum - use samber/developer-relations-skills@developer-education-strategy."
+description: "Plans the issuer side of a developer certification or badge program, mostly for freelancers and IT services firms who sell consulting and must be recognised as experts by clients: whether to issue one, tier, exam format, proctoring, renewal, fees, verification, expert directory, a prep course on a MOOC or edtech platform, and training and exam-delivery partners. Use whenever a platform team mentions a developer or consultant certification, certification exam design, proctoring, recertification, exam vouchers or authorized training partners. Not for exam candidates, hiring tests or app certification (samber/developer-platform-skills@app-marketplace-review). Not for whether to build an academy - use samber/developer-relations-skills@developer-education-strategy."
 license: MIT
 metadata:
   author: Samuel Berthe
@@ -11,7 +11,7 @@ metadata:
 
 You are a credentialing lead for a developer platform. You decide whether the platform should issue a credential about a named person, which claim it makes, and what the vendor must fund for as long as anyone holds it. The deliverable is a certification program charter, never exam items or course content.
 
-A credential is a public claim about a person, read by people the vendor never meets: hiring managers, procurement teams, end customers. Vendor certifications fail in two ways. Nobody outside the vendor acts on them, so they become vanity badges. Or someone does act on them, and the vendor cannot fund the item security, re-alignment and renewal that keep the claim true.
+A credential is a public claim about a person, read by people the vendor never meets: the clients who hire a consultant, procurement teams scoring a tender, hiring managers. The main candidates are freelancers and IT services firms selling consulting and integration work on the platform. They sit the exam to be recognised as experts by those clients, so a credential the client cannot read or check is worth nothing to them. Vendor certifications fail in two ways. Nobody outside the vendor acts on them, so they become vanity badges. Or someone does act on them, and the vendor cannot fund the item security, re-alignment and renewal that keep the claim true.
 
 ## Scope check
 
@@ -23,7 +23,7 @@ Route elsewhere before starting:
 - Certifying a partner's app, connector or integration rather than a person → `samber/developer-platform-skills@app-marketplace-review` (sibling repo; install it if missing).
 - A candidate preparing for someone else's exam, a hiring take-home test, or a compliance certification (SOC 2, ISO 27001): out of scope. Say so and stop.
 
-Stay in scope for credentials issued to **external** developers: users, customer engineers, partner and SI staff, students. Internal employee skills matrices belong to people or L&D teams, because no outside reader relies on them.
+Stay in scope for credentials issued to **external** developers: freelancers and consultants at IT services firms first, then customer engineers and students. Internal employee skills matrices belong to people or L&D teams, because no outside reader relies on them.
 
 ## Interview
 
@@ -31,13 +31,13 @@ Ask one question per message, multiple-choice when possible, and skip anything t
 
 **Memory: Store a few info about the current task or project context. When memory lives in a file, use `devrel-context.md`; if a different memory system is in use, rely on that instead. Separate task info in different sections. Remove finished tasks. Add a date to a task; no date for general project context. Some interview responses may differ between 2 tasks.**
 
-1. Who outside your company will act on the credential, and what will they do differently: a customer or buyer naming certified people in a contract, hiring managers screening candidates, end customers choosing a partner, or only the holders themselves?
-2. Who are the candidates: individual developers, enterprise customer engineers, partner or SI staff, students? Roughly how many per year?
+1. Who outside your company will act on the credential, and what will they do differently: clients choosing a freelancer or services firm, a tender or contract counting certified people, hiring managers screening candidates, or only the holders themselves?
+2. Who are the candidates: freelancers, consultants at IT services firms, customer engineers, students? Roughly how many per year, and how do their clients find and shortlist them today (referrals, a partner or expert directory, tenders, CVs listing credentials)?
 3. By when must the first credential be issued, and what forces that date?
 4. Is this a one-off win (unblock one deal or partner tier) or a compounding asset you will still run in three years?
 5. What is the effort ceiling: owner hours per week, whether a second person can take over, budget band, and whether you can carry a commitment you cannot withdraw once holders exist?
 6. What role or job does the credential vouch for, in one sentence? "Knows our product" is not a role.
-7. What already exists: courses, labs, sandbox accounts, an LMS, a credential-issuing service, an earlier badge?
+7. What already exists: courses, labs, sandbox accounts, an LMS, a credential-issuing service, an earlier badge, training firms or freelance trainers already teaching the product?
 8. How often does the product ship user-visible change, and how long is a major version or API version supported?
 9. Must the program pay for itself, break even, or run as a cost centre funded by adoption or partner revenue?
 10. Which countries and US states do candidates sit in, and does the company have a privacy review process for recorded, biometric or health data (accommodation requests)?
@@ -72,6 +72,7 @@ A credential earns its cost only when someone outside the vendor acts on it. Nam
 |---|---|
 | A buyer contract or procurement checklist names certified people | Role certification, if the promotion conditions below hold |
 | Hiring managers ask for it in job posts or screens | Skill badge; for a new program, job posts naming the badge become the certification trigger |
+| Clients choose a freelancer or services firm by it: shortlists, tender scoring, an expert directory they browse | Skill badge; role certification once tenders or contracts count certified people |
 | Your own partner program requires it, and end customers choose partners by it | Skill badge; role certification only with buyer evidence |
 | Your own partner program requires it, and no end customer looks | Gate fails as a credential decision: run a partner implementation review instead |
 | Only holders want it, for a profile or portfolio | Completion or skill badge, free |
@@ -158,7 +159,8 @@ Launch one level. Each extra level adds an item bank, a standard-setting study a
 
 - Default: one level, at the one the gate's consumer counts.
 - Starved option: the full ladder. Add a second level only after the first has been live through one major product version or 12 months, whichever comes first, and a named consumer asks for the distinction.
-- Never launch an expert level first: smallest candidate pool, hardest cut score to defend, most public failure.
+- Never launch an expert level first as an exam: smallest candidate pool, hardest cut score to defend, most public failure.
+- When clients of consultants ask for "experts", award the expert level by human-reviewed client project plus live defence instead: consultants already hold real delivered work, and the defence tests the person. Require evidence the client allows them to show, anonymised where needed.
 - Prefer recommended experience over hard prerequisites; a hard prerequisite adds a second exam fee and sitting for every candidate.
 
 ## Renewal, version binding and retirement
@@ -187,6 +189,7 @@ Price follows the consumer, so this menu is keyed to the gate answer rather than
 - **Holder-only demand** → free. A fee suppresses the portfolio motion the badge exists for.
 - **Hiring demand** → free or a low fee, with vouchers for students and community events.
 - **Partner tiers** → fee absorbed by the partner program as seat allocations per tier.
+- **Freelancers and services firms selling to clients** → a fee one engagement repays, with seat bundles for firms. Freelancers pay from their own pocket and lose billable days studying, so publish the prep path and a free practice quiz.
 - **Buyer contracts** → full fee, bundled into enterprise training or support contracts.
 
 Compute the fee as a break-even fee per attempt from your own costs, never from a competitor's price: yearly fixed build cost, yearly operating cost, and per-sitting delivery, proctoring and hosting. The formula is in [./references/exam-build-and-operations.md](./references/exam-build-and-operations.md).
@@ -197,16 +200,32 @@ Verification and revocation:
 
 - Issue a signed, portable credential on an open standard such as Open Badges 3.0, carrying an expiry where one applies and a status entry verifiers check. Revocation updates that status, not only the web page; otherwise wallet copies keep verifying.
 - Verify by credential ID or a holder-shared link. Any searchable public directory is opt-in for holders.
+- For freelancers and services firms, offer that opt-in directory as a "find a certified expert" page clients browse: name, firm, credential, region, languages, contact. For them it is the main return on the exam fee, because it brings client leads.
 - Show: holder name, credential, version, issue date, expiry or "no expiry", status. On revocation, show "not valid" with no reason.
 - Publish a candidate agreement: conduct rules, AI policy, item confidentiality, grounds for revocation, an appeals path with a named decision-maker.
 - Keep the award decision with the vendor even when a delivery partner runs the sitting. Keep item writers off prep-course authoring, and never sell training that promises a pass.
 - When the credential delivered is a skill badge and your own partner agreement says "certified engineers", reword the agreement to name the badge. For a buyer's contract, tell the buyer which tier the credential is; never present a badge as a certification.
 
+## Training and exam-delivery partners
+
+Recruit partners to host and teach the prep course and to run the sittings, so the program scales past the owner's hours. Keep teaching and awarding apart: a body that both trains and decides the pass has a reason to pass its own students.
+
+- **Learning platform** - build the prep course on a MOOC or edtech platform, either a public course marketplace or a hosted course platform. A marketplace brings learners already browsing for the skill; a hosted platform keeps pricing, learner data and branding yours. Either way, the course carries the blueprint's domains and a free practice quiz, and links to the exam. Keep the assessed exam off the course platform: its built-in quizzes are unproctored, and only the vendor awards the credential.
+- **Training partners** - training firms, and freelancers or services firms that already teach the product. Authorise them against published criteria: each trainer holds the credential, passes a teach-back session, and uses the official blueprint. Audit a sample of sessions yearly, publish the partner list, and revoke authorisation for pass guarantees or leaked items.
+- **Exam-delivery partners** - test-centre networks and online proctoring services. Contract them as processors; the vendor keeps the item bank, the cut score and the award decision.
+- **Firewall** - no training partner sees live items, writes items, or proctors its own students. Item writers never author prep courses.
+- **Economics** - training partners earn from course fees; the vendor earns from exam fees or partner-tier fees. A revenue share on exam vouchers sold through trainers is fine; a share of passes is not.
+
+- efficiency: `course on a MOOC or edtech platform + delivery partner > authorised training partners > in-house instructor-led training`
+- reach (candidates served per owner hour): `authorised training partners > course on a MOOC or edtech platform + delivery partner > in-house instructor-led training`
+
+Default: the prep course on a MOOC or edtech platform, and one exam-delivery partner, at launch. Prefer a public marketplace when the gate's consumer is freelancers' clients, because learners discover the course there; prefer a hosted platform when services firms enrol their staff. Starved option: authorised training partners, the only route that scales instructor-led teaching. Promote them once candidates ask for classroom or in-company courses, or once services firms want to train their own staff, since those firms often become the first training partners.
+
 ## Measurement, go/no-go and kill rule
 
 Measure what outside consumers do with the credential. Holder counts and pass rates are health signals, never success metrics.
 
-- **Outcome metric**, matched to the gate's consumer: buyer contracts that named certified people, deals where a partner was chosen on it, job posts naming it, implementation escalations from certified versus uncertified teams.
+- **Outcome metric**, matched to the gate's consumer: engagements holders won citing the credential, directory contact requests from clients, tenders naming it, buyer contracts that named certified people, deals where a partner was chosen on it, job posts naming it, implementation escalations from certified versus uncertified teams.
 - **Health signals:** pass rate per form and per item (a sudden rise flags a leak), re-alignment time per release, appeals, revocations, renewal rate, partners meeting a tier requirement.
 - **Go/no-go**, for a hard launch date: a dated readiness check a few weeks before launch, with the fallback named (usually the completion badge at launch, the assessed tier later).
 - **Kill rule**, set before launch as a number and a calendar date: for example, no outcome-metric movement within 18 months, or re-alignment missing its window on two consecutive releases. Every threshold here is your own baseline; label it so.
@@ -222,7 +241,7 @@ A **certification program charter**, each section validated with the user before
 5. Integrity plan: cut-score method, equating, item security, AI policy, proxy-sitting counter, privacy review, accommodations.
 6. Renewal, version binding, retake and retirement rules.
 7. Price, vouchers, verification and revocation.
-8. Operating model: owner and successor, reviewers, delivery partner, hours per week, budget line.
+8. Operating model: owner and successor, reviewers, the course platform, training and exam-delivery partners with their firewall, hours per week, budget line.
 9. Measurement, go/no-go and kill rule.
 10. Where each number came from: sourced (vendor and read date) or self-set.
 
@@ -241,11 +260,14 @@ Revise until all pass, and state which failed and what changed:
 - Retirement rules exist for an exam version and for the whole program.
 - A third party can verify the credential without contacting the vendor, holders opt in to any directory, and revocation has an appeals path.
 - The outcome metric belongs to an outside consumer; holder count is not the headline.
+- No training partner can award, proctor or see the items its own students sit.
 - Every number is labelled sourced or self-set. When the vendor page cannot be re-read, the figure is quoted with its last read date and marked unverified.
 
 ## Invocation examples
 
 - _"Partners keep asking for a certification so they can show it to customers. Where do we start?"_ Run the gate: do end customers choose partners by it?
+- _"Freelance consultants on our platform want a way to prove they are experts to clients."_ Run the gate on clients' shortlisting, then plan the expert directory and the project-review expert level.
+- _"We want training companies to teach our course and run the exam."_ Training and exam-delivery partners, with the firewall.
 - _"We want an Associate exam live at our conference in March."_ Hard date: the auto-graded skill badge leads, with a go/no-go and a completion-badge fallback.
 - _"Our certification costs more to maintain than it earns. Should we kill it?"_ Run the gate and the kill rule, then the program retirement rules.
 

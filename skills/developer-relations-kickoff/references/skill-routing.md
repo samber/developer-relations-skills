@@ -164,7 +164,7 @@ Ask who is hiring whom.
 
 ### Education - the program vs the credential
 
-`samber/developer-relations-skills@developer-education-strategy` decides whether to invest in structured education and which rung - curated path, curriculum with labs, badge, certification. `samber/developer-relations-skills@developer-certification-program` designs the credential once one is on the table: the outside consumer gate, tier, exam format, proctoring and identity, renewal tied to product versions, fees, verification, revocation and retirement. Run education strategy first when no curriculum exists yet; go straight to the certification skill when the ask is about an exam, a badge or its renewal.
+`samber/developer-relations-skills@developer-education-strategy` decides whether to invest in structured education and which rung - curated path, curriculum with labs, badge, certification. `samber/developer-relations-skills@developer-certification-program` designs the credential once one is on the table, mostly for freelancers and IT services firms selling consulting: the outside consumer gate, tier, exam format, proctoring and identity, renewal tied to product versions, fees, verification, the expert directory, revocation and retirement, plus the prep course hosted on a MOOC or edtech platform and the training and exam-delivery partners. A prep course for one credential stays here; a curriculum or academy beyond it is education strategy. Run education strategy first when no curriculum exists yet; go straight to the certification skill when the ask is about an exam, a badge or its renewal.
 
 ## Do-not-route signals
 
