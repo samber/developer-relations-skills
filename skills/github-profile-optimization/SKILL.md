@@ -4,7 +4,7 @@ description: Audits and rebuilds a personal or organization profile on GitHub as
 license: MIT
 metadata:
   author: Samuel Berthe
-  version: "1.0.1"
+  version: "1.0.2"
 ---
 
 # GitHub Profile Optimization
@@ -234,4 +234,4 @@ Assume the same of every other number here.
 - [./references/profile-scorecard.md](./references/profile-scorecard.md) - blocking and scored checks, thresholds, cold-reader test and report format
 - [./references/profile-skeletons.md](./references/profile-skeletons.md) - per-audience section orders, worked positive and negative examples, and patterns observed on shipped organization profiles
 - [./references/platform-mechanics.md](./references/platform-mechanics.md) - README prerequisites, field and pin limits, contribution-graph counting rules, achievements and image-proxy behaviour
-- `samber/developer-platform-skills@github-presence-playbook` - one pinned repository's own GitHub surfaces: Discussions, release notifications, topics, star policy
+- `samber/developer-platform-skills@github-engagement-playbook` - one pinned repository's own GitHub surfaces: Discussions, release notifications, topics, star policy
