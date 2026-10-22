@@ -4,7 +4,7 @@ description: Turns raw commits, pull requests and tickets into release notes dev
 license: MIT
 metadata:
   author: Samuel Berthe
-  version: "1.0.1"
+  version: "1.0.2"
 ---
 
 # Changelog Writing
@@ -21,6 +21,7 @@ Confirm the task before starting. Route elsewhere when:
 - The change needs before/after code, a deprecation timeline, and codemods → `samber/developer-relations-skills@version-migration-guide`.
 - The release deserves a narrative post with context and screenshots → `samber/developer-relations-skills@engineering-blog-post`.
 - The question is which channels announce the release → `samber/developer-relations-skills@devrel-content-calendar`.
+- The question is which version number or scheme the release should carry, or which old versions still get the fix → `samber/developer-relations-skills@oss-release-policy`.
 - The question is whether to run a periodic newsletter or digest on top of the changelog → `samber/developer-relations-skills@devrel-newsletter-program`.
 
 Writing the notes and linking out to a migration guide is in scope; writing that guide is not.

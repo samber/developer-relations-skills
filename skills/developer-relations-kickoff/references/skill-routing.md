@@ -43,14 +43,14 @@ Conflating a tutorial with a how-to guide fails both readers: the learner gets a
 - `samber/developer-relations-skills@changelog-writing` - one release, everything that shipped, one line of action per breaking entry.
 - `samber/developer-relations-skills@version-migration-guide` - one breaking change set, blast-radius ordering, before/after code, deprecation timeline, verified by upgrading a real project.
 
-A major version usually needs both, in that order. A patch release needs only the first. Neither owns the versioning policy itself - that belongs to `samber/developer-platform-skills@api-versioning-policy`.
+A major version usually needs both, in that order. A patch release needs only the first. Neither owns the versioning policy itself. A project's release contract - scheme, breaking-change definition, supported versions, backports, cadence, deprecation windows - belongs to `samber/developer-relations-skills@oss-release-policy`, written once and applied by both. A hosted API's version scheme belongs to `samber/developer-platform-skills@api-versioning-policy`.
 
 ### Security reports - the routing entry vs the pipeline
 
 - `samber/developer-relations-skills@oss-issue-triage` - keeps security reports out of the public tracker: the chooser entry and the rule that a misfiled report is an emergency.
 - `samber/developer-relations-skills@oss-security-disclosure` - everything behind that entry: SECURITY.md, private reporting, triage and scoring, embargo, CVE and advisory, patched release, downstream notice.
 
-A security fix release still gets its notes from `samber/developer-relations-skills@changelog-writing`, after the advisory is public. Shipping the patched package to its registry belongs to `samber/developer-platform-skills@sdk-package-publishing`.
+A security fix release still gets its notes from `samber/developer-relations-skills@changelog-writing`, after the advisory is public. Which lines receive the fix comes from the supported-versions table `samber/developer-relations-skills@oss-release-policy` writes. Shipping the patched package to its registry belongs to `samber/developer-platform-skills@sdk-package-publishing`.
 
 ### Measurement - four skills, four layers
 
@@ -167,6 +167,7 @@ Ask who is hiring whom.
 - Triaging one specific issue → not `samber/developer-relations-skills@oss-issue-triage`; that skill designs the system.
 - Tracking a rival vendor's DevRel motion → not `samber/developer-relations-skills@devrel-radar`, which builds a personal watch list of sources; route to `samber/developer-relations-skills@devrel-competitor-analysis`.
 - Reporting a vulnerability in someone else's project, or patching CVEs in the user's own dependencies → not `samber/developer-relations-skills@oss-security-disclosure`, which is maintainer-side only; outside the collection.
+- Configuring the user's own Dependabot or Renovate, or pinning someone else's package → not `samber/developer-relations-skills@oss-release-policy`, which writes the maintainer's contract; outside the collection.
 - Legal sign-off on a license, CLA, trademark or contract → every relevant skill is a decision framework and says so.
 - Recruiting or interviewing DevRel staff → route to `samber/developer-relations-skills@devrel-hiring`, not `samber/developer-relations-skills@devrel-career` (candidate side only) or `samber/developer-relations-skills@tech-employer-branding` (engineering employer brand, not a role's interview loop).
 - Writing courses or lesson content → `samber/developer-relations-skills@developer-education-strategy` stops at the operating model.
@@ -218,7 +219,7 @@ Same owner, separate collections. Recommend installing one; never depend on it.
 | --------------------------------------------------------------------------------------------- | ----------------------------------- |
 | Public API surface design, versioning policy, error shape, rate limits, idempotency           | `samber/developer-platform-skills`  |
 | Endpoint-level reference completeness, undocumented operations, spec-to-docs drift            | `samber/developer-platform-skills@api-reference-quality` |
-| Version scheme, breaking-change definition, deprecation notice windows, sunset signalling     | `samber/developer-platform-skills@api-versioning-policy` |
+| A hosted API's version scheme, breaking-change definition, deprecation notice windows, sunset signalling | `samber/developer-platform-skills@api-versioning-policy` |
 | Webhooks, sandbox and test mode, integration observability, API status communication          | `samber/developer-platform-skills`  |
 | SDK portfolio decisions, developer portal design, OAuth for third-party apps                  | `samber/developer-platform-skills`  |
 | Building your own connector marketplace, app review, listing standards, marketplace economics | `samber/developer-platform-skills`  |
