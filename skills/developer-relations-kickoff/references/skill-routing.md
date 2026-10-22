@@ -230,6 +230,7 @@ Same owner, separate collections. Recommend installing one; never depend on it.
 | The public CLI wrapping the API: commands, `--json` and exit codes, CLI login, agent-safe use | `samber/developer-platform-skills@cli-interface-design` |
 | Shipping an Agent Skill (SKILL.md) inside an SDK or CLI repo, versioned with each release     | `samber/developer-platform-skills@agent-skill-offering` |
 | Building, adopting or publishing the product's own Terraform/OpenTofu provider            | `samber/developer-platform-skills@terraform-provider-offering` |
+| Whether to ship an official VS Code or JetBrains extension, Open VSX and marketplace publishing, extension telemetry and deprecation | `samber/developer-platform-skills@ide-extension-offering` |
 | Whether and how to publish the roadmap, commitment wording, voting boards                     | `samber/developer-platform-skills@public-roadmap-strategy` |
 | Flat GitHub stars after launch, Discussions, release notifications, topics, star-buying asks  | `samber/developer-platform-skills@github-presence-playbook` |
 | A vendor's product tag on Stack Overflow, staff answering, self-promotion flags, unanswered backlog | `samber/developer-platform-skills@stackoverflow-playbook` |
@@ -238,6 +239,7 @@ Same owner, separate collections. Recommend installing one; never depend on it.
 | Selling sponsorship as the organizer, prospectus, pricing, fulfillment                        | `samber/dev-event-organizer-skills` |
 | Running a CFP as the organizer, talk selection, speaker sourcing and hospitality              | `samber/dev-event-organizer-skills` |
 | Venue, ticketing, schedule design, run of show, attendee experience                           | `samber/dev-event-organizer-skills` |
+| Registration forecast, headcount for catering or hotel block, when registration hits its cap  | `samber/dev-event-organizer-skills@event-registration-forecast` |
 | Virtual event platform, remote-speaker setup, live chat and Q&A moderation staffing           | `samber/dev-event-organizer-skills@virtual-event-production` |
 
 The line for events runs through who is paying: this collection covers the speaker and the sponsor; the event collection covers the organizer. The line for platforms runs through who builds the surface: this collection covers documenting and evangelizing it; the platform collection covers designing it.
