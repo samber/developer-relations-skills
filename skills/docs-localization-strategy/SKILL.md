@@ -4,7 +4,7 @@ description: "Decides whether, where and how to localize developer documentation
 license: MIT
 metadata:
   author: Samuel Berthe
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # Docs Localization Strategy
@@ -199,3 +199,4 @@ Validate the plan section by section, getting agreement on each before writing t
 - `samber/developer-relations-skills@developer-keyword-research` - per-locale search demand; translated keywords are not what local developers type.
 - `samber/developer-relations-skills@developer-docs-structure-audit` - fix the source set's structure before multiplying it per locale.
 - `samber/developer-relations-skills@developer-how-to-guide` - the tested-version stamps a translated procedure must not inherit.
+- `samber/developer-relations-skills@docs-versioning-strategy` - which docs versions exist; older versions fall back to the source language.

@@ -136,6 +136,7 @@ This collection covers the full developer-relations surface.
 - [`changelog-writing`](./skills/changelog-writing): Turns raw commits, pull requests and tickets into release notes developers actually read: what shipped, what it means in practice, and what breaks.
 - [`version-migration-guide`](./skills/version-migration-guide): Writes or audits a breaking-change migration guide ordered by blast radius, with per-entry detection signals, before/after code, and a deprecation timeline.
 - [`coding-agent-docs-optimization`](./skills/coding-agent-docs-optimization): Makes SDK, API or protocol docs something a coding agent integrates from unattended: crawler access, machine-readable entry points, self-contained pages, a measured success rate.
+- [`docs-versioning-strategy`](./skills/docs-versioning-strategy): Decides how developer docs track several product, library or API versions: whether to version at all, a docs state per version (next, current, maintained, frozen, archived) derived from the support table, a ranked topology ladder from latest-only to a version switcher, source layout, a priced doc-fix backport rule, outdated-version banners and a retirement procedure.
 - [`docs-localization-strategy`](./skills/docs-localization-strategy): Decides whether and how to localize developer docs per language: evidence that the source language is the barrier, a ranked translation ladder, the page set, source-commit pins with a bundled drift check, and an ownership gate before launch.
 
 ### Discoverability & SEO

@@ -4,7 +4,7 @@ description: "Gets developer documentation cited, at the current version, in AI 
 license: MIT
 metadata:
   author: Samuel Berthe
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # Developer Docs AI Visibility
@@ -195,4 +195,5 @@ The three most often missed; all thirteen are in [./references/failure-modes.md]
 - samber/developer-relations-skills@developer-troubleshooting-docs - the error-string pages the panel shows are missing
 - samber/developer-relations-skills@developer-how-to-guide - the task pages the panel shows are missing
 - samber/developer-relations-skills@devrel-metrics - whether AI-answer correctness earns a place among the program's targets
+- samber/developer-relations-skills@docs-versioning-strategy - which docs versions stay live and which feed per-version machine-readable files
 - samber/developer-platform-skills@api-versioning-policy - see also: the deprecation and sunset policy the runtime warnings announce

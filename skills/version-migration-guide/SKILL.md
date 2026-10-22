@@ -4,7 +4,7 @@ description: Writes or audits the migration guide for a breaking change - what b
 license: MIT
 metadata:
   author: Samuel Berthe
-  version: "1.0.2"
+  version: "1.0.3"
 ---
 
 # Version Migration Guide
@@ -242,4 +242,5 @@ Start hard enforcement (brownouts, forced removal, closing the enterprise escape
 - samber/developer-relations-skills@tech-press-relations (press handling for a major version with breaking changes)
 - samber/developer-relations-skills@oss-release-policy (the deprecation window, support end dates and breaking-change definition this guide applies)
 - samber/developer-relations-skills@developer-docs-structure-audit (where the guide belongs in the docs site)
+- samber/developer-relations-skills@docs-versioning-strategy (whether the old version's docs stay live, frozen or archived once the guide ships)
 - samber/developer-platform-skills@api-versioning-policy (choosing the version scheme, deprecation windows and sunset timelines)

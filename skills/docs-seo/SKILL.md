@@ -4,7 +4,7 @@ description: Runs on-page and technical SEO for a documentation site - indexabil
 license: MIT
 metadata:
   author: Samuel Berthe
-  version: "1.0.1"
+  version: "1.0.2"
 ---
 
 # Docs SEO
@@ -116,6 +116,8 @@ The block can live in a CDN or bot-management default nobody on the docs team ch
 ## Step 3 - Settle the version and translation posture
 
 This is the step a general SEO audit skips and the one that decides whether the current release or a three-year-old one wins the query. Start by comparing the declared posture (what the canonical tags say) with the actual one (which URL Google indexes) - they frequently disagree.
+
+Which versions exist, their docs state (current, maintained, frozen, archived) and whether each needs its own search entry come from samber/developer-relations-skills@docs-versioning-strategy when it has run; this step turns those intents into one posture.
 
 Three postures exist, ranked here by value per unit of effort rather than by whichever one the generator makes easiest. Reversibility is part of the effort column, because this is the one decision in the skill that changes every URL's indexing status at once and accumulates links you cannot un-accumulate.
 
@@ -275,3 +277,4 @@ Company evaluation lands on limits, security, compliance, self-hosting and migra
 
 - samber/developer-platform-skills@api-reference-quality for the content quality of an API reference tree once this skill has made it indexable
 - samber/developer-relations-skills@docs-localization-strategy for whether a locale should exist at all, which pages it translates, and when a stale translation is retired
+- samber/developer-relations-skills@docs-versioning-strategy for which versions keep docs, their state, the switcher and the retirement trigger this skill's posture implements
