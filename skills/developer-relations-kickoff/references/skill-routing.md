@@ -239,6 +239,7 @@ Same owner, separate collections. Recommend installing one; never depend on it.
 | Selling sponsorship as the organizer, prospectus, pricing, fulfillment                        | `samber/dev-event-organizer-skills` |
 | Running a CFP as the organizer, talk selection, speaker sourcing and hospitality              | `samber/dev-event-organizer-skills` |
 | Venue, ticketing, schedule design, run of show, attendee experience                           | `samber/dev-event-organizer-skills` |
+| Registration forecast, headcount for catering or hotel block, when registration hits its cap  | `samber/dev-event-organizer-skills@event-registration-forecast` |
 | Virtual event platform, remote-speaker setup, live chat and Q&A moderation staffing           | `samber/dev-event-organizer-skills@virtual-event-production` |
 
 The line for events runs through who is paying: this collection covers the speaker and the sponsor; the event collection covers the organizer. The line for platforms runs through who builds the surface: this collection covers documenting and evangelizing it; the platform collection covers designing it.
