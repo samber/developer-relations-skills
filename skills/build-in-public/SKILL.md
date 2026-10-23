@@ -1,6 +1,7 @@
 ---
 name: build-in-public
-description: Designs a sustainable build-in-public practice for an open-source project or developer tool: how far up the disclosure ladder to go (shipping log, decisions, failures, metrics, revenue), a cadence the maintainer can hold, the platform mix, and the boundaries that keep security, customer and roadmap detail off the public record. Use whenever someone mentions building in public, a devlog, weekly updates, an open-startup or transparency dashboard, sharing metrics or revenue openly, fear of copycats, oversharing, wanting to stop publishing numbers, or a stalled practice they want to restart, even if they never say "build in public". Covers solo maintainers, bootstrapped and funded devtools teams. Not for a one-time launch; use samber/developer-relations-skills@oss-launch.
+description: >-
+  Designs a sustainable build-in-public practice for an open-source project or developer tool: how far up the disclosure ladder to go (shipping log, decisions, failures, metrics, revenue), a cadence the maintainer can hold, the platform mix, and the boundaries that keep security, customer and roadmap detail off the public record. Use whenever someone mentions building in public, a devlog, weekly updates, an open-startup or transparency dashboard, sharing metrics or revenue openly, fear of copycats, oversharing, wanting to stop publishing numbers, or a stalled practice they want to restart, even if they never say "build in public". Covers solo maintainers, bootstrapped and funded devtools teams. Not for a one-time launch; use samber/developer-relations-skills@oss-launch.
 license: MIT
 metadata:
   author: Samuel Berthe
@@ -24,6 +25,7 @@ Before designing anything, confirm this is the practice the user wants: three pr
 Ask one question at a time, offer multiple-choice options where you can, and stop as soon as you can name the goal, the audience, the deadline and the real capacity. Confirm the rest later.
 
 **Memory: Store a few info about the current task or project context. When memory lives in a file, use `devrel-context.md`; if a different memory system is in use, rely on that instead. Separate task info in different sections. Remove finished tasks. Add a date to a task; no date for general project context. Some interview responses may differ between 2 tasks.**
+
 1. What is the project, and who maintains it - one person, a small team, or a funded company?
 2. What outcome do you want from being public: contributors, users, sponsors or funding, a hiring or credibility signal for yourself, or a commercial funnel? (Rank the top two.)
 3. Who is the audience: individual developers choosing tools for themselves, or engineers who must get a tool approved inside a company? (Both is a valid answer.)
