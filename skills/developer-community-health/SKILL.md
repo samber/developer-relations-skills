@@ -1,6 +1,7 @@
 ---
 name: developer-community-health
-description: Designs and runs a developer community health measurement framework: activity, responsiveness, contributor-funnel and sentiment metrics, honest instrumentation, baseline-derived thresholds, and a report that ends in decisions. Use whenever someone asks how to measure their developer community, which community health metrics to track, whether their Discord, Slack or forum is dying, why the community feels quiet, or wants a community health dashboard, contributor funnel, community KPI set or engagement report - even if they only say "is our community doing OK". Do NOT use for launching a community (samber/developer-relations-skills@developer-community-launch) or company-wide devrel KPIs (samber/developer-relations-skills@devrel-metrics).
+description: >-
+  Designs and runs a developer community health measurement framework: activity, responsiveness, contributor-funnel and sentiment metrics, honest instrumentation, baseline-derived thresholds, and a report that ends in decisions. Use whenever someone asks how to measure their developer community, which community health metrics to track, whether their Discord, Slack or forum is dying, why the community feels quiet, or wants a community health dashboard, contributor funnel, community KPI set or engagement report - even if they only say "is our community doing OK". Do NOT use for launching a community (samber/developer-relations-skills@developer-community-launch) or company-wide devrel KPIs (samber/developer-relations-skills@devrel-metrics).
 license: MIT
 metadata:
   author: Samuel Berthe
@@ -40,6 +41,7 @@ This skill measures a community that already exists - a chat/forum space, an ope
 Ask one question at a time, multiple-choice when the options are knowable. Stop once you can fill the metric sheet. Do not run the list mechanically.
 
 **Memory: Store a few info about the current task or project context. When memory lives in a file, use `devrel-context.md`; if a different memory system is in use, rely on that instead. Separate task info in different sections. Remove finished tasks. Add a date to a task; no date for general project context. Some interview responses may differ between 2 tasks.**
+
 1. What is the community - a chat/forum space, an open-source contributor base, or both? Which venues exactly?
 2. Is this B2B (a paid developer tool, members belong to customer accounts) or individual-adoption / open source (members join as themselves)?
 3. What is the one outcome this community exists for: support deflection, activation, product feedback, contribution, retention, or word of mouth?
