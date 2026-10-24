@@ -58,7 +58,7 @@ If your harness has persistent memory, record the answers to questions 1, 2, 4, 
 
 ## Workflow
 
-1. **Collect the raw material.** Run [./scripts/collect-release-material.sh](./scripts/collect-release-material.sh) when you can execute shell commands in the repository. Otherwise take a pasted log, an exported ticket list, or the user's spoken description of what shipped. Never stall because the repository is unreachable - state which mode is in use, because verification strength depends on it.
+1. **Collect the raw material.** Run [./scripts/collect-release-material.sh](./scripts/collect-release-material.sh) when you can execute shell commands in the repository. Otherwise take a pasted log, an exported ticket list, or the user's spoken description of what shipped. Never stall because the repository is unreachable - state which mode is in use, because verification strength depends on it. For a hosted API whose contract-diff pipeline already emits traced, classified entries, take those entries as the raw material - building that pipeline is `samber/developer-platform-skills@api-changelog-automation`.
 2. **Reduce to the net diff.** Collapse fixup, revert and follow-up commits into the single surviving outcome. Three commits that add, revert and re-add a flag are one entry or none.
 3. **Select.** Keep every change a consumer can observe. Drop what they cannot. See the selection rules below.
 4. **Tier the release** to decide how much surface it earns. See Announcement tiering.

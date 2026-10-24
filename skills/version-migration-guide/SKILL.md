@@ -4,7 +4,7 @@ description: Writes or audits the migration guide for a breaking change - what b
 license: MIT
 metadata:
   author: Samuel Berthe
-  version: "1.0.3"
+  version: "1.0.4"
 ---
 
 # Version Migration Guide
@@ -143,6 +143,8 @@ A library upgrade is local and opt-in. A hosted API upgrade changes behavior on 
 - The data-layer consequences of changed identifiers or enums.
 - The cutover-and-rollback procedure.
 
+When the API's contract-diff pipeline already lists each breaking change with its source and action, start the guide's change inventory from those entries (`samber/developer-platform-skills@api-changelog-automation`).
+
 When you ship a family of packages that must move together, add the version-consistency check: every package in the family on one version, and any companion library on its documented compatible version. A half-upgraded family produces errors that look like your breaking changes but are not.
 
 Read [./references/api-version-migration.md](./references/api-version-migration.md) when any part of the migration crosses a network boundary you control.
@@ -207,7 +209,7 @@ Instrument in this order - value per hour of wiring, not the order they get repo
 
 The adoption curve and the straggler list tie on effort and are bought together: the same identity join produces both, the curve being the aggregate and the list its tail, so neither exists before that join does. Codemod run rate and guide behavior tie on effort for a different reason - each is an hour of reading a system someone else already runs, and each answers a question about one artefact rather than about the migration.
 
-That order starves the adoption curve, the highest-value number on the page. Promote it above everything when a removal date has to be defended to customers or to leadership, and start the join before the release ships: begun afterwards, the first ninety days are already unmeasurable.
+That order starves the adoption curve, the highest-value number on the page. Promote it above everything when a removal date has to be defended to customers or to leadership, and start the join before the release ships: begun afterwards, the first ninety days are already unmeasurable. For a hosted API, `samber/developer-platform-skills@integration-health-monitoring` turns that straggler list into a per-integration census with owners and runs the outreach to cutoff.
 
 Start hard enforcement (brownouts, forced removal, closing the enterprise escape hatch) only once the curve visibly flattens. Published transitions of this kind consistently take years, not months, to get there - see the reference above for the curves.
 

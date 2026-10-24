@@ -4,7 +4,7 @@ description: Before starting any developer-relations work - and again at the sta
 license: MIT
 metadata:
   author: Samuel Berthe
-  version: "1.0.16"
+  version: "1.0.17"
 ---
 
 # Developer Relations Kickoff
@@ -199,7 +199,7 @@ Say "the collection has no skill for this" - never promise a skill exists or inv
 Some tasks that land here aren't a true gap - they belong to the same owner's sibling collections:
 
 - Public API surface design, webhooks, the public CLI wrapping the API, an Agent Skill shipped inside an SDK or CLI repo and versioned with its releases, SDK portfolios, package and CLI binary publishing to any registry or channel, sample-app portfolios, public roadmaps, API preview, beta and design-partner programs, developer-portal design, OAuth for third-party apps, connector-marketplace operations, a repository's engagement on GitHub after launch (Discussions, release notifications, topics, star policy), a vendor's product tag on Stack Overflow (staff answering, disclosure, backlog triage), the vendor's official GitHub Action and CI integrations (orbs, GitLab components), the vendor's own Zapier integration (triggers, Platform CLI code, review and beta, Zap templates, versioning), and the vendor's own Terraform/OpenTofu provider (build, signed Registry releases, deprecation) belong to `samber/developer-platform-skills`.
-- Endpoint-level API reference completeness belongs to `samber/developer-platform-skills@api-reference-quality`; a hosted API's versioning and deprecation policy belongs to `samber/developer-platform-skills@api-versioning-policy`. A package's or project's release policy stays here, in `samber/developer-relations-skills@oss-release-policy`.
+- Endpoint-level API reference completeness belongs to `samber/developer-platform-skills@api-reference-quality`; a hosted API's versioning and deprecation policy belongs to `samber/developer-platform-skills@api-versioning-policy`; finding the deployed integrations still on a deprecated surface and chasing their owners before the sunset belongs to `samber/developer-platform-skills@integration-health-monitoring`; a breaking-change CI gate and an API changelog generated from spec diffs belong to `samber/developer-platform-skills@api-changelog-automation`. A package's or project's release policy stays here, in `samber/developer-relations-skills@oss-release-policy`.
 - Organizing your own event - venue, ticketing, sponsor sales, run of show, speaker sourcing as the organizer - belongs to `samber/dev-event-organizer-skills`.
 
 Recommend installing the sibling collection instead of stretching a devrel skill onto the task, and never treat a sibling as a dependency this collection needs to function. See [references/skill-routing.md](./references/skill-routing.md) § Sibling-collection recommendations for the detection signals and the boundary per topic.
