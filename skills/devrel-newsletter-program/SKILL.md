@@ -4,7 +4,7 @@ description: "Designs a developer newsletter as a standing programme - whether t
 license: MIT
 metadata:
   author: Samuel Berthe
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # DevRel Newsletter Program
@@ -156,6 +156,7 @@ Context, never targets. Software senders' median click rate sits near 1% per sen
 
 - [./references/published-practice.md](./references/published-practice.md) - cadences, templates, inclusion rules, handoff and shutdown stories, benchmarks and consent rules from real developer newsletters
 - [./references/charter-example.md](./references/charter-example.md) - worked rescue charter and a negative example
+- samber/developer-relations-skills@devrel-newsletter-issue - writing each issue against the charter's template
 - samber/developer-relations-skills@devrel-content-calendar - newsletter issues consume the same writer and reviewer capacity
 - samber/developer-relations-skills@devrel-metrics - which newsletter signals count toward the devrel framework
 - samber/developer-relations-skills@build-in-public - the newsletter as one owned anchor surface
