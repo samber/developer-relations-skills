@@ -135,6 +135,7 @@ Two more sound like strategy and are not interchangeable with the five above:
 - `samber/developer-relations-skills@developer-case-study` is the customer's story rather than yours.
 - `samber/developer-relations-skills@devrel-content-calendar` plans the quarter these pieces land in and never writes them.
 - `samber/developer-relations-skills@devrel-newsletter-program` designs a standing newsletter as a programme - whether to run one, cadence, template, owner, sunset - and never writes an issue. Release notes stay with `samber/developer-relations-skills@changelog-writing`; the quarter's slot plan stays with the calendar.
+- `samber/developer-relations-skills@devrel-newsletter-issue` writes, edits or reviews one issue against that programme's template - item write-ups, own releases, sponsor slot, email-safe code, plain-text part, pre-send check, corrections. It starts once the items are chosen; a launch announcement, transactional or internal staff email is not an issue.
 
 ### Events - speak, sponsor, or run it yourself
 
@@ -214,7 +215,7 @@ State these plainly as gaps. Do not route to a neighbour.
 - The exec-facing DevRel report narrative and budget defense.
 - A trademark _usage and enforcement_ policy aimed at third parties. Who holds the mark, the domains and the registry accounts belongs to `samber/developer-relations-skills@oss-governance`; clearing a name before launch belongs to `samber/developer-relations-skills@oss-launch`; registering it before selling belongs to `samber/developer-relations-skills@oss-monetization`. Monetizing one open-source project is _not_ a gap - `samber/developer-relations-skills@oss-monetization` owns it - nor are maintainer burnout (`samber/developer-relations-skills@oss-maintainer-sustainability`) or succession and bus-factor planning (`samber/developer-relations-skills@oss-governance`: contributor absence factor, trust ladder, inactivity rule, emeritus).
 - Organizing your own conference or hackathon, conference booth operations, post-event follow-up.
-- Student and campus programs. A developer newsletter is _not_ a gap at programme level - `samber/developer-relations-skills@devrel-newsletter-program` owns it; writing an issue, list growth, inbox placement and selling sponsor slots remain gaps.
+- Student and campus programs. A developer newsletter is _not_ a gap at programme level - `samber/developer-relations-skills@devrel-newsletter-program` owns it; writing one issue is not a gap either - `samber/developer-relations-skills@devrel-newsletter-issue` owns it; list growth, inbox placement and selling sponsor slots remain gaps.
 - Choosing a docs platform, and monitoring brand mentions across developer channels or brand share in AI answers. Docs cited at the right version in AI answers is _not_ a gap - `samber/developer-relations-skills@developer-docs-ai-visibility` owns it.
 - Producing any final asset: slides, video files, rendered graphics, published pages.
 - Legal advice of any kind.
