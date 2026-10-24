@@ -4,7 +4,7 @@ description: Runs press and light analyst relations for a developer-facing produ
 license: MIT
 metadata:
   author: Samuel Berthe
-  version: "1.0.1"
+  version: "1.0.2"
 ---
 
 # Tech Press Relations
@@ -362,3 +362,4 @@ Do not send anything until all five hold. The threshold is self-set - no publish
 - samber/developer-relations-skills@developer-case-study
 - samber/developer-relations-skills@tech-podcast-interview-prep
 - samber/developer-relations-skills@devrel-metrics
+- samber/developer-relations-skills@devrel-newsletter-growth
