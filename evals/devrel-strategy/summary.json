@@ -9,9 +9,9 @@
   "pass_rate_without_skill_pct": 25.8,
   "delta_pp": 39.4,
   "uplift_multiplier": 2.53,
-  "trigger_accuracy_pct": 51.7,
+  "trigger_accuracy_pct": 50.0,
   "trigger_queries": 116,
-  "trigger_positive_fire_rate": 0.431,
+  "trigger_positive_fire_rate": 0.0,
   "trigger_run_suspect": true,
   "trigger_suspect_reason": "fewer than half the should-trigger queries fired at all: re-measure with --redo-trigger before reading this as a routing score",
   "subjective_ac2": 1.0,
@@ -24,7 +24,7 @@
     "subjective_grader": "opus",
     "trigger": "sonnet"
   },
-  "harness_version": "2.1.267 (Claude Code)",
+  "harness_version": "2.1.309 (Claude Code)",
   "conditions": {
     "mcp_servers": "disabled",
     "project_claude_md": "not loaded (trials and grading)",
