@@ -46,7 +46,7 @@ Classification and demand signals say what is wrong today. Only user testing say
 | 90% success with 30% direct path                      | "Users find the content eventually but get lost along the way - the category labels are ambiguous" | Fix labels, keep the tree                                                 |
 | > 80% success and > 60% direct path across core tasks | Structure is not the bottleneck                                                                    | **Cancel the restructure**; spend the budget on gap-filling and freshness |
 
-That last row is the most valuable one in this file. A restructure that a tree test says is unnecessary costs a quarter of writing time and breaks every inbound link for nothing.
+That last row is the most valuable one in this file. A restructure that a tree test says is unnecessary costs weeks of writing and review time and breaks every inbound link for nothing.
 
 **When user testing is not available**, say so in the report and downgrade every structural recommendation from "validated" to "proposed". Analytics substitute partially:
 

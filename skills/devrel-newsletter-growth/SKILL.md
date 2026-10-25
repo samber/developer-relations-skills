@@ -4,7 +4,7 @@ description: "Grows and keeps a developer newsletter's subscriber list - signup 
 license: MIT
 metadata:
   author: Samuel Berthe
-  version: "1.0.1"
+  version: "1.0.2"
 ---
 
 # DevRel Newsletter Growth
@@ -83,7 +83,7 @@ Rank channels by confirmed, engaged subscribers bought per hour of owner effort.
 | Unpaid platform recommendations from peer newsletters | `+` setup, then occasional approvals | the peer's readers at their signup moment | `-` label, consent naming you | your platform has no such feature, or audiences do not overlap |
 | Republishing issues and posting the lead item (dev.to with a canonical link, social, community forums) | `--` an hour per issue, every issue, as a standing job | discovery where developers browse | `-` each platform's terms and self-promotion rules | no canonical link can be set, or the community bans self-promotion |
 | Swap with a peer newsletter | `-` a week of coordination per swap | the peer's audience, if it overlaps | `-` a label on both sides | audiences do not overlap |
-| Referral programme with rewards | `---` a quarter to set up, then a standing fraud job | compounding growth from readers who share | `--` reward and contest terms, fraud screening | the list is small, or content is not passed around at work |
+| Referral programme with rewards | `---` a few weeks to set up, then a standing fraud job | compounding growth from readers who share | `--` reward and contest terms, fraud screening | the list is small, or content is not passed around at work |
 | Paid acquisition and paid recommendation networks | `--` a standing budget and weekly cohort checks | volume on demand | `---` consent collected by a third party, named per newsletter, audited | screening is looser than organic behaviour |
 
 - efficiency: owned surfaces > archive and share line > item pitches > talk end cards > unpaid recommendations > republishing > swaps > paid acquisition > referral programme

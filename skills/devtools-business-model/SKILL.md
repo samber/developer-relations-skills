@@ -4,7 +4,7 @@ description: Chooses the business model for a developer tool - proprietary SaaS,
 license: MIT
 metadata:
   author: Samuel Berthe
-  version: "1.0.1"
+  version: "1.0.2"
 ---
 
 # Devtools Business Model
@@ -85,7 +85,7 @@ Rank whatever survives that pass by value returned per unit of founder effort, e
 Effort in magnitudes:
 
 - Dual licensing: near-zero engineering, wherever the CLA and full copyright ownership already exist, an enquiry page and a lawyer on call.
-- Hosted SaaS and consumption metering: each about a quarter of engineering to operate, meter, cap and bill.
+- Hosted SaaS and consumption metering: each a few weeks of engineering to stand up, meter, cap and bill.
 - Open core: a standing job of two release trains plus the telemetry to find who runs the free one.
 - Support and LTS, hosted open source: standing jobs made of people, a support rota and an SRE team.
 - Embedded OEM, ecosystem take-rate: standing jobs of business development, supplier operations and payouts.

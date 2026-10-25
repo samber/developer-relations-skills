@@ -124,8 +124,8 @@ No expiry in year one; revisit when the topology model changes.
 
 ## Operating model
 Owner: <named person>, 12h/week, accountable for curriculum truth.
-Authoring 16h/week (2 people), technical review 4h/week from the platform team,
-lab maintenance 6h/week, learner support 3h/week.
+Authoring 8h/week (1 person), technical review 4h/week from the platform team,
+lab maintenance 4h/week, learner support 3h/week.
 Platform: hands-on lab platform embedded in the docs site; every lesson and lab source
 in our own repository, in Markdown plus Terraform.
 Refresh trigger: re-align within 4 weeks of any minor release that changes the pipeline
@@ -135,8 +135,8 @@ region proves demand. Partner delivery: train-the-trainer for the two largest pa
 in year two, not year one.
 
 ## Budget shape
-Year one: build 240 person-hours plus lab platform subscription.
-Year two recurring: ~30h/week steady state, dominated by lab maintenance and
+Year one: build 120 person-hours plus lab platform subscription.
+Year two recurring: ~24h/week steady state, dominated by lab maintenance and
 per-release re-alignment. If year two cannot be staffed, do not start year one.
 
 ## Measurement plan

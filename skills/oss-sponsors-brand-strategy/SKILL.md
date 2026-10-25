@@ -4,7 +4,7 @@ description: Builds a company's open-source sponsorship portfolio - which projec
 license: MIT
 metadata:
   author: Samuel Berthe
-  version: "1.0.1"
+  version: "1.0.2"
 ---
 
 # OSS Sponsors Brand Strategy
@@ -98,7 +98,7 @@ Effort in magnitudes:
 
 - Breadth: near-zero once the resolver runs.
 - Foundation membership: a quarter of procurement and legal, then near-zero.
-- Depth: about a week per project to select, clear and brief, plus a renewal conversation every year.
+- Depth: a few days per project to select, clear and brief, plus a renewal conversation every year.
 - Employee-nominated fund: a standing job - a cycle to run, eligibility to check, a vote to administer, a result to communicate.
 
 - **Breadth**: small automatic amounts across the whole dependency graph. Near-zero discovery cost, near-zero visibility. Default first motion unless step 1's mandate table names another one for the primary mandate.

@@ -4,7 +4,7 @@ description: Designs an issue and pull-request triage system a maintainer team c
 license: MIT
 metadata:
   author: Samuel Berthe
-  version: "1.0.1"
+  version: "1.0.2"
 ---
 
 # OSS Issue Triage
@@ -87,7 +87,7 @@ Do not import a minutes-per-item constant. Time the pilot session in step 9 and 
 When capacity is below inflow, no label scheme fixes it. Three levers close the gap; pick by queue relieved per maintainer hour, not by which is quickest to type:
 
 - efficiency: cut intake > shorten the promise > add triagers
-- effort: shorten the promise (rewrite one line, defend it once) > cut intake (a day of forms and chooser configuration) > add triagers (recruit, grant permissions, calibrate - a quarter before a new triager is net positive)
+- effort: shorten the promise (rewrite one line, defend it once) > cut intake (half a day of forms and chooser configuration) > add triagers (recruit, grant permissions, calibrate - a quarter before a new triager is net positive)
 - value: cut intake (permanently lowers the left side of the arithmetic) > add triagers (the only lever that raises capacity at all) > shorten the promise (nothing improves; the promise merely stops being broken)
 - compliance cost: cut intake == add triagers (tied because both are internal decisions with no external counterparty) > shorten the promise where question 6 found a contractual obligation, since there the published target is a commitment and shortening it is a contract change
 

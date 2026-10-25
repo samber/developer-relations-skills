@@ -162,7 +162,7 @@
         "Ranks Gabor-Granger above Van Westendorp on evidence strength",
         "Notes that Van Westendorp needs roughly 100+ respondents per segment, and checks the 300-person panel against the four segments",
         "States that stated willingness to pay on a described product is weaker evidence than observed behaviour on a live one",
-        "Prioritises reading the existing usage and churn data, which costs about a day, ahead of fielding a survey that costs weeks and a respondent panel",
+        "Prioritises reading the existing usage and churn data, which costs a few hours, ahead of fielding a survey that costs weeks and a respondent panel",
         "Recommends win/loss and churn interviews as the only source of real price objections with the alternative named",
         "Excludes MaxDiff or feature-ranking research from the price decision and assigns it to packaging instead",
         "Identifies the usage threshold at which customers call the product load-bearing as an output of the usage-value correlation work"
@@ -183,7 +183,7 @@
         "Recommends publishing prices as far up the ladder as the business can bear",
         "Requires every rung to carry a written trigger event that moves a customer up, and states that a rung with no trigger is a price list rather than a ladder",
         "Notes that the free surface and the self-serve rung share most of their effort because one meter enforces both, with free limits sitting on the same axis as the paid metric",
-        "Gives the effort magnitudes: the free surface and self-serve rung about a quarter each and largely shared, the team rung about a quarter more, and enterprise as a standing job of security reviews, questionnaires, custom terms and SLA credits",
+        "Gives the effort magnitudes: the free surface and self-serve rung a few weeks each and largely shared, the team rung a few weeks more, and enterprise as a standing job of security reviews, questionnaires, custom terms and SLA credits",
         "Checks the account economics before putting a human in the sale, citing roughly six figures of annual revenue per account, attributed to Christoph Janz, as the anchor for field sales",
         "Cites LTV/CAC of at least 3x with CAC payback inside 12 months, attributed to David Skok and labelled a hardened convention rather than a measured constant",
         "States that below low-four-figure annual contract value the motion should be self-serve only",

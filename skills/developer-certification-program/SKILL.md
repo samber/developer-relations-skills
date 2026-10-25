@@ -4,7 +4,7 @@ description: "Plans the issuer side of a developer certification or badge progra
 license: MIT
 metadata:
   author: Samuel Berthe
-  version: "1.0.1"
+  version: "1.0.2"
 ---
 
 # Developer Certification Program

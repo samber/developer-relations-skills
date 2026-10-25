@@ -6,15 +6,15 @@ Five rungs of automation exist, ranked here by reader hours saved per engineerin
 | ------------------------------------------------ | ----------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
 | Search patterns and literal messages, per change | Every call site located, by a human or an agent, with no tooling at all | Near-zero - it is the affected-if line you already write                      |
 | Deprecation warnings in N-1                      | Their own build output becomes their personal inventory                 | One interim release, plus the warning plumbing behind it                      |
-| Lint rule                                        | New code stops reintroducing the old API after the migration            | A day, then it lives with the ruleset                                         |
-| Codemod                                          | The mechanical majority of edits, across a whole codebase               | A week, corpus validation, and a rewrite every time the API moves again       |
+| Lint rule                                        | New code stops reintroducing the old API after the migration            | A few hours, then it lives with the ruleset                                   |
+| Codemod                                          | The mechanical majority of edits, across a whole codebase               | A day or two, corpus validation, and a rewrite every time the API moves again |
 | Compat build                                     | A migration that ships to production half-done                          | A standing job: dual behavior paths and per-feature flags until it is retired |
 
 - value: compat build > codemod > deprecation warnings in N-1 > search patterns and literal messages > lint rule
 - engineering plus upkeep effort: compat build > codemod > deprecation warnings in N-1 > lint rule > search patterns and literal messages
 - efficiency: search patterns and literal messages > deprecation warnings in N-1 > lint rule > codemod > compat build
 
-The lint rule outranks the codemod on efficiency while losing to it badly on value: it is a day of work against a week, and it defends the migration after the guide stops being read, which is where the second wave of regressions comes from.
+The lint rule outranks the codemod on efficiency while losing to it badly on value: it is a few hours of work against a day or two, and it defends the migration after the guide stops being read, which is where the second wave of regressions comes from.
 
 **Default: ship the first rung, always**, and buy the second whenever N-1 can still ship a release. That order starves the compat build and, one rung above it, the codemod - the two things readers ask for by name.
 

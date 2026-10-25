@@ -4,7 +4,7 @@ description: Plans a quarter of developer-relations content as a dated slot plan
 license: MIT
 metadata:
   author: Samuel Berthe
-  version: "1.0.1"
+  version: "1.0.2"
 ---
 
 # DevRel Content Calendar
@@ -44,7 +44,7 @@ Before any dates get placed, present the candidate shapes in the ranked order be
 
 | Shape                           | Capacity cost                                                                                                      | What it buys this quarter                                                          | What it buys a year out                                                                 | Fails when                                             |
 | ------------------------------- | ------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | ------------------------------------------------------ |
-| Evergreen-compounding (default) | a week per piece, one reviewer, nothing outside the team                                                           | little that is visible; the results arrive after the quarter closes                | the only shape that compounds - next quarter starts with the explainers already written | the team is judged on this quarter alone               |
+| Evergreen-compounding (default) | two or three days per piece, most of it review, one reviewer, nothing outside the team                             | little that is visible; the results arrive after the quarter closes                | the only shape that compounds - next quarter starts with the explainers already written | the team is judged on this quarter alone               |
 | Launch-dominated                | a quarter of committed capacity locked to one date, plus product and marketing coordination and their review chain | the highest peak attention available; the one week the audience is already looking | close to nothing - the pieces age with the release they described                       | the date slips, and it takes the quarter with it       |
 | Event-led                       | a quarter of capacity, plus travel weeks nobody counts, plus a standing job keeping a speaker pipeline alive       | reach, recruiting and relationships that no written piece reaches                  | the recordings and write-ups, if someone schedules them as their own slots              | the CFP outcomes you do not control come back rejected |
 

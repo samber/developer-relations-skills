@@ -4,7 +4,7 @@ description: "Finds and selects the items for one email developer newsletter iss
 license: MIT
 metadata:
   author: Samuel Berthe
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # DevRel Newsletter Sourcing
@@ -55,7 +55,7 @@ Present the channels in this order, say the ranking out loud, and recommend a se
 | Standing submission channel: form, reply-to address, pull request to the draft, a nomination thread | `++` an hour to set up, then review time | external items; Cooperpress, which runs several weekly language newsletters, has said about a third of its items arrive this way | self-promotion, and volume that outgrows the reviewers |
 | Event calendar | `++` minutes | the events section | calendar dates that differ from the event page |
 | Demand signals: repeated support questions, community questions, docs searches returning nothing | `+` an hour per issue | evergreen items: the existing page that answers it, or a missing page to flag | needs access to support and search logs |
-| Community scan: forum, Reddit, Hacker News, chat | `--` hours, noisy | community voice, projects, observations | ranks by popularity, misses anything not posted there |
+| Community scan: forum, Reddit, Hacker News, chat | `-` an hour or two, noisy | community voice, projects, observations | ranks by popularity, misses anything not posted there |
 | Other developer newsletters | `+++` minutes | a cross-check only | re-reports what readers already received |
 
 - efficiency: own feed > ecosystem feeds > submissions > event calendar > demand signals > community scan

@@ -4,7 +4,7 @@ description: Splits a developer relations budget across pillars - events, conten
 license: MIT
 metadata:
   author: Samuel Berthe
-  version: "1.0.1"
+  version: "1.0.2"
 ---
 
 # DevRel Budget Allocation
@@ -132,11 +132,11 @@ Shortlist from this default ordering, not from the reference's page order. It ra
 
 Cash is the thing being allocated here, so using it as the denominator would rank the cheapest shape first and answer a question nobody asked. Magnitudes only, no figures.
 
-- **effort**, heaviest first: `community-led > enablement-first == content-compounding > field-and-events > ecosystem-and-sponsorship`
+- **effort**, heaviest first: `community-led > content-compounding > enablement-first > field-and-events > ecosystem-and-sponsorship`
 - **value**, outcome bought read over two years: `content-compounding > enablement-first > community-led > field-and-events > ecosystem-and-sponsorship`
 - **efficiency**, value per hour committed: `enablement-first > content-compounding > field-and-events > ecosystem-and-sponsorship > community-led`
 
-The one tie: enablement-first and content-compounding cost the same effort. Both convert into a standing weekly shift that outlives the period - a maintenance shift for one, a review shift for the other - and both need about a quarter before output runs at volume. Field-and-events beats sponsorship on efficiency because an event at least leaves behind material the program keeps; a sponsorship's whole return sits inside a surface someone else controls.
+Content-compounding outweighs enablement-first on setup, not on upkeep. Both convert into a standing weekly shift that outlives the period - a maintenance shift for one, a review shift for the other. But samples, quickstarts and a sandbox build in about a month, while a publishing engine needs about a quarter of reviewer and editorial setup before output runs at volume. Field-and-events beats sponsorship on efficiency because an event at least leaves behind material the program keeps; a sponsorship's whole return sits inside a surface someone else controls.
 
 Barbell is deliberately absent from that ordering. It is a concentration rule applied on top of whichever shape wins, not a pillar mix of its own, so ranking it against the others would be false precision. Apply it by default anyway: most devrel work only pays past a threshold of consistency, so two pillars funded properly beat four funded at a quarter each.
 

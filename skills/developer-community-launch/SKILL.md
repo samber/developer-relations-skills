@@ -4,7 +4,7 @@ description: Decides whether, where and when to launch a developer community, th
 license: MIT
 metadata:
   author: Samuel Berthe
-  version: "1.0.1"
+  version: "1.0.2"
 ---
 
 # Developer Community Launch
@@ -95,14 +95,14 @@ The gates, their pass conditions and the verdict rule are a baseline set here ra
 Five of them, ranked by evidence bought per hour of standing presence - because the thing blocked is the launch decision, and the alternative that serves the outcome without producing that evidence leaves the user exactly where they started. Say the order out loud, then recommend one:
 
 - efficiency: `answer publicly where the audience already is > forge-native discussions on the repository > troubleshooting/FAQ surface > scheduled office hours > email or issue-based feedback loop`
-- effort (standing presence, highest first): `office hours > answer publicly == forge-native discussions == feedback loop (tie argued: all three are an hour a week of replies written when the owner gets to them - no calendar to honor, no session to prepare, no attendance to fill) > FAQ surface (a week to write, near-zero to keep)`
+- effort (standing presence, highest first): `office hours > answer publicly == forge-native discussions == feedback loop (tie argued: all three are an hour a week of replies written when the owner gets to them - no calendar to honor, no session to prepare, no attendance to fill) > FAQ surface (a day or two to write, near-zero to keep)`
 - value (evidence bought toward the launch decision, highest first): `answer publicly > forge-native discussions > office hours > FAQ surface > feedback loop`
 
 Each one, with its trade-off:
 
 - **Answer publicly where the audience already is** - an hour a week, forever, in a room someone else keeps alive. Tests the demand gate and the venue-vacuum gate at the same time: you find out whether the questions repeat _and_ whether the existing space already serves them. Buys no archive and no member list.
 - **Forge-native discussions on the repository** - an hour a week, forever, batched. The only alternative that converts directly into the launch if it works: the threads are indexed, owned and exportable, and the members are already there. Needs the audience to be on the forge, and an empty Discussions tab is a ghost town in miniature.
-- **Troubleshooting/FAQ surface** - a week to write, near-zero forever, minus a refresh a quarter. Deflects the repeat question permanently and earns search traffic, but a page cannot show you users answering each other, so it barely moves the demand gate. Promote it to first when the primary outcome is Support: it may resolve the need outright and end the launch question.
+- **Troubleshooting/FAQ surface** - a day or two to write, near-zero forever, minus a refresh a quarter. Deflects the repeat question permanently and earns search traffic, but a page cannot show you users answering each other, so it barely moves the demand gate. Promote it to first when the primary outcome is Support: it may resolve the need outright and end the launch question.
 - **Scheduled office hours** - an hour a week, forever, plus prep, and it must survive a session nobody attends. Buys the deepest signal per attendee and the closest proxy to community behavior: whether anyone shows up for a recurring thing. Promote it when seed supply is the failing gate.
 - **Email or issue-based feedback loop** - an hour a week, forever, closing each loop by hand. Buys product feedback, and structurally cannot buy peer-conversation evidence: it is one-to-one by construction, so it never advances the gate that blocked the launch.
 

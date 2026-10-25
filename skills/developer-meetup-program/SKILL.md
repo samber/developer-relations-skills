@@ -4,7 +4,7 @@ description: Designs and runs a recurring developer meetup or user group - purpo
 license: MIT
 metadata:
   author: Samuel Berthe
-  version: "1.0.1"
+  version: "1.0.2"
 ---
 
 # Developer Meetup Program
@@ -144,7 +144,7 @@ Offer the top two or three of the ranking below with their trade-offs and a reco
 - **Study group** - the group works through a book, course or spec together (CNCF lists study groups as a valid meetup style). Ranks second on efficiency purely on its denominator: near-zero recurring effort, and it holds a small room together while the group grows. Caps out - it will not grow a room past the people already committed.
 - **Two-talk classic** - 20-30 minutes each. Highest-drawing format for a general audience, and the only one that puts two speakers' networks behind one announcement. Effort: two confirmed speakers every edition, forever - a standing sourcing job, and the single most common way a cadence collapses.
 - **Open space / unconference** - attendees propose the agenda on the night. Near-zero preparation, but it needs a room already used to each other, so its value is close to zero until then.
-- **Hands-on workshop** - 60-90 minutes, laptops required. Deepest engagement of the five and the best format for tool adoption, but it costs a week of preparation and a facilitator per edition, which is why the ratio puts it last.
+- **Hands-on workshop** - 60-90 minutes, laptops required. Deepest engagement of the five and the best format for tool adoption, but it costs a day or two of preparation and a facilitator per edition, which is why the ratio puts it last.
 
 - Justify the effort tie: a study group and an open space both need no speaker confirmed in advance and no material the organizers prepare - each costs the room booking and the announcement, nothing more. They differ sharply on value, not on effort.
 - Default to anchor + lightning for a new or rebuilding group.

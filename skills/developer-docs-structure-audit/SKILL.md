@@ -4,7 +4,7 @@ description: Audits an existing developer documentation set's structure - a page
 license: MIT
 metadata:
   author: Samuel Berthe
-  version: "1.0.1"
+  version: "1.0.2"
 ---
 
 # Docs Structure Audit
@@ -185,13 +185,13 @@ It rules out two moves you should rule out too:
 
 Within that loop, order the queue by reader need fixed per hour of writing and review - not by how many findings an action closes, and not by what is cheapest. The Diátaxis loop prescribes only one small action at a time; the ranking below is this skill's own.
 
-| Action               | Effort                                                                    | Reader need it fixes                                    |
-| -------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------- |
-| Split a mixed page   | a day - both halves rewritten, two URLs, one redirect; no SME arbitration | the reader stops landing on a page doing two jobs       |
-| Merge duplicates     | a day or more - someone with authority must say which text is true        | the reader stops getting two contradictory answers      |
-| Move a page          | an hour - a path change plus its redirect                                 | the reader finds the page where the section promised it |
-| Write a missing page | a week, then a refresh every release - permanent surface                  | the reader gets an answer where they got nothing        |
-| Rename a section     | an hour of editing, but every child URL and deep link moves with it       | the reader reads a label matching what is inside        |
+| Action               | Effort                                                                                    | Reader need it fixes                                    |
+| -------------------- | ----------------------------------------------------------------------------------------- | ------------------------------------------------------- |
+| Split a mixed page   | half a day - both halves rewritten, two URLs, one redirect; no SME arbitration            | the reader stops landing on a page doing two jobs       |
+| Merge duplicates     | a day or more - someone with authority must say which text is true                        | the reader stops getting two contradictory answers      |
+| Move a page          | an hour - a path change plus its redirect                                                 | the reader finds the page where the section promised it |
+| Write a missing page | a day or two, mostly review and testing, then a refresh every release - permanent surface | the reader gets an answer where they got nothing        |
+| Rename a section     | an hour of editing, but every child URL and deep link moves with it                       | the reader reads a label matching what is inside        |
 
 - efficiency: split > merge > move > write a missing page > rename
 - value: merge > write a missing page > split > move > rename
@@ -199,7 +199,7 @@ Within that loop, order the queue by reader need fixed per hour of writing and r
 
 Split leads on efficiency despite merging being worth more, because a merge blocks on someone else deciding which text is correct and a split does not. Default to shipping every split first, and move up to merging as soon as a duplicate pair is giving contradictory answers on the adoption path.
 
-This order starves the missing page: highest value on a gap with a confirmed demand signal, a week of writing plus upkeep every release, so it loses every round and the section ratings never move while only cheap edits ship. Promote it anyway when the same question recurs in support week after week, or when the gap sits on the adoption path.
+This order starves the missing page: highest value on a gap with a confirmed demand signal, a day or two of writing plus upkeep every release, so it loses every round and the section ratings never move while only cheap edits ship. Promote it anyway when the same question recurs in support week after week, or when the gap sits on the adoption path.
 
 Delete rather than demote what the constraints rule out:
 

@@ -13,7 +13,7 @@ description: >-
 license: MIT
 metadata:
   author: Samuel Berthe
-  version: "1.0.1"
+  version: "1.0.2"
 ---
 
 # Developer Feedback Loop
@@ -139,7 +139,7 @@ Keep the label set to three single-valued axes - type, area, status - plus two p
 Handoff formats, ranked by decisions produced per hour of product attention:
 
 - efficiency: a decision review per planning cycle > a DevRel seat in product planning > a quarterly voice-of-developer report > a weekly digest
-- effort (least first): weekly digest (an hour of writing, no meeting) > quarterly report > decision review (an hour of product time per cycle) > planning seat (political capital, a standing commitment)
+- effort (least first): weekly digest (well under an hour of writing, no meeting) > quarterly report > decision review (an hour of product time per cycle) > planning seat (political capital, a standing commitment)
 - value: planning seat (feedback shapes options before they harden) > decision review (statuses on named records) > quarterly report (trend and credibility) > weekly digest (informs; decides nothing)
 
 Efficiency starves the planning seat: highest value, highest political cost. Ask for it once the decision review has run two cycles and product has seen records ship.

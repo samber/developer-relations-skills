@@ -17,7 +17,7 @@
         "Classifies the project as the 'stadium' shape (many users, very few contributors) attributed to Nadia Eghbal, and concludes the contract is cut before waiting on a co-maintainer.",
         "Orders the moves as publish the contract, declare a maintenance tier, cut intake (issue forms, support routed off the tracker) ahead of any pause, backlog reset, recruitment or funding.",
         "Produces a README status block carrying a status word (maintenance-only or similar), about 3 hours a week, a window derived from the budget, in-scope and out-of-scope lines, and where questions go.",
-        "Budgets the setup work as transition hours in a dated bridge above the 3-hour steady state, rather than fitting a day of setup into one week's budget.",
+        "Budgets the setup work as transition hours in a dated bridge above the 3-hour steady state, rather than squeezing several hours of setup into one week's budget.",
         "Cites the core-js figure (about $400 a month for about 250 million monthly downloads and about 250 hours of work a month) as evidence that donations rarely reach a salary, and prefers time-based money such as employer hours, a fellowship or a support contract.",
         "Hands sponsor tier and program design to samber/developer-relations-skills@oss-sponsors-fundraising rather than writing it inline.",
         "Sets a review date and lists the five health-check items (budget held, contract kept, no single key holder or an end date, end state written, security path named), labelled as self-set baselines."

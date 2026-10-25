@@ -102,7 +102,7 @@
         "Recommends enforcing operationId uniqueness in CI with a spec linter",
         "Puts closing the value space second, naming enums, explicit `required`, `default` values, `format` keywords, and `oneOf` with a discriminator",
         "States that an unconstrained field is where an invented value goes, and that each constraint is a one-line edit removing a whole class of them",
-        "Ranks the summary/description split below those cheaper edits and states it costs on the order of a week on a real spec",
+        "Ranks the summary/description split below those cheaper edits and states it costs on the order of a day or two on a real spec",
         "Splits summary and description by job: summary is one imperative line for choosing the call",
         "Assigns description the operational contract: preconditions, side effects, idempotency, required auth scope, rate limits, and a pointer to the sibling operation that might fit better",
         "Places per-language runnable samples attached to the operation last in the default order, while promoting them to first for the two or three operations cold runs fail on repeatedly"

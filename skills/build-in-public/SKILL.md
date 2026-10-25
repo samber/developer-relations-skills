@@ -5,7 +5,7 @@ description: >-
 license: MIT
 metadata:
   author: Samuel Berthe
-  version: "1.0.2"
+  version: "1.0.3"
 ---
 
 # Build in Public
@@ -82,7 +82,7 @@ Present the top two with their trade-offs, recommend one, and say why the other 
 - compliance cost: `open-startup dashboard > decisions-and-failures essays == shipping log`
 
 - **Release-anchored shipping log** (ladder rungs 1-2) - publishes releases, merged work and the decisions behind them. Buys proof of life and adoption confidence; obligates you to keep shipping, since the silence is then visible. Leads on efficiency because the artefact already exists: the effort is a link and a paragraph, not a new piece of work.
-- **Decisions-and-failures essays** (rungs 2-3) - architecture choices, rejected options, outages, wrong bets. Buys the highest trust-per-word available: what convinces a stranger they could contribute. Obligates you to publish the uncomfortable ones too, at a real cost of reputational exposure rather than hours - a day per essay, due in the week you least want to spend it, because failure posts land exactly when things go badly.
+- **Decisions-and-failures essays** (rungs 2-3) - architecture choices, rejected options, outages, wrong bets. Buys the highest trust-per-word available: what convinces a stranger they could contribute. Obligates you to publish the uncomfortable ones too, at a real cost of reputational exposure rather than hours - half a day per essay, due in the week you least want to spend it, because failure posts land exactly when things go badly.
 - **Open-startup dashboard** (rungs 4-5) - operational metrics, and sometimes revenue, the least reversible of the three. Buys maximum attention plus sponsorship and hiring pull. Obligates a baseline you are compared against forever, publication through the bad quarters, legal review, and a changed negotiating position - the only one of the three whose obligation is standing rather than per-post.
 
 - Justify the compliance tie: a shipping log and a failure essay both publish only your own work, need nobody's consent, and clear the same four-question pre-publish check in step 4. The dashboard is a different kind of obligation - publishing company metrics pulls in investor confidentiality, co-founder and customer consent, and a legal review before the first post, not after the first complaint.

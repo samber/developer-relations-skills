@@ -145,7 +145,7 @@
         "Rejects page views as the headline KPI, stating it measures demand, not quality.",
         "Rejects the 70% helpful target because it comes from a vendor blog, and sets targets from each page's own baseline.",
         "Treats \"was this helpful\" votes as triage only, because votes are not validated against task success.",
-        "Recommends executable steps passing in CI against the released product as the first signal, with a wiring cost of about a day then near-zero, as the use of the platform engineer's day.",
+        "Recommends executable steps passing in CI against the released product as the first signal, with a wiring cost of about half a day then near-zero, as the use of the platform engineer's day.",
         "Recommends tickets and issues that cite a page or its task as the second signal (near-zero to collect, a standing job to read), each pointing at a wrong or ambiguous step or a missing variant.",
         "States the efficiency ordering out loud: CI pass > cited tickets > search refinements > helpful votes > task test > page views.",
         "States the value ordering out loud: task test > CI pass > cited tickets > search refinements > helpful votes > page views.",

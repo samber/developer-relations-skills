@@ -25,7 +25,7 @@ Sources unavailable: community Discord archive (no export access) - tier 5 marke
 
 ## Ranked clusters
 
-Sorted by outcome per page-hour, highest first. The two error entries lead because the fix is already written in the tickets; the migration guide sits at P2 despite being the largest single outcome on the map, because it costs a week of borrowed engineering time (that demotion is the ranking working, and it reverses the quarter a rival ships a breaking major).
+Sorted by outcome per page-hour, highest first. The two error entries lead because the fix is already written in the tickets; the migration guide sits at P2 despite being the largest single outcome on the map, because it costs a few days of borrowed engineering time (that demotion is the ranking working, and it reverses the quarter a rival ships a breaking major).
 
 | Cluster                     | Primary query                         | Variants                                                     | Family      | Evidence                                                                   | Incumbent                                    | Target surface                   | Existing URL or new         | Priority |
 | --------------------------- | ------------------------------------- | ------------------------------------------------------------ | ----------- | -------------------------------------------------------------------------- | -------------------------------------------- | -------------------------------- | --------------------------- | -------- |

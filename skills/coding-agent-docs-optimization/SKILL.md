@@ -4,7 +4,7 @@ description: Makes SDK, API or protocol documentation something a coding agent c
 license: MIT
 metadata:
   author: Samuel Berthe
-  version: "1.0.2"
+  version: "1.0.3"
 ---
 
 # Coding Agent Docs Optimization
@@ -176,7 +176,7 @@ A handful of spec fields decide whether an agent picks the right call and fills 
    - `summary`: one imperative line for choosing the call.
    - `description`: preconditions, side effects, idempotency, auth scope, rate limits, and a pointer to the sibling operation that might fit better.
 
-   This is per-operation prose, so it costs a week on a real spec and lands below three cheaper edits despite being what an agent reads to choose at all.
+   This is per-operation prose, so it costs a day or two on a real spec, most of it checking each claim against the implementation, and lands below three cheaper edits despite being what an agent reads to choose at all.
 
 5. Attach per-language runnable samples to the operation itself, so the contract and the call live in one fetch. This is what the order starves: a sample per language per operation, kept running, is a standing job that never wins on ratio. Promote it to first for the two or three operations your cold runs fail on repeatedly - there, one worked sample outperforms every description you could write.
 

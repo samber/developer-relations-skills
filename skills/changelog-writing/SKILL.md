@@ -4,7 +4,7 @@ description: Turns raw commits, pull requests and tickets into release notes dev
 license: MIT
 metadata:
   author: Samuel Berthe
-  version: "1.0.3"
+  version: "1.0.4"
 ---
 
 # Changelog Writing
@@ -117,7 +117,7 @@ The changelog and the release body tie: they are the same text pasted twice, so 
 
 Default to the top two for any release, and add the hosted page once it renders from the same source rather than being maintained by hand. Add the rest only when the tier earns them and answer 12 says someone can pay for them.
 
-The in-product note and the email are what this order starves: each costs a week and another team's calendar, and each is the only way to reach the users who will never open a repository. Promote both above everything else the moment the release requires user action - a breaking change nobody reads about gets discovered as an outage - and accept that the ratio is the wrong instrument for that case.
+The in-product note and the email are what this order starves: each costs a few days of work and another team's calendar, and each is the only way to reach the users who will never open a repository. Promote both above everything else the moment the release requires user action - a breaking change nobody reads about gets discovered as an outage - and accept that the ratio is the wrong instrument for that case.
 
 This order is a default, not a law, and it shifts with who executes it. Re-rank it against what you know:
 

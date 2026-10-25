@@ -13,7 +13,7 @@ description: >-
 license: MIT
 metadata:
   author: Samuel Berthe
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # DevRel Webinar Program
@@ -103,7 +103,7 @@ Write the charter before booking a slot. Present it in sections and get each val
 
 Effort is standing staff hours per episode: preparation, rehearsal, any lab environment, follow-up. Value is progress on the series' one job, plus how long the replay stays useful.
 
-Rough effort per episode, order of magnitude (baseline): Q&A episode, a few hours; live demo, half a day when the demo exists; engineer conversation, about a day; panel, one to two days; customer story, one to two days plus weeks of approval wait; follow-along lab, two to three days the first time, a day when re-run.
+Rough effort per episode, order of magnitude (baseline): Q&A episode, a few hours; live demo, half a day when the demo exists; engineer conversation, about a day; panel, one to two days; customer story, one to two days plus weeks of approval wait; follow-along lab, about two days the first time, a day when re-run.
 
 Rank by the series' job. For community voices, use the activation order with community speakers taking the engineer-conversation slots.
 

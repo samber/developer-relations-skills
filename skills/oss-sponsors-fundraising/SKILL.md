@@ -4,7 +4,7 @@ description: Designs a maintainer-side open-source sponsorship program - the tie
 license: MIT
 metadata:
   author: Samuel Berthe
-  version: "1.0.1"
+  version: "1.0.2"
 ---
 
 # OSS Sponsors Fundraising
@@ -203,7 +203,7 @@ Sponsorship money arrives through three paths, each needing its own configuratio
 
 - efficiency: `FUNDING.yml and manifest funding metadata > funding links on the surfaces users already touch > health signals that survive a funder's shortlist`
 - value (money the path can route to the project): `health signals > funding links > FUNDING.yml`
-- effort: `health signals > funding links > FUNDING.yml` - a Scorecard-driven cleanup is a quarter of work, the links are an hour, the file is near-zero
+- effort: `health signals > funding links > FUNDING.yml` - a Scorecard-driven cleanup is a few weeks of work, the links are an hour, the file is near-zero
 
 Do the first two now, in that order. What this order starves is the health-signal work, which is what a corporate fund or foundation program actually reads before allocating; promote it when such a program is the named target, and treat the rest of this section as its prerequisite.
 
@@ -230,9 +230,9 @@ Only the second is won by outreach; know which one you are aiming at before writ
 
 - efficiency: `dependency-share > employee-nominated funds > strategic sponsorship > foundation membership`
 - value (cheque size per company won): `strategic sponsorship > foundation membership > employee-nominated funds > dependency-share`
-- effort: `foundation membership > strategic sponsorship > employee-nominated funds > dependency-share` - membership is a quarter or more of process, a strategic pitch is a week per target, a nomination is one message to an engineer who already knows you, and dependency-share is the near-zero file from step 6
+- effort: `foundation membership > strategic sponsorship > employee-nominated funds > dependency-share` - membership is a quarter or more of process, a strategic pitch is a few days per target, a nomination is one message to an engineer who already knows you, and dependency-share is the near-zero file from step 6
 
-Strategic sponsorship is the same shape step 2's ranking starves, arriving one layer down: it is where the retainer-sized cheques live, and the efficiency line buries it every time. Spend the week per target only against companies whose product visibly depends on the project.
+Strategic sponsorship is the same shape step 2's ranking starves, arriving one layer down: it is where the retainer-sized cheques live, and the efficiency line buries it every time. Spend those days per target only against companies whose product visibly depends on the project.
 
 The mechanisms and their numbers are in [references/corporate-sponsorship-path.md](./references/corporate-sponsorship-path.md).
 

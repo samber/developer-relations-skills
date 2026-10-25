@@ -94,6 +94,6 @@ The fix list is ordered by return per hour spent, using the ordering in SKILL.md
 
 For an enterprise or procurement audience, add one line listing which trust signals are present and which are missing, in the order SKILL.md § Step 8 ranks them:
 
-`support expectation == release cadence > security policy > named adopters > governance and maintainer depth > supply-chain attestation > foundation affiliation`
+`support expectation == release cadence > security policy > named adopters > supply-chain attestation > governance and maintainer depth > foundation affiliation`
 
 That line doubles as the order to fix them in. Those are not scored; they are pass/absent facts a buyer will check anyway.

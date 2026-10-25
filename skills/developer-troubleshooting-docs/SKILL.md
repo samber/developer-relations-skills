@@ -4,7 +4,7 @@ description: Turns support tickets, issue history and error telemetry into troub
 license: MIT
 metadata:
   author: Samuel Berthe
-  version: "1.0.1"
+  version: "1.0.2"
 ---
 
 # Developer Troubleshooting Docs
@@ -44,7 +44,7 @@ Ask one question at a time, multiple-choice when you can, and skip what the user
 
 Questions 4 to 7 re-rank the queue in Step 2, so ask them before clustering. Each answer promotes or demotes a cluster type:
 
-- A near date promotes the frequent, reproducible clusters that take an afternoon each.
+- A near date promotes the frequent, reproducible clusters that take an hour or two each.
 - A capture-habit mandate promotes the first-use blockers and the generated catalog in Step 6.
 - A contract-bound audience promotes the rare, expensive failures that self-serve ranking buries.
 - Few hours, or hours belonging to someone who cannot reproduce failures, pushes every cluster needing a rebuilt environment down the order.
@@ -93,7 +93,7 @@ Rank the survivors here, not behind a link: by the time a reader opens a referen
 | Frequency                       | How many records, and is it growing?                            | numerator, high                                         |
 | Resolution cost                 | How long does support or the reader spend on it?                | numerator, high                                         |
 | Blast radius                    | Does it block first use, or annoy an expert?                    | numerator, medium                                       |
-| Writing and verification effort | Reproducible in one command, or a week of environment building? | divisor                                                 |
+| Writing and verification effort | Reproducible in one command, or days of environment building?   | divisor                                                 |
 | Volatility                      | Will the next release change the answer?                        | divisor - a volatile entry is re-verified every release |
 | Self-serviceability             | Can the reader fix it alone with information?                   | gate                                                    |
 
@@ -103,7 +103,7 @@ Ranking the four cluster shapes this produces:
 - value: first-use blocker > rare and expensive > frequent and reproducible > volatile
 - effort: rare and expensive > volatile > first-use blocker > frequent and reproducible
 
-Default to writing the frequent, reproducible clusters first - they are an afternoon each and they empty the support queue fastest. Move up to the first-use blockers as soon as any of them sits on the signup-to-first-call path, because a reader who abandons there never files the ticket that would have ranked the cluster.
+Default to writing the frequent, reproducible clusters first - they are an hour or two each, most of it verifying the fix, and they empty the support queue fastest. Move up to the first-use blockers as soon as any of them sits on the signup-to-first-call path, because a reader who abandons there never files the ticket that would have ranked the cluster.
 
 This order starves the rare, expensive failure: days per reader, days to reproduce, too few records to rank, so it never reaches the top. Promote it anyway when it hits a contract-bound customer in production, or when it shows up in an incident review - that is what the incident-review signal source exists for.
 

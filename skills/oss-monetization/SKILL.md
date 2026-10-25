@@ -4,7 +4,7 @@ description: "Chooses how one open-source project earns money for its own mainta
 license: MIT
 metadata:
   author: Samuel Berthe
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # OSS Monetization
@@ -71,18 +71,18 @@ Default order, by revenue per maintainer hour held over years:
 
 | Option | You do | You get | You owe |
 |---|---|---|---|
-| **1. Paid add-on on a free core** | weeks of code: a separate closed module behind a clean seam, private delivery, license delivery | recurring, per-organization revenue; no license change | a few hours a week: buyer email, renewals, "why is X paid?" questions, two codebases |
-| **2. Paid content or companion product** | weeks per product: screencasts, book, workshop, templates, UI kits | the other model that has paid indie salaries; no license enforcement | a new product every few months; sales ride on your traffic |
-| **3. Extended security support** | days per old major: a paid contract for backports past the free support window | procurement-friendly revenue from companies stuck on old versions; no closed code | backports for as long as the contract runs |
+| **1. Paid add-on on a free core** | a week or so of code: a separate closed module behind a clean seam, private delivery, license delivery | recurring, per-organization revenue; no license change | a few hours a week: buyer email, renewals, "why is X paid?" questions, two codebases |
+| **2. Paid content or companion product** | a week or two per product: screencasts, book, workshop, templates, UI kits | the other model that has paid indie salaries; no license enforcement | a new product every few months; sales ride on your traffic |
+| **3. Extended security support** | a day or two per old major: a paid contract for backports past the free support window | procurement-friendly revenue from companies stuck on old versions; no closed code | backports for as long as the contract runs |
 | **4. Support contract** | days: priority response, paid feature development, invoice path, security answers | first revenue within weeks; buyer conversations that shape the add-on | hours per customer every month; rarely scales alone |
-| **5. Sponsorware companion** | weeks: a new tool released to sponsors first, opened at a published threshold | a fast bump in recurring sponsorship | sponsor upkeep, and a promise to open it on time |
+| **5. Sponsorware companion** | days: a new tool released to sponsors first, opened at a published threshold | a fast bump in recurring sponsorship | sponsor upkeep, and a promise to open it on time |
 | **6. Commercial license on the next major** | months: new terms or a source-available license with a change date, from a new major, old versions untouched | revenue from companies above a revenue threshold | license sales and compliance questions; users freezing on the last free version |
-| **7. Hosted offering** | a quarter, then forever: operations, billing, data protection | a deep moat when self-hosting hurts | on-call every week; a business, not a side line |
+| **7. Hosted offering** | a month or two, then forever: operations, billing, data protection | a deep moat when self-hosting hurts | on-call every week; a business, not a side line |
 | **8. Relicensing the current version** | months: counsel, consent where needed, announcement | revenue only if users cannot leave | a likely fork of the last free version, and trust you do not get back |
 
 Use one of these per-axis orders instead only when the user says one axis outweighs the rest (`>` means better for the maintainer):
 
-- time to first revenue: `support contract > extended security support > sponsorware companion > paid add-on > paid content > commercial license on the next major > hosted offering > relicensing`
+- time to first revenue: `support contract > extended security support > sponsorware companion > paid add-on > paid content > hosted offering > commercial license on the next major > relicensing`. A license change waits out its three-to-six-month announcement; hosting bills once it is built.
 - trust kept, with the free support window unchanged: `paid content == support contract == extended security support > sponsorware companion > paid add-on > hosted offering > commercial license on the next major > relicensing`. The first three tie because none withholds anything users had.
 - compliance cost: `paid content == sponsorware companion > support contract == extended security support > paid add-on > hosted offering > commercial license on the next major > relicensing`. Content and sponsorware need no contract beyond the platform's terms; support needs a service contract; the add-on an end-user license; hosting adds data-processing terms; license changes need counsel.
 - durability: `paid add-on > hosted offering > extended security support > support contract > commercial license on the next major > sponsorware companion > paid content`. Sponsorware ends when the code opens. Products sold through docs traffic are the most exposed: Tailwind's founder attributes a revenue fall close to 80% to AI assistants answering from the docs.

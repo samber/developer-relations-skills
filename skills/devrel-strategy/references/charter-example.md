@@ -73,9 +73,9 @@ engagement, a venue of our own would sit empty and argue against us.
 
 ## Build vs buy
 
-Bet 1: in-house. Latency 3 weeks. Reviewer: engineering lead. Red line: yes,
+Bet 1: in-house. Latency 1 week. Reviewer: engineering lead. Red line: yes,
 it is the credibility surface.
-Bet 2: in-house drafting, contracted editor. Latency 4 weeks. Setup: one style
+Bet 2: in-house drafting, contracted editor. Latency 2 weeks. Setup: one style
 brief. Reviewer: advocate.
 Bet 3: agency drafting from in-house outlines. Latency 8-9 weeks per piece,
 about 6 weeks of pipeline setup first. Reviewer: advocate. If the contract ends,

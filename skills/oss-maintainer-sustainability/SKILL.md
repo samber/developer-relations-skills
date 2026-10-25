@@ -4,7 +4,7 @@ description: "Plans how an open-source maintainer keeps a project going without 
 license: MIT
 metadata:
   author: Samuel Berthe
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # OSS Maintainer Sustainability
@@ -56,7 +56,7 @@ Build a one-screen ledger, never a guess:
 - **Inflow**: new issues, PRs, discussions and direct messages per month.
 - **Backlog**: open issues split into waiting-on-reporter, waiting-on-maintainer, confirmed bugs, and feature requests.
 - **Hours**: what it takes now versus the budget from question 2.
-- **Transition hours**: one-time setup the chosen moves cost, with an end date. A move that takes a day does not fit a two-hour week; budget a short, dated bridge above the steady-state budget instead.
+- **Transition hours**: one-time setup the chosen moves cost, with an end date. Moves of a few hours each do not fit a two-hour week; budget a short, dated bridge above the steady-state budget instead.
 - **Concentration**: who else can merge, release and publish. A single name on the publish right turns a departure into a stranded package. For the full credential inventory and absence factor, use `samber/developer-relations-skills@oss-governance`.
 
 Read the shape against Nadia Eghbal's taxonomy. Many users and very few contributors (a "stadium") is the usual shape of a popular single-author library, and there contributors do not appear on request. Cut the contract before waiting on a co-maintainer.
@@ -70,11 +70,11 @@ Default order for "stay, lighter": `publish the contract > declare a maintenance
 | Move | You do | You get | You owe |
 |---|---|---|---|
 | **1. Publish the contract** | an hour: README status line, weekly hours, response window, scope, what you will not do | every arriving user calibrated at once; guilt turned into policy | keeping the window, so state one you can keep |
-| **2. Declare a maintenance tier** | an afternoon: active, maintenance-only (security and runtime-compatibility fixes), or frozen | feature requests close by pointer, not debate | saying no to features you might like |
-| **3. Cut intake** | an afternoon: issue forms, support routed off the tracker, PRs limited to collaborators if inflow is unsolicited | fewer items arrive at all | the PR limit closes the pipeline move 7 recruits from, so skip it when move 7 is planned |
-| **4. Automate chores** | a day: grouped dependency updates, release tooling, publishing from CI | release chores stop costing evenings | reviewing the bots' output |
+| **2. Declare a maintenance tier** | an hour or two: active, maintenance-only (security and runtime-compatibility fixes), or frozen | feature requests close by pointer, not debate | saying no to features you might like |
+| **3. Cut intake** | an hour or two: issue forms, support routed off the tracker, PRs limited to collaborators if inflow is unsolicited | fewer items arrive at all | the PR limit closes the pipeline move 7 recruits from, so skip it when move 7 is planned |
+| **4. Automate chores** | a couple of hours, mostly testing one release: grouped dependency updates, release tooling, publishing from CI | release chores stop costing evenings | reviewing the bots' output |
 | **5. Announced pause** | ten minutes: dated notice, forge status, who reads security reports meanwhile; skip when an exit is under a quarter away | rest without the silence that reads as abandonment | coming back, or turning the pause into an exit |
-| **6. Backlog reset** | a day: one announced, labelled sweep of stale, unreproduced items | the guilt pile gone | a notification wave and some angry replies |
+| **6. Backlog reset** | a couple of hours: one announced, labelled sweep of stale, unreproduced items | the guilt pile gone | a notification wave and some angry replies |
 | **7. Recruit a co-maintainer** | weeks of mentoring before any saving | the only move that compounds, and the precondition for a handover | supervision, and keys withheld for months |
 | **8. Funding** | weeks to set up, then reporting | paid hours, yours or a co-maintainer's | sponsor or contract expectations, which are new load |
 

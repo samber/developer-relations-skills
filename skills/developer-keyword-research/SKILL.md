@@ -4,7 +4,7 @@ description: Builds a prioritized keyword list for technical search queries (err
 license: MIT
 metadata:
   author: Samuel Berthe
-  version: "1.0.1"
+  version: "1.0.2"
 ---
 
 # Developer Keyword Research
@@ -108,16 +108,16 @@ Comparing every pair is quadratic. Pre-group by family first, and test only the 
 
 Full templates, modifiers and expansion recipes live in the reference file. The families, ordered by outcome per page-hour (the order to expand and to ship in, not the order they are easiest to generate):
 
-| Family             | Example shape                               | Target surface              | Cost to write and keep current                                | What the page buys                                                                   |
-| ------------------ | ------------------------------------------- | --------------------------- | ------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
-| Error string       | verbatim message or code                    | error entry                 | an hour; the fix already exists in the ticket                 | catches a developer mid-failure, the highest-intent moment on the map                |
-| Reference lookup   | `<library> <symbol> example`                | reference page with example | an hour; transcription from the API surface                   | closes the gap upstream docs leave when they never show an example                   |
-| Task how-to        | `how to <task> in <framework>`              | how-to guide                | a day, plus a re-test per framework release                   | the compounding middle of the map: one page serves every future arrival on that task |
-| Evaluation         | `X rate limits`, `self-host X`, `X pricing` | trust/limits page           | an hour to write, then a sign-off                             | unblocks a champion's internal case; the cheapest page that touches a purchase       |
-| Integration intent | `<product> with <other product>`            | integration guide           | a day, then a standing job (the other product keeps changing) | reaches developers already committed to a stack you plug into                        |
-| Migration          | `migrate from X to Y`, `X deprecated`       | migration guide             | a week, most of it engineering time you have to borrow        | wins a switch outright, the largest single outcome available here                    |
-| Comparison         | `X vs Y`, `X alternative`                   | comparison page             | a day plus a review of every claim about a rival              | meets an evaluator at the decision, and ages the moment the rival ships              |
-| Concept            | `what is X`, `why X`                        | explanation page            | a day                                                         | weakest rung: a one-line answer an assistant gives without sending anyone            |
+| Family             | Example shape                               | Target surface              | Cost to write and keep current                                     | What the page buys                                                                   |
+| ------------------ | ------------------------------------------- | --------------------------- | ------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| Error string       | verbatim message or code                    | error entry                 | an hour; the fix already exists in the ticket                      | catches a developer mid-failure, the highest-intent moment on the map                |
+| Reference lookup   | `<library> <symbol> example`                | reference page with example | an hour; transcription from the API surface                        | closes the gap upstream docs leave when they never show an example                   |
+| Task how-to        | `how to <task> in <framework>`              | how-to guide                | half a day, plus a re-test per framework release                   | the compounding middle of the map: one page serves every future arrival on that task |
+| Evaluation         | `X rate limits`, `self-host X`, `X pricing` | trust/limits page           | an hour to write, then a sign-off                                  | unblocks a champion's internal case; the cheapest page that touches a purchase       |
+| Integration intent | `<product> with <other product>`            | integration guide           | half a day, then a standing job (the other product keeps changing) | reaches developers already committed to a stack you plug into                        |
+| Migration          | `migrate from X to Y`, `X deprecated`       | migration guide             | a few days, most of it engineering time you have to borrow         | wins a switch outright, the largest single outcome available here                    |
+| Comparison         | `X vs Y`, `X alternative`                   | comparison page             | half a day plus a review of every claim about a rival              | meets an evaluator at the decision, and ages the moment the rival ships              |
+| Concept            | `what is X`, `why X`                        | explanation page            | a few hours                                                        | weakest rung: a one-line answer an assistant gives without sending anyone            |
 
 - efficiency (outcome per page-hour - the default expansion order): error string > reference lookup > task how-to > evaluation > integration intent > migration > comparison > concept
 - effort (heaviest first): migration > comparison > integration intent > task how-to > concept > evaluation == reference lookup > error string
@@ -137,9 +137,9 @@ Delete rather than demote. No shipping capacity to keep an integration guide cur
 The tiers are numbered by evidence strength - how directly each source observes a developer asking. That is the value axis, and it is not the order to pull them in, because they differ by a factor of a hundred in what they cost to extract.
 
 1. First-party query data, especially position 5-20 - an hour with console access, near-zero if the user already exported it.
-2. Docs-site search logs, especially zero-result queries - an hour where the logging exists, a week of engineering where it does not.
-3. Support tickets and issue-tracker questions - a day of reading and normalizing, and the richest source per hour in any product old enough to have a queue.
-4. Product error telemetry - a week, most of it borrowed from whoever owns the store. The only source that sees the failures nobody bothered to report.
+2. Docs-site search logs, especially zero-result queries - an hour where the logging exists, a day or two of engineering where it does not.
+3. Support tickets and issue-tracker questions - a few hours of reading and normalizing, and the richest source per hour in any product old enough to have a queue.
+4. Product error telemetry - a day or two, most of it borrowed from whoever owns the store. The only source that sees the failures nobody bothered to report.
 5. Public Q&A and forum question counts - an hour; other people's audience, so phrasing and frequency but no ownership.
 6. Ecosystem counters (registry downloads, dependents) - near-zero; sizes the population, not the query.
 7. Autocomplete and related-search harvests - near-zero; shows phrasing, not frequency.
@@ -152,7 +152,7 @@ The tiers are numbered by evidence strength - how directly each source observes 
 
 Two ties worth defending. Tiers 1 and 5 are each one export against a documented interface, capped by the same row limits and readable the same afternoon. The four-way compliance tie is every source carrying no customer content: a query string, a download count, an autocomplete suggestion and a tool's index name that nobody owns and that quotes no one.
 
-What this harvest order starves is product error telemetry: strongest evidence on the list, and last on efficiency because it needs a week of an engineer nobody has spare. Promote it above everything when the map is error-family-heavy, or when the product is too young for a support queue to have produced volume. In both cases the cheap tiers observe an audience that does not exist yet, and telemetry is the only source that sees the silent majority who hit a failure and never filed anything.
+What this harvest order starves is product error telemetry: strongest evidence on the list, and last on efficiency because it needs a day or two of an engineer nobody has spare. Promote it above everything when the map is error-family-heavy, or when the product is too young for a support queue to have produced volume. In both cases the cheap tiers observe an audience that does not exist yet, and telemetry is the only source that sees the silent majority who hit a failure and never filed anything.
 
 Delete rather than demote. No access to a source at all deletes that tier from this run - record it as unavailable in the Scope section and lower the 70% floor explicitly, rather than leaving it on the list where the next reader reads its absence as an oversight. Customer content you cannot scrub or quote deletes tier 3 the same way.
 

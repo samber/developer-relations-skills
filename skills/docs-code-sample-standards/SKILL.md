@@ -4,7 +4,7 @@ description: Defines the policy every code sample in developer documentation mus
 license: MIT
 metadata:
   author: Samuel Berthe
-  version: "1.0.1"
+  version: "1.0.2"
 ---
 
 # Docs Code Sample Standards
@@ -46,7 +46,7 @@ Ask these one at a time, offering options where you can. Stop as soon as you can
 
 Questions 4, 8, 9 and 10 decide the tier ranking. Ask them before classifying anything.
 
-- **Q9:** a near date promotes compile-only, which ships in a week.
+- **Q9:** a near date promotes compile-only, which ships in a couple of days.
 - **Q10:** a standing-enforcement mandate promotes Run on the adoption path.
 - **Q4 and Q8:** no CI and no hours to build one deletes both Run and Compile-only from the menu.
 - **Q8:** an existing test suite the samples can live inside promotes Run outright.
@@ -84,7 +84,7 @@ Every sample gets exactly one tier. The tier is a claim to the reader as much as
 | Tier         | Meaning                                                                              | CI enforces                  | Engineering and upkeep                                                                     | Reader signal                           |
 | ------------ | ------------------------------------------------------------------------------------ | ---------------------------- | ------------------------------------------------------------------------------------------ | --------------------------------------- |
 | Run          | Executes; documented output is asserted                                              | Full execution + output diff | a standing job (fixtures, credentials, teardown, a red build every time the service moves) | "This works as written"                 |
-| Compile-only | Type-checks or builds, never executed (billing, destructive, third-party dependency) | Build/lint only              | a week to stand up, then near-zero per sample                                              | "This is valid; it was not run for you" |
+| Compile-only | Type-checks or builds, never executed (billing, destructive, third-party dependency) | Build/lint only              | a couple of days to stand up, then near-zero per sample                                    | "This is valid; it was not run for you" |
 | Illustrative | Pseudocode, a fragment, or a deliberate anti-pattern                                 | Excluded                     | near-zero (a visible label)                                                                | Labelled on the page as not runnable    |
 
 - efficiency: compile-only > run > illustrative

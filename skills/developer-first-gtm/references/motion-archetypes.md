@@ -94,7 +94,7 @@ Without a spread mechanism, self-serve produces a long tail of single-seat accou
 - Per-account usage analytics.
 - Self-serve support scaled by docs and community rather than headcount.
 
-**Effort to stand up.** A quarter of product and docs work, no new headcount, largely reversible - the lowest of the four. The ranked comparison across all four motions lives in the skill's step 3; the lines here only feed it.
+**Effort to stand up.** A few weeks of product and docs work, no new headcount, largely reversible - the lowest of the four. The ranked comparison across all four motions lives in the skill's step 3; the lines here only feed it.
 
 **Leading indicator.** Share of new accounts reaching first value in the first session, and cohort free-to-paid conversion at account level.
 
@@ -126,7 +126,7 @@ _The Transition_ splits this motion into two jobs that need different people and
 - Procurement-ready paperwork (security questionnaire answers, DPA, SLA, invoicing).
 - A compensation and territory model that does not reward contacting every signup.
 
-**Effort to stand up.** A quarter to build the rollup and write the rule, then a standing job to answer the signal within the promised window. Reversible on the human side, less so once compensation is tied to it.
+**Effort to stand up.** A few weeks to build the rollup and write the rule, then a standing job to answer the signal within the promised window. Reversible on the human side, less so once compensation is tied to it.
 
 **Leading indicator.** Number of accounts crossing the threshold per month, and the share of them contacted inside the promised window.
 

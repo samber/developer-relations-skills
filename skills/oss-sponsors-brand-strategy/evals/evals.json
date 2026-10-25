@@ -57,7 +57,7 @@
         "Names, for each candidate portfolio, what it deliberately fails at",
         "Recommends one portfolio and explains why the others lose",
         "Asks for explicit agreement on the chosen shape before building any target list",
-        "Expresses effort in magnitudes such as near-zero, about a week per project, or a standing job, rather than in currency",
+        "Expresses effort in magnitudes such as near-zero, a few days per project, or a standing job, rather than in currency",
         "Does not recommend foundation membership without first checking whether a foundation governs anything in the company's stack",
         "Sets aside a reserve of 10-20% for opportunistic funding and labels that reserve as a starting default rather than a standard"
       ]

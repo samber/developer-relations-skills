@@ -13,7 +13,7 @@ description: >-
 license: MIT
 metadata:
   author: Samuel Berthe
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # Developer Survey Design
@@ -110,7 +110,7 @@ When telemetry measures something the survey also asks about (OS, version, deplo
 Rank channels by publishable, bias-measurable responses per hour of effort. The default below assumes the usual case for this skill, a published or yearly survey:
 
 - efficiency: random calibration subsample > owned channels (blog, newsletter, docs banner, release notes) > partner-sent invitations > targeted outreach to under-represented groups > paid ads
-- effort (least first): owned channels (a post and a link) > partner-sent (one ask per partner) > targeted outreach (relationship work per group) > calibration subsample (an engineering change or a random draw from the user list) > paid ads (budget, fraud screening)
+- effort (least first): owned channels (a post and a link) > partner-sent (one ask per partner) > calibration subsample (a small engineering change or a random draw from the user list) > targeted outreach (relationship work per group) > paid ads (budget, fraud screening)
 - value (bias reduction): calibration subsample (measures how far the self-selected respondents drift) > paid ads (reach beyond the community, at a fraud cost) > targeted outreach (narrows one known gap) > partner-sent (a second audience with its own skew) > owned channels (volume, mostly fans)
 
 The calibration subsample leads because only it makes rung 2 and a bias measurement possible: show the survey prompt to a random fraction of product users, then compare that group with self-selected respondents question by question. Owned channels run in every survey for volume, never as representative. For an unpublished one-off, owned channels move to first and the calibration subsample becomes optional.

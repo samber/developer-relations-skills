@@ -4,7 +4,7 @@ description: Prepares a guest for someone else's technical podcast, YouTube inte
 license: MIT
 metadata:
   author: Samuel Berthe
-  version: "1.0.1"
+  version: "1.0.2"
 ---
 
 # Podcast Interview Prep
@@ -65,8 +65,8 @@ Answers to questions 9, 10 and 11 re-rank every menu below. State which answer m
 
 The twelve steps below assume a week. Most guests have an evening. Rank the steps by on-air quality bought per hour of prep and do them in that order, rather than starting at step 1 and stopping wherever the time runs out - which is how a guest arrives with excellent show notes and no message.
 
-- efficiency: message spine (3) > opening answer (5) > hard questions (8) > angle selection (2) > show reconnaissance (1) > sound bites (7) > story bank (4) > promotion loop (12)
-- effort: message spine == angle selection (under an hour each - both are decisions, not production) > opening answer (write it, then say it aloud until it survives being clipped) > sound bites (draft five to eight to keep two) > hard questions (eight questions, each with a written concession) > show reconnaissance (six to eight episodes at speed, or the RSS shortcut) > story bank (five to eight stories with real numbers, each checked against the off-limits list) > promotion loop (a standing job across the week after publication)
+- efficiency: message spine (3) > opening answer (5) > hard questions (8) > show reconnaissance (1) > angle selection (2) > sound bites (7) > story bank (4) > promotion loop (12)
+- effort: show reconnaissance (well under an hour from the RSS feed and episode descriptions, listening at speed only where a description falls short) > message spine == angle selection (under an hour each - both are decisions, not production) > opening answer (write it, then say it aloud until it survives being clipped) > sound bites (draft five to eight to keep two) > hard questions (eight questions, each with a written concession) > story bank (five to eight stories with real numbers, each checked against the off-limits list) > promotion loop (a standing job across the week after publication)
 - value: story bank (stories are what get quoted, and quotes outlive the episode) > hard questions (one bad clip costs more than three good answers gain) > message spine (makes every answer derivable, so nothing is improvised live) > opening answer (owns the only moment the guest controls) > show reconnaissance (aims everything else; the wrong audience makes the rest worthless) > angle selection (decides generic against memorable) > sound bites (raises the odds a good line is liftable) > promotion loop (the appearance's whole second life, arriving weeks later)
 - compliance cost: story bank (customer names, incident detail and unpublished numbers, each cleared individually - and irreversible once spoken) > hard questions (a licensing, pricing, CVE or funding answer may need legal or employer sign-off before the recording) > promotion loop (employer brand and links, reviewed once) > everything else, all near-zero and tied, because none of it involves saying anything the user does not already own
 
@@ -78,7 +78,7 @@ Two gates sit outside this ranking and are never traded for time. Both take minu
 Defaults by prep ceiling:
 
 - **A week:** all twelve steps.
-- **One evening:** spine, opening answer, hard questions. Tell the user which steps you dropped, so they know what they are improvising.
+- **One evening:** spine, opening answer, hard questions, and a recon pass from the RSS feed. Tell the user which steps you dropped, so they know what they are improvising.
 - **Two hours:** spine and opening answer only.
 
 Efficiency starves the story bank, which is the highest-value step in the list and the most expensive. Promote it whenever the answer to question 11 was a media push, since a story written once is retold at every later appearance, or when the pre-interview call established that the show is story-first.
@@ -98,7 +98,7 @@ Here the richest source is also the fastest, so cost and value agree and one lin
 
 - efficiency: RSS feed > show's episode list > Apple Podcasts page > web search > full transcripts
 
-Efficiency starves the transcripts: they are the only source that shows how the hosts actually interrupt, and they cost an hour each. Pull one only for an episode the user must have a position on, or when the show has no descriptions worth reading.
+Efficiency starves the transcripts: they are the only source that shows how the hosts actually interrupt, and they cost about a quarter hour each, against seconds for a description. Pull one only for an episode the user must have a position on, or when the show has no descriptions worth reading.
 
 Extract four things:
 

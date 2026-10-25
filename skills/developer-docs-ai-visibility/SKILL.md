@@ -4,7 +4,7 @@ description: "Gets developer documentation cited, at the current version, in AI 
 license: MIT
 metadata:
   author: Samuel Berthe
-  version: "1.0.1"
+  version: "1.0.2"
 ---
 
 # Developer Docs AI Visibility
@@ -81,7 +81,7 @@ Single runs are noise: repeated runs of one prompt returned the same list of rec
 
 1. Write prompts the way developers ask them: top tasks, exact error strings, "migrate from v2", "is X still supported". Pull them from support tickets, docs search logs and community questions, not from marketing keywords. One row per language client when the code differs.
 2. Write an answer key per prompt from interview question 3: the symbols, version range and config keys a correct answer uses, and the deprecated forms it must not. A prompt without a key is not run.
-3. Size the panel to the effort ceiling before running anything. Runs = prompts × runs per prompt × assistants × modes, at a few minutes each by hand. The full default (30 prompts × 5 runs × 3 assistants × 2 modes) is 900 answers: a week of work. The minimum viable baseline is 10 core prompts × 5 runs on the two assistants that matter, search-on, plus search-off on the five prompts with the worst answers. These sizes are this skill's own defaults.
+3. Size the panel to the effort ceiling before running anything. Runs = prompts × runs per prompt × assistants × modes, at a few minutes each by hand. The full default (30 prompts × 5 runs × 3 assistants × 2 modes) is 900 answers: a week of work by hand, a day or two through the API with scoring scripted against the answer key. The minimum viable baseline is 10 core prompts × 5 runs on the two assistants that matter, search-on, plus search-off on the five prompts with the worst answers. These sizes are this skill's own defaults.
 4. Run each prompt five or more times per assistant and mode. Where an assistant lets you toggle web search, the gap between modes is your best pipeline evidence. Run by hand or through the vendor's API; scripting a consumer chat app can breach its terms.
 5. Score every answer on the rubric in [./references/prompt-panel-protocol.md](./references/prompt-panel-protocol.md): cited sources, owned page cited, version-correct, deprecated API, invented API.
 6. Report rates with n and an interval, pooled per prompt family, never a rank position. At 5 runs a single prompt's rate is too wide to compare; pooled families are what the targets use.
@@ -112,7 +112,7 @@ Rank by value per unit of effort. The table holds this skill's judgment of each 
 |---|---|---|---|---|
 | Version identity in page text: version in title, first heading and opening line; superseded pages open with the replacement and a link to the same page in current | retrieval, fetch, future corpus | `++` one template edit | `+++` | `++` |
 | Clean owned stale copies: own old blog tutorials, example repos, gists - version note, banner or archive | all three | `++` | `++` | `+++` |
-| Old-to-new symbol map in the migration guide, every removed symbol beside its replacement | retrieval for old-symbol prompts, fetch | `+` days per major | `+++` | `++` |
+| Old-to-new symbol map in the migration guide, every removed symbol beside its replacement | retrieval for old-symbol prompts, fetch | `+` a day or so per major | `+++` | `++` |
 | Version posture on old trees: banner, canonical, noindex on retired versions nobody uses | retrieval | varies; owned by docs-seo | `++` | `+` |
 | Task and error pages for prompts that cite third parties or nothing | retrieval | `-` per page | `++` | `++` |
 | Final patch of deprecated packages whose registry README names the replacement | retrieval, future corpus | `-` release-owner sign-off | `++` | `+++` |

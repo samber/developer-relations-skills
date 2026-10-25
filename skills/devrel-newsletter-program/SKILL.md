@@ -4,7 +4,7 @@ description: "Designs a developer newsletter as a standing programme - whether t
 license: MIT
 metadata:
   author: Samuel Berthe
-  version: "1.0.2"
+  version: "1.0.3"
 ---
 
 # DevRel Newsletter Program
@@ -40,7 +40,7 @@ Present the shapes below in this order, say the ranking out loud, recommend one,
 | Shape | Effort | What it buys | Survives the owner leaving | Fails when |
 |---|---|---|---|---|
 | Feed only: public changelog plus RSS or Atom, no email | `+++` near-zero beyond the changelog | existing users who follow feeds get every release | `+++` nothing to hand over | readers need curation, or do not use feeds |
-| Own-surface digest: monthly roundup of your releases, posts, docs and events | `++` an afternoon per issue | retention of existing users, a recap around each launch | `++` any teammate can fill a fixed template from existing surfaces | your own output is thin and issues get padded |
+| Own-surface digest: monthly roundup of your releases, posts, docs and events | `++` an hour or two per issue, most of it review | retention of existing users, a recap around each launch | `++` any teammate can fill a fixed template from existing surfaces | your own output is thin and issues get padded |
 | Curated ecosystem newsletter: your items plus external links, weekly or twice monthly | `--` a standing job, hours per issue | reach beyond your users, credibility with the ecosystem | `-` curator judgment is hard to transfer | promotional drift, or the curator leaves |
 | Community-edited: volunteer section editors, submissions by pull request or form | `---` a quarter of setup, then coordination every issue | contributor ownership, the strongest long-run continuity | `+++` once running, no single person carries it | there is no contributor base, or volume outgrows the volunteers |
 | Personal editorial letter: one named person's voice | `-` hours per issue | the highest trust per issue | `---` it ends with the person | the person leaves, which is its usual fate |

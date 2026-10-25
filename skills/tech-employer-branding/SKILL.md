@@ -4,7 +4,7 @@ description: Designs an employer-brand strategy for attracting software engineer
 license: MIT
 metadata:
   author: Samuel Berthe
-  version: "1.0.1"
+  version: "1.0.2"
 ---
 
 # Tech Employer Branding
@@ -164,12 +164,12 @@ Then rank the individual channel menu. Effort here is engineer-hours, latency be
 
 - efficiency, do first: `posting and process fixes == transparency artifacts > referral investment > engineering blog > talks and community presence > public culture handbook > OSS-as-funnel`
 - value: `OSS-as-funnel > referral investment > engineering blog == talks and community presence > posting and process fixes == transparency artifacts > public culture handbook`
-- effort, most first: `OSS-as-funnel > talks and community presence == engineering blog > public culture handbook > referral investment > posting and process fixes == transparency artifacts`
+- effort, most first: `OSS-as-funnel > talks and community presence > engineering blog > public culture handbook > referral investment > posting and process fixes == transparency artifacts`
 - compliance cost, heaviest review first: `OSS-as-funnel > transparency artifacts > public culture handbook > posting and process fixes > engineering blog == talks and community presence > referral investment`
 
 Posting/process fixes and transparency artifacts (specific job ads with real stack, honest on-call and the actual interview stages; salary bands or a leveling doc; review responses) tie at the top on the ratio. They are the direct RJP implementations, the only mechanism with causal evidence, and they cost days not quarters. Where pay-transparency law applies, the bands are compliance anyway.
 
-Blog and talks tie on value because both sell technical depth to the same senior audience. They split on nothing this menu can see, so the choice between them is question 9's answer about who will actually write versus speak.
+Blog and talks tie on value because both sell technical depth to the same senior audience. They split on effort: a post costs fewer engineer-hours than a talk, which still needs rehearsal, a CFP queue and travel. That gap is narrow, so question 9's answer about who will actually write versus speak still decides between them.
 
 The compliance ordering is why the cheapest rungs are not automatically the fastest to ship:
 

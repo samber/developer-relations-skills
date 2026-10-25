@@ -4,7 +4,7 @@ description: Decides what a company open-sources and what stays proprietary, nam
 license: MIT
 metadata:
   author: Samuel Berthe
-  version: "1.0.1"
+  version: "1.0.2"
 ---
 
 # Open Source Company Strategy
@@ -114,7 +114,7 @@ Default order, for a company with a product to sell and no line drawn yet - `>` 
 | Candidate line                | What it opens                                                                          | Effort and irreversibility                                                                                                                              | What it buys                                                |
 | ----------------------------- | -------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------- |
 | **1. Interface-open**         | specs, SDKs, reference implementations; everything behind the interface stays closed   | a standing job the size of one library, with nothing to take back later                                                                                 | integration and adoption, spending no value-capture surface |
-| **2. Infrastructure-only**    | non-differentiating infrastructure and internal tooling; the product stays closed      | a week per repository, then a standing job per repository - routinely underestimated, and the direct route to dump-and-run                              | talent and cost sharing, nothing on the revenue line        |
+| **2. Infrastructure-only**    | non-differentiating infrastructure and internal tooling; the product stays closed      | a day or two per repository, then a standing job per repository - routinely underestimated, and the direct route to dump-and-run                       | talent and cost sharing, nothing on the revenue line        |
 | **3. Buyer-tiered open core** | the core, with paid tiers defined by _who buys the feature_ rather than how good it is | a quarter to draw, then a standing job policing every new feature against the line; the only line whose reversal gets priced by forkers and procurement | core adoption plus a revenue line built on it               |
 
 Rows 1 and 2 tie on irreversibility, genuinely: neither publishes anything the company sells, so the worst case is an abandoned repository rather than a reversal a community prices. They separate on every other axis, so the tie decides nothing alone.

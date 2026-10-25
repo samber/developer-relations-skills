@@ -4,7 +4,7 @@ description: Cuts a developer audience into a few named, sized and ranked segmen
 license: MIT
 metadata:
   author: Samuel Berthe
-  version: "1.0.1"
+  version: "1.0.2"
 ---
 
 # Developer Segmentation
@@ -97,8 +97,8 @@ Then rank the candidates out loud. Effort here is research work and reversibilit
 In orders of magnitude:
 
 - The buying-mode cut is an hour or two of reading sales notes and existing accounts, because every deal already records who signed.
-- The ecosystem cut is an hour when signups or telemetry already carry language and runtime, a week when you have to instrument or ask for them - and it changes the most expensive artefacts you own, the SDK and the docs track.
-- The workload cut is a week to a quarter of interviews and ticket coding, since nothing you store today records which workload a user is on; it leads on value and still loses on ratio.
+- The ecosystem cut is an hour when signups or telemetry already carry language and runtime, a day or two when you have to instrument for them, longer when you have to ask users and wait for answers - and it changes the most expensive artefacts you own, the SDK and the docs track.
+- The workload cut is a few days of ticket coding to a quarter of interviews, since nothing you store today records which workload a user is on; it leads on value and still loses on ratio.
 
 That order starves the workload cut, which is exactly the cut with the highest artefact leverage. Promote it anyway when:
 

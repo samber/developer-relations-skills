@@ -4,7 +4,7 @@ description: Builds a developer relations measurement framework - a handful of m
 license: MIT
 metadata:
   author: Samuel Berthe
-  version: "1.0.1"
+  version: "1.0.2"
 ---
 
 # DevRel Metrics
@@ -118,7 +118,7 @@ Orders of magnitude behind that ratio, tier by tier:
 
 - **Reach.** A dashboard already open, but a zero numerator stays zero however small the denominator - which is why the cheapest tier ranks last and not first.
 - **Engagement.** Mostly reads what the forge and the docs search log already keep (hours), and one of its metrics names a fix on its own.
-- **Enablement.** Costs one instrumented success event - engineering days once, near-zero after - and buys the number this team can most directly move: the best ratio on the ladder.
+- **Enablement.** Costs one instrumented success event - about a day of engineering once, most of it testing the event, near-zero after - and buys the number this team can most directly move: the best ratio on the ladder.
 - **Product impact.** Adds a cohort tag and a pre-period that must exist _before_ the period starts, so a quarter of coordination plus a wait.
 - **Business impact.** Adds CRM fields, sales-ops cooperation and a rule held for a fiscal year, then answers two to four quarters late.
 
