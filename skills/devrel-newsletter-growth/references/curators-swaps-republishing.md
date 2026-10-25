@@ -11,22 +11,9 @@ Read this when writing the runbook for item pitches, a swap, unpaid recommendati
 
 ## 1. What curated developer newsletters publish about selection
 
-Pitch an item, not your newsletter. Curators link the release notes or the post, not your archive, so the pitch grows your list only if that linked page ends with a signup line carrying its own source tag. Make that line a precondition of every pitch. Check each curator's current page before pitching: these rules change.
+Pitch an item, not your newsletter. Curators link the release notes or the post, not your archive, so the pitch grows your list only if that linked page ends with a signup line carrying its own source tag. Make that line a precondition of every pitch.
 
-| Newsletter | Route | Published rules worth checking |
-|---|---|---|
-| Console.dev | email the editors, address on its selection-criteria page | tools only, not articles; the primary user is a developer, self-service signup, clear docs; beta tools only when pre-1.0 or labelled beta; no sponsored reviews |
-| This Week in Rust | a pull request to the draft issue for most sections; the project and tooling updates section no longer takes pull requests, so tag the newsletter's social account there | Rust community work; no paywalled links, including members-only posts; commercial offerings generally excluded from events |
-| KubeWeekly (CNCF) | the submission form on its page | of interest beyond one commercial platform, no press releases without feature substance, no gated content, recent; check whether it still publishes separately from the CNCF's monthly newsletter |
-| Cooperpress titles (JavaScript Weekly, Golang Weekly, Node Weekly and others) | the editors' contact on each title's site | no published criteria; sponsored items are labelled |
-| Others with no published process | the editor's public contact | assume the same: useful, ungated, recent, not a press release |
-
-Rules that hold across them:
-
-- Link the ungated page: the post, the release notes, the repository. Never a form.
-- One pitch per curator per real piece of news. Repeated pitches for minor releases teach the curator to skip you.
-- Never offer payment for an editorial pick. A paid slot is a separate purchase with a label.
-- Accept no as the answer. Curator independence is what makes the placement worth having.
+Per-newsletter routes, selection rules, timing and limits live in one place, the newsletter-curators reference of samber/developer-relations-skills@tech-press-relations. Check each curator's current page before pitching: these rules change.
 
 ## 2. Item pitch template
 

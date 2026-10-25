@@ -1,10 +1,10 @@
 ---
 name: tech-press-relations
-description: Runs press and light analyst relations for a developer-facing product - news qualification, the angle, a reporter-to-beat media map, the pitch, embargo and exclusive handling, the press page and briefing pack, and what coverage is honestly worth. Use whenever someone raises tech press relations, getting press coverage, pitching a journalist, a tech media pitch, building a media list, a press kit, an embargo briefing, announcing a funding round, a launch coverage plan, an analyst briefing, or "how do we get written about" - even if they only say they want to be in the news. Nothing to do with pull requests. Not the announcement post itself - use samber/developer-relations-skills@engineering-blog-post.
+description: Runs press and light analyst relations for a developer-facing product - news qualification, the angle, a reporter-to-beat media map, the pitch, embargo and exclusive handling, the press page and briefing pack, and what coverage is worth. Use whenever someone raises tech press relations, getting press coverage, pitching a journalist, building a media list, a press kit, earning mentions in developer newsletters like JavaScript Weekly, an embargo briefing, announcing a funding round, an analyst briefing, or "how do we get written about" - even if they only say they want to be in the news. Not the announcement post itself - use samber/developer-relations-skills@engineering-blog-post. Not growing your own newsletter list - use samber/developer-relations-skills@devrel-newsletter-growth.
 license: MIT
 metadata:
   author: Samuel Berthe
-  version: "1.0.2"
+  version: "1.1.0"
 ---
 
 # Tech Press Relations
@@ -42,13 +42,17 @@ Boundaries, so you route instead of duplicating:
 | "we're changing our licence and expect a backlash"   | The licence-change playbook applied: honest economics, what users keep, a hostile-question brief for the spokesperson, and a reversal condition decided in advance               |
 | "build our press page"                               | A page spec and the copy blocks for it, plus the technical proof pack that makes it usable by a technical reporter                                                               |
 | "should we brief analysts"                           | A firm-family recommendation, a shortlist, a briefing agenda, and a plain statement of what a briefing cannot buy                                                                |
+| "how do we get into JavaScript Weekly and TWiR"      | A curator map with each newsletter's route and rules, the linkable piece to send, one tip per curator, and a mention tracker                                                     |
 | "we have nothing to announce but we want coverage"   | A no-pitch verdict, plus the alternative that earns coverage without an event: a data report, a defensible position, source work, or publishing the work and letting it be found |
+
+A request for newsletter mentions skips steps 1-8: ask interview questions 3, 5 and 6, then work [./references/newsletter-curators.md](./references/newsletter-curators.md). Practitioner newsletters reach adopters directly, so judge them on installs and sign-ups, not on credibility.
 
 ## Interview
 
 Ask one question at a time, multiple-choice where possible, and stop as soon as you can name the news, the audience and the date. Questions 1-3 gate everything - draft nothing before they are answered.
 
 **Memory: Store a few info about the current task or project context. When memory lives in a file, use `devrel-context.md`; if a different memory system is in use, rely on that instead. Separate task info in different sections. Remove finished tasks. Add a date to a task; no date for general project context. Some interview responses may differ between 2 tasks.**
+
 1. What happened or is about to happen, in one sentence, in plain language?
 2. When must the coverage land: a fixed date you cannot move, a window, or unscheduled?
 3. Who has to believe this - individual developers choosing their own tools, engineering leaders and buyers approving spend, investors and the market, or candidates? Rank them.
@@ -293,7 +297,11 @@ Tell the user plainly what a briefing cannot buy: inclusion or position in any p
 
 ## Between announcements
 
-Coverage arrives faster for senders reporters recognise, so keep a small ongoing practice: read the beat, offer value with no ask, and answer fast when a reporter needs a source on something with nothing in it for you. Reliability is what turns a contact into a relationship, and it cannot be assembled in the week before a launch.
+Coverage arrives faster for senders reporters recognise, and newsletter curators pick reliable, rule-following sources over familiar ones. Neither can be assembled in the week before a launch.
+
+- Reporters: read the beat, offer value with no ask, and answer fast when one needs a source on something with nothing in it for you.
+- Practitioner-newsletter curators: they pick from feeds, aggregators and reader submissions, so a linkable piece sent by each curator's own route beats any pitch campaign.
+- Curator work: linkable content first, mention tracking on every piece, and in between, in efficiency order: tips by each curator's route > presence where curators source > relationship upkeep. Ranking, routes, templates and limits: [./references/newsletter-curators.md](./references/newsletter-curators.md).
 
 ## Adoption motion changes the plan
 

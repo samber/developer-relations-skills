@@ -4,7 +4,7 @@ description: Before starting any developer-relations work - and again at the sta
 license: MIT
 metadata:
   author: Samuel Berthe
-  version: "1.0.17"
+  version: "1.0.18"
 ---
 
 # Developer Relations Kickoff
@@ -159,7 +159,7 @@ These tables are deliberately unranked, and must stay that way - inside a block 
 | `samber/developer-relations-skills@devrel-newsletter-growth`    | Grow and keep the newsletter's list - signup surfaces, consent at signup, curator pitches, swaps, churn reading, per-source metrics |
 | `samber/developer-relations-skills@devrel-newsletter-sourcing`  | Find and gate one issue's items - intake channels, window, primary sources, thin-issue call |
 | `samber/developer-relations-skills@devrel-newsletter-sponsorship` | Sell sponsor slots in your own newsletter - sellability gate, acceptance policy, slots and caps, click-based rate card, ad label, booking terms, sponsor report |
-| `samber/developer-relations-skills@tech-press-relations`        | Press and light analyst relations - angle, reporter map, pitch, embargo, press page |
+| `samber/developer-relations-skills@tech-press-relations`        | Press, newsletter curators and light analyst relations - angle, reporter map, pitch, embargo, press page |
 
 **Meta and personal practice:**
 

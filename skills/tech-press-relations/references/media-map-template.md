@@ -48,13 +48,15 @@ Every candidate needs all five before they enter the map:
 - Angle history noted - what they have already argued about this category, especially scepticism.
 - A contact route that is real. Never guess an address into a send list; an unconfirmed contact is a blank field, not a hypothesis.
 
+For a newsletter curator, read the last five issues instead of bylines, and record the published submission route and rules in place of pitch preferences.
+
 ## Scoring rubric
 
 Score each dimension 1-5, multiply, rank.
 
 | Dimension      | Question                                                        | Weight |
 | -------------- | --------------------------------------------------------------- | ------ |
-| Beat match     | Do their recent bylines cover exactly this?                     | 3x     |
+| Beat match     | Do their recent bylines or issues cover exactly this?           | 3x     |
 | Audience fit   | Does their readership contain the people who must believe this? | 2x     |
 | Responsiveness | Do they engage publicly, answer sources, run reader tips?       | 2x     |
 | Recency        | Have they touched this topic in the last quarter?               | 1x     |

@@ -4,7 +4,7 @@ description: Designs an open-source project's ongoing distribution mix after the
 license: MIT
 metadata:
   author: Samuel Berthe
-  version: "1.0.5"
+  version: "1.0.6"
 ---
 
 # OSS Distribution Strategy
@@ -172,7 +172,7 @@ Ranking says what to run; sequencing says in what order, and the order changes t
 
 1. **Foundation, weeks 1-4.** Fix the audit's metadata and stale-listing findings. If company adoption is a goal, ship the minimum trust posture in the same pass: signed releases, build provenance, a published SBOM, `SECURITY.md` with a disclosure path, an automated supply-chain score in CI.
 2. **Passive discovery, months 1-3.** Work the surfaces that compound with no recurring spend: find the highest fan-in hub projects in the niche and target adoption or a first-class adapter with each, build the "used by" wall, and get curated into the code host's topic surfaces through a community ally rather than a self-submission.
-3. **Active seeding, ongoing.** Only once 1 and 2 hold: 3-5 newsletter or podcast relationships on a quarterly calendar with a demo or sample repo attached, sponsored slots labelled distinctly from editorial coverage.
+3. **Active seeding, ongoing.** Only once 1 and 2 hold: 3-5 podcast relationships on a quarterly calendar with a demo or sample repo attached, sponsored slots labelled distinctly from editorial coverage. Newsletter curators need no wait: from stage 1, send each substantive release write-up once by each curator's own route. Curator practice: samber/developer-relations-skills@tech-press-relations.
 
 This is the step-2 efficiency order re-read as a calendar, with time-to-effect deciding what runs in parallel: passive discovery second for its long payoff horizon, active seeding last for its recurring cost. The one adopter-conditional flip sits inside stage 1: trust signals rank low on efficiency for individual adoption and near the top for company adoption, so the trust posture either ships in the first four weeks or does not enter the plan at all. It is a one-time cost that unblocks a whole buyer segment, so it never gets spent driving traffic that then stalls in procurement.
 

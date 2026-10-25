@@ -76,7 +76,7 @@ A security fix release still gets its notes from `samber/developer-relations-ski
 - `samber/developer-relations-skills@oss-distribution-strategy` - everything after that window: registry presence, curated lists, downstream packaging, release cadence as a visibility beat.
 - `samber/developer-relations-skills@build-in-public` - the ongoing personal or company transparency practice, independent of any launch.
 
-"Adoption flattened after launch" is distribution, not a second launch. "What should I post every week" is build-in-public. `samber/developer-relations-skills@tech-press-relations` handles journalists and embargoes for any of the three; it never owns the announcement post itself.
+"Adoption flattened after launch" is distribution, not a second launch. "What should I post every week" is build-in-public. `samber/developer-relations-skills@tech-press-relations` handles journalists, embargoes and third-party newsletter curators for any of the three; it never owns the announcement post itself.
 
 ### Maintainer load - the person vs the project
 
