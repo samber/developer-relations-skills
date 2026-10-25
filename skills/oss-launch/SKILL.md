@@ -1,10 +1,10 @@
 ---
 name: oss-launch
-description: Plans and runs an open-source project launch end to end - name and license clearance, the readiness gate, positioning and one-liner, channel sequencing, the launch-day war room, star-velocity and GitHub Trending mechanics, and post-launch measurement. Use whenever someone is about to release, announce, open-source or "Show HN" a repository, asks how to reach GitHub Trending, wants the first real users or stars for a new library, is planning a Product Hunt post or a multi-day launch week, or asks why a launch fell flat (even if they only say they are pushing a repo public). Covers individual-developer and company adoption. Not ongoing distribution afterwards - use samber/developer-relations-skills@oss-distribution-strategy instead.
+description: Plans and runs an open-source project launch end to end - name and license clearance, the readiness gate, positioning and one-liner, channel sequencing, the launch-day war room, star-velocity and GitHub Trending mechanics, and post-launch measurement. Use whenever someone is about to release, announce, open-source or "Show HN" a repository, asks how to reach GitHub Trending, wants the first real users or stars for a new library, is planning a Product Hunt post or a multi-day launch week, or asks why a launch fell flat (even if they only say they are pushing a repo public). Covers individual-developer and company adoption. Not ongoing distribution afterwards - use samber/developer-relations-skills@oss-distribution-strategy instead. Not HN site rules - use samber/developer-relations-skills@hackernews-playbook. Not Product Hunt site rules - use samber/developer-relations-skills@producthunt-playbook.
 license: MIT
 metadata:
   author: Samuel Berthe
-  version: "1.0.3"
+  version: "1.0.4"
 ---
 
 # OSS Launch
@@ -94,6 +94,8 @@ Check the draft against the credibility codes in [references/announcement-exampl
 - Disclose the commercial boundary up front if a company is behind the project.
 
 Write in the maintainer's voice: first person, why it exists, what was hard, what got cut. Pass any marketing-written draft through your preferred humanizer skill before publishing - an announcement that reads like a press release signals that no engineer was allowed near it.
+
+For anything bound for Hacker News, see `samber/developer-relations-skills@hackernews-playbook`.
 
 ## Step 4 - Choose the launch shape
 
@@ -245,7 +247,7 @@ Set targets as multiples of the project's own pre-launch baseline. The absolute 
 ## Invocation examples
 
 - _"We're open-sourcing our internal feature-flag service next month. Can you plan the launch?"_ → Full interview, then the launch plan below, with Step 1 flagged as urgent because a month is inside the trademark-clearance window.
-- _"Review my Show HN title and first comment before I post."_ → Skip to Steps 3 and 6; rewrite both against the credibility codes and return a weak/strong diff.
+- _"Review my Show HN title and first comment before I post."_ → Skip to Steps 3 and 6; check both against the credibility codes and name what to fix, without rewriting them - HN bans AI-edited posts.
 - _"How do I get on GitHub Trending with a Rust crate?"_ → Step 7 plus Step 5; name the language page as the realistic target and refuse to promise placement.
 - _"Our launch got 40 stars and died. What went wrong?"_ → Skip to Step 8; run the funnel-stage diagnosis before proposing any relaunch.
 - _"We have five features shipping and a conference keynote in six weeks."_ → Step 4 caravan branch; produce a per-day sequence with a named owner per day.
@@ -283,7 +285,7 @@ Present it section by section and get agreement on each before moving to the nex
 - **Announcing before the name is cleared.** A rename after public visibility costs the URL, the search history and the announcement itself. Clear it in Step 1 or accept that risk explicitly.
 - **Launching to a fixed external date with blockers open.** Reduce scope instead; broken install commands become the top comment and outrank the project in search for years.
 - **A flat launch read as bad luck.** Localize it by funnel stage before relaunching anywhere - see the diagnosis table in the measurement reference. Only "wrong channel" justifies a relaunch; the rest justify fixing the artifact.
-- **Reposting a dead thread immediately.** Aggregators bury duplicates. Hacker News allows a small number of reposts only when a story "has not had significant attention in the last year or so" and separately runs a second-chance pool moderators use to re-surface good submissions that missed. Mailing them once is the sanctioned recovery path; resubmitting is not.
+- **Reposting a dead thread immediately.** Aggregators bury duplicates. Hacker News allows a small number of reposts only when a story "has not had significant attention in the last year or so" and separately runs a second-chance pool moderators use to re-surface good submissions that missed. Mailing them once and a small number of spaced reposts are the sanctioned paths; deleting and resubmitting is not. For the rest of the site's mechanics - the new-account Show HN block, hand-written text, thread conduct - see `samber/developer-relations-skills@hackernews-playbook`.
 - **Nobody home.** A launch posted before a meeting-heavy day dies in the comments. Move it.
 - **Winning the wrong audience.** Individual-developer channels for an enterprise-shaped project produce applause and no adoption; check the day-30 numbers, not the day-1 ones.
 - **Burnout in week one.** An over-performing launch lands on a team of one or two, already fragile. Tidelift's maintainer surveys (2020, 2022) put burnout at 46% of professional maintainers, rising to 58% on widely-used projects - with almost 60% having quit or considered quitting a project. Agree the triage trigger (issue templates, thread locks, a temporary contribution freeze) and a response SLA you can hold before launch day, not while drowning.

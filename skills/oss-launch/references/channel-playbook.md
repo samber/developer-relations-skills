@@ -40,13 +40,13 @@ This is the clock, not the priority. It is fixed by mechanics - links must resol
 
 - Show HN is for something people can actually try - a repository, binary or live demo. Blog posts, sign-up pages, newsletters and lists are off-topic for it, and so are minor version bumps. A signup wall weakens a submission badly: readers must be able to try it directly.
 - Title format: `Show HN: <Name> – <plain description of what it does>`. No superlatives, no marketing adjectives; moderators rewrite sensational titles anyway.
-- Ranking divides points by a power of elapsed time, so the first hours decide everything. Other inputs: user flags, anti-abuse systems, a penalty for overheated threads, per-account and per-site weighting, moderator action. **High karma buys no ranking advantage** - the widely repeated "500+ karma gets more initial trust" claim is wrong. (500 karma is the _downvote_ threshold, which is a different thing.)
+- Ranking divides points by a power of elapsed time, so the first hours decide everything. Other inputs: user flags, anti-abuse systems, a penalty for overheated threads, per-account and per-site weighting, moderator action. **High karma buys no ranking advantage** - the widely repeated "500+ karma gets more initial trust" claim is wrong. (About 501 karma unlocks comment downvotes, which is a different thing.)
 - Asking anyone to upvote or comment is against the rules and gets the submission, the account and sometimes the whole domain penalized. Voting rings are detected.
 - `[flagged]` means users flagged it; `[dead]` means software, flags or moderators killed it - enough vouches can restore it.
-- Reposts are buried as duplicates, except when the story has had no significant attention for roughly a year. Deleting and resubmitting is not a workaround, and "wait 24 hours and repost" is not a recovery window - it is a duplicate.
-- **The second-chance pool is the real recovery path.** Moderators re-inject good submissions that got no traction, giving them a fresh random front-page placement, and they explicitly invite the request: mail them about a submission you think is particularly good for the site, and it is fine if it is your own. Once, politely, then let it go.
+- A story that got no significant attention may be reposted a small number of times; one that did is buried as a duplicate for about a year. Deleting and resubmitting is banned, and a same-day repost reads as a duplicate.
+- **The second-chance pool is the real recovery path.** Moderators re-inject good submissions that got no traction, giving them a fresh random front-page placement, and they explicitly invite the request: mail them about a submission you think is particularly good for the site, and your own work is "permissible", though moderators prefer things readers ran across. Once, politely, then let it go.
 - **Launch HN is not available to most projects.** It is YC-only and editorially curated: read the guidance, fill a form, staff decide within two weeks, one per startup. Any advice that says "use Launch HN for a major company launch or funding announcement" is wrong - non-YC companies cannot elect into it.
-- There is a human in the loop. The site runs with essentially one full-time moderator plus automated spam/duplicate detection, domain weighting and flamewar cool-offs, and applies stricter standards to new accounts. Post from an account with genuine history.
+- There is a human in the loop. The site runs with a very small moderation team plus automated spam/duplicate detection, domain weighting and flamewar cool-offs, and applies stricter standards to new accounts - which currently cannot post Show HN at all. Post from an account with genuine history.
 - The window to edit a comment closes after two hours; threads close to new comments after two weeks.
 - Posting hours: no first-party guidance exists. Derive the hour from where the anchor audience actually is. Hardcoded US-morning windows circulating in launch guides are invented.
 
@@ -58,16 +58,16 @@ Separate what the platform documents from what launch consultancies assert:
 
 | Verified (Product Hunt's own docs)                                                                   | Practitioner folklore                                                                      |
 | ---------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------ |
-| Ranking runs on "points": upvotes plus weighted engagement such as comments and shares               | "First four hours are shown in random order, then ranked"                                  |
+| Ranking runs on "points": upvotes plus weighted engagement such as comments and shares               | "First four hours are shown in random order, then ranked" (tested by Product Hunt in 2023, current status unconfirmed) |
 | "Not all upvotes carry the same weight" - the system discounts inauthentic engagement                | Specific vote thresholds for Product of the Day (the least reliable number in circulation) |
 | Product of the Day/Week/Month go to the highest points over that period; "there's no secret formula" | Aged accounts (>30 days) weighting more than new ones                                      |
-| Soliciting upvotes violates the terms                                                                | 12:01 AM PT launch time and Tue–Thu being best                                             |
+| Soliciting upvotes violates the terms                                                                | Tue–Thu being best (the 12:01 AM PT go-live itself is documented)                          |
 
-The 12:01 AM PT and Tue–Thu conventions are worth following anyway - they are consistent across every guide and cost nothing - but present them to the user as convention, not as platform rule.
+Launches go live at 12:01 AM PT by platform schedule. The Tue–Thu convention is worth following anyway - it is consistent across every guide and costs nothing - but present it to the user as convention, not as platform rule.
 
 What matters at launch-planning level: post the maker comment within a few minutes, in the same shape as an aggregator first comment. For a library rather than a SaaS dashboard, the gallery problem is showing a terminal session, a diff or a benchmark - generic product mockups undersell it.
 
-Listing specifics (character limits, image dimensions, topic counts) change with the platform's form and belong to a platform playbook, not here. Check them against the live submission form before writing copy.
+Listing specifics (character limits, image dimensions, topic counts), account eligibility, featuring, relaunch gaps and the comment rules belong to `samber/developer-relations-skills@producthunt-playbook`, not here. Check them against the live submission form before writing copy.
 
 ### Subreddits and forums
 

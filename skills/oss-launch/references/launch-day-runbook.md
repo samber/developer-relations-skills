@@ -15,7 +15,7 @@ Times are relative to the anchor post (T+0). Adjust the absolute hour to the anc
 ## T+0: Post
 
 - Publish the anchor post yourself, from an account with genuine history in that community.
-- Post the first comment within a minute or two. A thread with maintainer context attracts substantive replies; a bare link attracts drive-by dismissals.
+- Put the maintainer context in the submission's text field; post it as the first comment within a minute or two only if the text does not show. A thread with maintainer context attracts substantive replies; a bare link attracts drive-by dismissals.
 
 First comment shape - adapt the wording, keep the four moves.
 

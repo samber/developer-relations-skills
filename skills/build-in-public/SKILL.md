@@ -168,6 +168,8 @@ Name **one anchor surface the project owns** - changelog, blog, newsletter - and
 
 Pick amplifiers by where this audience already evaluates tools, and only channels the maintainer actually reads. Each platform has its own accepted format and its own way of punishing a mismatch - a milestone post and a candid post-mortem are different genres, not one asset reshaped. [references/platform-norms.md](./references/platform-norms.md) has the per-platform table; dev.to specifics live in `samber/developer-relations-skills@devto-playbook`.
 
+For Hacker News itself - Show HN eligibility, the ban on AI-written or AI-edited text, staff disclosure - see `samber/developer-relations-skills@hackernews-playbook`.
+
 Keep the loop cheap: the repository artifact (release notes, decision record, postmortem) is the source of truth, and public posts link to it instead of duplicating it.
 
 ## Step 8 - Plan the downside

@@ -96,4 +96,4 @@ Product Hunt's terms prohibit the same thing, so the rule travels across channel
 
 ## Register and rewriting
 
-Announcements written by marketing read as press releases and get filed as ads. Restore the maintainer's voice: first person, the concrete problem, what was hard, what got cut, what is still broken. Run the final draft through your preferred humanizer skill, then read it aloud - anything you would not say to another engineer at a bar does not belong in it.
+Announcements written by marketing read as press releases and get filed as ads. Restore the maintainer's voice: first person, the concrete problem, what was hard, what got cut, what is still broken. Run the final draft through your preferred humanizer skill - except text bound for Hacker News, which bans generated and AI-edited text and must stay hand-written - then read it aloud - anything you would not say to another engineer at a bar does not belong in it.
