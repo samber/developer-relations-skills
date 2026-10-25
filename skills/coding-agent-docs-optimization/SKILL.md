@@ -4,7 +4,7 @@ description: Makes SDK, API or protocol documentation something a coding agent c
 license: MIT
 metadata:
   author: Samuel Berthe
-  version: "1.0.1"
+  version: "1.0.2"
 ---
 
 # Coding Agent Docs Optimization
@@ -232,7 +232,7 @@ Produce one audit report, not a pile of page edits:
 - `samber/developer-platform-skills@agent-skill-offering` - see also: shipping an Agent Skill inside the SDK or CLI repo, versioned with each release
 - `samber/developer-relations-skills@version-migration-guide` - the upgrade guides an agent needs when a major version lands
 - `samber/developer-platform-skills@api-reference-quality` - endpoint-level reference completeness audited against the spec surface
-- `samber/developer-platform-skills` - API design questions and agent-callable tool surface operations
+- `samber/developer-platform-skills@agent-integration-surfaces` - see also: agent access policy beyond docs, agent identity and signup, agent usage measurement; other API design and agent tool-surface questions live in the same collection
 
 See [./references/agent-surfaces.md](./references/agent-surfaces.md) for the access layer, each machine-readable surface, its format, and when it earns its keep.
 See [./references/cold-run-protocol.md](./references/cold-run-protocol.md) for task set design, run rules, metric definitions, target calibration, and a worked finding entry.

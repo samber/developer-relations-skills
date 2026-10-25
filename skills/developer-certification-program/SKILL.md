@@ -4,7 +4,7 @@ description: "Plans the issuer side of a developer certification or badge progra
 license: MIT
 metadata:
   author: Samuel Berthe
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # Developer Certification Program
@@ -20,7 +20,7 @@ Route elsewhere before starting:
 - Whether to invest in structured education at all (learning path, curriculum, labs, academy) → `samber/developer-relations-skills@developer-education-strategy`. Return here once a credential is on the table.
 - Writing lessons or prep material → `samber/developer-relations-skills@developer-tutorial`.
 - Recognising community advocates without assessing them → `samber/developer-relations-skills@developer-champions`.
-- Certifying a partner's app, connector or integration rather than a person → `samber/developer-platform-skills@app-marketplace-review` (sibling repo; install it if missing).
+- Certifying a partner's connector or integration rather than a person → `samber/developer-platform-skills@connector-certification-program`; admitting a partner's app to a marketplace → `samber/developer-platform-skills@app-marketplace-review` (sibling repo; install it if missing).
 - A candidate preparing for someone else's exam, a hiring take-home test, or a compliance certification (SOC 2, ISO 27001): out of scope. Say so and stop.
 
 Stay in scope for credentials issued to **external** developers: freelancers and consultants at IT services firms first, then customer engineers and students. Internal employee skills matrices belong to people or L&D teams, because no outside reader relies on them.

@@ -4,7 +4,7 @@ description: Decides whether, when and how far a developer product should open i
 license: MIT
 metadata:
   author: Samuel Berthe
-  version: "1.0.1"
+  version: "1.0.2"
 ---
 
 # Developer Ecosystem Strategy
@@ -347,3 +347,4 @@ See also `samber/developer-platform-skills` once the rung is chosen. It carries 
 - Partner-app onboarding.
 - Review standards.
 - Marketplace economics.
+- Partner extension of a public GraphQL graph, from app-owned fields to isolated partner subgraphs: `samber/developer-platform-skills@graphql-federation-offering`.
