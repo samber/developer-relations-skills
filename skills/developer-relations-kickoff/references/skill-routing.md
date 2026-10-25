@@ -75,8 +75,9 @@ A security fix release still gets its notes from `samber/developer-relations-ski
 - `samber/developer-relations-skills@oss-launch` - the launch window itself: readiness gate, positioning, channel sequencing, run of show, trending mechanics.
 - `samber/developer-relations-skills@oss-distribution-strategy` - everything after that window: registry presence, curated lists, downstream packaging, release cadence as a visibility beat.
 - `samber/developer-relations-skills@build-in-public` - the ongoing personal or company transparency practice, independent of any launch.
+- `samber/developer-relations-skills@producthunt-playbook` - Product Hunt as a platform, launch or relaunch: whether a devtool belongs there, self-hunting, account and supporter eligibility, featuring vs points, maker comment, vote-solicitation and AI-comment rules, the two-month relaunch gap, product forum and Product Page afterwards.
 
-"Adoption flattened after launch" is distribution, not a second launch. "What should I post every week" is build-in-public. `samber/developer-relations-skills@tech-press-relations` handles journalists, embargoes and third-party newsletter curators for any of the three; it never owns the announcement post itself.
+"Adoption flattened after launch" is distribution, not a second launch. "What should I post every week" is build-in-public. "Which channels, in what order, on launch day" is oss-launch; "our Product Hunt listing, our launch was not featured, our points dropped, can we relaunch" is producthunt-playbook. `samber/developer-relations-skills@tech-press-relations` handles journalists, embargoes and third-party newsletter curators for any of the three; it never owns the announcement post itself.
 
 ### Maintainer load - the person vs the project
 
@@ -188,6 +189,7 @@ Ask who is hiring whom.
 - Building the slides, editing the video, running the camera → outside the collection.
 - Drafting a dev.to article → not `samber/developer-relations-skills@devto-playbook`, which only covers publishing and engaging there; route to `samber/developer-relations-skills@engineering-blog-post`. Administering a self-hosted Forem instance → outside the collection.
 - Product-user onboarding (in-app) → not `samber/developer-relations-skills@oss-contributor-onboarding`, which is about code contribution.
+- Reading or tracking Product Hunt launches, topics or leaderboards through its API → not `samber/developer-relations-skills@producthunt-playbook`, which covers how to take part on the site; outside the collection.
 - Brand or marketing-page share in AI answers, or the docs site's own AI assistant → not `samber/developer-relations-skills@developer-docs-ai-visibility`, which covers third-party assistants citing the docs; outside the collection.
 
 ## Host auto-selection

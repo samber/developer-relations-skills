@@ -175,6 +175,7 @@ This collection covers the full developer-relations surface.
 ### Open source
 
 - [`oss-launch`](./skills/oss-launch): Plans and runs an open-source launch end to end: name and license clearance, the readiness gate, positioning, channel sequencing, the launch-day war room, and measurement.
+- [`producthunt-playbook`](./skills/producthunt-playbook): Runs a developer tool's Product Hunt presence: launch-or-skip verdict, self-hunted listing, maker conduct within the vote and AI-comment rules, relaunch timing, and the product forum.
 - [`oss-license-strategy`](./skills/oss-license-strategy): Chooses a project's license and contribution policy as one decision: copyleft strength, dependency compatibility, DCO versus CLA, dual licensing, and relicensing fork risk.
 - [`oss-governance`](./skills/oss-governance): Chooses and documents a project's governance model: decision rights, maintainer promotion, voting rules, conflict escalation, succession, trademark control, and foundation options.
 - [`oss-contributor-onboarding`](./skills/oss-contributor-onboarding): Designs and verifies the path from stranger to first merged contribution: the CONTRIBUTING file, the good-first-issue queue, a cold clone-to-passing-tests command, and the review loop.
