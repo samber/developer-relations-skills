@@ -95,7 +95,7 @@ Check the draft against the credibility codes in [references/announcement-exampl
 
 Write in the maintainer's voice: first person, why it exists, what was hard, what got cut. Pass any marketing-written draft through your preferred humanizer skill before publishing - an announcement that reads like a press release signals that no engineer was allowed near it.
 
-Hacker News bans generated and AI-edited text in posts and comments, so skip the humanizer pass for anything bound for HN. Name what to fix and let the maintainer write every word; see `samber/developer-relations-skills@hackernews-playbook`.
+For anything bound for Hacker News, see `samber/developer-relations-skills@hackernews-playbook`.
 
 ## Step 4 - Choose the launch shape
 
