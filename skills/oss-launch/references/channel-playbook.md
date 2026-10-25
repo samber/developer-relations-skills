@@ -58,16 +58,16 @@ Separate what the platform documents from what launch consultancies assert:
 
 | Verified (Product Hunt's own docs)                                                                   | Practitioner folklore                                                                      |
 | ---------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------ |
-| Ranking runs on "points": upvotes plus weighted engagement such as comments and shares               | "First four hours are shown in random order, then ranked"                                  |
+| Ranking runs on "points": upvotes plus weighted engagement such as comments and shares               | "First four hours are shown in random order, then ranked" (tested by Product Hunt in 2023, current status unconfirmed) |
 | "Not all upvotes carry the same weight" - the system discounts inauthentic engagement                | Specific vote thresholds for Product of the Day (the least reliable number in circulation) |
 | Product of the Day/Week/Month go to the highest points over that period; "there's no secret formula" | Aged accounts (>30 days) weighting more than new ones                                      |
-| Soliciting upvotes violates the terms                                                                | 12:01 AM PT launch time and Tue–Thu being best                                             |
+| Soliciting upvotes violates the terms                                                                | Tue–Thu being best (the 12:01 AM PT go-live itself is documented)                          |
 
-The 12:01 AM PT and Tue–Thu conventions are worth following anyway - they are consistent across every guide and cost nothing - but present them to the user as convention, not as platform rule.
+Launches go live at 12:01 AM PT by platform schedule. The Tue–Thu convention is worth following anyway - it is consistent across every guide and costs nothing - but present it to the user as convention, not as platform rule.
 
 What matters at launch-planning level: post the maker comment within a few minutes, in the same shape as an aggregator first comment. For a library rather than a SaaS dashboard, the gallery problem is showing a terminal session, a diff or a benchmark - generic product mockups undersell it.
 
-Listing specifics (character limits, image dimensions, topic counts) change with the platform's form and belong to a platform playbook, not here. Check them against the live submission form before writing copy.
+Listing specifics (character limits, image dimensions, topic counts), account eligibility, featuring, relaunch gaps and the comment rules belong to `samber/developer-relations-skills@producthunt-playbook`, not here. Check them against the live submission form before writing copy.
 
 ### Subreddits and forums
 
