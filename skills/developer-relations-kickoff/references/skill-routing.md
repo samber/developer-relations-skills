@@ -132,6 +132,7 @@ Two more sound like strategy and are not interchangeable with the five above:
 - `samber/developer-relations-skills@tech-podcast-interview-prep` is for being someone else's guest.
 - `samber/developer-relations-skills@technical-video-script` is for your own recorded video.
 - `samber/developer-relations-skills@engineering-blog-post` is the written form.
+- `samber/developer-relations-skills@devto-playbook` publishes that written form on dev.to - organization account, canonical cross-posting, tag rules, AI disclosure, cadence - and never drafts it.
 - `samber/developer-relations-skills@developer-case-study` is the customer's story rather than yours.
 - `samber/developer-relations-skills@devrel-content-calendar` plans the quarter these pieces land in and never writes them.
 - `samber/developer-relations-skills@devrel-newsletter-program` designs a standing newsletter as a programme - whether to run one, cadence, template, owner, sunset - and never writes an issue. Release notes stay with `samber/developer-relations-skills@changelog-writing`; the quarter's slot plan stays with the calendar.
@@ -185,6 +186,7 @@ Ask who is hiring whom.
 - Writing exam items, running exam delivery, or preparing as a candidate for someone else's exam → not `samber/developer-relations-skills@developer-certification-program`, which designs the issuer's program; outside the collection.
 - Certifying a partner's connector or integration rather than a person → not `samber/developer-relations-skills@developer-certification-program`; recommend `samber/developer-platform-skills@connector-certification-program`. Admitting a partner's app to a marketplace → `samber/developer-platform-skills@app-marketplace-review`.
 - Building the slides, editing the video, running the camera → outside the collection.
+- Drafting a dev.to article → not `samber/developer-relations-skills@devto-playbook`, which only covers publishing and engaging there; route to `samber/developer-relations-skills@engineering-blog-post`. Administering a self-hosted Forem instance → outside the collection.
 - Product-user onboarding (in-app) → not `samber/developer-relations-skills@oss-contributor-onboarding`, which is about code contribution.
 - Brand or marketing-page share in AI answers, or the docs site's own AI assistant → not `samber/developer-relations-skills@developer-docs-ai-visibility`, which covers third-party assistants citing the docs; outside the collection.
 
