@@ -131,18 +131,22 @@ The numbering is a table of contents, not a ranking. The efficiency order, the p
 
 ## 8. Recurring creator and newsletter seeding
 
-**What it is** - the ongoing relationship with 3-5 newsletter curators and podcast hosts, distinct from the launch pitch: embargoed news, major-version demos and case studies on a calendar, keeping the project in front of the audience between launches.
+**What it is** - keeping the project in front of newsletter curators and 3-5 podcast hosts between launches, distinct from the launch pitch: a release write-up per substantive release, major-version demos and case studies.
 
 **Mechanics worth knowing**
 
-- The channel is concentrated. Newsletters: Cooperpress (JavaScript Weekly - 179,077 subscribers per its Q3 2024 media kit - Golang Weekly, Node Weekly, Ruby Weekly, Frontend Focus, React Status), plus TLDR, Bytes, Python Weekly, Console.dev, Changelog News, This Week in Rust. Podcasts: Changelog, Software Engineering Daily, Syntax, JS Party, Go Time, Rustacean Station, Talk Python.
-- Curators hand-write descriptions and state "signal over noise" as the editorial bar. Editorial picks and paid sponsorship slots are structurally different purchases and must be labelled differently.
-- What gets sent matters: an embargo, a live demo, a sandbox or a sample repo - never an announcement with no way to try the thing.
+- Curators pick from feeds, aggregators, package-registry monitors and reader submissions, so being findable where they look beats pitching them. Publish each substantive release as a short ungated post on the project's own domain, with an RSS feed, saying what changed and why it matters. A bare changelog rarely gets picked.
+- Send that post once, by each curator's published route, with a one-line disclosure that you maintain the project. Some newsletters take no submissions and source from one community instead: This Week in Rust takes project updates only from r/rust.
+- Curators reward reliability over familiarity. Follow each newsletter's written rules, thank once after a mention with no new ask, and send a coverage-gap note only to a newsletter that covered you before.
+- The channel is concentrated. Newsletters: Cooperpress (JavaScript Weekly in the six figures of subscribers, Golang Weekly, Node Weekly, Ruby Weekly, Frontend Focus, React Status), plus TLDR, Bytes, Python Weekly, Console.dev, Changelog News, This Week in Rust. Podcasts: Changelog, Software Engineering Daily, Syntax, Rustacean Station, Talk Python.
+- Editorial picks and paid sponsorship slots are different purchases and must be labelled differently.
+- What gets sent matters: a release write-up, a live demo, a sandbox or a sample repo - never an announcement with no way to try the thing.
 
-- **Cost** - the highest recurring cost of any family here, and relationship work that cannot be handed to whoever is free.
-- **Decay** - the relationship decays, not the artifact.
-- **Signal** - newsletter signups and monthly active developers as leading indicators, paired with an activation metric such as time to first successful use.
-- **Traps** - conflating sponsored placement with earned coverage, burning a relationship that took years to build; pitching per release instead of on a quarterly calendar.
+- **Cost** - low per curator tip; the per-release write-up is the real recurring cost. Podcast relationships stay relationship work that cannot be handed to whoever is free.
+- **Decay** - the write-up keeps being found through feeds; each tip is one-shot.
+- **Signal** - lift on the linked page against its own pre-mention baseline, since some curators forbid UTMs and mail apps send no referrer; then installs and monthly active developers, paired with an activation metric such as time to first successful use.
+- **Traps** - conflating sponsored placement with earned coverage; tipping curators about minor releases; courting curators with nothing linkable to send.
+- **Execution** - curator routes, lever ranking, tip templates and mention tracking: samber/developer-relations-skills@tech-press-relations.
 
 ## 9. Trust and procurement signals
 

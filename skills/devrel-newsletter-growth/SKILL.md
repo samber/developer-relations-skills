@@ -4,7 +4,7 @@ description: "Grows and keeps a developer newsletter's subscriber list - signup 
 license: MIT
 metadata:
   author: Samuel Berthe
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # DevRel Newsletter Growth
@@ -19,7 +19,7 @@ This skill stops at the subscriber. Out of scope, each with its own skill:
 - writing an issue: samber/developer-relations-skills@devrel-newsletter-issue
 - finding each issue's items: samber/developer-relations-skills@devrel-newsletter-sourcing
 - inbox placement, authentication, bounces and list hygiene: samber/developer-relations-skills@devrel-newsletter-deliverability
-- a release pitched to the press when the team has no newsletter of its own: samber/developer-relations-skills@tech-press-relations
+- a release pitched to the press, or the product featured in other people's newsletters, when there is no newsletter of your own to grow: samber/developer-relations-skills@tech-press-relations
 
 ## Moves to refuse
 
