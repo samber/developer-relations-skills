@@ -162,3 +162,4 @@ Context, never targets. Software senders' median click rate sits near 1% per sen
 - samber/developer-relations-skills@devrel-newsletter-deliverability - authentication, warm-up after a pause, bounce handling and spam-folder diagnosis
 - samber/developer-relations-skills@build-in-public - the newsletter as one owned anchor surface
 - samber/developer-relations-skills@developer-community-health - whether a contributor base exists for the community-edited shape
+- samber/developer-relations-skills@devrel-newsletter-growth - growing and keeping the list once the charter holds
