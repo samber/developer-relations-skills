@@ -29,7 +29,7 @@ They are listed here in the same efficiency order step 3 applies - `enablement-f
 - **Pillar mix:** enablement heavy, advocacy light, marketing and community token.
 - **Goals it serves:** activation, retention.
 - **First bets:** time-to-first-success quickstart, error and troubleshooting coverage for the top support signals, tested code samples in the two languages that actually matter, an agent-readable documentation surface.
-- **Effort:** about a quarter of one person's writing time, then near-zero maintenance; no coordination beyond whoever owns the docs; fully reversible, because the artefacts outlive the program.
+- **Effort:** about a month of one person's writing and testing time, then near-zero maintenance; no coordination beyond whoever owns the docs; fully reversible, because the artefacts outlive the program.
 - **Starves:** events, social presence, community venue.
 - **Fastest signal:** share of new signups reaching first success, and support tickets per hundred new developers.
 - **Wrong pick when:** nobody arrives at all. Fixing activation for a trickle produces a very efficient trickle.
@@ -51,7 +51,7 @@ They are listed here in the same efficiency order step 3 applies - `enablement-f
 - **Pillar mix:** enablement heavy, advocacy medium (pre-sales facing), marketing light, community light.
 - **Goals it serves:** activation, revenue.
 - **First bets:** reference architectures, proof-of-concept kits with a scoped success definition, security/licensing/compliance answers written once, migration guides from the incumbent, named production references.
-- **Effort:** about a quarter of one person's writing time, plus standing coordination with sales; reversible, since the artefacts outlive the program.
+- **Effort:** about a month of one person's writing time, plus standing coordination with sales; reversible, since the artefacts outlive the program.
 - **Starves:** hobbyist content, broad awareness plays.
 - **Fastest signal:** evaluations that reach a technical decision, and time from first contact to a working proof of concept.
 - **Wrong pick when:** the product is bought bottom-up by individuals. Approver material nobody reads is expensive.

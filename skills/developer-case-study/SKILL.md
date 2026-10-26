@@ -4,7 +4,7 @@ description: Turns a customer's real production deployment into a technical case
 license: MIT
 metadata:
   author: Samuel Berthe
-  version: "1.0.1"
+  version: "1.0.2"
 ---
 
 # Developer Case Study
@@ -276,7 +276,7 @@ One approved study feeds several artefacts. Ask which are needed _before_ approv
 1. Documentation cross-link - near-zero: a "who uses this and how" pointer from the relevant page, sitting where an evaluator already reads.
 2. One-page summary for sales - an hour: outcome, three numbers, one quote, and no CTA on every section. Highest value of the four wherever a sales motion exists at all, and worthless where none does - which is exactly when to skip it rather than rank it.
 3. Community post - an hour plus the engineer's willingness: their own words under their own name, which travels further than anything published under yours, and which only they can authorise.
-4. Conference or webinar material - a day, and dependent on a slot existing. The architecture before/after is already a slide, so the marginal cost is low, but nothing here pays until the talk is accepted.
+4. Conference or webinar material - half a day, and dependent on a slot existing. The architecture before/after is already a slide, so the marginal cost is low, but nothing here pays until the talk is accepted.
 
 File the study's atoms - each metric, each quote, the architecture diagram - into a proof library alongside the narrative, with a public/private flag. Assets built later pull from the atoms; nobody re-reads a 1,500-word study to find one number.
 

@@ -4,7 +4,7 @@ description: Benchmarks a competitor's developer relations motion from publicly 
 license: MIT
 metadata:
   author: Samuel Berthe
-  version: "1.0.1"
+  version: "1.0.2"
 ---
 
 # DevRel Competitor Analysis
@@ -29,7 +29,7 @@ Ask one question per message, multiple choice where possible. Skip anything the 
 5. Which surfaces do you want covered, or all of them? (documentation and DX, open source, content, community, Q&A tags, events, hiring signals) - propose the default order in "Which surfaces to collect first" rather than an unranked list.
 6. Do you have any internal numbers to compare against, or should the benchmark stay entirely on public data for both sides?
 7. Does anyone already produce competitive material internally - battlecards, win/loss reports, a comparison page? If so, read it and stay off its ground: product features and pricing belong there, developer surfaces belong here.
-8. By what date must the finding land? A date inside the week caps the pass at the first two surfaces for three peers; a planning cycle weeks out opens community and Q&A, which need a twelve-month sample.
+8. By what date must the finding land? A date inside the week caps the pass at the first three surfaces for three peers; a planning cycle weeks out opens community and Q&A, which need a twelve-month sample.
 9. One-off answer or a standing asset? A one-off promotes the timed quickstart and docs coverage, which settle a question in an afternoon; an asset the team re-runs promotes the dated forge and content series, worthless on the first pass and the whole value of the second.
 10. What is the effort ceiling in analyst hours, and does anything become a standing job? Half a day deletes community, events and hiring from this pass; nobody to own a recurring diff deletes the re-run schedule with them, and the report is written as a one-shot instead.
 
@@ -57,10 +57,10 @@ If the user cannot name competitors, derive candidates from who appears in the s
 
 ## Which surfaces to collect first
 
-Eight surfaces, and an hour spent on the first returns more than a day spent on the last. Rank them by finding per analyst hour, not by what is quickest to open, and collect in that order so a pass cut short at any point still ships a report that changes something.
+Eight surfaces, and an hour spent on the first returns more than two hours spent on the last. Rank them by finding per analyst hour, not by what is quickest to open, and collect in that order so a pass cut short at any point still ships a report that changes something.
 
 - efficiency (finding per analyst hour - the default collection order): timed quickstart > docs mode coverage > forge release and response metrics > Q&A tags > content cadence > community > hiring signals > events
-- effort (heaviest first): community > content cadence > events > forge metrics == Q&A tags > docs mode coverage > timed quickstart == hiring signals
+- effort (heaviest first): community > content cadence > events > forge metrics == Q&A tags > timed quickstart == hiring signals > docs mode coverage
 - value (strongest evidence first): timed quickstart > docs mode coverage > forge response metrics > Q&A tags > community > content cadence > hiring signals > events
 - compliance cost (heaviest review first): community > forge metrics > Q&A tags > docs mode coverage == timed quickstart == content cadence == events == hiring signals
 
@@ -73,13 +73,13 @@ Three ties, each a real equality:
 In efficiency order, with the trade-off folded into each surface:
 
 1. **Timed quickstart** - an hour per competitor. The finding evaluators feel most directly, and the only one no scraped metric produces. Stops the moment a paid step or a sales call blocks it, which is itself the result.
-2. **Documentation mode coverage** - an hour or two per competitor. Categorical, so it transfers between companies of any size; the structural read behind most "why do evaluators pick them" questions.
+2. **Documentation mode coverage** - under an hour per competitor. Categorical, so it transfers between companies of any size; the structural read behind most "why do evaluators pick them" questions.
 3. **Forge release and response metrics** - an API pull per repository. Dated, so it compounds into a diff on the next run; the API is also the only collection route the platform's own acceptable-use terms leave clean.
 4. **Q&A tags** - the cheapest surface on the list, and the only one where developers describe a vendor in their own words rather than the vendor's.
-5. **Content cadence** - a day, because the sample has to run twelve months to separate a launch burst from a trend. A thirty-day shortcut costs less and reports the opposite of the truth, so this rung is the full sample or nothing.
-6. **Community** - a day plus a standing sample, mostly proxies, and the surface where the collection line is easiest to cross. Answers retention and ecosystem questions nothing above it reaches.
+5. **Content cadence** - two or three hours, because the sample has to run twelve months to separate a launch burst from a trend. A thirty-day shortcut costs less and reports the opposite of the truth, so this rung is the full sample or nothing.
+6. **Community** - half a day plus a standing sample, mostly proxies, and the surface where the collection line is easiest to cross. Answers retention and ecosystem questions nothing above it reaches.
 7. **Hiring signals** - an hour, capped at one pass. A leading indicator with a false-positive rate high enough that it can only ever support a hypothesis.
-8. **Events** - a day of sponsor pages and schedules for the least movement per hour on the list. Worth it only when event presence is the decision itself.
+8. **Events** - an hour or two of sponsor pages and schedules for the least movement per hour on the list. Worth it only when event presence is the decision itself.
 
 Default: rungs 1-3 across the confirmed peer set, then stop and check whether the question is already answered. Promote from that default when the question changes:
 
@@ -87,7 +87,7 @@ Default: rungs 1-3 across the confirmed peer set, then stop and check whether th
 - Promote community above everything when the question is why evaluators adopt and then leave.
 - Promote events to the top when the deliverable is a sponsorship decision.
 
-What this order starves is anything that only pays over time. The twelve-month content series and the standing community sample sit high on value and high on effort, so an efficiency-ranked pass never reaches them, and the team keeps re-answering "was that a burst or a trend" with a snapshot. Promote both the moment a rival's spike is what the argument rests on, or when the same benchmark is being run for the second time - on a re-run they are the rungs that produce the diff, and rung 1 mostly repeats itself.
+What this order starves is anything that only pays over time. The standing community sample sits high on value and high on effort, and the twelve-month content series pays only on its second run, so an efficiency-ranked pass never reaches either, and the team keeps re-answering "was that a burst or a trend" with a snapshot. Promote both the moment a rival's spike is what the argument rests on, or when the same benchmark is being run for the second time - on a re-run they are the rungs that produce the diff, and rung 1 mostly repeats itself.
 
 Delete rather than demote. A half-day ceiling deletes community, events and hiring signals from the pass - say so under Method and limits, because a surface parked at the bottom of a plan reappears next quarter as unbudgeted scope. A venue whose terms forbid bulk export deletes its volume row for every company, not just the one that blocked, since a row that cannot reach symmetry is deleted rather than left ragged.
 
@@ -134,7 +134,7 @@ Read [./references/published-findings.md](./references/published-findings.md) be
 | --------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
 | "benchmark our developer experience against Northwind and Kestrel"    | Full pass: scorecard, per-surface read, timed quickstarts, gap plan with verdicts                                   |
 | "why do evaluators keep picking Kestrel - compare their docs to ours" | Docs and DX surface only, plus timed quickstarts for both, plus the gap plan for that surface                       |
-| "I need a devrel gap analysis before Q4 planning, I have two days"    | Quick scan: docs and open source across three peers, gap plan, an explicit list of what was not covered             |
+| "I need a devrel gap analysis before Q4 planning, I have two days"    | Quick scan: docs, open source, content cadence for three peers, gap plan, an explicit list of what was not covered  |
 | "how does our community compare to the two obvious rivals"            | Community and Q&A surfaces, response-rate and staff-share comparison, no scorecard rows that can only rise          |
 | "what is Fernpath about to launch in devrel"                          | Hiring signals plus content and release cadence, framed as leading indicators with their false-positive rate stated |
 | "analyze our competitors" (no developer angle)                        | Hand it back: this is a product or marketing competitive analysis, and say which skill or function owns it          |

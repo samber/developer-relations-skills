@@ -4,7 +4,7 @@ description: Builds the tracking plan that instruments developer-relations surfa
 license: MIT
 metadata:
   author: Samuel Berthe
-  version: "1.0.1"
+  version: "1.0.2"
 ---
 
 # DevRel Analytics
@@ -88,7 +88,7 @@ The register names eight buildable things, and they differ by two orders of magn
 The three ties are genuine ones:
 
 - Tagging vocabulary and the self-reported field: both are a decision written down rather than code, so neither can be made cheaper than the other.
-- Docs event collection and log analysis: each is about a week of somebody else's sprint, one on the site and one on the pipeline.
+- Docs event collection and log analysis: each is a day or two of somebody else's sprint, most of it verification, one on the site and one on the pipeline.
 - Snapshot jobs and the tagging vocabulary: both touch only public counts and query strings, so neither reaches a person and neither triggers a review.
 
 In efficiency order, with the trade-off folded into each rung:
@@ -96,9 +96,9 @@ In efficiency order, with the trade-off folded into each rung:
 1. **Tagging vocabulary and link registry** - an hour of decisions, no engineering. Every future external link becomes readable, and the decision is unrepeatable: links published before the vocabulary exists stay unmergeable forever.
 2. **Snapshot jobs for the expiring surfaces** - an hour to write, then a standing job. Buys the only history that cannot be bought later; repository traffic is gone in 14 days and one registry's series in 180.
 3. **Self-reported source field at signup** - near-zero. The only signal that exists at all for talks, podcasts and hallway conversations, and weak everywhere those are not the question.
-4. **Docs event collection on a first-party or proxied script** - about a week of web-team work. Recovers the developer half of the audience that a third-party script never saw, and makes quickstart drop-off measurable.
-5. **Identity spine and the cross-domain stitch** - a week of engineering if you own both domains, a quarter if you do not. The strongest evidence in the plan and the only thing that answers whether a surface produces signups.
-6. **Server or CDN log analysis** - about a week of data work. Raw unblockable reach, no behaviour, no funnel; a sanity check on the client numbers rather than a replacement.
+4. **Docs event collection on a first-party or proxied script** - a day or two of web-team work, most of it verifying the events land. Recovers the developer half of the audience that a third-party script never saw, and makes quickstart drop-off measurable.
+5. **Identity spine and the cross-domain stitch** - a day or two of engineering if you own both domains, plus testing the stitch end to end; a quarter if you do not, because the other domain's owner sets the pace. The strongest evidence in the plan and the only thing that answers whether a surface produces signups.
+6. **Server or CDN log analysis** - a day or two of data work. Raw unblockable reach, no behaviour, no funnel; a sanity check on the client numbers rather than a replacement.
 7. **Product-side events** - a quarter, most of it negotiating with the team that owns the stream. Settles activation and behaviour-change claims that nothing upstream can.
 8. **CLI/SDK telemetry** - a standing job plus a trust cost paid in the community, not in hours. Answers real-usage questions no other surface reaches, and a surprise here costs more goodwill than the data returns.
 

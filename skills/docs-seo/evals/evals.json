@@ -191,7 +191,7 @@
         "Says out loud in the report that the ordering is a ratio and not a severity list",
         "Places blocking defects at the top of the fix list regardless of their effort score",
         "Gives every fix row a named owner plus the file or system that changes",
-        "Names what the ratio starves, a fix that touches few pages and takes a week, and states that such a fix must be promoted by hand",
+        "Names what the ratio starves, a fix that touches few pages and takes several days, and states that such a fix must be promoted by hand",
         "Presents the numeric baselines as this skill's own defaults to be adjusted to the site rather than as industry standards",
         "Keeps search-engine-enforced or spec-enforced requirements out of the negotiable threshold table and in the blocking-defects section",
         "Proposes re-running the crawl after the fixes land and diffing the two summaries as the proof that the work landed"

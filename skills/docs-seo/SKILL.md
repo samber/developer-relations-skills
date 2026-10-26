@@ -4,7 +4,7 @@ description: Runs on-page and technical SEO for a documentation site - indexabil
 license: MIT
 metadata:
   author: Samuel Berthe
-  version: "1.0.2"
+  version: "1.0.3"
 ---
 
 # Docs SEO
@@ -123,7 +123,7 @@ Three postures exist, ranked here by value per unit of effort rather than by whi
 
 | Posture               | URL shape and canonical                                                         | Effort, including reversal                                                                                                                                                                             | Value bought                                                                       |
 | --------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------- |
-| Stable-canonical      | `/en/stable/…` and `/en/v2.3/…`; every version canonicals to the `stable` alias | an hour where the platform ships it (Read the Docs exposes `READTHEDOCS_CANONICAL_URL`), a week where the alias has to be built by hand; reversed by changing one canonical target, since no URL moves | current release wins the query and every supported release still has a live URL    |
+| Stable-canonical      | `/en/stable/…` and `/en/v2.3/…`; every version canonicals to the `stable` alias | an hour where the platform ships it (Read the Docs exposes `READTHEDOCS_CANONICAL_URL`), a day or two where the alias is built by hand; reversed by changing one canonical target, since no URL moves  | current release wins the query and every supported release still has a live URL    |
 | Latest-only           | `/docs/…` live, `/v1/…` archived and `noindex`                                  | near-zero - one directive on the archive, reversed by removing it                                                                                                                                      | current release wins the query outright; nobody on an old release finds their page |
 | Per-version indexable | one self-canonical page per version, plus a version switcher                    | a standing job - every release multiplies the indexable surface, the sitemap and the link mesh; reversal needs a per-page redirect map across every version already indexed                            | readers on old releases land on the page for their own release                     |
 
@@ -217,7 +217,7 @@ Deliver a prioritized fix list, not a findings dump. The report covers, in order
 
 Every fix row names what changes, in which file or system, and who owns it. A defect list with no owner column comes back unchanged at the next audit. Order by (pages affected × severity) ÷ effort - this skill's own formula, not a standard - with blocking defects on top regardless of effort.
 
-Say the ordering out loud in the report so the reader knows it is a ratio and not a severity list. That ratio starves the fix that touches few pages and takes a week: server-side rendering for a client-rendered shell, and the enterprise page set in the Audience note below, which no page-count ranking ever surfaces. Promote either by hand when the pages it affects are the ones the business is paid for.
+Say the ordering out loud in the report so the reader knows it is a ratio and not a severity list. That ratio starves the fix that touches few pages and takes several days: server-side rendering for a client-rendered shell, and the enterprise page set in the Audience note below, which no page-count ranking ever surfaces. Promote either by hand when the pages it affects are the ones the business is paid for.
 
 Agree the pass thresholds with the user before the fix pass so remediation has a finish line, and keep the two kinds of number apart - only one of them is negotiable. What a search engine enforces is a defect, not a threshold:
 

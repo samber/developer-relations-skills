@@ -4,7 +4,7 @@ description: Audits and rewrites a repository README so a developer who has neve
 license: MIT
 metadata:
   author: Samuel Berthe
-  version: "1.0.2"
+  version: "1.0.3"
 ---
 
 # README Optimization
@@ -137,7 +137,7 @@ The status line and the badge row tie on effort: each is one edit to one block, 
 
 Default to the top three for a first pass; move down once the blocking checks are green, or when the cold-reader test fails on a question none of the three touches.
 
-The funnel restructure loses every round - a week against fixes that land in an hour - so this order under-invests in the one change that makes the page work. Promote it when the cold reader answers wrong because they never scrolled far enough, or when a launch is the reason for the audit, and say you are promoting it against the ratio.
+The funnel restructure loses every round - a day or two against fixes that land in an hour - so this order under-invests in the one change that makes the page work. Promote it when the cold reader answers wrong because they never scrolled far enough, or when a launch is the reason for the audit, and say you are promoting it against the ratio.
 
 The ordering is a default, not a law, and it shifts with who executes it. Re-rank it against what you already know:
 
@@ -223,7 +223,7 @@ Three things compete for this step's budget, and they are not close:
 
 - **Furniture** is near-zero effort and buys the only text a reader sees before opening the repository: the description, website link and topics are what search listings carry, and the social preview is what unfurls when someone pastes the link into a chat.
 - **Render mechanics** cost about an hour and buy the page working for readers who never see the code host's render - registry pages, terminals, screen readers.
-- **Terminal demo** costs a week to produce well and then becomes a standing job, going stale whenever the output changes.
+- **Terminal demo** costs a day or two to produce well and then becomes a standing job, going stale whenever the output changes.
 
 The demo is what this order starves, and it is the highest-value element on the page for a CLI or a visual tool, where the output _is_ the product. Promote it above render mechanics in exactly that case, and generate it from a script rather than hand-recording it, so re-rendering stays cheap enough to survive as a standing job. Delete it for a library with no visible output - a demo of an import statement earns nothing - rather than leaving it to reappear as scope later.
 
@@ -245,16 +245,16 @@ An enterprise decision-maker optimizes for defensibility, not best technical fit
 
 Six signals are available, spanning two orders of magnitude in what they cost:
 
-- effort, least first: `support expectation == release cadence > security policy > named adopters == supply-chain attestation > governance and maintainer depth > foundation affiliation`
+- effort, least first: `support expectation == release cadence > security policy > supply-chain attestation > named adopters > governance and maintainer depth > foundation affiliation`
 - value, most first: `foundation affiliation > named adopters > security policy > governance and maintainer depth > supply-chain attestation > release cadence == support expectation`
 - compliance cost:
   - foundation affiliation demands trademark or IP assignment and a legal sign-off you cannot walk back
   - named adopters need each company's own marketing approval, revocable but only by asking again
   - a security policy commits you publicly to a response window you then have to honour
   - the remaining three trigger no review and are reversible with one commit
-- efficiency, do first: `support expectation == release cadence > security policy > named adopters > governance and maintainer depth > supply-chain attestation > foundation affiliation`
+- efficiency, do first: `support expectation == release cadence > security policy > named adopters > supply-chain attestation > governance and maintainer depth > foundation affiliation`
 
-Support expectation and release cadence tie twice over: each is one sentence stating something already true, needing nobody's permission and no work beyond reading the commit log. Named adopters and supply-chain attestation tie on effort at about a week each, but separate on efficiency - the attestation persuades an engineer who was going to say yes anyway, while a recognizable logo persuades the person who signs.
+Support expectation and release cadence tie twice over: each is one sentence stating something already true, needing nobody's permission and no work beyond reading the commit log. Supply-chain attestation costs about a day of release-pipeline setup and testing; named adopters cost about a week of asking each company for approval. Named adopters still rank first on efficiency - the attestation persuades an engineer who was going to say yes anyway, while a recognizable logo persuades the person who signs.
 
 Default to the first three, an afternoon between them, which clear most of what an evaluation checklist scores. Move to named adopters when a deal is in the room and someone has asked "who else runs this".
 

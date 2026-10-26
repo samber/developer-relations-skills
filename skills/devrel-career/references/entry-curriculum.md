@@ -16,7 +16,7 @@ Follow the field while you work: DevRel Weekly, the `devrelcollective/awesome-de
 
 Rank by return per day of your own work. **Efficiency:** friction log > blog post > community-answer streak > open-source contribution > meetup talk. Together they cover the evidence types a portfolio audit scores, so the order is what to ship first, not what to skip.
 
-- **effort** (days of your own work, plus who else has to say yes): meetup talk > open-source contribution > community-answer streak > blog post == friction log. The tie: both are a few days of solo writing on a channel you control, gated on nobody's approval.
+- **effort** (days of your own work, plus who else has to say yes): meetup talk > open-source contribution > community-answer streak > friction log > blog post. The last two both sit on a channel you control, gated on nobody's approval. A blog post is a day or two of solo writing; a friction log takes a few days, because most of them go into using the tool cold.
 - **value** (the hiring signal each one evidences): meetup talk > friction log > blog post > open-source contribution == community-answer streak. The tie: both prove you can operate inside someone else's project, and both read as ongoing participation rather than as a standalone artefact.
 
 1. **A friction log on the chosen tool.** A few days' work, and it evidences the rarest portfolio signal - carrying the developer's experience back to the company.

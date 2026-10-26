@@ -4,7 +4,7 @@ description: Plans, lands and advances a developer relations career from the can
 license: MIT
 metadata:
   author: Samuel Berthe
-  version: "1.0.1"
+  version: "1.0.2"
 ---
 
 # DevRel Career

@@ -24,16 +24,16 @@ The blocker list below is Karl Fogel's pre-announcement inventory from _Producin
 
 Boosters raise conversion; none is worth delaying the date for. Listed by lift per pre-launch hour, best ratio first - not cheapest first.
 
-| #   | Booster                                                                | Effort         | Lift                                                                                                        |
-| --- | ---------------------------------------------------------------------- | -------------- | ----------------------------------------------------------------------------------------------------------- |
-| 1   | Social preview image, repository description, 5-10 topics              | near-zero      | Whether the link previews at all and whether the repository is findable by topic                            |
-| 2   | Demo GIF, short video, or hosted playground                            | an hour or two | Highest lift per hour for individual adoption - shows output instead of claiming it                         |
-| 3   | Comparison section naming real alternatives with honest trade-offs     | an hour        | Highest lift for company adoption; pre-answers the thread's highest-value question                          |
-| 4   | Security policy, release cadence statement, maintainer/funding model   | an hour        | The pages an internal approver blocks on; without them a team-shaped launch stalls                          |
-| 5   | CONTRIBUTING.md, issue templates, a few small `good first issue` items | an hour        | Opens the contributor funnel and doubles as the triage guard if the launch over-performs                    |
-| 6   | Benchmarks with hardware, versions, method and a reproduction command  | a day or more  | Strong credibility and the one booster that can backfire - an unreproducible number becomes the top comment |
-| 7   | Long-form "why this exists" write-up                                   | a week         | Durable: carries week two and still delivers readers a year out                                             |
-| 8   | Documentation site                                                     | a week or more | Only once the surface outgrows one README; below that, a second place to go stale                           |
+| #   | Booster                                                                | Effort             | Lift                                                                                                        |
+| --- | ---------------------------------------------------------------------- | ------------------ | ----------------------------------------------------------------------------------------------------------- |
+| 1   | Social preview image, repository description, 5-10 topics              | near-zero          | Whether the link previews at all and whether the repository is findable by topic                            |
+| 2   | Demo GIF, short video, or hosted playground                            | an hour or two     | Highest lift per hour for individual adoption - shows output instead of claiming it                         |
+| 3   | Comparison section naming real alternatives with honest trade-offs     | an hour            | Highest lift for company adoption; pre-answers the thread's highest-value question                          |
+| 4   | Security policy, release cadence statement, maintainer/funding model   | an hour            | The pages an internal approver blocks on; without them a team-shaped launch stalls                          |
+| 5   | CONTRIBUTING.md, issue templates, a few small `good first issue` items | an hour            | Opens the contributor funnel and doubles as the triage guard if the launch over-performs                    |
+| 6   | Benchmarks with hardware, versions, method and a reproduction command  | half a day or more | Strong credibility and the one booster that can backfire - an unreproducible number becomes the top comment |
+| 7   | Long-form "why this exists" write-up                                   | two days or so     | Durable: carries week two and still delivers readers a year out                                             |
+| 8   | Documentation site                                                     | a few days or more | Only once the surface outgrows one README; below that, a second place to go stale                           |
 
 The axes disagree:
 

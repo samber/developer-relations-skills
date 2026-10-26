@@ -24,7 +24,7 @@ Effort in magnitudes, which is what the ordering ranks on:
 
 | Shape                     | Hours shape                                           | Time to a readable signal   | Exit cost                         |
 | ------------------------- | ----------------------------------------------------- | --------------------------- | --------------------------------- |
-| Enablement-first          | a quarter to build, then a standing maintenance shift | weeks                       | low, but decay is actively wrong  |
+| Enablement-first          | a month to build, then a standing maintenance shift   | weeks                       | low, but decay is actively wrong  |
 | Content-compounding       | a quarter of setup, then a standing review shift      | two to three quarters       | near-zero; published work stays   |
 | Field-and-events          | bursts of a week per edition, plus follow-up          | one edition                 | contract notice period            |
 | Community-led             | a standing job that cannot be paused                  | a year or more              | unrecoverable: wound-down trust   |

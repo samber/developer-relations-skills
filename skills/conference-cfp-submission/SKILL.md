@@ -4,7 +4,7 @@ description: Turns a talk idea into a submission-ready conference proposal for o
 license: MIT
 metadata:
   author: Samuel Berthe
-  version: "1.0.1"
+  version: "1.0.2"
 ---
 
 # Conference CFP
@@ -129,13 +129,13 @@ Ask the user the question that produces one: _what do you believe about this tha
 | Angle              | Effort before submitting                                                    | What it buys on the review grid                                            | What it buys in the room                                                    | Fails when                                                         |
 | ------------------ | --------------------------------------------------------------------------- | -------------------------------------------------------------------------- | --------------------------------------------------------------------------- | ------------------------------------------------------------------ |
 | War story          | an hour, when the failure and its numbers are already the user's            | credibility a reviewer can check, and the originality nobody else can copy | attention, and the trust that carries the rest of the talk                  | the user has no failure they own and may publish                   |
-| Contrarian thesis  | a week, most of it assembling the evidence and rehearsing the defence       | the highest standout score on a grid of forty look-alike proposals         | memorability, and the invitations that follow it                            | the position collapses in Q&A, in front of the room                |
-| Practical playbook | a week, generalising one case into steps that work for someone else's stack | the least, on originality - this is the shape reviewers see most           | the highest attendee ratings, and the only angle people implement on Monday | the title is vague, and it dies on the grid before anyone reads it |
+| Contrarian thesis  | a few days, most of it rehearsing the defence once the evidence is in       | the highest standout score on a grid of forty look-alike proposals         | memorability, and the invitations that follow it                            | the position collapses in Q&A, in front of the room                |
+| Practical playbook | a day or two, generalising one case into steps for someone else's stack     | the least, on originality - this is the shape reviewers see most           | the highest attendee ratings, and the only angle people implement on Monday | the title is vague, and it dies on the grid before anyone reads it |
 
 - efficiency: war story > contrarian thesis > practical playbook
 - value on the review grid: contrarian thesis > war story > practical playbook
 - value in the room: practical playbook > war story > contrarian thesis
-- effort: practical playbook > contrarian thesis > war story
+- effort: contrarian thesis > practical playbook > war story
 - compliance cost: war story > contrarian thesis > practical playbook
 
 The two value lines are the honest shape of this choice, not a hedge: what gets a proposal accepted and what makes the talk worth giving are different things. Blending them into one rank hides the case the user most needs to see.
@@ -146,7 +146,7 @@ Compliance cost, per angle:
 - Contrarian thesis that names competitors: carries a lighter version of the same exposure, at a vendor-neutral event.
 - Playbook built from public material: carries none.
 
-That efficiency order starves the practical playbook. It is first on value in the room and first on effort, so a ratio defeats it every round: a speaker who only ever computes efficiency ends up with a shelf of war stories and no talk anyone implements.
+That efficiency order starves the practical playbook. It is first on value in the room but last on the review grid, and its days of generalising buy nothing a reviewer scores, so a ratio defeats it every round: a speaker who only ever computes efficiency ends up with a shelf of war stories and no talk anyone implements.
 
 Promote the practical playbook:
 

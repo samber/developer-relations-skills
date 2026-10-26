@@ -4,7 +4,7 @@ description: Runs press and light analyst relations for a developer-facing produ
 license: MIT
 metadata:
   author: Samuel Berthe
-  version: "1.1.0"
+  version: "1.1.1"
 ---
 
 # Tech Press Relations
@@ -99,8 +99,8 @@ Angle shapes that reliably work for developer products, **in efficiency order - 
 | The shift         | Your news is evidence of a trend they are already tracking   | Your product becomes a supporting detail      | An hour - you reframe facts you already hold against a beat you can read in an afternoon |
 | The practitioner  | An engineer's decision, mistake or migration told concretely | Needs a person willing to be candid on record | An hour of that engineer's time, plus clearance if a customer is named                   |
 | The broken system | A named systemic problem you are taking a position against   | You must be willing to be quoted defending it | An hour to write, then a standing job defending it in public                             |
-| The number        | Proprietary data no one else holds, packaged as a benchmark  | Methodology must survive scrutiny             | A week to a quarter - collecting the data and building a harness a stranger can rerun    |
-| The underdog      | A small team beating an incumbent at one specific thing      | Only works if the one thing is verifiable     | A week - the one thing needs a public, rerunnable comparison before you can claim it     |
+| The number        | Proprietary data no one else holds, packaged as a benchmark  | Methodology must survive scrutiny             | Days to a quarter - a harness a stranger can rerun takes days, new data takes a quarter  |
+| The underdog      | A small team beating an incumbent at one specific thing      | Only works if the one thing is verifiable     | A day or two - the one thing needs a public, rerunnable comparison before any claim      |
 
 The axes disagree, so read all four:
 

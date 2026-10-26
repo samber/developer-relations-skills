@@ -4,7 +4,7 @@ description: Writes or edits a technical blog post a skeptical developer audienc
 license: MIT
 metadata:
   author: Samuel Berthe
-  version: "1.0.2"
+  version: "1.0.3"
 ---
 
 # Engineering Blog Post
@@ -117,12 +117,12 @@ Rows are in efficiency order.
 | ------------------------------------- | -------------------------------- | ---------------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------- |
 | A timeline and a surprise             | Bug Hunt                         | an hour, on top of an incident review already written                              | the widest travel per hour on the list - engineers forward a good mystery | The dead ends you took                                              |
 | A concept people get wrong            | Explainer                        | an hour; the material is your own understanding                                    | an evergreen page you and others link for years                           | Common misconceptions                                               |
-| A system and its design decisions     | How We Built It                  | a week, reconstructing decisions nobody wrote down                                 | peer trust, and inbound from engineers who want to work on it             | Each decision framed as a trade-off                                 |
-| Before/after numbers from a migration | Rewrote It in X                  | a week, when the numbers already exist                                             | the strongest evaluation evidence a reader can act on                     | What went wrong                                                     |
-| Several incidents, one theme          | Lessons Learned                  | a week, and the incidents have to have happened already                            | standing: the reader treats you as someone who has seen this before       | A concrete story per lesson                                         |
+| A system and its design decisions     | How We Built It                  | a few days, reconstructing decisions nobody wrote down                             | peer trust, and inbound from engineers who want to work on it             | Each decision framed as a trade-off                                 |
+| Before/after numbers from a migration | Rewrote It in X                  | a few days, when the numbers already exist                                         | the strongest evaluation evidence a reader can act on                     | What went wrong                                                     |
+| Several incidents, one theme          | Lessons Learned                  | a few days, and the incidents have to have happened already                        | standing: the reader treats you as someone who has seen this before       | A concrete story per lesson                                         |
 | An opinion and some evidence          | Thoughts on Trends               | an hour to draft, most of it spent on the steelman                                 | a reach spike with a short shelf life, on the weakest evidence class      | The steelman of the opposing view                                   |
-| Your own product, told as engineering | Non-markety Product Perspectives | a week, plus a disclosure and marketing review chain                               | qualified evaluators, when it survives that chain intact                  | The behind-the-scenes detail, plus a plain statement of who you are |
-| Measurements comparing options        | Benchmarks and Test Results      | a quarter, when the runs, the re-runs and the publishable scripts do not exist yet | the most durable credibility here, and the post competitors have to cite  | Methodology, stated before results                                  |
+| Your own product, told as engineering | Non-markety Product Perspectives | a few days, plus a disclosure and marketing review chain                           | qualified evaluators, when it survives that chain intact                  | The behind-the-scenes detail, plus a plain statement of who you are |
+| Measurements comparing options        | Benchmarks and Test Results      | weeks, when the runs, the re-runs and the publishable scripts do not exist yet     | the most durable credibility here, and the post competitors have to cite  | Methodology, stated before results                                  |
 
 - efficiency: bug hunt > explainer > how we built it > rewrote it in X > lessons learned > thoughts on trends > non-markety product > benchmarks
 - value: benchmarks > rewrote it in X > how we built it > bug hunt > non-markety product > lessons learned > explainer > thoughts on trends
@@ -131,7 +131,7 @@ Rows are in efficiency order.
 
 Tie justifications:
 
-- The four `a week` patterns tie on effort because their cost is the same act: reconstructing decisions or stories you lived through but never wrote down.
+- The four `a few days` patterns tie on effort because their cost is the same act: reconstructing decisions or stories you lived through but never wrote down.
 - The three `an hour` patterns tie on effort because their material already exists in a document or in your head, so only drafting remains.
 - The last five patterns tie on compliance cost at nothing: no review beyond the technical one, and any of them can be corrected in public with a dated note.
 - The three above them do not tie: a competitor comparison invites a legal read and is hard to withdraw once quoted, a product post needs the commercial disclosure agreed before publication, and an incident post needs the security and customer-confidentiality read.
@@ -140,11 +140,11 @@ The efficiency order starves Benchmarks and Test Results: it is first on value a
 
 - the buying decision in your category is made on numbers nobody has published
 - a competitor's benchmark is circulating unchallenged
-- the interview returned a compounding mandate with no near date and a ceiling that genuinely allows a quarter
+- the interview returned a compounding mandate with no near date and a ceiling that genuinely allows several weeks
 
 The order is a default, not a law: it shifts with context and with who writes. Re-rank it against what you already know about this author.
 
-- A benchmark harness already running in CI drops Benchmarks from a quarter to a week and moves it near the top.
+- A benchmark harness already running in CI drops Benchmarks from weeks to a few days and moves it near the top.
 - A public incident review already published makes Bug Hunt near-zero.
 - An author whose employer requires marketing sign-off on anything naming the product pushes Non-markety Product Perspectives down a rung or two.
 

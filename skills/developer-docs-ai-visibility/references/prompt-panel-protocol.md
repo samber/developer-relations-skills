@@ -52,7 +52,7 @@ Without a key, "correct" drifts toward whatever the assistant said.
 
 ## Sizing the panel
 
-Answers to collect = prompts × runs × assistants × modes. By hand, budget a few minutes per answer including scoring.
+Answers to collect = prompts × runs × assistants × modes. By hand, budget a few minutes per answer including scoring. Through the API, with the must-contain and must-not-contain checks scripted, the default panel takes a day or two, most of it reviewing the flagged answers.
 
 | Panel | Size | Answers | Use when |
 |---|---|---|---|

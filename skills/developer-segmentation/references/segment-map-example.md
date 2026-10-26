@@ -54,7 +54,7 @@ SDK quality, free tier). No dedicated content, no dedicated events this horizon.
 
 ## Anti-segment
 Regulated platform teams. Reachable and valuable, but the artefact list  - residency,
-audit export, self-host parity  - is three quarters of engineering work we have not
+audit export, self-host parity  - is a quarter of engineering work we have not
 funded. Revisit when the self-host build lands. Saying this in writing stops each
 lost deal reopening the debate.
 
@@ -94,7 +94,7 @@ the incumbent adds a free tier, or platform-team share of new signups passes 35%
 **Anti-segment**
 
 - Weak: "We're not focused on enterprise right now."
-- Strong: "Regulated platform teams - needs residency, audit export and self-host parity; three quarters of unfunded engineering. Revisit when self-host ships."
+- Strong: "Regulated platform teams - needs residency, audit export and self-host parity; a quarter of unfunded engineering. Revisit when self-host ships."
 
 **Implications**
 

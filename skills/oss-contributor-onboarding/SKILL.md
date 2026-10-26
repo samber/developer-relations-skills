@@ -4,7 +4,7 @@ description: Designs and verifies the path a stranger walks to their first merge
 license: MIT
 metadata:
   author: Samuel Berthe
-  version: "1.0.1"
+  version: "1.0.2"
 ---
 
 # Contributor Onboarding
@@ -122,7 +122,7 @@ Three tiers, ranked by setup failures removed per unit of maintenance the tier t
 - value (failures removed): `container definition > pinned toolchain > bootstrap command`
 - effort: `container definition > pinned toolchain > bootstrap command`
 
-1. **Bootstrap command** - one `make setup` or `./script/bootstrap` that installs dependencies, prepares fixtures, and ends by running the test suite. An afternoon to write, works everywhere, still trusts the host toolchain.
+1. **Bootstrap command** - one `make setup` or `./script/bootstrap` that installs dependencies, prepares fixtures, and ends by running the test suite. An hour or two to write and test, works everywhere, still trusts the host toolchain.
 2. **Pinned toolchain** - a version file the host's tool manager reads, plus a committed lockfile. Removes most "works on my machine" reports for the cost of one file and the upgrades it then forces.
 3. **Container definition** - a development-container definition that both a local editor and a cloud workspace can consume. Strongest reproducibility and highest maintenance: a standing job, and the tier that rots fastest when maintainers do not use it themselves.
 
@@ -196,7 +196,7 @@ Rank them only after steps 3-6 hold: on a broken path every one scores zero what
 
 - **A bot** may absorb mechanical work, never a human moment. Leads the efficiency line on its denominator alone - an hour to install, near-zero afterwards, and reversible in one commit. Keep the first reply, the decline and the stall check-in human (step 6), and treat any wait-state a bot or approval gate introduces as a step 3 gap to document.
 - **A structured program** (Google Summer of Code, Outreachy, LFX Mentorship, MLH, Season of Docs) supplies the stipend and the cohort; you supply mentor hours - a standing job for a whole season, and the only item here you cannot abandon halfway without someone's summer attached to it. Host one only once steps 3 to 6 hold, because an under-mentored intern costs more than no intern. Do not promise it fixes retention: the two most-cited studies disagree, and the Mozilla analysis (Labuschagne & Holmes, MSR 2015) found contributors who started on a good-first-bug or mentored bug were _less_ likely to become long-term contributors. Figures and caveats are in [./references/published-findings.md](./references/published-findings.md) §3-4.
-- **An onboarding event or sprint** teaches mechanics well and converts nobody on its own. Last on efficiency because it costs a week of preparation plus the follow-up and buys the least measured return of the three. Kubernetes ran the field's most resourced workshop and retired it because "running the session during the summit never led to any people who weren't already contributing to the project becoming dedicated contributors". Budget the follow-up - a named next issue, an assigned mentor, a second-contribution nudge - or skip the event.
+- **An onboarding event or sprint** teaches mechanics well and converts nobody on its own. Last on efficiency because it costs a few days of preparation plus the follow-up and buys the least measured return of the three. Kubernetes ran the field's most resourced workshop and retired it because "running the session during the summit never led to any people who weren't already contributing to the project becoming dedicated contributors". Budget the follow-up - a named next issue, an assigned mentor, a second-contribution nudge - or skip the event.
 
 - Delete **a reward with no quality gate** rather than ranking it last, and say you deleted it: it buys volume you cannot review, which is a cost, not a small benefit. Hacktoberfest's 2020 spam wave forced opt-in repositories, a longer grace period and the removal of the T-shirt entirely.
 - What this order starves: the structured program - highest value of the three, and the only one that brings people who were never going to find the project alone. Promote it when a second reviewer exists (interview question 12) and the maintainer hours in question 4 clear a mentor's weekly commitment for a full season.

@@ -4,7 +4,7 @@ description: Engineers a technical demo so it survives the stage - risk triage, 
 license: MIT
 metadata:
   author: Samuel Berthe
-  version: "1.0.1"
+  version: "1.0.2"
 ---
 
 # Live Demo Design
@@ -49,7 +49,7 @@ Ask these one at a time, multiple-choice where possible. Stop as soon as you can
 7. What has already gone wrong when you ran something like this before?
 8. What already exists - a repository, a script, a seeded environment, a recording, a sandbox tenant?
 9. Any hard constraints - corporate laptop policy, no screen recording allowed, embargoed features, data that cannot appear on screen?
-10. What is the event date? A date inside two weeks rules out building a local stack from scratch and promotes the recorded tier.
+10. What is the event date? A date inside a week rules out building a local stack from scratch and promotes the recorded tier.
 11. Is this a one-off run, or a demo kit you will re-run all year at other events? Re-running amortizes the local stack and promotes tier 2; a single keynote promotes tier 3.
 12. How many rehearsal hours exist before the event, and who owns the demo afterwards? Few hours rules out tiers 0 and 1 outright - they are the tiers that only rehearsal makes safe.
 
@@ -79,7 +79,7 @@ The ladder below is a decision aid written for this skill, not a published model
 | ---- | ------------------------------------------------------------------------------ | -------------------------------------- | ----------------------------------------------------- | ------------------------------------------------------------------------------------------ |
 | 0    | Live typing against a live system                                              | Every failure mode at once             | Maximum credibility                                   | Days of rehearsal, plus the highest chance of failing in the room                          |
 | 1    | Live execution, scripted input (pasted from a file or driven by a demo runner) | A little of the "watch me think" feel  | No typos, fixed pacing                                | An hour to script, then rehearsal, and it keeps every network and third-party failure mode |
-| 2    | Live execution, fully local and offline                                        | Real scale, a real public endpoint     | Immunity to the venue network and third-party outages | A week to build the stack, fixtures and replayed responses; almost no residual stage risk  |
+| 2    | Live execution, fully local and offline                                        | Real scale, a real public endpoint     | Immunity to the venue network and third-party outages | A day or two to build the stack, fixtures and replayed responses; almost no residual stage risk |
 | 3    | Recorded screencast played inside the deck, narrated live                      | The ability to answer "can you try X?" | Zero execution risk, no app switching                 | An hour or two to record; re-record whenever the UI moves                                  |
 | 4    | Annotated screenshots or a diagram                                             | Behaviour; you only show an outcome    | Survives a dead laptop                                | Near-zero, and it goes stale silently                                                      |
 

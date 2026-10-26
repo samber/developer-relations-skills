@@ -4,7 +4,7 @@ description: Designs a company's developer relations program from the top - the 
 license: MIT
 metadata:
   author: Samuel Berthe
-  version: "1.0.1"
+  version: "1.0.2"
 ---
 
 # DevRel Strategy
@@ -160,7 +160,7 @@ The axes disagree hardest at community-first, which outranks reach-first on valu
 
 Both ties sit on the effort axis, and both are argued:
 
-- Enablement-first and evaluation-support cost about the same quarter of one person's writing time and both leave artefacts that outlive the program, so both are equally reversible.
+- Enablement-first and evaluation-support cost about the same month of one person's writing time and both leave artefacts that outlive the program, so both are equally reversible.
 - Reach-first and community-first are each a standing job that produces nothing the month its cadence stops.
 
 Present each surviving candidate with the same six facts:

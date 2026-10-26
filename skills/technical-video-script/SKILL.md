@@ -4,7 +4,7 @@ description: Writes or reviews a shooting-ready script for a technical video or 
 license: MIT
 metadata:
   author: Samuel Berthe
-  version: "1.1.2"
+  version: "1.1.3"
 ---
 
 # Technical Video Script
@@ -89,20 +89,20 @@ Runtime is what the viewer spends, not what you spend - a three-minute animated 
 | Error/fix video                | an hour, if you can reproduce the error on the recording machine                         | a viewer unblocked at the exact moment they searched, for years                                                                                   | 1-3 min                       | The exact error text on screen                                               | Cause in one sentence, then the fix                                              |
 | Changelog / release clip       | an hour, over a changelog entry someone already wrote                                    | existing users who find out the feature exists                                                                                                    | 30-90 s                       | The change, in the product                                                   | One change per clip                                                              |
 | Short-form clip                | an hour, and usually a beat already scripted for another video                           | reach among people who were not looking for you, spent within days                                                                                | under 60 s                    | The payoff in the first second                                               | One idea, no setup, vertical framing                                             |
-| Feature or product walkthrough | a week, most of it building a demo environment that survives a clean take                | an evaluator who has seen the outcome work before they install anything                                                                           | 2-5 min                       | The outcome, already working                                                 | One path only; no options, no settings tour                                      |
+| Feature or product walkthrough | a day or two, most of it testing a demo environment until it survives a clean take       | an evaluator who has seen the outcome work before they install anything                                                                           | 2-5 min                       | The outcome, already working                                                 | One path only; no options, no settings tour                                      |
 | Motion design explainer        | a week, most of it illustration and animation assets, plus licensing a music track       | an ICP viewer who recognizes their own pain in the opening line, and keeps watching because nothing on screen requires reading code or a terminal | 2-5 min                       | The problem, as the viewer's own pain: a metric, a symptom, a recurring cost | One claim resolved per segment; motion signals cause and effect, never decorates |
 | Concept explainer              | a week, and it is diagram work before it is recording work                               | the mental model that makes every other video land                                                                                                | 3-8 min                       | The question, phrased as the viewer would ask it                             | Diagram-led; code only where it settles the argument                             |
-| Build-along tutorial           | a week to script and shoot, then a standing job keeping the companion repository working | a viewer who has built the thing - the strongest adoption evidence on this list                                                                   | 6-15 min, split into segments | The finished thing running                                                   | One new concept per segment                                                      |
+| Build-along tutorial           | a few days to script and shoot, then a standing job keeping the companion repo working   | a viewer who has built the thing - the strongest adoption evidence on this list                                                                   | 6-15 min, split into segments | The finished thing running                                                   | One new concept per segment                                                      |
 | Deep dive / architecture       | a quarter: evidence per claim, diagrams, and the longest edit here                       | durable technical credibility, peer citation and inbound engineers                                                                                | 10-25 min, chaptered          | The surprising claim or the number                                           | Evidence per claim; no live typing                                               |
 
 - efficiency: error/fix > changelog clip > short-form clip > feature walkthrough > motion design explainer > concept explainer > build-along > deep dive
 - value: build-along > deep dive > concept explainer > motion design explainer > feature walkthrough > error/fix > changelog clip > short-form clip
-- effort: deep dive > build-along > concept explainer == feature walkthrough == motion design explainer > error/fix == changelog clip == short-form clip
+- effort: deep dive > build-along > concept explainer == motion design explainer > feature walkthrough > error/fix == changelog clip == short-form clip
 - compliance cost: feature walkthrough > changelog clip > deep dive > error/fix == build-along == concept explainer == motion design explainer == short-form clip
 
 Two effort ties, and why:
 
-- The concept explainer, the feature walkthrough and the motion design explainer tie because their cost is the same shape: an asset someone else has to finish - a diagram set, a seeded demo environment, or an illustration and animation set - before a single take is possible.
+- The concept explainer and the motion design explainer tie because their cost is the same shape: an asset someone else has to finish - a diagram set, or an illustration and animation set - before a single take is possible.
 - The three `an hour` shapes tie because each is one take over material that already exists, and none needs a second person.
 
 On compliance the last five tie at nothing: no unreleased product, no internal architecture, no real product screens or pricing (the motion design explainer shows illustrations, not the product), and any of them can be re-recorded and replaced without anyone's sign-off. Two exceptions inherit the walkthrough's obligations: a short-form clip cut from a walkthrough, and a motion design explainer that illustrates real product screens.
@@ -126,7 +126,7 @@ The efficiency order starves the build-along tutorial and the deep dive: both si
 
 The order is a default, not a law: it shifts with context and with who records. Re-rank it against what you already know:
 
-- An existing demo environment or a maintained example repository collapses the top two `a week` rows toward an hour.
+- An existing demo environment collapses the walkthrough toward an hour, and a maintained example repository takes the build out of the build-along's few days.
 - A recorder who is already fast at motion graphics moves the concept explainer up, and the motion design explainer further: the concept explainer still works as plain diagrams, while the motion design explainer needs animation capability, not just diagram literacy.
 - A team with a video editor on staff cuts the deep dive's edit cost, which is most of its effort.
 

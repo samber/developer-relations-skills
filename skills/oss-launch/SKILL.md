@@ -4,7 +4,7 @@ description: Plans and runs an open-source project launch end to end - name and 
 license: MIT
 metadata:
   author: Samuel Berthe
-  version: "1.0.4"
+  version: "1.0.5"
 ---
 
 # OSS Launch
@@ -125,7 +125,7 @@ Then spend the week's hours in this order - highest outcome per maintainer-hour 
 | 3   | Secondary communities, staggered, context rewritten each time                 | an hour per community, and it does not compress (a pasted blurb gets removed) | The ecosystem audiences the anchor misses                                                                              |
 | 4   | Maintainer's own accounts                                                     | near-zero (one post, already drafted)                                         | The audience the maintainer already has; nothing without one                                                           |
 | 5   | Newsletters and curated lists                                                 | an hour per outlet, and most publish after the window closes                  | Long-tail arrivals at a curator's discretion, days later                                                               |
-| 6   | Long-form write-up (architecture, war story, benchmark method)                | a week, in the week with the fewest spare hours                               | Durable: still delivers readers a year out                                                                             |
+| 6   | Long-form write-up (architecture, war story, benchmark method)                | two days or so, in the week with the fewest spare hours                       | Durable: still delivers readers a year out                                                                             |
 
 The axes disagree, so read them separately:
 
@@ -143,7 +143,7 @@ Compliance cost is a moderator's judgement, not a fee. Secondary communities are
 
 **Delete what the answers rule out rather than demoting it.** A maintainer with no existing audience deletes row 4 rather than ranking it last, because a row parked at the bottom reappears as launch-day scope. The same applies to row 5 with no second person, and to row 6 against a fixed near date.
 
-**What this order starves: the long-form write-up.** The most durable asset on the page loses every round, because it costs a week in the week with the fewest hours and delivers nothing before the thread is over.
+**What this order starves: the long-form write-up.** The most durable asset on the page loses every round, because it costs two days in the week with the fewest hours and delivers nothing before the thread is over.
 
 Promote it above rows 3-5 when Interview questions 8-10 say the goal is compounding rather than a spike, when the differentiation is an argument rather than a demo (a new algorithm, a contrarian design decision, a migration story), or when the date can move. Then write it first and let it carry week two.
 
@@ -151,7 +151,7 @@ This ordering is a default, not a law. It shifts with context and with who execu
 
 - An existing newsletter or conference talk promotes row 4 above row 3.
 - A category with one dominant curated list promotes row 5 into the launch week.
-- A maintainer who writes quickly changes what a week of write-up costs.
+- A maintainer who writes quickly changes what two days of write-up cost.
 
 Efficiency order is not firing order. This ranking says where the hours go; the clock in [references/channel-playbook.md](./references/channel-playbook.md) says when each fires, and that one is fixed by mechanics.
 

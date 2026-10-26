@@ -104,7 +104,7 @@ down. Everything else we publish is an input to those numbers, not a result."
 
 No visibility into docs readers who never sign up. No identity link between community members and
 accounts, so community-to-expansion cannot be measured this half; it needs an identity mapping in
-the CRM, roughly two engineering days.
+the CRM, roughly half a day of engineering.
 
 ## Review
 

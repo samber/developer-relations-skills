@@ -186,7 +186,7 @@
         "Puts the documentation cross-link first, at near-zero effort, sitting where an evaluator already reads.",
         "Skips the sales one-pager rather than ranking it, because there is no sales motion at this company.",
         "States that the one-pager is the highest value of the set wherever a sales motion exists at all, and worthless where none does.",
-        "Gives orders of magnitude rather than precise estimates: near-zero for the docs link, about an hour for the community post, about a day for conference material.",
+        "Gives orders of magnitude rather than precise estimates: near-zero for the docs link, about an hour for the community post, about half a day for conference material.",
         "Notes the engineer's own post under their own name travels further than anything published under yours.",
         "Notes only that engineer can authorise the community post.",
         "Notes conference material depends on a slot existing and pays nothing until the talk is accepted, while the before-and-after architecture is already a slide so the marginal cost is low.",

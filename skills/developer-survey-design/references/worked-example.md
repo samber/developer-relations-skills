@@ -1,6 +1,6 @@
 # Worked example: a first "State of" survey for an open-source database
 
-Fictional case. An open-source distributed SQL database with a managed cloud offering plans its first yearly community survey. Marketing drafted 30 questions and wants "X% of our developers run it in production" in a press release. Results are due in 8 weeks; one DevRel person has about 20 hours. The company is in the EU, respondents are worldwide. Marketing also wants a laptop raffle and a "nurture" email list.
+Fictional case. An open-source distributed SQL database with a managed cloud offering plans its first yearly community survey. Marketing drafted 30 questions and wants "X% of our developers run it in production" in a press release. Results are due in 8 weeks; one DevRel person has about 12 hours. The company is in the EU, respondents are worldwide. Marketing also wants a laptop raffle and a "nurture" email list.
 
 ## Contents
 
@@ -18,7 +18,7 @@ Answer 2 (publication planned): calibration sample kept first (the default); cla
 Answer 4 (yearly series, 8 weeks): core module frozen now; nothing demoted, since the date is not under four weeks.
 Answer 5 (CLI start message, consented cloud-user list): calibration sample needs little new infrastructure.
 Answer 7 (opt-out telemetry reports version, OS, deploy target): version and OS questions deleted; deploy-target mix used as a bias check.
-Answer 8 (20 analyst hours): at most two open-text boxes.
+Answer 8 (12 analyst hours): at most two open-text boxes.
 Answer 9 (EU, worldwide, raffle idea): prize draw ranked last on compliance cost; partners send invitations, lists never imported.
 ```
 
@@ -81,4 +81,4 @@ None, with results posted to every recruitment channel before the press release 
 | 6-7 | Clean, analyse, code open text, draft report and methodology |
 | 8 | Privacy and claims check; results to channels first, then the press release |
 
-Hours: decision-table session 1, build 2, pilot 4, cleaning 2, analysis 3, open-text coding 3, report and methodology 4, privacy admin 1.
+Hours: decision-table session 1, build 1, pilot 4, cleaning 1, analysis 1, open-text coding 1, report and methodology 2, privacy admin 1.

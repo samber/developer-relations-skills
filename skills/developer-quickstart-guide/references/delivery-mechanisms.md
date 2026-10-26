@@ -22,7 +22,7 @@ Rows run best-ratio-first: friction removed per hour of building the container a
 | CLI scaffold     | Install and project-setup steps, outright          | An hour to document; the generator is owned by product either way                            | "Start a new project" is the real onboarding path                          |
 | Try-it console   | The client setup between reader and first response | Near-zero when an OpenAPI spec is already published; a standing job to keep the spec current | The success moment is a response from a hosted API                         |
 | Language tabs    | Re-reading the path in the wrong language          | An hour to wire, then every tab is a quickstart you must cold-run each release               | Two or three genuine first-class languages, no more                        |
-| Notebook         | Install, and the gap between narrative and a chart | A week: its own hosting, execution and rendering story                                       | The success moment is a chart, a table or a query result                   |
+| Notebook         | Install, and the gap between narrative and a chart | A day or two to build, then its own hosting, execution and rendering story                   | The success moment is a chart, a table or a query result                   |
 | Embedded sandbox | The whole toolchain install                        | A standing job: a third-party runtime becomes a dependency of your onboarding                | Toolchain install is the single biggest time sink in the budget            |
 
 - value: embedded sandbox > CLI scaffold > notebook > try-it console > language tabs > plain page

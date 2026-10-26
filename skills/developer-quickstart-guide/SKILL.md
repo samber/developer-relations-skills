@@ -4,7 +4,7 @@ description: Writes or audits a developer quickstart that carries a reader from 
 license: MIT
 metadata:
   author: Samuel Berthe
-  version: "1.0.1"
+  version: "1.0.2"
 ---
 
 # Developer Quickstart Guide

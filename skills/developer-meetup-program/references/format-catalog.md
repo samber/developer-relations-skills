@@ -17,7 +17,7 @@ The ranking lives in `SKILL.md` Step 3 - efficiency: `anchor + lightning > study
 | Panel                      | 3-4 guests, one moderator                   | One good moderator, four calendars              | Contentious topics; never as a default      |
 | Live podcast / interview   | 30-40 min on stage, recorded                | One guest, one host, plus editing after         | Groups with an existing media surface       |
 | Open space                 | Attendees propose sessions on the night     | None                                            | Rooms where people already know each other  |
-| Hands-on workshop          | 60-90 min, laptops required                 | One facilitator, a week of preparation          | Deep engagement, small rooms, tool adoption |
+| Hands-on workshop          | 60-90 min, laptops required                 | One facilitator, a day or two of preparation    | Deep engagement, small rooms, tool adoption |
 
 Two failure patterns worth naming:
 

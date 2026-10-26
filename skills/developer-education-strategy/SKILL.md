@@ -4,7 +4,7 @@ description: Decides whether and how to invest in structured developer education
 license: MIT
 metadata:
   author: Samuel Berthe
-  version: "1.1.0"
+  version: "1.1.1"
 ---
 
 # Developer Education Strategy
@@ -107,7 +107,7 @@ Five rungs, offered as candidates and ordered by value per unit of effort - neve
 
 Value and effort climb together, because each rung inherits every obligation of the rungs below it. Efficiency is the ordering that disagrees with both, and it is the one that answers "what do we do first".
 
-1. **Curated learning path** - sequence content you already own into an ordered path on the docs site. A week to curate, a re-order per release, reversible by deleting a page. Buys the answer to "where do I start" out of assets already paid for, which is why it returns more per hour than anything else here.
+1. **Curated learning path** - sequence content you already own into an ordered path on the docs site. A day or two to curate, a re-order per release, reversible by deleting a page. Buys the answer to "where do I start" out of assets already paid for, which is why it returns more per hour than anything else here.
 2. **Structured curriculum with labs** - modules derived from a job task analysis, each with a hands-on exercise in a disposable environment. Effort steps up to a standing job: the lab breaks whenever the product ships, and anything filmed or screenshotted costs the most to keep true. Buys the only thing on this ladder that moves time-to-competence - practice under observation.
 3. **Ad-hoc content** - tutorials, videos, and workshops on demand, no sequence, no completion state. Near-zero effort and no new role, which is what keeps it this high. It sits below the two above it because an hour buys exactly one artefact and nothing accumulates; with nobody owning the sequence, the artefacts start contradicting each other.
 4. **Completion or skill badge** - a verifiable credential on top of rung 2, adding a modest but permanent effort: issuance, verification, a disputes queue, and a defensible threshold for any assessed task. Its value is conditional (zero unless someone outside the education team acts on it) against that unconditional cost, which is what puts it below ad-hoc content. It is also the first rung you cannot quietly withdraw: badges sit on profiles you do not own.

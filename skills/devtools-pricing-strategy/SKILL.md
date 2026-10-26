@@ -4,7 +4,7 @@ description: Designs the pricing and packaging architecture of a developer tool 
 license: MIT
 metadata:
   author: Samuel Berthe
-  version: "1.0.1"
+  version: "1.0.2"
 ---
 
 # Devtools Pricing Strategy
@@ -93,7 +93,7 @@ Rank the survivors by value returned per unit of effort - effort meaning meterin
 Effort in magnitudes:
 
 - A flat unit costs near-zero, one line on an invoice.
-- Seats and capacity cost about a week each, billed off an account record you already keep.
+- Seats and capacity cost a day or two each, billed off an account record you already keep.
 - A business-outcome unit costs a quarter, because the number lives in the customer's system and has to be collected and agreed.
 - Consumption is a standing job: a metering pipeline, caps, alerts, forecasting, and a dispute path behind every invoice.
 
@@ -111,7 +111,7 @@ What this order starves: consumption. It aligns price to value better than anyth
 
 Delete rather than demote, and say which:
 
-- Nothing meterable today, with no funded quarter of billing engineering, deletes consumption instead of ranking it last.
+- Nothing meterable today, with no funded month of billing engineering, deletes consumption instead of ranking it last.
 - A product that does not move the customer's money deletes percentage-of-a-flow entirely: it is excellent where it applies and meaningless where it does not, which is why it is absent from the lines above rather than parked at the bottom.
 - A product consumed by CI, service accounts or agents deletes seats: the tell is flat seat count against rising usage, and no ranking survives a unit that stops moving.
 
@@ -138,8 +138,8 @@ Build them in efficiency order - revenue unlocked per unit of engineering and or
 
 Effort in magnitudes:
 
-- The free surface and the self-serve rung are each about a quarter and share most of it. Limits sit on the same axis as the paid metric, so one meter enforces both - that shared meter is what ties them.
-- The team rung adds roles, shared billing and retention, a quarter more.
+- The free surface and the self-serve rung are each a few weeks of work and share most of it. Limits sit on the same axis as the paid metric, so one meter enforces both - that shared meter is what ties them.
+- The team rung adds roles, shared billing and retention, a few weeks more.
 - The enterprise rung is a standing job of security reviews, questionnaires, custom terms and SLA credits.
 
 1. **Free surface** - permanent, no card, enough to run a real side project. In this market a time-boxed trial is a weak substitute: evaluation takes weeks of unpaid tinkering and internal advocacy.
@@ -181,7 +181,7 @@ Place the number with evidence, buying it in efficiency order rather than streng
 
 - efficiency: `own usage-value correlation and win/loss data > competitor prices > Gabor-Granger demand curve > Van Westendorp sensitivity range`
 - value (evidence strength): `own usage-value correlation and win/loss data > Gabor-Granger > Van Westendorp > competitor prices`
-- effort: `Gabor-Granger > Van Westendorp > own data > competitor prices` - a fielded survey costs weeks and a respondent panel, reading your own data costs a day, and a competitor's price page costs an hour
+- effort: `Gabor-Granger > Van Westendorp > own data > competitor prices` - a fielded survey costs weeks and a respondent panel, reading your own data costs a few hours, and a competitor's price page costs an hour
 
 Competitor prices rank second on efficiency and last on strength: cheap, and evidence of what someone else guessed. Use them to bound a number, never to justify one. Feature-ranking research (MaxDiff) informs packaging, not the number.
 

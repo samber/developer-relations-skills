@@ -40,7 +40,7 @@ Announcement cap: 2 slots.
 
 ## Section 3: capacity model
 
-- Writer: 12 h/week of production time → roughly 1 substantial piece per 2 weeks plus small pieces.
+- Writer: 12 h/week of production time → roughly 1 substantial piece a week plus small pieces.
 - Advocate: 6 h/week outside events; W8-W9 fully consumed by the talk.
 - Engineer reviewer: 4 h/week - the binding constraint. Two review-heavy pieces per month, maximum.
 - Slack: 3 unassigned slots (W5, W8, W11) for incident write-ups, upstream breakage, or a slipped anchor.

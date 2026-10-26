@@ -65,7 +65,7 @@
     },
     {
       "id": 4,
-      "prompt": "We've already paid EUR 14,000 to sponsor Nordhack, a 48-hour student hackathon in Tallinn in seven weeks, 400 students. The package gives us a mentor table, a prize track we name ourselves, and a 30-minute slot on Friday evening. I'm at Tessellate - we sell a real-time geospatial API. Marketing wants the prize to be 'Best Use of the Tessellate API' with EUR 3,000 cash, and they want to hire a booth crew from a local agency because our engineers are heads-down on a release. We'd also love to turn that Friday slot into a proper hands-on workshop, though we've never written one. Three engineers could come if I push. What's the plan for the two days?",
+      "prompt": "We've already paid EUR 14,000 to sponsor Nordhack, a 48-hour student hackathon in Tallinn in three weeks, 400 students. The package gives us a mentor table, a prize track we name ourselves, and a 30-minute slot on Friday evening. I'm at Tessellate - we sell a real-time geospatial API. Marketing wants the prize to be 'Best Use of the Tessellate API' with EUR 3,000 cash, and they want to hire a booth crew from a local agency because our engineers are heads-down on a release. We'd also love to turn that Friday slot into a proper hands-on workshop, though we've never written one. Three engineers could come if I push. What's the plan for the two days?",
       "expected_output": "The prize category reframed around the problem, judging criteria published before entries open and judging kept unbuyable, the agency crew rejected for technical staff, the workshop deleted for lack of curriculum, hackathon crunch-hour staffing, and a qualification bar set before the event.",
       "files": [],
       "expectations": [
@@ -74,7 +74,7 @@
         "Refuses to let the sponsorship influence the judging outcome, including favouring teams the mentor table helped",
         "Rejects the agency booth crew and requires technical staff who can debug a stranger's code",
         "Brainstorms two or three activation options for the package already bought, names the trade-off in each, and recommends one before anything is purchased",
-        "Deletes or defers the hands-on workshop because no curriculum exists and building one runs to roughly a quarter of preparation rather than seven weeks",
+        "Deletes or defers the hands-on workshop because no curriculum exists and building one runs to roughly a month or two of preparation rather than three weeks",
         "Names the compliance exposure specific to a prize track: prize promotions are regulated in some jurisdictions, criteria fix once entries open, and prize value can be reportable",
         "Staffs the hackathon crunch hours - kickoff and team formation, the evening build peak, the hours before submission, and demos - and runs a skeleton crew overnight, at meal times and through the mid-event lull",
         "Rotates staff off the floor rather than running the same people continuously",
@@ -172,7 +172,7 @@
       "expected_output": "The October workshop deleted outright against the eight-week result date, the already-contracted February event's add-ons promoted over the new May commitment, the near-date rungs and help-desk booth promoted, the result date separated from the contract deadline, and a threshold set before any spend.",
       "files": [],
       "expectations": [
-        "Deletes the October workshop outright, on the grounds that a quarter of preparation does not fit inside a result date eight weeks away",
+        "Deletes the October workshop outright, on the grounds that a month or two of preparation does not fit inside a result date eight weeks away",
         "Refuses the CEO's workshop centrepiece for the March board date rather than accommodating it as a reduced version",
         "Promotes buying an add-on at the already-contracted February conference over committing to the new May event",
         "Promotes the meetup and community rungs, and the help-desk booth activation, specifically because of the near result date",

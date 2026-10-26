@@ -54,7 +54,7 @@ Tag every threshold in the third column. "Sourced" needs a name a reader can che
 
 ## Worked example 1: driving a spec that collapses an N×M problem
 
-**Situation.** A vendor of observability tooling integrates with 9 agent frameworks; each customer wants their own 3. Each framework pairing costs weeks and breaks on every upgrade.
+**Situation.** A vendor of observability tooling integrates with 9 agent frameworks; each customer wants their own 3. Each framework pairing costs days and breaks on every upgrade.
 
 **Landscape.** No spec covers the job. Two competitors ship proprietary adapters. Counted demand: 14 deals in 12 months named at least one missing integration.
 
@@ -63,7 +63,7 @@ Tag every threshold in the third column. "Sourced" needs a name a reader can che
 - Demand: passed, named accounts.
 - Commoditization: the standardized layer is the wire format between framework and collector - a layer the company does not sell; it sells the analysis on top.
 - Control: 40% share of the collector market and the only cross-framework tooling.
-- Cost: two engineers for four quarters is fundable.
+- Cost: one engineer for four quarters is fundable: the reference implementation and suite take a quarter, implementer recruiting and support take the rest.
 
 **Decision.** Drive, with a Git-based community specification, royalty-free, reference implementation under a permissive licence, conformance suite shipped with v1.
 

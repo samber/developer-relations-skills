@@ -74,8 +74,8 @@ Effort to stand each one up, in orders of magnitude - evidence needed before a b
 
 | Model                  | Effort              | What makes it cost that                                                                          |
 | ---------------------- | ------------------- | ------------------------------------------------------------------------------------------------ |
-| API five-stage arc     | an hour to a week   | first call, integration and production usually already sit in product telemetry                  |
-| OSS contributor funnel | a week              | the repository holds first PR, review latency and return; recruiting abandoners is the slow part |
+| API five-stage arc     | an hour to a day    | first call, integration and production usually already sit in product telemetry                  |
+| OSS contributor funnel | a few days          | the repository holds first PR, review latency and return; recruiting abandoners is the slow part |
 | AAARRRP                | a week to a quarter | mostly coordination: its stages must reconcile with a company-wide funnel another team owns      |
 | Revell six-stage       | a quarter           | the standardisation boundary needs account rollup and buyer-side interviews almost nobody holds  |
 | Unsourced default      | near-zero           | nothing to reconcile - and it buys no comparability, which is why cheapest is not first          |

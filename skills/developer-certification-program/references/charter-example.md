@@ -28,7 +28,7 @@ A message-queue SaaS with an SI partner program. Two enterprise buyers asked las
 
 **3. Competency blueprint.** From twelve partner-engineer interviews and two quarters of escalated tickets: design topology 30%, configure delivery guarantees 25%, troubleshoot backlog and consumer lag 25%, secure tenants 20% (self-set from that analysis).
 
-**4. Build plan.** Eight tasks (two per domain), two variants each, reference solutions, a pilot with ten partner engineers (enough to test task clarity and checkers, too few for item statistics), an issuing service bought rather than built. Estimated 150 owner hours over four months plus 30 reviewer hours (self-set).
+**4. Build plan.** Eight tasks (two per domain), two variants each, reference solutions, a pilot with ten partner engineers (enough to test task clarity and checkers, too few for item statistics), an issuing service bought rather than built. Estimated 70 owner hours over three months plus 30 reviewer hours (self-set).
 
 **5. Integrity plan.** A panel of six senior partner engineers writes each task's minimum end-state checks from pilot solutions. Checkers run in CI against every minor release; a failing checker pulls that task variant from live forms until fixed. No face matching, so no biometric review; the verification page still lists holders by credential ID only. Accommodation: extended time on request.
 

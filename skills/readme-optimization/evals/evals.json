@@ -262,7 +262,7 @@
         "Says the promotion is a deliberate departure from the default ordering",
         "Fixes the repository furniture first: description, website link, topics, and social preview",
         "Explains that furniture is what search listings carry and what unfurls when the link is pasted into a chat",
-        "Prices the demo at roughly a week, and warns it becomes a standing job that goes stale when the output changes",
+        "Prices the demo at roughly a day or two, and warns it becomes a standing job that goes stale when the output changes",
         "Requires generating the demo from a script so that re-rendering stays cheap",
         "Places the demo immediately after the tagline",
         "Requires the demo to be short, high-contrast and legible at embed scale",

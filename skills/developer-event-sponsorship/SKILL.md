@@ -4,7 +4,7 @@ description: Builds a developer-event sponsorship plan - which conferences, meet
 license: MIT
 metadata:
   author: Samuel Berthe
-  version: "1.0.1"
+  version: "1.0.2"
 ---
 
 # Developer Event Sponsorship
@@ -42,7 +42,7 @@ Ask one question at a time, multiple-choice where you can. Stop once you know th
 
 Questions 6-8 decide the rankings in steps 3, 4 and 6, so ask them before recommending anything and say which answer moved which option:
 
-- A near date for the result promotes the meetup and community rungs in step 4 and the help-desk booth in step 6, and deletes the workshop outright - a quarter of preparation does not fit inside a deadline two months out. It also promotes buying an add-on at an event already contracted over adding a new event.
+- A near date for the result promotes the meetup and community rungs in step 4 and the help-desk booth in step 6, and deletes the workshop outright - a month or two of preparation does not fit inside a deadline two months out. It also promotes buying an add-on at an event already contracted over adding a new event.
 - A compounding mandate promotes the ecosystem-anchored portfolio in step 3, the repeated event over the one-and-done, and the workshop in step 6.
 - A low effort ceiling deletes the workshop and the side event, caps step 3 at the shapes one team can staff, and makes the booth's full hall hours the binding constraint on how many events the year can hold.
 
@@ -108,8 +108,8 @@ Four shapes are worth drawing from, ranked by value per unit of effort. Effort i
 
 No compliance-cost line at this altitude: contracts, consent and code-of-conduct obligations are signed per event in step 4, and a portfolio shape commits to none of them.
 
-- **Ecosystem-anchored** - every event sits inside one technology community. Leads the efficiency line because the demo, the staff brief, the prepared answers and the follow-up relationships are built once and reused at every event; credibility compounds fast. Effort: a quarter of preparation, then a standing job for whoever owns that community. Fails the moment the strategy needs a second ecosystem.
-- **Flagship-led** - one deep sponsorship plus small presences elsewhere. Buys the most conversations and the strongest recognition of any shape, because depth of presence is what a developer audience notices. Effort: a quarter of preparation and a standing job for the week itself. Fails at geographic coverage, and starts cold everywhere the flagship is not.
+- **Ecosystem-anchored** - every event sits inside one technology community. Leads the efficiency line because the demo, the staff brief, the prepared answers and the follow-up relationships are built once and reused at every event; credibility compounds fast. Effort: a month or two of preparation, then a standing job for whoever owns that community. Fails the moment the strategy needs a second ecosystem.
+- **Flagship-led** - one deep sponsorship plus small presences elsewhere. Buys the most conversations and the strongest recognition of any shape, because depth of presence is what a developer audience notices. Effort: a month or two of preparation and a standing job for the week itself. Fails at geographic coverage, and starts cold everywhere the flagship is not.
 - **Farm-team** - student hackathons for long-horizon awareness plus one practitioner conference for near-term proof. Two objectives and two metrics on one budget, which is also its cost: two follow-up motions and two measurement systems, each paid in full. Effort: the preparation of the flagship shape, doubled, and two owners.
 - **Regional spread** - many small local events. Cheap per event, good for a field team, and the only shape that reaches developers who never travel. Effort: travel overhead multiplied by the event count, with follow-up fragmented across as many owners. Rarely reaches decision-makers.
 
@@ -197,11 +197,11 @@ Effort in magnitudes:
 - the booth costs an hour of preparation and then a standing job for the hall hours
 - the prize track costs a week to frame and procure, and borrows mentoring hours you were staffing anyway
 - the side event costs a week of guest-list and venue work plus an evening that also costs you the next morning
-- the workshop costs a quarter of preparation and takes your two best engineers off the floor for its whole slot
+- the workshop costs a month or two of preparation and takes your two best engineers off the floor for its whole slot
 
 - Default to the booth as a help desk: technical staff who debug a stranger's code, a demo the attendee drives, a quick win within reach (the five-minute bar is this skill's default). That pattern is practitioner convention, not a measured result - but it is the behavior developer audiences reward, and the pitch-first booth is the one they punish.
 - Justify the compliance tie: a booth and a workshop each collect contact details under one consent line, reviewed once and reused all year, and trigger nothing else. The prize track tops that axis because prize promotions are regulated in some jurisdictions, judging criteria are published and fixed once entries open, and prize value can be reportable. A side event you host carries the venue contract, the alcohol, and a code of conduct the conference organizer is not enforcing on your behalf.
-- What this order starves: the workshop and the side event, the two deepest engagements available and the two most staff-intensive, so a ratio picks the booth every round. Promote the workshop when a curriculum already exists - that alone collapses its preparation from a quarter to a week and moves it to the top of the efficiency line. Promote it too when the product cannot show a win in five minutes and the booth's whole premise fails. Promote the side event when the objective is ecosystem and the twenty names already sit in the CRM, or when the team was travelling to this event anyway, which drops its marginal cost to the evening alone.
+- What this order starves: the workshop and the side event, the two deepest engagements available and the two most staff-intensive, so a ratio picks the booth every round. Promote the workshop when a curriculum already exists - that alone collapses its preparation from a month or two to a week and moves it to the top of the efficiency line. Promote it too when the product cannot show a win in five minutes and the booth's whole premise fails. Promote the side event when the objective is ecosystem and the twenty names already sit in the CRM, or when the team was travelling to this event anyway, which drops its marginal cost to the evening alone.
 - Delete rather than demote:
   - the prize track at any event with no build phase
   - the workshop where the package sells no hands-on slot or nobody can be spared for its preparation

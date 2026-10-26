@@ -4,7 +4,7 @@ description: "Writes or audits a goal-oriented developer how-to guide: a docs pa
 license: MIT
 metadata:
   author: Samuel Berthe
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # Developer How-to Guide
@@ -180,7 +180,7 @@ Rows run in efficiency order, value per hour of wiring. The wiring costs are thi
 
 | Signal | Wiring cost | Reading it |
 | --- | --- | --- |
-| Executable steps passing in CI against the released product | A day to set up, near-zero after | The page still works; the only signal that catches drift before readers do |
+| Executable steps passing in CI against the released product | Half a day to set up, near-zero after | The page still works; the only signal that catches drift before readers do |
 | Tickets and issues that cite this page or its task | Near-zero to collect, a standing job to read | Each one points at a step that is wrong, ambiguous or missing a variant |
 | Search refinements and returns to the results page after landing | An hour, if search analytics exist | The title or goal line promises something the page does not do. A plain exit is often success |
 | "Was this helpful" votes with free text | Near-zero | Triage only; votes are not validated against task success |

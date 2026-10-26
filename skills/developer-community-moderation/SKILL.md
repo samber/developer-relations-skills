@@ -4,7 +4,7 @@ description: Writes a developer community's code of conduct and the moderation p
 license: MIT
 metadata:
   author: Samuel Berthe
-  version: "1.0.1"
+  version: "1.0.2"
 ---
 
 # Developer Community Moderation
@@ -146,8 +146,8 @@ Show each deliverable in sections and get the user's agreement on one before wri
 
 Write them in this order when the team cannot produce all six at once - reports protected per hour of writing, not shortest document first:
 
-- efficiency: reporting channels (with named recipients and the alternate path) > enforcement ladder > `CODE_OF_CONDUCT.md` > platform control sheet > runbook > moderator roster and agreement > announcement post
-- effort: reporting channels == announcement post (an hour each) > enforcement ladder (a session with the team over real past cases) > `CODE_OF_CONDUCT.md` (adapt a base document, then argue the standards) > platform control sheet (a day of clicking through settings and writing down what each one does) > moderator roster and agreement (weeks, because it needs people to say yes) > runbook (the longest document here, and the one nobody reads until a case arrives)
+- efficiency: reporting channels (with named recipients and the alternate path) > enforcement ladder > `CODE_OF_CONDUCT.md` > runbook > platform control sheet > moderator roster and agreement > announcement post
+- effort: reporting channels == announcement post (an hour each) > enforcement ladder (a session with the team over real past cases) > `CODE_OF_CONDUCT.md` (adapt a base document, then argue the standards) > platform control sheet (a day of clicking through settings and writing down what each one does) > runbook (the longest document here, a day or two of drafting and team review, and the one nobody reads until a case arrives) > moderator roster and agreement (weeks, because it needs people to say yes)
 - value: reporting channels (nothing else in the list does anything until a report can reach someone) > enforcement ladder (turns each case from an argument into a lookup) > runbook (stops the delay that is the dominant enforcement error) > `CODE_OF_CONDUCT.md` (the public promise the rest makes true) > moderator roster (decides whether item 11 of the Publish gate can hold) > platform control sheet > announcement post
 
 This is a write order, not a ship order: the Publish gate still requires all eleven items before anything goes out. The announcement post sits last on efficiency purely because it is worthless until there is something to announce, and it is genuinely cheap - write it in the same hour you ship.

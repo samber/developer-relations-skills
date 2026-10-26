@@ -4,7 +4,7 @@ description: Maps the developer journey for one audience segment - discovery, tr
 license: MIT
 metadata:
   author: Samuel Berthe
-  version: "1.0.1"
+  version: "1.0.2"
 ---
 
 # Developer Journey Map
@@ -102,8 +102,8 @@ There is deliberately no value line. A model's value is entirely how well its te
 
 In orders of magnitude:
 
-- The API five-stage arc's boundaries - first call, integration, production - usually already sit in product telemetry: an hour to a week of reading.
-- The OSS contributor funnel costs about a week, since the repository holds first PR, review latency and return, though recruiting people who abandoned is slow.
+- The API five-stage arc's boundaries - first call, integration, production - usually already sit in product telemetry: an hour to a day of reading.
+- The OSS contributor funnel costs a few days, since the repository holds first PR, review latency and return, though recruiting people who abandoned is slow.
 - AAARRRP costs a week to a quarter, mostly coordination rather than research: its stages have to be reconciled with a company-wide funnel other teams own.
 - Revell six-stage costs a quarter, because the standardisation boundary needs account rollup and buyer-side interviews almost nobody already has.
 

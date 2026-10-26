@@ -5,7 +5,7 @@ description: >-
 license: MIT
 metadata:
   author: Samuel Berthe
-  version: "1.0.1"
+  version: "1.0.2"
 ---
 
 # Developer Community Health
@@ -152,7 +152,7 @@ Two reading rules apply at every stage:
 Rank each candidate metric by what its data source returns per hour spent collecting it, not by what the source costs. The two orderings only coincide when the community lives on a forge:
 
 - efficiency: forge and git history > venue analytics panel > community-data platform
-- effort: forge and git history (near-zero once scripted) > venue analytics panel (an hour every month, forever) > community-data platform (a week to stand up, then a standing job)
+- effort: forge and git history (near-zero once scripted) > venue analytics panel (an hour every month, forever) > community-data platform (a day or two to stand up, then a standing job)
 - value: community-data platform (cross-venue identity, retained history, cohorts that survive a venue change) > forge and git history (the funnel and responsiveness pillars, exact) > venue analytics panel (activity only, coarse, capped by the venue's retention)
 - compliance cost: forge and git history (public activity, no review) > venue analytics panel (aggregate reads inside the venue's own terms) > community-data platform (bulk member-data export, venue-terms review, a retention decision, and ingestion you cannot reverse)
 

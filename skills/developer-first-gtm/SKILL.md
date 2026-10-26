@@ -4,7 +4,7 @@ description: Designs the go-to-market motion for a developer-facing product - bo
 license: MIT
 metadata:
   author: Samuel Berthe
-  version: "1.0.1"
+  version: "1.0.2"
 ---
 
 # Developer-First GTM
@@ -95,8 +95,8 @@ Then rank what survives, and say the ranking out loud. Effort is what the compan
 
 Read those as orders of magnitude:
 
-- Bottom-up self-serve is a quarter of product work and no new headcount, and each account it lands is card-sized.
-- Developer-influenced sales is a quarter to build the rollup and the rule, then a standing job to answer the signal; it leads on efficiency without leading on either input, because it converts accounts you already paid to acquire.
+- Bottom-up self-serve is a few weeks of product work and no new headcount, and each account it lands is card-sized.
+- Developer-influenced sales is a few weeks to build the rollup and the rule, then a standing job to answer the signal; it leads on efficiency without leading on either input, because it converts accounts you already paid to acquire.
 - Ecosystem-mediated is a quarter of partner work plus permanent margin, and a listing is slow to walk back.
 - Top-down with developer proof is a standing sales job plus compliance evidence, and it commits product, security and legal before the first contract.
 
