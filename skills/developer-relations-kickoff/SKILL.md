@@ -4,7 +4,7 @@ description: Before starting any developer-relations work - and again at the sta
 license: MIT
 metadata:
   author: Samuel Berthe
-  version: "1.0.24"
+  version: "1.0.25"
 ---
 
 # Developer Relations Kickoff
@@ -136,6 +136,7 @@ These tables are deliberately unranked, and must stay that way - inside a block 
 | `samber/developer-relations-skills@devrel-webinar-program`      | Run a recurring online webinar series - formats, seasons, replay, sales handoff contract |
 | `samber/developer-relations-skills@developer-event-sponsorship` | Buy sponsorship - which events, which tier, which activation, what ROI proof            |
 | `samber/developer-relations-skills@developer-booth-playbook` | Work a booth already bought - crew, shifts, floor scripts, lead capture and grading, swag, exhibitor rules |
+| `samber/developer-relations-skills@developer-event-followup` | After the event closes - badge scans, raffle and sign-up lists, who may be emailed, follow-up messages, routing, cohort activation |
 
 **Community:**
 
@@ -194,7 +195,7 @@ Disambiguate strictly from each skill's declared scope - never from a guess abou
 Name the gap explicitly when the task needs something no skill covers. Collection v1 has no skill for:
 
 - a third-party trademark _usage and enforcement_ policy - who holds the trademark, domains and registry accounts belongs to `oss-governance`; registering the name before selling anything is a step in `oss-monetization`
-- organizing your own conference or hackathon, or post-event follow-up (working the booth itself is `developer-booth-playbook`)
+- organizing your own conference or hackathon (working the booth itself is `developer-booth-playbook`, post-event follow-up is `developer-event-followup`)
 - student and campus programs
 - writing exam items or running exam delivery (the credential program itself is `developer-certification-program`)
 - choosing a docs platform, or brand-mention monitoring, including brand share in AI answers (docs cited at the right version is covered by `developer-docs-ai-visibility`)

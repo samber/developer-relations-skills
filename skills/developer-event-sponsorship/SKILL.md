@@ -4,7 +4,7 @@ description: Builds a developer-event sponsorship plan - which conferences, meet
 license: MIT
 metadata:
   author: Samuel Berthe
-  version: "1.0.3"
+  version: "1.0.4"
 ---
 
 # Developer Event Sponsorship
@@ -231,7 +231,7 @@ Route each logged conversation to the team that can use it, and name the destina
 | Candidates                   | Recruiting   |
 | Buyers                       | Sales        |
 
-Most booth conversations are not sales leads, and defaulting them all to sales is what fills a CRM with records nobody works.
+Most booth conversations are not sales leads, and defaulting them all to sales is what fills a CRM with records nobody works. Run the follow-up itself, from the closed hall to the 30/60/90-day cohort readings, with `samber/developer-relations-skills@developer-event-followup`.
 
 [references/sponsorship-roi-model.md](./references/sponsorship-roi-model.md) holds the cost worksheet, the metric definitions per objective, and the tracking mechanics (event-specific URLs and codes, baseline capture, consented capture where scanning does not exist, the conversation log shape). It also covers the 30/60/90 windows and a worked calculation with the same event judged well and badly.
 
