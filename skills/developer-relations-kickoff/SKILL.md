@@ -4,7 +4,7 @@ description: Before starting any developer-relations work - and again at the sta
 license: MIT
 metadata:
   author: Samuel Berthe
-  version: "1.0.22"
+  version: "1.0.23"
 ---
 
 # Developer Relations Kickoff
@@ -59,6 +59,7 @@ These tables are deliberately unranked, and must stay that way - inside a block 
 | `samber/developer-relations-skills@devrel-budget-allocation`     | Split the budget across pillars into line items with a return threshold and a cut list                                                                              |
 | `samber/developer-relations-skills@devrel-metrics`               | Which KPIs deserve a target - tiered framework, attribution rule, baselines, vanity cuts                                                                            |
 | `samber/developer-relations-skills@devrel-analytics`             | The tracking plan that instruments the surfaces - event taxonomy, identity spine, UTM discipline                                                                    |
+| `samber/developer-relations-skills@devrel-exec-reporting`        | The exec-facing report from an agreed framework - one-page value story, claim labels, leading indicators, misses, budget-defense case with cut tiers |
 | `samber/developer-relations-skills@developer-survey-design`      | A recurring developer or "State of" survey - question cuts, recruitment and calibration sample, privacy, defensible published percentages                            |
 | `samber/developer-relations-skills@developer-journey-map`        | Map the journey stage by stage - discover, try, adopt, contribute, advocate as a working spine, not a published framework - and locate the single leak worth fixing |
 | `samber/developer-relations-skills@developer-segmentation`       | Cut the developer audience into named, sized, ranked segments plus an anti-segment                                                                                  |
@@ -179,7 +180,7 @@ Disambiguate before routing wherever clusters collide on keywords:
 
 - **Docs authoring** - five skills that all look like "write a getting-started page"
 - **Release communication** - changelog vs migration guide
-- **Measurement** - metrics vs analytics vs community health vs survey
+- **Measurement** - metrics vs analytics vs exec reporting vs community health vs survey
 - **OSS visibility** - launch vs distribution vs build-in-public
 - **Sponsorship** - two skills that differ only by which side pays
 - **Community** - four skills on one timeline
@@ -191,7 +192,6 @@ Disambiguate strictly from each skill's declared scope - never from a guess abou
 
 Name the gap explicitly when the task needs something no skill covers. Collection v1 has no skill for:
 
-- the exec-facing DevRel report
 - a third-party trademark _usage and enforcement_ policy - who holds the trademark, domains and registry accounts belongs to `oss-governance`; registering the name before selling anything is a step in `oss-monetization`
 - organizing your own conference or hackathon, conference booth operations, or post-event follow-up
 - student and campus programs
@@ -230,7 +230,7 @@ The user's question at that moment is never "which of these 64 exists" but "whic
 3. **Release and support cadence** - `changelog-writing`, `version-migration-guide`, `developer-troubleshooting-docs`, `oss-issue-triage`, `oss-security-disclosure`, `oss-release-policy`, `docs-versioning-strategy`, `oss-maintainer-sustainability`. Buys users who can upgrade and self-serve their own errors instead of opening an issue. Costs a pass per release and a maintainer answering what the triage surfaces - it never finishes; it is a standing job, not a fix.
 4. **Content and visibility** - `engineering-blog-post`, `devto-playbook`, `dailydev-playbook`, `developer-tutorial`, `developer-how-to-guide`, `technical-video-script`, `developer-case-study`, `docs-seo`, `developer-docs-ai-visibility`, `docs-localization-strategy`, `devrel-content-calendar`, `devrel-newsletter-program`, `devrel-newsletter-issue`, `devrel-newsletter-sourcing`, `devrel-newsletter-deliverability`, `devrel-newsletter-growth`, `devrel-newsletter-sponsorship`, `build-in-public`, `oss-launch`, `producthunt-playbook`, `hackernews-playbook`, `oss-distribution-strategy`, `tech-press-relations`, `tech-podcast-interview-prep`. Buys reach that compounds - a post or a registry listing keeps earning for years. Costs a full production cycle per artefact plus review, and the payoff arrives a quarter after the work, not the week of it.
 5. **Community and events** - `developer-community-launch`, `developer-community-moderation`, `discord-community-playbook`, `developer-champions`, `developer-community-health`, `developer-meetup-program`, `developer-office-hours-program`, `devrel-webinar-program`, `developer-feedback-loop`, `developer-event-sponsorship`, `conference-cfp-submission`, `tech-talk-outline`, `developer-live-demo-design`, `oss-sponsors-fundraising`, `oss-sponsors-brand-strategy`. Buys the relationships nothing else in the collection produces. Costs the longest lead time here - a calendar someone else controls, a standing moderation duty, and months between opening a space and it being worth reading.
-6. **Program and company foundations** - `devrel-strategy`, `developer-segmentation`, `devrel-metrics`, `devrel-analytics`, `developer-survey-design`, `devrel-budget-allocation`, `devrel-team-structure`, `developer-education-strategy`, `developer-certification-program`, `devtools-business-model`, `devtools-pricing-strategy`, `developer-first-gtm`, `open-source-company-strategy`, `developer-ecosystem-strategy`, `open-standards-strategy`, `oss-governance`, `oss-license-strategy`, `oss-monetization`, `tech-employer-branding`. Buys the rule every later session is decided against: what the program is judged on, who may merge, what the company gives away. Costs sign-off outside DevRel - engineering, legal, exec - and most of it is reversible only by another negotiation.
+6. **Program and company foundations** - `devrel-strategy`, `developer-segmentation`, `devrel-metrics`, `devrel-analytics`, `devrel-exec-reporting`, `developer-survey-design`, `devrel-budget-allocation`, `devrel-team-structure`, `developer-education-strategy`, `developer-certification-program`, `devtools-business-model`, `devtools-pricing-strategy`, `developer-first-gtm`, `open-source-company-strategy`, `developer-ecosystem-strategy`, `open-standards-strategy`, `oss-governance`, `oss-license-strategy`, `oss-monetization`, `tech-employer-branding`. Buys the rule every later session is decided against: what the program is judged on, who may merge, what the company gives away. Costs sign-off outside DevRel - engineering, legal, exec - and most of it is reversible only by another negotiation.
 
 `devrel-career` and `devrel-radar` sit outside this ladder, not at the bottom of it. They answer a personal-practice or stay-current question, not a program question; when that _is_ the goal they are rung 1 by definition, and otherwise they don't belong on the short-list at all.
 
