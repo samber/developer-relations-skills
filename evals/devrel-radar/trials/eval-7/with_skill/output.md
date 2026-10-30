@@ -1,61 +1,61 @@
-**Bottom line first:** strict video-only DevRel-practice content barely exists and is verified as the *worst* medium on both value and efficiency in this method — so a 120 min/week budget can't be filled from it. Full radar below, plus the one thing to say if you want the real fix.
+**Next (2 min):** Open `developerrelations.com`, find the DevRelCon talk archive, and queue 3 talks. I couldn't open it today. Details below.
 
-## Assumptions (correct any, rest stands)
+## Subscriber ranking: not built
 
-- Role: developer advocate.
-- Pillars owned: advocacy + enablement (docs/quickstarts) — not stated by you, guessed from role + GraphQL gateway product. Marketing/community not assumed.
-- Ecosystem: API/GraphQL tooling — **this audit only covers the DevRel practice, not GraphQL-specific channels** (Apollo GraphQL, GraphQL Conf, etc.). Gap noted below, not invented.
-- Segment: B2B devtool, bottom-up adoption.
-- Budget: 120 min/week. Standing habit, not catch-up.
-- Medium: video only. Every text and audio source ruled out (Q6 = you retain nothing from text; you didn't pick audio).
-- Events: not asked — no CFP/sponsor line included.
+- I can't read subscriber counts. YouTube sends every automated check to a consent wall, so any number I gave you would be invented.
+- The skill ranks by value per attention-minute and never by audience size. Size measures reach in other audiences, not standing in DevRel.
+- I'm not naming any YouTube channel. The audit couldn't observe one, and a plausible channel name is the failure that wrecks trust in the whole list.
+- I couldn't re-verify anything today. WebFetch permission was denied, so every status below comes from the audit dated 2026-08-26 and 2026-09-10. Re-check each URL by hand: open it, find the newest dated item, confirm who runs it.
 
-Verified: 2026-09-23, against this skill's Aug–Sep 2026 audit (no fresh fetch run this pass).
+## DevRel radar: Verrick, video only
 
-## Why "ranked by subscriber count" isn't how this reads
+This is a curated list verified on one past date, not a monitoring service. Nothing here alerts you when a source dies. Rerun the skill quarterly to refresh it.
 
-Two separate reasons, not one:
+- **Role:** developer advocate (interview option a), B2B devtool (GraphQL gateway).
+- **Pillars:** assumed advocacy. I haven't confirmed this.
+- **Budget:** 120 min/week.
+- **Medium:** video only.
+- **Audit dates:** 2026-08-26 and 2026-09-10, not re-verified 2026-10-30.
+- **Order:** within each section, highest value per attention-minute first.
 
-1. **Can't observe it.** YouTube blocks automated checks with a consent wall — no subscriber count or upload date is fetchable. Any number here would be invented.
-2. **Wouldn't use it if I could.** This method ranks by value returned per minute spent, not audience size — a big channel selling nothing useful still loses to a small one that does.
+**Weekly core: 105 of 120 min**
 
-Ranking below uses cross-surface recurrence (same person as speaker + author + host) as the "how established" proxy instead.
+| # | Source | URL | Medium | Pillar | Min/week | Why it earned the slot | Selling | Status |
+|---|---|---|---|---|---|---|---|---|
+| 1 | DRF Community Touchpoint call | `lists.dev-rel.org/g/community/calendar` | live call | all four | 30 (60-min call, every other week) | It's the only peer community you can attend on video. It's also where new sources surface, so it fills the reserved community slot. | nothing (Linux Foundation project) | Active. Restart announced for 2 Sep 2026. Recordings not confirmed. |
+| 2 | DevRelCon talk archive | `developerrelations.com` | talk video | all four | 75 (3 talks at ~25 min) | It's the field's own conference, so you hear practitioners' reasoning rather than headlines. | practice hub (former agency) | Hub active, © 2026. The talk archive is recorded in the audit but its recency is unobserved. The hosting channel is unobserved. |
 
-## Weekly core — empty
+DevRelCon is now run by Major League Hacking. Hoopy handed it over in 2026. The New York edition ran 22–23 Jul 2026, so new talks may be appearing.
 
-No verified, weekly-cadence, video-native DevRel-practice source exists in this audit. Every real weekly source (Community Pulse, Scaling DevTools, Open Source Ready, DevRel Weekly, Console.dev) is audio or text, unconfirmed on YouTube.
+**Why long-form video wins here:** your budget could never buy it by ratio, since video is the least efficient rung. I promoted it anyway because it's the only medium you retain, which moves it from cost to constraint.
 
-## Annual
+**Monthly:** none. Everything monthly in this field is text.
 
-| Source | URL | Medium | Pillar | Cost | Why | Selling | Status |
-|---|---|---|---|---|---|---|---|
-| DevRelCon talk archive | developerrelations.com | video (talks) | all four | ~60–90 min, batched once or twice/year around conference dates | Only fetchable, corroborated video surface for the practice itself | practice hub (former agency) | verified-active, NY edition confirmed 22–23 Jul 2026 |
+**Annual:** none. See Dropped.
 
-## Bench (verified, doesn't fit as core)
+**Bench** (verified substitutes, take them if you want a video version):
+- Community Pulse, Ep 105 dated 17 Aug 2026. It's the only long-running show about the practice itself. Check whether it has a video version. I haven't observed one.
+- Scaling DevTools, Ep 197 dated 20 Aug 2026. It's audio, with no video version observed.
 
-| Source | Medium note | Pillar | Selling | Status |
-|---|---|---|---|---|
-| Jono Bacon | Cross-surface recurrence explicitly includes video, alongside books + blog | community | masterclass/consulting | stale (~19 months) — channel itself unobserved, corroborated only via jonobacon.com |
-| KubeCon + CloudNativeCon NA / WeAreDevelopers | Major conferences that typically post talk recordings after the event | advocacy, marketing | foundation / conference co | event dates verified; **video archive itself unverified this pass** — check after the event, don't assume a channel name |
+**Totals**
+- 105 of 120 weekly minutes (87%).
+- 2 weekly entries, 0 monthly, 0 annual, 2 bench.
+- Verified-active: 1 of 2 (the Touchpoint call). The talk archive is unobserved.
+- Pillar coverage: advocacy has a source, but the archive's freshness is unverified.
+- Invented sources: 0.
 
-## Gap — not filled, not invented
+**Dropped, because you retain nothing from text**
+- Console.dev, Draft.dev, EveryDeveloper, Tessa Kriesel, The New Stack, DevRel Weekly and the DevRel Newsletter.
+- The DeveloperRelations.com guides, Diátaxis and CHAOSS.
+- The data reports (Octoverse, JetBrains, Stack Overflow, SlashData).
+- Audio-only podcasts, because video is your medium.
 
-GraphQL/API-ecosystem video sources (Apollo GraphQL, GraphQL Conf, WunderGraph, etc.) are outside this DevRel-practice audit entirely. Worth a separate pass — flag if you want that run.
+If you ever need a citable number for a budget conversation, tell me. That's the one place dropping text costs you.
 
-## Dropped (named, not parked)
+## Gaps
 
-- DevRel Weekly, Console.dev, EveryDeveloper, Draft.dev, Tessa Kriesel, The New Stack, DeveloperRelations.com guides, Diátaxis, CHAOSS — all text, ruled out by no-text constraint.
-- Community Pulse, Scaling DevTools, Open Source Ready, Business of Open Source, Heavybit network, DevRel Roundtable — all audio, unconfirmed on video; not picked as medium.
-- DevRel Collective Slack, r/devrel, CMX, Write the Docs community — live-community medium, not picked.
-- Annual data reports (GitHub Octoverse, JetBrains, Stack Overflow, SlashData, CMX Industry Report) — the field's citable budget/headcount numbers, but published as text/PDF, no confirmed video summary. Dropped rather than faked into video form.
+- **No GraphQL source.** The audit has no GraphQL-ecosystem entry, and ecosystem sources are meant to sit next to practice sources. Tell me which GraphQL conference or foundation you already follow and I'll verify it before listing it.
+- **No verified video channel.** The audit's video section is empty by design, so the only video surface is the DevRelCon archive.
+- **Unanswered interview questions:** pillars owned, whether you're catching up or building a habit, and whether you speak, sponsor or host this year. A yes on events would add a CFP target and an attend-or-sponsor candidate.
 
-## Totals
-
-- Weekly minutes used: **0 of 120.**
-- Verified-active: 1 (DevRelCon archive). Bench: 2. Dropped: 14.
-- Pillar coverage: advocacy — **no** (archive is annual, not weekly). Enablement — **no** (zero video source touches docs/DX). Coverage bar fails as delivered.
-- Unverified presented as verified: 0.
-
-## Next action
-
-Say **"add audio"** and the podcast tier (Community Pulse, Scaling DevTools, Open Source Ready — all active, all verified this month) unlocks immediately, at half-cost if any of it rides on commute or gym time. Without that, this radar stays this thin — that's the honest state, not a partial draft.
+**One question:** which pillars do you own: advocacy, developer marketing, enablement (docs, SDKs), community?

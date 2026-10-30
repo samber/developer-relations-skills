@@ -1,31 +1,54 @@
-Here's what to give her — as two direct answers, not as a blog post edit, since the question is about post-publication measurement, and the skill's guidance on that is explicit.
+**Mode:** neither draft nor edit. This is a measurement question, so I used the skill's Measurement section and the closing line of its credibility gate.
 
-**On pipeline: don't put a number on it.**
+## Short answer
 
-Single-touch attribution of pipeline to one blog post isn't defensible — no deal closes because of one asset, and a manufactured figure will fall apart the first time someone in the room asks how it was calculated. Say that to her plainly rather than filling the slide with a number you can't stand behind.
+Give your VP neither number as she asked for it.
 
-What to give her instead:
-- Click-throughs to whatever the post actually links — repo, docs, signup, benchmark scripts. That's a real, traceable number, and it's the closest thing to "so what" that a pageview count has.
-- If your CRM/analytics stack can trace UTM-tagged sessions from that URL into open or closed deals, report that as pipeline *touched* by the post, name the lookback window, and label it one touch among many — never "generated."
-- If that instrumentation doesn't exist, say so directly: "we can't trace this post to pipeline today — here's what it would take to build that." That's a more useful sentence for a VP than a fabricated figure, because it turns into a resourcing ask instead of a number that erodes trust later.
+- **Pipeline:** report what you can trace, and say plainly that you won't assign revenue to one post.
+- **Read-through target:** there is no industry benchmark, so give her a target built from your own baseline.
 
-**On the industry read-through benchmark: it doesn't exist.**
+## 1. Pipeline
 
-There is no honest public benchmark for engineering-blog read-through rate. Scroll-depth and read-through are defined differently by every analytics tool, nobody publishes the number next to its methodology, and anything that sounds like an industry figure is either vendor marketing or unsourced. Tell her this directly instead of handing her a plausible-sounding percentage — inventing one is wrong in a way nobody can check today and everybody can check in a quarter, which is worse than saying "no such number exists."
+The skill's rule is: "Do not attribute revenue to a single post. Overclaiming attribution costs credibility with the exact audience this artefact serves." The same applies in front of your VP and finance. A number you can't defend will be picked apart, and it will undercut the rest of the readout.
 
-Set the target from your own baseline instead:
-- Pull scroll depth / read-through on your last 5–10 engineering posts of comparable length.
-- Set next quarter's target relative to that — match or beat your own median, or move your top-quartile rate to the median. Not an external number.
-- Normalize by length. A 3,000-word rewrite story and a 400-word explainer don't share a read-through target.
+Give her a **traceable-signals slide** instead:
 
-**What actually belongs on the slide next to the 22,000 pageviews:**
-- Scroll depth / read-through rate, measured against this post's own length.
-- Referrals from developer surfaces — Hacker News, Lobsters, community threads, newsletters — since that's where engineering content actually travels, and a spike there tells you it reached the right readers, not just a lot of them.
-- Click-through to the repo, docs, or benchmark scripts the post links.
-- Qualitative signal: engineers replying with their own numbers, corrections, or "this is the post I needed." Flag it if you got any — one substantive reply outweighs a traffic spike.
+- **Referrals from developer surfaces:** aggregators, community threads and newsletters, with the visit count from each.
+- **Click-through to linked artefacts:** repository, docs, and benchmark scripts, if the post links them.
+- **Downstream events you can name:** signups, trials, or CRM contacts whose first or last touch was the post. Report them as "touched by the post", not "sourced by the post".
+- **Qualitative signal:** engineers who replied with their own numbers or corrections, and any inbound that mentions the post. The skill says one substantive reply outweighs a traffic spike.
 
-**One line for the readout itself:**
+Suggested wording:
 
-"22,000 pageviews, our best month ever. We don't have reliable pipeline attribution for a single post today — here's what we can trace, and what it would take to trace more. There's no credible external benchmark for engineering-content read-through, so we're setting next quarter's target against our own baseline instead of an industry number nobody can source."
+> "The post touched N accounts/signups in our CRM. We don't claim it sourced them. Developers reach us through several posts and channels, and a single-post revenue number wouldn't survive scrutiny. Here is what we can verify."
 
-That's the version that survives someone on her staff asking "where did that benchmark come from" — because there's no unsupported number in it to defend.
+If she insists on a dollar figure, offer a labelled range of "touched" pipeline, with the touch definition and lookback window stated. Don't give her a single point estimate.
+
+## 2. Read-through target
+
+The skill states: "No honest public benchmark exists for engineering-blog read-through, so derive targets from the user's own analytics baseline instead."
+
+Any "industry average" you hand her would be unsourced, and the skill's gate says to delete a number rather than estimate it. If someone quotes a benchmark, ask for its source, its definition of "read", and its post-length mix. Those figures are usually vendor marketing numbers with no method behind them.
+
+What to give her:
+
+1. **Define the metric.** Use scroll depth and read-through rate measured against the post's length, not pageviews. Fix the definition now, for example "reached the end of the post, with at least X seconds of active time".
+2. **Set your own baseline.**
+   - Compute read-through for the storage-rewrite post.
+   - Compute it for your last N engineering posts.
+   - Use the median of those posts, not this one post.
+3. **Note that this post is an outlier.** 22,000 views is your best ever, and much of that traffic probably came from aggregators. That audience skims, so it usually reads through at a lower rate than your normal readers. Report read-through by source, because a blended number will mislead you.
+4. **Set the target as a delta on your baseline.** For example: "hold read-through at or above the median of our last N posts, for developer-surface traffic specifically". Pick the exact number after you see the data. I can't give you one without it.
+5. **Pair it with a second metric.** Use click-through to linked artefacts, such as repository and benchmark scripts. The skill judges a post on whether the right readers finished it and did something, not on raw traffic.
+
+Suggested wording:
+
+> "There is no credible public benchmark for engineering-blog read-through, so I'm not going to quote one. Our target is anchored to our own history: hold or improve our median read-through on developer-surface traffic, and track click-through to the repo and docs alongside it."
+
+## What I need from you to fill the slides
+
+- Your analytics export: read-through or scroll depth, by traffic source, for this post and your last few posts.
+- The CRM view of contacts or signups with this post as a touch.
+- Whether any specific benchmark figure has already been put in front of your VP. If so, send me the source and I'll check its definition.
+
+I haven't seen your analytics, so every figure above is a placeholder you must fill from your own data.

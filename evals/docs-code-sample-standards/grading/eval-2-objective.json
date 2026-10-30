@@ -3,79 +3,79 @@
     "expectations": [
       {
         "text": "States that with no CI and no engineering hours available, both the Run tier and the Compile-only tier are deleted from the menu rather than ranked last",
-        "evidence": "\"no CI + zero engineering hours deletes both Run and Compile-only tier from menu right now.\"",
+        "evidence": "\"The skill removes Run and Compile-only from the menu for a team in that position.\"",
         "passed": true,
         "graded": true
       },
       {
         "text": "Says explicitly which tiers were deleted and why, instead of silently omitting them",
-        "evidence": "\"All 4 samples are **unverified**, not passing, until a pipeline exists. Tiers below are target tiers \u2014 what CI enforces once you build it.\"",
+        "evidence": "Names Run and Compile-only, citing \"no pipeline and no engineering hours for six weeks\".",
         "passed": true,
         "graded": true
       },
       {
         "text": "Classifies every sample in the current corpus as unverified rather than as passing, untiered, or illustrative by default",
-        "evidence": "\"All 4 samples are **unverified**, not passing, until a pipeline exists.\"",
+        "evidence": "\"all 160 samples are *unverified*, not passing.\"",
         "passed": true,
         "graded": true
       },
       {
         "text": "Makes building the verification pipeline the first item in the fix queue, ahead of any tier assignment work",
-        "evidence": "Sequencing step 2 builds the compile-only batch job before step 3's Run harness: \"do not attempt it before step 2 exists\"",
-        "passed": true,
+        "evidence": "The six-week plan starts with census, ROT and paper tiering. The pipeline appears only later as the \"First engineering ask\".",
+        "passed": false,
         "graded": true
       },
       {
         "text": "States that the billed transcription sample (b) has no Run tier available regardless of what the pipeline can later do",
-        "evidence": "\"Rule: bills \u2192 no Run tier ever, whatever the pipeline can do.\"",
+        "evidence": "\"A sample that bills has no Run tier, whatever the pipeline can do.\"",
         "passed": true,
         "graded": true
       },
       {
         "text": "States that the destructive kubectl delete namespace sample (c) has no Run tier available for the same reason",
-        "evidence": "\"(c) `kubectl delete namespace` \u2014 tier: Compile-only / Why: destructive command. Same no-Run rule.\"",
+        "evidence": "\"A sample that destroys has no Run tier.\"",
         "passed": true,
         "graded": true
       },
       {
         "text": "States that the third-party-dependent webhook sample (d) has no Run tier available for the same reason",
-        "evidence": "\"(d) POST to partner webhook \u2014 tier: Compile-only / Why: third-party dependency. Same no-Run rule\"",
+        "evidence": "\"A sample that depends on a third party has no Run tier.\"",
         "passed": true,
         "graded": true
       },
       {
         "text": "Assigns the quickstart auth sample (a) to tier Run once a pipeline exists, because it sits on the primary adoption path",
-        "evidence": "\"(a) Quickstart auth call \u2014 tier: Run / Why: primary adoption path (quickstart, auth, first call).\"",
+        "evidence": "\"Run... It is on the primary adoption path.\"",
         "passed": true,
         "graded": true
       },
       {
         "text": "Names all three tiers - Run, Compile-only, Illustrative - and what CI enforces for each",
-        "evidence": "Only Run and Compile-only are discussed; \"Illustrative\" is never mentioned",
-        "passed": false,
+        "evidence": "Run, Compile-only and Illustrative (\"excluded from CI and visibly labelled\") are all described.",
+        "passed": true,
         "graded": true
       },
       {
         "text": "States that an untiered sample defaults to Run as a claim-assignment rule, so an unclassified sample fails loudly rather than passing silently",
-        "evidence": "Not stated anywhere in the transcript",
-        "passed": false,
+        "evidence": "\"Anything you leave untiered defaults to Run, so classify explicitly.\"",
+        "passed": true,
         "graded": true
       },
       {
         "text": "States that an Illustrative sample must be visibly labelled as not runnable in the rendered page",
-        "evidence": "Illustrative tier not discussed at all",
-        "passed": false,
+        "evidence": "\"Illustrative, which is excluded from CI and visibly labelled on the page.\"",
+        "passed": true,
         "graded": true
       },
       {
         "text": "Gives each tier its reader signal, distinguishing 'this works as written' from 'this is valid; it was not run for you'",
-        "evidence": "No reader-facing signal language given; only what CI enforces internally",
+        "evidence": "Only (b) is given \"valid; not run for you\". No per-tier signal is given, and nothing says what a Run sample tells the reader.",
         "passed": false,
         "graded": true
       },
       {
         "text": "Requires the destructive sample to carry an inline guard plus a warning above the block",
-        "evidence": "\"Replace `voltmesh-dev` with placeholder... Add warning line above block... Add `--dry-run=client` variant as the copy-paste default\"",
+        "evidence": "\"a visible warning; a context check, for example `kubectl config current-context`... irreversible\".",
         "passed": true,
         "graded": true
       }
@@ -85,80 +85,80 @@
     "expectations": [
       {
         "text": "States that with no CI and no engineering hours available, both the Run tier and the Compile-only tier are deleted from the menu rather than ranked last",
-        "evidence": "The transcript keeps 'Tier 1' (execute live) fully available now: 'No CI pipeline needed to start this \u2014 a single script on a cron is enough. This is the only tier you can stand up before the 6-week eng freeze lifts.' It is not deleted.",
-        "passed": false,
+        "evidence": "'With no CI and no engineering time, the Run and Compile-only tiers are off the menu.'",
+        "passed": true,
         "graded": true
       },
       {
         "text": "Says explicitly which tiers were deleted and why, instead of silently omitting them",
-        "evidence": "No tier is described as 'deleted'; Tiers 2-4 are described as deferred ('stays manual-review-only until sandbox infra... exist'), not removed from the menu with an explicit deletion rationale.",
-        "passed": false,
+        "evidence": "The same opening sentence names both tiers and gives the reason (no CI, no engineering time).",
+        "passed": true,
         "graded": true
       },
       {
         "text": "Classifies every sample in the current corpus as unverified rather than as passing, untiered, or illustrative by default",
-        "evidence": "The closing line says 'sort the rest into these same four tiers... most of the remaining count should land in Tier 1' rather than labeling the remaining 156 as unverified by default.",
-        "passed": false,
+        "evidence": "'Every one of the 160 snippets is unverified until a pipeline exists'.",
+        "passed": true,
         "graded": true
       },
       {
         "text": "Makes building the verification pipeline the first item in the fix queue, ahead of any tier assignment work",
-        "evidence": "The plan explicitly avoids requiring pipeline-building first: 'No CI pipeline needed to start this \u2014 a single script on a cron is enough,' and goes straight to tiering the four given samples.",
-        "passed": false,
+        "evidence": "'building that pipeline comes before any tiering work.'",
+        "passed": true,
         "graded": true
       },
       {
         "text": "States that the billed transcription sample (b) has no Run tier available regardless of what the pipeline can later do",
-        "evidence": "Sample (b) is assigned Tier 2 and is explicitly executed on a schedule: 'Run weekly (or on release only), against the shortest possible fixture' \u2014 it does get run, just cost-capped, not permanently barred from execution.",
-        "passed": false,
+        "evidence": "'It has no Run tier whatever the pipeline can do.'",
+        "passed": true,
         "graded": true
       },
       {
         "text": "States that the destructive kubectl delete namespace sample (c) has no Run tier available for the same reason",
-        "evidence": "'CI enforcement: never run for real against anything but a disposable, purpose-built sandbox cluster... Until then: syntax/dry-run validation only' \u2014 explicitly states it is never run for real.",
+        "evidence": "'A destructive command has no Run tier.'",
         "passed": true,
         "graded": true
       },
       {
         "text": "States that the third-party-dependent webhook sample (d) has no Run tier available for the same reason",
-        "evidence": "'CI enforcement: never hit the real partner URL from automation... Any real end-to-end check happens manually, rarely... not something CI should ever trigger unattended.'",
+        "evidence": "'It has no Run tier.'",
         "passed": true,
         "graded": true
       },
       {
         "text": "Assigns the quickstart auth sample (a) to tier Run once a pipeline exists, because it sits on the primary adoption path",
-        "evidence": "Sample (a) is assigned Tier 1 immediately without needing a pipeline ('No CI pipeline needed to start this'), and the stated reason is that it is 'safe, free, reversible,' not that it 'sits on the primary adoption path.'",
-        "passed": false,
+        "evidence": "'(a) Quickstart auth call | Run' with the reason 'It's the adoption path.'",
+        "passed": true,
         "graded": true
       },
       {
         "text": "Names all three tiers - Run, Compile-only, Illustrative - and what CI enforces for each",
-        "evidence": "The transcript uses a four-tier blast-radius framework (Tier 1-4) and never names 'Run,' 'Compile-only,' or 'Illustrative' as tiers.",
+        "evidence": "Illustrative appears only as a page label. The table has no CI enforcement for it.",
         "passed": false,
         "graded": true
       },
       {
         "text": "States that an untiered sample defaults to Run as a claim-assignment rule, so an unclassified sample fails loudly rather than passing silently",
-        "evidence": "No default-to-Run rule or fail-loudly mechanic for unclassified samples is stated anywhere.",
+        "evidence": "It says 'Everything else gets a tier after the census', with no default-to-Run rule.",
         "passed": false,
         "graded": true
       },
       {
         "text": "States that an Illustrative sample must be visibly labelled as not runnable in the rendered page",
-        "evidence": "No 'Illustrative' tier or reader-facing not-runnable label is discussed.",
-        "passed": false,
+        "evidence": "'Mark any snippet that is pseudocode or a fragment as \"Illustrative: not runnable\"'.",
+        "passed": true,
         "graded": true
       },
       {
         "text": "Gives each tier its reader signal, distinguishing 'this works as written' from 'this is valid; it was not run for you'",
-        "evidence": "The transcript describes CI enforcement mechanics per tier but never gives a reader-facing signal distinguishing verified-vs-not-run wording.",
+        "evidence": "No reader signals are defined for the tiers.",
         "passed": false,
         "graded": true
       },
       {
         "text": "Requires the destructive sample to carry an inline guard plus a warning above the block",
-        "evidence": "Only a renaming mitigation is proposed ('rename in the doc to something unambiguously fake'); no explicit warning banner above the code block is required.",
-        "passed": false,
+        "evidence": "The build fails if a destructive command lacks 'a visible warning and a confirmation step or dry-run'. It also calls for 'a warning line on the delete command'.",
+        "passed": true,
         "graded": true
       }
     ]

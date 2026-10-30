@@ -1,79 +1,132 @@
-# Kestrel Analytics — Docs Sample CI Redesign
+# Redesign: documentation samples CI for Kestrel Analytics
 
-## Root cause (not "flaky CI")
+## Diagnosis
 
-Four separate failures got collapsed into one job, then masked with `continue-on-error`:
+The current job has four problems. Fixing only the quota would still leave the other three.
 
-1. **Resource lifecycle bug** — test projects created by sample runs aren't torn down, so a shared quota fills up over time. This is a leak, not flakiness.
-2. **No isolation between infra failures and sample failures** — a quota error and a genuinely broken code sample produce the same red X, so nobody can tell them apart from the CI log alone.
-3. **`continue-on-error` deleted the signal** — for four months the job's result has meant nothing. It's not a flaky gate anymore, it's a job that always reports green regardless of outcome. That's why readers keep hitting broken samples that CI "passed."
-4. **Wrong trigger, wrong blast radius** — building the whole SDK from the monorepo working tree and running all 240 samples on every PR to a *docs* repo means a docs typo fix pays the full cost (and quota risk) of a full SDK-vs-samples regression run.
+| # | Problem | Effect |
+|---|---|---|
+| 1 | It builds the SDK from the monorepo working tree. | Readers install the published SDK, so CI tests code they never run. Unreleased SDK changes can also fail docs PRs. |
+| 2 | It runs all 240 samples against shared staging on every PR. | Concurrent PRs compete for the same quota, and runs are slow. A docs typo fix pays the full cost. |
+| 3 | Leaked test projects are cleaned up by nothing. | This is the root cause of the March flakiness. Quota exhaustion looks like a sample failure. |
+| 4 | `continue-on-error` has left the job red for four months. | It carries no signal, so nobody notices when a sample really breaks. Readers find the breakage first. |
 
-Fix the leak and split the concerns. Don't tune retries around a broken signal.
+## Target design: four tiers, each with one question
 
-## Design goals
+| Tier | Trigger | Question it answers | Blocks merge? | Target time |
+|---|---|---|---|---|
+| 1. Static and hermetic | Every docs PR | Do all 240 samples compile, type-check and run against a recorded or mock API? | Yes | < 5 min |
+| 2. Live, changed samples only | Docs PR touching sample files | Do the samples I changed work against real staging? | Yes | < 10 min |
+| 3. Full live, published artifacts | Nightly, plus on every SDK release and API deploy | Do all 240 work for a reader today? | No. A failure files an issue and pages the owner. | < 40 min, sharded |
+| 4. Unreleased SDK canary | Nightly, and from the monorepo CI on SDK PRs | Will the next SDK release break samples? | Blocks the SDK release, not docs PRs | < 40 min |
 
-- A red CI check must always mean "something is actually broken," never "infra hiccup."
-- Docs PRs get fast, cheap, relevant feedback — not a 240-sample gauntlet for every typo.
-- Quota exhaustion becomes structurally impossible, not something absorbed by wider limits.
-- Readers get a **live, sample-level** signal independent of the PR-gate job, since the two audiences (PR author, reader hitting a broken snippet) need different things.
+**The core change:** the monorepo working tree moves out of the docs PR path. Docs PRs test against the pinned published SDK. Tier 4 covers "will the next SDK break docs", and it runs where the SDK changes.
 
-## Architecture
+## Tier details
 
-### 1. Fix the leak first — before anything else
+### Tier 1: static and hermetic (required)
 
-- Every sample run creates its ephemeral test project with a TTL and an owning-run label.
-- Add a scheduled cleanup job (hourly) that deletes any staging project past its TTL, independent of whether the run that created it succeeded, crashed, or was cancelled.
-- Add a quota-usage metric/alert at 70% so this becomes visible weeks before it becomes an outage again.
+1. Pin the published SDK version in a lockfile in the docs repo. Renovate or Dependabot bumps it automatically, and each bump PR triggers Tier 2 for all samples.
+2. Compile and type-check every sample. Lint it. Run it against a mock server generated from the OpenAPI spec, or against recorded fixtures. This is the only tier where all 240 run on every PR.
+3. Verify that every code block in the docs comes from a tested sample file, using region markers such as `// docs:start quickstart` and `// docs:end quickstart`. CI fails on any hand-pasted code block. This removes drift between the docs page and the tested file.
+4. Check links, and check that every sample has an ID, an owner, and an expected-output assertion.
 
-This alone likely resolves the March incident. Everything below is about making sure a *class* of incident like it can't silently persist for four months again.
+### Tier 2: live, changed samples only (required)
 
-### 2. Split one job into three, by cost and audience
+1. Compute the changed sample set from the PR diff. If the lockfile or shared fixtures changed, run all samples.
+2. Run them against staging with these isolation rules:
+   - Namespace every resource as `ci-<run_id>-<sample_id>`, and label it `owner=docs-ci`, `expires=<now+2h>`.
+   - Put the run in a `concurrency: group: staging-docs-ci` group so runs queue instead of exhausting quota together.
+   - Put teardown in an `if: always()` step, so cancelled and failed runs still clean up.
+3. Use a dedicated CI organization on staging with its own quota, separate from engineering's shared staging. This is the cheapest durable fix for the March incident.
 
-| Stage | Trigger | Scope | Budget |
-|---|---|---|---|
-| **Lint/compile gate** | Every PR to docs repo | Static check: does each sample parse/typecheck against the SDK's public API surface (no staging calls) | seconds, no quota use |
-| **Smoke gate** | Every PR to docs repo | Run only the samples touched by the diff (path-filtered), plus a fixed core smoke set (~20 samples covering auth, init, most-copied snippets) | minutes, small quota footprint |
-| **Full matrix** | Nightly + on-demand label (`run-full-samples`) | All 240 samples, sharded across parallel runners | full run, off the PR critical path |
+### Tier 3: nightly full live run (the reader-facing truth)
 
-A docs typo fix never touches stage 3. A change to a shared code fence or SDK version bump can be forced through the full matrix with the label.
+1. Install the published SDK exactly as the quickstart tells readers to. Run at the minimum and latest supported language runtime versions.
+2. Shard the 240 samples into about 8 shards. Retry each failed sample once. Report "failed then passed" as a flake metric rather than hiding it.
+3. Open or update a single tracking issue per failing sample, labelled `sample-broken` with the sample ID. Close it automatically when the sample passes again.
+4. Post a one-line summary to the team channel: `231/240 pass, 3 quarantined, 6 failing (new: 1)`.
 
-### 3. Make the PR gate a real gate again
+### Tier 4: unreleased SDK canary
 
-- Remove `continue-on-error` from the smoke gate. It blocks merge on real failure.
-- Classify failures at the step level: infra error (staging 5xx, quota, timeout) vs assertion failure (sample output wrong). Infra errors get one automatic retry with backoff; assertion failures never retry — retrying a real bug just hides it.
-- If a step can't classify itself confidently (e.g., ambiguous staging error), it fails loud rather than defaulting to pass. Ambiguity should never resolve to green.
+1. Run the same sample suite against an SDK built from the monorepo `main`, nightly.
+2. Also call the suite from the monorepo's SDK PR pipeline as a required check on public-API changes.
+3. A failure here means "fix the SDK or update the docs before release". It never shows up as red on an unrelated docs PR.
 
-### 4. Give the full matrix a flake-quarantine lane, not a mute button
+## Fixing the quota at the source
 
-- A sample that fails intermittently across 3 consecutive nightly runs gets auto-labeled `quarantined` and moves to a separate tracked list — visible in the nightly summary, not deleted from it.
-- Quarantine has an owner and an age. Anything quarantined >14 days pages the docs-eng owner; it doesn't get to sit invisibly the way this job did for four months.
-- Quarantining a sample never means "stop testing it" — it keeps running, just doesn't block merges while under investigation.
+1. **Janitor job.** It runs hourly and deletes every resource labelled `owner=docs-ci` whose `expires` is in the past. It also runs after each Tier 2 and Tier 3 run. This backstops teardown that never ran.
+2. **Preflight.** Before any live run, check remaining quota. If it is below the threshold, run the janitor once and re-check. If it is still low, fail with a distinct status, `INFRA: quota`, and a different exit code from sample assertion failures.
+3. **Failure classification.** Samples and the harness report one of `PASS`, `SAMPLE_FAIL` or `INFRA_FAIL`. Only `SAMPLE_FAIL` blocks a PR. `INFRA_FAIL` is retried, then alerts the platform owner. This is what keeps one outage from erasing the signal again.
+4. **Resource budget.** Each sample declares its quota use. Most should share one setup project per shard, created and deleted by the harness. Samples that need their own project are tagged and run serially.
 
-### 5. Give readers a signal independent of the PR pipeline
+## Restoring trust: migration plan
 
-This is the part the old design never had, and it's why issues kept coming in from readers even though "CI" existed.
+| Step | Action | Done when |
+|---|---|---|
+| 1 (day 1) | Remove `continue-on-error`. Move the current job to non-required, on a schedule only, so PRs stop seeing red. | PRs are no longer red by default. |
+| 2 (week 1) | Run one baseline Tier 3 pass. Sort all 240 samples into passing, broken or flaky. | A table of 240 rows exists. |
+| 3 (week 1-2) | Fix or delete every broken sample. Put anything unresolved in `quarantine.yml` with an owner and an expiry date of 14 days or less. | Every failure is fixed, deleted or owned. |
+| 4 (week 2) | Ship the janitor, the CI org, the preflight and failure classification. | Quota failures no longer appear as sample failures. |
+| 5 (week 2-3) | Ship Tier 1. Make it required once it has been green for 7 days. | Tier 1 is required. |
+| 6 (week 3) | Ship Tier 2. Make it required once it has been green for 7 days. | Tier 2 is required. |
+| 7 (week 4) | Ship Tier 4. Wire it into the SDK release checklist. | SDK releases are gated on the canary. |
 
-- Publish a per-sample status badge (last-verified timestamp + pass/fail) generated from the nightly full-matrix run, rendered next to each sample in the docs site.
-- If a sample has been failing for >48h, show an inline "known issue, tracked in #NNN" banner instead of a silently stale example — this is strictly better than what readers get today (a confidently rendered, quietly broken sample).
-- Auto-file (not just label) a GitHub issue the first time a sample enters quarantine, linked from that banner, so "readers still open issues" becomes redundant rather than the only detection mechanism.
+Quarantine rules:
 
-### 6. Decouple SDK build from sample execution
+- Quarantined samples still run, but their result does not block anything.
+- An expired quarantine entry fails Tier 1, so the list cannot grow silently.
+- A quarantined sample on a published page gets a visible "may be out of date" banner until it is fixed or removed.
 
-- Build the SDK from the monorepo once per relevant SDK change (not per docs PR), publish it as a versioned artifact/package to an internal registry.
-- Docs-repo pipelines consume that pinned artifact instead of rebuilding the SDK from a live working tree on every run. This removes a whole class of "docs PR fails because monorepo tip is broken" noise, and makes it explicit which SDK version each sample run is actually validating.
+## Closing the loop with readers
 
-## Rollout
+1. Add a "Report a problem with this sample" link to every sample, prefilled with the sample ID, page URL and SDK version.
+2. Use an issue template that asks for SDK version, runtime and the error. Triage maps each issue to a sample ID.
+3. If the sample passes in Tier 3 but a reader reports a failure, the test is missing something. Add a regression sample or assertion. Treat this as a CI gap, not a closed-as-works-for-me issue.
+4. Publish a "last verified" date and SDK version on each page, taken from the latest passing Tier 3 run.
 
-1. Ship the cleanup job + quota alert alone, same day — stops the bleeding.
-2. Split lint/smoke/full-matrix stages; keep `continue-on-error` off only on the new smoke gate initially.
-3. Turn on failure classification and quarantine lane once a week of nightly data exists to validate the retry/quarantine thresholds.
-4. Ship the public per-sample status badge last — it's the most visible change and should launch once the underlying signal is actually trustworthy, not before.
-5. Remove `continue-on-error` repo-wide once stages 2–3 have run clean for a week.
+## Targets and metrics
 
-## What this gets Kestrel
+- Tier 3 pass rate is 98% or higher over a rolling 7 days, excluding quarantined samples.
+- Median PR check time is under 5 minutes for Tier 1 and under 10 minutes for Tier 2.
+- A broken sample is fixed, quarantined with an owner, or unpublished within 5 business days of the first nightly failure.
+- Infra failures are under 2% of runs. Track the flake rate separately from the real failure rate.
+- Count reader-reported sample issues per month. If the pipeline works, this should fall.
 
-- PR authors get a fast, trustworthy gate instead of a 240-sample lottery.
-- The quota incident class is closed structurally (TTL + cleanup + alerting), not papered over.
-- Readers stop being the detection mechanism for broken samples — the nightly matrix + status badges catch it first.
-- "CI is green" goes back to meaning something, which is the actual prerequisite for ever re-enabling it as a merge gate.
+## Sketch of the workflow (GitHub Actions assumed)
+
+```yaml
+# .github/workflows/samples-pr.yml
+on: pull_request
+concurrency:
+  group: samples-pr-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  static:                      # Tier 1, required
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: make samples-install   # published SDK, from lockfile
+      - run: make samples-check     # compile, type-check, lint, snippet-sync
+      - run: make samples-mock      # all 240 against the mock server
+  live-changed:                # Tier 2, required
+    needs: static
+    runs-on: ubuntu-latest
+    concurrency: { group: staging-docs-ci, cancel-in-progress: false }
+    steps:
+      - uses: actions/checkout@v4
+      - run: make samples-install
+      - run: make quota-preflight
+      - run: make samples-live CHANGED_ONLY=1 RUN_ID=${{ github.run_id }}
+      - if: always()
+        run: make samples-teardown RUN_ID=${{ github.run_id }}
+```
+
+The nightly workflow uses `on: schedule` and `on: repository_dispatch`. The dispatch is sent by the SDK release job and the API deploy job. It shards with a `matrix` and runs the tracker-issue step last.
+
+## Decisions I need from you
+
+1. **CI system.** I assumed GitHub Actions. If you use something else, the structure carries over and the YAML does not.
+2. **Mock fidelity.** Is there an OpenAPI spec accurate enough to generate a mock server? If not, Tier 1 needs recorded fixtures, which is more work up front.
+3. **Staging quota.** Can you get a separate CI organization on staging? Without one, Tier 2 and Tier 3 need serialization and a stricter janitor, and they will be slower.
+4. **Ownership.** Who owns each sample? The quarantine and issue-routing steps depend on a named owner per sample.

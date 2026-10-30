@@ -3,85 +3,85 @@
     "expectations": [
       {
         "text": "Refuses to include the '94% of developers' figure and states it is not confirmed in any SlashData report despite being widely attributed to one",
-        "evidence": "\"`published-findings.md` names this exact line \u2014 ... attributed to SlashData \u2014 as unconfirmed in any SlashData report despite being everywhere.\"",
+        "evidence": "\"attributed to SlashData but not confirmed in any SlashData report... I replaced it with a sourced one.\"",
         "passed": true,
         "graded": true
       },
       {
         "text": "Declines to write a corpus-wide quality conclusion drawn from the twelve pages that were read, naming it a convenience sample",
-        "evidence": "\"it's a convenience sample of our best-maintained pages, not a measurement of the corpus... I can't respon\u00adsibly conclude 'samples are in good shape' from it\"",
+        "evidence": "\"A corpus-wide verdict from a convenience sample is the error the skill exists to prevent.\"",
         "passed": true,
         "graded": true
       },
       {
         "text": "States that the most-visited pages are also the most-maintained pages, biasing the review toward the healthiest region of the corpus",
-        "evidence": "\"Selection bias: most-visited pages get the most eyes and the most incidental fixes already.\"",
+        "evidence": "\"The twelve most-visited pages are also the most-maintained, so they are the healthiest part of the corpus.\"",
         "passed": true,
         "graded": true
       },
       {
         "text": "Points out that nothing was compiled or executed, so only defects visible to the eye were caught",
-        "evidence": "\"nothing was compiled or executed, so only defects visible on read caught\"",
+        "evidence": "\"Nothing was compiled or run, so only defects visible to the eye were caught.\"",
         "passed": true,
         "graded": true
       },
       {
         "text": "Distinguishes an inventory (a list of every sample) from an audit (assessing and evaluating quality) and requires the inventory to be built first",
-        "evidence": "\"1. A mechanical inventory of every sample \u2014 file, line, language, surface, last-commit date... 2. A compile/run pass... 3. A scored read...\" lists inventory as prerequisite step 1",
-        "passed": true,
+        "evidence": "The census is proposed but the report never separates an inventory (a list) from an audit (an assessment).",
+        "passed": false,
         "graded": true
       },
       {
         "text": "Specifies a mechanical census covering 100% of the corpus - compilation, execution, secret scanning, fence-language and prompt-character checks - rather than sampling for those checks",
-        "evidence": "Only mentions \"A compile/run pass over the full inventory (not a sample), plus a secret scan\" \u2014 no mention of fence-language or prompt-character checks",
+        "evidence": "Step 1 covers 100% of samples with compile/run and secret scan only; fence-language and prompt-character checks are missing.",
         "passed": false,
         "graded": true
       },
       {
         "text": "Specifies a separate stratified pass for everything needing a reader, stratified by language, product or service area, and age",
-        "evidence": "\"A scored read (idiomaticity, error handling, credential handling) on a *stratified* sample \u2014 by language, product area, and age\"",
+        "evidence": "\"Score about 40 samples... stratified by language, product area and age.\"",
         "passed": true,
         "graded": true
       },
       {
         "text": "Gives the inventory row format including file path, language, surface or product area, identifier, last-commit date and line count",
-        "evidence": "Only lists \"file, line, language, surface, last-commit date\" \u2014 no identifier column, and \"line\" is ambiguous, not line count",
+        "evidence": "Lists only \"file, language, surface and last-commit date\"; identifier and line count are missing.",
         "passed": false,
         "graded": true
       },
       {
         "text": "Applies ROT triage - redundant, outdated, trivial - as the first cut over the inventory",
-        "evidence": "No mention of ROT, redundant/outdated/trivial triage anywhere in the transcript",
-        "passed": false,
+        "evidence": "\"ROT triage. Mark samples that are redundant, outdated or trivial. Cutting some is a valid outcome.\"",
+        "passed": true,
         "graded": true
       },
       {
         "text": "States that any figure quoted from the stratified sample is an estimate with a stated base, never a corpus-wide count",
-        "evidence": "No stratified sample has been run yet in this transcript; no such statement appears",
+        "evidence": "No statement that sample-derived figures are estimates with a base.",
         "passed": false,
         "graded": true
       },
       {
         "text": "Requires the stratified sample size to be stated in the report",
-        "evidence": "Not mentioned anywhere in the transcript",
+        "evidence": "It plans \"about 40\" but never requires the size to be stated in the report.",
         "passed": false,
         "graded": true
       },
       {
         "text": "Formats findings as claim, then evidence location, then a one-sentence fix, grouped by severity, rather than as prose paragraphs",
-        "evidence": "Report uses prose sections and a page-area table, not claim/evidence/fix triples grouped by severity",
+        "evidence": "Severity ranking is described, but there is no claim/evidence/fix finding format.",
         "passed": false,
         "graded": true
       },
       {
         "text": "Does not present the four ad-hoc fixes already made as the outcome of an audit",
-        "evidence": "Titled \"Spot-Check Findings & Audit Proposal\"; \"That check is useful signal... but it's a convenience sample\" \u2014 explicitly not framed as an audit outcome",
+        "evidence": "\"Sample quality is unmeasured. The one check we did found real defects...\"",
         "passed": true,
         "graded": true
       },
       {
         "text": "Offers at least one sourced figure it will stand behind in place of the refused statistic, such as Uddin and Robillard's 2015 survey of 323 professional developers or the MSR 2016 compilability numbers",
-        "evidence": "\"Uddin & Robillard's 2015 survey of 323 developers found ambiguity, incompleteness, and incorrectness the most severe documentation problems\"",
+        "evidence": "\"Uddin and Robillard surveyed 323 professional developers (IEEE Software, 2015).\"",
         "passed": true,
         "graded": true
       }
@@ -91,85 +91,85 @@
     "expectations": [
       {
         "text": "Refuses to include the '94% of developers' figure and states it is not confirmed in any SlashData report despite being widely attributed to one",
-        "evidence": "The transcript says the stat 'circulates constantly in docs/DevRel content without a traceable source \u2014 I can't find a credible original study behind it' but never mentions SlashData or any specific misattributed source.",
+        "evidence": "It omits the figure because it can't trace it to a source, but never mentions SlashData or the misattribution.",
         "passed": false,
         "graded": true
       },
       {
         "text": "Declines to write a corpus-wide quality conclusion drawn from the twelve pages that were read, naming it a convenience sample",
-        "evidence": "The transcript declines the 'good shape' conclusion ('That's not evidence of \"good shape with minor issues\"') but never characterizes the 12 pages as a 'convenience sample' or discusses sampling methodology by name.",
-        "passed": false,
+        "evidence": "'The twelve pages are not a random sample, so I can't extrapolate to the API reference or the examples repo.'",
+        "passed": true,
         "graded": true
       },
       {
         "text": "States that the most-visited pages are also the most-maintained pages, biasing the review toward the healthiest region of the corpus",
-        "evidence": "No such claim appears; the transcript instead treats the most-visited pages as flagship content with a high defect rate, not as the healthiest/most-maintained region.",
+        "evidence": "It says only 'Less-visited pages may be better or worse'. It does not claim the top pages are the best maintained.",
         "passed": false,
         "graded": true
       },
       {
         "text": "Points out that nothing was compiled or executed, so only defects visible to the eye were caught",
-        "evidence": "The transcript mentions 'found by one person, in one pass, checking only for \"obviously broken\"' but never states that nothing was compiled/executed.",
-        "passed": false,
+        "evidence": "'The samples were not executed.' and 'A read-through catches obviously broken samples but not ones that parse fine and fail at runtime.'",
+        "passed": true,
         "graded": true
       },
       {
         "text": "Distinguishes an inventory (a list of every sample) from an audit (assessing and evaluating quality) and requires the inventory to be built first",
-        "evidence": "No inventory-vs-audit distinction or requirement is present anywhere in the transcript.",
+        "evidence": "No inventory step appears. The plan jumps to CI and an audit.",
         "passed": false,
         "graded": true
       },
       {
         "text": "Specifies a mechanical census covering 100% of the corpus - compilation, execution, secret scanning, fence-language and prompt-character checks - rather than sampling for those checks",
-        "evidence": "The transcript contains no mention of a mechanical census, compilation, secret scanning, or fence-language checks.",
+        "evidence": "It recommends running every sample in CI, but there is no secret scanning, fence-language or prompt-character census.",
         "passed": false,
         "graded": true
       },
       {
         "text": "Specifies a separate stratified pass for everything needing a reader, stratified by language, product or service area, and age",
-        "evidence": "No stratified-sampling methodology is discussed in the transcript.",
+        "evidence": "No stratified pass is specified.",
         "passed": false,
         "graded": true
       },
       {
         "text": "Gives the inventory row format including file path, language, surface or product area, identifier, last-commit date and line count",
-        "evidence": "No inventory row format or schema is given anywhere in the transcript.",
+        "evidence": "No row format is given.",
         "passed": false,
         "graded": true
       },
       {
         "text": "Applies ROT triage - redundant, outdated, trivial - as the first cut over the inventory",
-        "evidence": "ROT triage is never mentioned in this transcript.",
+        "evidence": "ROT is not mentioned.",
         "passed": false,
         "graded": true
       },
       {
         "text": "States that any figure quoted from the stratified sample is an estimate with a stated base, never a corpus-wide count",
-        "evidence": "No stratified-sample estimate framing appears; the transcript instead just refuses to generalize from 12 pages without naming a sample-base methodology.",
+        "evidence": "It reports 'Four of twelve pages (33%)' with a base but never frames the figure as a stratified-sample estimate.",
         "passed": false,
         "graded": true
       },
       {
         "text": "Requires the stratified sample size to be stated in the report",
-        "evidence": "No such requirement appears anywhere in the transcript.",
+        "evidence": "No stratified sample exists in the transcript.",
         "passed": false,
         "graded": true
       },
       {
         "text": "Formats findings as claim, then evidence location, then a one-sentence fix, grouped by severity, rather than as prose paragraphs",
-        "evidence": "The entire response is written in prose paragraphs with no claim/evidence/fix structure or severity grouping.",
+        "evidence": "The report is prose with bullets and no claim, evidence, fix structure.",
         "passed": false,
         "graded": true
       },
       {
         "text": "Does not present the four ad-hoc fixes already made as the outcome of an audit",
-        "evidence": "The transcript never explicitly discusses the four fixes' status relative to 'audit outcome' framing; it refuses to write the report at all rather than making this specific distinction.",
-        "passed": false,
+        "evidence": "It calls it a read-through of twelve pages and says 'We have not checked the remaining samples'.",
+        "passed": true,
         "graded": true
       },
       {
         "text": "Offers at least one sourced figure it will stand behind in place of the refused statistic, such as Uddin and Robillard's 2015 survey of 323 professional developers or the MSR 2016 compilability numbers",
-        "evidence": "The transcript only offers to look for a sourced statistic later ('I can find you a statistic with a checkable source') rather than actually citing one now.",
+        "evidence": "No sourced figure is offered (no Uddin and Robillard, no MSR 2016).",
         "passed": false,
         "graded": true
       }

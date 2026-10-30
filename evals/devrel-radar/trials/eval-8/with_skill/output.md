@@ -1,72 +1,165 @@
-# DevRel radar — developer advocate, Hollick Systems, first DevRel role
+**Next action (5 min):** apply to the DevRel Collective Slack (devrelcollective.fun). It is application-gated and invites take time.
 
-Not a monitoring service. Verified once, against the shipped source audit dated 2026-08-26 to 2026-09-10 — not re-fetched live this session, still inside the skill's ~3-month freshness window as of today (2026-09-23). Re-verify at the first quarterly refresh (~Dec 2026).
+---
 
-**Role:** developer advocate (first DevRel job, ex-platform-engineer). **Pillars owned:** advocacy, enablement. **Ecosystem:** not specified — flag it and I'll slot in ecosystem-specific sources next to these. **Time budget:** ~120 min/week. **Mode:** catching up before day one (starts in 3 weeks), not yet a standing habit. **Constraints:** fully remote (no commute discount on audio), no travel budget until next fiscal year.
+# DevRel radar: Hollick Systems, month before day one
 
-Four interview answers were never given (medium, ecosystem, B2B/B2C segment, event duty) — assumptions are flagged inline, fix list is at the bottom.
+**What this is not:** a curated reading list, not a monitoring service. Nothing here alerts you when a source dies. Rerun this list quarterly to catch that.
 
-## Weekly core — 100 of 120 min (83%)
+- **Role:** developer advocate, first DevRel job, ex-platform engineer
+- **Pillars owned:** advocacy, enablement
+- **Budget:** 120 min/week, fully remote, no travel budget
+- **Goal:** catching up, not a standing habit
+- **Snapshot:** source statuses are from the skill's audit, dated 2026-08-26 to 2026-09-10
+- **Not re-verified today:** I could not browse (WebFetch was not granted). Every status below is the recorded one.
+- **Ordering:** each section runs by value per attention-minute, highest first. Evergreen reads sit outside that ratio.
 
-Ordered by value per attention-minute, except one deliberate override explained below.
+**Why podcasts made the list despite losing on ratio:** you are new to DevRel and catching up. You lack judgment, not headlines. Podcasts show practitioners' reasoning, which text skips. You have no commute, so audio does not ride on free time. I did not halve its cost.
 
-| Source | Medium | Pillar | Min | Why it earned the slot | Selling | Status |
-|---|---|---|---|---|---|---|
-| [DevRel Collective](https://devrelcollective.fun) | Slack (peer community) | advocacy/enablement (tagged all four) | 20 | Reserved renewal slot (step 9) — this is also the deliberate override: community isn't an owned pillar, but "first DevRel job + catching up" (step 8) promotes peer judgment over headlines. Apply now, gate review takes time. | nothing visible | active — gated, unobservable from outside; join flow live |
-| [Community Pulse](https://communitypulse.io) | podcast | advocacy | 50 (full price — no commute to absorb it) | The one long-running show about DevRel itself, not your ecosystem. Four hosts, four angles on the job you're about to start. | hosts' consulting | active, Ep 105, 17 Aug 2026 |
-| [Tessa Kriesel](https://tessakriesel.com) | blog | advocacy | 10 | Frames advocacy as a revenue function — the mental-model shift a platform engineer needs before day one. | consulting/advisory | active, 31 Jul 2026 |
-| [EveryDeveloper](https://everydeveloper.com) | newsletter | enablement | 10 | Technical content strategy for the docs/quickstart side of enablement. | agency + books | active — no individual dated post confirmed |
-| [The New Stack](https://thenewstack.io) | news site | all four | 10 (skim) | Budget compressor — one daily skim replaces chasing five vendor blogs during onboarding. | ad-supported media | active, 26 Aug 2026 |
+## Weekly core (about 84 min/week)
 
-20 min of budget left unspent on purpose — new-job chaos eats time; don't pre-commit it.
+1. **DevRel Newsletter**
+   - URL: developerrelations.com/newsletter
+   - Medium and time: text, 5 min
+   - Pillars: all four
+   - Why: cheapest weekly view of what the field's hub publishes.
+   - Selling: the practice hub, which is Hoopy's former agency, now closed.
+   - Status: property active, cadence **unverified**. The signup page shows no archive.
+2. **DevRel Collective Slack**
+   - URL: devrelcollective.fun
+   - Medium and time: live community, 12 min of skimming
+   - Pillars: all four
+   - Why: reserved peer slot. Your own situation gets answered here, and it is where new sources surface.
+   - Selling: nothing visible.
+   - Status: active, but gated. The join flow was live and the "1,800+ members" figure is claimed, not verified.
+3. **Community Pulse**
+   - URL: communitypulse.io
+   - Medium and time: podcast, 45 min (one episode)
+   - Pillars: advocacy, community
+   - Why: the only long-running show about the practice itself. Four hosts give four ecosystems.
+   - Selling: the hosts' consulting.
+   - Status: active, Ep 105 on 17 Aug 2026.
+   - How to use it: start with the newest episode, then walk back. Pick episodes by advocacy title.
+4. **Scaling DevTools**
+   - URL: feeds.transistor.fm/scaling-devtools
+   - Medium and time: podcast, about 22 min/week (one episode every other week)
+   - Pillars: advocacy, marketing
+   - Why: devtool founder and DevRel interviews. The archive has 197 episodes, so filter by guest and topic.
+   - Selling: the host's community and sponsorships.
+   - Status: active, Ep 197 on 20 Aug 2026. The website returns 403 to fetchers, so use the feed.
 
-## Monthly — reference, not a feed
+## Monthly (about 6 min/week amortised)
 
-| Source | Pillar | Why | Status |
-|---|---|---|---|
-| [DeveloperRelations.com](https://developerrelations.com) guides + DevRelCon talk archive | all four | The practice canon: four pillars, CORE framework, friction logging. Read the four-pillars guide and CORE guide before day one. This is your long-form/talk-archive promotion from step 8, sourced from a fetchable page instead of an unverified video channel. | active, guides undated by design |
-| [Diátaxis](https://diataxis.fr) | enablement | The framework your future docs audits get run against. | evergreen, undated |
-| [Write the Docs](https://writethedocs.org) | enablement | Docs/DX peer network + conference series. Join the Slack even though the in-person events are out of budget. | active |
+1. **Tessa Kriesel** (tessakriesel.com), 10 min/month
+   - Pillars: advocacy, marketing
+   - Why: "DevRel is sales" framing. You will meet this view inside a company.
+   - Selling: consulting and advisory.
+   - Status: active, post dated 31 Jul 2026.
+2. **EveryDeveloper** (everydeveloper.com), 10 min/month
+   - Pillars: marketing, enablement
+   - Why: technical content strategy from the author of two books on it.
+   - Selling: agency and books.
+   - Status: active, page asset dated 12 May 2026, no dated post confirmed.
+3. **DevRel Weekly** (devrelweekly.com), 5 min/month
+   - Pillars: all four
+   - Why: curated link roundup.
+   - Selling: the curator's consulting.
+   - Status: verified, but the format changed. The curator announced the strict weekly cadence is ending, so treat it as occasional.
 
-## Annual — data you'll be asked for
+## Evergreen: read once, month 1 (about 18 min/week)
 
-- **GitHub Octoverse**, 2025 edition (28 Oct 2025) — ecosystem-wide context, free.
-- **DRF Metrics Index** (github.com/DevRel-Foundation/metrics-index) — vendor-neutral definitions for whatever metrics you'll eventually report against.
+These are reference works, not feeds, so they carry no staleness verdict.
+
+1. **DeveloperRelations.com guides**
+   - Pillars: all four
+   - Why: the field's practice canon (21 guides).
+   - Selling: practice hub.
+   - Status: active, guides undated. The site lists a 2026 event and a © 2015-2026 notice.
+   - Read: the four-pillars guide, CORE, friction logging, developer journey.
+   - Friction logging is your edge. You were the developer who hit the friction.
+2. **Diátaxis** (diataxis.fr)
+   - Pillar: enablement
+   - Why: the tutorial / how-to / reference / explanation split that docs audits use.
+   - Selling: none visible.
+   - Status: evergreen, undated.
+3. **DRF Metrics Index** (github.com/DevRel-Foundation/metrics-index)
+   - Pillars: advocacy, community
+   - Why: open DevRel metric definitions. You will be asked how your work is measured.
+   - Selling: nothing.
+   - Status: active but early. Last push 9 Jan 2026, v0.0 sandbox. Treat it as definitions, not a benchmark.
+
+The Developer Relations Foundation (dev-rel.org, Linux Foundation) is the field's only vendor-neutral practice body. Prefer it if you distrust vendor content.
+
+## Annual (read after day one, once each, about 60 min)
+
+Cite the edition and date every time, never a bare number.
+
+1. **JetBrains State of Developer Ecosystem**
+   - URL: devecosystem-2025.jetbrains.com
+   - Edition: 2025, 24,534 respondents, fielded Apr-Jun 2025.
+2. **Stack Overflow Developer Survey**
+   - URL: survey.stackoverflow.co
+   - Edition: 2025, no publication date rendered.
+3. **GitHub Octoverse**
+   - URL: github.blog/news-insights/octoverse
+   - Edition: 2025, published 28 Oct 2025.
+   - The 2026 edition is likely due now. Check for it.
+4. **SlashData** (slashdata.co)
+   - Dated: Q3 2026.
+   - Contents: free summaries, paid full reports.
+
+Pick the ecosystem-specific one once you know Hollick's developer segment.
+
+## Month plan (120 min/week)
+
+Each week is 84 min core, 6 min monthly sources, 18 min evergreen. That is 108 min, with 12 min free as buffer.
+
+- **Week 1 (from 2026-10-30):**
+  - Apply to the Slack.
+  - Subscribe to the newsletter.
+  - Listen to Community Pulse Ep 105.
+  - Read the four-pillars guide and CORE.
+- **Week 2:** read friction logging and developer journey. Do a friction log of Hollick's product when you get access.
+- **Week 3:** read Diátaxis. Listen to the first Scaling DevTools episode.
+- **Week 4:** read the DRF Metrics Index. Draft how you would answer "how will you be measured?" for your first 1:1.
 
 ## Bench (verified substitutes)
 
-- **Scaling DevTools** podcast — swap in for Community Pulse once ramped, or once any exercise/commute time opens (Ep 197, 20 Aug 2026).
-- **DRF community list + Discord** (lists.dev-rel.org/g/community) — ungated fallback for the peer-community slot if DevRel Collective's application doesn't clear before day one.
-- **Console.dev** — pull in once you're ready to think about pitching a channel back to devtool press (20 Aug 2026).
+1. **DRF community list and Discord** (lists.dev-rel.org/g/community): open and ungated. Use it if the Slack application stalls. Active.
+2. **The New Stack** (thenewstack.io): daily news, 10 min skim. It substitutes for following vendor blogs. Active, 26 Aug 2026. It is ad-supported media.
+3. **DevRel Roundtable / Book Club** (developerrelations.com/podcasts): **unverified** for recency. The page shows no episode dates.
 
-## People to follow
+## People to follow (verified through fetchable surfaces, not social profiles)
 
-| Name | Pillar | Selling | Verifying surface |
-|---|---|---|---|
-| Matthew Revell | all four | practice hub (agency closed) | wrote the canon you're reading in Monthly |
-| Mary Thengvall | advocacy | consulting | DevRel Weekly curator + Community Pulse co-host + book |
-| Wesley Faulkner | advocacy | advisory | DevRel strategy, ex-DRF chair |
-| Adam DuVander | enablement | agency + books | technical content strategy, everydeveloper.com |
-
-## Dropped
-
-- **KubeCon+CloudNativeCon NA** (Salt Lake City, Nov), **WeAreDevelopers World Congress** (Berlin, Jul 2027), **Write the Docs** in-person editions (Berlin/Melbourne/Portland), **DevRelCon** in-person — constraint: no travel budget until next fiscal year. Deleted, not parked. Re-rank the day the budget opens; CFPs land months ahead, so flag it before you need the deadline.
+- **Mary Thengvall:** newsletter curator, Community Pulse co-host and author. Sells consulting.
+- **Matthew Revell:** DevRelCon founder, runs the DeveloperRelations.com hub. The agency closed, the hub did not.
+- **Wesley Faulkner:** advocacy and community strategy. Sells advisory.
+- **Tessa Kriesel:** developer go-to-market. Sells consulting.
 
 ## Totals
 
-- Weekly minutes: 100/120 (83%).
-- Counts: 5 weekly, 3 monthly, 2 annual, 3 bench, 4 people.
-- Verified-active: 9/10 core+monthly+annual entries; 1 evergreen-undated (Diátaxis).
-- Pillar coverage: advocacy ✅, enablement ✅. Community: not owned, deliberately empty. Marketing: not owned, not padded in.
-- Unverified presented as verified: 0.
+- **Weekly minutes:** 108 of 120, with the 12-min Slack slot reserved inside it.
+- **Counts:** 4 weekly, 3 monthly, 3 evergreen, 4 annual, 3 bench.
+- **Verified-active this session:** 0, because I could not browse. Recorded status is 11 active, 2 unverified or evergreen-undated, 1 format-changed.
+- **Pillar coverage:** every owned pillar has a recorded-active source (yes). Enablement is the weaker one: its sources are reference works, not feeds.
+- **Invented sources:** 0.
 
-## Open questions — answer these to tighten the list
+## Dropped
 
-1. Medium: assumed text + audio, no video. Confirm or correct.
-2. Ecosystem (what Hollick Systems builds): unknown — needed to add ecosystem-specific sources next to these practice ones.
-3. B2C or B2B bottom-up devtool: assumed B2B bottom-up. Confirm.
-4. Any CFP/sponsor duty this year: assumed no — if yes, an event line becomes core, travel budget or not.
+- **All conferences** (DevRelCon New York, KubeCon NA, WeAreDevelopers, Write the Docs, and the rest): no travel budget until next fiscal year. Revisit when that lifts.
+- **Pillars not owned:** no marketing-only or community-only sources (Console.dev, CMX, Open Source Guides) are padded in.
+- **Video:** nothing included. Channels cannot be verified, and you have not said you use video.
 
-**Next action:** apply to DevRel Collective today — the gate takes time and you have three weeks.
+## Gaps and open questions
 
-Want the weekly-core + monthly feeds as an importable OPML file too?
+1. **Hollick's start date is inconsistent.** My memory notes say your start is 2026-10-14, but today is 2026-10-30 and you said three weeks. I used three weeks, so day one is about 2026-11-20. Correct me if wrong.
+2. **Enablement may mean something else.** This skill's sources cover enablement as docs, SDKs and quickstarts. If Hollick means arming sales and CS, the radar has almost nothing for that. Ask your manager what it covers.
+3. **I did not ask all the interview questions.**
+   - Which mediums do you actually use?
+   - Is any source ruled out?
+   - Which ecosystem and segment is Hollick in?
+   - Will you submit talks this year?
+   - I assumed text and audio. Different answers would change this list.
+4. **Re-verify before relying on it.** Open each URL, find the newest dated item, and confirm the owner.
+
+**Next:** confirm or swap entries, and tell me your mediums (audio ok? video?) and Hollick's ecosystem. I can then export an OPML file of the feed-bearing entries.

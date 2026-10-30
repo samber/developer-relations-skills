@@ -1,29 +1,59 @@
-Open community platform's unanswered-questions view first. Work oldest-to-newest, top 5. 20 min, this week and every week.
+**Open first: your community backlog.** Spend 30 minutes on it today.
 
-**Week 1 only — one-time setup (~20 min extra, do before locking routine):**
-1. Count backlog: how many unanswered threads exist right now. Sets your real weekly load.
-2. Confirm code of conduct exists and mod list is current (prior manager may have been sole mod).
-3. Set up Octolens (octolens.com) watching GitHub/Reddit/X/HN/Stack Overflow for your product name → digest to Slack/email. Turns "scan 5 platforms" into "read one digest." Without this, following mentions is not possible inside 90 min/week.
+The last community manager quit. Unanswered questions are the only item here that gets worse each day. Your product is self-serve, so a public question left unanswered for days can cost you a signup.
 
-**Weekly 90 min, same order every week:**
-1. Unanswered questions/help threads — answer or route to docs. 20 min.
-2. Mod sweep: spam, dead threads, CoC flags. 10 min.
-3. Mention digest from Octolens — reply to top 2-3 external mentions (support gaps, complaints, praise worth amplifying). 20 min.
-4. One recognition action: public thank-you or spotlight for whoever helped another user this week. Log them in a simple tracker (name, signal, score) — this is how you find champions later without extra work. 10 min.
-5. One prompt posted to keep channel alive ("what are you streaming this week" style). 15 min.
-6. Buffer for one escalation. 15 min.
+1. Open wherever the community lives (Slack, Discord, forum, or GitHub Discussions).
+2. Sort by "no reply", oldest first.
+3. Answer or route the top 5. Write down the platform, who has admin access, and how many questions have gone unanswered.
+4. Stop at 30 minutes. The rest waits for next week.
 
-Skip anything not on this list. Backlog grows past capacity → flag to your manager, don't silently absorb it.
+## Your 90 minutes
 
-**Follow, near-zero cost, matches your constraints (no video, ever):**
+I assumed one commute leg counts toward the 90. The other rides are yours.
 
-Commute (audio, 2 podcasts, subscribe once, skip what's not relevant):
-- *DevRel.fm* — devrel/community craft, practitioner-hosted.
-- *Streaming Audio* (Confluent) — Kafka/streaming-data world, this is your buyer's language.
+| Slot | Time | What |
+|---|---|---|
+| Ride, one way | 35 min | One audio episode from the list below |
+| Community | 35 min | Backlog triage, then one reply to a regular |
+| Reading | 20 min | Competitor changelogs, plus a Hacker News and Reddit sweep |
 
-Reading (1 newsletter, skim subject line, open ~2x/month):
-- *EveryDeveloper* by Adam DuVander — developer marketing specific, short.
+## Audio for the ride
 
-Don't add more sources. Bandwidth is the constraint, not information supply.
+Pick one episode per week. I wrote these names from memory and did not check that each feed is still active, so confirm in your podcast app.
 
-Next: open unanswered-questions view, set 20-minute timer, work top 5.
+1. **Data Engineering Podcast** (Tobias Macey). Your buyers talk about streaming SQL and pipelines here, in their own words.
+2. **Streaming Audio** (Confluent). Vendor-run, so discount the bias. It's useful for the Kafka and Flink side of your category.
+3. **High Leverage** (Heavybit). Dev-tool go-to-market and bottom-up growth.
+4. **Scaling DevTools**. Founder stories from self-serve dev tools. Treat it as a second pick to the Heavybit show.
+5. **The Changelog**. Check it only when a guest matches your buyer.
+
+Skip DevRel-about-DevRel shows for now. Learn the buyer's world first.
+
+## Reading, 20 minutes a week
+
+1. **Competitor changelogs and blogs.** Read RisingWave, Materialize, and Confluent's Flink releases. Also check Arroyo, which I believe Cloudflare acquired, so confirm that. You're looking for new features, new pricing, and new claims.
+2. **Hacker News search alerts.** Set up searches for "Kestrel Data", "streaming SQL", and your competitors' names. Reading what people say about you unprompted tells you the most.
+3. **r/dataengineering.** Search your category terms and skim only the top threads from the past week.
+4. **Orbit model.** Read it once (about 15 minutes), because you now own community. It gives you a framework for who matters in a community.
+5. **Heavybit library articles.** Read one on community or dev-tool growth whenever you have spare time.
+
+## Your own data beats all of the above
+
+Ask the data owner for these. One message does it.
+
+- Top docs searches with no results.
+- Signup-to-first-query rate.
+- Which public questions came from paid-tier users. Credit card at the bottom tier gives you a rare signal here.
+
+## Skip
+
+- Any video, including conference talks. If a talk matters, read the speaker's slides or blog post.
+- The X/Twitter firehose.
+- Generic marketing newsletters.
+
+## Two questions
+
+1. Which platform did the community manager leave you with, and do you have admin access?
+2. Does a commute leg really count toward your 90 minutes? If the ride is extra time, I'd add a second episode.
+
+**Next action:** open the backlog and sort by oldest unanswered.

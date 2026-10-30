@@ -1,32 +1,29 @@
-No industry body publishes agreed-upon percentages for these three specific things, and I'm not going to hand you fabricated numbers with fake citations to put in front of your board — that's a real risk here worth flagging before the deliverable itself. Here's the honest state of the field, organized the way you asked:
+**There is no industry-standard number for any of these three metrics.** I know of no standards body, RFC, ISO standard or widely adopted framework (CHAOSS, Write the Docs, Diátaxis, Google, Microsoft or Stripe style guides) that sets a required percentage for compiling, test coverage or cross-language parity of documentation code samples. If a slide says "industry standard: X%", the board or an analyst can ask for the source, and none exists. I didn't run a web search for this answer, so check anything below before it goes on a slide.
 
-## 1. "% of code samples that should compile/run"
+## What exists
 
-**No standards body (ISO, IEEE, W3C) publishes a number for this.** What exists instead is a *practice*, not a benchmark:
+| Metric | Published numeric standard? | What actually exists |
+|---|---|---|
+| % of samples that compile | No | Some ecosystems enforce 100% by tooling, not by a published benchmark. Rust's `rustdoc` compiles and runs every doc-comment example by default. Go example functions (`ExampleXxx`) compile with the package, and those with an `// Output:` comment are also run. Python `doctest` runs docstring examples. In these ecosystems a non-compiling sample fails the build, so the effective bar is 100%. |
+| % covered by tests | No | "Covered" is ambiguous for docs. It can mean the share of samples executed in CI, or the share of API surface that has a sample. No source defines it or sets a target. |
+| Cross-language parity | No | No accepted number. Parity is usually tracked per product as "languages × endpoints/features with a sample". SDK-generation vendors and large API companies manage it internally, and I'm not aware of any published target. |
 
-- **Doctest-style enforcement** is the closest thing to a real convention: Rust's `rustdoc --test` runs every fenced code block in doc comments by default and fails the build on error; Python's `doctest` module does the same; Elixir's `ExUnit.doctest` likewise. Companies that adopt this tooling are implicitly enforcing **100% compile-clean**, because a broken sample fails CI — there's no partial-credit number, the target is binary (all green) or the build doesn't ship.
-- Companies known for rigorous docs engineering (Stripe, Twilio, Google's API docs team) run example code through CI as part of their docs pipeline, but none of them have published a target percentage — it's "all examples are tested" as an internal engineering policy, not a benchmarked external figure.
-- If your slide needs a number, "100% of published code samples pass automated compilation/execution in CI" is the only defensible bar, and the source for that claim is *tooling behavior* (rustdoc, doctest, CI gating), not a research study.
+## What you can put on the slide
 
-## 2. "% of code samples covered by tests"
+Call these targets Pellworth Systems chose, not industry benchmarks:
 
-Same issue. There's no published research or standards document establishing a benchmark like "70% of doc examples should have accompanying tests." The nearest analogue people sometimes reach for is **general code coverage conventions** (e.g., SonarQube's default quality-gate threshold of 80% line coverage on new code), but:
+- **Compile or execute rate: 100% of samples built or run in CI on every change.** Rust and Go make this the default, so it's the only number with a defensible reference point. Cite the `rustdoc` documentation and the Go `testing` package documentation (Examples section) for the mechanism, not for a percentage.
+- **Test coverage: define it first.** The most defensible definition is "share of published samples executed by CI", and 100% follows from the compile rule. Coverage of API surface by samples is a separate metric. Set it from your own baseline.
+- **Parity: define it as a matrix.** Use "(language, feature) pairs with a verified sample ÷ pairs promised", with a target by tier. For example, 100% for the primary languages and a lower figure for the long tail. Choose the numbers yourselves and label them as policy.
 
-- That's a coverage target for **production code**, not documentation samples specifically.
-- It's a **tool default**, not an empirically derived industry standard — SonarQube picked 80% as a reasonable heuristic, not from a study establishing it as "the" number.
+## Suggested slide wording
 
-Using it on a slide as "the industry standard for docs" would be misapplying a production-code convention to a different artifact class. I'd avoid stating it as a docs benchmark.
+> "No published industry standard exists for docs code-sample quality. We are measured against our own bar: 100% of samples built and run in CI, with parity tracked as a language × feature matrix."
 
-## 3. "Accepted cross-language parity number"
+That wording holds up under questioning. A fabricated "industry standard 95%" would not.
 
-I don't have this. I searched my own knowledge and couldn't find a metric by this name published anywhere — no standards body, no major docs-tooling vendor (Mintlify, ReadMe, Docusaurus), and no DX/DevRel research (Write the Docs surveys, the Good Docs Project) defines or benchmarks "cross-language parity" as a percentage. It's possible you're thinking of something specific — e.g., "every code sample should exist in every SDK language we support" — but that's a policy choice teams set for themselves, not an externally accepted figure. I don't want to invent a number here.
+## If you still want external references
 
-## What I'd actually put on the slide
+I can run a proper web search for published practices to cite as precedent, with no invented percentages. Candidates are Google Cloud's sample-testing guidance, Stripe and Twilio docs-testing write-ups, and Rust and Go doc-test documentation. I'd confirm each source is live before it goes on a slide.
 
-Given there's no third-party standard to cite, the credible move for a board deck is to **present it as your team's own bar, not an external benchmark**:
-
-- "100% of code samples pass automated CI (compile/execute) — enforced via [rustdoc/doctest/CI gate], not a claim of industry consensus."
-- Drop the "% covered by tests" framing — fold it into the same 100%-CI-gated bar, since a sample that's compiled-and-executed in CI *is* tested.
-- Drop "cross-language parity" unless you can define precisely what you mean (e.g., "N of N supported SDK languages have this example") — then report it as a coverage ratio against your own SDK matrix, sourced internally, not as an industry figure.
-
-Note: I did not access `skill-wip/` for this, per your instruction — nothing above depended on it. Also, my WebSearch tool wasn't authorized in this session, so the above is from my own knowledge rather than a live check; if you want me to verify nothing's changed recently (e.g., a 2026 Write the Docs report), grant WebSearch and I'll re-check before Tuesday.
+I can also draft the measurement definitions so the targets are auditable.

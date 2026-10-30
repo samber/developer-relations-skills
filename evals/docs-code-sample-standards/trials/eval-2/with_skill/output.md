@@ -1,38 +1,47 @@
-No CI exists today. Per skill rule: no CI + zero engineering hours deletes both Run and Compile-only tier from menu right now. All 4 samples are **unverified**, not passing, until a pipeline exists. Tiers below are target tiers — what CI enforces once you build it.
+# Voltmesh sample testing tiers
 
-**P0 flag first** (per skill: report P0 immediately, not at end): sample (c), `kubectl delete namespace voltmesh-dev`, uses a real-looking namespace name with no guard. That is an unguarded destructive command — P0 harm class regardless of tier or CI. Fix costs zero engineering hours, no pipeline needed:
+**Today CI can enforce nothing for any of the four.** You have no pipeline and no engineering hours for six weeks. The skill removes Run and Compile-only from the menu for a team in that position. Until a pipeline exists, all 160 samples are *unverified*, not passing. The tiers below are the commitments to publish now, and CI enforces them once the pipeline exists.
 
-1. Replace `voltmesh-dev` with placeholder `<YOUR_DEV_NAMESPACE>`.
-2. Add warning line above block: check `kubectl config current-context` before running.
-3. Add `--dry-run=client` variant as the copy-paste default; real delete stays a separate, clearly labeled step.
+I did not run `scripts/sample-audit.py`, because I don't have your docs directory. I also never got answers to the interview questions on dates and standing enforcement (Q9 and Q10). I assumed no hard deadline and a standing standard, and I used the constraints you gave for Q4 and Q8.
 
-**Tier per sample:**
+## Tier per sample
 
-**(a) Quickstart auth call — tier: Run**
-- Why: primary adoption path (quickstart, auth, first call). Skill baseline: 100% of these must be Run and green.
-- CI enforces (once built): full execution + output diff against real response shape.
-- Needs: dedicated test account, secrets from CI secret store not sample, deterministic teardown, scheduled run (catches server-side auth drift, not just doc edits).
-- This is the one Run-tier investment worth the standing job. Everything else below stays capped at Compile-only no matter how much engineering time you free up.
+| Sample | Tier | Why | What CI enforces once a pipeline exists |
+|---|---|---|---|
+| (a) Quickstart auth call | **Run** | It is on the primary adoption path. It is free, non-destructive and uses your own service, so nothing rules Run out. | Full execution against the real API with a dedicated test account. The key comes from the CI secret store, and the sample shows `<YOUR_API_KEY>`. It asserts the documented output. It runs per pull request (hermetic) and on a nightly schedule, because the service changes independently of the docs. It is a required check that fails the docs build. |
+| (b) Transcription job at $0.90/min | **Compile-only** | A sample that bills has no Run tier, whatever the pipeline can do. | Build or type-check against the published SDK, never executed. No credentials and no spend. The page is labelled "valid; not run for you". |
+| (c) `kubectl delete namespace voltmesh-dev` | **Compile-only** (see the P0 note below) | A sample that destroys has no Run tier. | Lint the shell syntax. Validate the command shape with `kubectl ... --dry-run=client` (no cluster needed). The CI job never gets cluster credentials. |
+| (d) Post to a third-party partner webhook | **Compile-only** | A sample that depends on a third party has no Run tier. Automated traffic to their endpoint may break their terms, and a Run job would hold a secret to reach it. | Build or lint the request only, with no network call. |
 
-**(b) Transcription job, $0.90/min — tier: Compile-only**
-- Why: billing sample. Rule: bills → no Run tier ever, whatever the pipeline can do.
-- CI enforces: build/lint only, never executed (executing it in CI spends real money on every run).
-- Anatomy fix, zero pipeline needed: put the per-minute cost in the sample's top comment so a reader isn't surprised when they run it themselves.
+**P0 note on (c):** a destructive command with no guard is a P0 finding on harm alone, outranking everything else in the queue. Before any tooling exists, add three things:
+- a visible warning;
+- a context check, for example `kubectl config current-context` before the delete;
+- an explicit statement that the command is irreversible.
 
-**(c) `kubectl delete namespace` — tier: Compile-only**
-- Why: destructive command. Same no-Run rule.
-- CI enforces: syntax/dry-run lint only (`kubectl apply --dry-run=client` style), never actual execution against a real cluster.
-- Guard fix above is separate and urgent — do that regardless of tier work.
+If the team won't maintain the dry-run check, relabel (c) **Illustrative**, which is excluded from CI and visibly labelled on the page. Don't leave it unlabelled.
 
-**(d) POST to partner webhook — tier: Compile-only**
-- Why: third-party dependency. Same no-Run rule — also a compliance issue, not just a resource one: firing real traffic at another company's endpoint on every CI run needs their terms for automated traffic, which you don't have.
-- CI enforces: build/lint only — type-check request construction and signature verification, never fire the call.
-- Anatomy fix: show the signature-verification failure path (policy rule: show one failure path per API that fails in normal operation).
+## What the six weeks can do without engineering time
 
-**Sequencing for 3 engineers, 6-week freeze:**
+1. **Run the census (docs team, no CI needed).** Execute `scripts/sample-audit.py <docs-dir> --format summary` and then `--format json`. This gives the real corpus size, the secret-scan findings and the P0 candidates. Treat each flag as a candidate to confirm, not a verdict.
+2. **Triage with ROT (redundant, outdated, trivial).** Cut dead and trivial snippets. Fewer samples means a smaller test job later, and a deleted sample costs a reader nothing.
+3. **Tier all 160 samples on paper.** Anything you leave untiered defaults to Run, so classify explicitly. Label the unrunnable ones Illustrative on the page. Use the same rules as above:
+   - Billing, destructive and third-party samples go to Compile-only.
+   - Quickstart, auth and first-call samples go to Run.
+4. **Fix the P0s by hand.** That covers credential-shaped literals, unguarded destructive commands, prompt characters and plausible fake keys.
+5. **Put the policy in writing.** Name an owner for a red sample, because "whose queue does a Friday-afternoon red sample land in" needs a concrete answer. Set a freshness window measured from the last successful run.
 
-1. Now, zero engineering hours: fix the (c) guard, add cost disclosure to (b), add failure-path note to (d). Editing, not CI.
-2. Week 6+, first available engineering time (~1 week): build one shared Compile-only batch job — lint/type-check pass covering (b), (c), (d) and most of the other 160 snippets. Cheapest, highest-leverage move per skill (a week to stand up, near-zero per sample after).
-3. After that lands, invest in the Run harness for (a) only. That's the standing job (fixtures, credentials, teardown, scheduled re-run) — do not attempt it before step 2 exists.
+## First engineering ask when hours free up (about a few days)
 
-Next: send the (c) namespace-placeholder fix to whoever owns that doc page today — no pipeline required to ship it.
+1. Stand up **one compile-only job** that installs the published SDK. It covers (b), (c) and (d), and it catches the whole class of removed symbols and missing imports with no fixtures or credentials.
+2. Add **one Run job** for the quickstart and auth path only. It needs a test account, a CI secret, teardown and a nightly schedule.
+
+I'd start with compile-only because it is cheap. The Run job is a standing cost: a red build every time the service moves. It earns its place on (a) because a wrong quickstart costs a reader their afternoon.
+
+## Pass thresholds to report against
+
+These are skill baselines, not industry standards. The 43% deprecated-API gate is the exception: it comes from a measurement by Zhou and Walker (FSE 2016).
+- Zero P0 findings, and 100% of adoption-path samples at Run and green.
+- A compile/run pass rate of at least 90%.
+- At least 80% of the corpus tiered Run or Compile-only and executed by CI.
+
+If the 80% target can't be met, cut samples rather than lowering the bar.

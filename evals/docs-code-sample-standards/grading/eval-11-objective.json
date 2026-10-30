@@ -3,73 +3,73 @@
     "expectations": [
       {
         "text": "Rejects the docs team's proposal rather than signing off on it",
-        "evidence": "\"## Sign-off: reject the 'imports omitted for brevity + `...`' proposal / **Verdict: No-go.**\"",
+        "evidence": "\"Verdict: do not sign off.\"",
         "passed": true,
         "graded": true
       },
       {
         "text": "Rejects putting ... inside a copyable block outright",
-        "evidence": "\"never `...` or `\u2026`, and never inside a click-to-copy block.\"",
+        "evidence": "\"`...` breaks the safety rule... never inside a click-to-copy block.\"",
         "passed": true,
         "graded": true
       },
       {
         "text": "States that omissions, where needed at all, are marked in the language's own comment syntax",
-        "evidence": "\"Omissions marked with a comment in the language's own syntax\"",
+        "evidence": "\"omissions are marked with a comment in the language's own syntax\"",
         "passed": true,
         "graded": true
       },
       {
         "text": "States that a region starting after the imports publishes a sample the reader cannot run",
-        "evidence": "\"'a region that starts after the imports publishes a sample the reader cannot run.'\"",
+        "evidence": "\"A region that starts after the imports publishes a sample the reader cannot run.\"",
         "passed": true,
         "graded": true
       },
       {
         "text": "Requires the extracted region to wrap the maximum useful code rather than the minimum interesting lines",
-        "evidence": "\"Make the copy-to-clipboard action assemble `setup` + `body` concatenated, regardless of collapsed/expanded display state.\"",
+        "evidence": "\"Wrap the maximum useful code, imports and client setup included.\"",
         "passed": true,
         "graded": true
       },
       {
         "text": "Distinguishes the tested artefact, which is the complete file, from the published artefact, which is a region or filtered view of it",
-        "evidence": "\"the tested artefact is the complete file, the published artefact is a region or a filtered view of it.\"",
+        "evidence": "\"Gate the published artefact, not the source file... CI runs the full source file\"",
         "passed": true,
         "graded": true
       },
       {
         "text": "States the rule as hide setup, never delete it",
-        "evidence": "\"Collapse the imports for readability, but keep them real, present, and inside what the copy button copies\"",
+        "evidence": "\"publish the whole region, hide the setup, never delete it\"",
         "passed": true,
         "graded": true
       },
       {
         "text": "Cites the rustdoc pattern of prefixed lines that compile but do not render as the property to reproduce whatever the mechanism",
-        "evidence": "\"Rustdoc's `#`-prefixed hidden lines are the reference implementation \u2014 compiled and copied, not rendered.\"",
+        "evidence": "\"Rustdoc's `#`-prefixed lines have this property: they compile but don't render.\"",
         "passed": true,
         "graded": true
       },
       {
         "text": "Requires each region identifier to be globally unique, snake_case or dotted, prefixed by the product area, and identical across languages",
-        "evidence": "Only \"Identifiers stay snake_case, product-area-prefixed, identical across languages\" \u2014 no \"globally unique\" or \"dotted\" alternative stated",
+        "evidence": "Only \"Keep the region identifier unchanged and identical across languages\".",
         "passed": false,
         "graded": true
       },
       {
         "text": "Requires one sample per file in the source project so its imports can be validated",
-        "evidence": "Not mentioned anywhere in this transcript",
+        "evidence": "Not stated.",
         "passed": false,
         "graded": true
       },
       {
         "text": "Ranks extract-from-tested-source above test-what-is-embedded and above generate-from-spec on reliability",
-        "evidence": "Not discussed in this transcript",
+        "evidence": "Not stated.",
         "passed": false,
         "graded": true
       },
       {
         "text": "Says to pick one source-of-truth pattern per surface and write that choice into the policy, and states that a sample hand-pasted into prose belongs to none of the three",
-        "evidence": "Not discussed in this transcript",
+        "evidence": "Not stated.",
         "passed": false,
         "graded": true
       }
@@ -79,73 +79,73 @@
     "expectations": [
       {
         "text": "Rejects the docs team's proposal rather than signing off on it",
-        "evidence": "'**Verdict: \u274c Reject the \"imports omitted for brevity\" + `...` proposal.**'",
+        "evidence": "'Verdict: don't sign off on the \"imports omitted\" note'.",
         "passed": true,
         "graded": true
       },
       {
         "text": "Rejects putting ... inside a copyable block outright",
-        "evidence": "'`...` is not valid syntax in most languages (Go, JS, Java, C#, Rust...). Pasting the sample still fails to run' and no proposed solution uses '...'.",
+        "evidence": "'`...` is not code. A reader who pastes the block gets a syntax error'.",
         "passed": true,
         "graded": true
       },
       {
         "text": "States that omissions, where needed at all, are marked in the language's own comment syntax",
-        "evidence": "The transcript explicitly rejects using a comment for this: 'Still real, valid, minimal code \u2014 just trimmed by the tool instead of hand-waved by a comment.'",
+        "evidence": "Not stated.",
         "passed": false,
         "graded": true
       },
       {
         "text": "States that a region starting after the imports publishes a sample the reader cannot run",
-        "evidence": "'It abandons \"copy-paste code must work\"... now it looks clean but doesn't run' directly addresses that omitting imports breaks runnability.",
+        "evidence": "The extractor 'decides what to cut by position', and the proposal's `...` leaves the reader without runnable code.",
         "passed": true,
         "graded": true
       },
       {
         "text": "Requires the extracted region to wrap the maximum useful code rather than the minimum interesting lines",
-        "evidence": "'Permanent fix \u2014 collapse, don't delete. Extractor keeps pulling the complete, runnable source' \u2014 requires extracting the complete code, not a trimmed minimal region.",
-        "passed": true,
+        "evidence": "It says setup readers need goes inside the region, but it never states the maximum-useful-code principle.",
+        "passed": false,
         "graded": true
       },
       {
         "text": "Distinguishes the tested artefact, which is the complete file, from the published artefact, which is a region or filtered view of it",
-        "evidence": "'Add CI that compiles/runs every published sample (or the full source file each region is extracted from)' and the collapse mechanism separates the complete source from the rendered (collapsed) view.",
+        "evidence": "'The full file the source of truth... The snippet on the page is a view of that file.'",
         "passed": true,
         "graded": true
       },
       {
         "text": "States the rule as hide setup, never delete it",
-        "evidence": "'Permanent fix \u2014 collapse, don't delete. Extractor keeps pulling the complete, runnable source. Docs renderer wraps the import block in a collapsed disclosure.'",
+        "evidence": "'Collapse the imports and setup, don't delete them.'",
         "passed": true,
         "graded": true
       },
       {
         "text": "Cites the rustdoc pattern of prefixed lines that compile but do not render as the property to reproduce whatever the mechanism",
-        "evidence": "No mention of rustdoc or its hidden-line convention appears anywhere in the transcript.",
+        "evidence": "Not cited.",
         "passed": false,
         "graded": true
       },
       {
         "text": "Requires each region identifier to be globally unique, snake_case or dotted, prefixed by the product area, and identical across languages",
-        "evidence": "No region-identifier naming scheme is discussed.",
+        "evidence": "Markers carry no identifiers.",
         "passed": false,
         "graded": true
       },
       {
         "text": "Requires one sample per file in the source project so its imports can be validated",
-        "evidence": "No such one-sample-per-file requirement is stated.",
+        "evidence": "Not stated.",
         "passed": false,
         "graded": true
       },
       {
         "text": "Ranks extract-from-tested-source above test-what-is-embedded and above generate-from-spec on reliability",
-        "evidence": "No such three-way ranking of sourcing strategies appears in the transcript.",
+        "evidence": "No ranking of patterns is given.",
         "passed": false,
         "graded": true
       },
       {
         "text": "Says to pick one source-of-truth pattern per surface and write that choice into the policy, and states that a sample hand-pasted into prose belongs to none of the three",
-        "evidence": "No discussion of source-of-truth patterns per surface or hand-pasted-into-prose categorization appears.",
+        "evidence": "Not stated.",
         "passed": false,
         "graded": true
       }

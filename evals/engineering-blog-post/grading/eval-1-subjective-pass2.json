@@ -3,8 +3,8 @@
     "expectations": [
       {
         "text": "Orders the fix-list items by trust damage rather than by their position in the document",
-        "evidence": "The fix list is explicitly tiered by severity rather than document position \u2014 \"Blocking (fix before Thursday)\", \"Strong (fix unless the author disagrees)\", \"Optional\", plus a separate \"Handoff\" bucket \u2014 and the preamble supplies a credibility rationale for the tiering (\"that combination is exactly what pushes the credibility gate's benchmark-disclosure and limitations checks to 'must fix' rather than 'nice to have'\"). Non-positional placement is demonstrable: item 7 concerns disclosure \"early in the post\" yet is ranked last as Optional, and item 6 (closing paragraph) is ranked above it despite",
-        "score": 3,
+        "evidence": "The list is split into Blocking, Strong and Optional tiers, so it groups by severity at a coarse level. Inside the Blocking tier, though, the items follow the draft's own order: Intro superlative, then Results '12x', then 'Paragraph four' adoption claim, then the snippet, then the missing limitations section. Strong follows the same pattern, with the Closing line before the disclosure. The response never ranks by trust damage or explains a ranking. It does not argue that the headline '12x' with no baseline is the most damaging claim. The order matches where each item sits in the post.",
+        "score": 2,
         "passed": false,
         "graded": true
       }
@@ -14,8 +14,8 @@
     "expectations": [
       {
         "text": "Orders the fix-list items by trust damage rather than by their position in the document",
-        "evidence": "The six items run strictly in document order: \"Intro\" (1) \u2192 \"Results section\" (2) \u2192 \"Paragraph four\" (3) \u2192 \"Code snippet\" (4) \u2192 \"Closing paragraph\" (5) \u2192 \"New section ... Insert before the closing paragraph\" (6). No severity-based sequencing is applied or claimed. The response itself identifies the code snippet as the worst offender \u2014 \"A renamed-method bug in a 'here's how we did it' post is the single most credibility-damaging kind of error, because it's the one detail readers will actually try to execute\" \u2014 yet leaves it at position 4, behind lower-stakes items like the intro superlative and",
-        "score": 1,
+        "evidence": "The replacement passages follow the draft's own order: Title and intro, Results section, Paragraph four, the new limits section placed after Results, Code snippet, then Closing. Nothing ranks them by how much each one damages trust, and nothing says which fix matters most. The 'facts to get from the author' list is ordered by benchmark setup (baseline, workload, hardware, version, times), not by severity. The broken snippet and the unverifiable 'thousands of teams' claim are never placed above lower-stakes items like the closing line.",
+        "score": 0,
         "passed": false,
         "graded": true
       }

@@ -1,21 +1,29 @@
-Couldn't independently re-verify — no network access in this sandbox (Bash and WebFetch calls both got blocked). Judgment below is based on interpreting what each failure mode actually means, not a fresh check.
+I couldn't run network checks from here, because the shell blocked the commands. This verdict rests only on what you saw in your browser this morning.
 
-## Verdict: 2 keep (with caveats), 3 bin
+## Keep
+- **developerweek.com**: Keep it and recheck. A 403 means a server answered and refused you, so the site is alive. It is probably a bot or region block, or a Cloudflare-style challenge. Try another network or device, or a different browser profile. The conference is a real, long-running event and probably the most valuable item on your list.
+- **Scaling DevTools podcast**: Keep it and recheck, for the same reason. The 403 is probably the hosting layer blocking you. Podcast content usually also lives on Apple Podcasts, Spotify, YouTube and RSS, so you don't need the site itself. Search for the show name on those platforms and subscribe there.
 
-| Source | Status you saw | Verdict | Why |
-|---|---|---|---|
-| **devrelfoundation.org** | DNS error | 🔴 **Bin** | DNS not resolving means nobody's even paying for the domain anymore — not parked, not squatted, just gone. No recovery path. |
-| **devrelx.com** | Loads, but it's a brewery | 🔴 **Bin** | Classic expired-domain-recycled pattern. Whatever DevRel content lived there is gone; an unrelated buyer picked up the domain after it lapsed. Nothing to salvage at that URL. |
-| **karlhughes.com** | "Domain for sale" parking page | 🔴 **Bin the URL, not necessarily the source** | Karl Hughes is a real, still-active voice in DevRel/technical content marketing (founder of Draft.dev). A parked personal domain usually means he consolidated elsewhere, not that he stopped writing. Before dropping him entirely, check **draft.dev** and his current LinkedIn/newsletter — if he's still active there, replace the link rather than deleting the source. |
-| **developerweek.com** | 403 | 🟢 **Keep, pending a manual recheck** | DeveloperWeek is a long-running, multi-event conference brand — a bare 403 from an automated fetch is far more consistent with Cloudflare/WAF bot-blocking than with the whole conference having shut down. Don't bin on this signal alone. |
-| **Scaling DevTools podcast site** | 403 | 🟡 **Keep provisionally, verify elsewhere** | Same logic: a 403 tells you the site blocked *this specific request*, not that the show is dead. Check Spotify/Apple Podcasts/YouTube directly for recent episode dates — those platforms aren't behind the same bot-wall and will give you a real activity signal in under a minute. |
+## Bin
+- **devrelfoundation.org**: Bin it. A DNS error means the domain no longer resolves, so it has most likely lapsed or been abandoned. The one exception is a typo in the inherited list. Search for the organization's name before you delete the entry, in case it moved to a new domain. If it did, replace the entry. If it didn't, drop it.
+- **devrelx.com**: Bin it. The site loads but now belongs to an unrelated brewing company. It is a former DevRelX domain that someone else now owns. Don't subscribe or link to it, and check that no one on your team still does.
 
-## Why the two 403s get different treatment than the DNS error and the parked pages
+## Keep the content, replace the link
+- **karlhughes.com**: The domain is parked and for sale, so the site is gone. Karl Hughes is a known figure in developer content marketing, so look for where they publish now. Check LinkedIn, X, a Substack, or the company they founded. If you find the new home, keep that. Otherwise bin the entry. Don't visit or interact with the parked page.
 
-A DNS error and a domain-for-sale page are unambiguous — there's no content behind them, automated or not. A 403 is not a "this is dead" signal at all; it's a "this specific requester was refused" signal, commonly triggered by bot-detection (Cloudflare, PerimeterX, etc.) rather than the site being down. Binning a source on a 403 alone risks losing two entries that are plausibly still fine — worth 60 seconds each to confirm properly (normal logged-in browser tab, or check the brand's socials/podcast-platform listing) before writing them off.
+## Summary
 
-## Net effect on your list
+| Source | Verdict | Next step |
+|---|---|---|
+| developerweek.com | Keep | Recheck from another network |
+| Scaling DevTools podcast | Keep | Subscribe through podcast apps |
+| karlhughes.com | Replace or bin | Find their current channel |
+| devrelfoundation.org | Bin | Search the name once for a new domain |
+| devrelx.com | Bin | Domain was repurposed |
 
-- Delete outright: **devrelfoundation.org**, **devrelx.com**
-- Delete the link, look for a live replacement before deleting the source: **karlhughes.com** → check draft.dev
-- Don't delete yet, confirm properly first: **developerweek.com**, **Scaling DevTools podcast**
+## Rule for the rest of the list
+- **DNS error, parked page or unrelated content:** the source is dead, so bin it.
+- **403, 429 or a challenge page:** the source is alive, so keep it and test it another way.
+- **Loads normally:** open the latest post and check its date. A source whose latest post is over 12 months old is dormant. Keep it only if its archive is valuable.
+
+You mentioned five sources, but an inherited list is probably longer. Paste the rest and I'll triage them with the same rule.

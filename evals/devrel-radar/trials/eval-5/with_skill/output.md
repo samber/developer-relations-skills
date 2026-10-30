@@ -1,103 +1,98 @@
-## Straight answer first
+**Short answer: no.** Almost nothing in DevRel is conflict-free, and a list that excluded everyone with something to sell would be empty. The workable fix is to disclose each source's incentive and weight sources whose claims you can check.
 
-No — almost nothing here is free of an angle, and pretending otherwise would be the least trustworthy thing I could hand you. Podcast hosts run consultancies, newsletter curators run agencies, "state of the ecosystem" reports come from the vendor whose category they're sizing. I'm not filtering those out — that would empty the list, since most of the field's real expertise sits inside people who also sell something adjacent to it. Every entry below carries a **what they're selling** column instead, so you can weigh it rather than assume neutrality that isn't there.
+Sources that don't sell you anything:
+- **Developer Relations Foundation** (dev-rel.org): the Linux Foundation hosts it. It's the field's only vendor-neutral practice body.
+- **CHAOSS**: a Linux Foundation project. It publishes open community-health metric definitions.
+- **Diátaxis**: no seller visible on the page.
 
-One entry actually is the exception, and it goes first: **Developer Relations Foundation** (dev-rel.org), hosted by the Linux Foundation. No product, no course, no agency behind it — it's the field's only vendor-neutral practice body. Everything else on this list, treat as "useful and interested."
+Every other entry below has a seller, and I name it. Vendor-run annual surveys are the most trustworthy conflicted category, because the method and the edition are public, so you can cite the figure and its source.
 
-I don't have live web access in this session, so this is built from a source audit dated 2026-08-26 to 2026-09-10 (a skill-maintained list I re-checked against, not re-fetched live) — 2-4 weeks old against today, 2026-09-23, well inside the field's own ~3-month freshness window. I did **not** invent anything to fill gaps — see "embedded/IoT ecosystem gap" below.
-
-## Assumptions I made instead of interviewing you turn-by-turn
-
-You gave me role, ecosystem, budget and mediums directly. I inferred the rest — flip any of these and the ranking changes:
-
-- **Pillars owned**: advocacy + enablement (a DevRel-titled advocate at an SDK company owns speaking/content/feedback plus docs/SDK/quickstart quality). Not marketing, not community. Tell me if that's wrong.
-- **Catching up vs. standing habit**: standing habit, not onboarding to a new role. If you're actually new to this, long-form (podcasts, talks) gets promoted harder.
-- **Commute/gym time for audio**: unknown. This is the single biggest lever on the list below — see the note on Community Pulse.
-- **B2B motion**: bottom-up devtool (engineers self-serve the SDK) rather than top-down hardware-OEM sales. Changes which conferences would matter.
-- **Events (Q9)**: assumed no CFP/sponsor obligation this year, so no event line. Say the word and I'll add one CFP target plus one attend/sponsor candidate with confirmed dates.
+**Next action:** read "Before you rely on this" below. It is a 10-minute check, and it matters more than the list.
 
 ---
 
-# DevRel radar — developer advocate, embedded/IoT SDKs (Lorrick)
+# DevRel radar for a developer advocate on embedded and IoT SDKs
 
-Pillars owned: advocacy, enablement. Ecosystem: embedded/IoT. Budget: 75 min/week. Sources verified 2026-08-26–2026-09-10; not re-fetched live this session.
+**What this is:** a curated reading list built from a source audit dated 26 Aug to 10 Sep 2026. It is not a monitoring service. Nothing here alerts you when a source dies. The quarterly refresh does that, when you run it.
 
-## Weekly core — 66 of 75 min
+**Header:** developer advocate at Lorrick, embedded and IoT SDKs. Budget 75 min/week, text and audio. Entries in each section are ordered by value per attention-minute, highest first.
 
-Ordered by value per attention-minute, highest first. Text buys "what happened" cheaply; the one podcast buys the reasoning behind it and costs most of an hour, so it only earned its slot because you named audio as a medium you actually use — not because the ratio favored it.
+## Before you rely on this
 
-| Source | URL | Medium | Pillar | Min | Why it earned the slot | Selling | Status |
+- **I could not re-verify anything today (2026-10-30).** My web tools were denied this session. Statuses below are the recorded ones, 7 to 9 weeks old. That is inside the ~6-month window, but it is not a fresh check.
+- **I assumed answers I couldn't ask.** I assumed you own advocacy and enablement (docs, SDKs). I assumed no medium is ruled out, no event plans this year, and a standing weekly habit. Tell me if any is wrong. The pillar mapping and the event line depend on them.
+- **Manual check, about 10 minutes:**
+  1. Open each core URL.
+  2. Find the newest dated item.
+  3. Confirm who runs it.
+  4. Mark it active if the item is under 3 months old.
+- **The audit has no embedded or IoT source.** It covers B2B bottom-up devtools densely and your ecosystem not at all. I won't pad that gap with plausible names. The practice layer below applies to you unchanged. The ecosystem layer is a gap, and I give you a way to fill it.
+
+## Weekly core (about 68 min)
+
+| # | Source | Medium | Pillar | Min | Why it earned the slot | Selling | Status |
 |---|---|---|---|---|---|---|---|
-| DRF community list & Discord | lists.dev-rel.org/g/community | mailing list (text) | reserved discovery slot | 8 | The mandatory renewal slot, capped to a skim — ungated, foundation-run, nothing to sell. Where a new source surfaces before it shows up in any curated list, including this one. | nothing (foundation) | active — Touchpoint calls restarted 2 Sep 2026 |
-| Community Pulse | communitypulse.io | podcast | advocacy | 40 | The one long-running show about DevRel *as a practice*, not about any one vendor's tool. Four rotating hosts means four different ecosystems' worth of judgment, not one consultancy's pitch. | hosts' consulting | active — Ep 105, 17 Aug 2026 |
-| Tessa Kriesel | tessakriesel.com | blog | advocacy | 8 | Treats advocacy as a function that has to show revenue impact, not goodwill — the framing you'll need when Lorrick asks what the SDK program is for. | consulting/advisory | active, 31 Jul 2026 |
-| The New Stack | thenewstack.io | news site | all four (general) | 10 | Daily pulse across the whole devtool space. Not embedded-specific, but the cheapest way to not get blindsided in a hallway conversation about something that shipped elsewhere. | ad-supported media | active, 26 Aug 2026 |
+| 1 | Console.dev (console.dev) | newsletter | marketing | 7 | Weekly devtool reviews. They show how tools get positioned to developers, and you can pitch the channel. | sponsorships | active, 20 Aug 2026 (Thursdays) |
+| 2 | EveryDeveloper (everydeveloper.com) | blog skim | marketing, enablement | 8 | Technical content strategy from an author of two developer-marketing books. | agency and books | active, but no dated post confirmed (page asset 12 May 2026) |
+| 3 | DRF community list (lists.dev-rel.org/g/community) | mailing list, Discord | all four | 8 | This is the reserved community slot. It is open and ungated, and it is where new sources surface. | nothing (foundation) | active, Touchpoint call announced for 2 Sep 2026. Activity is not observable from outside. |
+| 4 | Community Pulse (communitypulse.io) | podcast | advocacy, community | 20 | The one long-running show about the practice itself. Four hosts bring four ecosystems. | hosts' consulting | active, Ep 105, 17 Aug 2026 |
+| 5 | Scaling DevTools (feeds.transistor.fm/scaling-devtools) | podcast | marketing, advocacy | 20 | Devtool growth interviews. It has 197 episodes, which is the durability signal. | community and sponsorships | active, Ep 197, 20 Aug 2026. The site returns 403 to fetchers, so use the feed. |
 
-**If your podcast time rides on a commute or workout you already have** — tell me. Halving Community Pulse to ~20 min frees exactly enough room to add Scaling DevTools (bench, below) as a second show, without touching the rest of the list.
+- **Podcast minutes** are an average of one episode in two, picked by guest. Cadence is unverified for Community Pulse. I assumed an hour-class episode, not halved, because I don't know whether you listen on a commute. If you do, halve both and spend the freed time on a third episode.
+- **DevRel Weekly (devrelweekly.com)** is not in the core. The curator ended the weekly format, so it is now occasional.
+- **Why podcasts stay despite the ratio.** By efficiency they lose to text. You said you listen, and podcasts are where reasoning is visible. Text mostly reports conclusions.
 
-## Monthly — reference, not a feed
+## Monthly: reference, outside the weekly budget
 
-| Source | URL | Pillar | Why | Status |
+| Source | Pillar | Why | Selling | Status |
 |---|---|---|---|---|
-| **Developer Relations Foundation** | dev-rel.org | all four | The vendor-neutral one — Maturity Model, Tools Catalog, Persona Library, public governance. Read this before you read anyone's opinion piece. | verified-active, governance repo commit 28 Aug 2026 |
-| DeveloperRelations.com guides | developerrelations.com | all four | The practice canon: four pillars, CORE framework, friction logging, champion programs — 21 guides. The agency that wrote them (Hoopy) wound down in 2026; the hub survived it. | active, evergreen (no dates on the guides themselves) |
-| Diátaxis | diataxis.fr | enablement | The tutorial/how-to/reference/explanation split your SDK docs should already be structured against. | evergreen, undated |
-| EveryDeveloper | everydeveloper.com | enablement | Technical content strategy from someone who wrote the two books on documenting developer products. No single dated post confirmed, so check monthly rather than trust a weekly cadence. | active, page asset dated 12 May 2026 |
-| DevRel Weekly | devrelweekly.com | all four | The field's canonical link roundup, run by the same person behind Community Pulse. Downgraded from weekly to occasional in 2026 — the curator posted the change herself. | verified, format-changed to sporadic |
+| DeveloperRelations.com guides | all four | Read one guide a month. It covers the four pillars, CORE, friction logging and the developer journey. Friction logging suits an SDK advocate. | practice hub; the founding agency (Hoopy) has closed | evergreen, undated; footer © 2015-2026 |
+| Diátaxis (diataxis.fr) | enablement | The framework SDK docs audits are run against. | none visible | evergreen, undated |
+| DRF Metrics Index (github.com/DevRel-Foundation/metrics-index) | all four | Vendor-neutral metric definitions you can use in a budget conversation. | nothing (foundation) | active but early (v0.0), last push 9 Jan 2026. It holds definitions, not benchmarks. |
 
-## Annual — data you'll be asked for
+## Annual: the numbers you'll be asked for
 
-- **DRF Metrics Index** (github.com/DevRel-Foundation/metrics-index) — vendor-neutral metric definitions; the counterpart to a tool vendor's own measurement blog. Early/v0.0, last push 9 Jan 2026 — a definitions reference, not a benchmark dataset yet.
-- **GitHub Octoverse** — annual ecosystem trends, 2025 edition, published 28 Oct 2025.
-- **JetBrains State of Developer Ecosystem** — 24,534 respondents, 2025 edition; historically the one mainstream survey with an embedded/IoT tooling breakout worth citing by name and year.
+Cite the edition and date every time, never a bare figure.
 
-Cite the edition and date every time — a bare number from any of these ages invisibly and gets repeated as if it were current two years later.
+| Source | Selling | Status |
+|---|---|---|
+| JetBrains State of Developer Ecosystem (24,534 respondents, 2025) | IDE vendor | active annual |
+| GitHub Octoverse (28 Oct 2025 edition) | code host | active annual. The 2026 edition may be out around now, so check. |
+| Stack Overflow Developer Survey (2025) | platform | active annual, publication date not rendered |
+| SlashData (slashdata.co) | research firm, paid reports | active, Q3 2026 post. I did not check whether it breaks out embedded or IoT. Check that before you cite it. |
 
-## Bench (verified substitutes, not in this round's budget)
+## Events
 
-- **Scaling DevTools** (feeds.transistor.fm/scaling-devtools) — devtool growth interviews, Ep 197, 20 Aug 2026. Promotes to weekly core the moment you confirm commute/gym listening time.
-- **Console.dev** — weekly devtool reviews, active 20 Aug 2026. Marketing pillar — add if that becomes something you own.
-- **Open Source Ready** (Heavybit) — open-source/maintainer economics, Ep 41, 30 Jul 2026. Add if community becomes an owned pillar.
+None. You didn't say you need to speak or sponsor. If you do, tell me and I'll add one CFP target and one attend candidate, each with a confirmed date and organiser. DevRelCon is now owned by Major League Hacking, not Hoopy. Its New York edition ran 22-23 Jul 2026, so look for the next one.
 
-## Embedded/IoT ecosystem gap — do not trust these yet
+## Bench: verified substitutes
 
-This skill's own source audit covers general DevRel practice and B2B devtool sources densely. It has **no embedded/IoT ecosystem entries at all** — not an oversight in this radar, an actual gap in what's been verified. I have no web access this session to fetch and confirm any, so I'm not going to hand you names dressed up as checked sources — that's the exact failure this whole list exists to avoid.
+- **Tessa Kriesel** (tessakriesel.com): consulting. Developer go-to-market. Active, post 31 Jul 2026.
+- **The New Stack** (thenewstack.io): ad-supported media. Daily news. Active, 26 Aug 2026. Use it as a budget compressor if your time drops below ~60 min. It skews cloud-native, not embedded.
+- **DevRel Collective Slack** (devrelcollective.fun): nothing visible sold. A peer Slack, application-gated. Membership is claimed, not verified.
 
-What I can do honestly: name candidates I know exist from general knowledge, unverified, for you to run the same check yourself (open it, find the newest dated item, confirm who runs it):
+## Filling the embedded gap
 
-- Interrupt (interrupt.memfault.com) — embedded engineering blog, run by Memfault (tool vendor).
-- Zephyr Project blog (zephyrproject.org/blog) — Linux Foundation-hosted RTOS, foundation-backed.
-- Hackster.io/news — maker/IoT community news, hardware-vendor sponsored.
-- CNX-Software (cnx-software.com) — independent IoT/embedded hardware news blog.
-- Embedded.fm and The Amp Hour — long-running embedded/EE engineering podcasts (not DevRel-specific).
+I can name embedded and IoT sources from memory, such as the Embedded.fm podcast, Memfault's Interrupt blog, and the Zephyr and Eclipse IoT foundations. None was in the audit, and I did not fetch them. Treat them as unverified candidates, not recommendations. Two of them likely sell something (a consultancy, a firmware-observability product).
 
-Status on all six: **unverified, no fetch performed.** Don't add any of these to your weekly rotation until you've confirmed a dated post in the last ~3 months and checked who currently owns the domain.
+To promote a candidate to your list:
+1. Find the newest dated item.
+2. Confirm the owner.
+3. Add its seller to the row.
 
-## Dropped
-
-- **Video** — not among the two mediums you picked (text, audio). No conference-talk archive or channel appears anywhere above, bench included.
+Foundations are the best place to start. Search the code host for the foundation's organisation, read its declared website, and sort its repositories by last push.
 
 ## Totals
 
-- Estimated weekly minutes: 66 of 75 (88%) — slack is intentional, reserved for the commute question above.
-- Counts: 4 weekly + 5 monthly + 3 annual + 3 bench = 15 tracked entries, plus 6 explicitly unverified ecosystem candidates (not counted as part of the list).
-- Verified-active: 14 of 15. Evergreen-undated: 1 (Diátaxis).
-- Pillar coverage: advocacy ✅ (Community Pulse, Tessa Kriesel), enablement ✅ (EveryDeveloper, Diátaxis, DRF Tools/Persona Library). No community or marketing padding — not owned pillars.
-- Unverified entries presented as verified: 0.
+- **Weekly minutes:** about 68 of 75, which is 91%. The last ~10% is the community slot.
+- **Counts:** 5 weekly, 3 monthly, 4 annual, 0 events, 3 bench.
+- **Pillar coverage:** advocacy ✅ and enablement ✅ have a source recorded active. Marketing and community sources appear as secondary coverage. Nothing was added for a pillar you don't own.
+- **Verified-active:** 8 of 12 listed entries. The other 4 are evergreen or have an undated surface (DeveloperRelations.com guides, Diátaxis, EveryDeveloper, the DRF list). All statuses are recorded, not re-checked today.
+- **Presented as verified but unverified:** 0.
+- **Dropped:** none, because you ruled nothing out. Tell me what you can't use (paywall, audio, a community you can't join) and I'll delete it by name.
 
-## Optional second artifact — OPML
+## Refresh
 
-Only one entry above has a confirmed raw feed URL in the audit; guessing the rest would reintroduce exactly the "plausible but wrong" problem this list is trying to avoid. Paste the other homepage URLs into your reader (Feedly, NetNewsWire, etc.) — real feed discovery beats a guessed path.
+Rerun this in January 2027. Re-resolve every URL, since a resold domain still resolves. Re-check each owner, and drop anything you didn't consume.
 
-```xml
-<?xml version="1.0" encoding="UTF-8"?>
-<opml version="2.0">
-  <head><title>Lorrick DevRel radar</title></head>
-  <body>
-    <outline text="Community Pulse" type="rss" xmlUrl="https://communitypulse.io" htmlUrl="https://communitypulse.io" />
-    <outline text="Scaling DevTools (bench)" type="rss" xmlUrl="https://feeds.transistor.fm/scaling-devtools" htmlUrl="https://feeds.transistor.fm/scaling-devtools" />
-  </body>
-</opml>
-```
-
-Set a quarterly reminder to re-run this — that's when domains get resold, agencies wind down, and conferences change organisers without anyone announcing it loudly.
+Want the OPML file of the feed-bearing entries for your reader?

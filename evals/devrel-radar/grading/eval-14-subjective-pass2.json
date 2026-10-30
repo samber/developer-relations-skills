@@ -3,8 +3,8 @@
     "expectations": [
       {
         "text": "Does not pad the list with extra entries to hide that gap.",
-        "evidence": "The list stays deliberately small and under budget (4 weekly entries, 54/60 min) rather than inflating to fill the hour, and the audience-fit gap is named rather than papered over: the opening states most of the skill's canon doesn't transfer, 11 canon sources are listed under 'Excluded, named so it doesn't come back as scope' as intentional omissions, and Gaps #3 explicitly says 'nobody has done a dedicated sweep for Brazilian EdTech + coding-for-teens sources' and that coverage is 'still thin'. Counts are given honestly ('Verified-active: 7 of 15 listed entries; unverified-this-session: 4 (a",
-        "score": 4,
+        "evidence": "The answer states the gap openly in a 'Gap in the field' section: 'Portuguese-language DevRel sources are almost absent. I found one, and it is stale.' It also says the education media it adds 'cover your audience but not your craft.' It does not add more entries to cover the gap. Devtool sources go under 'Not now', with the reason that they target developer buyers rather than teachers and parents. Advocacy and marketing 'are not owned and are not padded in.' The events section lists '0 confirmed' rather than filling in unverified conferences. The budget stays at 55 of 60 minutes, and no unver",
+        "score": 5,
         "passed": true,
         "graded": true
       }
@@ -14,8 +14,8 @@
     "expectations": [
       {
         "text": "Does not pad the list with extra entries to hide that gap.",
-        "evidence": "The response names the gap outright under a heading \"Portuguese-language resources \u2014 honest gap\" and states: \"I don't have confident knowledge of an active, Portuguese-language DevRel canon... I'd rather say that than invent Brazilian books or communities that may not exist or may be dead.\" It then offers only three clearly-labelled substitutes rather than filler: TDC (explicitly caveated \"Not DevRel-branded\"), raw search terms it cannot verify (\"comunidade DevRel Brasil,\" \"DevRel BR\") rather than fabricated URLs, and a redirect to general \"gest\u00e3o de comunidades\" content \u2014 each with an explici",
-        "score": 5,
+        "evidence": "Section 7 states the gap directly: \"I found no Portuguese DevRel-specific newsletter that I could name confidently. DevRel in Portuguese is small... treat the English sources as your main professional feed.\" The answer does not invent Portuguese DevRel sources. The Portuguese section is labelled as education sources and the DevRel section is labelled \"(English)\", so neither passes for Portuguese DevRel coverage. A 'DevRel Brasil' community appears only as something to search for, not as a confirmed source. Two things keep the score below 5. The gap is disclosed only at the end, after a long li",
+        "score": 4,
         "passed": true,
         "graded": true
       }

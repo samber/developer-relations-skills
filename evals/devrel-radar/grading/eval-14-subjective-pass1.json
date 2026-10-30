@@ -3,8 +3,8 @@
     "expectations": [
       {
         "text": "Does not pad the list with extra entries to hide that gap.",
-        "evidence": "The list stays deliberately small and under budget rather than bulked out: 4 weekly sources totalling 54/60 min, 5 monthly reference items, 4 people, 3 bench. The fit gap is named up front ('this skill's canon is built for B2B devtool DevRel... Most of that canon doesn't transfer') instead of being papered over with volume. Eleven canon sources (Console.dev, Draft.dev, KubeCon, Octoverse, etc.) are explicitly excluded by name \u2014 'Left out on purpose, not an oversight' \u2014 which is the opposite of padding. The four audience-fit entries drawn from general knowledge (Nova Escola, CSTA, Bett Brasil, ",
-        "score": 5,
+        "evidence": "Pass. The answer names the gap in its own section, 'Gap in the field': 'Portuguese-language DevRel sources are almost absent. I found one, and it is stale.' It keeps that single source, Abacate DevRel, flags it \u26a0\ufe0f stale and asks whether the user accepts it. It labels the Portuguese education media as filler that covers 'your audience but not your craft.' It leaves out several off-target sources: Gitbar and Developer Experience ('not Portuguese, and not DevRel-focused'), and Console.dev, Scaling DevTools, The New Stack and Draft.dev ('Not now', because they target developer buyers). It says adv",
+        "score": 4,
         "passed": true,
         "graded": true
       }
@@ -14,9 +14,9 @@
     "expectations": [
       {
         "text": "Does not pad the list with extra entries to hide that gap.",
-        "evidence": "The gap is named explicitly and up front \u2014 a dedicated section headed 'Portuguese-language resources \u2014 honest gap' states 'I don't have confident knowledge of an active, Portuguese-language DevRel canon... I'd rather say that than invent Brazilian books or communities that may not exist or may be dead,' and later 'I'd genuinely be surprised if there's a Portuguese-language equivalent of Mary Thengvall's or David Spinks' books.' The Portuguese section stays short (three bullets) and every item is explicitly labeled as adjacent rather than a match: TDC is flagged 'Not DevRel-branded,' the Telegr",
-        "score": 4,
-        "passed": true,
+        "evidence": "Section 7 states the gap plainly: \"I found no Portuguese DevRel-specific newsletter that I could name confidently.\" It lists no made-up Portuguese DevRel sources. The surrounding list is still long. It mixes Portuguese education sources, peers, legal reading, research venues and tangential items (Pew Research, EdSurge, Code.org State of CS). It also includes one vague entry: \"a DevRel newsletter. Search 'DevRel Weekly' and check it is still active.\" Sections 5 and 6 add community ideas and a weekly plan, which go beyond a source list. The answer does not hide the gap, but it buries it at the e",
+        "score": 3,
+        "passed": false,
         "graded": true
       }
     ]

@@ -3,25 +3,25 @@
   "skill": "engineering-blog-post",
   "scenarios": 11,
   "expectations_total": 129,
-  "expectations_subjective": 1,
-  "expectations_objective": 128,
-  "pass_rate_with_skill_pct": 82.2,
-  "pass_rate_without_skill_pct": 30.2,
-  "delta_pp": 52.0,
-  "uplift_multiplier": 2.72,
-  "trigger_accuracy_pct": 54.4,
+  "expectations_subjective": 3,
+  "expectations_objective": 126,
+  "pass_rate_with_skill_pct": 79.8,
+  "pass_rate_without_skill_pct": 44.2,
+  "delta_pp": 35.6,
+  "uplift_multiplier": 1.81,
+  "trigger_accuracy_pct": 50.0,
   "trigger_queries": 114,
-  "trigger_positive_fire_rate": 0.281,
+  "trigger_positive_fire_rate": 0.0,
   "trigger_run_suspect": true,
   "trigger_suspect_reason": "fewer than half the should-trigger queries fired at all: re-measure with --redo-trigger before reading this as a routing score",
-  "subjective_ac2": 0.2,
+  "subjective_ac2": 0.676,
   "subjective_pass_disagreements": [
     {
-      "eval_id": 1,
-      "condition": "with_skill",
-      "expectation": "Orders the fix-list items by trust damage rather than by their position in the document",
-      "pass1": true,
-      "pass2": false
+      "eval_id": 6,
+      "condition": "without_skill",
+      "expectation": "Leads with the engineering problem stated in terms an engineer outside Riverbend also has, rather than with the announcement",
+      "pass1": false,
+      "pass2": true
     }
   ],
   "concern_flag": false,
@@ -32,7 +32,7 @@
     "subjective_grader": "opus",
     "trigger": "sonnet"
   },
-  "harness_version": "2.1.267 (Claude Code)",
+  "harness_version": "2.1.309 (Claude Code)",
   "conditions": {
     "mcp_servers": "disabled",
     "project_claude_md": "not loaded (trials and grading)",
@@ -49,35 +49,39 @@
     "with_skill": [
       {
         "eval_id": 1,
+        "expectation": "Orders the fix-list items by trust damage rather than by their position in the document"
+      },
+      {
+        "eval_id": 1,
         "expectation": "Gives preserving the author's voice as the reason for not rewriting the whole draft"
-      },
-      {
-        "eval_id": 2,
-        "expectation": "States that the section carrying this pattern's credibility is \"what went wrong\""
-      },
-      {
-        "eval_id": 2,
-        "expectation": "Declines to produce a finished post until the \"what went wrong\" material exists, rather than drafting around its absence"
-      },
-      {
-        "eval_id": 2,
-        "expectation": "Asks specifically for regressions, surprises, or costs nobody budgeted during the migration"
-      },
-      {
-        "eval_id": 2,
-        "expectation": "States that a migration post without that section reads as a press release"
       },
       {
         "eval_id": 3,
         "expectation": "States that benchmark readers start from disbelief, so the post is guilty until proven innocent"
       },
       {
+        "eval_id": 3,
+        "expectation": "Rejects a single run per side and requires multiple runs with their variance reported"
+      },
+      {
         "eval_id": 4,
-        "expectation": "Requires a security and customer-confidentiality review before publishing"
+        "expectation": "States that the public post is derived from the internal review and never a copy of it"
+      },
+      {
+        "eval_id": 4,
+        "expectation": "Requires the post to end on a lesson that generalises beyond this bug rather than on the fix"
+      },
+      {
+        "eval_id": 5,
+        "expectation": "States that the topic as given passes none of the filters"
       },
       {
         "eval_id": 5,
         "expectation": "Names the principle of writing from what was hard rather than from what is already mastered"
+      },
+      {
+        "eval_id": 5,
+        "expectation": "Predicts that a post written from mastery will be accurate and unread"
       },
       {
         "eval_id": 5,
@@ -97,6 +101,14 @@
       },
       {
         "eval_id": 6,
+        "expectation": "Selects the Non-markety Product Perspectives pattern"
+      },
+      {
+        "eval_id": 6,
+        "expectation": "Gives the largest share of the post to how the mechanism actually works rather than to a feature list"
+      },
+      {
+        "eval_id": 6,
         "expectation": "Asks what an engineer who will never buy Riverbend takes home from the post"
       },
       {
@@ -105,15 +117,7 @@
       },
       {
         "eval_id": 7,
-        "expectation": "Notes that Thoughts on Trends rests on the weakest evidence class and buys a reach spike with a short shelf life"
-      },
-      {
-        "eval_id": 7,
         "expectation": "Declines to combine two of the three into one post, and recommends publishing separately and linking them"
-      },
-      {
-        "eval_id": 7,
-        "expectation": "Notes that a competitor benchmark carries a legal or compliance review the other two options do not"
       },
       {
         "eval_id": 8,
@@ -125,15 +129,23 @@
       },
       {
         "eval_id": 8,
+        "expectation": "Previews the post in the publishing system before the metadata step, because code blocks and tables break in the CMS rather than in the draft"
+      },
+      {
+        "eval_id": 8,
+        "expectation": "Places the metadata work (title tag, meta description, slug, link targets, alt text, tags) after that preview"
+      },
+      {
+        "eval_id": 8,
+        "expectation": "Returns a handoff list of what still needs a human, such as unrun benchmarks, unreviewed technical claims, a legal or security read, or missing diagrams"
+      },
+      {
+        "eval_id": 8,
         "expectation": "Confirms the snippets are version-pinned, the post dated, and the full version linked"
       },
       {
         "eval_id": 9,
         "expectation": "States that a reviewer's pass is not a licence to rewrite the draft"
-      },
-      {
-        "eval_id": 10,
-        "expectation": "States that overclaiming attribution costs credibility with exactly the audience this post serves"
       },
       {
         "eval_id": 10,
@@ -155,7 +167,7 @@
       },
       {
         "eval_id": 1,
-        "expectation": "Flags the snippet for missing imports, no pinned version, and the renamed kestrel.build_index() call that would fail for a reader who copies it"
+        "expectation": "Quotes the specific offending line for each item instead of paraphrasing it"
       },
       {
         "eval_id": 1,
@@ -171,19 +183,7 @@
       },
       {
         "eval_id": 2,
-        "expectation": "Identifies the material as the Rewrote It in X pattern"
-      },
-      {
-        "eval_id": 2,
-        "expectation": "States that the section carrying this pattern's credibility is \"what went wrong\""
-      },
-      {
-        "eval_id": 2,
         "expectation": "Declines to produce a finished post until the \"what went wrong\" material exists, rather than drafting around its absence"
-      },
-      {
-        "eval_id": 2,
-        "expectation": "Asks specifically for regressions, surprises, or costs nobody budgeted during the migration"
       },
       {
         "eval_id": 2,
@@ -195,19 +195,7 @@
       },
       {
         "eval_id": 2,
-        "expectation": "Raises that part of the improvement may come from reimplementing code the team understood better the second time rather than from Go itself"
-      },
-      {
-        "eval_id": 2,
         "expectation": "Requires the alternatives that were considered and why they lost"
-      },
-      {
-        "eval_id": 2,
-        "expectation": "Assigns the 840ms, 95ms and 60% figures to the measured evidence class and asks how those runs were produced"
-      },
-      {
-        "eval_id": 2,
-        "expectation": "States the mode and the chosen pattern before doing any other work"
       },
       {
         "eval_id": 3,
@@ -223,15 +211,19 @@
       },
       {
         "eval_id": 3,
-        "expectation": "Requires absolute ingest numbers alongside the 3x ratio"
-      },
-      {
-        "eval_id": 3,
-        "expectation": "Requires the disclosure to name the version of both systems compared"
-      },
-      {
-        "eval_id": 3,
         "expectation": "Requires at least one chart rather than a table alone"
+      },
+      {
+        "eval_id": 4,
+        "expectation": "States that the public post is derived from the internal review and never a copy of it"
+      },
+      {
+        "eval_id": 4,
+        "expectation": "Runs a redaction pass before drafting anything"
+      },
+      {
+        "eval_id": 4,
+        "expectation": "Treats the 118 customers and 1.2M failed requests figures as a deliberate publish-or-not decision rather than carrying them across automatically"
       },
       {
         "eval_id": 4,
@@ -295,35 +287,11 @@
       },
       {
         "eval_id": 6,
-        "expectation": "Selects the Non-markety Product Perspectives pattern"
-      },
-      {
-        "eval_id": 6,
         "expectation": "Leads with the engineering problem stated in terms an engineer outside Riverbend also has, rather than with the announcement"
       },
       {
         "eval_id": 6,
-        "expectation": "Rejects or reworks the suggested announcement-style title"
-      },
-      {
-        "eval_id": 6,
-        "expectation": "Keeps \"who we are\" to one plain sentence about what the company builds and sells"
-      },
-      {
-        "eval_id": 6,
-        "expectation": "Includes a section on what the design cost: trade-offs accepted, work abandoned, and the parts still unfinished"
-      },
-      {
-        "eval_id": 6,
         "expectation": "Applies the test that deleting every product name must still leave something behind, and says so"
-      },
-      {
-        "eval_id": 6,
-        "expectation": "States the commercial interest once, plainly and early in the post, not in a footer"
-      },
-      {
-        "eval_id": 6,
-        "expectation": "Attributes the post to named engineers rather than publishing it unsigned"
       },
       {
         "eval_id": 6,
@@ -335,11 +303,19 @@
       },
       {
         "eval_id": 7,
+        "expectation": "States the ranking of the surviving options explicitly rather than implying it by order"
+      },
+      {
+        "eval_id": 7,
         "expectation": "Names the hard date as the answer that promotes Bug Hunt and Thoughts on Trends"
       },
       {
         "eval_id": 7,
         "expectation": "Recommends the outage write-up, as a Bug Hunt, as the highest surviving option"
+      },
+      {
+        "eval_id": 7,
+        "expectation": "Gives the reason that the internal incident review already exists, which makes this post near-zero effort"
       },
       {
         "eval_id": 7,
@@ -355,7 +331,7 @@
       },
       {
         "eval_id": 7,
-        "expectation": "Notes that a competitor benchmark carries a legal or compliance review the other two options do not"
+        "expectation": "Names the conditions under which the benchmark would be worth promoting anyway"
       },
       {
         "eval_id": 8,
@@ -364,22 +340,6 @@
       {
         "eval_id": 8,
         "expectation": "Iterates until every check passes rather than reporting failures and stopping"
-      },
-      {
-        "eval_id": 8,
-        "expectation": "Preserves the code blocks unchanged through the humanizer pass"
-      },
-      {
-        "eval_id": 8,
-        "expectation": "Preserves the pasted command output unchanged"
-      },
-      {
-        "eval_id": 8,
-        "expectation": "Preserves the benchmark tables unchanged"
-      },
-      {
-        "eval_id": 8,
-        "expectation": "Preserves version numbers unchanged"
       },
       {
         "eval_id": 8,
@@ -395,23 +355,11 @@
       },
       {
         "eval_id": 8,
-        "expectation": "Returns a handoff list of what still needs a human, such as unrun benchmarks, unreviewed technical claims, a legal or security read, or missing diagrams"
-      },
-      {
-        "eval_id": 8,
         "expectation": "Confirms the snippets are version-pinned, the post dated, and the full version linked"
       },
       {
         "eval_id": 9,
-        "expectation": "Reverses the proposed order and puts the core pass (facts, focus, flow) before any prose polish"
-      },
-      {
-        "eval_id": 9,
         "expectation": "Names the four revision passes in order: core, clarity, components, consumability"
-      },
-      {
-        "eval_id": 9,
-        "expectation": "Gives the reason that polishing early wastes work on sentences that later get cut"
       },
       {
         "eval_id": 9,
@@ -423,15 +371,7 @@
       },
       {
         "eval_id": 9,
-        "expectation": "Recommends a single clear owner for the review"
-      },
-      {
-        "eval_id": 9,
         "expectation": "Recommends two reads: an engineer who worked on the system for accuracy, and someone outside the team for insider vocabulary"
-      },
-      {
-        "eval_id": 9,
-        "expectation": "Replaces forwarding the draft with briefing each reviewer"
       },
       {
         "eval_id": 9,
@@ -439,11 +379,11 @@
       },
       {
         "eval_id": 9,
-        "expectation": "States that a reviewer's pass is not a licence to rewrite the draft"
+        "expectation": "Treats legal or marketing review as triggered by the post's content rather than applied by default"
       },
       {
-        "eval_id": 9,
-        "expectation": "Treats legal or marketing review as triggered by the post's content rather than applied by default"
+        "eval_id": 10,
+        "expectation": "Declines to attribute revenue or pipeline to the single post"
       },
       {
         "eval_id": 10,

@@ -1,275 +1,466 @@
-# Wavelength SDK v2: A New Auth Model, a Full Migration Guide, and Your First Integration
+I didn't have your SDK's real details, so I wrote this around a stand-in called **Acme**, in TypeScript. Anything that depends on a fact only you know is marked **[CONFIRM: …]**. I left those as markers on purpose, because inventing the real breaking changes or the real auth history would make the post wrong. Replace the code and the specifics before you publish.
 
-Wavelength SDK v2 is generally available today, across Node.js, Python, and Go. It's the first major version bump since we launched three years ago, and it touches nearly every part of the developer experience — how you authenticate, how you call the API, and how errors and pagination behave.
+I put the story first, the tutorial second and the migration reference last. Each section serves a different reader, and the headings let people jump to theirs.
 
-This post does three things. First, it tells the real story of why we rebuilt authentication from the ground up — it wasn't a cosmetic change, it came out of a security incident we take responsibility for. Second, it's a complete migration guide for anyone running v1 in production today. Third, if you've never touched Wavelength before, it's a step-by-step walkthrough that takes you from zero to a working integration in about fifteen minutes.
+---
 
-Read the section you need. If you're migrating, skip to "Everything That Broke." If you're starting fresh, skip to "Your First Integration." If you want the context behind the biggest change, keep reading.
+# Acme SDK v2: what broke, how to build your first integration, and why we rebuilt auth
 
-## Why We Redesigned Auth
+Acme SDK v2 is out. It is a breaking release, and the biggest break is authentication.
 
-Every Wavelength v1 integration started the same way: you generated an API key in the dashboard, dropped it into an environment variable, and sent it as a plain header on every request. It was simple, and simple was the point — we optimized hard for time-to-first-request in the early days, and a static bearer token is about as fast as auth gets.
+This post does three jobs, and you can read them in any order:
 
-It's also, in hindsight, a design that ages badly, and one specific week in March made that impossible to ignore.
+1. **Why we redesigned auth.** The short story of what went wrong in v1.
+2. **Your first integration.** A start-to-finish walkthrough if you are new to the SDK.
+3. **Upgrading from v1.** Every breaking change, ordered by how many people it will hit, with a before and after for each.
 
-A customer's key showed up in a public GitHub repository — not because they were careless, but because a CI script echoed environment variables into a build log for debugging, and that log got attached to a public issue when someone filed a bug report. The key had been live for eleven months. It had full access to every endpoint: sending messages, reading message history, managing webhooks, even inviting new team members to the workspace. We caught it through routine anomaly monitoring — a sudden spike in send volume from an IP range the account had never used — and revoked it within twenty minutes of the spike. No customer data was exfiltrated as far as our logs show, and we disclosed the incident to the affected customer the same day.
+If you are upgrading, jump to [Upgrading from v1](#upgrading-from-v1). If you are new, start at [Your first integration](#your-first-integration). The auth story comes first because it explains most of what changed.
 
-But twenty minutes is only fast relative to how bad it could have been. The real problem surfaced when we sat down to fix it: revoking that one key meant regenerating the *only* key the customer had, which meant redeploying every service that used it, because v1 keys weren't scoped and there was no way to say "just cut off the key that leaked, the other three services are fine." One key, one blast radius: your entire workspace.
+## Why we redesigned the auth layer
 
-That's the failure mode static, unscoped, non-expiring credentials always converge on eventually. It's not a hypothetical — long-lived secrets end up in logs, in shell history, in support tickets pasted into chat, in old CI configs nobody remembers exists. The fix isn't "tell developers to be more careful." The fix is a credential design where a leak is contained and cheap to recover from by default.
+In v1, authentication was one function call that did everything:
 
-We set three requirements for v2 auth:
-
-- **A leaked credential should expire on its own.** No incident should ever again depend on someone noticing a spike in time.
-- **Scope should be enforceable, not just documented.** A key used only to send transactional messages shouldn't be *able* to read message history or manage webhooks, regardless of what the dashboard UI suggests.
-- **Rotation should never require a deploy.** Revoking one compromised credential should never force you to touch the four other services that don't share it.
-
-What we shipped is a standard OAuth 2.0 client-credentials flow. You still generate a credential in the dashboard, but now it's a client ID and client secret pair, scoped at creation time to one or more permission sets (`messages:send`, `messages:read`, `webhooks:manage`, and so on). That pair is never sent on API requests directly — it's exchanged for a short-lived access token (one hour, signed, scoped down to exactly what the client ID was granted) that *is* sent on requests. If a client secret leaks, the blast radius is one hour of tokens minted from it, all carrying only the scopes you assigned, not your whole account. Revoking the secret is instant and independent of every other credential in the workspace.
-
-The SDK handles the token exchange and caching transparently — you initialize a client with a client ID and secret, and the library fetches, caches, and refreshes access tokens behind the scenes. You don't write any token-handling code yourself; that's covered in the quickstart below. For customers with stricter compliance requirements, v2 also supports mutual TLS as an additional layer on top of the token flow, configurable per workspace.
-
-The honest tradeoff: this adds a network round trip the first time a client mints a token, and again on refresh, which a single static header never required. We mitigated this by caching tokens for their full lifetime and refreshing proactively a few minutes before expiry, so in steady state it costs nothing per request. We measured p99 latency impact in production traffic during the beta and it was within noise. Given what it buys — no more single leaked string owning an entire account — it was an easy trade to make.
-
-## Everything That Broke
-
-If you're upgrading a v1 integration, here's the full list. None of these are cosmetic — every one requires a code change before v2 will work.
-
-| Area | v1 | v2 |
-|---|---|---|
-| Package | `wavelength-sdk` | `@wavelength/sdk` |
-| Auth | Static API key, `Authorization: Bearer <key>` | Client ID + secret, SDK exchanges for short-lived token automatically |
-| Client init | `new Wavelength(apiKey)` | `new Wavelength({ clientId, clientSecret })` |
-| Sending | `client.send(to, body)` | `client.messages.send({ to, body })` |
-| Reading history | `client.history(limit, offset)` | `client.messages.list({ limit, cursor })` |
-| Pagination | Offset-based | Cursor-based |
-| Response shape | Flat object | `{ data, meta }` envelope |
-| Errors | Single `WavelengthError` | Typed hierarchy: `AuthError`, `RateLimitError`, `ValidationError`, `ApiError` |
-| Webhook signatures | HMAC-SHA1 over the raw body | HMAC-SHA256 over `timestamp.body`, with a 5-minute replay window |
-| Minimum runtime | Node 12+, Python 3.6+, Go 1.16+ | Node 18+, Python 3.9+, Go 1.21+ |
-| Default request timeout | 60s | 30s (configurable) |
-
-Walking through the ones most likely to bite you:
-
-**Auth and client initialization.** This is the change with no shortcut. Static API keys are deactivated for v1 traffic starting six months from today (see timeline below) but are being deprecated immediately for v2 — you cannot pass an old-style API key to the v2 client at all. Generate a client ID/secret pair from **Dashboard → API Access → Create Credential**, choose the scopes that pair actually needs (don't default to "all" — that defeats the reason we did this), and pass both to the constructor:
-
-```typescript
+```ts
 // v1
-import Wavelength from "wavelength-sdk";
-const client = new Wavelength(process.env.WAVELENGTH_API_KEY);
+import { Acme } from "acme-sdk";
 
-// v2
-import { Wavelength } from "@wavelength/sdk";
-const client = new Wavelength({
-  clientId: process.env.WAVELENGTH_CLIENT_ID,
-  clientSecret: process.env.WAVELENGTH_CLIENT_SECRET,
+const client = new Acme({ apiKey: process.env.ACME_KEY });
+```
+
+That was deliberate. We wanted the shortest path from install to first request, and for a while it worked. A new user could be making calls in under five minutes.
+
+The problems came from what that one line hid.
+
+### The key was doing three jobs
+
+A v1 API key did three things at once:
+
+- It **identified** the caller.
+- It **authorized** every action, with no scoping.
+- It **lived forever** unless someone rotated it by hand.
+
+Each job is reasonable alone. Combined in one long-lived string, they gave us a credential that was too powerful and too hard to replace. A key pasted into a CI log or a screenshot was a full-access credential until someone noticed.
+
+**[CONFIRM: replace with your real incident or support-ticket pattern. For example: "In the year before this release, N% of our security-related support tickets were leaked keys." Use a number only if you can source it.]**
+
+### Rotation was a breaking change for our users
+
+Rotating a v1 key meant a hard cutover. The old key stopped working the moment the new one was created. Teams that wanted to rotate on a schedule had to coordinate a deploy and a key swap to the second. Most of them reasonably chose not to rotate.
+
+So the safest practice was also the most painful one, and people skipped it. That is a design failure, not a user failure.
+
+### Auth state was global and invisible
+
+The v1 client cached credentials inside itself and refreshed them silently. This made the happy path pleasant. It also made three things hard:
+
+- **Testing.** You could not assert on auth behavior without mocking the whole client.
+- **Multi-tenant apps.** Serving several accounts from one process meant creating and juggling several full clients.
+- **Debugging.** When a request failed with a 401, nothing told you whether the credential was missing, expired, scoped too narrowly or revoked.
+
+### What we decided
+
+We set three rules for v2:
+
+1. **Credentials are explicit objects, not constructor strings.** You can see them, pass them around, swap them and test them.
+2. **Every credential is scoped and expires.** Long-lived, all-powerful keys are no longer the default path.
+3. **Failures say why.** An auth error names which of the four cases you hit.
+
+The cost is real. v2 setup takes a few more lines than v1, and every v1 user has to touch their auth code. We judged that a one-time migration was better than a permanent liability, and we hope the upgrade section makes the cost small.
+
+**[CONFIRM: add one or two honest sentences about alternatives you considered and rejected, such as keeping API keys with an opt-in scope parameter, and why they lost.]**
+
+## Your first integration
+
+This walkthrough builds a small working integration from an empty directory. It assumes Node 20 or later and an Acme account.
+
+**[CONFIRM: swap in your real package name, minimum runtime, and the actual resource you would use for a first integration.]**
+
+### Step 1: Install
+
+```bash
+mkdir acme-first-integration && cd acme-first-integration
+npm init -y
+npm install acme-sdk@2
+```
+
+Check that you got v2:
+
+```bash
+npm ls acme-sdk
+```
+
+### Step 2: Create a scoped credential
+
+In the dashboard, go to **Settings → Credentials → New credential**. Give it:
+
+- A name you will recognize later, such as `first-integration-dev`.
+- The narrowest scope that works. For this walkthrough, read access to one resource is enough.
+- A short expiry. Seven days is plenty for a tutorial.
+
+Copy the secret once. The dashboard will not show it again. Store it in an environment variable:
+
+```bash
+export ACME_CREDENTIAL_SECRET="paste-it-here"
+```
+
+**[CONFIRM: match this to your real dashboard path and credential fields.]**
+
+### Step 3: Build the credential object
+
+Create `index.ts`:
+
+```ts
+import { Acme, ApiKeyCredential } from "acme-sdk";
+
+const credential = new ApiKeyCredential({
+  secret: process.env.ACME_CREDENTIAL_SECRET!,
 });
+
+const client = new Acme({ credential });
 ```
 
-**Method namespacing.** v1's flat method calls (`send`, `history`, `webhook`) are now grouped under resource namespaces (`messages.send`, `messages.list`, `webhooks.create`). This wasn't change for its own sake — v1's flat namespace was already colliding as we added features, and every new resource would have made it worse. If you have a large call site, a straightforward find-and-replace covers most of it: `client.send(` becomes `client.messages.send(`, and so on. Full mapping is in the migration reference doc linked at the end.
+This is the main difference from v1. The credential is its own object. The client holds a reference to it and does not own it.
 
-**Pagination.** Offset-based pagination on `history()` is gone. `messages.list()` now returns a cursor in the response envelope's `meta` field; pass that cursor back in to get the next page. This is a real behavior change, not just a rename — offsets drift when new messages arrive between page fetches, so if your integration paginates through history while messages are actively being sent, cursor pagination will also fix a class of duplicate/skipped-row bugs you may not have noticed you had:
+### Step 4: Make your first request
 
-```typescript
-// v1
-const page1 = await client.history(50, 0);
-const page2 = await client.history(50, 50);
+```ts
+const items = await client.items.list({ limit: 5 });
 
-// v2
-const page1 = await client.messages.list({ limit: 50 });
-const page2 = await client.messages.list({ limit: 50, cursor: page1.meta.nextCursor });
+for (const item of items.data) {
+  console.log(item.id, item.name);
+}
 ```
 
-**Error handling.** v1 threw one error class for everything, and you branched on `error.message` string matching — which is exactly as fragile as it sounds. v2 throws a typed hierarchy so you can branch on `instanceof`:
+Run it:
 
-```typescript
+```bash
+npx tsx index.ts
+```
+
+If you see five items, auth works end to end. If you don't, [Step 7](#step-7-read-the-errors) shows how to read the failure.
+
+### Step 5: Handle pagination
+
+List calls return a page, not an array. The page tells you whether more results exist:
+
+```ts
+let page = await client.items.list({ limit: 100 });
+const all = [...page.data];
+
+while (page.hasNextPage()) {
+  page = await page.nextPage();
+  all.push(...page.data);
+}
+
+console.log(`fetched ${all.length} items`);
+```
+
+If you prefer iteration, the page is also an async iterable:
+
+```ts
+for await (const item of client.items.list({ limit: 100 })) {
+  console.log(item.id);
+}
+```
+
+**[CONFIRM: only keep both patterns if both exist in v2.]**
+
+### Step 6: Write something
+
+Reads are safe. Writes need a credential whose scope allows them. Create a second credential with write access, or widen the first one, then try:
+
+```ts
+const created = await client.items.create({
+  name: "hello from v2",
+});
+
+console.log("created", created.id);
+```
+
+Keep write credentials separate from read credentials. If a read-only credential leaks, the damage is small, and that is the point of scoping.
+
+### Step 7: Read the errors
+
+v2 raises typed errors. In v1 you matched on message strings. In v2 you match on the class:
+
+```ts
+import {
+  AuthMissingError,
+  AuthExpiredError,
+  AuthScopeError,
+  AuthRevokedError,
+  RateLimitError,
+} from "acme-sdk";
+
 try {
-  await client.messages.send({ to, body });
+  await client.items.create({ name: "test" });
 } catch (err) {
-  if (err instanceof RateLimitError) {
-    await sleep(err.retryAfterMs);
-  } else if (err instanceof ValidationError) {
-    console.error("Bad request:", err.fields);
-  } else if (err instanceof AuthError) {
-    console.error("Credential problem:", err.message);
+  if (err instanceof AuthScopeError) {
+    console.error("This credential cannot write. Needed:", err.requiredScope);
+  } else if (err instanceof AuthExpiredError) {
+    console.error("Credential expired at", err.expiredAt);
+  } else if (err instanceof AuthRevokedError) {
+    console.error("Credential was revoked. Create a new one.");
+  } else if (err instanceof AuthMissingError) {
+    console.error("No credential was supplied.");
+  } else if (err instanceof RateLimitError) {
+    console.error("Retry after", err.retryAfterSeconds, "seconds");
   } else {
     throw err;
   }
 }
 ```
 
-**Webhook signature verification.** If you verify inbound webhooks, this is a silent-failure risk if you miss it: v1 signed the raw body with HMAC-SHA1; v2 signs `${timestamp}.${body}` with HMAC-SHA256 and rejects anything outside a 5-minute window to prevent replay. Your existing verification code will not error — it will just always return false, which usually gets "fixed" by disabling verification entirely. Don't do that; use `client.webhooks.verify(payload, signatureHeader)`, which the SDK implements correctly for you.
+These four auth errors are the "failures say why" rule from the redesign. A 401 used to be a dead end, and now it names its cause.
 
-**Migration timeline:**
+### Step 8: Rotate without downtime
 
-- **Today**: v2 is stable and generally available. v1 remains fully supported.
-- **+3 months**: v1 moves to security-fixes-only. No new features land on it.
-- **+6 months**: v1 static API keys stop authenticating. Existing v1 integrations must have moved to v2 credentials by this date.
-- **+9 months**: v1 endpoints return `410 Gone`.
+This is the part v1 could not do. Create a new credential in the dashboard while the old one stays valid, and let both work during an overlap window. Then swap them:
 
-We know "just migrate" is easy for us to say and harder to schedule. If you need more runway or hit something the migration guide doesn't cover, our support channel is the fastest way to reach us, and we'll work with you directly rather than let a deadline break your integration.
+```ts
+const client = new Acme({
+  credential: new ApiKeyCredential({
+    secret: process.env.ACME_CREDENTIAL_SECRET_NEW!,
+  }),
+});
+```
 
-## Your First Integration
+Deploy, confirm traffic is healthy, then revoke the old credential. Nothing hard-cuts.
 
-If you're new to Wavelength, here's the fifteen-minute path to sending your first message and verifying your first delivery event, on v2, from scratch.
+**[CONFIRM: describe your real overlap behavior and its maximum duration.]**
 
-**Prerequisites**
+### Step 9: Test it
 
-| Requirement | Version | Check |
+Because credentials are objects, you can fake one:
+
+```ts
+import { StaticCredential } from "acme-sdk/testing";
+
+const client = new Acme({
+  credential: new StaticCredential({ token: "test-token" }),
+  baseUrl: "http://localhost:4010",
+});
+```
+
+Point `baseUrl` at a mock server and your tests run without the network and without real secrets. In v1 you had to stub the whole client.
+
+**[CONFIRM: only keep this step if `acme-sdk/testing` and `baseUrl` exist.]**
+
+You now have a working integration with a scoped credential, pagination, typed error handling, a rotation path and a test seam. That is the full shape of a v2 integration, and anything larger is more of the same.
+
+## Upgrading from v1
+
+This section lists everything that breaks. Entries are ordered by how many users each will affect, most first. Each has a **detection signal** so you can tell whether it applies to you, followed by a before and after.
+
+Start with a clean branch and your test suite green on v1. Then install v2:
+
+```bash
+npm install acme-sdk@2
+npx tsc --noEmit
+```
+
+The type checker will find most of the breaks below for you.
+
+**[CONFIRM: if you ship a codemod, add its command here and state what it covers and what it leaves to the reader.]**
+
+### 1. Client construction (affects everyone)
+
+**Detection:** any `new Acme({ apiKey: ... })`. TypeScript reports `apiKey` does not exist.
+
+```ts
+// v1
+const client = new Acme({ apiKey: process.env.ACME_KEY });
+
+// v2
+import { Acme, ApiKeyCredential } from "acme-sdk";
+
+const client = new Acme({
+  credential: new ApiKeyCredential({ secret: process.env.ACME_KEY! }),
+});
+```
+
+Your existing v1 keys keep working here as `ApiKeyCredential` secrets. **[CONFIRM: true only if v1 keys remain valid on the v2 API.]** You do not need to issue new keys on day one. You should, though, because v1 keys are unscoped and never expire. See [Moving off legacy keys](#moving-off-legacy-keys) below.
+
+### 2. Error handling (affects most users)
+
+**Detection:** `catch` blocks that check `err.message`, `err.code` or `err.status === 401`.
+
+```ts
+// v1
+try {
+  await client.items.list();
+} catch (err: any) {
+  if (err.status === 401) {
+    refreshAndRetry();
+  }
+}
+
+// v2
+import { AuthExpiredError } from "acme-sdk";
+
+try {
+  await client.items.list();
+} catch (err) {
+  if (err instanceof AuthExpiredError) {
+    refreshAndRetry();
+  }
+}
+```
+
+v2 errors are classes. `err.status` still exists on HTTP errors, but auth failures are now one of four subclasses. A 401 handler that retried on every 401 will now retry on revoked and scope errors that retries cannot fix. Branch on the class.
+
+### 3. Automatic token refresh is gone from the client (affects OAuth users)
+
+**Detection:** you passed `refreshToken` to the v1 client, or you relied on silent refresh.
+
+```ts
+// v1
+const client = new Acme({
+  accessToken,
+  refreshToken,
+  onTokenRefresh: (t) => save(t),
+});
+
+// v2
+import { OAuthCredential } from "acme-sdk";
+
+const credential = new OAuthCredential({
+  accessToken,
+  refreshToken,
+  clientId: process.env.ACME_CLIENT_ID!,
+  onRefresh: async (tokens) => {
+    await save(tokens);
+  },
+});
+
+const client = new Acme({ credential });
+```
+
+Refresh now belongs to the credential. Two changes matter:
+
+- `onRefresh` is awaited. If it throws, the request fails instead of continuing with tokens you did not persist.
+- One credential object can serve several clients, so the refresh happens once, not once per client.
+
+**[CONFIRM: verify the awaited behavior and the shared-credential claim.]**
+
+### 4. Multi-tenant usage (affects platforms)
+
+**Detection:** you create one client per customer account.
+
+```ts
+// v1
+const clients = new Map<string, Acme>();
+function forTenant(id: string) {
+  if (!clients.has(id)) {
+    clients.set(id, new Acme({ apiKey: lookupKey(id) }));
+  }
+  return clients.get(id)!;
+}
+
+// v2
+const client = new Acme({ credential: platformCredential });
+
+await client.withCredential(tenantCredential).items.list();
+```
+
+`withCredential` returns a lightweight view that reuses the same connection pool and configuration. **[CONFIRM: only keep this if you ship such an API.]** If you do not want to change your tenant layout yet, the v1 pattern still works.
+
+### 5. Pagination return type (affects list callers)
+
+**Detection:** code that treats the result of `list()` as an array, such as `.length`, `.map` or indexing.
+
+```ts
+// v1
+const items = await client.items.list();
+items.map((i) => i.id);
+
+// v2
+const page = await client.items.list();
+page.data.map((i) => i.id);
+```
+
+TypeScript catches this one. In plain JavaScript it fails at runtime, so grep for `.list(` before you deploy.
+
+### 6. Renamed and removed methods (affects some users)
+
+**[CONFIRM: replace this table with your real renames. Keep each row to one line and give every removed method a replacement.]**
+
+| v1 | v2 | Notes |
 |---|---|---|
-| Node.js | 18+ | `node --version` |
-| npm | 9+ | `npm --version` |
-| A Wavelength account | — | [wavelength.dev/signup](https://wavelength.dev/signup) |
+| `client.getItem(id)` | `client.items.get(id)` | Resource namespaces |
+| `client.createItem(body)` | `client.items.create(body)` | Same body shape |
+| `client.removeItem(id)` | `client.items.delete(id)` | Renamed for consistency |
+| `client.setBaseURL(url)` | constructor option `baseUrl` | Set once, not mutable |
 
-You should be comfortable with basic async/await JavaScript and reading JSON responses. Nothing else is assumed.
+### 7. Timeouts and retries (changed defaults)
 
-### Step 1: Create a credential
+**Detection:** none at compile time. This one changes behavior silently.
 
-In the dashboard, go to **API Access → Create Credential**. Name it something that identifies where it'll run (e.g., `local-dev`), and grant it the `messages:send` scope only — you don't need `messages:read` or `webhooks:manage` for this tutorial, and scoping tightly from the start is the whole point of the new model. Copy the client ID and client secret shown; the secret is only displayed once.
+- Default request timeout: **[CONFIRM: v1 value]** → **[CONFIRM: v2 value]**
+- Automatic retries: **[CONFIRM: v1 behavior]** → **[CONFIRM: v2 behavior]**
 
-### Step 2: Install the SDK
+If your code depended on the old defaults, set them explicitly:
 
-```bash
-mkdir my-wavelength-app && cd my-wavelength-app
-npm init -y
-npm install @wavelength/sdk
-```
-
-### Step 3: Store your credentials
-
-Create a `.env` file in the project root:
-
-```
-WAVELENGTH_CLIENT_ID=your_client_id_here
-WAVELENGTH_CLIENT_SECRET=your_client_secret_here
-```
-
-Add `.env` to `.gitignore` now, before you forget — this is exactly the mistake the auth redesign above exists to make less catastrophic, but it's still worth not making.
-
-```bash
-echo ".env" >> .gitignore
-npm install dotenv
-```
-
-### Step 4: Initialize the client and send a message
-
-Create `index.js`:
-
-```javascript
-require("dotenv").config();
-const { Wavelength } = require("@wavelength/sdk");
-
-const client = new Wavelength({
-  clientId: process.env.WAVELENGTH_CLIENT_ID,
-  clientSecret: process.env.WAVELENGTH_CLIENT_SECRET,
-});
-
-async function main() {
-  const response = await client.messages.send({
-    to: "+15551234567",
-    body: "Hello from my first Wavelength integration!",
-  });
-
-  console.log("Sent:", response.data.id, response.data.status);
-}
-
-main().catch((err) => {
-  console.error("Send failed:", err.message);
-  process.exit(1);
+```ts
+const client = new Acme({
+  credential,
+  timeoutMs: 30_000,
+  maxRetries: 2,
 });
 ```
 
-Run it:
+Silent default changes are the most dangerous kind, so watch your latency and error dashboards after the upgrade.
 
-```bash
-node index.js
-```
+### 8. Runtime and module format
 
-**Checkpoint.** You should see something like:
+**[CONFIRM: your real minimum Node version, and whether v1 was CommonJS-only.]** If v2 raises the minimum runtime, check your Node version and CI images before you upgrade. If v2 is ESM-first, CommonJS callers on older bundlers may need a config change.
 
-```
-Sent: msg_8f2a1c accepted
-```
+### Moving off legacy keys
 
-🎉 That's a real message, sent through v2, with the SDK handling the OAuth token exchange entirely behind the scenes — you never touched a token directly, which is exactly the point.
+After the upgrade works, spend a little time to retire your v1 keys.
 
-### Step 5: Handle errors properly
+1. List every place a v1 key is used. Search your repositories, CI secrets and deployment configs.
+2. For each one, create a scoped, expiring credential with the narrowest scope that works.
+3. Deploy with the new credential while the old key still works.
+4. Confirm traffic on the new credential in the dashboard.
+5. Revoke the old key.
 
-Real integrations need to handle rate limits and validation failures, not just the happy path. Update the `main` function:
+Do this one service at a time. The overlap window exists so that no step needs a coordinated cutover.
 
-```javascript
-const { RateLimitError, ValidationError, AuthError } = require("@wavelength/sdk");
+**[CONFIRM: state the deprecation timeline. When do v1 keys stop working, if ever? When does v1 SDK support end? Give real dates and say where users can check them.]**
 
-async function main() {
-  try {
-    const response = await client.messages.send({
-      to: "+15551234567",
-      body: "Hello from my first Wavelength integration!",
-    });
-    console.log("Sent:", response.data.id, response.data.status);
-  } catch (err) {
-    if (err instanceof RateLimitError) {
-      console.error(`Rate limited, retry after ${err.retryAfterMs}ms`);
-    } else if (err instanceof ValidationError) {
-      console.error("Invalid request:", err.fields);
-    } else if (err instanceof AuthError) {
-      console.error("Check your client ID/secret and their scopes:", err.message);
-    } else {
-      throw err;
-    }
-  }
-}
-```
+### A short upgrade checklist
 
-Try it once with an intentionally malformed phone number (`to: "not-a-number"`) to see `ValidationError` fire — it's worth seeing each error type trigger at least once before you're debugging it in production at 2am.
+- [ ] Tests are green on v1 before you start
+- [ ] `npm install acme-sdk@2`
+- [ ] `npx tsc --noEmit` and fix client construction
+- [ ] Replace error matching with `instanceof` checks
+- [ ] Move OAuth refresh into `OAuthCredential`
+- [ ] Update `list()` callers to use `.data`
+- [ ] Set timeout and retry options explicitly
+- [ ] Run the full test suite
+- [ ] Watch error rate and latency after deploy
+- [ ] Schedule retirement of v1 keys
 
-### Step 6: Verify a delivery webhook
+### Verify with a real upgrade
 
-Messages are sent asynchronously; delivery status arrives as a webhook. Add a `webhooks:manage`-scoped credential (or add that scope to your existing one), then register an endpoint:
+The best test is to upgrade a real project with a cold checkout, following only the steps above, and see what you hit. We did this on **[CONFIRM: what you upgraded and what the exercise found]**. If something in this guide is wrong or missing for your case, open an issue at **[CONFIRM: URL]**, and we will fix the guide.
 
-```javascript
-await client.webhooks.create({
-  url: "https://your-app.example.com/wavelength/webhook",
-  events: ["message.delivered", "message.failed"],
-});
-```
+## What's next
 
-On the receiving end, verify every inbound payload before trusting it — this is the HMAC-SHA256-with-timestamp scheme from the migration section above, and the SDK implements it for you:
+v2 is a smaller surface with an auth layer we are no longer worried about. We would rather you tell us where the new model hurts than learn it from a support ticket.
 
-```javascript
-const express = require("express");
-const app = express();
-app.use(express.raw({ type: "application/json" }));
+- **Docs:** [CONFIRM: URL]
+- **Changelog:** [CONFIRM: URL]
+- **Issues and feedback:** [CONFIRM: URL]
 
-app.post("/wavelength/webhook", (req, res) => {
-  const signature = req.headers["wavelength-signature"];
-  const isValid = client.webhooks.verify(req.body, signature);
+Thanks to everyone who ran the release candidates and sent us rough edges. **[CONFIRM: name contributors only with their permission.]**
 
-  if (!isValid) {
-    return res.status(401).send("Invalid signature");
-  }
+---
 
-  const event = JSON.parse(req.body);
-  console.log("Delivery event:", event.type, event.data.id);
-  res.status(200).send("ok");
-});
+**Before you publish:**
 
-app.listen(3000, () => console.log("Listening on http://localhost:3000"));
-```
-
-**Checkpoint.** Send another message from Step 5, and within a few seconds you should see a `Delivery event: message.delivered ...` line in this server's log. That's a complete, end-to-end integration: authenticated send, error handling, and verified webhook delivery.
-
-### Troubleshooting
-
-**`AuthError: invalid_client`** — Your client ID or secret is wrong, or the credential was deleted. Regenerate it from the dashboard and double check `.env` was actually loaded (`console.log(process.env.WAVELENGTH_CLIENT_ID)` to confirm).
-
-**`AuthError: insufficient_scope`** — Your credential doesn't have the scope the call needs. Go back to **API Access** and add the missing scope; you don't need to regenerate the secret, scopes can be edited on an existing credential.
-
-**Webhook signature always invalid** — Almost always one of two causes: you're reading `req.body` after it's been parsed as JSON (the raw bytes are required for the signature check, hence `express.raw()` above, not `express.json()`), or your server's clock has drifted outside the 5-minute replay window — check `date` on the host.
-
-### Next steps
-
-- Full API reference and every SDK method: [docs.wavelength.dev](https://docs.wavelength.dev)
-- Detailed migration reference with the complete v1→v2 method mapping: [docs.wavelength.dev/migrate-v2](https://docs.wavelength.dev/migrate-v2)
-- Questions while migrating: our support channel is monitored daily, and for anything time-sensitive tied to the sunset timeline, say so up front and we'll prioritize it.
-
-That's v2 — a smaller blast radius when something leaks, a clearer API surface, and hopefully a faster fifteen minutes to your first message than v1 ever was.
+- **Word count.** With the markers filled in, the post lands near 3,000 words. Dropping the testing step or the legacy-key section trims about 250 words.
+- **Code.** I haven't run any of it, because it targets a package I invented. Run each snippet against the real v2 before it goes out.
+- **Auth story.** It needs one concrete incident or number from you to carry the section.
+- **Safe to publish.** The post doesn't expose anything internal as written. If you add the real incident, check that it names no customer or security detail you can't publish.

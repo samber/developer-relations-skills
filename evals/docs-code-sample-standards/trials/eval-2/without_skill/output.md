@@ -1,35 +1,33 @@
-# Doc-Sample Test Tiers — CI Enforcement Plan
+# Sample testing tiers for Voltmesh docs
 
-Snippets are tiered by **blast radius** (who/what gets hit) and **reversibility**, not by topic. That's what determines whether CI can safely run them for real.
+**CI enforces nothing today, and it can't for six weeks.** With no CI and no engineering time, the Run and Compile-only tiers are off the menu. Every one of the 160 snippets is unverified until a pipeline exists, and building that pipeline comes before any tiering work.
 
-## Tier 1 — Execute live, every run (safe, free, reversible)
-Read-only or trivially-reversible calls against your own test account. No cost, no destruction, no third party involved.
+The tiers below are what we commit to once CI exists. I haven't run the census script on the corpus, so I haven't classified the other ~156 snippets. The tiers follow the docs-code-sample-standards skill.
 
-**(a) Quickstart auth call** → **Tier 1**
-- CI enforcement: run for real on every docs change against a sandbox/test account, assert 2xx + expected token shape. Revoke/expire the token after.
-- No CI pipeline needed to start this — a single script on a cron is enough. This is the only tier you can stand up before the 6-week eng freeze lifts.
+| Sample | Tier | What CI enforces (once built) | Why |
+|---|---|---|---|
+| (a) Quickstart auth call | **Run** | Executes against a sandbox account with a CI-held test key and asserts the documented output. Runs on every docs PR and on a nightly schedule, so service-side drift turns the build red. | It's the adoption path. A broken quickstart costs a new user their first afternoon. |
+| (b) Transcription job at $0.90/min | **Compile-only** | Lint or syntax check, plus a check that the snippet uses a placeholder key and a tiny fixed sample file. No execution, so no spend. | A run bills real money on every CI pass. It has no Run tier whatever the pipeline can do. |
+| (c) `kubectl delete namespace voltmesh-dev` | **Compile-only** (lint and guard check) | Shell lint, plus a rule that fails the build if a destructive command lacks a visible warning and a confirmation step or dry-run. Never executed. | A destructive command has no Run tier. A copied-and-pasted delete is a P0 harm, ahead of any ordinary "doesn't work" bug. |
+| (d) Post to a third-party partner webhook | **Compile-only** | Lint, plus validation of the payload against its schema. The host must be a reserved-range placeholder (e.g. `example.com`), not the real endpoint. | Running it calls someone else's service, which means their terms and their traffic. It has no Run tier. |
 
-## Tier 2 — Execute on a schedule, cost-capped (billable, non-destructive)
-Real money changes hands, but nothing is destroyed and no third party is touched.
+## During the six weeks (no engineering)
 
-**(b) Transcription job, $0.90/min** → **Tier 2**
-- CI enforcement: never run per-commit — cost scales with every doc edit. Run weekly (or on release only), against the shortest possible fixture (a few-second clip) to cap spend at cents per run. Hard-fail on unexpected job duration; alert on cost drift.
-- Needs someone to own a billing alert — flag as blocked on eng time, not urgent.
+These are manual and not CI. Each is a one-time check or a visible label. None needs engineering time.
 
-## Tier 3 — Never execute live, dry-run/lint only (destructive, own infra)
-Irreversible mutation of real infrastructure. Blast radius is internal but permanent.
+1. **Run the census once.** Run `scripts/sample-audit.py docs/ --format summary` from the skill. It lists every snippet, flags credential-shaped strings, and takes about an hour of a non-engineer's time.
+2. **Fix P0s now.** Check (c) and any live-looking keys by hand. That means a warning line on the delete command and `<YOUR_API_KEY>` placeholders. This is the one thing that shouldn't wait.
+3. **Label tiers on the page.** Mark any snippet that is pseudocode or a fragment as "Illustrative: not runnable". An unlabelled illustrative snippet looks broken.
+4. **Cut before testing.** Delete redundant, outdated or trivial snippets. A deleted snippet costs readers nothing, and the 160 shrinks before any harness exists.
+5. **Name an owner per snippet.** When a sample goes red, someone needs to receive it. Pick one person now, even among three engineers.
 
-**(c) `kubectl delete namespace voltmesh-dev`** → **Tier 3**
-- CI enforcement: **never** run for real against anything but a disposable, purpose-built sandbox cluster — and building that sandbox is itself eng work you don't have for 6 weeks. Until then: syntax/dry-run validation only (`kubectl delete namespace voltmesh-dev --dry-run=client`), plus mandatory human review on any diff to this snippet.
-- Treat "namespace name looks like a real env" as a standing red flag — rename in the doc to something unambiguously fake (`example-namespace`) so a copy-paste accident doesn't hit a real cluster.
+## What to tell the team
 
-## Tier 4 — Never execute live, mock/contract only (external third party)
-Even a non-destructive call causes real noise on a system you don't own — partner sees spam traffic, rate limits trip, their alerts fire.
+- Nothing is tested today, and we won't claim otherwise on the pages.
+- First CI build (week 7 or later): a Compile-only job for all of (b), (c), (d) and every other snippet that bills, destroys, or calls a third party.
+- Second build: a Run job for the quickstart path only, starting with (a).
+- Everything else gets a tier after the census, not before.
 
-**(d) POST to partner webhook** → **Tier 4**
-- CI enforcement: **never** hit the real partner URL from automation. Point the test at a mock endpoint you control (local stub or request-bin style) and validate payload shape, headers, and auth only. Any real end-to-end check happens manually, rarely, with the partner's knowledge — not something CI should ever trigger unattended.
-
-## Rollout given your constraints
-- Start now, no eng time required: Tier 1 only, via a standalone script — not a CI pipeline.
-- Everything else (Tiers 2–4) stays manual-review-only until sandbox infra, billing alerts, and a mock server exist — don't promise automated coverage on (b), (c), (d) before the 6 weeks are up.
-- Of the 160 snippets, sort the rest into these same four tiers before deciding what "test suite" even means for this repo — most of the remaining count should land in Tier 1 if the docs are mostly read/auth/list calls.
+I chose these tiers from the four descriptions alone. Two facts could change them:
+- If you already have a staging account that can safely absorb the transcription cost, (b) could move to Run.
+- If readers paste (d) heavily, it earns more attention first.

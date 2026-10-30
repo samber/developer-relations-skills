@@ -3,74 +3,74 @@
     "expectations": [
       {
         "text": "Refuses to supply bare statistics, and instead names the sources with each one's edition and date.",
-        "evidence": "Every figure given is paired with a named source and edition, e.g. '~47 million developers worldwide ... \u2014 SlashData, State of the Developer Nation (widely-cited figure from their ~2024 editions...)' and '76% of developers are using or planning to use AI tools ... \u2014 Stack Overflow Developer Survey, 2024 edition (fielded May 2024, ~65,000 respondents)'.",
+        "evidence": "'I won't type statistics from memory'; the table gives edition and date for each source.",
         "passed": true,
         "graded": true
       },
       {
         "text": "States explicitly that a bare statistic ages invisibly and gets repeated in a leadership deck.",
-        "evidence": "The transcript warns 'Verify before slide ships' and 'Do not present these as fresh-fetched; they're recalled, not pulled live,' but never states the general claim that a bare statistic ages invisibly and gets repeated in a leadership deck.",
+        "evidence": "Only 'A wrong or undated number there is the first thing a CFO challenges.'",
         "passed": false,
         "graded": true
       },
       {
         "text": "Names GitHub Octoverse as the annual open-source and language-ecosystem source, with the 2025 edition published 28 October 2025.",
-        "evidence": "\"github.blog/news-insights/octoverse \u2014 Octoverse 2025 (published 28 Oct 2025) for current Copilot/AI-PR stats.\" and \"GitHub Copilot: passed 1M+ paid subscribers ... near-certainly stale by Sep 2026 \u2014 Octoverse 2025 (published 28 Oct 2025 per this skill's source list) will have the current number.\"",
+        "evidence": "'Octoverse 2025, published 28 Oct 2025.'",
         "passed": true,
         "graded": true
       },
       {
         "text": "Names the JetBrains State of Developer Ecosystem with its edition and field details - 24,534 respondents, fielded April to June 2025.",
-        "evidence": "\"JetBrains State of Developer Ecosystem, 2024/2025 editions (2025 ed: 24,534 respondents, fielded Apr-Jun 2025).\"",
+        "evidence": "'24,534 respondents, fielded Apr\u2013Jun 2025.'",
         "passed": true,
         "graded": true
       },
       {
         "text": "Names the Stack Overflow Developer Survey and flags that its edition's publication date was not confirmed.",
-        "evidence": "\"Stack Overflow Developer Survey, 2024 edition (fielded May 2024, ~65,000 respondents). ... A 2025 edition exists per this skill's source audit (fielded, no pub date confirmed) \u2014 pull that number instead if you can, it'll be higher.\"",
+        "evidence": "'no publication date shown on the page. Record the year yourself.'",
         "passed": true,
         "graded": true
       },
       {
         "text": "Names SlashData for developer population sizing and ecosystem segment sizing.",
-        "evidence": "\"~47 million developers worldwide (professional + hobbyist) \u2014 SlashData, State of the Developer Nation\"",
+        "evidence": "'latest quarterly developer-population estimate... closest thing to analyst sizing'.",
         "passed": true,
         "graded": true
       },
       {
         "text": "Names a community-profession benchmark source for team size and budget figures, specifically the CMX Community Industry Report and its 2026 seventh edition.",
-        "evidence": "\"Closest surviving analog: CMX Community Industry Report, 7th annual edition (2026), gated at cmxhub.com \u2014 covers community-profession budgets and team sizes.\"",
+        "evidence": "'CMX Community Industry Report (7th edition, 2026) covers budgets and team sizes.'",
         "passed": true,
         "graded": true
       },
       {
         "text": "Describes the Developer Relations Foundation Metrics Index as an early-stage definitions reference rather than a benchmark dataset to quote numbers from.",
-        "evidence": "The transcript never mentions a 'Developer Relations Foundation Metrics Index' by that name; it only references 'the DRF community (dev-rel.org, gated Slack/Discord, free)' as a place to ask practitioners for real numbers, not as a definitions reference being contrasted with a benchmark dataset.",
-        "passed": false,
+        "evidence": "'v0.0. It defines metrics and has no benchmark dataset.'",
+        "passed": true,
         "graded": true
       },
       {
         "text": "Treats the annual data family as a first-class source category precisely because this user must justify budget or headcount upward, not as background reading.",
-        "evidence": "No statement in the transcript frames the annual report family as a 'first-class source category' or ties this framing to a need to justify budget or headcount upward; the transcript only discusses verifying slide statistics.",
+        "evidence": "It uses the sources but never frames the annual data family as first-class for that reason.",
         "passed": false,
         "graded": true
       },
       {
         "text": "Costs each annual report as one concentrated read a year rather than as a weekly line item.",
-        "evidence": "No cost/cadence framing of this kind appears anywhere in the transcript.",
+        "evidence": "No costing.",
         "passed": false,
         "graded": true
       },
       {
         "text": "Places the annual data report at the top of the efficiency ordering while stating it is not the most valuable source type.",
-        "evidence": "The transcript contains no explicit efficiency ordering of source types or such a statement.",
+        "evidence": "No such ordering statement.",
         "passed": false,
         "graded": true
       },
       {
         "text": "Fabricates no specific percentage, developer population figure, median team size or budget number.",
-        "evidence": "The transcript invents unsourced ranges presented as fact-like guidance: 'Early-stage DevRel team: 1-3 FTE most common bucket... Formalized team: median ~3-6 FTE... Budget excl. salary: $50K-$150K/yr for content-only teams; $250K-$1M+ once conference sponsorship/travel enters,' labeled only as a 'soft, multi-year composite from memory, not one dated report.'",
-        "passed": false,
+        "evidence": "'I won't invent one.' No percentages or team sizes are given.",
+        "passed": true,
         "graded": true
       }
     ]
@@ -79,74 +79,74 @@
     "expectations": [
       {
         "text": "Refuses to supply bare statistics, and instead names the sources with each one's edition and date.",
-        "evidence": "The transcript only asks for tool approval and names no specific sources (Octoverse, JetBrains, etc.) at all.",
+        "evidence": "It lists bare figures such as \"~47M\", \"84%\" and \"51%\".",
         "passed": false,
         "graded": true
       },
       {
         "text": "States explicitly that a bare statistic ages invisibly and gets repeated in a leadership deck.",
-        "evidence": "No such statement appears; the reasoning given is only 'I don't want to hand you fabricated or stale-from-memory figures dressed up as \"hard numbers.\"'",
+        "evidence": "There is no such statement.",
         "passed": false,
         "graded": true
       },
       {
         "text": "Names GitHub Octoverse as the annual open-source and language-ecosystem source, with the 2025 edition published 28 October 2025.",
-        "evidence": "Octoverse is not mentioned anywhere in the transcript.",
+        "evidence": "Octoverse is named with a year but no publication date.",
         "passed": false,
         "graded": true
       },
       {
         "text": "Names the JetBrains State of Developer Ecosystem with its edition and field details - 24,534 respondents, fielded April to June 2025.",
-        "evidence": "JetBrains is not mentioned anywhere in the transcript.",
+        "evidence": "JetBrains is named but without respondent or field details.",
         "passed": false,
         "graded": true
       },
       {
         "text": "Names the Stack Overflow Developer Survey and flags that its edition's publication date was not confirmed.",
-        "evidence": "Stack Overflow is not mentioned anywhere in the transcript.",
+        "evidence": "The survey is named but its date is not flagged.",
         "passed": false,
         "graded": true
       },
       {
         "text": "Names SlashData for developer population sizing and ecosystem segment sizing.",
-        "evidence": "SlashData is not mentioned anywhere in the transcript.",
-        "passed": false,
+        "evidence": "\"~47M active software developers worldwide (2025) | SlashData, Developer Nation\"",
+        "passed": true,
         "graded": true
       },
       {
         "text": "Names a community-profession benchmark source for team size and budget figures, specifically the CMX Community Industry Report and its 2026 seventh edition.",
-        "evidence": "CMX is not mentioned anywhere in the transcript.",
+        "evidence": "It cites the DevRel Collective and SlashData, and says no authoritative benchmark exists.",
         "passed": false,
         "graded": true
       },
       {
         "text": "Describes the Developer Relations Foundation Metrics Index as an early-stage definitions reference rather than a benchmark dataset to quote numbers from.",
-        "evidence": "The Developer Relations Foundation Metrics Index is not mentioned anywhere in the transcript.",
+        "evidence": "It is not mentioned.",
         "passed": false,
         "graded": true
       },
       {
         "text": "Treats the annual data family as a first-class source category precisely because this user must justify budget or headcount upward, not as background reading.",
-        "evidence": "The transcript does not discuss any annual data family at all.",
+        "evidence": "It tells the user that \"Industry stats won't save headcount.\"",
         "passed": false,
         "graded": true
       },
       {
         "text": "Costs each annual report as one concentrated read a year rather than as a weekly line item.",
-        "evidence": "No annual reports are discussed or costed at all.",
+        "evidence": "There is no costing.",
         "passed": false,
         "graded": true
       },
       {
         "text": "Places the annual data report at the top of the efficiency ordering while stating it is not the most valuable source type.",
-        "evidence": "No efficiency ordering or annual data report discussion appears anywhere in the transcript.",
+        "evidence": "There is no such ordering.",
         "passed": false,
         "graded": true
       },
       {
         "text": "Fabricates no specific percentage, developer population figure, median team size or budget number.",
-        "evidence": "The transcript contains no statistics at all, only a request for tool approval before running searches.",
-        "passed": true,
+        "evidence": "It asserts \"84% use or plan to use\", \"47.2M\" and \"180M+\" from memory.",
+        "passed": false,
         "graded": true
       }
     ]

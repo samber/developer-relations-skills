@@ -1,90 +1,109 @@
-Two things up front, both load-bearing for what follows, not caveats to skip:
+Not run: `scripts/sample-audit.py` (no Sablefish docs checkout here), no census, no secret scan. Every sample below is **unverified**, not passing. Owner handles, paths and language names are placeholders in `<angle brackets>`. I have none of the real ones.
 
-**This is the exact sequencing mistake the governance model warns against.** Samples are hand-pasted Markdown — no snippet tags, no metadata, nothing compiled or tested. CODEOWNERS assigns a name to fix a red sample, but nothing here can turn red: there's no build, no compile check, no test. Merging this Friday buys you *pull-request review gating* (real, immediate) but not *breakage detection* (not yet possible). Say that explicitly to the VP rather than let the file imply more than it does.
+## Conflict with the request
 
-**A secret scan cannot wait for CODEOWNERS.** "Never scanned for secrets" across ~900 hand-pasted pages, at a health company, is the one finding class that outranks everything else in this whole exercise. Run it in parallel this week, not after the file merges — a P0 credential leak doesn't wait for org process.
+The skill's migration order is census and secret scan, then compile gates, then move samples into source, then metadata, then owners and SLAs. Your VP wants step 5 first.
 
-Both deliverables below, ready to use.
+1. **CODEOWNERS matches paths, not languages.** Samples are hand-pasted into about 900 Markdown pages, so one page can mix four languages. "Every language's samples to a named owner" cannot be expressed until samples live at `samples/<lang>/…`. Until then, the file can only map page sections to owners.
+2. **A 48-hour fix SLA has nothing to trigger it.** Nothing is tested, so no sample can go red. The clock can only start on a reader report or a scan hit.
+3. **Two SDKs have unpaid outside maintainers.** You cannot impose an SLA on volunteers. "Community-maintained" is a funding model, not a free one (Twilio contracted engineers to backstop its catalogue). I put an employed backstop on every line instead.
 
----
+## 1. CODEOWNERS (merge Friday, phase A)
 
-## 1. `.github/CODEOWNERS`
+Last matching pattern wins. Every line has at least one employed owner. Any one listed owner can approve, so a volunteer can co-own but never blocks a merge.
 
 ```
-# CODEOWNERS — documentation code samples
-# Requires: repo setting "Require review from Code Owners" enabled on the
-# default branch, or this file approves nothing and blocks nothing.
-#
-# ASSUMPTION — confirm before merging: samples live under a per-language
-# directory or file-suffix convention (/docs/<language>/..., *.py.md, etc).
-# If a page mixes languages in tabs on one file, CODEOWNERS cannot attribute
-# a single broken sample to one owner — the whole page falls to joint
-# ownership (docs-platform-owners) until pages are split or tagged.
-#
-# Fix-SLA table lives in docs/SAMPLE-OWNERSHIP.md — this file is the merge
-# gate, that file is the clock.
-#
-# Replace every <GH_HANDLE_*> and <LANGUAGE_*> below with real values before
-# merging. Nothing here is enforceable with a placeholder in it.
+# Code sample ownership. Policy: <docs-dir>/SAMPLE-POLICY.md
+# Last matching pattern wins. Every line needs an employed owner.
+# Volunteers may co-own, never solo: any one listed owner can approve.
 
-# ---- <LANGUAGE_1>, e.g. Python — internal, paid engineering ----
-/docs/<language_1>/                      @sablefish-health/<language_1>-sdk-team
-/docs/**/examples/<language_1>/          @sablefish-health/<language_1>-sdk-team
-/docs/**/*.<language_1>.md               @sablefish-health/<language_1>-sdk-team
+# Default: docs leads own every page that has no narrower rule.
+*                           @sablefish/docs-leads
 
-# ---- <LANGUAGE_2>, e.g. JavaScript/TypeScript — internal, paid engineering ----
-/docs/<language_2>/                      @sablefish-health/<language_2>-sdk-team
-/docs/**/examples/<language_2>/          @sablefish-health/<language_2>-sdk-team
-/docs/**/*.<language_2>.md               @sablefish-health/<language_2>-sdk-team
+# Adoption path: quickstart, auth, first call. Highest harm if wrong.
+/<docs-dir>/quickstart/     @sablefish/docs-leads @<employed-sdk-lead>
+/<docs-dir>/auth/           @sablefish/docs-leads @<employed-sdk-lead>
 
-# ---- <LANGUAGE_3> — OUTSIDE, UNPAID contributor(s) ----
-# Named individual required as accountable owner, per SLA table note below.
-# The community maintainer is CC'd for context, not held to the SLA clock.
-/docs/<language_3>/                      @<GH_HANDLE_internal_backstop_1> @<GH_HANDLE_community_maintainer_1>
-/docs/**/examples/<language_3>/          @<GH_HANDLE_internal_backstop_1> @<GH_HANDLE_community_maintainer_1>
-/docs/**/*.<language_3>.md               @<GH_HANDLE_internal_backstop_1> @<GH_HANDLE_community_maintainer_1>
+# Guides and API reference, by product area (not by language).
+/<docs-dir>/<area-1>/       @sablefish/docs-leads @<area-1-engineer>
+/<docs-dir>/<area-2>/       @sablefish/docs-leads @<area-2-engineer>
 
-# ---- <LANGUAGE_4> — OUTSIDE, UNPAID contributor(s) ----
-/docs/<language_4>/                      @<GH_HANDLE_internal_backstop_2> @<GH_HANDLE_community_maintainer_2>
-/docs/**/examples/<language_4>/          @<GH_HANDLE_internal_backstop_2> @<GH_HANDLE_community_maintainer_2>
-/docs/**/*.<language_4>.md               @<GH_HANDLE_internal_backstop_2> @<GH_HANDLE_community_maintainer_2>
+# Blog and archived posts: freeze with version banner or delete.
+/<blog-dir>/                @sablefish/docs-leads
 
-# ---- Cross-cutting: shared auth setup, scripts, future metadata ----
-/docs/_shared/auth-setup.md              @sablefish-health/docs-platform-owners
-/scripts/                                @sablefish-health/docs-platform-owners
-/sample-metadata/                        @sablefish-health/docs-platform-owners
-
-# ---- Fallback for anything unmatched above ----
-/docs/                                   @sablefish-health/docs-platform-owners
+# Sample policy and the CODEOWNERS file itself.
+/CODEOWNERS                 @<vp-engineering>
+/<docs-dir>/SAMPLE-POLICY.md @sablefish/docs-leads
 ```
 
-Why an internal name sits first on the two unpaid languages: a 48-hour SLA is a demand on someone's paid time. An unpaid outside contributor cannot be held to it — Twilio's own community sample catalogue was backstopped by *contracted, paid* engineers, not run on volunteer labor alone. Put a named, paid engineer as the accountable owner on `<LANGUAGE_3>` and `<LANGUAGE_4>`, with the community maintainer as co-reviewer. If no paid backstop is fundable, say so to the VP now and demote those two SDKs to a labeled "Community" tier — present, unowned, no SLA — rather than publish an SLA you already know will breach.
+### Phase B: activate after samples move to compilable source
 
----
+Commit this commented out. Uncomment when `samples/<lang>/` exists. Skipping that order gives owners responsibility with no mechanism.
 
-## 2. Fix SLA
+```
+# /samples/<lang-1>/        @sablefish/<lang-1-employed-team>
+# /samples/<lang-2>/        @sablefish/<lang-2-employed-team>
+# Outside-maintained SDKs: volunteer co-owns, employed team backstops.
+# /samples/<lang-3>/        @<volunteer-lang-3> @sablefish/<backstop-team>
+# /samples/<lang-4>/        @<volunteer-lang-4> @sablefish/<backstop-team>
+# /samples/**/metadata/     @sablefish/docs-leads
+```
 
-### 2a. What was asked — flat 48-hour SLA per owner
+Checks before merge:
 
-| Language | Tier | Owner of record | Backup | Fix SLA |
-|---|---|---|---|---|
-| `<LANGUAGE_1>` | Internal | `<GH_HANDLE_1>` | `@sablefish-health/<language_1>-sdk-team` | 48h |
-| `<LANGUAGE_2>` | Internal | `<GH_HANDLE_2>` | `@sablefish-health/<language_2>-sdk-team` | 48h |
-| `<LANGUAGE_3>` | Community, unpaid | `<GH_HANDLE_internal_backstop_1>` (paid) | `<GH_HANDLE_community_maintainer_1>` (best-effort, not bound) | 48h *(owner of record only — see 2b)* |
-| `<LANGUAGE_4>` | Community, unpaid | `<GH_HANDLE_internal_backstop_2>` (paid) | `<GH_HANDLE_community_maintainer_2>` (best-effort, not bound) | 48h *(owner of record only — see 2b)* |
+1. Every listed owner has write access, or GitHub ignores that entry.
+2. Teams are real and non-empty.
+3. "Require review from Code Owners" stays off until the first quarter of enforcement. Otherwise a missing reviewer blocks the docs team.
 
-### 2b. Recommended refinement — SLA by severity, not one flat number
+## 2. SLA table
 
-A flat 48-hour clock either overpays trivial fixes or underpays a live credential. Split it:
+The SLA binds a surface and a role, not a person. A clock starts at triage: a reader report, a support ticket quoting a sample, or a scan hit.
 
-| Severity | Definition | SLA | Rationale |
+| Severity | Definition | Employed-owner surfaces | Volunteer-maintained SDKs |
 |---|---|---|---|
-| P0 | Reader-harming: leaked credential, destructive command, disabled TLS, insecure default | 4 business hours, any owner | Security/credential fixes outrank everything else — cannot wait for the normal queue |
-| P1 | Broken as written: compile error, removed symbol, wrong output | 48 hours on primary adoption path (quickstart/auth/first call); 5 business days elsewhere | Matches the VP's number where it matters most; relaxes it where a reader is less likely to hit it first |
-| P2 | Works but violates policy: no tier, missing expected output, parity gap | Next sprint, batched | Not urgent; batching avoids owner fatigue on low-severity noise |
+| P0 | Harms the copier: credential, destructive command, insecure default | Revoke or remove within 4 business hours. Rotate and purge history within 48 hours. | Same. The employed backstop acts, not the volunteer. |
+| P1 | Does not work as written | Fix, or add a visible "known broken" banner, within 48 hours. | Triage within 48 hours by the backstop. Fix is best effort. If unfixed after 10 business days, label it community/unverified or remove it. |
+| P2 | Works, violates policy | Next sprint. | Backlog. No SLA. |
 
-Escalation: no owner action within SLA → auto-escalate to backup → unresolved 24h past backup's window → docs-platform-owners takes the fix directly rather than re-escalating again.
+Rules:
 
-### 2c. What starts the clock today
+- A 48-hour fix SLA on volunteers is a promise nobody can keep. The 48 hours is the backstop's triage and mitigation duty.
+- Bug fixes and security issues outrank new samples (AWS's published rule).
+- The clock counts business days. State the timezone in the policy.
+- Meaningful SLA reporting needs mean time from report to merged fix. You can measure that now. Per-sample CI status you cannot.
 
-No CI exists yet, so nothing currently *detects* a red sample automatically. Until a compile/build gate exists, the SLA clock starts on: a filed GitHub issue, a support ticket quoting the sample, or a manual reviewer catch on PR. Say this to the VP directly — an SLA with no automatic trigger is a promise about response time to *reported* breaks, not a guarantee nothing is broken. Closing that gap is the next investment (move samples into compilable source + snippet tags + a compile-only CI gate), and it's what turns this SLA from aspirational into enforceable.
+## 3. What to tell the VP
+
+1. Friday ships: phase A CODEOWNERS, the SLA table above, and a **secret scan** of the whole docs tree. That scan is the only finding that cannot wait, and you have never run one.
+2. Nothing is tested, so the Run and Compile-only tiers do not exist yet for you. Every sample is **unverified** until a pipeline exists. Building the pipeline is queue item 1 after the scan.
+3. Language-level ownership arrives with step 3 of the migration. Start with the adoption path (quickstart, auth, first call), which should reach tier Run first.
+
+Fix queue (P0 first, then ratio of readers × severity ÷ effort):
+
+1. Secret scan over all 900 pages. Owner: docs leads. Days.
+2. Compile-only CI job on the quickstart and auth samples. Owner: `<employed-sdk-lead>`. A couple of days to stand up.
+3. Move the adoption-path samples into `samples/<lang>/` and publish by transclusion with snippet tags.
+4. Add metadata records and schema validation.
+5. Activate phase B, with the language tiers published.
+
+Baselines to report against (self-set, not industry standards): zero P0, 100% of adoption-path samples at tier Run, at least 90% pass rate, at least 80% of the corpus tested, at least 90% parity coverage. Current values are unmeasured, not zero or passing. The one gate with a measured comparator is deprecated-API rate below 43% (Zhou and Walker, FSE 2016).
+
+## 4. Language tiers (publish with the policy)
+
+Choose tiers from download share and ticket volume, not from team preference.
+
+- Tier 1: the one or two languages readers arrive with most. Every scenario, tested.
+- Tier 2: entry path plus top scenarios.
+- Community: the two volunteer SDKs unless they carry tier-1 traffic. Present, unowned by staff, labelled untested, with the maintenance expectation stated.
+
+If a volunteer SDK turns out to be tier 1, fund it or demote it. Sparse columns in the parity matrix are the evidence.
+
+## Open questions (they change the file)
+
+1. What are the real SDK languages, and which two are volunteer-maintained?
+2. What is the docs directory layout, so I can replace the `<docs-dir>` placeholders?
+3. Who are the employed owners per area, individuals or teams?
+4. Does CI exist for the docs repo today?
+5. What is the target date for the secret scan? I recommend before the merge.
+
+Next: run `gitleaks detect --source <docs-repo>` (or `trufflehog filesystem <docs-dir>`) before Friday's merge and paste the findings count.

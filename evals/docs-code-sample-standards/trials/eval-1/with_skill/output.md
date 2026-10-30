@@ -1,53 +1,78 @@
-Two things in what you've described directly hit warnings this skill sets out explicitly, so I adjusted them rather than writing the report as specified — details below, then the full report.
+I read the skill and its references. I didn't write the report you asked for, because two things in the brief fail the skill's own rules. The deliverable below is the honest version.
 
-**The stat is on the skill's own "never repeat" list.** `published-findings.md` names this exact line — "94% of developers consider API documentation quality a key factor," attributed to SlashData — as unconfirmed in any SlashData report despite being everywhere. I swapped it for sourced figures from the same reference file.
+**Your conclusion.** Your spot-check is the negative example in `audit-method.md`. The twelve most-visited pages are also the most-maintained, so they are the healthiest part of the corpus. Nothing was compiled, so reading catches only visible defects. A corpus-wide verdict from a convenience sample is the error the skill exists to prevent. Four broken samples in the healthiest region is also a warning sign, not reassurance.
 
-**The audit-method.md file's negative example is your process, close to verbatim:** "Opened the twelve most-visited docs pages, read every code block, fixed four broken ones. Reported: 'sample quality is good, minor issues on the storage pages.'" It's flagged as biased (most-visited = most-maintained, so it's the healthiest slice of the corpus), unmechanical (nothing was compiled, so only eyeball-visible defects were caught), and a corpus-wide conclusion drawn from a convenience sample. I've kept your actual findings but reframed the conclusion as what a spot-check can honestly support, and turned the gap into the budget ask itself — a "we don't yet know the state of the other 95% of pages" case is a stronger resourcing argument than "everything's fine."
+**Your opener.** The skill lists "94% of developers consider API documentation quality a key factor" under claims to never repeat. It is attributed to SlashData but not confirmed in any SlashData report. In a leadership document, an unsourced stat can discredit the whole report and the budget ask with it. I replaced it with a sourced one.
 
 ---
 
-## Code Sample Quality — Spot-Check Findings & Audit Proposal
+# Code Sample Quality: Status and Request
 
-**Halyard Data Docs | [date] | Prepared by Docs**
+**Halyard Data Docs · 2026-10-30 · Draft for leadership**
 
-### Summary
+## Why this matters
 
-On Thursday I reviewed every code block on our twelve most-visited docs pages by hand and fixed four that were broken on the page. That check is useful signal, but it's a convenience sample of our best-maintained pages, not a measurement of the corpus — traffic correlates with maintenance attention, and nothing was compiled or executed, so only defects visible on read caught. I can't respon­sibly conclude "samples are in good shape" from it, and I want to flag that rather than round it up.
+Uddin and Robillard surveyed 323 professional developers (IEEE Software, 2015). They found ambiguity, incompleteness and incorrectness to be the most severe API-documentation problems, and six of the ten problem types they documented were rated outright blockers. Code samples are where those defects get executed instead of read. A reader pastes a broken sample into their own codebase.
 
-What I can say: on the highest-traffic surface, 4 of the reviewed samples were broken (fixed same day), concentrated on storage pages. What I can't say yet: whether that rate holds, is better, or is worse across the rest of the corpus — the API reference and the examples repo weren't in scope for this pass at all.
+## What we know
 
-### What we found (12 pages, manual read)
+- **Scope checked.** Last Thursday I read every code block on our 12 most-visited docs pages.
+- **Result.** I found and fixed 4 clearly broken samples.
+- **Limits of this check.**
+  - These are our most-maintained pages.
+  - Nothing was compiled or run, so only defects visible to the eye were caught.
+  - It did not cover the API reference, the examples repo, or the less-visited pages.
+- **The storage pages.** I have no evidence that the issues are confined to them. I haven't compared them against other areas.
 
-| Page area | Code blocks reviewed | Broken, fixed |
+## What we don't know
+
+- How many samples we publish, in which languages and on which surfaces.
+- What share compiles or runs.
+- Whether any sample contains a credential-shaped string or an unguarded destructive command.
+- How many samples call APIs we have since removed or deprecated.
+- Who owns a sample when it breaks.
+
+**Conclusion.** Sample quality is unmeasured. The one check we did found real defects in our best-maintained pages. I can't tell you the corpus is in good shape, and I can't tell you it isn't.
+
+## Proposed measurement (about one week)
+
+1. **Census of 100% of samples.** Run `scripts/sample-audit.py <docs-dir> --format summary` across the docs site, API reference and examples repo. Record the file, language, surface and last-commit date for each sample. Compile or run each sample and scan for secrets.
+2. **ROT triage.** Mark samples that are redundant, outdated or trivial. Cutting some is a valid outcome.
+3. **Scored sample.** Score about 40 samples against the 20-point rubric, stratified by language, product area and age. Record each dimension separately.
+4. **Severity ranking.** P0 harms the reader who copies it. P1 does not work as written. P2 works but violates policy. The fix queue is ranked by (readers affected × severity) ÷ effort. P0 items are reported immediately.
+
+## How results will be judged
+
+| Gate | Threshold | Source |
 |---|---|---|
-| Storage | — | 3 |
-| Other (query, auth, ingestion, etc.) | — | 1 |
+| Deprecated-API rate | below 43% | Measured: Zhou & Walker, FSE 2016, Stack Overflow posts. Using it as a gate is this skill's choice. |
+| P0 findings | zero | Skill baseline |
+| Primary adoption path (quickstart, auth, first call) | 100% tested and green | Skill baseline |
+| Compile/run pass rate | at least 90% | Skill baseline, not a vendor standard |
+| Corpus executed by CI | at least 80% | Skill baseline |
 
-All four were fixed same-day. None were flagged as credential leaks or destructive commands (P0-class); they read as compile/output-class breaks (P1-class) — stale flags, renamed methods, that shape of drift.
+Only the first is backed by a measured comparator. The others are targets we set, and I will label them that way in the final report.
 
-*(Fill in exact block counts per page when you have them — I don't have your page inventory, so I've left the totals row open rather than estimate.)*
+## Budget ask
 
-### Why this isn't a corpus verdict
+To be filled in after the census. For now it is two requests:
 
-- **Coverage**: 12 pages out of what's presumably hundreds across the docs site, API reference, and examples repo. We don't have a count.
-- **Selection bias**: most-visited pages get the most eyes and the most incidental fixes already. A representative read needs pages stratified by traffic *and* by age and language, including the ones nobody's opened in a year.
-- **Detection method**: reading catches wording and obviously-wrong calls; it does not catch "compiles today, silently returns the wrong thing" or "compiled six months ago, broken since the last SDK release." Only running or building the sample catches that class.
+- **Engineering time.** Roughly a couple of days for a compile-only CI job that catches removed symbols and missing imports. Promoting the quickstart and auth samples to full execution needs a standing job with fixtures and credentials.
+- **Ownership.** One named owner and a code-owner rule for each sample surface. Today I can't say whose queue a broken sample lands in.
 
-### What "in good shape" would actually take to say
+## Next steps
 
-A real answer needs, at minimum:
-1. A mechanical inventory of every sample — file, line, language, surface, last-commit date — across docs site, API reference, and examples repo.
-2. A compile/run pass over the full inventory (not a sample), plus a secret scan.
-3. A scored read (idiomaticity, error handling, credential handling) on a *stratified* sample — by language, product area, and age — not the top-traffic pages again.
+1. Run the census (1–2 days).
+2. Return with real numbers: pass rate, P0 count and a ranked fix queue.
+3. Decide on CI investment with data in hand.
 
-Published baselines for context, not a claim about our own numbers: Uddin & Robillard's 2015 survey of 323 developers found ambiguity, incompleteness, and incorrectness the most severe documentation problems, with six of ten problem types rated outright blockers by respondents. Postman's State of the API found "better examples in the documentation" the top requested improvement from API producers, ahead of standardization. Neither is a number about Halyard — they're the reason sample correctness is worth budget at all, independent of what our own audit turns up.
+---
 
-### The ask
+**What I need from you to finish**
+1. The docs directory paths for all three surfaces, so I can run the census.
+2. Whether any CI or test suite exists that samples could live inside.
+3. The languages you publish, and which one readers arrive with most.
+4. Who owns a broken sample today.
+5. Your deadline, and whether you want a one-off cleanup or a standard enforced every release.
 
-Fund the audit above: engineering time to stand up a compile/secret-scan gate over the sample corpus, and docs time to run the stratified read. Until that exists, every "our samples are fine" claim — including this report's — is a guess dressed as a finding. That gap is the deliverable this budget line buys us out of.
-
-### Immediate fix queue (from this week's pass)
-
-1. Storage-page breaks (3) — root-cause and confirm no sibling pages share the same stale call. Owner: docs, this sprint.
-2. Remaining break (1) — same treatment.
-3. Schedule the full inventory pass (item above) before the next release cycle.
+I haven't saved anything to memory, since the project context isn't settled yet.

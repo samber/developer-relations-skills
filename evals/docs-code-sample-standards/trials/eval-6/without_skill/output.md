@@ -1,57 +1,50 @@
-## Short answer: No — not for all 180, not as things stand today.
+**Short answer:** Not all 180 today. You can badge 124 now. The other 56 can earn it with a small fix.
 
-A green `go test ./...` run does not mean all 180 examples were executed. It means something much weaker for 56 of them, and marketing's "Verified" badge would be a false claim if applied uniformly.
+## Why the 56 aren't verified
 
-## Why: Go only *executes* an Example if it has an `// Output:` comment
+`go test` only runs an `ExampleXxx` function if it ends with an `// Output:` or `// Unordered output:` comment. Without one, Go compiles the function and never calls it.
 
-This is documented `testing` package behavior, not a project-specific quirk:
+So for those 56, a green CI run proves only that they compile against the current API. It says nothing about whether they run, return no error, or print what the docs claim. If one panics, hits a bad query, or sends a malformed request, CI stays green.
 
-> Example functions without output comments are compiled but not executed.
+Putting "Verified" on them would be a false claim.
 
-Concretely, `go test` builds a wrapper that calls an `ExampleXxx` function and diffs its captured stdout against the `// Output:` comment — but only if that comment exists. If it doesn't, the compiler still type-checks the function (so it must compile against the current API), but **the function body is never invoked at test time.** No wrapper is generated, nothing calls it, its `fmt.Println`/API calls never execute.
+## What the 124 prove
 
-So the 180 samples actually split into two very different guarantee levels:
+They compile, run, and print exactly the documented output. That is real verification. Two caveats:
+- The claim covers what the output comment checks. If an example prints only a count, that is all it verifies.
+- If CI runs them against a real graph database, the claim holds for that DB version. If they use a mock, say so.
 
-| | 124 samples (have `// Output:`) | 56 samples (no `// Output:`) |
-|---|---|---|
-| Compiles against current API | ✅ | ✅ |
-| Function body actually runs in CI | ✅ | ❌ never called |
-| Output/behavior checked against expectation | ✅ | ❌ nothing to check |
-| A panic, wrong return value, broken auth call, or bad API usage inside it would fail CI | ✅ | ❌ silently invisible |
+## Confirm the numbers first
 
-"CI is green on every push" is true for both groups, but it's proving two different things: for the 124, it's proving *correctness*; for the 56, it's only proving *the code still parses and type-checks*. If the SDK's `CreateNode` call, say, started silently returning a malformed object tomorrow, any of the 56 examples exercising it could be dead wrong and CI would never notice.
+Check that 124 is the number that actually executes, not just the number with a comment:
 
-## What this means for the badge
-
-Putting "Verified" next to all 180 overstates what's true for the 56. If a customer copy-pastes one of those 56 samples and it panics at runtime, "Verified" becomes a credibility problem, not a marketing win.
-
-## Two real options
-
-**Option A — badge only what's actually verified today.**
-Ship "Verified" on the 124, leave the other 56 unbadged (or with a lesser label like "Compiles" / "Syntax-checked"). Zero engineering work, ships today, but permanently caps the badge at 124/180 unless someone does Option B later.
-
-**Option B — make the 56 genuinely executable, then badge all 180.**
-The non-determinism (timestamps, generated IDs) is in the *values*, not in whether the call can be verified at all. The standard fix is to stop printing the raw non-deterministic value and instead print a deterministic assertion derived from it, while still making the real call:
-
-```go
-func ExampleClient_CreateNode() {
-    node, err := client.CreateNode(ctx, ridgeline.NodeSpec{Label: "Person"})
-    if err != nil {
-        fmt.Println(err)
-        return
-    }
-    fmt.Println(node.Label)
-    fmt.Println(len(node.ID) > 0)       // ID is generated — assert shape, not value
-    fmt.Println(node.CreatedAt.IsZero()) // timestamp is generated — assert it's set, not the value
-    // Output:
-    // Person
-    // true
-    // false
-}
+```
+go test -run '^Example' -v ./... | grep -c '^--- PASS'
 ```
 
-This still runs the real SDK call, still exercises the real code path, and now has a deterministic `// Output:` that `go test` genuinely checks — so it earns the badge honestly. It requires editing each of the 56 (not just relabeling them), rewriting their last few lines to print derived/normalized facts instead of raw dynamic fields. `Unordered output:` doesn't help here — it only handles non-deterministic *ordering* of otherwise-fixed lines (e.g., map iteration), not non-deterministic *values* like IDs and timestamps.
+It should print 124. Anything lower means some examples have a malformed output comment. The comment must be the last comment in the function body.
 
-## Recommendation
+## How to get the 56 to verified
 
-Ship Option A now — badge the 124 today, since that's true. Treat the 56 as a tracked follow-up (Option B), since it's mechanical, bounded, and turns "180 examples, 124 actually tested" into "180 examples, 180 actually tested." Don't let marketing badge the 56 in the meantime by pointing at "CI is green" — that phrase is true but is being used to prove something CI isn't actually checking.
+Pick the cheapest option per sample:
+
+1. **Inject determinism.** Give the SDK a clock and ID generator option and pin them in the example. This reads well in the docs only if the option is a public feature.
+2. **Print stable facts, not volatile values.** Print `err == nil`, `len(id) > 0`, node labels, property keys, counts, or a timestamp's `IsZero()` result. Then add `// Output:`. This works for most of the 56.
+3. **Assert, then print a marker.** Check the result inside the example with a plain `if` and `log.Fatal`, then `fmt.Println("ok")` with `// Output: ok`. Use this when there is nothing meaningful to print. It runs the code, though it adds noise to the docs sample.
+
+Don't use `// Unordered output:` for timestamps or IDs. It only ignores line order, not line content.
+
+## Make it stay true
+
+- Add a CI check that fails when any `ExampleXxx` lacks an output comment. A small `go/ast` script does it. A new unverified sample then can't slip in.
+- Generate the badge from the CI result per sample. Don't hand-place it.
+- Embed the docs samples from `example_test.go` by build step. If the site copies the code, the badge describes code that may have drifted.
+- Record the Ridgeline version and DB version in the badge tooltip.
+
+## What to tell marketing
+
+- **Now:** "Verified" on 124 samples, defined as "runs in CI, output checked."
+- **Optional:** a weaker "Compiles" label for the 56. Don't use "Verified" for them.
+- **After the fix:** all 180 with the same badge. How long that takes depends on how many of the 56 fit option 2, which is most of them.
+
+Mixing the two meanings under one badge would hurt more than having no badge. The first user who finds a broken "Verified" sample will stop trusting all of them.

@@ -1,34 +1,47 @@
-Now for the deliverable itself.
+# DevRel people to follow: Draymoor community lead
 
----
+**I didn't rank by follower count, and I have no verified Twitter or LinkedIn handles.** The devrel-radar skill rules out follower-count ranking, for two reasons. Follower count measures reach in an adjacent audience, not standing in DevRel. And Twitter/X and LinkedIn block automated checks, so no follower figure or handle in the skill's data was ever verified. A top 10 by followers would be invented numbers. Instead, I ranked by how many surfaces each person shows up on (podcast, speaking, hub, foundation work), and filtered for your pillars, community and advocacy.
 
-## About your request — one thing this skill won't do
+**Status:** curated list, not a monitoring service. Nothing alerts you if someone goes quiet. I did not re-verify it live. The snapshot dates are 26 Aug to 10 Sep 2026, about 2 months old, so it is still inside the skill's 6-month window.
 
-Before the list: the `devrel-radar` skill I read explicitly refuses two parts of what you asked for, by design, not by oversight:
+## Top 10, ordered by relevance to community and advocacy, then cross-surface recurrence
 
-- **"Ranked by follower count"** — the skill's method calls this out as a failure mode: *"Reject social rating - likes, shares, follower counts - because it measures reach in an adjacent audience rather than standing in this one, and most of it is unobservable here anyway."* It ranks by **cross-surface recurrence** instead (same person as podcast host + speaker + hub author = durability), which correlates with actual influence in DevRel far better than a vanity number.
-- **Twitter/LinkedIn handles** — the skill's own source table (`references/people-to-follow.md`) carries no handle column at all, because "*DevRel conversation lives largely on short-post and professional social networks, which block automated checking, so nobody below is verified through a social profile.*" I also tried to live-verify handles just now via WebFetch/WebSearch and both tools came back "permission not granted" in this session — so I have no fetched evidence for any handle, and I won't invent one (that's the skill's #1 named failure mode: *"Inventing a source... instantly destroys trust in the rest of the list"*).
+| # | Person | Why they're on your list | What they sell | Verified surface | Status |
+|---|---|---|---|---|---|
+| 1 | **Mary Thengvall** | Runs the field's curated link roundup (DevRel Weekly), co-hosts Community Pulse, and wrote a book. | Consulting (Persea) | marythengvall.com; Community Pulse Ep 105, 17 Aug 2026 | Active. DevRel Weekly is now occasional, not weekly. |
+| 2 | **Wesley Faulkner** | Strategy and community. Hosts two podcasts, speaks, and chaired the DevRel Foundation through Jul 2026. | Advisory and consulting | wesleyfaulkner.com (talk listed 28 Oct 2026) | Active |
+| 3 | **Matthew Revell** | Wrote much of the practice canon: four pillars, CORE, developer journey. Founded DevRelCon and publishes developerrelations.com. | Practice hub; his agency (Hoopy) has closed | developerrelations.com; hoopy.io wind-down notice | Active. The agency closed, the person and the hub did not. |
+| 4 | **Jayson DeLancey** | Project lead on four DevRel Foundation projects. Head of Security Advocacy at Semgrep. | Employer and foundation role | GitHub `@j12y` | Active. The Steering Committee he sat on has stood down, so track his project work. |
+| 5 | **Arun Gupta** | Leads the Foundation's Metrics Index. Long speaking record on open-source programme offices. | Employer (NVIDIA) and foundation role | GitHub `@arun-gupta` | Active |
+| 6 | **PJ Hagerty** | Community Pulse co-host on DevRel and community practice. | Not determined | Community Pulse Ep 105 | Active via podcast. Don't link devrelate.com, it is dead. |
+| 7 | **Jason Hand** | Community Pulse co-host on DevRel and developer content. | Not determined | Community Pulse Ep 105 | Active via podcast |
+| 8 | **Emily Omier** | Positioning and business models for open-source projects. Useful if Draymoor has an open-source surface. | Positioning consulting | emilyomier.com/podcast (18 Aug 2026) | Active |
+| 9 | **Brian Douglas** | Open-source community and maintainer tooling. | Startup (Paper Compute) | Open Source Ready Ep 41, 30 Jul 2026 | Active |
+| 10 | **John McBride** | Open-source engineering and community. Co-hosts with Brian Douglas. | Startup (Paper Compute) | Open Source Ready Ep 41 | Active |
 
-So below is the closest honest deliverable: **top 10 DevRel people for a community+advocacy lead at an API-gateway devtool company**, ranked the way this skill actually ranks (cross-surface recurrence + verified activity), with a verified surface link for each so you can go find their real handle yourself with one click. If you grant me web access this session, I'll go verify actual handles next — just say so.
+**Handles:** the only identifiers I can give are the two GitHub handles above, as stated on the pages I read. For the other eight, I can't give a Twitter or LinkedIn handle without making one up. To find them reliably:
+- Open the verifying surface in the table (their own site, or the podcast page). Personal sites and podcast pages usually link their current accounts.
+- Treat any account you find by name search as unconfirmed until it links back to that surface.
 
-## Top 10 DevRel people to follow — Draymoor (API gateway, community + advocacy)
+## Bench
 
-Ranked by cross-surface recurrence and verified recent activity (highest first). All snapshot dates 2026-08-26 to 2026-09-10, well inside the skill's freshness window.
+- **Tessa Kriesel**: developer go-to-market, "DevRel is sales" (tessakriesel.com, post 31 Jul 2026). She is the best fit if you must justify community spend to a revenue-minded exec. Sells consulting.
+- **Jack Bridger**: host of Scaling DevTools, Ep 197 on 20 Aug 2026. He leans developer marketing more than community. Sells a podcast and community.
 
-| # | Name | Why they earned the slot | Selling | Verified via | Status |
-|---|------|--------------------------|---------|---------------|--------|
-| 1 | **Mary Thengvall** | Newsletter curator + podcast co-host + book author on DevRel/community practice — the strongest recurrence signal in the field | Consulting (Persea) | Community Pulse Ep 105 (17 Aug 2026); marythengvall.com | active, 2026-08-26 |
-| 2 | **Wesley Faulkner** | Two podcasts + speaking + former Developer Relations Foundation chair | Advisory/consulting | wesleyfaulkner.com, talk listed 28 Oct 2026 | active, 2026-08-28 |
-| 3 | **Matthew Revell** | Author of DevRel's four-pillars canon; founded DevRelCon; hub publisher + podcast host | Practice hub (his agency, Hoopy, closed 2026 — he and the hub didn't) | developerrelations.com guides + podcast | active, 2026-08-26 |
-| 4 | **Jayson DeLancey** | Security advocacy + named lead on 4 Developer Relations Foundation projects — covers all four DevRel pillars | Employer (Semgrep) + foundation role | GitHub `@j12y` | active, 2026-08-28 |
-| 5 | **Arun Gupta** | Leads the DRF Metrics Index project — the person to watch for how DevRel measures and justifies itself | Employer (NVIDIA) + foundation role | GitHub `@arun-gupta` | active, 2026-08-28 |
-| 6 | **Aditya Oberai** | Developer Advocate at Appwrite — closest company analogue to Draymoor (API/BaaS devtool, bottom-up); also co-organizes DevRelCon Bengaluru | Employer (Appwrite) + newsletter | newsletter.oberai.dev | active, 2026-09-10 |
-| 7 | **Brian Douglas** | Open-source community & maintainer tooling; devtool founder — direct ecosystem fit for an API gateway's OSS/community motion | Startup (Paper Compute) | Open Source Ready Ep 41 (Heavybit), 30 Jul 2026 | active, 2026-08-26 |
-| 8 | **John McBride** | Same show/company pairing as Douglas — open-source engineering + community, devtool-relevant | Startup (Paper Compute) | Open Source Ready Ep 41, 30 Jul 2026 | active, 2026-08-26 |
-| 9 | **Emily Omier** | Open-source positioning and business models — how a devtool community turns into revenue, directly relevant to a paid API gateway | Positioning consulting | emilyomier.com/podcast, 18 Aug 2026 | active, 2026-08-26 |
-| 10 | **Tessa Kriesel** | Treats DevRel as a revenue/GTM function rather than pure goodwill — useful lens for a commercial devtool | Consulting/advisory | tessakriesel.com, post 31 Jul 2026 | active, 2026-08-26 |
+## Dropped or flagged
 
-**Notes:**
-- All 10 cover your two owned pillars (advocacy, community); 4-5, 6-10 lean toward your devtool/API-gateway ecosystem specifically.
-- One deliberate omission: the skill flags the **Developer Relations Foundation** (dev-rel.org, hosted by Linux Foundation) as the field's only vendor-neutral body — worth following as an org account even though it's not a person.
-- Handles: click through the "Verified via" links above — every one of them links out to that person's real social profiles from a page they control. I'm not going to paste a Twitter/LinkedIn handle here I haven't actually fetched and confirmed myself.
+- **Jono Bacon**: dropped as a feed. His newest post is Jan 2025, about 19 months old. His books are still worth reading.
+- **Karl Hughes**: never link karlhughes.com, it is a for-sale page. His agency, draft.dev, is the live surface.
+
+## Gaps in this list
+
+- **API-gateway fit:** none of these people is specific to API gateways or API-platform community. The skill's data is general DevRel practice. Add ecosystem voices, such as the CNCF and API-management communities, as a second pass.
+- **B2B enterprise coverage:** the source audit behind this list is dense for bottom-up devtools. It is thinner for enterprise platform selling, which an API gateway may be. Tell me if Draymoor sells top-down.
+- **Everyone here sells something.** That is disclosed per row, not a reason to skip anyone.
+
+## Next step
+
+Tell me three things and I'll build the full weekly watch list, with podcasts, communities, and events, sized to your time:
+1. Hours per week you can spend.
+2. Audio, text, or video.
+3. Whether you're speaking at or sponsoring events this year.

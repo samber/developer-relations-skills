@@ -1,37 +1,30 @@
-A note before the list: I tried to pull live follower counts via web search, but that tool isn't authorized in this session, so I can't verify current numbers against SocialBlade/X/LinkedIn directly. What follows is a best-effort ranking from general knowledge of the field (as of ~Jan 2026), not a live-verified leaderboard — treat the follower figures as rough ballparks and double-check handles before following, since people occasionally rename accounts or leave X for Bluesky/Mastodon.
+I can't give you a ranking by follower count. I have no live access to X or LinkedIn counts, and any numbers I wrote down would be invented. Below are 10 widely followed DevRel voices, ordered by my rough sense of reach, not by measured counts. I only list a handle where I'm confident it's right.
 
-There's also no single canonical "DevRel leaderboard" — I ranked by combined public recognition + reach across X and LinkedIn, favoring people whose actual job/identity is developer relations, developer advocacy, or DX leadership (relevant to a community/advocacy lead at an API gateway company).
+## 10 voices to follow
 
-## Top 10 DevRel voices to follow
+| # | Person | Known for | X / Twitter | LinkedIn |
+|---|---|---|---|---|
+| 1 | Kelsey Hightower | Kubernetes and cloud-native advocacy | @kelseyhightower | Not a known active profile |
+| 2 | Scott Hanselman | Microsoft, developer communication | @shanselman | linkedin.com/in/shanselman |
+| 3 | Addy Osmani | Chrome/Google, web performance | @addyosmani | Search by name |
+| 4 | Quincy Larson | freeCodeCamp, developer education | @ossia | Search by name |
+| 5 | Kent C. Dodds | Developer education and community | @kentcdodds | Search by name |
+| 6 | Cassidy Williams | Developer content and community | @cassidoo | Search by name |
+| 7 | swyx (Shawn Wang) | DevRel, AI engineering community | @swyx | Search by name |
+| 8 | Charity Majors | Observability, engineering culture | @mipsytipsy | Search by name |
+| 9 | Corey Quinn | Cloud commentary, large engaged audience | @QuinnyPig | Search by name |
+| 10 | Sarah Drasner | Front-end DevRel and education | @sarah_edo | Search by name |
 
-1. **Kelsey Hightower** — ex-Google Cloud Distinguished Engineer, Kubernetes/cloud-native's most recognizable advocate.
-   X: `@kelseyhightower` · LinkedIn: `linkedin.com/in/kelseyhightower`
+I'm less sure of the LinkedIn URL slugs than the X handles. Verify them on the profile page before you follow.
 
-2. **Scott Hanselman** — Microsoft Partner Program Manager, longtime blogger/podcaster (Hanselminutes), one of the most enduring dev-education voices.
-   X: `@shanselman` · LinkedIn: `linkedin.com/in/shanselman`
+## Closer to your role
 
-3. **Addy Osmani** — Google Chrome, Head of Chrome DevX Engineering, huge reach on web performance/DX.
-   X: `@addyosmani` · LinkedIn: `linkedin.com/in/addyosmani`
+As community lead at an API gateway company, you'll probably get more from these four. They work in your space, even though their audiences are smaller:
+- **Christian Posta**: API gateway and service mesh, @christianposta
+- **Matt Klein**: creator of Envoy, @mattklein123
+- **Kin Lane**: API strategy, "API Evangelist", @apievangelist
+- **Phil Sturgeon**: API design and standards, @philsturgeon
 
-4. **Simon Willison** — Django co-creator, prolific writer/DX voice, now widely followed for LLM tooling commentary.
-   X: `@simonw` · LinkedIn: `linkedin.com/in/simonwillison`
+## Getting real counts
 
-5. **Cassidy Williams ("Cassidoo")** — ex-Head of DevRel at Netlify, ex-GitHub/Microsoft, now at Contenda; one of the most recognized DevRel-titled figures.
-   X: `@cassidoo` · LinkedIn: `linkedin.com/in/cassidoo`
-
-6. **Shawn Wang ("swyx")** — ex-DevRel at AWS/Temporal/Airbyte, founded Latent Space; strong crossover into AI engineering community.
-   X: `@swyx` · LinkedIn: `linkedin.com/in/shawnswyxwang`
-
-7. **Sarah Drasner** — VP of Developer Experience roles at Netlify/Google, well-known for DX + frontend advocacy.
-   X: `@sarah_edo` · LinkedIn: `linkedin.com/in/sarahdrasner`
-
-8. **Jason Lengstorf** — ex-Head of DevRel at Netlify, runs "Learn With Jason," strong community-building reputation.
-   X: `@jlengstorf` · LinkedIn: `linkedin.com/in/jlengstorf`
-
-9. **Christina Warren** — Senior Developer Advocate, GitHub; strong presence bridging DevRel and broader tech commentary.
-   X: `@film_girl` · LinkedIn: `linkedin.com/in/christinawarren`
-
-10. **Jono Bacon** — community/DevRel strategist and consultant, author of *People Powered*, one of the most LinkedIn-active voices specifically on community strategy (relevant to your role).
-    X: `@jonobacon` · LinkedIn: `linkedin.com/in/jonobacon`
-
-**Caveat, stated plainly:** I could not verify live follower counts or confirm every handle is still current — this list reflects reputation/reach as commonly understood, not a ranked-by-number-you-can-cite list. Before you follow or reference these publicly, spend 5 minutes cross-checking each handle on X/LinkedIn directly (or ask me to verify once web search is enabled for this session).
+Open each profile and read the follower number there, then sort a spreadsheet. A better ranking criterion is how often each person engages with API and infrastructure topics, not raw follower count. Say if you want me to build that list for API and gateway communities specifically.

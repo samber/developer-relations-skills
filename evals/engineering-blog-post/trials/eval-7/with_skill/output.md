@@ -1,36 +1,66 @@
-## Pick: Bug Hunt, from the outage timeline (a)
+**Mode:** draft mode. You have raw material and no post.
 
-**Ranking and strikes, per the skill's decision rules:**
+## Decision: write (a), the outage timeline, as a Bug Hunt
 
-- **(c) Benchmarks — struck outright.** SKILL.md is explicit: *"An effort ceiling that excludes producing new evidence deletes Benchmarks and Rewrote It in X outright — struck from the menu, not parked at the bottom."* A harness that's never been built and never run is new evidence, and it's a quarter of work per the pattern table, not six hours. This isn't a close call — it's a gate, not a preference.
-- **(b) Thoughts on Trends (eBPF opinion) — survives fillability, loses the ranking.** A hard date "promotes Bug Hunt and Thoughts on Trends, whose material is already written down or already in your head" — so both clear the deadline test. But the efficiency order (`bug hunt > explainer > how we built it > rewrote it in X > lessons learned > thoughts on trends > ...`) puts Bug Hunt ahead of it by five positions, and the reason tracks your actual material: an outage timeline is a finished narrative spine (symptom → investigation → root cause → fix), while "eBPF is overhyped" still needs its evidence section built from scratch and, per the pattern's own trap list, a steelman good enough that an eBPF advocate would recognize their own position — that's real drafting time against a 6-hour budget, not assembly time.
-- **(a) Bug Hunt — wins.** Effort per the table: *"an hour, on top of an incident review already written."* You have the incident review. What's left is the public-facing shell: redaction, a reason for an unaffected reader to care, and the lesson. That fits inside six hours with room for a technical review pass, and it's first on the efficiency list for a reason — *"the widest travel per hour on the list — engineers forward a good mystery."* That's exactly the profile you want live the morning a keynote puts eyeballs on the blog.
+Publish (b) later as a separate post. Don't build (c) for this deadline.
 
-## The 6-hour plan (Bug Hunt section budget, scaled to ~1,800 words)
+## How I ranked them
 
-| Hour | Section | Do |
-|---|---|---|
-| 0.5h | Redaction pass first | Strip names/handles, internal service codenames, ticket IDs, wiki links. Decide deliberately whether impact numbers ship — don't default-copy them from the internal doc. |
-| 0.5h | Symptom (10%) | What broke, as observed — error text verbatim (readers search for it), the alert or graph that fired first. |
-| 0.75h | First hypothesis (15%) | What you assumed and why it was reasonable. Resist cleaning this up in hindsight — an already-correct first guess reads as reconstructed. |
-| 1.5h | Investigation (30%) | The wrong turns, with commands/logs/diffs. This is the section that carries the post's credibility — don't compress it to make room elsewhere. |
-| 1h | Root cause + Fix (20% + 15%) | Plain explanation, then the actual change/config. Keep it blameless — conditions that allowed the failure, not who typed the commit. |
-| 0.5h | Lesson (10%) + "why should an outsider care" | An internal postmortem never has to earn this — a public one does. One sentence a reader repeats to a colleague. |
-| 0.75h | Claim ledger + credibility gate | Classify every number (Measured/Shown/Sourced/Opinion), run `scripts/scan-draft.sh`, confirm at least one honest limitation, zero unsourced superlatives. |
-| ~0.5h buffer | Reviewer brief | One engineer who lived the incident (accuracy), plus security/customer-confidentiality sign-off since this touches an outage — start that today, run it in parallel with drafting, not after. |
+The skill says to strike options you can't fill first, then rank the survivors by return per hour. I haven't seen the timeline, so the pick is conditional on the check below.
 
-That's the six hours. The 9 days matters most for the parts that aren't writing time: getting the security/confidentiality clearance and the outside-the-team clarity read back before morning-of.
+| Option | Pattern | Verdict | Why |
+|---|---|---|---|
+| (c) Benchmark vs 3 competitors | Benchmarks and Test Results | ❌ **Struck** | You've never run the comparison, so there is no benchmark post yet. Writing the harness, running it, re-running and publishing scripts takes weeks. That is outside a six-hour ceiling that excludes new evidence. It also invites a legal read and is hard to withdraw once quoted. A rushed benchmark against named competitors is the post most likely to get publicly dismantled. |
+| (a) Outage timeline | Bug Hunt | 🥇 **Pick** | Top of the efficiency order. It costs about an hour on top of an incident review you already wrote. Your hard date promotes it. It also travels furthest per hour. |
+| (b) "eBPF is overhyped" | Thoughts on Trends | 🟠 **Survives, ranked lower** | It also fits a hard date. But the strongest section is the steelman, and it rests on your weakest evidence class (opinion). It has a short shelf life. It also needs evidence you haven't listed. |
 
-## What I don't have yet, and need before drafting
+## Check before you commit (10 minutes)
 
-Per the skill's interview, these still change the draft even though they don't change the pattern pick:
+Open the internal timeline and answer two questions. Bug Hunt only works if both answers are yes.
 
-- **Reader** — developer evaluating your stack, existing user, or peer engineer? Changes what needs explaining.
-- **Blog context** — company blog (triggers the disclosure/attribution obligations) vs. personal.
-- **What stays unpublished** — the impact figures decision above needs an owner, not just me.
-- **Technical reviewer** — who signs off, and are they actually available in the next 9 days.
+1. **Does it contain at least one wrong hypothesis you chased?** The dead ends carry the post's credibility. If the first guess was right, the post reads as reconstructed.
+2. **Does it have a surprise a reader outside your company would care about?** The post needs something counter-intuitive, or a failure mode readers will recognise from their own systems.
 
-## On (b) and (c) — not discarded, resequenced
+If either answer is no, switch to (b). If it is a "no" on the surprise only, you can often still find one in the timeline's slowest moment.
 
-- **eBPF opinion**: cheap fast-follow. Draft it after the keynote post ships, once six hours aren't gated by a hard morning deadline — the steelman needs the time it needs.
-- **Benchmark**: this is the one line in SKILL.md worth flagging back to you directly — *"an author who only ever computes efficiency never publishes the one post that would be cited for years."* If the competitive benchmark is a real compounding asset for you, it deserves a quarter and a harness, not a squeeze into this week. Worth scoping as a separate project once the keynote is behind you, not compressed to fit it.
+## Risks specific to (a)
+
+- **The review chain is the real cost, not the writing.** An incident post needs a security and customer-confidentiality read. Ask for it on day 1, before you write, because it is what can miss the date.
+- **Redact before drafting.** Strip names and handles, service codenames, ticket IDs and wiki links. Decide on purpose whether impact figures ship. Keep the blameless framing.
+- **Keynote-morning timing.** An outage post that goes live the same morning as a keynote can look like damage control, or contradict the keynote's reliability story. Ask whoever owns the keynote narrative whether the outage touches anything on stage.
+- **No unsourced numbers.** Every figure in the post needs to trace to a log, graph or run.
+
+## Fallback: (b), if (a) fails the check or the security read stalls
+
+- Don't state the opinion as fact. Back it with whatever you've measured or seen in your own deployments, and mark the rest as opinion.
+- Build a steelman that an eBPF advocate would recognise as their own view.
+- Give the thesis a time horizon, or it can never be wrong.
+- **Disclosure:** if your agent uses eBPF, or competes with eBPF-based tools, say so once, early and plainly. Without that, the post reads as positioning.
+
+## Six-hour budget for (a)
+
+| Step | Time |
+|---|---|
+| Read the timeline, run the topic filter, redact, build the claim ledger | 1.0 h |
+| Outline, confirmed by you before drafting | 0.5 h |
+| Draft in order: symptom, first hypothesis, investigation, root cause, fix, lesson | 2.0 h |
+| Four revision passes (core, clarity, components, consumability) and `scan-draft.sh` | 1.0 h |
+| Credibility gate, humanizer pass, preview in the CMS, metadata | 0.5 h |
+| Buffer for reviewer fixes | 1.0 h |
+
+- **Day 1:** run the check, then start the security and confidentiality review.
+- **Days 2–5:** draft and revise.
+- **Days 5–7:** two reads. One engineer who worked the incident checks accuracy. One outsider checks it reads without insider vocabulary. Brief them on what to check, and send the draft to no one else.
+- **Days 8–9:** fixes, CMS preview, schedule for the morning.
+- **Cap the chain:** the review chain should be one security/confidentiality reader plus the two reads above. More approvers make the post vaguer.
+
+## What to do with (b) and (c)
+
+- **(b):** write it after the conference, once you can give it the evidence and a real steelman.
+- **(c):** treat it as a compounding asset with its own multi-week budget, and promote it later. It is the post competitors would have to cite. Promote it only if buyers in your category decide on numbers nobody has published, or if a competitor benchmark is circulating unchallenged.
+
+## Questions that could change the answer
+
+1. Does the outage timeline have dead ends and a surprise? (The check above.)
+2. Can security and confidentiality clear it within about five days?
+3. Does your agent use eBPF? This only matters if you fall back to (b).

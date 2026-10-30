@@ -1,89 +1,58 @@
-## Can Ridgeline badge all 180 samples "Verified"? No — only 124 of them.
+**No, not all 180. Badge the 124 that carry `// Output:`, and only after two checks (below). Give the other 56 a different, weaker badge until they are made deterministic.**
 
-This is a tier-classification question, not a documentation-polish question, and the skill this maps to (`docs-code-sample-standards`) is explicit that badging is a claim about **execution tier**, not about whether `go test ./...` returns exit code 0.
+I haven't seen the repo. This applies the docs-code-sample-standards tiers to the counts you gave.
 
-### The finding
+## Why not 180
 
-`go test ./...` returning green tells you all 180 samples **compile**. It does not tell you all 180 **run**. Go's `testing` package only invokes an `ExampleXxx` function's body when it has a matching `// Output:` (or `// Unordered output:`) comment. This is documented behavior, not an edge case:
+- **Green `go test ./...` proves less for the 56.** Go compiles every `ExampleXxx` function. It runs one only if it has an `// Output:` or `// Unordered output:` comment. Without that comment the example builds, never executes, and passes.
+- **So the 56 are Compile-only tier.** That tier means "valid, not run for you". "Verified" tells a reader "this works as written", which is the Run tier.
+- **Untiered samples default to Run**, so a "Verified" badge on the 56 would claim more than CI proves. A reader who pastes a 56-group sample and hits a runtime error will read "Verified" as a lie.
 
-> "Example functions without output comments are compiled but not executed." — Go blog, *Testable Examples in Go*; same statement in `pkg.go.dev/testing`.
+## Do now: ship by tier
 
-Mechanically, `testing.runExample` contains the equivalent of:
+1. **124 with `// Output:`:** badge "Verified". Check A and B below first.
+2. **56 without:** badge "Compiles" or no badge. Keep the badge for the 56 honest, because it is a claim to the reader. Do not use the same word for both groups.
+3. **Page copy for "Verified":** "Output asserted by CI against Ridgeline vX.Y". This states what was checked.
 
-```go
-if !*chatty.on && eg.Output == "" && !eg.Unordered {
-    return true // never calls eg.F()
-}
-```
+## Check before badging the 124 (about 1 hour)
 
-So unless your CI invokes `go test -v ./...` (the command you described is `go test ./...`, no `-v`), the 56 `// Output:`-less examples' function bodies are **never called at all** — not "run without a check," literally never executed. A nil-pointer panic, a broken call, a logic error inside any of those 56 would not fail the build today. If CI does happen to run with `-v`, the bodies do execute (a panic would fail the build) but stdout is still compared against nothing, so wrong output is silently accepted.
+**A. Does the `// Output:` comment actually count?**
+- The comment must be the last comment in the function body. A misplaced one is silently ignored, so the example is Compile-only.
+- An empty `// Output:` is valid. It passes whenever the example prints nothing, so it proves nothing.
+- Run `go test -v -run Example ./... | grep -c '^--- PASS'`. Expect 124 passes. Fewer means some `// Output:` comments don't count.
 
-Either way, the 56 do not meet this skill's definition of tier **Run** ("Executes; documented output is asserted"). At best they are tier **Compile-only** ("type-checks or builds, never executed"). Putting a "Verified" badge on them makes a claim CI cannot back up.
+**B. Do they run against a real Ridgeline server?**
+- If they only hit a mock or fake, "Verified" is true only for the SDK's own logic, not for the database.
+- A "Verified" claim needs one scheduled integration run against the real server. Service-side changes break samples without any repo change.
+- Install the published module in that run, not the working tree. A working-tree build passes on code no reader can install yet.
+- If the 124 run only on push, add a nightly run. Show the age of the last successful run on the page.
 
-This is exactly the failure mode the skill calls out by name:
+**C. Do the docs pages show the tested code?**
+- If a page has hand-pasted copies of the `example_test.go` code, the badge describes the file and not the page.
+- Pull the tested region into the page at build time. Hide setup with a region marker. Never publish a fragment with its imports cut.
 
-> "Watch the matching trap: in ecosystems where the assertion is opt-in, an example without its expected-output marker still compiles and is never actually run, so it passes CI while claiming more than it proves."
+## Fix the 56 (about 14 hours for one engineer, at ~15 minutes each)
 
-And the audit checklist is explicit about severity: **"a 'Run' sample that CI does not run is a P1, not a P2."** So if the 56 ship a "Verified" badge as-is, that's not a cosmetic gap — it's a P1 finding, on par with a broken import or a removed symbol, because the badge asserts a guarantee ("this works as written") that nothing in your pipeline checks.
+Make the output deterministic, then add `// Output:`:
 
-### Tier classification, all 180
+1. **Generated IDs:** print a derived fact, such as `len(id) > 0` or the node label. Do not print the ID.
+2. **Timestamps:** inject a fixed clock, or print only whether `created.Before(now)` holds.
+3. **Map or result ordering:** sort the results, or use `// Unordered output:`.
+4. **Anything that can't be made deterministic** (a live server version, a random seed): keep it Compile-only, label it that on the page, and delete it if it is trivial.
 
-| Tier | Count | % | What CI actually enforces | Reader-facing claim it supports |
-|---|---|---|---|---|
-| Run | 124 | 68.9% | Compiled, executed, stdout diffed against `// Output:` | "Verified" ✅ |
-| Compile-only | 56 | 31.1% | Type-checks/builds only; body not called (or called but unchecked under `-v`) | "Builds against current SDK" — **not** "Verified" |
+Do the quickstart, auth and first-query samples first. The skill sets a baseline that 100% of samples on the adoption path are Run and green. Confirm all of them are in the 124. If any are in the 56, fix those before anything else.
 
-Baseline framing (self-set by this skill, not an industry standard — cited so you can attribute it correctly if this goes into a report): the skill's bar for a governed corpus is ≥80% of samples at tier Run-or-Compile-only *and* zero P0/primary-adoption-path samples untested at Run. You're at 100% compiled, 68.9% actually Run. The gap isn't a testing-infrastructure problem (you already have one, and it's green) — it's that 56 samples opted out of the assertion instead of being engineered around it.
+## Measured against the skill's thresholds
 
-### Why "non-deterministic output" is not actually a wall
+| Gate | Status |
+|---|---|
+| Pass rate ≥90% (skill baseline, not an industry standard) | Met: 180/180 compile and CI is green. |
+| ≥80% of the corpus Run or Compile-only in CI | Met: all 180 are covered. |
+| 100% of adoption-path samples are Run | Unknown. Check which group they are in. |
+| No sample's last successful run older than the freshness window | Unknown. Needs the scheduled run from B. |
 
-Timestamps and generated IDs are a normalization problem, not a permanent verification blocker — unlike the two cases that legitimately force Compile-only forever (billing side effects, destructive operations, third-party dependencies you don't control). Three fixes, cheapest first:
+## Next action
 
-**1. Don't print the non-deterministic field raw — assert its shape instead.** This is almost always the right fix and requires no SDK changes:
+Run `go test -v -run Example ./... | grep -c '^--- PASS'` and tell me the number. That settles check A in a minute, and I'll turn the answer into the badge copy for marketing.
 
-```go
-// Before — why it has no Output comment today:
-node, err := client.CreateNode(ctx, ridgeline.NodeSpec{Label: "Person"})
-if err != nil {
-    log.Fatal(err)
-}
-fmt.Printf("created node %s at %s\n", node.ID, node.CreatedAt)
-// node.ID and node.CreatedAt differ every run — no stable Output is possible.
-
-// After — same call, same teaching point, deterministic and actually executed:
-node, err := client.CreateNode(ctx, ridgeline.NodeSpec{Label: "Person"})
-if err != nil {
-    log.Fatal(err)
-}
-fmt.Printf("label=%s hasID=%t hasTimestamp=%t\n",
-    node.Label, node.ID != "", !node.CreatedAt.IsZero())
-// Output:
-// label=Person hasID=true hasTimestamp=true
-```
-
-This now genuinely executes on every `go test` and genuinely fails if `CreateNode` starts returning a zero-value ID or timestamp — real regression coverage, not decoration.
-
-**2. Assert on error only, blank expected output.** For samples where the ID/timestamp isn't the teaching point, `// Output:` with nothing after it is valid — it asserts stdout is empty and still forces the body (including any `log.Fatal`/panic path) to run:
-
-```go
-node, err := client.CreateNode(ctx, ridgeline.NodeSpec{Label: "Person"})
-if err != nil {
-    log.Fatal(err)
-}
-_ = node
-// Output:
-```
-
-Weaker signal for the reader (nothing printed), but strictly better than Compile-only, and near-zero rewrite cost.
-
-**3. Inject a deterministic clock/ID generator, if the SDK supports it.** If `ridgeline.Client` takes functional options, a `WithClock`/`WithIDGenerator` used only in the example gets you a *real*, literal, stable value to print (`id=n_00000001`) — the strongest version of "Verified" because the reader sees exactly what a real response looks like, not a redacted stand-in. Worth checking before defaulting to option 1, but don't block the other 55 samples on adding this capability if it doesn't already exist.
-
-None of these need the samples to move out of `example_test.go` or need a CI harness you don't already have — you already run `go test ./...` on every push. This is a rewrite of ~56 print statements, not new infrastructure.
-
-### What to ship now vs. what to fix first
-
-- **This week, ship truthfully:** Badge the 124 with `// Output:` as "Verified." For the 56, either omit the badge or use a second, honestly-different label matching the tier's actual reader signal — e.g. "Compiles against current SDK" — not a visually-similar checkmark. An unlabelled or identically-labelled Compile-only sample next to a Run sample is indistinguishable to the reader from a broken promise, which is the same complaint this skill raises about unlabelled Illustrative samples.
-- **Fix queue, ordered by adoption-path impact first (not raw count):** identify which of the 56 sit on the primary adoption path (connect-to-database, create-first-node, first-query) — those get the option-1/option-3 rewrite first regardless of effort ratio, per this skill's rule that Run is promoted ahead of the effort ranking on the adoption path. The remaining long tail can be batched.
-- **Re-measure, don't declare victory from the diff:** after the rewrite batch, rerun `go test ./...` and recount `// Output:` occurrences — the 68.9% → target-100% number is the actual gate, not "we edited N files."
-
-**Bottom line for marketing:** put "Verified" on the 124 today. The other 56 need roughly a day or two of engineering (redact-and-assert, not new tooling) before the same badge is true for them — treat that as a scoped fix, not a blocker on the whole launch.
+Separately: the repo has no sample owner yet. When a sample goes red on a Friday, whose queue does it land in? Want me to draft that rule next?

@@ -1,55 +1,110 @@
-**Do this now (15 min, one-time setup):**
+# DevRel radar for Thornbury Analytics: community + enablement, 60 min/week
 
-1. Make one folder/label in your inbox: "Radar."
-2. Subscribe RSS or email for the 5 core sources below.
-3. Save one search filter each on G2 and TrustRadius for "data observability" category — new reviews only.
+**This is a curated list, not a monitoring service.** Nothing here alerts you when a source dies. The quarterly refresh at the bottom does that, when you run it.
 
-That done, radar cost 60 min/week, no more setup.
+⚠️ **I could not verify any entry.** Fetching pages and reading the skill's source reference files were both denied this session. Every entry below comes from my memory, and every status is **unverified**. Run the 2-minute check at the bottom before you subscribe to anything.
 
-## Your constraints, translated to hard filters
+Header: community manager, owns community + enablement, data-observability ecosystem, enterprise top-down buyer, reads + listens, 60 min/week. Verification date: none. Sections are ordered by value per attention-minute, highest first.
 
-- IT blocks unowned Slack → every source below is Discord, forum, Reddit, GitHub, LinkedIn, or a review site. Zero Slack.
-- Zero community/course budget → free-forever tier only. No trials that convert to paid.
-- Travel frozen → virtual only, zero flights/hotels, regardless of event quality.
-- No personal-card newsletter → free-forever newsletters only, drop instant on paywall.
-- 60 min/week, read+listen → no posting, no moderating duty in this ritual.
+## Weekly core (≈ 44 min)
 
-**Confidence flag:** web search tool got blocked this session — below is my trained knowledge, not a live check. Tags: [High] = stable fact (Reddit is Reddit). [Verify] = could've changed platform/pricing, do a 30-sec click before joining.
+1. **Data Engineering Weekly**
+   - URL: dataengineeringweekly.com
+   - Medium: text, free newsletter
+   - Pillar: ecosystem; your buyers' vocabulary for community content
+   - Minutes: 10
+   - Why: one skim shows what data teams argue about, which tells you which community topics will land.
+   - Selling: independent newsletter; publisher's commercial ties not checked
+   - Status: unverified (could not fetch)
 
-## Weekly ritual — 60 min, same order every week
+2. **Data Engineering Podcast**
+   - URL: dataengineeringpodcast.com
+   - Medium: audio
+   - Pillar: ecosystem; competitor and adjacent-vendor guests show how they talk to developers
+   - Minutes: 28 (one full episode every 2 weeks, picked by guest; about half that if it rides on commute or gym time)
+   - Why: long-form reasoning from practitioners, which text newsletters skip.
+   - Selling: independent show, sponsor-funded; vendor guests are pitching
+   - Status: unverified (could not fetch)
 
-1. **10 min — Reddit + HN scan.** r/dataengineering, r/analytics, search "data observability" + "data downtime" on Hacker News. Community pulse + language your prospects use.
-2. **15 min — 2 newsletters** (rotate, not all 5 same week; core-5 list below).
-3. **15 min — 1 podcast episode**, 1.5x speed, data-observability or data-eng topic. Counts during commute too.
-4. **10 min — G2 + TrustRadius new reviews** on your product + top 2 competitors. Read, don't reply.
-5. **10 min — write 3-5 bullets** into your internal (Thornbury-owned) Slack channel or doc for sales: 1 competitor signal, 1 procurement/security theme, 1 community quote worth reusing.
+3. **r/dataengineering** (Reddit, skim)
+   - URL: reddit.com/r/dataengineering
+   - Medium: text
+   - Pillar: community
+   - Minutes: 6 (the reserved peer-community slot)
+   - Why: unfiltered pain points in your market, and where new sources surface for the next refresh.
+   - Selling: platform. Posts from vendors, including competitors, are self-promotion.
+   - Status: unverified. Check that your IT doesn't block it.
 
-Step 5 is the enablement bridge — sales gets fed without you sitting in their meetings.
+## Monthly (≈ 7 min/week)
 
-## Core 5 sources (add these first)
+4. **Developer Relations Foundation** (dev-rel.org)
+   - Medium: text
+   - Pillar: community + enablement (practice itself)
+   - Minutes: 4 (about 15 min/month)
+   - Why: the field's only vendor-neutral practice body, per the skill. Give it first place if you distrust vendor content.
+   - Selling: Linux Foundation-hosted foundation
+   - Status: unverified; found via the skill, not fetched
 
-- **r/dataengineering** [High] — Reddit, free, no Slack. Best raw pain-point language.
-- **Hacker News** [High] — forum, free. Search "data observability," "data quality," "data downtime" weekly.
-- **G2 — Data Observability category** [High] — review site, free to browse. Competitor + procurement-language intel (security, SOC2, data residency come up in reviews — gold for your sales team's procurement conversations).
-- **TrustRadius — Data Observability category** [High] — same as above, different reviewer pool, still free.
-- **Data Engineering Podcast** (Tobias Macey) [Med — check current free/RSS status] — free podcast feed, frequent data-observability guests.
+5. **Write the Docs newsletter** (writethedocs.org)
+   - Medium: text
+   - Pillar: enablement (docs)
+   - Minutes: 3 (about 10 min/month)
+   - Why: current docs practice, free. Use the website and newsletter only.
+   - Selling: non-profit community and conference
+   - Status: unverified
 
-## Later / optional (add one at a time, verify first)
+## Annual (≈ 1 min/week)
 
-- **DataTalksClub** [Verify] — historically Discord, free, active data-eng community + free course recordings. Click the invite link first: if it opens Discord app or discord.gg URL, fine. If Slack, skip.
-- **OpenTelemetry / Great Expectations (GX) GitHub Discussions** [High — GitHub is never Slack] — free, technical, good for spotting integration pain your product could solve.
-- **LinkedIn — follow, don't join anything**: Barr Moses, Chad Sanderson, Benn Stancil. No workspace, no cost, just a feed. [High]
-- **dbt Community** [Verify — was Slack, may have a Discourse forum now] — 30-sec check before clicking join. If Slack link → skip, no exception.
-- **Locally Optimistic** [Verify, likely Slack] — high-value data community historically, but almost certainly Slack. Probably a skip. Check anyway, 30 sec.
+6. **CHAOSS community-health metrics** (chaoss.community)
+   - Medium: text, evergreen reference
+   - Pillar: community
+   - Minutes: about 1 hour once a year, then the metric definitions you pick as you need them
+   - Why: gives you defined metrics for community health when sales or procurement asks for numbers.
+   - Selling: open-source foundation project (a Linux Foundation project, from memory)
+   - Status: unverified; evergreen, so it has no cadence to be stale against
 
-## Fast triage rule for anything new that lands in your inbox
+## Bench (verified substitutes: none, only unverified candidates)
 
-Someone will pitch you a community, newsletter, or event this quarter. Run this in order, stop at first match:
+- Data Council talk recordings. Unverified. Check that the archive exists and is current. Event ownership may have changed.
+- Common Room blog. Unverified. It is a vendor blog, so treat it as a sales pitch with useful data.
+- A competitor's public community forum and docs changelog. These are free competitive intel. Pick the two that matter most.
 
-1. Invite link opens `*.slack.com` or the Slack app → reject, no exception.
-2. Costs anything now or after a trial → reject, zero budget stands.
-3. Requires travel → reject until next summer.
-4. Newsletter shows a paywall/metered banner → unsubscribe immediately.
-5. Passes all 4 → add to "Later" bucket above, don't expand ritual time.
+## Totals
 
-**Next: pick 15 min today, subscribe the core-5, run week 1 of the ritual.**
+- Estimated 52 of 60 min/week. The ~8 min left over is your buffer for posting in the peer community rather than only reading it.
+- Counts: 3 weekly, 2 monthly, 1 annual, 3 bench.
+- Verified-active entries: **0 of 6**.
+- Every owned pillar has a verified-active source: **no**. Nothing is verified, so I can't claim coverage. Community and enablement each have at least one candidate, and the check below settles it.
+- ⚠️ Gap: I found no DevRel- or community-specific audio show I'm confident exists and is still active. I left the slot empty rather than invent a name. Ask in a peer community, or search a podcast app for "community management", then verify before adding.
+
+**Dropped (deleted, not parked):**
+- Every Slack-based community (dbt, Locally Optimistic, Write the Docs Slack, etc.): your IT blocks workspaces you don't own.
+- Paid communities and courses (CMX, Community Club and similar): zero budget this year.
+- Paid newsletters: you won't pay out of pocket.
+- Conferences you would travel to, DevRelCon included. Travel is frozen until summer. Per the skill's source notes, DevRelCon's founder Hoopy wound down in 2026 and MLH took over the conference, so re-check its status before any future plan.
+
+Conference *recordings* are free and need no travel, so they stay on the bench.
+
+## 2-minute check before you commit
+
+For each entry: open the URL, find the newest dated item, and confirm who runs it now. Mark it active if the item is under 3 months old, stale if over 6 months, and unverified if the page won't load or shows no dates. A 403 or consent wall means unverified, not dead. If a domain redirects somewhere unrelated, delete the entry.
+
+## Quarterly refresh
+
+1. Re-ask which pillars you own.
+2. Re-open every URL and re-check the owner.
+3. Drop anything you didn't consume in the last quarter.
+4. Ask one peer in the community for one new source, and verify it before promoting it.
+5. Re-total the minutes against 60.
+
+I can't set a recurring reminder from here, so add "Refresh my DevRel radar" to your calendar as a quarterly event. I can also generate an OPML file of the feed-bearing entries if you want to import them into a reader.
+
+## Questions that would change this list
+
+- Does "enablement" mean developer enablement (docs, SDKs, quickstarts) or customer and sales enablement? I assumed developer enablement. Sales enablement would add a different set of sources.
+- Is audio on commute or gym time? If yes, the podcast costs half the minutes and I'd add a second show.
+- Are you catching up on DevRel or building a standing habit? Catching up would promote more long-form.
+- Will you submit talks or sponsor events this year? If yes, I'll add one CFP target and one sponsorship candidate with confirmed dates.
+- Is Reddit or Discord reachable from your work network? Your IT blocks Slack, and I don't know about the others.
+
+**Next (2 minutes):** open dataengineeringweekly.com and dev-rel.org, find the newest dated item on each, and tell me the dates. I'll mark them verified. If you grant me web access, I can run the whole check myself.

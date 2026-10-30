@@ -1,98 +1,125 @@
-# Testing 1,400 Fernhill Cloud Code Samples — Plan
+**Next action (10 min):** run the census. `scripts/sample-audit.py <docs-dir> --format json --ext .md,.mdx > inventory.json` (from the docs-code-sample-standards skill). Every number below is an assumption until that file exists.
 
-## 1. The real shape of the problem
+# Plan: test 1,400 code samples
 
-1,400 isn't one population — it's three, with wildly different test economics:
+## 1. Fix the metric first
 
-| Tier | Count | % of total | What it is |
-|---|---|---|---|
-| A — Reference one-liners | ~700 | 50% | Single API calls, one per endpoint |
-| B — Auth snippet copies | ~120 | 8.6% | Same snippet, small variations, pasted across pages |
-| C — Everything else | ~580 | 41.4% | Tutorials, quickstarts, multi-step guides, error handling |
+80% of 1,400 = **1,120 samples**.
 
-Tier C is where real product risk lives — multi-step state, less-common paths, the samples someone actually copy-pastes into a working integration. Tiers A and B are high-count but low-complexity. Treating all 1,400 as one uniform testing problem wastes effort on Tier A/B and starves Tier C. Confirm the ~580 figure against the actual doc inventory before committing to numbers below — it's inferred, not given.
+The 700 one-liners plus 120 auth copies are 820 samples, or 59% of the corpus. They are also the cheapest to test. If you test only those, you reach about 59%. Then 300 of the other 580 samples get you to 80%. You can hit the number while the quickstarts and multi-step scenarios stay untested, and those are the samples where a wrong example costs a reader the most.
 
-## 2. Definition of "tested" (lock this first)
+Do two things before work starts:
 
-Before any work starts, get sign-off on what counts, or the 80% number will be contested later:
+1. **Write the definition of "tested" down and get it agreed.**
+   - A sample counts as tested only if CI compiles or runs it on every release.
+   - It must run against the **published** SDK, not the working tree.
+   - A failure must block the docs build.
+   - A sample that was once checked by hand does not count.
+2. **Add companion gates, so the 80% can't be met with trivial samples alone:**
+   - 100% of the adoption path (quickstart, auth, first call) is tier Run and green.
+   - Every non-trivial scenario sample is covered by the 80%, not only the one-liners.
+   - Report two numbers: *placements* (1,400) and *distinct tested sources* (fewer, after dedupe).
 
-- **Executable sample** (Tier A, most of Tier C): runs against a sandbox tenant on the current SDK version, exits without error, response matches documented shape.
-- **Non-executable sample** (config files, CLI output, UI screenshots): manually walked through against current product behavior by a human, dated.
-- Every tested sample stores: pass/fail, SDK version tested against, date. Without this metadata, "80% tested" is a snapshot that silently rots the next time the SDK ships a breaking change.
+⚠️ Leadership approved "80% tested" without a definition. If you don't settle it now, someone will settle it later, probably in a way that undercounts your work.
 
-## 3. Tier A — 700 one-liners: automate, don't hand-test
+## 2. Tier every sample
 
-- Build a snippet-extraction harness that pulls code blocks straight from the docs source (markdown/MDX), not the rendered site, so it can run in CI pre-deploy.
-- Stand up a disposable sandbox tenant per language/SDK with seed fixtures (dummy bucket IDs, keys). For destructive one-liners (`delete`, `revoke`), generate the resource immediately before the call, don't run them against shared state.
-- Assert: no exception, expected status code, response schema matches what the page claims.
-- Wire the harness into doc-build CI once, so it re-verifies on every deploy — this is what keeps the 80% figure from decaying the day after you hit it.
-- **Cost shape**: high upfront (harness + fixtures), near-zero marginal per sample. Expect ~2-3 weeks for one engineer to cover most CRUD-style endpoints.
+Every sample gets exactly one tier:
 
-## 4. Tier B — 120 auth copies: dedupe before you test
-
-Don't execute 120 near-identical scripts. Diff first:
-
-1. Cluster all 120 by language + auth flow (OAuth exchange, API key header, JWT refresh). Expect ~5-10 real clusters.
-2. Pick one canonical sample per cluster, test it for real against the sandbox.
-3. Diff every other member of the cluster against its canonical version. Anything that differs beyond known-safe variables (placeholder IDs, formatting) gets flagged for manual review.
-
-That last step is the actual point of this tier: the risk in 120 copy-pasted snippets isn't "does auth work," it's "did someone's copy-paste silently drift" — a stale field name, an outdated scope, a token format nobody updated. The diff catches that; re-executing 120 identical scripts doesn't. Budget 3-4 days including outlier triage.
-
-## 5. Tier C — 580 substantive samples: this is the real work
-
-Don't work this queue in page order. Rank by risk signal, pulled from data, not guessed:
-
-- Doc analytics: top pages by traffic and by support-ticket citation
-- Recency: samples untouched since the last API surface change
-- Blast radius: destructive/stateful/billing operations rank above read-only examples
-- Anything already flagged in a support ticket or GitHub issue
-
-Test in that order. Script the API calls where possible; for the non-scriptable parts (UI steps, CLI output, screenshots), a human walks through against sandbox. Where the budget runs out, the *untested remainder is the lowest-risk tail by construction* — that's the point of ranking first, and it's a defensible thing to say to leadership if you don't clear all 580.
-
-## 6. The 80% math, and how to report it honestly
-
-- 80% of 1,400 = 1,120 samples.
-- Tiers A + B fully done = 820 (58.6%) — real testing, not padding, but not sufficient alone.
-- The remaining 300 have to come out of Tier C: **~52% of the 580 substantive samples**, not the easy ones.
-
-That's actually good news buried in the math: the target can't be hit by automating only the cheap tiers. You're forced into meaningful Tier C coverage regardless.
-
-Still, don't publish one blended number. Present two, side by side, in every status update:
-
-- **Overall: X / 1,400 tested** — satisfies the objective as written.
-- **Tier C only: Y / 580 tested** — shows whether the content most likely to break, and costliest when it does, actually got covered.
-
-Flag this framing to whoever owns the objective *before* the first report, not after. A single 80% figure invites the reading "they tested the easy stuff and stopped" even when that's not what happened — the tier breakdown heads that off at zero extra cost, since the classification is already required to build the plan.
-
-## 7. Infrastructure (build once, reuse everywhere)
-
-- Disposable sandbox tenant per environment/language, safe to hit repeatedly, including destructive calls
-- Snippet extraction from doc source, not rendered HTML
-- Containerized per-language runners pinned to the SDK version the docs claim to document
-- Sandbox credentials in CI secrets, never echoed into test logs
-- Retry/backoff policy — 700+ one-liners hitting live endpoints will trip rate limits without one
-
-## 8. Risks that could blow up the estimate
-
-- **Tier C composition is assumed, not confirmed.** If a chunk of the 580 needs enterprise/paid-tier features unavailable in sandbox, cost jumps — verify before committing to a timeline.
-- **Doc source inconsistency.** If code blocks aren't cleanly tagged by language/page, extraction tooling costs more than planned.
-- **SDK drift.** A passing sample today can silently fail on the next SDK major bump. The CI hook must stay wired in permanently — this is not a one-sprint deliverable, or "80% tested" is true for exactly one day.
-- **Tier B dedup assumption.** If the "small variations" turn out to be semantically meaningful per page rather than copy-paste drift, Tier B's cost roughly triples — the first diff pass validates or kills this assumption fast, do it early.
-
-## 9. Timeline (one dedicated engineer)
-
-| Weeks | Work | Milestone |
+| Tier | Applies to | CI does |
 |---|---|---|
-| 1-2 | Build Tier A harness + fixtures; start Tier B diff in parallel | — |
-| 3 | Finish Tier B triage; wire Tier A into CI | 820 tested (58.6%) |
-| 4 | Pull analytics/support-ticket data; rank Tier C | — |
-| 5-10 | Work Tier C queue in priority order | +300 tested (target: 1,120 / 80%) |
+| Run | Auth, quickstart, first call, high-copy samples | Executes against a sandbox or mock and asserts the output |
+| Compile-only | Most of the 700 one-liners, billing and destructive calls | Type-checks against the published SDK |
+| Illustrative | Pseudocode, fragments | Excluded, and visibly labelled on the page |
 
-Roughly 2.5-3 months end to end. Tier A/B don't parallelize past one engineer building the harness; adding headcount only helps once Tier C ranking is ready — put extra hands there.
+- Untiered samples default to Run, so an unclassified sample fails loudly instead of being ignored.
+- Cut dead samples. Removing one that references a removed API costs a reader nothing. That is ROT triage (redundant, outdated, trivial).
 
-## 10. Do this week
+## 3. Handle each bucket
 
-1. Pull the actual doc inventory and confirm the ~580 Tier C count — don't build the plan on an assumption.
-2. Provision sandbox/test-tenant access now — this is usually the real bottleneck, not the harness code.
-3. Pull page analytics + support-ticket citations to rank Tier C before writing a single test against it.
-4. Get sign-off on the "tested" definition (§2) and the two-number reporting format (§6) before the first status update.
+**A. 700 one-liners (reference pages)**
+- These are one per endpoint, so generate the harness from the OpenAPI spec and the sample files. Don't write 700 tests.
+- Per sample:
+  1. Extract it.
+  2. Wrap it in a stub that supplies client setup and imports.
+  3. Compile it against the published SDK.
+  4. Optionally run it against a mock server built from the OpenAPI spec (Prism or similar). The mock gives you free Run coverage.
+- ⚠️ A mock proves signatures and request shape. It does not prove real behavior. Label this tier "compile + mock", not "verified against the service".
+- Expect the first run to fail a lot. Samples hand-written years ago will reference renamed methods and removed endpoints. Triage the failures into fix, delete, or relabel.
+- This bucket is low risk per sample. Their value is mostly correct signatures, which the compile check covers.
+
+**B. About 120 auth copies**
+- Reduce them to **1 canonical snippet per language and auth method**. For example, API key and OAuth, times languages.
+- Test each canonical snippet at tier Run against a sandbox, with a dedicated test credential held in the CI secret store.
+- Replace each copy with an include from the tested source. Where the variations are real (scopes, regions), make them parameters of the include, not separate hand-edited copies.
+- Result: about 120 placements count as tested, backed by a handful of tests, and drift is gone for good.
+- Per the standards skill: "keep auth setup in one place that other samples link to."
+
+**C. The other ~580 (scenarios, tutorials, guides, README)**
+- These carry the most reader risk. Test them all, or cut them.
+- Order of work:
+  1. Pages by traffic and copy-button clicks, if your docs platform exposes them.
+  2. Quickstart and tutorials.
+  3. The long tail.
+- Move each sample into a real compilable file, and publish a marked region of that file into the page. Hide setup in the page, never delete it. This is the single-sourcing pattern.
+- Anything that bills, destroys data, or calls a third party is compile-only, never Run.
+
+## 4. CI shape
+
+- **Per PR:** a hermetic job covering compile-only and mock-backed samples. Keep it fast and make it blocking.
+- **Nightly or per SDK release:** a Run job against a sandbox, with fixtures that clean up after themselves.
+- **Install from the published SDK**, not the working tree. Otherwise CI passes while readers fail.
+- **Fail the docs build on a red sample.** If it stays green with red samples, nobody reads the red.
+- **Separate flaky from broken.** Split the per-PR job from the sandbox job so a flaky sandbox never gets the whole suite disabled.
+- **Freshness:** flag any sample whose last *successful* run is older than a window you set (suggest 30 days).
+
+## 5. Ownership
+
+Answer this in writing: *when a sample goes red on a Friday, whose queue is it in?*
+
+- Suggested default is the SDK owners for reference and auth samples, and docs for tutorials.
+- Encode it as CODEOWNERS rules plus a blocking check, not a wiki paragraph.
+- You own the program. You do not have to own every fix.
+
+## 6. Phases and effort
+
+These are my rough estimates. Calibrate them after step 0.
+
+| Phase | Work | Rough effort |
+|---|---|---|
+| 0 | Census, tiering, written definition of "tested", leadership sign-off on it | 2–3 days |
+| 1 | Harness for one-liners: extract, stub, compile, mock run. First failure triage. | 1–2 weeks |
+| 2 | Auth dedupe, canonical tested snippets, includes | 3–5 days |
+| 3 | Scenario samples moved into tested source, in traffic order | 3–6 weeks, parallelizable |
+| 4 | Ownership, blocking gates, freshness window, dashboard | 3–5 days |
+
+Expected coverage progression: roughly 59% after phases 1–2 (if all pass), then to 80%+ through phase 3. Phase 3 is the schedule risk.
+
+## 7. Report the program
+
+Track per release, not per audit:
+
+- Tested share (placements) and distinct tested sources.
+- Adoption-path samples green: target 100%.
+- Pass rate: target ≥90%. Below it, stop authoring and run a remediation sprint.
+- Mean time from a red sample to a merged fix.
+- Samples over the freshness window.
+
+Label the 80% and 90% figures as targets set by the program, not industry benchmarks. No vendor publishes either.
+
+## 8. Risks
+
+- ⚠️ **Gaming the metric:** covered by the definition and companion gates in section 1.
+- ⚠️ **First-run failure rate is unknown.** Old hand-written samples may fail at a high rate. Budget phase 1 triage time for that.
+- ⚠️ **Mocks overstate confidence.** Keep the label honest.
+- ⚠️ **Credentials in CI:** use a sandbox account with a scoped test key. Run a secret scan on the samples too, since stale hand-written ones may embed real-looking keys. Any hit is P0.
+
+## Questions that change this plan (answer in any order)
+
+1. Which languages are published, and how many samples per language?
+2. Is there an SDK and an OpenAPI spec, and are samples published from the SDK's current version?
+3. Does CI exist for the docs repo today?
+4. Is there a sandbox environment with test credentials?
+5. What is the deadline for the 80%, and how many engineer-days do you have?
+
+**Next:** run the census command above and paste the summary line (count by language and by page type). I'll then turn the estimates into a dated schedule.

@@ -1,77 +1,95 @@
-## Sample audit — Cindermoor Pay "create a payout" block
+# Cindermoor Pay: payout sample cleanup and sample rules
 
-**Findings** (checklist format: evidence → fix)
+I followed `docs-code-sample-standards` and read its checklist and policy template. I did not run `scripts/sample-audit.py`, because writing the test files was denied. The findings and the check of the cleaned block below come from reading the skill's rules and the script's regexes, not from a run.
 
-```
-docs/<page>:<line> - fence has no language identifier, so no syntax highlighting
-  or lint coverage applies to it. Fix: tag it ```bash.
+## ⚠️ P0: rotate the key first
 
-docs/<page>:<line> - command line starts with `$`, a shell prompt character copied
-  verbatim by anyone who selects the whole block. Fix: drop the `$`.
+`sk_live_9fKq2pRt7LwZ3xVn8MdE4cYb` is a live-format secret key in your most-copied block. Treat it as leaked. It is also now in this conversation.
 
-docs/<page>:<line> - `sk_live_9fKq2pRt7LwZ3xVn8MdE4cYb` is a real-format LIVE-mode
-  secret key, unbracketed, indistinguishable from a working credential. This is
-  why support keeps telling readers to swap it - nothing in the block marks it
-  as a placeholder. [P0]
+1. Revoke it and issue a new one.
+2. Check the audit logs for payouts you did not create. This endpoint moves money.
+3. Then merge the cleanup below, since a cleaned page does not un-leak the key.
 
-docs/<page>:<line> - trailing `...` truncates the request body inside a
-  click-to-copy block; the reader can't see what parameter(s) it's hiding, and
-  can't run the command as shown. [P1]
+## Findings on the original block
 
-docs/<page>:<line> - response JSON is glued directly under the request in the
-  same fence, so both get copied together and the reader has to hand-delete the
-  response before running the command. [P2]
+| Severity | Finding | Fix |
+|---|---|---|
+| P0 | Live-format secret key in a copyable block | Replace it and rotate the real key |
+| P2 | `$` prompt character is copied with the command | Remove it |
+| P2 | `...` inside the block is copied and breaks the command | Remove it, or list the real parameters |
+| P2 | Response glued into the command block | Move it to its own block |
+| P2 | No language identifier on the fence | Use `bash` and `json` |
+| P2 | No execution tier | Assign one (see below) |
 
-docs/<page>:<line> - no top-level context: nothing states this call moves real
-  money once run with a live key, and nothing states the unit `amount` is in
-  (minor units/cents vs. major units). Ambiguity and incompleteness are the two
-  defects Uddin & Robillard's documentation survey rated most severe. [P2]
-```
+## Cleaned block
 
-**⚠️ Conflict with your requested placeholder.** You asked for `acct_test_51H8xQ2eZvKY` in place of angle brackets. The skill's Safety rule is explicit: *"No plausible-looking fake values a reader could paste verbatim; no real-format credentials, account IDs or endpoints"* — and the checklist's own failure-mode table names this exact scenario: *"Reader pastes a placeholder verbatim → use angle brackets and reserved-range hosts, never a plausible fake value."*
+Create a payout. First set `CINDERMOOR_API_KEY` to your own test-mode key from the dashboard. The key in this example is only a stand-in. It is rejected with a `401` until you replace it.
 
-That's not a style preference, it's the direct fix for the support ticket you're describing. `acct_test_51H8xQ2eZvKY` is shaped exactly like a real key — nothing in the block would tell a skimming reader it isn't one, so they paste it verbatim and it fails silently (or worse, if it happens to collide with a real-looking pattern). Swapping `sk_live_...` for a differently-prefixed but equally plausible string doesn't remove the defect, it relocates it. I used bracketed placeholders below instead. If you still want the literal string after reading this, say so and I'll swap it back — but do it with brackets around it (`<acct_test_51H8xQ2eZvKY>`), not bare.
+````markdown
+```bash tier=run
+export CINDERMOOR_API_KEY=acct_test_51H8xQ2eZvKY
 
-**Tier:** Run. This is your highest-copy sample and sits on the primary adoption path (first API call) — the policy promotes exactly this case to Run regardless of the general effort ranking. Source it from a real test-mode fixture account, execute nightly (payout creation is service-side, not repo-side, so it drifts on the provider's schedule, not on doc edits), and assert the response shape rather than the literal `id`.
-
----
-
-## Cleaned sample
-
-Create a payout. Replace `<YOUR_API_KEY>` with your **test-mode** secret key from your dashboard — test-mode keys never move real money, so it's safe to run this exactly as written. `amount` is in the smallest currency unit (e.g. cents for USD).
-
-```bash
-curl https://api.cindermoor.com/v2/payouts \
-  -X POST \
-  -H "Authorization: Bearer <YOUR_API_KEY>" \
+curl -X POST https://api.cindermoor.com/v2/payouts \
+  -H "Authorization: Bearer $CINDERMOOR_API_KEY" \
   -d amount=4500
 ```
-
-Add any other fields your integration requires (e.g. currency, destination) before running this — check the Payouts reference for the full parameter list; don't truncate a docs example with `...`.
 
 Expected response:
 
 ```json
 { "id": "po_7731", "status": "pending" }
 ```
+````
 
-Never paste a `sk_live_` key into a doc, script, or shared terminal — a live key runs against real funds.
+Three things to check before you publish:
 
----
+- **The `...`:** I removed it and did not guess what it hid. If `/v2/payouts` requires more fields (currency, destination), list them. If none are required, leave it as is.
+- **The `acct_test_` prefix:** it looks like an account ID, but the header expects a secret key. If your test-mode secret keys have another prefix, such as `sk_test_`, use that shape so the stand-in matches what readers will see.
+- **The `tier=run` tag:** I assumed this is a quickstart-path sample, so I tagged it Run against test mode. If CI cannot run it, downgrade it to compile-only or illustrative and label it on the page.
 
-## Rules — stop the rest of the docs looking like this
+## Where I departed from the skill's policy
 
-**Anatomy — every sample must have:**
-- One top-line sentence stating what it does and what the reader needs before running it (key, account, prior step).
-- Command and response in separate fenced blocks — never glued into one copy-paste target.
-- A language identifier on every fence; use `plaintext` if nothing fits.
-- No `...`, no `…`, no elided parameters. Show every field, or name what's missing in prose above the block.
-- A stated unit for every ambiguous numeric field (amount, timestamp, duration).
+You asked for `acct_test_51H8xQ2eZvKY` and no angle brackets. The skill's default is angle-bracket placeholders. It also lists a plausible fake value as a reader-paste failure mode. I followed your choice because the value is not a credential, so it is a P2 policy deviation, not a P0.
 
-**Safety — copy-paste and credentials:**
-- No shell prompt characters (`$`, `#`, `PS>`) inside a command block.
-- Placeholders always in angle brackets (`<YOUR_API_KEY>`), explained in the sentence above the block. Never a plausible-looking fake value, real-format account ID, or endpoint — that's what trains readers to paste it unchanged.
-- Every auth example uses a test-mode key format, never live-mode. State this rule once, on the auth setup page, and link every other sample to it instead of repeating the warning.
-- Any call with a real financial or destructive side effect (payouts, transfers, deletes) gets an explicit one-line warning above the block, not just a safe-looking placeholder.
+The risk is real, though. A reader who pastes it verbatim gets a `401`, which is the support ticket you are trying to stop. Three mitigations are built in:
 
-**Ownership:** put this page on the same freshness window and CI check as the rest of the quickstart path — a red build on this specific block should page whoever owns the Payouts API, since it's your most-copied sample and a break here is a break for the most readers at once.
+- The key sits in an env var, so a reader changes one line and not the command.
+- The prose says plainly that the value is a stand-in.
+- The policy records an expiry for this exception (rule 3 below).
+
+If support tickets don't drop within a quarter, switch to `<YOUR_API_KEY>`. Readers who find angle brackets confusing usually need the prose that explains them, not a different placeholder.
+
+## Rules for the rest of the docs
+
+**Anatomy**
+1. Every fence has a language identifier (`bash`, `json`, `plaintext`).
+2. A sample contains everything needed to run it in a fresh shell or file: setup, auth, and one code path.
+3. Every sample has a tier tag in the fence info string: `tier=run`, `tier=compile-only` or `tier=illustrative`. Untagged samples count as Run, so they fail loudly. Illustrative samples carry a visible label on the page.
+4. Blocks stay under 40 lines.
+
+**Copy-paste safety**
+1. No prompt characters (`$`, `#`, `PS>`) in command blocks.
+2. Commands and their output go in separate blocks. Label the output "Expected response".
+3. No `...` or `…` inside a block. Mark an omission with a comment in the language's own syntax, or list the real parameters.
+4. Keep the placeholder format the same everywhere: one stand-in value, in a named env var, with the line "replace this with your test key" in the prose above the block. Record any exception to this rule in the policy with a reason and an expiry date.
+5. Use only test-mode stand-ins and reserved-range hosts (`example.com`, `192.0.2.x`). Never use a value in a live-credential format (`sk_live_`, `AKIA…`, `ghp_…`, JWTs, private-key headers).
+
+**Security**
+1. No disabled TLS (`-k`, `--insecure`, `verify=False`).
+2. Any money-moving or destructive call uses a test key and carries a warning above the block. Add an inline guard where the language allows one.
+3. Auth setup lives on one page. Other samples link to it and do not repeat it with variations.
+4. Show one failure path (for example the `401` and `402` responses) for any call that fails in normal use.
+
+**Verification and ownership**
+1. Quickstart, auth and first-call samples must be Run and green in CI against test mode. Everything else is Run or compile-only, or labelled illustrative.
+2. Single-source samples from tested files and publish a marked region. Hide setup with markers and never delete it.
+3. Failing samples fail the docs build. A red sample lands in the owning team's queue with a stated fix SLA.
+4. Run `scripts/sample-audit.py docs/ --format summary` on every release. Read its flags as candidates to confirm, not verdicts.
+5. Run the audit on the whole docs tree now, not only this page. A key that leaked here is likely to appear in other samples too.
+
+## Fix queue
+
+1. 🔴 Rotate the live key, check the logs, and publish the cleaned block. Do this first.
+2. 🟠 Run the audit over the full docs tree and fix every `credential-shaped-literal` flag. The skill ranks leaked credentials above every other finding.
+3. 🟢 Fix the remaining P2s (prompts, ellipses, glued output) in bulk, since the fixes are mechanical.
+4. ℹ️ Add the audit to the release checklist and make CI fail on P0 and P1 findings.

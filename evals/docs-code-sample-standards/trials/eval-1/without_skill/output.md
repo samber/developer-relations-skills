@@ -1,15 +1,44 @@
-I can't write this report as specified, and I want to flag why rather than hand over a polished document that has problems baked in.
+# Sample-quality report: Halyard Data docs
 
-**Two things are wrong with the brief itself:**
+**To:** Leadership
+**From:** Documentation
+**Date:** 2026-10-30
 
-**1. I have no actual findings to report.** You haven't told me which 12 pages, what the 4 broken samples were, what was broken about them (wrong syntax, deprecated API, wrong output, outdated auth flow?), or why storage pages specifically are the trouble spot. A leadership report needs real specifics — page names, what failed, what "fixed" meant. If I fill those in myself, I'm inventing facts in a document meant to justify a budget decision. That's not a shortcut I should take even though it would satisfy the letter of "give the complete deliverable."
+## Summary
 
-**2. The conclusion doesn't match the numbers you described.** 4 of 12 pages — your *most-visited* pages — had code samples broken enough that you caught them on a single read-through in one sitting. That's a 33% defect rate on flagship content, found by one person, in one pass, checking only for "obviously broken." That's not evidence of "good shape with minor issues" — if anything it's a stronger, more honest case for whatever budget you're asking for than a soft conclusion would be. If a board member or an eng lead spot-checks a 13th page and finds a 5th broken sample, the report's credibility (and yours) takes the hit, not mine.
+Our code samples are not yet verified as good. A manual read of our twelve most-visited pages found obviously broken samples on four of them, and I fixed those. We have not checked the remaining samples, so I can't call the overall state good. I am asking for automated sample testing so we can measure quality instead of estimating it.
 
-**On the opening stat:** "94% of developers consider API documentation quality a key factor" is one of those numbers that circulates constantly in docs/DevRel content without a traceable source — I can't find a credible original study behind it, and "I've seen it everywhere" is usually how citation-less stats spread, not evidence they're real. Opening a budget ask to leadership with an unsourced number is a real exposure if anyone asks "source?" — and undermines the actual, real, defensible data you do have (your own audit).
+I left out the "94% of developers" statistic. I can't trace it to a source, and unsourced numbers in a leadership report invite challenge. If you have the original survey, cite it and add it as the opening line. The report doesn't need it. The finding below makes the case on its own.
 
-**What I'd suggest instead:**
+## What we checked
 
-Give me the real specifics — the 12 page titles/URLs, what was broken on each of the 4, and what the fix was (or at least a one-line description per page) — and I'll draft a report that leads with your actual finding (defect rate on top-traffic pages, concrete examples, what you fixed) and makes the budget case on real evidence instead of a borrowed stat. If you want a general "why docs quality matters" opener, I can find you a statistic with a checkable source, or write the framing without leaning on a number at all.
+- **Scope:** the twelve most-visited docs pages.
+- **Method:** one person read every code block on each page. The samples were not executed.
+- **Date:** last Thursday.
+- **Not covered:** the rest of the docs site, the API reference, and the separate examples repo. Those three are where most of our samples live.
 
-Want to send me the page list and what was broken on each?
+## What we found
+
+- **Four of twelve pages (33%) had obviously broken samples.** A read-through alone caught these. [Fill in: which pages, and what was broken, such as wrong syntax, outdated parameters or a missing step.]
+- **All four were fixed** last Thursday. [Fill in: confirm the fix date and whether each fix was re-checked.]
+- **The storage pages hold the problems we have confirmed.** [Fill in: how many of the four were storage pages, and whether the other eight pages had any minor issues.] I would call these "confirmed so far", not "minor". Judging severity needs the failure details and ideally a run.
+
+## What this does and doesn't tell us
+
+- **It shows a real defect rate on our highest-traffic pages.** One in three had a broken sample, and these are the pages new users hit first.
+- **It likely understates the problem.** A read-through catches "obviously broken" samples but not ones that parse fine and fail at runtime, such as version drift, changed defaults or auth changes.
+- **It says nothing about the other samples.** The twelve pages are not a random sample, so I can't extrapolate to the API reference or the examples repo. Less-visited pages may be better or worse, and they probably get checked less often.
+
+## Recommendation and budget ask
+
+1. **Run every sample in CI** against a current Halyard build. This turns "we think samples are fine" into a pass rate we can report each quarter. [Fill in: estimated engineering time and cost.]
+2. **Audit the API reference and the examples repo** with the same method now, and report the defect rates by surface. [Fill in: estimated days.]
+3. **Assign an owner** for sample freshness, tied to the release process, so samples are re-checked whenever the product changes. [Fill in: owner and time per release.]
+
+## Next report
+
+In [N] weeks I will report the CI pass rate across all three sample surfaces. If the broader audit shows the top pages were unusually bad, the headline can improve. I would rather you hear that from data than from a user complaint.
+
+---
+
+**A note for you, not for the report:** a conclusion of "in good shape with minor issues on the storage pages" doesn't follow from a 33% defect rate on the pages that matter most, from a sample that skipped two of the three surfaces, or from samples that were read but never run. Leadership could easily ask "so one in three of our top pages was broken?" The version above holds up to that question and still supports your budget ask. If the audit finds the problems are minor, you can say so with numbers.

@@ -3,73 +3,73 @@
     "expectations": [
       {
         "text": "States that it is working in edit mode because a draft already exists, and says so before starting work",
-        "evidence": "'## Edit mode \u2014 \"How Kestrel Cut Our Index Build Time\"' followed by 'Per the skill's edit-mode rule: no full rewrite.' \u2014 stated before the gate report begins.",
+        "evidence": "Opens with \"**Mode: edit mode.** A draft exists, so I'm returning the gate report and a prioritised fix list\"",
         "passed": true,
         "graded": true
       },
       {
         "text": "Does not return a full rewritten version of the post",
-        "evidence": "Only a gate report and tiered fix list with quoted lines are returned; 'Only the passages you approve get rewritten.'",
+        "evidence": "\"with no full rewrite\"; the output is a fix list and a ledger only.",
         "passed": true,
         "graded": true
       },
       {
         "text": "Returns a fix list grouped into three tiers labelled blocking, strong, and optional",
-        "evidence": "Headings '### Blocking (fix before Thursday)', '### Strong (fix unless the author disagrees)', '### Optional'.",
+        "evidence": "Headings \"Blocking (do not publish until fixed)\", \"Strong (fix unless you disagree)\", \"Optional\"",
         "passed": true,
         "graded": true
       },
       {
         "text": "Quotes the specific offending line for each item instead of paraphrasing it",
-        "evidence": "e.g. *\"Kestrel is the fastest columnar index builder available today.\"* and *\"we're thrilled to share this journey with the community.\"*",
+        "evidence": "Items quote \"Kestrel is the fastest columnar index builder available today.\", \"index builds are 12x faster\", \"thousands of teams rely on Kestrel in production.\", \"we're thrilled to share this journey with the community.\"",
         "passed": true,
         "graded": true
       },
       {
         "text": "Flags \"the fastest columnar index builder available today\" as an unsupported superlative that must be backed by a measurement in the post or cut",
-        "evidence": "'An unsourced superlative with implicit competitor comparison and no data in the post. Cut it, or replace with the one number you can actually defend...'",
+        "evidence": "\"This is an unsupported superlative... Cut it.\" It also names the full benchmarketing route as the only other way to keep the claim.",
         "passed": true,
         "graded": true
       },
       {
         "text": "Flags \"12x faster\" as a ratio with no methodology and no absolute values, and requires a disclosure block or removal of the claim",
-        "evidence": "'ratios need absolute values alongside them...Add, right next to the chart: hardware/instance type, Kestrel version on each side, dataset size and shape, number of runs and variance.'",
+        "evidence": "\"No baseline, hardware, versions... a ratio hides the absolute gap\"; adds a \"How we measured\" block and absolute times such as `41 min \u2192 3.4 min`.",
         "passed": true,
         "graded": true
       },
       {
         "text": "Flags \"thousands of teams rely on Kestrel in production\" as an adoption claim with no source, to be cut or replaced with a figure the author can point at",
-        "evidence": "'An adoption claim with no source, which the scan script would flag outright. Cut it, or replace with an actual number you can point to...'",
+        "evidence": "\"adoption claim with no source... Cut it. Keep it only if you can link a public, current number.\"",
         "passed": true,
         "graded": true
       },
       {
         "text": "Flags the snippet for missing imports, no pinned version, and the renamed kestrel.build_index() call that would fail for a reader who copies it",
-        "evidence": "'40 lines, no imports, calls kestrel.build_index(), which was renamed in 2.0...add the imports, swap in the current 2.0 method name...Pin the Kestrel version the snippet targets and date the post.'",
+        "evidence": "\"no imports and calls `kestrel.build_index()`, which was renamed in 2.0... Run it against a pinned Kestrel version\"",
         "passed": true,
         "graded": true
       },
       {
         "text": "Flags the absent limitations section and asks for concrete boundaries a reader can check against their own system",
-        "evidence": "'No limitations section anywhere... candidates worth asking about: dataset sizes/shapes where the 12x doesn't hold, whether query performance or memory changed as a trade-off, what wasn't re-tested...'",
+        "evidence": "\"Add 'Where this does not help' with three or four boundaries a reader can check against their own system\"",
         "passed": true,
         "graded": true
       },
       {
         "text": "Reports the draft against the six credibility-gate checks and names which ones fail",
-        "evidence": "Table '### Credibility gate \u2014 current state: 0/6 pass' listing all six checks with \u274c status and reasons.",
+        "evidence": "Six-row gate table with \"Six of six fail.\"",
         "passed": true,
         "graded": true
       },
       {
         "text": "States that only the passages the user approves will be rewritten",
-        "evidence": "'Only the passages you approve get rewritten.'",
+        "evidence": "\"Tell me which fixes you approve, and I'll rewrite only those passages.\"",
         "passed": true,
         "graded": true
       },
       {
         "text": "Gives preserving the author's voice as the reason for not rewriting the whole draft",
-        "evidence": "No statement ties the no-full-rewrite approach to preserving the author's voice; the closing-paragraph fix mentions 'the engineer's voice' only as a content critique, not as the rationale for the edit-mode approach.",
+        "evidence": "No voice rationale appears. It only says it can't give line edits without the file.",
         "passed": false,
         "graded": true
       }
@@ -79,73 +79,73 @@
     "expectations": [
       {
         "text": "States that it is working in edit mode because a draft already exists, and says so before starting work",
-        "evidence": "Opens with 'Here are the fixes, ready to paste into the draft in place of the flagged passages' \u2014 no explicit statement about working in edit mode or the draft's prior existence before starting work.",
+        "evidence": "Opens with \"I only have your summary, not the draft, so I couldn't edit the text directly.\" It never names an edit mode.",
         "passed": false,
         "graded": true
       },
       {
         "text": "Does not return a full rewritten version of the post",
-        "evidence": "Returns six discrete fix entries with 'Cut:'/'Replace with:' snippets, not a full rewritten draft.",
+        "evidence": "It returns section-level replacement passages with bracketed slots, not a full post.",
         "passed": true,
         "graded": true
       },
       {
         "text": "Returns a fix list grouped into three tiers labelled blocking, strong, and optional",
-        "evidence": "Items are simply numbered 1\u20136 with no blocking/strong/optional tier labels.",
+        "evidence": "The structure is \"Before Thursday\", \"Replacement passages\" and \"Final checks\". There are no blocking/strong/optional tiers.",
         "passed": false,
         "graded": true
       },
       {
         "text": "Quotes the specific offending line for each item instead of paraphrasing it",
-        "evidence": "e.g. 'Cut: \"Kestrel is the fastest columnar index builder available today.\"' and 'Cut: \"thousands of teams rely on Kestrel in production.\"'",
-        "passed": true,
+        "evidence": "It quotes \"fastest columnar index builder available today\", \"we're thrilled to share this journey\" and `build_index()`. The 12x claim and the adoption claim are only referenced loosely, so quoting is not consistent.",
+        "passed": false,
         "graded": true
       },
       {
         "text": "Flags \"the fastest columnar index builder available today\" as an unsupported superlative that must be backed by a measurement in the post or cut",
-        "evidence": "'\"Fastest available today\" is a claim about every competing tool, unfalsifiable... State what changed for you instead.'",
+        "evidence": "\"The 'fastest available' claim can't be verified and invites a rebuttal.\" It offers a scoped replacement.",
         "passed": true,
         "graded": true
       },
       {
         "text": "Flags \"12x faster\" as a ratio with no methodology and no absolute values, and requires a disclosure block or removal of the claim",
-        "evidence": "'A bar chart captioned \"12x faster\" with no accompanying text answers no questions... If the 12x number can't be traced to a specific before/after pair with a stated dataset and hardware, don't publish it.'",
+        "evidence": "It asks for absolute times, hardware, baseline version and runs, and provides a setup/table block. It also says to \"publish without the 12x headline\" if the numbers can't be reproduced.",
         "passed": true,
         "graded": true
       },
       {
         "text": "Flags \"thousands of teams rely on Kestrel in production\" as an adoption claim with no source, to be cut or replaced with a figure the author can point at",
-        "evidence": "'Cut: \"thousands of teams rely on Kestrel in production.\" ... If you don't have a number you can stand behind, cut the sentence entirely.'",
+        "evidence": "\"Verifiable number ... / Our own usage ... / No data: delete the sentence.\"",
         "passed": true,
         "graded": true
       },
       {
         "text": "Flags the snippet for missing imports, no pinned version, and the renamed kestrel.build_index() call that would fail for a reader who copies it",
-        "evidence": "Flags missing imports and the renamed 'kestrel.build_index()' but never mentions pinning the package version.",
-        "passed": false,
+        "evidence": "\"Add every import, plus a pip install kestrel==[version] line\" and \"Replace build_index() with the 2.0 name.\"",
+        "passed": true,
         "graded": true
       },
       {
         "text": "Flags the absent limitations section and asks for concrete boundaries a reader can check against their own system",
-        "evidence": "'New section \u2014 where this doesn't help ... A 12x number with zero caveats reads as an ad; the fastest way to fix that is to name where the win doesn't hold.'",
+        "evidence": "It adds a \"Where Kestrel did not help\" section with workload, memory and threshold slots, and asks for \"Cases where the speedup was small, zero, or negative.\"",
         "passed": true,
         "graded": true
       },
       {
         "text": "Reports the draft against the six credibility-gate checks and names which ones fail",
-        "evidence": "No named 'credibility-gate checks' framework; closing note only says 'five of these six problems are the same problem wearing different clothes.'",
+        "evidence": "No gate checklist appears anywhere in the response.",
         "passed": false,
         "graded": true
       },
       {
         "text": "States that only the passages the user approves will be rewritten",
-        "evidence": "No such restriction is stated anywhere in the response.",
+        "evidence": "It offers a line edit on a pasted draft but never says only approved passages will be rewritten.",
         "passed": false,
         "graded": true
       },
       {
         "text": "Gives preserving the author's voice as the reason for not rewriting the whole draft",
-        "evidence": "The stated reason is that 'a fabricated stat is worse than a missing one,' not voice preservation.",
+        "evidence": "The reason given is that it lacked the draft. Voice is never mentioned.",
         "passed": false,
         "graded": true
       }

@@ -1,64 +1,80 @@
-# Sablefish Health — Docs CODEOWNERS + Sample-Fix SLA
+Next action: send the VP the three decisions at the bottom. The file and table below are drafts. Three inputs are missing, so I marked every guess `ASSUMED`.
 
-## The blocker you need to solve before Friday, not after
+## Two problems with the ask
 
-GitHub CODEOWNERS routes by **file path**, not by content inside a file. With samples hand-pasted into Markdown and no snippet tags, most of your ~900 pages almost certainly mix multiple languages in one file (tabbed code blocks on a single API-reference page). CODEOWNERS cannot tell "the Python tab changed" from "the Java tab changed" — it will request the same reviewer(s) for the whole file regardless of which language's block a PR touches.
+1. **CODEOWNERS matches paths, and your samples have none.** They sit inside about 900 Markdown pages with no snippet tags. Friday's file can own SDK directories and docs sections. It cannot own "every language's samples" until samples are extracted into files.
+2. **A 48-hour SLA cannot bind unpaid volunteers.** Put the SLA on a Sablefish employee for every SDK. Volunteers get best effort, with a paid backstop.
 
-Two places this genuinely works today, and one place it doesn't:
-
-- **Per-language quickstart/getting-started pages** — these are almost always already one file per language. True language-level ownership works here now.
-- **Shared API-reference / guide pages with tabbed samples** — one owner per page is the only thing CODEOWNERS can enforce today. Routing a Python-only change to the Python owner is not possible until samples are split into per-language include files (the actual fix for "no snippet tags").
-- **Anything without a clean directory/naming convention at all** — falls to a fallback team below; don't leave any path unowned, GitHub silently skips unmatched files.
-
-Ship the interim file below by Friday. Open a follow-up ticket for snippet extraction — that's the only path to true per-language enforcement and automation later.
-
-## CODEOWNERS
-
-Replace every `@handle`/`@org/team` placeholder with real GitHub usernames or teams. Every named owner must have write access to the repo or GitHub silently drops them from the review request.
+## Draft CODEOWNERS
 
 ```
-# Sablefish Health docs — sample ownership
-# Rules are evaluated last-match-wins: keep broad fallbacks first, specific paths last.
+# CODEOWNERS - last matching pattern wins. Keep specific rules BELOW general ones.
+# Every owner needs write access to the repo, or the rule is silently ignored.
+# Every rule lists @sablefish/docs-eng as co-owner, so a volunteer
+# who goes silent can never block a merge.
 
-# ---- Fallback: anything not matched below ----
-*                                           @sablefish-docs/core-writers
+# Default: whole repo
+*                              @sablefish/docs-eng
 
-# ---- Per-language quickstarts (true language-level ownership) ----
-/quickstart/python/**                      @sablefish-sdk/python-owner
-/quickstart/node/**                        @sablefish-sdk/node-owner
-/quickstart/java/**                        @sablefish-sdk/java-owner       # unpaid outside contributor — see SLA notes
-/quickstart/ruby/**                        @sablefish-sdk/ruby-owner       # unpaid outside contributor — see SLA notes
+# Docs pages (ASSUMED path)
+/docs/                         @sablefish/docs-eng
 
-# ---- SDK reference guides that are already single-language files ----
-/reference/python/**                       @sablefish-sdk/python-owner
-/reference/node/**                         @sablefish-sdk/node-owner
-/reference/java/**                         @sablefish-sdk/java-owner
-/reference/ruby/**                         @sablefish-sdk/ruby-owner
+# Samples embedded in docs pages, by language.
+# No tags yet, so ownership is by section. Refine after snippet extraction.
+/docs/**/python/               @PY_OWNER_HANDLE    @sablefish/docs-eng
+/docs/**/typescript/           @TS_OWNER_HANDLE    @sablefish/docs-eng
+/docs/**/go/                   @GO_OWNER_HANDLE    @sablefish/docs-eng
+/docs/**/java/                 @JAVA_OWNER_HANDLE  @sablefish/docs-eng
 
-# ---- Mixed-language tabbed pages (API reference, guides): page-level only ----
-# Cannot route by language until samples are split into per-language snippet files.
-/api-reference/**/*.md                     @sablefish-docs/content-owner
-/guides/**/*.md                            @sablefish-docs/content-owner
+# SDK source (ASSUMED paths and languages)
+/sdks/python/                  @PY_OWNER_HANDLE    @sablefish/docs-eng
+/sdks/typescript/              @TS_OWNER_HANDLE    @sablefish/docs-eng
+/sdks/go/                      @GO_OWNER_HANDLE    @sablefish/docs-eng
+/sdks/java/                    @JAVA_OWNER_HANDLE  @sablefish/docs-eng
 
-# ---- CI / secrets scanning config, once added ----
-/.github/workflows/secrets-scan.yml        @sablefish-security/docs-liaison
+# Security-sensitive files: always a Sablefish employee
+/.github/                      @sablefish/security @sablefish/docs-eng
+/CODEOWNERS                    @sablefish/docs-eng
 ```
 
-## Sample-Fix SLA
+Handle placeholders to replace:
+- Paid SDKs: use the maintainer's employee handle.
+- Volunteer SDKs: use the volunteer's handle, with the paid backstop in the SLA table as co-owner.
 
-| Language / SDK | Owner | Employment status | Sample fix SLA | Escalation on breach | Notes |
-|---|---|---|---|---|---|
-| Python | `@sablefish-sdk/python-owner` | Staff (paid) | 48h business hours: fix or pull the sample | Auto-escalate to eng manager at 48h | Full SLA as directed |
-| Node.js | `@sablefish-sdk/node-owner` | Staff (paid) | 48h business hours: fix or pull the sample | Auto-escalate to eng manager at 48h | Full SLA as directed |
-| Java | `@sablefish-sdk/java-owner` | Unpaid outside contributor | Best-effort, target 5 business days | At 48h with no response, `@sablefish-docs/content-owner` marks the sample "unverified" and pulls it if broken | No SLA on a volunteer — see below |
-| Ruby | `@sablefish-sdk/ruby-owner` | Unpaid outside contributor | Best-effort, target 5 business days | At 48h with no response, `@sablefish-docs/content-owner` marks the sample "unverified" and pulls it if broken | No SLA on a volunteer — see below |
+## SLA table
 
-**"Fix" for all four rows means one of two things within the window: correct the sample, or flag it `unverified`/remove it.** Nothing here is tested today, so "confirm it actually still runs" can't be a 48h promise on day one — treat the first pass through each sample as triage, not verification.
+The clock starts when a confirmed report is triaged. It does not start at report time. Nothing is tested today, so nothing detects a broken sample on its own.
 
-**Don't put a 48-hour SLA on the two unpaid maintainers.** There's no employment relationship to enforce it, and a hard clock on volunteer labor is a fast way to lose them. Give the VP the paid-vs-volunteer split above as-is: two SDKs get the real 48h SLA; the other two get a staff-owned fallback that keeps published docs honest (pull or flag, don't silently leave a broken sample live) without making the SLA a demand on someone unpaid.
+| SDK | Owner type | Owner of record | 48h fix SLA applies to | Backstop |
+|---|---|---|---|---|
+| SDK 1 (ASSUMED paid) | Employee | `@PY_OWNER_HANDLE` | Owner | `@sablefish/docs-eng` |
+| SDK 2 (ASSUMED paid) | Employee | `@TS_OWNER_HANDLE` | Owner | `@sablefish/docs-eng` |
+| SDK 3 (ASSUMED volunteer) | Outside contributor | `@GO_OWNER_HANDLE` | Best effort, 5 business days | Named employee `@BACKSTOP_GO` takes the 48h SLA |
+| SDK 4 (ASSUMED volunteer) | Outside contributor | `@JAVA_OWNER_HANDLE` | Best effort, 5 business days | Named employee `@BACKSTOP_JAVA` takes the 48h SLA |
 
-## Before this merges
+Severity tiers, so "fix" has one meaning:
 
-- **Run a secrets scan (gitleaks or trufflehog) across all ~900 pages now, not after.** You're about to put named owners' names next to content that's never been checked — if a live key surfaces in a page owned by an unpaid volunteer, that's a problem you want to have found yourself.
-- **Add every CODEOWNERS handle as a repo collaborator/team member first** — an owner without write access is silently dropped from review requests, and the SLA table becomes fiction.
-- **File the snippet-tagging + per-language sample extraction ticket alongside this merge.** It's the only way "every language's samples" becomes literally true instead of "every language's samples, except the ~90% living in shared tabbed pages."
+| Severity | Example | Time to fix or mitigate |
+|---|---|---|
+| Critical | Live secret in a sample, or a sample that destroys data | 4 hours: remove or redact, then rotate |
+| High | Sample does not compile or run | 48 hours |
+| Normal | Outdated, cosmetic, or wrong output | 5 business days |
+
+Rules for the SLA:
+- **Fix** means the page shows a correct sample or the broken sample is removed. A removed sample counts as a fix, since you cannot test the replacement yet.
+- The backstop covers the 48h clock on volunteer SDKs. If the volunteer has not acted by hour 24, the backstop takes the fix.
+- Report SLA misses per owner, with the clock start time.
+
+## Gaps this does not close
+
+- No secret scan has ever run. Run one before Friday, because pasted samples are a classic place for live keys. Use `gitleaks detect` or `trufflehog filesystem ./docs`. One hit would make the 48h SLA the wrong tier.
+- Branch protection with "require review from code owners" can block merges when a volunteer is the only owner. The `@sablefish/docs-eng` co-owner on every line prevents this.
+- Ownership by path will go stale. Plan to replace the section-based rules with per-snippet rules after extraction.
+
+## Decisions for the VP
+
+1. Accept an SLA on paid owners and backstops, with best effort for volunteers? Recommended: yes.
+2. Approve a snippet-extraction and CI-test project, so ownership and the SLA can be measured? Recommended: yes. About 900 pages is a multi-week job.
+3. Who are the four owners, the two backstops, and the real repo paths?
+
+Next: send me the real SDK languages, repo paths, and owner handles. I will fill the placeholders in about 5 minutes.

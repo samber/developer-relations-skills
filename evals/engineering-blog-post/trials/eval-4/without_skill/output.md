@@ -1,50 +1,58 @@
-Here's a public-facing version of the postmortem, adapted for external readers. I removed internal-only details that don't belong on a public page — the individual engineer's name (postmortems should stay blameless and this isn't relevant to users), the internal ticket ID and wiki link, the internal deploy/change number, and the internal system codename — and generalized the customer-impact figures so they don't risk identifying specific accounts. The technical root cause, duration, and failure-rate numbers are kept since those are genuinely useful to affected users.
+# Post-incident report: elevated write failures on August 3
 
----
-
-# Incident Postmortem: Elevated Write Failures on August 3, 2026
-
-**Status:** Resolved
-**Duration:** 51 minutes
-**Impact:** A subset of write requests failed to process
+**Status:** Resolved. **Duration:** 51 minutes. **Impact:** Write requests failed.
 
 ## Summary
 
-On August 3, 2026, a configuration change to our routing layer caused approximately 34% of write requests to fail for 51 minutes. The issue was triggered by a deployment that caused the routing layer to reload its configuration using an incorrect key, resulting in requests being misrouted or dropped. We estimate roughly 1.2 million requests were affected during the incident window. A number of customer accounts experienced elevated error rates during this period, including some on our enterprise plans.
+On August 3, a configuration change to our request routing tier caused it to reject about 34% of write requests for 51 minutes, starting at [14:02 TZ]. Reads were not affected. [Confirm this before publishing.] We estimate about 1.2 million write requests failed. About 118 customers were affected.
 
-We know that even brief periods of degraded reliability affect the trust you place in us, and we're sorry for the disruption this caused.
+We apologize. Failed writes break your applications and your trust in us, and this should not have happened.
 
-## Timeline
+## What happened
 
-*(all times approximate, UTC)*
+At [14:02 TZ], we deployed a change to the routing tier. The change touched how the tier reloads its configuration. After the reload, the tier read a value from the wrong configuration key and began failing a share of incoming writes. [One sentence on what the wrong value caused, for example misrouting to unavailable backends.]
 
-- **14:02** — A routing configuration change was deployed.
-- **14:02–14:53** — The routing layer began reloading configuration from an incorrect key, causing a growing share of write requests to fail.
-- **~14:10–14:20** — Automated alerting flagged an abnormal rise in write-request error rates; on-call engineers began investigating.
-- **During investigation** — The team identified that the deployed change had altered which configuration key the routing layer read on reload, and began preparing a fix.
-- **14:53** — The corrected configuration was deployed and validated; write failures returned to baseline.
-
-## Root Cause
-
-The routing layer reloads part of its configuration at deploy time. The change deployed at 14:02 altered how that reload path resolved its configuration key, causing it to read a key that did not contain the expected routing configuration. As a result, the routing layer operated with incomplete or invalid configuration, and a portion of write traffic could not be processed correctly until the corrected configuration was deployed.
+Service returned to normal at [HH:MM TZ] after we [rolled back the change / shipped a fix].
 
 ## Impact
 
-- Roughly 34% of write requests failed during the 51-minute window.
-- An estimated 1.2 million requests failed to complete.
-- A number of customer accounts, including some enterprise customers, experienced elevated error rates. Affected customers were notified directly.
+- **Duration:** 51 minutes.
+- **Scope:** About 34% of write requests failed during the window.
+- **Customers:** About 118 customers saw failed writes.
+- **Volume:** About 1.2 million failed requests in total.
+- **Data:** Failed writes were rejected, not partially applied. [Confirm. If any write could have been acknowledged and then lost, say so here.]
 
-No data was lost as a result of this incident — failed writes were rejected outright rather than silently corrupted or partially applied.
+Clients that retry on errors may have recovered some writes. If you didn't retry, you may need to resend writes made during this window.
 
-## Remediation and Prevention
+## Root cause
 
-We've identified the following steps to reduce the likelihood and impact of a similar incident:
+The routing tier's configuration reload path read the wrong key. This error was introduced by the change deployed at [14:02]. Our pre-release testing didn't exercise a configuration reload under production-like conditions, so it didn't catch the bug.
 
-- **Configuration validation before reload:** Add a pre-flight check that verifies a configuration key resolves to a complete, valid configuration before the routing layer reloads from it, rather than reloading and discovering the problem from live traffic.
-- **Faster automated rollback:** Reduce the time between error-rate alerting and an automatic rollback of the triggering deployment, rather than relying solely on manual intervention.
-- **Stronger canary checks on routing deploys:** Route a small percentage of traffic through a new configuration before rolling it out broadly, so a bad reload is caught before it affects the majority of traffic.
-- **Improved alerting granularity:** Tighten alert thresholds on write-failure rate so on-call engineers are notified closer to the start of an incident.
+## What we are doing
 
-We're treating this as a priority given the customer impact involved, and will share further updates if our review surfaces additional follow-up work.
+1. **Reload-path tests:** [Add tests that exercise configuration reload and check which keys are read.]
+2. **Staged rollout:** [Roll out routing-tier changes to a small share of traffic first, with automatic rollback on error-rate increases.]
+3. **Faster detection:** [Alert on write-error rate at the routing tier. Add the detection time here: how long the problem ran before we noticed.]
+4. **Config validation:** [Validate configuration on load and refuse to apply a reload that fails the check.]
 
-If you have questions about how this incident affected your account specifically, please reach out to your support contact.
+We will update this page when each item ships. [Add dates or a commitment to a follow-up.]
+
+## Questions
+
+If you were affected and need help identifying failed writes, contact [support channel].
+
+---
+
+## What I changed from the internal version
+
+- **Removed:** the engineer's name, the PROJ ticket, the change number, the `go/` wiki link, and the "two enterprise accounts" detail. Public blameless postmortems describe the system, not the person. Naming enterprise accounts risks identifying customers.
+- **Kept:** the 34%, 51 minutes, 118 customers, and 1.2M requests. If legal or the account team prefers, change "about 118 customers" to "a small percentage of customers".
+- **"Falcon":** I wrote "routing tier" instead. If the name is already in your public docs or status page, swap it back in.
+- **Year:** I left it out. Add it if the page needs it.
+
+## You need to fill in (the internal text didn't say)
+
+- The timezone, the recovery time, and the fix or rollback action.
+- Whether reads were unaffected, and whether any failed write could have been partially applied.
+- The detection timeline, and the remediation items. The four items I listed are placeholders, not commitments from your team, so replace them with the real action items from the wiki.
+- Have someone with the full postmortem check the root-cause paragraph. I only had one sentence, so I kept it deliberately thin.

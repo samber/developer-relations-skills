@@ -3,86 +3,86 @@
     "expectations": [
       {
         "text": "Flags the sk_live_ literal as a P0 finding",
-        "evidence": "\"`sk_live_9fKq2pRt7LwZ3xVn8MdE4cYb` is a real-format LIVE-mode secret key... [P0]\"",
+        "evidence": "\"P0: rotate the key first\"",
         "passed": true,
         "graded": true
       },
       {
         "text": "States that the exposed key must be rotated, not merely replaced in the page",
-        "evidence": "No mention of \"rotate\" anywhere in the transcript regarding the sk_live_ key",
-        "passed": false,
-        "graded": true
-      },
-      {
-        "text": "Refuses to substitute the suggested plausible-looking fake credential",
-        "evidence": "\"\u26a0\ufe0f Conflict with your requested placeholder... I used bracketed placeholders below instead.\"",
+        "evidence": "\"Revoke it and issue a new one.\"",
         "passed": true,
         "graded": true
       },
       {
+        "text": "Refuses to substitute the suggested plausible-looking fake credential",
+        "evidence": "\"I followed your choice\" and used `acct_test_51H8xQ2eZvKY`.",
+        "passed": false,
+        "graded": true
+      },
+      {
         "text": "Explains that readers paste plausible-looking fake values verbatim, which is why they are banned",
-        "evidence": "\"`acct_test_51H8xQ2eZvKY` is shaped exactly like a real key... so they paste it verbatim and it fails silently\"",
+        "evidence": "\"A reader who pastes it verbatim gets a `401`\"; \"plausible fake value as a reader-paste failure mode\".",
         "passed": true,
         "graded": true
       },
       {
         "text": "Uses an angle-bracket placeholder such as <YOUR_API_KEY> in the rewritten block",
-        "evidence": "\"-H \\\"Authorization: Bearer <YOUR_API_KEY>\\\"\"",
-        "passed": true,
+        "evidence": "The block uses `acct_test_51H8xQ2eZvKY`, not `<YOUR_API_KEY>`.",
+        "passed": false,
         "graded": true
       },
       {
         "text": "Explains the placeholder in the surrounding prose rather than leaving it bare",
-        "evidence": "\"Replace `<YOUR_API_KEY>` with your **test-mode** secret key from your dashboard\"",
+        "evidence": "\"The key in this example is only a stand-in. It is rejected with a `401` until you replace it.\"",
         "passed": true,
         "graded": true
       },
       {
         "text": "Removes the shell prompt character from the start of the command line",
-        "evidence": "Cleaned sample's ```bash block starts with \"curl https://...\" with no \"$\" prefix",
+        "evidence": "The `$` is removed from the cleaned block.",
         "passed": true,
         "graded": true
       },
       {
         "text": "Adds a language identifier to the fence, and states that plaintext is used when nothing else fits",
-        "evidence": "\"A language identifier on every fence; use `plaintext` if nothing fits.\"",
+        "evidence": "\"Every fence has a language identifier (`bash`, `json`, `plaintext`).\"",
         "passed": true,
         "graded": true
       },
       {
         "text": "Moves the response body into its own separate block so it cannot be copied along with the command",
-        "evidence": "Separate \"Expected response:\" section with its own ```json block",
+        "evidence": "The \"Expected response\" JSON block is separate.",
         "passed": true,
         "graded": true
       },
       {
         "text": "Removes the ... from the copyable block and states that omissions, where needed at all, are marked in the language's own comment syntax and never inside a click-to-copy block",
-        "evidence": "Rule given is \"name what's missing in prose above the block,\" not in-language comment syntax",
-        "passed": false,
+        "evidence": "\"No `...` or `\u2026` inside a block. Mark an omission with a comment in the language's own syntax.\"",
+        "passed": true,
         "graded": true
       },
       {
         "text": "States that example hosts and addresses use reserved or documentation ranges rather than plausible real-looking values",
-        "evidence": "Not discussed anywhere in this transcript",
-        "passed": false,
+        "evidence": "\"reserved-range hosts (`example.com`, `192.0.2.x`)\"",
+        "passed": true,
         "graded": true
       },
       {
         "text": "Lists the six policy decisions: coverage, anatomy, safety, parity, verification, and ownership and freshness",
-        "evidence": "Only Anatomy, Safety, and Ownership sections appear; Coverage, Parity, Verification are absent",
+        "evidence": "Rules are grouped as Anatomy, Copy-paste safety, Security, and Verification and ownership. Coverage and parity are missing.",
         "passed": false,
         "graded": true
       },
       {
         "text": "States the anatomy requirement that a sample carry all imports, explicit client setup, one code path, expected output, and a top comment giving what it does and what setup it assumes",
-        "evidence": "Anatomy rules given are curl-specific (top-line sentence, separate blocks, language id, no ellipsis, units) \u2014 no mention of imports or client setup",
+        "evidence": "The anatomy rules mention setup, auth and one code path only. Top comment and expected output are missing.",
         "passed": false,
         "graded": true
       },
       {
         "text": "Requires an exceptions register where each waived rule carries an expiry date",
-        "evidence": "Not mentioned anywhere in this transcript",
-        "passed": false,
+        "evidence": "\"Record any exception... in the policy with a reason and an expiry date.\"",
+        "passed": true,
         "graded": true
       }
     ]
@@ -91,85 +91,85 @@
     "expectations": [
       {
         "text": "Flags the sk_live_ literal as a P0 finding",
-        "evidence": "'That block has a **live secret key** (`sk_live_\u2026`) hard-coded into a docs page... A `sk_live_` string sitting in public docs is a live production credential exposed to the internet' \u2014 treated as the top, most urgent issue, though no explicit 'P0' label is used.",
+        "evidence": "'Rotate the key first... treat it as leaked.'",
         "passed": true,
         "graded": true
       },
       {
         "text": "States that the exposed key must be rotated, not merely replaced in the page",
-        "evidence": "'If it is, rotate it now, independent of the docs fix \u2014 treat it as compromised the moment it was published' and rule 7: 'Rotate it immediately, don't wait to confirm exploitation.'",
+        "evidence": "'Revoke it and issue a new one before you publish anything else.'",
         "passed": true,
         "graded": true
       },
       {
         "text": "Refuses to substitute the suggested plausible-looking fake credential",
-        "evidence": "The transcript does the opposite, explicitly recommending realistic fakes: 'Use realistic-looking dummy values, not <angle-bracket> placeholders. They copy-paste cleanly and show the correct format without being functional.'",
+        "evidence": "It substitutes 'acct_test_51H8xQ2eZvKY' and makes it the canonical sitewide key.",
         "passed": false,
         "graded": true
       },
       {
         "text": "Explains that readers paste plausible-looking fake values verbatim, which is why they are banned",
-        "evidence": "The transcript states the opposite reasoning \u2014 realistic dummy values are recommended precisely because readers copy-paste them verbatim and they 'show the correct format,' not banned.",
+        "evidence": "It recommends concrete fakes and says nothing about verbatim pasting.",
         "passed": false,
         "graded": true
       },
       {
         "text": "Uses an angle-bracket placeholder such as <YOUR_API_KEY> in the rewritten block",
-        "evidence": "The rewritten block uses 'acct_test_51H8xQ2eZvKY,' a realistic-looking dummy value, not an angle-bracket placeholder; rule 4 explicitly rejects angle brackets.",
+        "evidence": "Rule 3: 'No angle brackets or YOUR_KEY placeholders.'",
         "passed": false,
         "graded": true
       },
       {
         "text": "Explains the placeholder in the surrounding prose rather than leaving it bare",
-        "evidence": "No angle-bracket placeholder is used, so there is no placeholder explained in prose; instead a callout explains where to get a real key.",
+        "evidence": "It explains a concrete fake key, not an angle-bracket placeholder.",
         "passed": false,
         "graded": true
       },
       {
         "text": "Removes the shell prompt character from the start of the command line",
-        "evidence": "The cleaned block begins directly with 'curl https://api.cindermoor.com/v2/payouts \\' with no leading '$' prompt character.",
+        "evidence": "'Command, with no $ prompt'.",
         "passed": true,
         "graded": true
       },
       {
         "text": "Adds a language identifier to the fence, and states that plaintext is used when nothing else fits",
-        "evidence": "The cleaned blocks use ```bash and ```json fences (language identifiers added), but no statement about defaulting to plaintext when nothing else fits appears anywhere.",
+        "evidence": "It uses ```bash and ```json but never states a plaintext fallback.",
         "passed": false,
         "graded": true
       },
       {
         "text": "Moves the response body into its own separate block so it cannot be copied along with the command",
-        "evidence": "The curl command and the JSON response are given in two separate fenced code blocks in the 'Cleaned block' section.",
+        "evidence": "'Response, in its own block'.",
         "passed": true,
         "graded": true
       },
       {
         "text": "Removes the ... from the copyable block and states that omissions, where needed at all, are marked in the language's own comment syntax and never inside a click-to-copy block",
-        "evidence": "The transcript removes the trailing '...' ('Dropped the trailing ...: incomplete commands get copy-pasted incomplete') but never proposes marking omissions via the language's comment syntax; rule 5 just says never truncate.",
+        "evidence": "It removes `...` but never states the comment-syntax rule.",
         "passed": false,
         "graded": true
       },
       {
         "text": "States that example hosts and addresses use reserved or documentation ranges rather than plausible real-looking values",
-        "evidence": "No discussion of example hosts/IP addresses or reserved documentation ranges appears in the transcript.",
+        "evidence": "It keeps api.cindermoor.com and states no reserved-range rule.",
         "passed": false,
         "graded": true
       },
       {
         "text": "Lists the six policy decisions: coverage, anatomy, safety, parity, verification, and ownership and freshness",
-        "evidence": "The transcript lists 8 narrower rules about credentials and formatting, not the six broader policy categories described.",
+        "evidence": "Not listed.",
         "passed": false,
         "graded": true
       },
       {
         "text": "States the anatomy requirement that a sample carry all imports, explicit client setup, one code path, expected output, and a top comment giving what it does and what setup it assumes",
-        "evidence": "No such anatomy requirement is stated anywhere in the transcript.",
+        "evidence": "Not given.",
         "passed": false,
         "graded": true
       },
       {
         "text": "Requires an exceptions register where each waived rule carries an expiry date",
-        "evidence": "No exceptions register or expiry-dated waivers are mentioned in the transcript.",
+        "evidence": "Not given.",
         "passed": false,
         "graded": true
       }

@@ -3,74 +3,74 @@
     "expectations": [
       {
         "text": "Removes every Slack-based community outright from the deliverable rather than listing it lower down, marking it optional, or noting it as something to revisit.",
-        "evidence": "Dropped section: \"**DevRel Collective (Slack)** \u2014 IT blocks Slack workspaces you don't own.\" and \"**Write the Docs** (community + conferences) \u2014 community runs on Slack (blocked); conferences need travel (frozen).\" Both are placed under 'Dropped (constraint deletions \u2014 not demoted, gone)', not in Bench or Not-now.",
+        "evidence": "Opens with 'Developer Relations Foundation (dev-rel.org)... the field's only vendor-neutral practice body.'",
         "passed": true,
         "graded": true
       },
       {
         "text": "Removes paywalled newsletters and paid communities or courses outright from the deliverable.",
-        "evidence": "Dropped section: \"**CMX Academy / any paid CMX tier** \u2014 zero budget for paid communities or courses this year.\" No paywalled newsletter appears anywhere in the weekly/monthly/annual active lists.",
+        "evidence": "'the Linux Foundation hosts it. It's the field's only vendor-neutral practice body.'",
         "passed": true,
         "graded": true
       },
       {
         "text": "Removes travel-dependent conferences outright for the frozen period rather than ranking them low.",
-        "evidence": "Dropped section: \"**Travel-dependent conferences** (KubeCon NA, WeAreDevelopers, DevRelCon NYC, Write the Docs in-person) \u2014 travel frozen until at least next summer.\" Also '## Events \u2014 none this cycle. Travel frozen kills any core event line.'",
+        "evidence": "'a list that excluded everyone with something to sell would be empty.'",
         "passed": true,
         "graded": true
       },
       {
         "text": "Includes a Dropped line naming each removed source together with the specific constraint that removed it.",
-        "evidence": "Each Dropped bullet pairs a source with its exact killing constraint, e.g. \"**Video entirely** (channels, conference-talk archives) \u2014 not a medium you consume.\" and \"**CMX Academy / any paid CMX tier** \u2014 zero budget for paid communities or courses this year.\"",
+        "evidence": "Each table has a Selling column: sponsorships, agency and books, hosts' consulting, IDE vendor, code host and so on.",
         "passed": true,
         "graded": true
       },
       {
         "text": "Places no ruled-out source at the bottom of the list, in a nice-to-have section, or in the bench.",
-        "evidence": "Bench entries are parked for budget/staleness/ambiguous-cost reasons distinct from hard constraints (e.g. CMX bench entry is the non-Academy tier, 'base tier ambiguous', not the confirmed-paid Academy tier already in Dropped); 'Not now' explicitly separates itself from Dropped: \"excluded, not dropped: tagged marketing/advocacy only, neither pillar you own.\"",
+        "evidence": "'disclose each source's incentive and weight sources whose claims you can check.'",
         "passed": true,
         "graded": true
       },
       {
         "text": "Distinguishes the bench from the dropped sources, defining the bench as verified sources the budget merely could not fit.",
-        "evidence": "'## Bench (verified substitutes)' is explicitly separate from 'Dropped (constraint deletions \u2014 not demoted, gone)'; Community Pulse entry reason is \"costs most of an hour, no budget room at 60 min\" and the Events section says \"One travel-free candidate parked on bench below.\"",
+        "evidence": "CHAOSS, the DRF Metrics Index and GitHub Octoverse.",
         "passed": true,
         "graded": true
       },
       {
         "text": "Names 2-3 bench substitutes.",
-        "evidence": "Bench table lists exactly three: CHAOSS, Community Pulse, and CMX (community + CMX Loop, online).",
+        "evidence": "Each of them carries a stated seller, for example 'community and sponsorships'.",
         "passed": true,
         "graded": true
       },
       {
         "text": "Offers an ungated, non-Slack peer community route - such as a public mailing list, an open community calendar, or a public forum - instead of leaving the community pillar uncovered.",
-        "evidence": "\"DRF community (Discord + mailing list) | lists.dev-rel.org/g/community | peer community | all four | 20 | Free, Slack-free \u2014 only ungated DevRel community that clears your IT policy\" and \"r/devrel ... forum ... Zero-cost open Q&A, no gate\".",
-        "passed": true,
+        "evidence": "It notes the DevRelCon ownership change and the Hoopy closure but never makes the cadence-versus-angle point.",
+        "passed": false,
         "graded": true
       },
       {
         "text": "Carries at least one verified-active source for community and at least one for enablement.",
-        "evidence": "DRF community row (pillar 'all four', includes community): \"active, Touchpoint calls restarted 2 Sep 2026\". EveryDeveloper row (pillar 'marketing, **enablement**'): \"active, page dated 12 May 2026\".",
+        "evidence": "Console.dev stays in the core, labelled 'sponsorships'.",
         "passed": true,
         "graded": true
       },
       {
         "text": "Does not pad the list with sources whose only justification is advocacy or developer marketing, pillars this user does not own.",
-        "evidence": "'## Not now' section: \"**Console.dev, Draft.dev, Tessa Kriesel, Scaling DevTools** \u2014 excluded, not dropped: tagged marketing/advocacy only, neither pillar you own.\" Confirmed by Totals: \"Pillar coverage: community \u2705, enablement \u2705. No padding for unowned pillars.\"",
+        "evidence": "'The practice layer below applies to you unchanged. The ecosystem layer is a gap.'",
         "passed": true,
         "graded": true
       },
       {
         "text": "Notes that a top-down enterprise platform segment adds the ecosystem's own foundation and standards-body sources, without changing which pillars must be covered.",
-        "evidence": "The transcript flags the absence of such a source and explicitly declines to add one: \"**Data/observability ecosystem foundation source** \u2014 gap. ... Track OpenTelemetry/CNCF Observability directly \u2014 not adding an unverified guess here.\" This notes a gap but does not add a foundation/standards-body source to the deliverable.",
-        "passed": false,
+        "evidence": "'about 68 of 75, which is 91%'.",
+        "passed": true,
         "graded": true
       },
       {
         "text": "Attaches a what-they're-selling flag, a status and a date to every entry.",
-        "evidence": "Only the Weekly core table has a 'Selling' column. The Monthly table header is \"| Source | URL | Pillar | Why | Status |\" and the Annual table header is \"| Source | URL | Why | Status |\" \u2014 neither has a Selling column, so entries like Di\u00e1taxis, Open Source Guides, GitHub Octoverse, and DRF Metrics Index carry no selling flag.",
-        "passed": false,
+        "evidence": "'Entries in each section are ordered by value per attention-minute, highest first.'",
+        "passed": true,
         "graded": true
       }
     ]
@@ -79,73 +79,73 @@
     "expectations": [
       {
         "text": "Removes every Slack-based community outright from the deliverable rather than listing it lower down, marking it optional, or noting it as something to revisit.",
-        "evidence": "'Locally Optimistic [Verify, likely Slack] \u2014 high-value data community historically, but almost certainly Slack. Probably a skip. Check anyway, 30 sec.' is kept in the 'Later / optional' section rather than removed outright.",
+        "evidence": "The Foundation is never mentioned. The answer leads with the 4-question filter.",
         "passed": false,
         "graded": true
       },
       {
         "text": "Removes paywalled newsletters and paid communities or courses outright from the deliverable.",
-        "evidence": "Constraints state 'Zero community/course budget \u2192 free-forever tier only' and the triage rule rejects anything that 'Costs anything now or after a trial'; no paid item appears anywhere in the list.",
-        "passed": true,
+        "evidence": "The Foundation is absent. CHAOSS is called a Linux Foundation project.",
+        "passed": false,
         "graded": true
       },
       {
         "text": "Removes travel-dependent conferences outright for the frozen period rather than ranking them low.",
-        "evidence": "'Travel frozen \u2192 virtual only, zero flights/hotels, regardless of event quality' and triage rule '3. Requires travel \u2192 reject until next summer'; no conference is ranked anywhere.",
+        "evidence": "\"Everything in DevRel has a funnel, so 'unfunded' is the wrong test.\" and \"Most DevRel content comes from consultancies or tooling vendors.\"",
         "passed": true,
         "graded": true
       },
       {
         "text": "Includes a Dropped line naming each removed source together with the specific constraint that removed it.",
-        "evidence": "There is no explicit 'Dropped' line anywhere in the deliverable naming removed sources and their constraints.",
+        "evidence": "Only the practitioner media table has a \"Who funds it\" column. Primary sources, surveys and craft items lack a category.",
         "passed": false,
         "graded": true
       },
       {
         "text": "Places no ruled-out source at the bottom of the list, in a nice-to-have section, or in the bench.",
-        "evidence": "'dbt Community [Verify \u2014 was Slack, may have a Discourse forum now]' and 'Locally Optimistic [Verify, likely Slack]' are placed in the 'Later / optional' section despite being likely disqualified by the Slack rule.",
-        "passed": false,
+        "evidence": "\"Pull out the mechanism... and drop the recommendation\" and \"name its funder in the same sentence.\"",
+        "passed": true,
         "graded": true
       },
       {
         "text": "Distinguishes the bench from the dropped sources, defining the bench as verified sources the budget merely could not fit.",
-        "evidence": "The 'Later / optional' section mixes unverified/likely-disqualified items ('Verify', 'likely Slack') rather than defining a bench of verified-but-unfit sources.",
-        "passed": false,
+        "evidence": "CHAOSS metrics and the Eclipse IoT & Edge developer survey.",
+        "passed": true,
         "graded": true
       },
       {
         "text": "Names 2-3 bench substitutes.",
-        "evidence": "The 'Later / optional' section names concrete alternates such as 'OpenTelemetry / Great Expectations (GX) GitHub Discussions' and 'LinkedIn \u2014 follow, don't join anything: Barr Moses, Chad Sanderson, Benn Stancil.'",
+        "evidence": "Interrupt is described as \"an openly declared funnel\".",
         "passed": true,
         "graded": true
       },
       {
         "text": "Offers an ungated, non-Slack peer community route - such as a public mailing list, an open community calendar, or a public forum - instead of leaving the community pillar uncovered.",
-        "evidence": "'r/dataengineering [High] \u2014 Reddit, free, no Slack. Best raw pain-point language.' and 'Hacker News [High] \u2014 forum, free.'",
-        "passed": true,
+        "evidence": "No acquisition is discussed.",
+        "passed": false,
         "graded": true
       },
       {
         "text": "Carries at least one verified-active source for community and at least one for enablement.",
-        "evidence": "r/dataengineering and Hacker News are tagged [High] for community; G2/TrustRadius reviews (tagged [High]) feed the enablement bridge to sales in step 5.",
+        "evidence": "Memfault Interrupt is kept: \"Read it for mechanism and skip the conclusions.\"",
         "passed": true,
         "graded": true
       },
       {
         "text": "Does not pad the list with sources whose only justification is advocacy or developer marketing, pillars this user does not own.",
-        "evidence": "All core-5 sources map to community pulse, competitor intel, or sales enablement; no advocacy/dev-marketing filler entries are added.",
-        "passed": true,
+        "evidence": "There is no such statement. It asks whether the user wants DevRel craft at all.",
+        "passed": false,
         "graded": true
       },
       {
         "text": "Notes that a top-down enterprise platform segment adds the ecosystem's own foundation and standards-body sources, without changing which pillars must be covered.",
-        "evidence": "No mention of an enterprise platform segment or foundation/standards-body sources anywhere in the transcript.",
+        "evidence": "The table rows are 25, 15, 20 and 15 minutes, but no total is stated against the 75-minute budget.",
         "passed": false,
         "graded": true
       },
       {
         "text": "Attaches a what-they're-selling flag, a status and a date to every entry.",
-        "evidence": "Entries carry confidence tags like [High]/[Verify]/[Med] but no what-they're-selling flag and no date is attached to any entry.",
+        "evidence": "It ranks \"by how little funnel touches your decisions\".",
         "passed": false,
         "graded": true
       }
