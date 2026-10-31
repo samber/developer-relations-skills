@@ -70,7 +70,19 @@ Ask one question per message, multiple-choice when possible. Skip what the reque
 
 ## Output
 
-Deliver in order: refusals triggered; existing-show diagnosis (if a show exists); existence verdict with Menu 1 ranked and what moved; home platform and simulcast rule; chosen concept and format; season cadence; moderation roster and pre-flight checklist; engagement recipe with dated cadence; repurposing; metrics, continue bar and stop rule; open questions.
+Deliver in this order:
+
+1. Refusals triggered.
+2. Existing-show diagnosis, if a show exists.
+3. Existence verdict, with Menu 1 ranked and what moved.
+4. Home platform and simulcast rule.
+5. Chosen concept and format.
+6. Season cadence.
+7. Moderation roster and pre-flight checklist.
+8. Engagement recipe, with dated cadence.
+9. Repurposing.
+10. Metrics, continue bar and stop rule.
+11. Open questions.
 
 ## Menu 1: whether to host
 
