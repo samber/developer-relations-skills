@@ -132,6 +132,7 @@ This collection covers the full developer-relations surface.
 - [`devrel-newsletter-sponsorship`](./skills/devrel-newsletter-sponsorship): Sells sponsor slots in a newsletter you publish: a sellability verdict, an acceptance policy, a rate card priced from human clicks, the ad label and booking terms.
 - [`build-in-public`](./skills/build-in-public): Designs a sustainable build-in-public practice: how far up the disclosure ladder to go, a cadence the maintainer can hold, the platform mix, and the boundaries.
 - [`technical-video-script`](./skills/technical-video-script): Writes a shooting-ready script for a technical video or motion design explainer: a 30-second hook, code-on-screen pacing, chapters, and a pre-decided cut list.
+- [`devrel-youtube-channel`](./skills/devrel-youtube-channel): Plans a devtools company's YouTube channel: whether to run one, content pillars, presenter bench and ownership, a sustainable cadence, Shorts, creators and metrics.
 - [`tech-podcast-interview-prep`](./skills/tech-podcast-interview-prep): Prepares a guest for someone else's podcast, interview or panel: show reconnaissance, a message spine, a self-contained opening answer, and clip-safe sound bites.
 
 ### Documentation
