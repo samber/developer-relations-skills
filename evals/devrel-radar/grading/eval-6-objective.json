@@ -3,67 +3,67 @@
     "expectations": [
       {
         "text": "Refuses to assign a staleness verdict to any of the three, on the ground that a reference work has no cadence to be stale against.",
-        "evidence": "\"All three are evergreen reference works, not feeds \u2014 a docs framework, a maintainer-guides collection, and a practice-hub's guide library don't get rewritten on a cadence, so they have nothing to be 'stale' against. Forcing a staleness verdict on them is a known failure mode: judge them on who's maintaining them, not when they last posted.\"",
+        "evidence": "'The right label is \"evergreen, undated\", not \"stale\".'",
         "passed": true,
         "graded": true
       },
       {
         "text": "Labels each of the three evergreen and undated, or an equivalent explicit classification, rather than stale or dead.",
-        "evidence": "\"All three are evergreen reference works, not feeds\" combined with the section header \"Why 'no dates anywhere' isn't the abandonment signal it feels like\" and per-source notes like \"the audit recorded 'none rendered' for dates\" for Open Source Guides.",
+        "evidence": "The status column reads 'evergreen framework', 'evergreen reference' and 'active, undated by design'.",
         "passed": true,
         "graded": true
       },
       {
         "text": "Judges each on maintenance signals instead - a live event listing, a current copyright, an active repository.",
-        "evidence": "For Di\u00e1taxis: \"check the last commit/merged-PR date. A framework repo with commits in the last few months = alive\"; for Open Source Guides: \"Manual check: github.com/github/opensource.guide, look at last push / last merged PR\"; for developerrelations.com: \"a copyright range running through 2026, and ... an upcoming DevRelCon New York listing\".",
+        "evidence": "'Judge them on maintenance signals, not cadence', plus the repository commit check.",
         "passed": true,
         "graded": true
       },
       {
         "text": "Cites at least one concrete maintenance signal for developerrelations.com, such as its current copyright range or the upcoming DevRelCon edition it lists.",
-        "evidence": "\"a copyright range running through 2026, and \u2014 at last check \u2014 an upcoming DevRelCon New York listing, independently confirmed via MLH's own announcement\"",
+        "evidence": "'\u00a9 2015-2026 and lists DevRelCon New York, 22-23 Jul 2026'.",
         "passed": true,
         "graded": true
       },
       {
         "text": "Places all three outside the weekly time budget rather than inside it.",
-        "evidence": "\"The budget: zero minutes/week, for all three\" and \"Don't put any of the three on your weekly or monthly rotation line.\"",
+        "evidence": "Weekly column is 0 for each, and 'evergreen references outside the weekly budget'.",
         "passed": true,
         "graded": true
       },
       {
         "text": "Declines to give any of the three a minutes-per-week figure, and explains that a per-week ratio on a one-time read is false precision.",
-        "evidence": "\"giving them a per-week ratio would be false precision, since you don't re-read a framework every week the way you skim a newsletter.\"",
+        "evidence": "'A per-week ratio would be false precision.' It also offers a '~40 min/week for 4 weeks' spreading option.",
         "passed": true,
         "graded": true
       },
       {
         "text": "Describes them as a one-time read to revisit when scoping work, not as a recurring feed.",
-        "evidence": "The transcript gives \"One-time read, order of magnitude: tens of minutes each, once\" plus a \"Recheck cadence\" tied to \"quarterly is the field-standard default\" \u2014 a time-based recurring cadence, not a 'revisit when scoping work' trigger as the rubric specifies.",
-        "passed": false,
+        "evidence": "'Budget them as a one-time read, then a quarterly check.'",
+        "passed": true,
         "graded": true
       },
       {
         "text": "Maps Diataxis to the enablement pillar and the code host's maintainer guides to the community pillar.",
-        "evidence": "\"Di\u00e1taxis (diataxis.fr) \u2014 \u2705 keep, docs/enablement pillar\" and \"Open Source Guides (opensource.guide) \u2014 \u2705 keep, community pillar\" with \"Backed by GitHub directly (platform-official)\".",
+        "evidence": "The table puts diataxis.fr under Enablement and opensource.guide under Community.",
         "passed": true,
         "graded": true
       },
       {
         "text": "Identifies developerrelations.com as the field's practice canon and notes that it survived the wind-down of the agency that founded it.",
-        "evidence": "The transcript never calls it a 'practice canon' and treats its post-wind-down maintenance as an unresolved open question rather than confirming survival: \"Real open question the prior audit never resolved: now that Hoopy (the agency that ran the site) has wound down, who is actually maintaining developerrelations.com day to day?\"",
+        "evidence": "It notes 'Hoopy... wound down in 2026. The site survived' but never calls the site the field's practice canon.",
         "passed": false,
         "graded": true
       },
       {
         "text": "Does not invent a publication date or last-updated date for any of the three.",
-        "evidence": "For Di\u00e1taxis it says ownership is \"not stated on the fetched page\"; for Open Source Guides \"the audit recorded 'none rendered' for dates\"; dates cited for developerrelations.com (copyright range, DevRelCon date) are attributed to \"a source audit already on file\" rather than freshly asserted as verified current facts, and the transcript explicitly flags it lacks live web access this session.",
+        "evidence": "All three are described as undated or unverified, with no made-up last-updated dates.",
         "passed": true,
         "graded": true
       },
       {
         "text": "Still supplies dated, verified feed sources covering the docs and community pillars alongside the three reference works.",
-        "evidence": "The transcript discusses only the three reference works (Di\u00e1taxis, Open Source Guides, developerrelations.com) and never lists any additional dated/verified recurring feed sources for the docs or community pillars.",
+        "evidence": "'Say so and I'll build the full list.' No feed sources are supplied.",
         "passed": false,
         "graded": true
       }
@@ -73,67 +73,67 @@
     "expectations": [
       {
         "text": "Refuses to assign a staleness verdict to any of the three, on the ground that a reference work has no cadence to be stale against.",
-        "evidence": "developerrelations.com is described as having 'thinner institutional backing than the other two, higher risk of silent staleness' \u2014 a differential staleness-risk judgement rather than a full refusal.",
+        "evidence": "It sets a drop rule of \"no commits for 18 months\" plus Wayback checks, and labels opensource.guide \"stale in places\".",
         "passed": false,
         "graded": true
       },
       {
         "text": "Labels each of the three evergreen and undated, or an equivalent explicit classification, rather than stale or dead.",
-        "evidence": "'all 3 are reference/framework sites, not blogs. Dateless is a design choice for evergreen content, not neglect signal.'",
-        "passed": true,
-        "graded": true
-      },
-      {
-        "text": "Judges each on maintenance signals instead - a live event listing, a current copyright, an active repository.",
-        "evidence": "Only GitHub push-date commands are suggested (not executed) via `gh api ... pushed_at`; no copyright or event-listing signals are cited.",
+        "evidence": "Only diataxis.fr is called undated on purpose. developerrelations.com is called \"the real unknown\".",
         "passed": false,
         "graded": true
       },
       {
+        "text": "Judges each on maintenance signals instead - a live event listing, a current copyright, an active repository.",
+        "evidence": "Uses the repo pushed_at date, sitemap lastmod and Wayback snapshots.",
+        "passed": true,
+        "graded": true
+      },
+      {
         "text": "Cites at least one concrete maintenance signal for developerrelations.com, such as its current copyright range or the upcoming DevRelCon edition it lists.",
-        "evidence": "The note only says 'watch for signs of life (new guide, active socials)' with no concrete copyright or event-listing signal cited.",
+        "evidence": "\"I can't judge this one from memory.\"",
         "passed": false,
         "graded": true
       },
       {
         "text": "Places all three outside the weekly time budget rather than inside it.",
-        "evidence": "'1. Diataxis:...Budget: 5 min/week, batched into 20 min/month' and 'Total: ~5-10 min/week combined if batched' place at least one inside a weekly figure.",
+        "evidence": "The weekly budget table includes all three, with 10 minutes a week steady state.",
         "passed": false,
         "graded": true
       },
       {
         "text": "Declines to give any of the three a minutes-per-week figure, and explains that a per-week ratio on a one-time read is false precision.",
-        "evidence": "'Budget: 5 min/week, batched into 20 min/month' and 'Total: ~5-10 min/week combined' directly assign minutes-per-week figures.",
+        "evidence": "It gives 0, 5 and 10 minutes per week.",
         "passed": false,
         "graded": true
       },
       {
         "text": "Describes them as a one-time read to revisit when scoping work, not as a recurring feed.",
-        "evidence": "The response assigns recurring weekly/monthly/quarterly 'Budget' cadences ('5 min/week', '15 min/quarter', '10 min/month') rather than framing them purely as one-time reads.",
+        "evidence": "Only diataxis gets \"read it once\". opensource.guide is skimmed weekly.",
         "passed": false,
         "graded": true
       },
       {
         "text": "Maps Diataxis to the enablement pillar and the code host's maintainer guides to the community pillar.",
-        "evidence": "No pillar mapping (enablement/community) is stated anywhere in the transcript.",
+        "evidence": "The mapping is only implied: \"Pellier's docs structure\" and \"community practice\".",
         "passed": false,
         "graded": true
       },
       {
         "text": "Identifies developerrelations.com as the field's practice canon and notes that it survived the wind-down of the agency that founded it.",
-        "evidence": "It is described only as 'community-run (DevRel Collective), thinner institutional backing' with no mention of any founding agency or wind-down.",
+        "evidence": "There is no such statement.",
         "passed": false,
         "graded": true
       },
       {
         "text": "Does not invent a publication date or last-updated date for any of the three.",
-        "evidence": "'tried to pull live commit history...blocked, no tool permission this session' and offers `gh api` commands rather than guessing a date.",
+        "evidence": "No dates are asserted. The caveats say details are from memory.",
         "passed": true,
         "graded": true
       },
       {
         "text": "Still supplies dated, verified feed sources covering the docs and community pillars alongside the three reference works.",
-        "evidence": "No additional dated/verified feed sources are supplied; the response covers only the three reference sites.",
+        "evidence": "No feed sources are given.",
         "passed": false,
         "graded": true
       }

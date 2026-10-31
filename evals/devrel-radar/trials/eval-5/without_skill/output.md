@@ -1,35 +1,63 @@
-No — almost none of it is funnel-free. But the axis you're measuring on is wrong, and that's fixable.
+**Short answer:** no. Everything in DevRel has a funnel, so "unfunded" is the wrong test. Ask whether the funnel touches the claim you're about to rely on. A consultant's podcast is reliable on craft and unreliable on "you need a consultant". A vendor's survey is reliable if the method and raw numbers are published and unreliable if only the headline is.
 
-**The real axis isn't "has a commercial angle." It's "does being wrong cost the author anything."**
+I wrote this from memory (knowledge cutoff June 2026) and checked nothing live. Before you commit, confirm each source is still active and that its funding is what I describe.
 
-A vendor's "State of IoT 2026" report costs the author nothing if it's wrong — the leads already converted before anyone checked the methodology. A podcast host's consultancy *can* cost them something if they say something dumb on air, because the same peers who'd hire them are the ones listening and who'll call it out. Motive never disappears. What varies is whether there's a feedback loop that punishes bad claims. That's the filter to use for anything new you find too, since any fixed list — including mine — will rot as hosts start companies and blogs get acquired.
+## The 4-question filter (30 seconds per source)
 
-Five questions, in order of how fast they disqualify something:
+1. **Who pays for this?** If you can't tell, assume the worst.
+2. **What does the sponsor sell, and does this piece conclude you should buy it?**
+3. **Are the method and raw data published?** If not, treat any number as a quote, not a fact.
+4. **Has it ever said something that hurt its own sponsor?** Look for failure write-ups and "we got this wrong".
 
-1. **Would this exist with the commercial upside removed?** A podcast two engineers have run for a decade, funded by hobbyist-gear ads, would still exist. A "developer ecosystem report" from a devtools company would not.
-2. **Is the claim checkable, or just confident?** "We measured 340mA draw in deep sleep on rev C silicon, here's the scope trace" beats "developers are increasingly adopting X." Numbers with a method beat narrative every time.
-3. **Who corrects errors?** A comment thread of practicing engineers who'll say "your linker script example is wrong" is a real check. A blog with comments off, or a LinkedIn post, is not.
-4. **Does the author ship something that can break?** Code, a teardown, a board they built — something a stranger can go falsify. Not a survey of "1,000 developers say."
-5. **Is the cadence explainable by the cost of producing it?** Real silicon-level testing is slow and expensive, so it's rare. A "weekly newsletter" with polished cadence is being paid for by something — worth asking what.
+## What I'd trust, ranked by how little funnel touches your decisions
 
-Content marketing that passes 2-4 anyway (e.g. a vendor engineering blog where the writer clearly did the debugging and would be embarrassed to be caught faking a fault-handler trace) is worth reading *as content marketing you understand the incentive of* — that's different from pretending it's neutral. The dishonest move isn't "vendor writes a blog," it's "vendor blog pretends to be neutral research."
+**1. Primary sources (no one is selling to you).** This is the best signal for an embedded SDK advocate.
+- Issue trackers, changelogs, and forum threads for SDKs near yours: Zephyr, ESP-IDF, Nordic's nRF Connect SDK, PlatformIO, Arduino. Developers complaining in a bug report are not performing for you.
+- Your own SDK's issues, support tickets, and onboarding drop-offs.
+- r/embedded, the EEVblog forum, and the Zephyr community channels. They're noisy, but they're unsponsored.
 
-**Your 75 minutes, split three ways, weekly:**
+**2. Practitioner media with a funnel that doesn't overlap yours.**
 
-**~30 min — one long-form podcast episode, played at 1.5x while doing something else.**
-Pick from working engineers who were doing this before they had anything to sell you:
-- *The Amp Hour* (Chris Gammell, Dave Jones) — two practicing EEs, ad revenue is component/tool sponsorships, not lead gen for a consultancy. Long enough track record that a bad take gets remembered.
-- *Embedded.fm* (Elecia & Christopher White) — worth naming honestly: they run a consultancy, so it's not incentive-free. But the format (walking through real past projects, not "trends") keeps it close to axis 2 and 4 above.
-Skip anything titled "the future of IoT" — that's a panel, not an episode.
+| Source | Who funds it | Trust for | Discount |
+|---|---|---|---|
+| **The Embedded Muse** (Jack Ganssle, newsletter) | Independent consultant and trainer | Tool opinions, firmware craft, long track record | Training pitches |
+| **Embedded.fm** (podcast) | Hosts, listeners, some sponsors (verify) | Honest guests and technical depth | Guest self-promotion |
+| **Zephyr / Linux Foundation talks on YouTube** | Foundation with member vendors | Technical mechanism, roadmap candor | Member-vendor slides |
+| **Hackaday** | Ad-funded media | Hardware reality checks | Little on DevRel |
+| **Memfault's Interrupt blog** | Device-observability vendor | Technical depth is high | Any "you need observability" conclusion |
 
-**~20 min — primary source, not commentary.**
-This is the one category with genuinely zero funnel, because nobody's trying to persuade you of anything: pick one datasheet errata section, one Zephyr/CoAP/Matter spec section, or one silicon vendor forum thread that touches a part your SDK actually wraps. You already have to read this stuff for your job — the reframe is to treat 20 min/week of it as your "trustworthy content," not a chore that competes with the trustworthy content. It's the only category where being closer to ground truth is structurally guaranteed.
+Interrupt is the useful case. It's an openly declared funnel with good engineering content. Read it for mechanism and skip the conclusions.
 
-**~25 min — one post from an individual practitioner who self-funds the writing.**
-- Jay Carlson's microcontroller comparisons (jaycarlson.net) — rare, expensive-to-produce, hands-on-hardware testing; he's not selling the comparison, he built the boards.
-- EmbeddedRelated.com / DSPRelated.com (Stephane Boucher) — ad-supported community aggregator with many contributing engineers, not owned by one vendor trying to fill one product's funnel; the incentive is page views across a community, not conversions for one company.
-- Read one vendor engineering blog (e.g. Memfault's Interrupt) *if* the specific post is a real technical postmortem (fault handler internals, linker script mechanics) — knowingly, as content marketing that happens to clear the bar, not as neutral research.
+**3. Data with published methods.**
+- **Eclipse IoT & Edge developer survey** (Eclipse Foundation working group). Read its method section.
+- **CHAOSS metrics** (Linux Foundation project). It's good for defining what "community health" means without a vendor's dashboard attached.
+- **DORA research** (Google Cloud funds it). Methodology is open and the work is peer-reviewed in part. Use it as a template for how to measure, not as proof for embedded.
+- **Stack Overflow and SlashData developer surveys.** Both are businesses that sell to vendors. Use them only with the questionnaire and sample description in hand, and never cite one number without its denominator.
 
-**What to cut entirely, on sight:** anything with "report," "trends," or "state of" in the title from a company that sells into that market; any newsletter whose value-add is "we read it so you don't have to" (that's a curation layer with its own incentives stacked on top of the original one); LinkedIn thought leadership, full stop.
+**4. DevRel craft.** The honest state here is thin. Most DevRel content comes from consultancies or tooling vendors. For example, DevRelCon is, as far as I know, run by a DevRel consultancy. Least-funnel options:
+- Talks by in-house practitioners (not consultants) at Write the Docs and similar nonprofit conferences.
+- **Diátaxis** (diataxis.fr) for docs structure. It's a free framework, not a product.
+- API and SDK design fundamentals, such as Google's API Improvement Proposals (aip.dev) and Joshua Bloch's "How to Design a Good API and Why It Matters".
+- DevRel books, which are one-time purchases. Treat the authors' consulting as the funnel and read for the frameworks.
 
-One caveat on the named sources above: my knowledge has a cutoff, and hosts/blogs do sell out or go quiet — a 30-second RSS-date check before you commit a week's slot to something is consistent with the whole method here, not a contradiction of it.
+## Your 75 minutes
+
+| Min | What | Cadence |
+|---|---|---|
+| 25 | Scan issues, changelogs, and forum threads for 2 competitor SDKs plus your own. Write down 3 recurring complaints. | Weekly |
+| 15 | Embedded Muse issue, or a Zephyr / Interrupt article | Weekly |
+| 20 | Embedded.fm, as a rolling listen. One episode is longer than this, so finish it over 2-3 weeks. | Weekly |
+| 15 | One DevRel craft item: a practitioner talk, a Diátaxis or AIP section, or a survey's method section | Rotate monthly |
+
+Once a quarter, swap the 15-minute craft slot for one survey's full methodology, so you know which numbers you can quote.
+
+## How to use anything that fails the filter
+
+- Pull out the mechanism ("here's how they structured onboarding") and drop the recommendation ("so buy X").
+- When a report gives a percentage, ask what the denominator is. If it's missing, don't repeat the figure internally.
+- When you quote a source to your manager, name its funder in the same sentence.
+
+## What I'd ask you before trimming further
+
+- Is your SDK Zephyr-based, vendor-HAL-based, or bare-metal? That decides which issue trackers are your real "competitor" scan.
+- Do you want DevRel craft at all, or only embedded signal? If it's embedded only, I'd drop slot 4 and give the time to primary sources.

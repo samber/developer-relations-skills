@@ -1,29 +1,26 @@
-Keep all 3. No dates ≠ abandoned here — all 3 are reference/framework sites, not blogs. Dateless is a design choice for evergreen content, not neglect signal.
+Don't drop them. Undated doesn't mean abandoned. I couldn't check live (my web fetch was denied), so the details below come from memory and are unverified.
 
-**Why drop-fear wrong:**
-Blog = dated posts, staleness visible. Framework/guide site = living document, revised in place, no post-date makes sense. Real neglect signal = GitHub repo dead (no commits, no merged PRs), not missing on-page date.
+**Do now (about 10 minutes, 3 to 4 minutes each):**
+1. Find the source repo for each site and read its last commit date. For diataxis.fr, that is the `evidenceon/diataxis-documentation-framework` repo. For opensource.guide, it is `github/opensource.guide`. Run `gh api repos/<owner>/<repo> --jq .pushed_at`.
+2. Open each site's `/sitemap.xml` and look for `<lastmod>`. Many undated sites still publish it.
+3. Check web.archive.org for each URL. If the content changed between snapshots, it is maintained.
+4. For developerrelations.com guides, find the publisher's newsletter, changelog or social account. Check whether guides still appear there.
 
-Note: tried to pull live commit history (GitHub API + WebFetch) to confirm current activity — blocked, no tool permission this session. Below = trained knowledge, solid but not freshly verified. Re-run check once you grant web/gh access, or check yourself:
+**Likely results:**
+- **diataxis.fr:** a framework, not a feed. It is undated on purpose and changes slowly. I believe it is stable and widely adopted (Canonical and Django use it). Absence of dates is weak evidence here.
+- **opensource.guide:** evergreen content. I believe it is community-maintained with sporadic updates and translations. Stale in places, but the core advice on maintainers and community holds.
+- **developerrelations.com guides:** I can't judge this one from memory. It is the real unknown, so verify it first.
 
-```
-gh api repos/evildmp/diataxis-documentation --jq '.pushed_at'
-gh api repos/github/opensource.guide --jq '.pushed_at'
-```
+**Decision rule:** drop a source only if the repo has no commits for 18 months or more AND the Wayback snapshots show no content changes. Otherwise keep it, and mark it "reference, undated" in your list. A source with no data yet stays on probation, not dropped.
 
-**Per site:**
+**Weekly budget (my estimate; these are references, not feeds):**
 
-1. **diataxis.fr** — Daniele Procida's framework (tutorials/how-to/reference/explanation). Widely adopted (Django, Python packaging docs, Cloudflare, Gatsby cite it). Not abandoned, just stable-by-design. Budget: 5 min/week, batched into 20 min/month.
+| Source | Minutes/week | Why |
+|---|---|---|
+| diataxis.fr | 0 steady, plus 90 once | Read it once and apply it to Pellier's docs structure. Re-reading adds nothing. Revisit when you restructure docs. |
+| opensource.guide | 5 | Skim one guide per week against your community practice (contributing, triage, governance). |
+| developerrelations.com guides | 10 for 4 weeks, then 5 or drop | Verify quality while it is unproven, then settle. |
 
-2. **opensource.guide** — GitHub-owned property, official repo `github/opensource.guide`. Content mature, low edit cadence, but institutionally backed — won't vanish. Budget: 15 min/quarter, skip weekly checks.
+Steady state is about 10 minutes a week, 20 during the probation month. That fits a docs-and-community owner, because your own backlog beats reading.
 
-3. **developerrelations.com/guides** — community-run (DevRel Collective), thinner institutional backing than the other two, higher risk of silent staleness. Budget: 10 min/month, watch for signs of life (new guide, active socials).
-
-Total: ~5-10 min/week combined if batched. Weekly per-site checking is wasted effort — nothing changes that fast on any of these.
-
-**Better use of that time — one-time moves, not recurring checks:**
-
-1. Diataxis: restructure/label Pellier docs to match framework, link back to diataxis.fr as source. ~1 hr one-time, not recurring.
-2. opensource.guide: cite it in Pellier's CONTRIBUTING.md as reference — passive backlink, zero maintenance.
-3. developerrelations.com: check if guides section takes contributor submissions — community-run sites often do. Could be a guest-guide slot, not just a link target.
-
-Next: pick one of the 3 above, do it this week.
+Next: run step 1 for all three repos (3 minutes). Paste the dates and I'll give you the keep or drop call.

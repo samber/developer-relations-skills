@@ -3,73 +3,67 @@
     "expectations": [
       {
         "text": "Identifies the material as the Rewrote It in X pattern",
-        "evidence": "'Pattern: **Rewrote It in X** (before/after numbers exist, migration already happened).'",
+        "evidence": "\"**Pattern:** Rewrote It in X.\"",
         "passed": true,
         "graded": true
       },
       {
         "text": "States that the section carrying this pattern's credibility is \"what went wrong\"",
-        "evidence": "Only 'Material thin on \"what went wrong\" \u2014 flagged below, worked around honestly rather than invented' appears; no statement that this section carries the pattern's credibility.",
-        "passed": false,
+        "evidence": "\"refuse to proceed on this pattern until the 'what went wrong' material exists\"; \"Required section\"",
+        "passed": true,
         "graded": true
       },
       {
         "text": "Declines to produce a finished post until the \"what went wrong\" material exists, rather than drafting around its absence",
-        "evidence": "'Material thin on \"what went wrong\" \u2014 flagged below, worked around honestly rather than invented' \u2014 a full finished post was drafted, not withheld.",
-        "passed": false,
+        "evidence": "\"this is a skeleton, not a publishable post... I haven't invented any\"",
+        "passed": true,
         "graded": true
       },
       {
         "text": "Asks specifically for regressions, surprises, or costs nobody budgeted during the migration",
-        "evidence": "Handoff list only asks for byline, technical sign-off, hedge approval, and confidentiality decisions \u2014 no explicit ask for regressions/surprises/unbudgeted costs.",
-        "passed": false,
+        "evidence": "\"Which behaviours of the Ruby code did nobody remember...\"; \"Was any of it more than planned?\"",
+        "passed": true,
         "graded": true
       },
       {
         "text": "States that a migration post without that section reads as a press release",
-        "evidence": "No such statement appears anywhere in the transcript.",
-        "passed": false,
+        "evidence": "\"A rewrite post with no friction reads as a press release.\"",
+        "passed": true,
         "graded": true
       },
       {
         "text": "Asks whether the before and after latency figures were produced by the same measurement method on both sides",
-        "evidence": "'p99 latency dropped from 840ms to about 95ms...(production APM, same dashboard and definition before and after)'",
+        "evidence": "\"How it was measured: APM, load test or production traces, and the same tool on both sides.\"",
         "passed": true,
         "graded": true
       },
       {
         "text": "Raises that part of the improvement may come from reimplementing code the team understood better the second time rather than from Go itself",
-        "evidence": "'Some of the win is almost certainly the second-system effect \u2014 we understood the reconciliation domain much better on the second implementation...'",
+        "evidence": "\"how much came from Go and how much from rewriting the code a second time\"",
         "passed": true,
         "graded": true
       },
       {
         "text": "Requires the alternatives that were considered and why they lost",
-        "evidence": "'Rust was discussed and set aside: nobody on the team had shipped it to production before...Staying in Ruby and throwing more hardware at it was the actual alternative, and we rejected it because...'",
+        "evidence": "\"Which alternatives did you consider, and why did they lose?\"",
         "passed": true,
         "graded": true
       },
       {
         "text": "Requires a \"would we do it again, and under what conditions\" section",
-        "evidence": "'## Would we do it again' section: 'Yes, but we'd sequence it differently.'",
+        "evidence": "\"## Would we do it again?\" with conditions",
         "passed": true,
         "graded": true
       },
       {
         "text": "Assigns the 840ms, 95ms and 60% figures to the measured evidence class and asks how those runs were produced",
-        "evidence": "Claim ledger: 'p99 840ms\u219295ms | Measured | prod APM, same metric both sides' and 'EC2 cost -~60% | Measured, hedged | AWS console; single cycle, not isolated from other infra changes'",
-        "passed": true,
-        "graded": true
-      },
-      {
-        "text": "Does not present the migration decision as objectively correct independent of Halcyon's constraints",
-        "evidence": "'Go won mostly by being the option with the least new risk, not by being obviously the \"best\" language for the job in the abstract.'",
+        "evidence": "Ledger rows are \"Measured\" with \"Needs methodology\"; Q3 asks how the numbers were measured.",
         "passed": true,
         "graded": true
       },
       {
         "text": "States the mode and the chosen pattern before doing any other work",
-        "evidence": "First sentence: 'Using **engineering-blog-post** skill. Mode: draft. Pattern: **Rewrote It in X**...'",
+        "evidence": "The first lines are \"**Mode:** draft mode. **Pattern:** Rewrote It in X.\"",
         "passed": true,
         "graded": true
       }
@@ -79,74 +73,68 @@
     "expectations": [
       {
         "text": "Identifies the material as the Rewrote It in X pattern",
-        "evidence": "The transcript is the finished post itself with no meta-statement naming a pattern.",
-        "passed": false,
+        "evidence": "\"**Pattern:** Rewrote It in X.\"",
+        "passed": true,
         "graded": true
       },
       {
         "text": "States that the section carrying this pattern's credibility is \"what went wrong\"",
-        "evidence": "No such statement appears anywhere.",
-        "passed": false,
+        "evidence": "\"The pattern's credibility section is 'what went wrong', and you said nothing broke.\"",
+        "passed": true,
         "graded": true
       },
       {
         "text": "Declines to produce a finished post until the \"what went wrong\" material exists, rather than drafting around its absence",
-        "evidence": "The post is fully written and complete, e.g. 'Over about four months this year, we rewrote it from Ruby to Go.'",
+        "evidence": "It writes a full draft around the absence: \"The post says plainly that nothing broke\".",
         "passed": false,
         "graded": true
       },
       {
         "text": "Asks specifically for regressions, surprises, or costs nobody budgeted during the migration",
-        "evidence": "No question is posed; the post states outcomes directly rather than soliciting this information.",
-        "passed": false,
+        "evidence": "A FILL slot asks for \"minor frictions that never became incidents, such as tooling gaps, slower early velocity...\". The handoff says \"Add at least one real friction\".",
+        "passed": true,
         "graded": true
       },
       {
         "text": "States that a migration post without that section reads as a press release",
-        "evidence": "No such statement appears.",
+        "evidence": "It says only that zero friction is \"the part readers are least likely to believe\". It never makes the press-release point.",
         "passed": false,
         "graded": true
       },
       {
         "text": "Asks whether the before and after latency figures were produced by the same measurement method on both sides",
-        "evidence": "The numbers table presents 840ms/95ms as settled facts with no question about measurement consistency.",
+        "evidence": "It asks for \"Percentile source\" and \"Workload\", but never explicitly asks that both sides used the same method.",
         "passed": false,
         "graded": true
       },
       {
         "text": "Raises that part of the improvement may come from reimplementing code the team understood better the second time rather than from Go itself",
-        "evidence": "Closest text, 'The team already had Go experience from other services, which mattered more than any of the technical decisions above,' addresses tooling experience, not the reimplementation-familiarity confound.",
-        "passed": false,
+        "evidence": "\"a rewrite changes more than the language ... some of the gain would have been available without leaving Ruby.\"",
+        "passed": true,
         "graded": true
       },
       {
         "text": "Requires the alternatives that were considered and why they lost",
-        "evidence": "No section discusses alternative languages or approaches that were rejected.",
+        "evidence": "It mentions only \"We didn't build that comparison\" (an optimized Ruby version) under what was not tested. It does not require an alternatives section.",
         "passed": false,
         "graded": true
       },
       {
         "text": "Requires a \"would we do it again, and under what conditions\" section",
-        "evidence": "'What we'd tell a team evaluating this' states: 'If neither applies to your service, the migration cost may not be worth it \u2014 ours was, because reconciliation is both.'",
+        "evidence": "The \"When we wouldn't do this\" section, with its intro line \"when we wouldn't repeat the move\".",
         "passed": true,
         "graded": true
       },
       {
         "text": "Assigns the 840ms, 95ms and 60% figures to the measured evidence class and asks how those runs were produced",
-        "evidence": "The numbers table presents 840ms, 95ms, and ~60% as plain facts with no framing as an evidence class nor any question about run production.",
-        "passed": false,
-        "graded": true
-      },
-      {
-        "text": "Does not present the migration decision as objectively correct independent of Halcyon's constraints",
-        "evidence": "'If your bottleneck is CPU-bound fan-out work... those are the two signals worth weighing heavily. If neither applies to your service, the migration cost may not be worth it.'",
+        "evidence": "The Results section lists Measurement window, Percentile source, Hardware, Workload, Cost figure and Variance as FILLs. The gate check says \"Every figure is labelled as measured or has a FILL\".",
         "passed": true,
         "graded": true
       },
       {
         "text": "States the mode and the chosen pattern before doing any other work",
-        "evidence": "The post opens directly with the narrative ('At Halcyon Systems, our billing reconciliation service...'), no mode/pattern statement precedes it.",
-        "passed": false,
+        "evidence": "The response opens with \"**Mode:** draft. **Pattern:** Rewrote It in X.\"",
+        "passed": true,
         "graded": true
       }
     ]

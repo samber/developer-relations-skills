@@ -1,20 +1,60 @@
-I searched this repo end-to-end, deliberately excluding everything under `skill-wip/`, and I can't find the post you're describing.
+I haven't seen the post. You didn't give a path or paste the text, and I can't use `skill-wip/`. So I can't deliver the tightened prose, the title tag, the meta description or the alt text yet. Below is what is left to do, and what I need from you to do it.
 
-**What's actually outside `skill-wip/` in this repo:**
-- `affiliation-programs/` — ~250 affiliate-program profile files (frontmatter + vendor descriptions), no code blocks or benchmarks
-- `research/` — Cloudflare Radar rankings, PartnerStack/Reditus marketplace listings, skills.sh category dumps
-- `memory/naomakers/` — event/hackathon operations notes
-- `sponsors/`, `scripts/`, `telemetry/` — sponsorship prospect lists and internal Python/JS tooling for this repo's own scripts, plus their stats
-- `strategy.md`, `README.md`, `CLAUDE.md`, `todo` at root
-- `.scratch/`, `.scratch_deck/`, `.scratch_relnotes/`, `.agents/` — all empty or unrelated (one file, `product-marketing.md`, in `.agents/`)
+## What I need
 
-None of these is a post with three code blocks, two benchmark tables, and pasted command output, and this repo's own `CLAUDE.md` describes itself as "a knowledge base, no code project" — it tracks affiliate programs and Agent Skills drafting, not a Contentful-published blog. Nothing here references Contentful at all.
+1. The post: paste the text or give a path outside `skill-wip/`.
+2. The target keyword, or the question a reader would search for.
+3. The Contentful field names: the slug, SEO title, SEO description, hero image and body type (Rich Text or Markdown).
+4. Whether the post is already a Contentful draft with a URL, or still unpublished.
 
-The only place in the repo that plausibly holds drafted, publish-bound prose is `skill-wip/` — which you told me not to read, search, or reference, and I haven't.
+## What is left
 
-**So: nothing is "left to do" on my end yet, because I haven't located the source text.** Before I can tighten the prose and sort the SEO fields, I need one of:
-1. The post's actual location, if it's not in this repo at all (maybe it lives in a Contentful space directly, a different repo, or a local file outside this working directory), or
-2. Confirmation that it is under `skill-wip/` and you want to lift that restriction for this task, or
-3. You paste the post text directly into the chat.
+**1. Prose tightening (my part, once I have the text)**
+- Edit prose only. Leave the three code blocks, the two benchmark tables and the raw command output byte-identical. Check this with a diff before and after.
+- Don't change numbers, units, version strings, identifiers or claims, because a colleague already verified them.
+- Cut the usual LLM tells:
+  - openers like "In today's fast-paced…" and closers like "In conclusion…"
+  - filler such as "it's worth noting", "delve", "leverage", "robust", "seamless" and "crucial"
+  - the "not just X, but Y" construction
+  - triplet lists used by reflex
+  - em-dash overuse
+  - headings that restate the paragraph under them
+  - sentences that announce what the next one will say
+- Read the result aloud. Keep the author's own verbs and specifics. If a sentence only sounds smart, cut it.
 
-Once I have the actual draft, my checklist for "what's left" would cover: de-LLM-ify the prose (kill hedging/listicle rhythm, vary sentence length, cut stock transitions like "In conclusion"/"It's worth noting", make sure the benchmark tables and command output read like something a person actually ran rather than being narrated), plus the four SEO fields you named — title tag, meta description, slug, and alt text for every image — sized to Contentful's field limits. I just can't produce any of that against content I haven't seen.
+**2. Check the pasted output before it goes live (you)**
+- Scan the raw command output for hostnames, usernames, home paths, internal domains, IPs and tokens.
+- Redact anything you wouldn't want public. A technical-accuracy review doesn't catch this.
+
+**3. SEO fields (I draft, you approve)**
+- **Title tag:** about 50–60 characters, with the keyword near the front. Add the brand only if it fits. It can differ from the H1.
+- **Meta description:** about 140–155 characters. State what the reader gets, and name the concrete result if it is a benchmark post. No clickbait.
+- **Slug:**
+  - short, lowercase and hyphenated, with no date and no stop words
+  - it must contain the keyword
+  - in Contentful, check the slug field's uniqueness validation
+  - the slug is part of the URL, so decide it now. If the post is already live under another slug, you need a 301 redirect.
+- **H1 and headings:** one H1 only, and H2s that match the sub-questions readers ask.
+- **Alt text:**
+  - one description per image, about 125 characters or fewer, describing what the image shows
+  - if a benchmark table is an image, put its numbers in the alt text or in a text version next to it. Better still, keep the tables as real HTML tables.
+  - decorative images get empty alt text
+  - in Contentful, alt text usually lives on the asset (its title and description, per locale), not on the entry. Check each asset.
+- **Social and structure:** an OG/Twitter image and title, a canonical URL, and 2–4 internal links to related posts. Use Article/TechArticle schema if your front end supports it.
+
+**4. Contentful checks before publishing**
+- Preview the entry on the real front end and check four things:
+  - code blocks keep their formatting, their language label and their horizontal scroll
+  - tables render and don't overflow on mobile
+  - the raw output keeps its line breaks
+  - Rich Text doesn't turn code into plain paragraphs. If it does, use an embedded code entry or a Markdown field.
+- Fill in every required field, including author, date and category/tags.
+- Check the status in the entry sidebar: Draft, Changed or Published. Publish the entry, then publish the linked assets, or the images 404.
+- If you use scheduled publishing, set the time and confirm the timezone.
+
+**5. After it goes live**
+- Fetch the live URL and confirm the title, description, canonical, OG image and status 200.
+- Check that it appears in the sitemap.
+- Request indexing in Google Search Console, and watch impressions and queries after a week or two.
+
+Send me the post and the answers to the four questions above. I'll return the tightened text with the protected blocks untouched, plus the title tag, meta description, slug and alt text ready to paste into Contentful.

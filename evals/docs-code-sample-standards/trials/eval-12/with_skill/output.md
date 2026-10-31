@@ -1,114 +1,106 @@
-# Sample audit — Marlowe Freight docs tree, 2026-09-23
+## Sample audit: Marlowe Freight docs tree, 2026-10-30
 
-Method: Inventory-before-audit (NN/g) for the census, Docs-as-Tests (Silva) for verification design, Google Cloud's clarity → idiomaticity → consistency → simplicity → portability → maintainability ranking for any rule conflict. Named here so your team can check the source, not my word.
+**Status: no census run.** You gave no docs path, and I found no Marlowe docs tree in this checkout. So this report has no counts, no findings and no scores. I won't invent numbers for a corpus I haven't seen. What follows is the audit design for your constraints, ready to run the moment you point it at the tree.
 
-**Scope check:** this is a corpus audit, not a quickstart/tutorial/IA task — in scope for this skill.
+### 1. Inputs I need (they change the tier ranking)
 
-🔴 **Before anything else — the 63 P0 from last quarter are neither confirmed nor cleared.** Don't file this report under either "63 P0 open" or "0 P0, false alarm." Correct status today: **63 flagged, 0 confirmed, adjudication pending on 2 pages** — see §2. That pending state is itself this quarter's finding, not a stall, and it's reported first because a real P0 outranks every efficiency ratio in the fix queue.
+1. Docs path, and which surfaces are in scope (docs site, API reference, README, examples repo).
+2. **Q4/Q8:** Does any CI exist outside this air-gapped box? Are there engineering hours to build a harness?
+3. **Q9:** When does this need to show a result?
+4. **Q10:** One-off cleanup, or a standard enforced every release?
+5. Who owns a broken sample today?
+6. Which language do readers arrive with most? That decides tier 1.
 
-## 1. Environment ruling — what today's audit can and can't claim
+### 2. Method
 
-Two different constraints, two different consequences:
+- **Inventory before audit** (Nielsen Norman Group): mechanical census on 100% of samples, then judgement on a stratified sample.
+- **ROT triage** (redundant, outdated, trivial) as the first cut.
+- **Docs as Tests** (Manny Silva) for the verification design.
+- **Google Cloud's ranked principles** break rule conflicts: clarity → idiomaticity → consistency → simplicity → portability → maintainability.
 
-- **No network/registry, no Java/Ruby/Go toolchain, only Python installed** → Run and Compile-only are both unreachable today, for all four languages, including Python (its samples likely import an SDK you can't `pip install` air-gapped). Per the skill's own tiering rule: *"A team with no CI has no Run tier and no Compile-only tier: every sample in that corpus is unverified until a pipeline exists."* Nothing below should be read as "passing" — only as "clean on mechanical lint, unverified on execution."
-- **The mechanical census needs none of that.** `scripts/sample-audit.py` is stdlib-only (`argparse`, `json`, `os`, `re`, `sys`) and never executes a sample — it regexes the fenced text in your Markdown. It runs today, air-gapped, over all four languages, at 100% coverage:
+### 3. Environment constraints applied
+
+Only Python runs here, and the corpus is Python, Java, Ruby and Go.
+
+| Language | What this box can verify | Status to report |
+| --- | --- | --- |
+| Python | Syntax check (`python3 -I -m py_compile`), then execution in a clean venv with stdlib only | Compile-only. Run only if the sample has no third-party imports. |
+| Java, Ruby, Go | Nothing. No compiler or interpreter. | **Unverified**, never "passing". |
+| All | Mechanical lint via `sample-audit.py` (pure stdlib, works offline) | Census complete. |
+
+- Samples needing a package registry can't be installed here. That is a limit of the box, not a finding against the sample.
+- The skill says to produce the tier assignments, the lint results and a written verification plan when execution is impossible. It also says to label unexecuted samples *unverified*.
+- **Tier deletion:** until a pipeline exists outside this box, Run and Compile-only are unavailable for Java, Ruby and Go. Every sample in those languages is *unverified*. Standing up a CI job per language, on the published artefact, is queue item 1 for them.
+- Samples that bill, destroy or call a third party never get Run, whatever CI can do.
+
+### 4. Fixing the 63-P0 noise problem
+
+**Cause:** the scanner treats a flag as a verdict. The skill says to treat every flag as a candidate to confirm, because a rotation page legitimately contains a key-shaped string. Last quarter's report skipped that step. Two pages were not cut out from 63 findings, and every P0 got ignored.
+
+**Rules for this audit:**
+
+1. **Scan everything, report by triage class.** Don't exclude the two pages. A blanket path exclusion would hide a real leak on them.
+2. **P0 means harm to the reader who copies it.** A flag reaches P0 only if it passes one of these tests:
+   - The string is not on the known-fake list and could be real: a live-format prefix (`sk_live_`, `AKIA…`, `ghp_…`, `xox…`) with plausible entropy, or a private-key header with a real body.
+   - An insecure switch sits in a block presented as the recommended path.
+3. **Expected findings go to a separate bucket, "declared intentional", not P0.** A flagged sample lands there only if all three hold:
+   - It is tier Illustrative, with a visible label on the rendered page.
+   - Its key-shaped strings are demonstrably fake: angle-bracket placeholders, vendor documentation sentinels such as `AKIAIOSFODNN7EXAMPLE`, or a repeated filler pattern.
+   - An insecure example is introduced as an anti-pattern, with the secure form shown next to it.
+4. **Anything declared intentional but unlabelled is a P2.** An unlabelled illustrative sample looks broken.
+5. **Group by root cause, not by sample.** If one pattern recurs 40 times, that is one fix-queue item with 40 locations.
+6. **Report P0 the moment it is seen.** The credential check lists only P0s that survived triage.
+7. **Real-key check:** I can't confirm from here that a key-shaped string is dead. For any survivor of rule 2, the owner rotates it, or confirms from the issuing system that it never existed. That confirmation belongs in the finding.
+8. **Standing fix:** add a per-sample marker in the fence info string (for example `tier=illustrative`) plus a reviewed allowlist file naming path, line and reason. A new unlisted hit then stands out. `sample-audit.py` reads only `tier=` today, so the allowlist needs a small wrapper. Changing the scanner itself is your decision.
+
+### 5. Commands to run
 
 ```
-python3 scripts/sample-audit.py docs/ --format summary
-python3 scripts/sample-audit.py docs/ --format json --ext .md,.mdx > inventory.json
+python3 -I scripts/sample-audit.py <docs-dir> --format summary
+python3 -I scripts/sample-audit.py <docs-dir> --format json --ext .md,.mdx > inventory.json
+python3 -I scripts/sample-audit.py <docs-dir> --format tsv > census.tsv
 ```
 
-I read the script's source rather than running it against your tree in this session — I don't have your `docs/` directory mounted here. Run the command above and hand me (or your team) the output for the real census numbers; everything else in this report doesn't depend on it.
+Then, for Python blocks only:
 
-Two axes, kept separate for the rest of this report:
+1. Extract them to a scratch directory.
+2. Run `python3 -I -m py_compile` on each.
+3. Record pass or fail per `path:line`.
 
-| Axis | Status today |
-|---|---|
-| **Target tier** (a policy claim: what a sample is supposed to be) | Assignable now, see §5 |
-| **Verified status** (did anything actually execute) | **Unverified**, corpus-wide, until a toolchain + registry access exist |
+### 6. Stratified rubric pass
 
-An untiered fence defaults to *claiming* Run — the strictest tier — precisely so silence never reads as "fine." That's why every sample here gets marked unverified rather than quietly assumed passing.
+- **Size:** state a number you can actually score, for example 40 samples. Quote results as estimates with that base, not as corpus-wide counts.
+- **Strata:** language × product area × age. Over-weight the language added last, and include old pages.
+- **Dimensions** (0–2 each): correctness, runnability, idiomaticity, error handling, credential handling, copy-paste safety. Record each dimension, not a total.
+- **Judgement checks** a regex can't make:
+  - Does each symbol still exist in the current API?
+  - Is the documented output current?
+  - Do the sibling-language samples do the same thing?
 
-## 2. The inherited 63 P0 — confirm, don't accept
+### 7. Pass thresholds to report against
 
-Rule from the skill, verbatim: *"Treat every flag it raises as a candidate to confirm, not a verdict; a page about credential rotation legitimately contains a key-shaped string."* Your scanner almost certainly never applied that rule — it looks like it published every `SECRET`/`LONG_LITERAL`/`INSECURE` regex hit as-is. Run against two pages *built to contain exactly those patterns on purpose*, that produces a flood indistinguishable from a real breach. The team stopping reading was the rational response to an unconfirmed report, not a discipline failure.
+- **Measured comparator:** deprecated-API rate below 43%. That figure is Zhou & Walker, FSE 2016, measured on Stack Overflow posts. Using it as a gate is this skill's choice.
+- **Skill baselines, not industry standards:**
+  - Zero P0 after triage, and 100% of adoption-path samples at tier Run and green.
+  - Pass rate ≥90%.
+  - ≥80% of the corpus at tier Run or Compile-only and executed by CI.
+  - Parity ≥90% across tier-1 languages.
+- **Today's expected result:** the ≥80% tested-share gate fails by construction for Java, Ruby and Go, because nothing can run them here. If the team can't meet it, cut samples instead of lowering the bar.
 
-Adjudication protocol — apply this to every one of the 63, not just the two named pages:
+### 8. Fix queue shape
 
-| Case | Verdict | Action |
-|---|---|---|
-| Real-format/live-shaped secret, **wherever it appears** — including on the rotation/hardening pages | **P0 — deliberate intent does not exempt it.** A reader skimming for "what the key format looks like" can still copy it. | Report the moment it's found, rotate/replace now |
-| Key-shaped or `--insecure` example illustrating a concept, using an unambiguous non-functional placeholder (reserved-range, angle-bracket — not a real provider's live-key shape), under a visible "anti-pattern / do not run" label | **Not a P0.** | Tier Illustrative, add an Exceptions row (§3), leave as-is |
-| Same pedagogical intent, but still shaped like a real key/host, or missing the visible label | **Real defect, wrong severity class.** Nothing here is a currently-copyable hazard — it's a labeling/format gap. | File **P1**, fix the placeholder format and add the label, no rotation needed |
-| Any flag **outside** the two named pages | Default rule applies: assume real until shown otherwise | Confirm and report immediately, not batched |
+1. **Surviving P0s** (credentials that pass triage, insecure defaults presented as advice): owner, this week. Harm outranks the ratio.
+2. **Build CI outside this box**, one job per language, installing the published artefact. This is the first item for Java, Ruby and Go.
+3. **Mark the rotation and hardening samples** Illustrative with visible labels, plus the allowlist (rule 8). One fix covers all 63 prior hits.
+4. **Adoption-path samples** (quickstart, auth, first call): promote to Run by hand.
+5. **P1** (does not work as written), then **P2** (policy violations, parity gaps).
 
-I have not been given the actual text of the key-rotation guide or the security-hardening page in this session, so I'm not going to certify a number I haven't read line-by-line — that would be exactly the "trust the report" problem you're trying to fix. Pull just those two pages' flags and run the three-way split above:
+Items 4 and 5 are ordered by (readers affected × severity) ÷ effort, a ratio rather than a severity list. The ratio starves low-traffic samples that need a harness built to fix them, so promote those by hand when they sit on the adoption path.
 
-```
-python3 scripts/sample-audit.py docs/security/ --format json
-```
+### 9. Ownership
 
-Columns to work the confirmation sheet: `path:line | flag | pattern matched | real-format or reserved/placeholder | visibly labeled anti-pattern? | verdict`.
+When a sample goes red in CI on a Friday afternoon, whose queue does it land in? I can't answer that without question 5. Encode the answer as code-owner rules on sample paths plus a blocking check, not a wiki paragraph. Bug and security fixes take priority over new samples.
 
-## 3. Why this keeps happening — governance, not a bigger scanner
+### 10. Next step
 
-*"A validator whose output nobody sees is documentation of a problem, not a gate against it."* Last quarter's 63-item list was a document, not a gate — nothing failed a check, nothing blocked a merge, so nobody was forced to triage it before it went stale enough to ignore.
-
-Fix at the root:
-
-1. Once §2's confirmation pass runs once, write **Exceptions** rows (policy template §8) for every confirmed-safe finding on those two pages: sample, rule waived, reason, **expiry date**. An exception without an expiry is a silent policy edit — don't leave one open-ended.
-2. Wire the scanner to a **non-zero exit that fails a required check**, posted where reviewers actually see it (PR status, not a report nobody opens).
-3. After that, next quarter's run only surfaces *new* flags — the two known pages stop regenerating the same 63.
-
-## 4. Tier policy for the corpus (target, not verified status)
-
-Given the environment, Run and Compile-only are deleted from what can be *enforced* today — that's a statement about this environment, not a permanent ranking. Target tiers, independent of today's execution capability:
-
-- **Primary adoption path** (install, auth, first call) → target **Run**, whichever languages you name tier 1.
-- **Anything billing, destructive, or hitting a third party** → target **Compile-only**, permanently — this doesn't change once the air gap lifts.
-- **Key-rotation walkthrough, hardening anti-pattern demos** → target **Illustrative**, permanently, with a visible label. These are supposed to never run, air gap or not.
-- **Everything else** → Compile-only once any toolchain exists, else Run.
-
-## 5. Language parity — open question, don't guess it
-
-Matrix shape is ready; I have no download/support-ticket data to tier Python/Java/Ruby/Go correctly. Per the parity rule, tiers come from *"actual download/telemetry share and support-ticket volume,"* never team preference — most corpora over-serve the language the API was written in and under-serve the one readers actually arrive with. Give me that data (or Q3 from the interview: which language do readers arrive with most?) before I fix tier 1 vs. tier 2 vs. community. Parity coverage (`T` cells ÷ scenarios × tier-1 languages) is uncomputable until the scenario list exists — send it and I'll fill the matrix.
-
-## 6. Findings
-
-- 🔴 **P0 — 0 confirmed, up to 63 pending** (§2). Top of the queue, ratio-exempt.
-- 🟠 **P1 — corpus-wide execution status is unverified**, which is a disclosed fact, not an assumed pass. Every sample's real-world correctness is currently unknown.
-- 🟢 **P2 — no fence carries `tier=` metadata anywhere in the corpus** (assumption pending your census run) — cheap to fix now, and it's what lets the eventual pipeline route each sample on day one instead of everything defaulting to the strict Run claim.
-
-## 7. Fix queue (ratio-ordered below the P0 exemption)
-
-1. **Confirm the 63 on the 2 named pages** — this week, owner: docs + security co-review. P0 candidates go first on harm, never on efficiency.
-2. **Run the census command against the real tree**, get actual corpus size, language mix, flag counts — replaces every placeholder number in this report.
-3. **Add `tier=` to every fence** — near-zero cost, unlocks routing before any pipeline exists.
-4. **Stand up a compile-only gate**, Python first (your only local runtime), Go/Java/Ruby as toolchains get approved — compile-only catches the whole P1 class (removed symbols, missing imports) for no fixtures and no credentials.
-5. **Write the Exceptions table** for the two named pages, each row with an expiry.
-6. **Fill the six policy decisions** (coverage, anatomy, safety, parity, verification, ownership) into `sample-policy-template.md` and keep it in the docs repo, not a wiki.
-
-## 8. Verification plan for when the air gap lifts
-
-- **Source of truth, ranked**: extract-from-tested-source for anything on the adoption path (highest reliability, highest setup cost); test-what's-embedded elsewhere (cheapest to adopt on an existing corpus); generate-from-spec for single-call reference snippets only. Pick one per surface, write it into the policy — don't leave samples hand-pasted into prose, which belongs to none of the three.
-- **CI shape**: install the *published* artifact, not the working tree. Split hermetic (every PR) from integration (scheduled — samples break when the service changes, not when the docs repo changes). Fail a required check, not an advisory one. Report per sample: which sample, which page, which line.
-- **Fixtures**: dedicated test accounts per language, deterministic resource naming (prefix + run id), teardown in-test plus a scheduled sweeper, secrets from the CI store — never from the sample itself.
-
-## 9. Pass threshold — read against the environment, not the corpus
-
-| Gate | Reading today |
-|---|---|
-| Deprecated-API rate < 43% (Zhou & Walker, the one gate with a measured comparator) | Unmeasurable without execution |
-| Zero P0, 100% adoption-path samples tier Run + green in CI | Fails by construction — nothing is in CI yet |
-| Compile/run pass rate ≥ 90% | Unverified, not failing |
-| ≥ 80% of corpus tier Run/Compile-only, CI-executed | 0% today, because of the environment, not the corpus — don't let this get misread as a quality verdict |
-| Parity coverage ≥ 90% | Uncomputable without the scenario list |
-
-None of these numbers judge Marlowe Freight's samples. They judge what this environment can execute today. Re-run every one of them the day a toolchain and registry access exist — that re-run is the real audit; this one is the honest placeholder for it.
-
-## 10. What closes the loop
-
-- The real `docs/` path, or the pasted output of the census command, for actual per-file numbers.
-- Read access (or pasted text) to the key-rotation guide and the security-hardening page specifically, so §2 doesn't sit pending for another quarter.
-- The scenario list, one row per identifier, to compute real parity coverage.
-- Usage/telemetry data to set language tiers instead of guessing them.
+Send me the docs path and answers to questions 2–4. I'll then run the census, triage the P0 pile into real versus declared-intentional, and return the filled report with counts.

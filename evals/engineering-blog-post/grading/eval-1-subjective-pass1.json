@@ -3,9 +3,9 @@
     "expectations": [
       {
         "text": "Orders the fix-list items by trust damage rather than by their position in the document",
-        "evidence": "The fix list is explicitly tiered by consequence, not location: \"Blocking (fix before Thursday)\" \u2192 \"Strong (fix unless the author disagrees)\" \u2192 \"Optional\", plus a separate \"Handoff \u2014 needs the author\" bucket. Ordering demonstrably departs from document sequence: the vendor-disclosure item concerns the top of the post (\"Confirm early in the post... title says 'Kestrel Data engineering blog'\") yet is ranked last as Optional, while the mid/late-document benchmark chart and code snippet are ranked #2 and #3. Within Blocking the order (intro superlative \u2192 results chart \u2192 snippet \u2192 paragraph four) i",
-        "score": 4,
-        "passed": true,
+        "evidence": "The list has severity tiers (Blocking / Strong / Optional), so it is partly ordered by severity. Inside the Blocking tier, though, the items follow the draft's order: intro superlative, then the Results '12x', then 'paragraph four' adoption claim, then the snippet, then the missing limitations section. The closing 'thrilled' line is last in the draft and also last among the rewrites. The response never ranks the items by how much trust each one costs. For example, it does not say the headline '12x' claim does the most damage. The order mostly mirrors document position.",
+        "score": 2,
+        "passed": false,
         "graded": true
       }
     ]
@@ -14,8 +14,8 @@
     "expectations": [
       {
         "text": "Orders the fix-list items by trust damage rather than by their position in the document",
-        "evidence": "The six fixes are numbered in strict document order \u2014 \"1. Intro\", \"2. Results section\", \"3. Paragraph four\", \"4. Code snippet\", \"5. Closing paragraph\", \"6. New section ... Insert before the closing paragraph\" \u2014 a walk from the top of the draft to the bottom, with no stated severity ranking or reordering. Severity is even acknowledged in passing but not acted on: item 4 says the renamed method is \"the single most credibility-damaging kind of error, because it's the one detail readers will actually try to execute,\" yet it still sits fourth, behind a superlative adjective and an install-base clai",
-        "score": 1,
+        "evidence": "The replacement passages follow the draft's own order: Title and intro, Results section, Paragraph four, the new limits section placed 'after Results', Code snippet, Closing. The response never ranks items by how much they hurt credibility, and it does not say which fix matters most. The 'facts to get' list also follows the benchmark's structure (baseline, workload, hardware, version, times), not severity. One remark, 'This is the section that makes the 12x believable', gives a reason for a single section but does not change the order.",
+        "score": 0,
         "passed": false,
         "graded": true
       }

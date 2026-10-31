@@ -1,43 +1,56 @@
-# Readout: Storage-Rewrite Post — Pipeline & Read-Through Target
+# Readout draft: storage rewrite post
 
-## 1. Pipeline generated
+## Short answer for your VP
 
-Don't hand her a single "this post generated $X" number. No model can honestly assign 100% credit for a deal to one blog post in a multi-touch B2B journey — that number gets challenged the first time someone asks how it was calculated, and it doesn't survive the question.
+1. **Pipeline generated:** I can't give you a number from pageviews. Pageviews say nothing about pipeline. You need the pipeline attributed to those 22,000 visits, and you have to pull it from your CRM or analytics.
+2. **Read-through target:** There is no credible industry benchmark for read-through rate. Don't present one. Give her a target derived from your own baseline instead.
 
-Give her two numbers instead, both with a stated lookback window:
+## 1. Pipeline: how to get a defensible number
 
-- **First-touch-influenced pipeline** — deals where this post's URL is the very first tracked touch.
-- **Any-touch-influenced pipeline** — deals where this post appears anywhere in the touch path before deal creation, within a 90-day lookback.
+Pull these from your CRM and analytics. Use the same 30-day window as the pageviews, plus a lookback for deals that touched the post.
 
-The gap between the two is itself the insight: wide gap = strong top-of-funnel driver, not a closer. State plainly that any-touch numbers aren't additive across your content calendar — the same pipeline dollar will legitimately show up "influenced" by several posts, so don't let her multiply this figure across every post later.
-
-Fill-in template — plug your CRM/analytics export in:
-
-| Metric | Value | Source |
+| Step | Metric | Source |
 |---|---|---|
-| Pageviews (last month) | 22,000 | GA/PostHog |
-| Sessions attributable to this post (UTM/referrer) | ? | GA/PostHog |
-| Tracked conversions (signup, demo request) first-touched to this post | ? | CRM, `$initial_utm_*` or lead-source field |
-| Deals w/ this post anywhere in touch path (90-day lookback) | ? | CRM |
-| First-touch-influenced pipeline $ | ? | CRM, summed deal amount |
-| Any-touch-influenced pipeline $ | ? | CRM, summed deal amount |
+| 1 | Pageviews (22,000) and unique visitors | Web analytics |
+| 2 | Signups, demo requests, or other conversions that started on the post, or whose first or any touch was the post | Analytics, signup form source |
+| 3 | Of those, accounts that became qualified leads or opportunities | CRM |
+| 4 | Pipeline $ on those opportunities | CRM |
 
-If UTM tagging or CRM first-touch fields aren't wired up yet, say that instead of guessing a number: "22K pageviews, X identifiable sessions, Y tracked conversions, here's what's in CRM tied to this landing page — full pipeline attribution needs [identify-at-conversion / UTM-to-CRM sync] closed first." That's a stronger position than a fabricated figure.
+Report two figures, labeled separately:
 
-## 2. Read-through rate — no real industry benchmark exists, tell her that
+- **Sourced:** the post was the first touch and the opportunity was created after it.
+- **Influenced:** the post was one touch among several in the deal's history, within a fixed lookback such as 90 days.
 
-"Read-through rate" is a defined metric in **email** marketing (opens who click through to read the full piece). It doesn't transfer cleanly to a blog post reached via search/social/direct — there is no standardized, cross-industry benchmark for blog read-through.
+Fix the lookback window and the attribution rule before you pull the numbers. Don't choose them after seeing the result.
 
-Any number floating around ("aim for 40-45%") almost always traces to one vendor's blog post (Chartbeat, Contentsquare, Medium) reporting on their own customer base, with an undisclosed definition of "read-through" — full scroll, time-on-page, or scroll-past-fold, inconsistently. None of it is peer-reviewed, none of it is dev/technical-audience-specific, and a storage-rewrite post read mostly by engineers won't behave like a media site's average article.
+**If the pipeline number is small or zero:** say so, and say why. A technical post on a storage rewrite attracts engineers, and many of them aren't buyers. Pageviews also include bots, repeat readers and people who arrived from aggregators. Traffic that large from Hacker News or Reddit usually converts at a very low rate. Don't backfill a number with an assumed conversion rate. If attribution isn't instrumented, report that as a gap. The honest line is: "22,000 views, N signups, $X attributed pipeline. The post was not instrumented to capture more."
 
-Recommend instead:
+## 2. Read-through rate: why there's no benchmark
 
-1. Instrument scroll-depth / active-read-time now if not already tracked (GA4 scroll events, or a custom "article complete" event at ~90% scroll).
-2. Measure this post's own read-through this month as your baseline.
-3. Set next quarter's target as a delta off that baseline ("our best post reads through at 38%, target the next tier at 30%+") — defensible and actionable, unlike importing a number sourced from a different audience and platform.
-4. If she wants an external anchor point regardless, the honest one is: no credible industry benchmark exists for this metric; internal baseline is the only trustworthy input for target-setting here.
+**Definition problem.** "Read-through rate" has no standard definition. It could mean scroll depth, time on page, finishing the article, or clicking through to a next page. Each tool defines it differently, so a benchmark from one source doesn't compare to another. Any single "industry average" figure you find is likely a vendor blog stat with unclear methodology. It would not hold up if she asked where it came from.
 
-## What to say in the room
+**Context problem.** Even with a clear definition, a general content benchmark wouldn't fit. Deep technical posts read differently from marketing posts, and a spike from a link aggregator reads differently from search traffic.
 
-- Pipeline: influenced-pipeline range (first-touch vs. any-touch), lookback window stated, not a single causal figure — flag now if instrumentation to compute it cleanly doesn't exist yet.
-- Read-through: there's no real industry benchmark to cite — say so directly — and propose setting next quarter's target off this post's own measured baseline instead.
+**What to give her instead:**
+
+1. State your definition. For example, "reached 75% scroll depth with at least 2 minutes on page", measured in your analytics tool.
+2. Measure it for this post and for your last 5 to 10 posts. Report the median and range.
+3. Set next quarter's target relative to that baseline. For example: "hold the median, and raise the lowest-quartile posts toward it", or "+X points on posts over N words".
+4. Segment by traffic source. Search and newsletter readers behave differently from aggregator spikes, so a blended rate will mislead.
+
+**Suggested wording for the readout:**
+
+> "There's no reliable industry benchmark for read-through, because the metric isn't standardized and published figures aren't comparable. Our baseline is X% across the last N posts (this post: Y%). I propose a target of Z% next quarter, measured the same way."
+
+## Likely follow-up from her
+
+- **"Isn't there any benchmark?"** Offer to look for published figures that name their metric definition and audience, and to present them as context only, not as the target.
+- **"22,000 is our best ever. Doesn't that count?"** It's a reach result and worth stating as one. Reach is not pipeline, so keep the two sections separate.
+
+## What I need from you to fill this in
+
+- Pipeline $, opportunity count, and signups attributed to the post, plus the attribution rule you used.
+- Your analytics tool and how it defines scroll depth or engaged time.
+- Read-through data for the last 5 to 10 posts.
+
+With those I can produce the final numbers and a target recommendation.

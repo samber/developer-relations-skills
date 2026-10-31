@@ -3,73 +3,73 @@
     "expectations": [
       {
         "text": "Corrects the organiser: the agency Hoopy wound down in 2026 and handed DevRelCon to Major League Hacking.",
-        "evidence": "\"Hoopy (the agency that ran DevRelCon and developerrelations.com since 2016) wound down in 2026 and handed the conference to **Major League Hacking (MLH)**.\"",
+        "evidence": "'The agency wound down in 2026 and handed DevRelCon to Major League Hacking (MLH).'",
         "passed": true,
         "graded": true
       },
       {
         "text": "States that the sponsorship enquiry should go to Major League Hacking rather than Hoopy.",
-        "evidence": "\"An email to Hoopy about packages will land nowhere useful; route the ask to MLH / the DevRelCon NYC team directly (via nyc.devrelcon.dev or MLH's own channels).\"",
+        "evidence": "'Don't email Hoopy... Ask MLH for packages.'",
         "passed": true,
         "graded": true
       },
       {
         "text": "Confirms the DevRelCon New York edition as 22-23 July 2026.",
-        "evidence": "\"The most recent confirmed DevRelCon edition is **New York, 22\u201323 Jul 2026, at Industry City, Brooklyn**\"",
+        "evidence": "'22\u201323 Jul 2026 at Industry City, Brooklyn'.",
         "passed": true,
         "graded": true
       },
       {
         "text": "Gives the event's approximate scale as around 300 attendees rather than implying a mass-market audience.",
-        "evidence": "\"independently confirmed through MLH's own announcement post \u2014 ~300 attendees, 2026 programming themed on AI's effect on DevRel.\"",
+        "evidence": "'It was about 300 attendees'.",
         "passed": true,
         "graded": true
       },
       {
         "text": "States that a freshness check passing on a date says nothing about the organiser, and that date and owner must both be checked.",
-        "evidence": "The transcript separates 'Wrong recipient' and 'date has already passed' as two problems, but never states the general meta-principle that a passing freshness/date check says nothing about organiser correctness.",
+        "evidence": "The transcript never states this principle. It only says to confirm the handover on the event page.",
         "passed": false,
         "graded": true
       },
       {
         "text": "Verifies or flags the organiser for every other event it recommends, not only the dates.",
-        "evidence": "The comparison table includes an explicit \"Organiser\" column populated for every row (e.g. \"CNCF / Linux Foundation\", \"MLH\", \"WeAreDevelopers\", \"Write the Docs community\", \"CMX (Bevy)\", \"Informa Connect\"), not just dates.",
-        "passed": true,
+        "evidence": "KubeCon is attributed to CNCF/LF and DeveloperWeek to Informa. WeAreDevelopers, CMX Summit and DevFest.cz have no organiser verified or flagged.",
+        "passed": false,
         "graded": true
       },
       {
         "text": "Flags at least one event whose page does not render a year - such as a KubeCon North America listing showing 9-12 November with no year - and tells the user to confirm before booking.",
-        "evidence": "\"Salt Lake City, 9\u201312 Nov ... but **verify the year before booking** \u2014 the page I have doesn't render it, and full-size KubeCon booths routinely run well past $15k, so confirm the startup/community-tier pricing before assuming it fits your budget\"",
+        "evidence": "KubeCon: 'The year isn't rendered on the page, so confirm it.'",
         "passed": true,
         "graded": true
       },
       {
         "text": "Distinguishes what the field's own practice conference buys from what a large general developer conference buys, rather than treating them as interchangeable sponsorship targets.",
-        "evidence": "\"DevRelCon's audience is **DevRel practitioners**, not CI/CD buyers. A booth there buys community standing, recruiting reach, and goodwill with other DevRel people \u2014 not pipeline\" versus WeAreDevelopers: \"Large general developer audience (15,000+ claimed) \u2014 real reach... Worth a CFP submission more than a booth spend at your scale\"",
+        "evidence": "'DevRelCon's audience is DevRel practitioners, not CI/CD buyers.' WeAreDevelopers is a 'Large general developer audience'.",
         "passed": true,
         "graded": true
       },
       {
         "text": "Does not invent a sponsorship price, package tier, or prospectus figure it has not observed.",
-        "evidence": "Price column entries read \"not fetched \u2014 confirm\", \"not fetched \u2014 ask MLH\", \"sponsorship cost not fetched\", \"tickets, not fetched\", \"not fetched\" \u2014 no invented figures beyond the observed ticket price range for WeAreDevelopers (\"\u20ac329\u2013799\").",
+        "evidence": "'Booth pricing wasn't fetched.' The figures quoted are attendee passes, not sponsorship tiers.",
         "passed": true,
         "graded": true
       },
       {
         "text": "States that the event calendar needs refreshing twice a year rather than quarterly, because CFP deadlines land months before the event itself.",
-        "evidence": "No mention of a refresh cadence (twice a year, quarterly, or otherwise) or CFP deadline timing appears anywhere in the transcript.",
+        "evidence": "No refresh cadence is mentioned.",
         "passed": false,
         "graded": true
       },
       {
         "text": "Keeps conferences off the weekly efficiency line, describing their cost as cleared days plus travel rather than as minutes per week.",
-        "evidence": "The transcript contains no mention of a 'weekly efficiency' framing, minutes-per-week cost, or cleared days plus travel for any event.",
+        "evidence": "There is no discussion of weekly minutes versus cleared days.",
         "passed": false,
         "graded": true
       },
       {
         "text": "States that because this user is sponsoring, the event calendar becomes core to the radar rather than an optional extra.",
-        "evidence": "No statement in the transcript addresses the event calendar's status as core vs. optional within any broader radar/tracking system.",
+        "evidence": "Not stated. There is only a recommendation list, and the transcript offers to build the list around buyers.",
         "passed": false,
         "graded": true
       }
@@ -79,73 +79,73 @@
     "expectations": [
       {
         "text": "Corrects the organiser: the agency Hoopy wound down in 2026 and handed DevRelCon to Major League Hacking.",
-        "evidence": "The transcript instructs 'Get these three things directly from Hoopy when you email them' with no mention of Hoopy winding down or a handoff to MLH.",
+        "evidence": "Addresses the email to 'Matthew' at Hoopy; no mention of MLH.",
         "passed": false,
         "graded": true
       },
       {
         "text": "States that the sponsorship enquiry should go to Major League Hacking rather than Hoopy.",
-        "evidence": "The transcript repeatedly directs the user to 'Confirm the numbers with Hoopy' with no mention of MLH.",
+        "evidence": "'put the date question in your email to Hoopy.'",
         "passed": false,
         "graded": true
       },
       {
         "text": "Confirms the DevRelCon New York edition as 22-23 July 2026.",
-        "evidence": "'I don't have working web access in this session...I'm not going to guess a date for a sponsorship budget decision.'",
+        "evidence": "'I could not confirm the DevRelCon dates.'",
         "passed": false,
         "graded": true
       },
       {
         "text": "Gives the event's approximate scale as around 300 attendees rather than implying a mass-market audience.",
-        "evidence": "No attendee count is given; the transcript asks Hoopy for 'Attendee breakdown by role/company type' instead of stating a scale.",
+        "evidence": "No attendee count is given.",
         "passed": false,
         "graded": true
       },
       {
         "text": "States that a freshness check passing on a date says nothing about the organiser, and that date and owner must both be checked.",
-        "evidence": "No such statement appears; the transcript's caveats are only about not having live web access.",
+        "evidence": "Not stated.",
         "passed": false,
         "graded": true
       },
       {
         "text": "Verifies or flags the organiser for every other event it recommends, not only the dates.",
-        "evidence": "For other events (DevOpsDays, PlatformCon, KubeCon, etc.) only pricing/dates are flagged as unverifiable ('I can't verify exact 2026/2027 dates or current pricing'), organiser identity is never separately flagged.",
+        "evidence": "Other events are listed with no organiser checks.",
         "passed": false,
         "graded": true
       },
       {
         "text": "Flags at least one event whose page does not render a year - such as a KubeCon North America listing showing 9-12 November with no year - and tells the user to confirm before booking.",
-        "evidence": "KubeCon is mentioned only generically ('KubeCon + CloudNativeCon...much bigger spend') with no date-rendering issue flagged.",
+        "evidence": "Says 'Verify every date' generically; no specific no-year listing.",
         "passed": false,
         "graded": true
       },
       {
         "text": "Distinguishes what the field's own practice conference buys from what a large general developer conference buys, rather than treating them as interchangeable sponsorship targets.",
-        "evidence": "'Two different buckets \u2014 pick based on which goal above you're actually funding...If the goal is DevRel employer brand...If the goal is actual CI/CD buyers.'",
+        "evidence": "'DevRelCon's audience is mostly DevRel practitioners, not CI/CD buyers... employer brand and practitioner network.'",
         "passed": true,
         "graded": true
       },
       {
         "text": "Does not invent a sponsorship price, package tier, or prospectus figure it has not observed.",
-        "evidence": "'a top-tier 10x10 booth alone typically runs $15-40k before travel and staff' is asserted as fact without any observed source.",
+        "evidence": "'~$4\u20135k on a DevRelCon talk', 'a few thousand dollars', 'well above $15k' are unobserved.",
         "passed": false,
         "graded": true
       },
       {
         "text": "States that the event calendar needs refreshing twice a year rather than quarterly, because CFP deadlines land months before the event itself.",
-        "evidence": "No cadence for refreshing the event calendar is mentioned anywhere.",
+        "evidence": "Not mentioned.",
         "passed": false,
         "graded": true
       },
       {
         "text": "Keeps conferences off the weekly efficiency line, describing their cost as cleared days plus travel rather than as minutes per week.",
-        "evidence": "The entire response treats DevRelCon and comparable events as one-off budget/staff-time decisions (e.g. '$15k + booth', 'travel + staff time + booth build'), never as a weekly minutes line.",
-        "passed": true,
+        "evidence": "Not addressed.",
+        "passed": false,
         "graded": true
       },
       {
         "text": "States that because this user is sponsoring, the event calendar becomes core to the radar rather than an optional extra.",
-        "evidence": "No explicit statement connects sponsoring status to the event calendar becoming 'core' to an ongoing radar.",
+        "evidence": "Not stated.",
         "passed": false,
         "graded": true
       }

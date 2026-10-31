@@ -1,25 +1,51 @@
-**Mode: this isn't edit-mode-on-the-draft — you're asking whether the review process is sound. Answer, per the skill's "Revise, review, ship" section: no, flip the order and cut the reviewer list.**
+**Not quite. The order is wrong and the review list is too long.** I haven't seen the draft, so this is advice on the plan. It isn't a gate report.
 
-**1. Polish-first is backwards.**
-The skill's four revision passes run Core → Clarity → Components → Consumability — facts, focus and flow *before* prose quality — "running them out of order polishes sentences that later get cut." The humanizer/prose pass is step 9 of 10, run *after* the credibility gate, right before shipping. Polishing prose before anyone has checked the claims means you'll rewrite sentences that get deleted once a reviewer flags an unsupported number.
+**Mode:** Edit mode, since a draft exists. I'd return a fix list and rewrite nothing you haven't approved.
 
-Do this instead, before anyone outside sees it:
-- Run your own Core → Clarity → Components → Consumability pass.
-- Build the claim ledger — every assertion tagged Measured / Shown / Sourced / Opinion — and cut or downgrade anything that doesn't fit.
-- Run the credibility gate yourself (claims classified, no unsourced numbers, benchmark disclosure if relevant, one honest limitation, no unsupported superlatives, snippets pinned/dated).
-- Only then run the humanizer pass.
+## What to change
 
-**2. Five simultaneous reviewers collecting comments in one doc is the specific anti-pattern the skill names.**
-Chris Wolfgang (Draft.dev): "too many cooks spoil the broth — each round fixes what the last one missed instead of finishing the piece." Dan Luu's survey of corporate eng blogs found the same thing empirically: the blogs he rated *compelling* kept the sign-off chain short with one clear owner (Cloudflare's CTO reads and approves every post directly; Heap pairs the writer with one buddy-editor; Segment routes through one editor). The blogs he rated *weaker* routed drafts through many stakeholders — "which left posts vaguer as each approver removed specifics." Manager + 2 staff engineers + PMM lead + legal + CEO, all marking up the same doc, is exactly that pattern.
+1. **Don't start with a prose polish.** Facts and structure come first. If a reviewer cuts a claim or a section, you've polished sentences that no longer exist.
+   - Do the four revision passes in order: core (facts, focus, flow), clarity, components (code, tables, images), consumability.
+   - Prose polish and the humanizer pass come last. Leave code blocks, command output, benchmark tables, version numbers and the title exactly as written.
+2. **Run the credibility gate before anyone sees it.** It has six checks, and each must pass:
+   - Every claim is measured, shown, sourced, or marked as opinion.
+   - No unsourced numbers.
+   - Benchmark disclosure is complete, if the post has comparisons.
+   - At least one specific limitation is stated.
+   - No unsupported superlatives.
+   - Snippets are pinned and dated.
 
-It also collides with the failure-modes table: "Reviewer returns line edits, not the fact check you needed → cause: draft sent with no reviewer brief." Forwarding the whole doc and asking for open comments guarantees that.
+   Run `scripts/scan-draft.sh` over it as a grep pass, and review each hit yourself. This catches what a reviewer would otherwise burn their round on.
+3. **Don't send one draft to six people.** The skill's sources warn that too many reviewers leave posts vaguer, because each approver removes specifics ("too many cooks"). The blogs Dan Luu rated well kept one clear owner and a short chain.
+4. **Don't forward the draft and collect comments.** Send each reviewer a brief: what you want checked, the background they lack, and any blocker question. Without one you get line edits instead of a fact check.
 
-Restructure the reviewer list by what each person is actually for, and brief each one narrowly instead of forwarding the raw doc:
+## Suggested chain
 
-- **One engineer who worked on the system** — fact-check only. Tell them exactly which claims in the ledger need their eyes.
-- **One reader outside the team** (could be one of the staff engineers, pick one) — clarity only: does it read without insider vocabulary?
-- **Legal** — only if the post touches security detail or customer confidentiality; scope the ask to that, not general comments.
-- **Product marketing lead** — only if there's a commercial angle to disclose (your own product, an open-core boundary). If this is that kind of post, their job is checking the disclosure statement is plain and present, not editing the engineering.
-- **Manager / CEO** — pick one as the sign-off owner, not both as commenters. Brief them with what's already been checked, and let them read for the blocker question only ("does this ship as-is"), the way Cloudflare's CTO does.
+| Step | Who | Checks | When |
+|---|---|---|---|
+| 1 | One staff engineer | Technical accuracy, using your claim ledger as the checklist | First |
+| 2 | Someone outside the team | Reads without insider vocabulary | After step 1 fixes |
+| 3 | Legal | Only if the post touches a named competitor, customer data, security detail, or unannounced roadmap | Once, on the near-final text |
+| 4 | Product marketing | Only for commercial disclosure, if you sell what the post covers. Not for tone. | Same time as legal |
+| 5 | CEO | Approve or veto. Not line comments. | Last |
 
-Sequence it — technical accuracy first, then clarity, then the narrow legal/PMM checks, then one sign-off — rather than blasting all five in parallel into the same doc. Fewer, sequential, briefed reads finish a post; a wide simultaneous review round sands it down to vague.
+- **Your manager** is the owner who unblocks. They don't need to be a reviewer.
+- **The second staff engineer** is redundant unless the post spans two systems. In that case, give each of them their own section.
+- **Product marketing** should check disclosure only. Marketing edits are what turn engineering posts into press releases.
+
+## What I need to finish the job
+
+Please send the draft or its path. I'll then return the gate report and a fix list in three tiers (blocking, strong, optional), ordered by trust damage and quoting each offending line. I also need answers to these, one at a time:
+
+1. What is the post about: a bug hunt, a rewrite, a design write-up, a benchmark, or a product post?
+2. Where does it publish: company blog, personal blog, or third party?
+3. Is there a publish date?
+4. What must stay unpublished?
+5. Do you have a commercial interest to disclose?
+
+## Before sending
+
+Once the fixes are in, three things should be true:
+- All six gate checks pass.
+- Each reviewer has a written brief.
+- One person owns the final call.

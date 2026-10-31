@@ -1,75 +1,93 @@
-Opened The New Stack today (thenewstack.io, 5-min skim), then queue Scaling DevTools Ep 197 and Community Pulse Ep 105 for your next two commutes. Full list below.
+# DevRel radar: Kestrel Data
 
-You asked for the finished radar, not a Q&A, so I answered the interview myself from what you gave me. Flag anything wrong and I'll swap it.
+**Open these first, in order:**
+1. **Today, 3 minutes:** apply to the DevRel Collective Slack at devrelcollective.fun. It's application-gated, so the wait starts when you apply.
+2. **Tomorrow's ride:** play Community Pulse, starting with Ep 105 (17 Aug 2026), at communitypulse.io. Community is the pillar you just inherited, and this is the one long-running show about the practice itself.
 
-**Assumed interview answers**
-- Role: closest to developer advocate/DevRel engineer — solo across three pillars, not a manager with reports.
-- Pillars owned: advocacy, marketing, community. Not enablement (no docs/SDK mention).
-- Budget: 90 min/week.
-- Mediums: audio + text. Video ruled out, no exceptions ("I never watch video, ever").
-- Catching-up vs standing habit: treated as standing habit overall, but community itself is a freshly-inherited pillar — that promotes community sources past their normal ranking (skill rule: new pillar = need judgment, not headlines).
-- Ecosystem: streaming SQL / data infrastructure, backend-team buyer.
-- Segment: B2B devtool, bottom-up, self-serve signup, credit card at entry tier — confirmed.
-- Events (Q9, speak/sponsor this year?): not stated. No event line added as mandatory — ask me if that's a yes and I'll add a CFP target.
+**What this is not:** a reading list checked on one date, not a monitoring service. Nothing alerts you when a source dies. The quarterly refresh does, when you run it.
 
-One more limit: my web-fetch tools were declined this session, so I could not re-verify sources live. Everything below is inherited from this skill's own audit, dated 26 Aug – 14 Sep 2026 — 1 to 4 weeks old, well inside the ~3-month "active" window, so I'm treating it as current. Flagged separately: anything I could not verify at all.
+- **Role:** second DevRel hire.
+- **Pillars owned:** advocacy, developer marketing, community.
+- **Ecosystem:** streaming SQL and data, sold bottom-up to backend teams.
+- **Budget:** 90 min/week.
+- **Mediums:** audio on the 2 × 35 min ride, and text.
+- **Ordering:** inside each section, by value per attention-minute, highest first.
+- **Source data:** snapshot of 26 Aug 2026, about 2 months old. I could not re-fetch any source today. See "Check before trusting."
 
----
+## Why audio is in the list
 
-## DevRel radar — advocacy + marketing + community, Kestrel Data
+By default podcasts lose the efficiency round, because an episode costs most of an hour. Two facts promoted them:
+- **Ride time.** Audio on the ride is time you were spending anyway, so I counted each episode at half its length.
+- **New pillar.** You just took over community. You need to hear how practitioners reason about it, and a newsletter only gives you the conclusion.
 
-Not a monitoring service — a list verified on one date. Nothing here alerts you when a source dies; the quarterly refresh does.
-Role: developer advocate, 3 pillars solo. Ecosystem: streaming SQL / data infra. Budget: 90 min/week. Verified: sources last confirmed 26 Aug–14 Sep 2026 (inherited, not re-fetched this session).
+Your ride is about 70 minutes a day, which is more than these two shows need. I did not add more audio, because the budget is about attention, not about filling the ride.
 
-### Weekly core — 82 of 90 min
+## Weekly core: 76 min
 
-Ordered by value per attention-minute. Newsletters win by default; the two podcasts are promoted above their normal rank because they ride your commute (already-spent time, so their cost is halved) and because Community Pulse also covers the pillar you just inherited.
+| Source | Medium | Pillar | Min | Why it earned the slot | Selling | Status |
+|---|---|---|---|---|---|---|
+| Console.dev (console.dev) | newsletter | marketing | 7 | Shows how devtools are positioned to developers. It's also a channel you can pitch Kestrel to. | sponsorships | active, 20 Aug 2026, every Thursday |
+| The New Stack (thenewstack.io) | news site | all | 10 | Daily news skim and the nearest thing to ecosystem coverage in this list (see Gaps). | ad-supported media | active, 26 Aug 2026 |
+| DevRel Collective (devrelcollective.fun) | peer Slack | all four | 9 | Reserved community slot. Skim it, and ask your first community-handover questions here. | nothing visible | active, join flow live, 1,800+ members claimed, activity unobservable from outside |
+| Scaling DevTools (feeds.transistor.fm/scaling-devtools) | podcast | marketing, advocacy | 25 (50-min episode, halved) | Founder-level interviews on bottom-up devtool growth, which is your exact motion. | podcast, community, sponsorships | active, Ep 197, 20 Aug 2026. The site blocks fetchers, so use the feed. |
+| Community Pulse (communitypulse.io) | podcast | advocacy, community | 25 (halved) | Four hosts, four ecosystems. Covers the practice itself, including your new pillar. | hosts' consulting | active, Ep 105, 17 Aug 2026 |
 
-| Source | URL | Medium | Pillar | Min | Why it earned the slot | Selling | Status |
-|---|---|---|---|---|---|---|---|
-| The New Stack | thenewstack.io | news site | all four | 10 | Budget compressor — one stream replaces following data/streaming vendor blogs one by one | ad-supported media | active, 26 Aug 2026 |
-| Console.dev | console.dev | newsletter | marketing | 7 | Weekly devtool reviews — shows how a self-serve, card-at-checkout product gets pitched, and is a channel to pitch | sponsorships | active, 20 Aug 2026, every Thursday |
-| DevRel Collective (Slack) | devrelcollective.fun | peer community | all four | 15 | Reserved community slot — peer help for the pillar you just inherited; where new sources surface first | nothing visible | active — gated, unobservable from outside; join flow live |
-| Scaling DevTools | feeds.transistor.fm/scaling-devtools | podcast | marketing, advocacy | 25 (halved — commute) | Devtool growth interviews — nearest thing to a bottom-up devtool GTM archive | community/sponsorships | active, Ep 197, 20 Aug 2026 (feed only — homepage 403s bots) |
-| Community Pulse | communitypulse.io | podcast | advocacy, community | 25 (halved — commute) | Only long-running show about DevRel practice itself — you need judgment here, not headlines, since community is new to you | hosts' consulting | active, Ep 105, 17 Aug 2026 |
+For the first month, play Community Pulse before Scaling DevTools. Use its back catalogue if no new episode has dropped.
 
-### Monthly — reference, not a feed
+## Monthly: 7 min/week averaged
 
-| Source | URL | Pillar | Why | Selling | Status |
-|---|---|---|---|---|---|
-| Developer Relations Foundation | dev-rel.org | all four | The field's only vendor-neutral practice body — Metrics Index, Maturity Model, Tools Catalog | nothing (foundation) | verified-active, governance repo commit 28 Aug 2026 |
-| DeveloperRelations.com guides | developerrelations.com | all four | 21 guides across all 4 pillars, CORE framework, friction logging — read once, revisit when scoping community work | practice hub (former agency) | active, guides undated by design |
-| Tessa Kriesel | tessakriesel.com | advocacy, marketing | "DevRel is sales" — fits a self-serve, card-at-checkout motion directly | consulting/advisory | active, 31 Jul 2026 — occasional, not weekly |
-| CHAOSS | chaoss.community | community | Open community-health metric definitions — useful now that you own measuring community, not just running it | foundation project | active but slowing — newest dated item ~11 months old, reverify next refresh |
+| Source | Medium | Pillar | Min | Why | Selling | Status |
+|---|---|---|---|---|---|---|
+| EveryDeveloper (everydeveloper.com) | newsletter/blog | marketing | ~5/wk (one 20-min skim a month) | Technical content strategy from the author of two developer-marketing books (2021, 2023). | agency, books | active, asset dated 12 May 2026, no individual dated post confirmed |
+| Tessa Kriesel (tessakriesel.com) | blog | advocacy, marketing | ~2/wk (one 10-min skim a month) | "DevRel is sales" and developer go-to-market. It fits a credit-card bottom tier where the funnel is the job. | consulting | active, 31 Jul 2026 |
 
-### Annual — data you'll be asked for
+**Reference works.** These are one-time reads outside the weekly budget, with no cadence to go stale against:
+- **developerrelations.com guides.** Start with the community and champion-program guides. Hoopy, the agency behind the site, wound down in 2026. The hub and its owner's work survive. Evergreen, undated.
+- **CHAOSS (chaoss.community).** Open community-health metric definitions, the thing to read before reporting on a community. Active but slowing, newsletter 18 Sep 2025.
 
-GitHub Octoverse (2025 edition, published 28 Oct 2025) · CMX Community Industry Report (7th annual, 2026 — budgets/team size/measurement, directly useful if you ever build a headcount case as a solo community owner) · SlashData (developer population sizing, post dated Q3 2026, useful for sizing the backend-developer market Kestrel sells into). Cited with edition + date, never as a bare number.
+## Annual: about 1 min/week each, one concentrated read a year
 
-**Events**: none added — Q9 unanswered. If you need to speak or sponsor, closest verified overlap is KubeCon + CloudNativeCon NA (Salt Lake City, 9-12 Nov — confirm the year on the page before booking).
+Cite the edition and date, never a bare number.
 
-### Bench (verified substitutes)
+| Source | Pillar | Why | Selling | Status |
+|---|---|---|---|---|
+| CMX Community Industry Report (cmxhub.com) | community | Benchmarks for community budgets, team sizes and measurement. Useful for your first community plan. | training and platform | 2026 edition, 7th annual, free but gated |
+| JetBrains State of Developer Ecosystem (devecosystem-2025.jetbrains.com) | marketing, advocacy | Backend tooling adoption, 24,534 respondents, fielded Apr–Jun 2025. | JetBrains tools | 2025 edition, active annual |
+| GitHub Octoverse (github.blog/news-insights/octoverse) | marketing | Language and open-source trends. The 2025 edition came out 28 Oct 2025, so a 2026 edition may be out this week. Check. | platform-official | 2025 edition confirmed |
 
-Open Source Ready (podcast, community, Ep 41 30 Jul 2026) · The Business of Open Source (podcast, community/marketing, 18 Aug 2026) · EveryDeveloper (newsletter, marketing, active but no dated post confirmed).
+## Bench: verified substitutes
 
-### Ecosystem gap — say this plainly, not paper over it
+- **DRF community list and Discord (lists.dev-rel.org/g/community).** The Developer Relations Foundation's ungated alternative if the Collective is slow or says no. It's a vendor-neutral Linux Foundation project and selling nothing, so it's the exception to the vendor caveat. Active, with a Touchpoint call announced for 2 Sep 2026.
+- **Draft.dev (draft.dev/learn).** Technical content marketing. Content agency, 2026 posts.
+- **The Business of Open Source (emilyomier.com/podcast).** Useful only if the Kestrel engine has an open-source core. I don't know that. Consulting, 18 Aug 2026.
 
-This skill's own audit is DevRel-practice-focused, not streaming/data-infra-specific, and I couldn't fetch anything live this session. I have **not** verified any streaming-SQL or data-engineering newsletter, podcast, or conference. Two names you'll likely want to check yourself, unverified: Confluent's "Current" conference (Kafka/streaming) and Flink Forward. Don't treat either as confirmed until fetched.
+## Totals
 
-### Dropped
+- **Minutes:** 86 of 90 per week. That's 76 weekly, 7 monthly and 3 annual.
+- **Counts:** 5 weekly, 2 monthly, 2 reference works, 3 annual, 3 bench.
+- **Verified-active with a dated item:** 8 of 12. The other four are labeled in their rows:
+  - DevRel Collective: gated.
+  - EveryDeveloper: no dated post.
+  - developerrelations.com guides: undated by design.
+  - CHAOSS: slowing.
+- **Unverified presented as verified:** 0.
+- **Pillar coverage:** advocacy ✅, marketing ✅, community ✅. Enablement is not yours, so it's deliberately empty. I left out Write the Docs and Diátaxis.
+- **Dropped:**
+  - All video: your rule is never. That removes the DevRelCon talk archive, conference-talk recordings and every YouTube channel. Nothing video appears anywhere above, bench included.
+  - Conferences: none listed, because you didn't say you'd speak, sponsor or host. If you will, say so and I'll add one CFP target and one attend candidate with confirmed organisers and dates.
+- **Not now:** DevRel Weekly. Its curator ended the strict weekly format for an occasional one, so it's no longer a core feed. Check it next refresh.
 
-Video, entirely — ruled out, no exceptions. No DevRelCon talk archive, no channel, anywhere above, bench included.
+## Gaps
 
-### Not now
+- **Your ecosystem.** My source list has no verified streaming-SQL or data-engineering sources, and I won't invent any. The New Stack is the only partial cover. Name one or two data newsletters or podcasts you already follow and I'll vet them. Otherwise Console.dev and your community conversations will show you what backend teams read.
+- **Bottom-up B2B devtools.** This is the densest part of the field's sources, so your fit is good. The field is also biased this way, and nearly every source above sells something. The flags show what.
+- **Community depth.** The list has no practice source for running a developer community day to day beyond Community Pulse, the Collective, CMX and CHAOSS. Jono Bacon's books are the usual deeper read, but his blog is stale (last post 17 Jan 2025), so don't count on it as a feed.
 
-DevRel Weekly — curator switched from strict "Weekly" to occasional "DevRel Thoughts Shared Randomly" after her RSS workflow broke. Retry at next refresh, don't rely on cadence now.
+## Check before trusting
 
-### Totals
+I could not browse today, so everything above carries the status and date recorded on 26 Aug 2026. Spend 10 minutes on this:
+1. Open each URL.
+2. Find the newest dated item and confirm who runs it.
+3. Treat a 403 or a consent wall as unverified, not dead.
 
-82 of 90 weekly min (91%) · 5 weekly + 4 monthly + 3 annual + 3 bench · verified-active: 8 of 9 weekly+monthly (CHAOSS flagged slowing) · pillar coverage — advocacy ✅, marketing ✅, community ✅, enablement not owned (correctly empty) · dropped: video (medium ruled out) · unverified presented as verified: 0.
-
----
-
-Saved your interview answers and this list to memory so the next quarterly refresh can diff against it.
-
-Next: confirm the Q9 events answer and the ecosystem-gap names, then I'll build the OPML file for your feed reader (5 feed-bearing entries: The New Stack, Console.dev, Scaling DevTools, Community Pulse, plus whichever bench podcast you swap in).
+Re-run the full check every quarter. Next refresh: late January 2027. I can also give you an OPML file of the feed-bearing entries for your feed reader.

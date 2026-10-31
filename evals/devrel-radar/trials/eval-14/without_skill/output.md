@@ -1,40 +1,86 @@
-Before the list: I tried to research this live (both directly and via a subagent) but web access is fully blocked in this session — WebSearch and WebFetch both refuse permission, for me and for the subagent I dispatched. So nothing below is live-verified. It's from training knowledge (cutoff Jan 2026), and I'm flagging confidence per item rather than pretending certainty. Search the exact names yourself before investing time — small DevRel/community groups turn over fast, and I'm not going to hand you a guessed URL that might 404 or point somewhere wrong.
+Start here: open Porvir, Nova Escola and the CIEB site, and subscribe to each newsletter. That takes about 10 minutes. The rest of this answer is the full list.
 
-One framing note before the list: "DevRel" as a literature/community is written almost entirely by and for API/SDK/cloud companies talking to professional developers. Your actual audience is teachers, schools, and families — not developers. So the general **community management** literature (not dev-specific) will transfer better to your day-to-day than most classic DevRel content, which skews toward things you don't own (docs, SDKs, conference talks about frameworks). I've weighted the list accordingly.
+I wrote it from memory. I did not check any URL or event date live. Treat each name as a search term, and confirm dates before you plan a talk.
 
-## Portuguese-language resources — honest gap
+## 1. Portuguese sources (core)
 
-I don't have confident knowledge of an active, Portuguese-language DevRel canon — the discipline is still overwhelmingly English/US-UK-centric, and I'd rather say that than invent Brazilian books or communities that may not exist or may be dead. What I have moderate-to-decent confidence exists and is worth checking:
+**Weekly skim, 10 minutes**
+1. **Porvir** (porvir.org). Education innovation news. Good for spotting trends that fit teacher talks.
+2. **Nova Escola**. Teacher-facing media. Read it to learn how teachers talk about their work.
+3. **CIEB** (Centro de Inovação para a Educação Brasileira). Publishes the technology and computing reference curriculum and notes on school tech adoption.
+4. **Computação na Escola** (UFSC). Teaching resources and research on school computing.
+5. **Cetic.br / NIC.br**. The TIC Educação and TIC Kids Online surveys. Use these as the numbers for slides and school pitches.
 
-- **TDC — The Developer's Conference**: long-running Brazilian tech conference series (São Paulo and other cities), historically has had community/culture-adjacent tracks. Not DevRel-branded, but Brazilian practitioners who actually run large technical communities speak there — closer to your real peer group than most DevRel content.
-- Search terms worth trying yourself, since I can't confirm current status: "comunidade DevRel Brasil," "DevRel BR" (Telegram/LinkedIn groups have existed under names like this in the past but I can't verify they're still active), and Brazilian community organizers from **Python Brasil**, **BrazilJS**, or similar long-running non-profit tech community orgs — even though they're developer communities, the organizers have deep practical experience running large volunteer-driven Brazilian communities, which is a transferable skill for what you do with schools/teachers.
-- I'd genuinely be surprised if there's a Portuguese-language equivalent of Mary Thengvall's or David Spinks' books (below). If you want Portuguese material, the more realistic move is general **gestão de comunidades** (community management) content from Brazilian marketing/growth circles, not DevRel-labeled content specifically.
+**Monthly or per-event, 15 minutes**
+1. **SBC**. The guidelines for computing in basic education, and the OpenLib library (sol.sbc.org.br) with free papers.
+2. **BNCC Computação**. The 2022 CNE/CEB complement to the BNCC. Map your content to it, since schools will ask about this.
+3. **RBIE** (Revista Brasileira de Informática na Educação). Open-access research.
+4. **Todos Pela Educação** and **Fundação Lemann**. Policy and data context.
+5. **Instituto Alana**. Children's digital rights. Matters for a platform serving minors.
 
-## What the profession reads (English)
+**Legal, read once and re-check yearly**
+- **LGPD** rules for children and teens' data, and ANPD guidance.
+- **ECA Digital** (the 2025 law on minors online). I believe it took effect in 2026. Verify the dates and scope, because it affects community moderation and family subscriptions.
 
-**Communities to lurk in (low weekly cost, high signal):**
-- **DevRel Collective** — the cross-company Slack community practitioners point newcomers to first; look for it via devrel.net. Good for the enablement/community channels specifically, skip the advocacy/conference-talk channels — not your job.
-- **CMX** (community management, founded by David Spinks) — more relevant to you than any DevRel-specific space, since it's about community strategy generally, not developer audiences. Ownership/branding may have shifted since my knowledge cutoff — verify it still exists under that name.
-- **FeverBee** (Richard Millington) — long-running community-strategy blog/forum, psychology-of-community-behavior focus, zero developer-specific baggage. Probably the single best-fit resource on this list given your actual audience is non-technical (teachers, parents).
+## 2. Peers to watch (what they publish, run, sponsor)
 
-**Books (pick one, read a chapter every couple weeks, not cover to cover in one sitting):**
-- *The Business Value of Developer Relations* — Mary Thengvall. The standard reference for justifying a DevRel-shaped role to leadership and defining scope — useful precisely because you're self-taught and solo, with presumably no one above you who's done this job before.
-- *The Business of Belonging* — David Spinks. General community-strategy book, not developer-specific — probably your highest-leverage read given your audience.
-- *Get Together: How to Build a Community with Your People* — Bailey Richardson, Kevin Huynh, Kai Elmer Sotto. Grassroots/volunteer-community framing, which fits a school/teacher community better than an enterprise-SaaS-developer framing does.
+1. **Alura**. Large Brazilian coding-ed player. Read its blog and the Hipsters.tech podcast.
+2. **Rocketseat**. Community-first model, strong in Brazilian developer culture.
+3. **Programaê!** (Fundação Telefônica Vivo). Free coding content for young people.
+4. **Hora do Código** and **Code.org**. The biggest funnel into school computing worldwide.
+5. **Happy Code**. Closest direct peer for kids and teens.
 
-**Conferences (to know about, not necessarily attend):**
-- **DevRelCon** — the flagship DevRel conference series (has run in London, SF, Tokyo, and online). Talks get posted online after; skimming past talk titles/recordings is a lower-cost way to sample the field than attending.
-- **CMX Summit** — community-management-focused, same logic.
+Look at how they run Discord or WhatsApp communities, teacher programs and events. Note what you would copy and what you would avoid.
 
-**Newsletters:**
-- **DevRel Weekly** — curated weekly roundup of DevRel articles; moderate confidence this still exists under this name, worth a search.
-- **Console.dev** — developer-tools newsletter, not DevRel-specific, but useful for understanding how technical audiences evaluate products/content if you ever cross into that territory.
+## 3. What the DevRel profession reads (English)
 
-## Given your actual constraints
+**Learn the craft, once**
+1. *The Business Value of Developer Relations*, Mary Thengvall. Read it to learn how to justify your role.
+2. *People Powered*, Jono Bacon. The community-building playbook.
+3. **Orbit model** (Josh Dzielak and the Orbit team). A framework for measuring community engagement.
+4. *Teaching Tech Together*, Greg Wilson. Free online. This is the best fit for you: it covers teaching, not marketing.
 
-- **60 min/week**: don't subscribe to five things. Pick one Slack/community space and one newsletter, skim on a fixed day. Books get read in chapter-sized chunks during that same slot, not as extra time.
-- **Community + enablement, not advocacy**: weight FeverBee/CMX/Spinks over DevRelCon-style advocate content — the latter is mostly about developer audiences and content/talk creation, which isn't your scope.
-- **Education-conference speaking**: this is closer to EdTech marketing / education-sector community building than developer evangelism. If you want resources tailored to that specifically, say so — it's a different search than "DevRel," and I'd want to research education-marketing/EdTech community sources separately rather than force-fitting DevRel content onto it.
-- **Solo, self-taught**: the DevRel Collective Slack (or CMX) is worth the setup cost mainly because you can ask specific questions there instead of researching alone — that's probably worth more to you per minute than any single article.
+**Keep up, weekly or monthly**
+1. **DevRel Collective** (community) and a DevRel newsletter. Search "DevRel Weekly" and check it is still active. Skim only.
+2. **Raspberry Pi Foundation** research seminars and **Hello World** magazine. Free, and the closest match to your audience.
+3. **CSTA** (Computer Science Teachers Association) standards and blog.
+4. **Mark Guzdial's** computing education blog.
+5. **EdSurge** for edtech news.
 
-Want me to retry the live research once you can grant WebSearch/WebFetch permission for this session? That would let me verify current URLs and actually find the Portuguese-language gap properly instead of guessing at it from memory.
+**Research venues to cite or attend**
+- **SIGCSE** and **ITiCSE**. Computing education research.
+- **Code.org's State of CS** report.
+- **Pew Research** on teens and technology.
+
+## 4. Where to speak (teacher and education conferences)
+
+1. **CBIE / WIE / SBIE**. The Brazilian informatics-in-education congress, its school workshop, and its symposium. They accept experience reports as well as papers. The CFP usually opens in the middle of the year, but verify.
+2. **Bett Brasil**. Large edtech fair. Pitch a talk with a school, not alone.
+3. **State and municipal education secretariat events**. Smaller, but this is where free-for-schools deals happen.
+4. **TDC** and **Python Brasil**. Developer events with education tracks. Useful for reaching mentors and volunteers.
+5. **Scratch Day** and Hora do Código events. Local and easy to join.
+
+Tip: co-present with a teacher who uses your platform. It gets accepted more often and carries more trust.
+
+## 5. Community and enablement ideas (ownership areas)
+
+- **Teachers**: a WhatsApp or Telegram group (check what teachers actually use), a monthly 30-minute live session, and a lesson-plan template aligned to BNCC.
+- **Families**: parent-facing explainers on safety and progress. Keep moderation rules strict because users are minors, and write them down.
+- **Teens**: clubs or challenges, opt-in and moderated. Never run a public open DM space.
+
+## 6. 60-minute weekly plan
+
+1. **10 min**: skim Porvir, Nova Escola, CIEB, the newsletters.
+2. **15 min**: read one deep item (a paper, a chapter, or a peer's post). Save one takeaway.
+3. **20 min**: community work (teacher group, replies, one enablement asset).
+4. **10 min**: conference radar. Check CFPs, deadlines and one outreach message.
+5. **5 min**: log the week in one note: what you read, what you shipped, one idea for a talk.
+
+**Quarterly**: refresh the legal reading (LGPD, ECA Digital), pull the new Cetic.br numbers, and review which talks you submitted.
+
+## 7. Gaps
+
+- I found no Portuguese DevRel-specific newsletter that I could name confidently. DevRel in Portuguese is small. Search for a "DevRel Brasil" community on Slack, Telegram or Discord, and treat the English sources as your main professional feed.
+- I do not know the platform's teacher channel. Ask five teachers where they actually talk, and let that decide step 3 of the weekly plan.
+
+**Next action**: spend 15 minutes subscribing to Porvir, Nova Escola, CIEB and the Raspberry Pi Foundation seminar list, and bookmark the SBC OpenLib. Do not read anything yet.

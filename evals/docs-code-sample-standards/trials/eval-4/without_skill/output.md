@@ -1,11 +1,19 @@
-Work order, worst first:
+**Order: F3, F2, F4, F5, F1**
 
-1. **F3** — P0, auth page leak live-format API key. Security beat all else, low reader count no matter. Fix 20 min + key rotation.
-2. **F2** — P1, batch-ingest sample call renamed method, guaranteed break, busiest guide, 18,000 readers/mo. Fix 30 min.
-3. **F4** — P1, C++ quickstart never compiled, no CI, unverified not confirmed broken, only 700 readers/mo. Fix ~3 eng-weeks (stand up CI).
-4. **F5** — P2, 210 samples no expected output, corpus-wide, 120,000 readers/mo, hurt trust/verifiability. Fix ~6 eng-days.
-5. **F1** — P2, 61 fences no language tag, cosmetic only (no correctness/security hit), 40,000 readers/mo. Fix ~2 hr scripted.
+| Rank | Finding | Priority | Tie-break (monthly readers) |
+|---|---|---|---|
+| 1 | F3: auth page embeds a live-format API key | P0 | n/a, only P0 (9,000) |
+| 2 | F2: batch-ingest sample calls a renamed method | P1 | 18,000 |
+| 3 | F4: C++ quickstart sample never compiled | P1 | 700 |
+| 4 | F5: 210 samples with no documented expected output | P2 | 120,000 |
+| 5 | F1: 61 SDK reference fences with no language identifier | P2 | 40,000 |
 
-Rule used: P0 always first (security trump reach). Within same priority tier, confirmed/guaranteed break + reach outrank unverified/low-reach (F2 > F4). Within P2, functional/trust impact + reach outrank pure cosmetic (F5 > F1). Reader count alone never override severity tier.
+**How I broke the ties**
+- The P-level is the severity. It fully orders F3 first, the two P1s next, and the two P2s last.
+- F2/F4 and F5/F1 share a P-level, so the P-level can't separate them. I ordered each pair by monthly readers affected, since that's the only severity-related number you gave for both findings in each pair.
+- I did not use fix effort. Effort affects scheduling, not severity. Using it would put F1 (2 hours) ahead of F5 (6 engineer-days) and F4 (3 engineer-weeks) ahead of nothing.
 
-Next: knock out F3 now — rotate key, strip from page.
+**Caveats**
+- **F3:** Rotate the key first, before you edit the page. The key is exposed until it's rotated, and removing it from the page doesn't undo that.
+- **F4:** It ranks above F5 and F1 only because it is P1. It's the largest effort (about 3 engineer-weeks) and has the smallest audience (700 readers). If you want it started in parallel, that is a capacity call, not a severity call.
+- **F5 vs F1:** F1's fix is cheap and scripted, so someone could do it as a side task. It would still rank last on severity.

@@ -1,48 +1,103 @@
-Yes — the network block doesn't actually threaten this; the two constraints that shape it are the 45-minute ceiling and the no-video rule. Here's the radar, ready to run.
+# DevRel radar for Sundermere: draft, nothing verified
 
-## What "radar" means at this scale
+**What this is:** a skeleton of your radar plus the rules for filling it. It is not a verified reading list. Two things blocked verification:
 
-One repeating scan across three layers — competitor moves, developer sentiment, content/positioning gaps — captured into one running sheet, with a monthly rollup into an actual battlecard. Weekly = scan and log. Monthly = synthesize. Don't try to do synthesis every week; that's how a 45-minute budget dies.
+- You have no network access, so I couldn't open any URL.
+- The skill's own source list (`references/sources.md`) and its people list were denied by the permissions layer, so I didn't read them. They hold the recorded, dated status of each source.
 
-## The weekly 45 minutes
+I won't name feeds, newsletters or podcasts from memory and present them as checked. The skill treats an invented source as the worst failure, because it ruins trust in the rest of the list. So this is a skeleton with every slot's status shown honestly.
 
-1. **10 min — Changelog/release scan.** Skim release notes and GitHub releases for the direct field: Pinecone, Weaviate, Qdrant, Milvus/Zilliz, Chroma, LanceDB, turbopuffer. All text, all skimmable in under a minute each if you only read the diff, not the announcement post.
-2. **15 min — Sentiment scan.** One pass each through r/vectordatabase, r/MachineLearning, r/LocalLLaMA, and an HN search on "vector database" + your top 3 named competitors. You're hunting for exact phrases, not vibes: *"switching from,"* *"alternative to,"* *"why is [X] so slow/expensive,"* *"just use pgvector."*
-3. **10 min — One audio segment.** Not a full podcast episode — 10 minutes of one, at 1.5–2x, or the transcript if the show publishes one. Rotate: Latent Space, Practical AI, MLOps Community Podcast, Vanishing Gradients. Skip anything video-first (no scrubbing a YouTube demo for the one useful minute).
-4. **10 min — Capture and triage.** Log anything real into the sheet below. Most weeks this is 2-4 lines, not 20. If you're filling more than that, you scanned too much and read too little — tighten step 1/2 next week.
+**Profile**
+- Role: developer advocate.
+- Pillars owned: advocacy and community.
+- Ecosystem: vector databases and AI data infrastructure.
+- Segment: B2B, bottom-up, adopted by application engineers.
+- Budget: 45 min/week.
+- Mediums: text and audio.
+- Date: 2026-10-30.
+- Ordering: within each section, highest value per attention-minute first.
 
-## Source list — text and audio only
+**Dropped:** all video (channels, talk recordings, YouTube). You ruled it out, so it is deleted, not parked.
 
-- **Changelogs/GitHub Releases** (not blogs) for the direct field above — subscribe to the release feed, not the marketing blog, it's shorter and has zero fluff.
-- **DIY layer** — watch `pgvector` releases and Postgres-vector threads specifically. In a bottom-up motion, "just self-host pgvector" is almost always your highest-volume competitor, not any funded startup. The skill framework backing this radar flags DIY alternatives as usually the biggest competitor by volume — true here.
-- **Platform layer** — MongoDB Atlas Vector Search, Redis, Elasticsearch/OpenSearch, Azure/AWS native offerings. Lower weekly priority (slower-moving, less relevant to a self-serve app-engineer buyer) — check monthly, not weekly.
-- **Forums** — HN search, r/vectordatabase, r/MachineLearning, r/LocalLLaMA, and Discourse/Discord search exports if any competitor's community is public and searchable as text.
-- **Newsletters with a text edition** — pick the ones that publish as email/web text, not the ones that are a video summary with a two-line caption.
-- **Audio** — the four podcasts above. Look for ones with transcripts published (Latent Space does); read instead of listen on weeks you're tighter on time — same intel, less time.
-- **Skip entirely**: YouTube launch videos, conference talk recordings, webinar replays. If something big only exists as video, ask someone who saw it for a 3-bullet recap instead of watching it yourself — cheaper than your own screen time.
+## Budget
 
-## Weekly capture sheet
+| Slot | Minutes/week | Pillar |
+|---|---|---|
+| Newsletter or blog skim (practice) | 10 | advocacy and community |
+| Ecosystem release notes and changelogs | 10 | advocacy (feedback loop) |
+| Audio, practice-side | 10 | advocacy and community |
+| Annual data read, amortised | ~1 | budget argument |
+| Peer community (reserved) | 10 | community |
+| Slack (unallocated) | ~4 | |
 
-One row per real signal, one tab, no more structure than this:
+- Spend about 41 minutes and keep the last 10% as slack.
+- Under 60 minutes a week, the skill adds a compressor first. That means one weekly DevRel roundup that stands in for following many vendor blogs.
+- Audio that rides on a commute or workout counts half. If you have one, you can fit a second episode.
 
-| Date | Source | Competitor/Topic | Signal type | Detail | So what (Sundermere impact) | Action |
-|---|---|---|---|---|---|---|
-| 2026-09-22 | r/vectordatabase | pgvector | DIY friction | Thread: "pgvector HNSW index build too slow past 5M rows, moved to Qdrant" | Confirms our recall/build-speed pitch lands exactly at the pgvector-outgrowth moment — good comparison-page angle | Flag for content: "when to graduate from pgvector" post |
-| 2026-09-22 | GitHub Releases | Qdrant | Feature | New release note: quantization improvements | Parity check needed vs. our current quantization support | Monitor — confirm parity before it surfaces in a sales call |
+## Weekly core (ordered by efficiency)
 
-(Illustrative rows only — I have no live network access to verify current release notes or thread content; treat the format as the deliverable, not the example data.)
+1. **Practice roundup newsletter or hub (text).**
+   - Pillar: advocacy and community.
+   - Selling: varies (agency, vendor or independent).
+   - Status: **unfilled**. Pick it from the skill's source list once you can read it.
+2. **Competitor and neighbour release notes (text).**
+   - Candidates: the changelogs and GitHub releases for pgvector, Qdrant, Weaviate, Milvus, Chroma and LanceDB.
+   - Selling: each is a rival vendor or a rival open-source project.
+   - Status: **unverified**. They are well-known projects, but I haven't opened any feed. Verify each repo's latest release date.
+   - Why it earns a slot: it shows what application engineers are comparing you against, and it feeds your product-feedback loop.
+3. **One practice podcast episode (audio).**
+   - Pillar: advocacy and community.
+   - Status: **unfilled**. Feed dates are the reliable freshness signal, so check the newest episode date in the feed.
+4. **Peer community, reserved slot.**
+   - Pillar: community.
+   - Status: **unfilled**. This is where new sources surface and where you can ask questions against your own situation.
 
-## Monthly rollup (30 extra minutes, once a month)
+## Monthly
 
-Turn four weeks of rows into a one-page battlecard, refreshed, not rewritten from scratch:
+- Skim the Developer Relations Foundation (dev-rel.org, hosted by the Linux Foundation).
+  - Why: the skill calls it the field's only vendor-neutral practice body.
+  - Selling: nothing, it's a foundation.
+  - Status: **unverified**. The skill recommends finding it through its code-host organisation, not a remembered domain.
+- Read the benchmark methodology notes in ANN-benchmarks, a public approximate-nearest-neighbour benchmark project.
+  - Selling: nothing, it's independent. Status: **unverified**.
 
-1. Competitor overview — one line each, trajectory only if it changed this month.
-2. When we win / when we lose — update only entries with a new signal behind them.
-3. Objections — pull straight from the "sentiment scan" rows; these are real phrases prospects will use.
-4. Differentiation — update only if a competitor shipped something that closes a gap.
+## Annual
 
-Skip minor/emerging competitors most months; only the direct field above gets monthly attention. Everyone else: quarterly.
+- An ecosystem survey or community-health report you can cite in budget conversations.
+  - Status: **unfilled**.
+  - Quote the edition and year every time. A bare statistic ages invisibly.
+- DevRelCon.
+  - Per the skill, its organiser changed: the agency Hoopy wound down in 2026 and handed it to Major League Hacking.
+  - Status: **organiser change taken from the skill text, event dates unverified**.
+  - You can't confirm a CFP date or a ticket price offline.
 
-## The actual answer to "can you still do it"
+## Bench (verified substitutes)
 
-Yes. Nothing here required me to fetch anything live — it's a process you run, not a report I generate for you. The one place the no-video, 45-min combo genuinely costs you something: you'll miss whatever only exists as a recorded demo or conference talk, permanently, unless someone hands you a text recap. Budget for that by leaning on community members who do watch video — ask one champion in your Discord/Slack to be your "video ears" in exchange for early access or swag. That's a 5-minute ask, not a 45-minute one, and it closes the only real gap this setup has.
+Empty. Nothing here counts as a substitute until it's verified.
+
+## Totals
+
+- Estimated weekly minutes: about 41, against a 45-minute budget.
+- Sections: weekly core 4, monthly 2, annual 2, bench 0.
+- Verified-active entries: **0**.
+- Pillar coverage: **no**. Advocacy and community each have only unfilled or unverified slots, so the skill's pass bar isn't met yet.
+- Dropped: video, because you ruled it out entirely.
+
+## What I need from you
+
+1. **Q4:** are you catching up before a specific moment, or building a standing habit? Catching up promotes the long-form slots, like a second podcast episode, over newsletters.
+2. **Q9:** do you need to speak, sponsor or host events this year? If yes, I'd add one CFP target and one event to attend or sponsor, each with a confirmed date and organiser.
+3. **Permission:** allow reading the two reference files in the skill's `references/` folder. Then I can fill the unfilled slots with recorded statuses from the skill's last audit and say plainly that I couldn't re-verify them.
+
+## Manual check once you're online (about 10 minutes)
+
+1. Open each URL.
+2. Find the newest dated item. Use the feed for podcasts.
+3. Confirm who runs it now.
+4. Classify it:
+   - **Active:** a dated item within about 3 months.
+   - **Stale:** newest item older than about 6 months.
+   - **Dead:** the domain is parked, for sale, or resolves to an unrelated business.
+   - **Unverified:** a 403, a 5xx or a consent wall, which never counts as dead.
+
+Rerun the radar every quarter.

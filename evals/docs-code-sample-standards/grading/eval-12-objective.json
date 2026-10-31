@@ -3,74 +3,68 @@
     "expectations": [
       {
         "text": "Refuses to label unexecuted samples as passing",
-        "evidence": "\"Nothing below should be read as 'passing' \u2014 only as 'clean on mechanical lint, unverified on execution.'\"",
+        "evidence": "\"Unverified, never 'passing'.\"",
         "passed": true,
         "graded": true
       },
       {
         "text": "Labels every sample it could not execute as unverified",
-        "evidence": "\"every sample in that corpus is unverified until a pipeline exists\"",
+        "evidence": "\"Java, Ruby, Go | Nothing... Unverified\"",
         "passed": true,
         "graded": true
       },
       {
         "text": "Still delivers tier assignments for the whole corpus despite being unable to execute anything",
-        "evidence": "\"## 4. Tier policy for the corpus (target, not verified status)\" with per-category target tiers given",
-        "passed": true,
+        "evidence": "\"no counts, no findings and no scores\"; no tier assignments are delivered.",
+        "passed": false,
         "graded": true
       },
       {
         "text": "Still delivers the mechanical lint results that need no runtime, such as fence language identifiers, prompt characters, ellipses, placeholder style, block length and trailing whitespace",
-        "evidence": "\"I read the script's source rather than running it against your tree in this session \u2014 I don't have your `docs/` directory mounted here\" \u2014 no actual lint findings delivered, only a description of what would run",
+        "evidence": "No lint was run; only commands to run are given.",
         "passed": false,
         "graded": true
       },
       {
         "text": "Delivers a written verification plan the team can implement once a runtime and registry access exist",
-        "evidence": "\"## 8. Verification plan for when the air gap lifts\"",
-        "passed": true,
-        "graded": true
-      },
-      {
-        "text": "Does not silently downgrade the audit or present its partial coverage as a corpus-wide verdict",
-        "evidence": "\"None of these numbers judge Marlowe Freight's samples. They judge what this environment can execute today... don't let this get misread as a quality verdict\"",
+        "evidence": "Sections on environment constraints, commands, rubric and CI per language outside the box.",
         "passed": true,
         "graded": true
       },
       {
         "text": "States that every scanner flag is a candidate to confirm rather than a verdict",
-        "evidence": "\"'Treat every flag it raises as a candidate to confirm, not a verdict...'\"",
+        "evidence": "\"the scanner treats a flag as a verdict. The skill says to treat every flag as a candidate to confirm\"",
         "passed": true,
         "graded": true
       },
       {
         "text": "Confirms the key-rotation and hardening pages individually instead of accepting all 63 flags as genuine P0 findings",
-        "evidence": "Adjudication protocol table with per-case verdicts; \"63 flagged, 0 confirmed, adjudication pending on 2 pages\"",
+        "evidence": "\"Don't exclude the two pages\"; the P0 tests apply per flag, and survivors get a real-key check.",
         "passed": true,
         "graded": true
       },
       {
         "text": "Names a credential-rotation page as the documented legitimate case for a key-shaped string appearing in a sample",
-        "evidence": "\"a page about credential rotation legitimately contains a key-shaped string\"",
+        "evidence": "\"a rotation page legitimately contains a key-shaped string\"",
         "passed": true,
         "graded": true
       },
       {
         "text": "Routes deliberate anti-pattern samples such as the --insecure examples to tier Illustrative with a visible not-runnable label rather than filing them as P0 findings",
-        "evidence": "\"Key-rotation walkthrough, hardening anti-pattern demos \u2192 target **Illustrative**, permanently, with a visible label.\"",
+        "evidence": "\"It is tier Illustrative, with a visible label on the rendered page.\"",
         "passed": true,
         "graded": true
       },
       {
         "text": "States that any genuine P0 is reported immediately rather than held to the end of the report",
-        "evidence": "\"Report any `credential-shaped-literal` hit immediately; it doesn't wait for a finished report.\"",
+        "evidence": "\"Report P0 the moment it is seen.\"",
         "passed": true,
         "graded": true
       },
       {
         "text": "States that scanner output nobody reads documents a problem rather than gating against it, and requires a non-zero exit that fails a check and posts the failure where reviewers see it",
-        "evidence": "\"'A validator whose output nobody sees is documentation of a problem, not a gate against it.'... Wire the scanner to a **non-zero exit that fails a required check**, posted where reviewers actually see it\"",
-        "passed": true,
+        "evidence": "Not stated.",
+        "passed": false,
         "graded": true
       }
     ]
@@ -79,74 +73,68 @@
     "expectations": [
       {
         "text": "Refuses to label unexecuted samples as passing",
-        "evidence": "'this session's write/exec permissions were not granted... so the scanner below is delivered as source, not as an executed run with numeric output. I'm not fabricating a findings count for it.'",
+        "evidence": "'Java, Ruby and Go samples are labelled unverified.'",
         "passed": true,
         "graded": true
       },
       {
         "text": "Labels every sample it could not execute as unverified",
-        "evidence": "'Coverage caveat, stated plainly: this is a manual spot-check of a handful of files, not an exhaustive pass over the ~260 files in affiliation-programs/ or the ~45 in memory/naomakers/.'",
+        "evidence": "The same line labels them unverified, and the parity gap is 'not a pass'.",
         "passed": true,
         "graded": true
       },
       {
         "text": "Still delivers tier assignments for the whole corpus despite being unable to execute anything",
-        "evidence": "The transcript delivers P0-P3 security severity tiers for scanner findings, not Run/Compile-only/Illustrative tier assignments for a corpus of code samples.",
+        "evidence": "'No audit findings.' No tiers are assigned to any samples.",
         "passed": false,
         "graded": true
       },
       {
         "text": "Still delivers the mechanical lint results that need no runtime, such as fence language identifiers, prompt characters, ellipses, placeholder style, block length and trailing whitespace",
-        "evidence": "The delivered tool checks for secrets and insecure-config patterns only; it does not check fence language identifiers, prompt characters, ellipses, placeholder style, block length, or trailing whitespace.",
+        "evidence": "It delivers an untested script and no results.",
         "passed": false,
         "graded": true
       },
       {
         "text": "Delivers a written verification plan the team can implement once a runtime and registry access exist",
-        "evidence": "The delivered tool is designed to work now without needing per-language runtimes at all ('every detector is a regex or an entropy calculation, both pure-stdlib'), not a plan deferred until runtime/registry access exists.",
-        "passed": false,
-        "graded": true
-      },
-      {
-        "text": "Does not silently downgrade the audit or present its partial coverage as a corpus-wide verdict",
-        "evidence": "'Coverage caveat, stated plainly: this is a manual spot-check of a handful of files... That exhaustive pass is what the tool below is for \u2014 run it to get full coverage instead of trusting a manual sample.'",
+        "evidence": "It gives a constraint-decisions section, a sampling plan, thresholds and 'First fix-queue item: a CI job that installs the other three toolchains'.",
         "passed": true,
         "graded": true
       },
       {
         "text": "States that every scanner flag is a candidate to confirm rather than a verdict",
-        "evidence": "'Treat this as a first pass, not proof of absence' and 'P1 = needs a human read this week (secret-shaped or insecure-config, no exemption applied)' imply flags require human confirmation.",
+        "evidence": "'Hand-label a random 15 of the 63 old findings first' and 'the hand-score pass must confirm each INFO.'",
         "passed": true,
         "graded": true
       },
       {
         "text": "Confirms the key-rotation and hardening pages individually instead of accepting all 63 flags as genuine P0 findings",
-        "evidence": "'a page whose job is to teach key rotation or hardening necessarily contains key-shaped strings and --insecure examples, and flagging those at the same severity as a real leaked credential is how a scanner earns 63 P0s that get ignored' \u2014 directly addresses and designs against blanket-accepting the 63 flags.",
+        "evidence": "'Always score both exempt pages by hand.'",
         "passed": true,
         "graded": true
       },
       {
         "text": "Names a credential-rotation page as the documented legitimate case for a key-shaped string appearing in a sample",
-        "evidence": "'EXEMPT_PATH_RE = re.compile(r\"key-rotation|security-harden\", re.IGNORECASE)' with commentary: 'Pages whose whole purpose is to show key-shaped strings and unsafe flags.'",
+        "evidence": "'A rotation guide must show placeholders'. Placeholder-shaped keys on those pages drop to INFO.",
         "passed": true,
         "graded": true
       },
       {
         "text": "Routes deliberate anti-pattern samples such as the --insecure examples to tier Illustrative with a visible not-runnable label rather than filing them as P0 findings",
-        "evidence": "The tool downgrades '--insecure' findings from P1 to P2 on exempt pages via severity adjustment ('tier = \"P2\" if is_exempt_page else base_sev'), not by routing them to an 'Illustrative' tier with a visible not-runnable label.",
+        "evidence": "Labelled `--insecure` demos are downgraded to INFO, not routed to the Illustrative tier.",
         "passed": false,
         "graded": true
       },
       {
         "text": "States that any genuine P0 is reported immediately rather than held to the end of the report",
-        "evidence": "The 'Manual findings' section reporting the P0 proxy-credential leak appears immediately after the scope note, near the top of the document, before the tool code.",
-        "passed": true,
+        "evidence": "It says 'Rotate it' but does not say to report immediately.",
+        "passed": false,
         "graded": true
       },
       {
         "text": "States that scanner output nobody reads documents a problem rather than gating against it, and requires a non-zero exit that fails a check and posts the failure where reviewers see it",
-        "evidence": "The docstring explains the design 'to avoid re-creating a report nobody reads' and 'is how a scanner earns 63 P0s that get ignored,' while main() returns 'return 1 if by_tier.get(\"P0\") else 0' for CI gating.",
-        "passed": true,
+        "evidence": "The script only prints output, and no failing check is required.",
+        "passed": false,
         "graded": true
       }
     ]

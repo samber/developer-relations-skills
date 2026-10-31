@@ -1,106 +1,125 @@
-That's a minor leftover empty directory; not worth pursuing further. Proceeding to the deliverable.
+I can't give you a post under the headline "3x faster ingest than Northlake". I read the skill and its references, and the setup you described fails the skill's credibility gate. Below is a draft you can publish next week that keeps the 3x figure but scopes it honestly.
 
-**Mode: Draft mode. Pattern: Benchmarks and Test Results, classified as Benchmarketing** (own product vs. a named competitor — the highest-scrutiny, least-benefit-of-the-doubt class this skill defines). No other pattern fits: the material is a single comparative measurement, not a debugging story, migration, or architecture writeup.
+I couldn't run `scan-draft.sh`. The first attempts errored, and the last needed an approval I couldn't get, so the grep pass on the draft below is not done. I also didn't save the draft to a file, because my earlier write to `/tmp/vantage-post/draft.md` never confirmed. It is inline here.
 
-Before drafting, the setup as described fails the skill's benchmark bar on the two traps it names explicitly:
+## Mode and pattern
 
-- *"Tuning your own side while leaving the comparison at defaults is the specific move that gets a post publicly dismantled."* That's exactly this setup — production-tuned vantagedb against out-of-the-box Northlake. "Most people run it on defaults" may be true, but it doesn't make this a fair *performance* comparison — it makes it a tuned-vs-typical comparison, which is a different, narrower claim than the headline states.
-- *"A single run reported as if it were stable"* is named as a trap, and *"'3x faster' hides whether the gap is 3ms versus 1ms or three hours versus one"* — one run, no absolute values, is exactly that gap.
+- **Mode:** draft mode. You have raw results and no post yet.
+- **Interview:** I couldn't ask the questions, so I assumed:
+  - a company engineering blog,
+  - a developer-evaluator audience,
+  - a hard date next week,
+  - an effort ceiling that excludes new benchmark runs,
+  - the commercial interest disclosed in the post.
+- **Classification:** benchmarketing, meaning your product against a named competitor. That is the highest-scrutiny class and carries a legal-read cost.
+- **Ranking:** Benchmarks wins on value, but it takes weeks and needs re-runs and published scripts. A hard date plus no new evidence strikes it from the menu.
+- **What survives:** you have no design decisions, no migration story and no incident. The only material is one result, so the honest form is a short, labelled-indicative measurement post.
+- **Alternative:** if you can spend days on evidence before publishing, the full Benchmarks pattern comes back. That route is in the handoff.
 
-So I'm not shipping "3x faster ingest than Northlake" as a flat, unqualified headline — that's the one sentence Northlake's own engineers (who will read this, per the sales-led B2B audience the skill flags) can dismantle in the first comment. What follows is the version that survives that comment: same result, same number, disclosed enough to be defensible.
+## Why the headline fails
+
+- **Tuned against untuned.** The skill calls this "the specific move that gets a post publicly dismantled". If you can't tune both sides, you must say which side is untuned and call the result indicative.
+- **One run each.** There is no variance, so the 3x could be noise.
+- **"Most people run defaults."** This is unsourced. Either source it or mark it as your belief.
+- **A ratio with no absolute values.** "3x" hides whether the gap is 3 versus 1 points/s or 3M versus 1M.
 
 ## Claim ledger
 
-| Claim as given | Class | Action |
-|---|---|---|
-| "our ingest was ~3x faster in this run" | Measured, but incomplete | Keep — but only alongside methodology and absolute values |
-| "Northlake on its install defaults because that's what most people actually run" | Opinion presented as justification | Downgrade to a stated assumption; cite it as an assumption, not evidence, since no source is given for "most people" |
-| "3x faster ingest than Northlake" (as an unqualified headline) | Unsupported as stated | Cut the unqualified form. Reframe to name the asymmetry in the same sentence |
-| m6i.2xlarge, one run, ours tuned / theirs default | Shown | Disclose in full, prominently, not in a footnote |
-| absolute ingest throughput (records/sec or MB/s) for either engine | Missing | **Blocking** — not in the material you gave me; the draft below has it as a placeholder you must fill in before this can publish |
-| version numbers, workload shape, dataset | Missing | Blocking — same treatment |
+| Claim | Class | Action |
+| --- | --- | --- |
+| "3x faster ingest than Northlake" | Unsupported | **Cut** as a headline. Downgrade to "about 3x in one run, tuned vs defaults". |
+| Ours: [V_OURS] points/s, theirs: [V_THEIRS] points/s | Measured (n=1) | Needs the absolute values, a chart and the scripts. |
+| Our config is the production profile | Shown | Commit the config and link it. |
+| Northlake ran on install defaults | Shown | State the version and link the config. |
+| "Most people run Northlake on defaults" | Unsupported | Mark as opinion ("we believe") or source it. |
+| m6i.2xlarge, one run | Measured | Disclose it as is, including that variance is unknown. |
+| "Vantage is faster than Northlake" in general | Unsupported | **Cut.** Ingest only, one workload. |
 
-## The draft
+## Outline
 
----
+This follows the Benchmarks pattern in compressed form:
 
-**Title:** *Ingest throughput: vantagedb vs. Northlake TSDB's default config*
+1. Question and disclosure of who we are.
+2. Methodology before results.
+3. Results with one chart and absolute values.
+4. What this does and doesn't show.
+5. Where this doesn't apply.
+6. Next steps, only if they are true.
 
-*(Not "3x faster than Northlake" — the config asymmetry has to be load-bearing in the title itself, or the post reads as hiding it.)*
+## The draft post
 
-*Posted by [engineer name], Vantage Metrics. Vantage Metrics builds vantagedb, the engine on our side of this comparison — Northlake TSDB is a direct competitor. [name] ran the Northlake side, [name] ran ours.*
-
-We wanted to know how our ingest path compares to Northlake TSDB, the engine we're most often evaluated against. This post covers one run, on one instance type, with our side on the tuning profile we run in production and Northlake left at its install defaults. We're publishing the full setup so you can judge how far this travels to your own workload — and we're treating it as a first data point, not a verdict.
-
-### What we measured
-
-Ingest throughput: [records or points] per second sustained by each engine while replaying [dataset description — real workload shape or synthetic, cardinality, point size].
-
-### How we measured
-
-- **Hardware:** 1 × `m6i.2xlarge` (8 vCPU, 32 GiB), [region/AZ]
-- **Versions:** vantagedb [version], Northlake TSDB [version], tested [date]
-- **Configuration:**
-  - vantagedb: our production tuning profile ([name the settings that differ from default, or link the config])
-  - Northlake TSDB: install defaults, unmodified
-  - **This is the asymmetry to weigh before trusting the ratio below.** We did not tune Northlake against its own production guidance. This is a tuned-vs-default comparison, not a tuned-vs-tuned one — closer to "how does our production setup compare to someone who just installed Northlake" than to "which engine is faster."
-- **Workload:** [client, concurrency, batch size, total volume]
-- **Runs:** 1 per engine. We have not re-run for variance — read the number below as indicative, not stable.
-- **Reproduce:** [link scripts/config, or say none exist yet]
-
-### Results
-
-| Engine | Ingest rate | Config |
-|---|---|---|
-| vantagedb | **[absolute value — required before publish]** | production tuning profile |
-| Northlake TSDB | **[absolute value — required before publish]** | install defaults |
-| Ratio | ~3x | — |
-
-*(Chart goes here — this pattern is read visually, not as a bare table.)*
-
-We're not publishing the ratio alone: "3x" hides whether this is 3,000 points/sec against 1,000, or 3M against 1M, and a reader can't judge whether that's relevant to their own scale without the absolute numbers. Those numbers are the one hard blocker on this draft — see handoff below.
-
-### What this does and doesn't tell you
-
-It tells you our production configuration outperforms Northlake's out-of-the-box ingest path, once, on this workload shape. It does not tell you:
-
-- How vantagedb compares to a Northlake instance tuned against Northlake's own production guidance — we haven't run that.
-- Whether the gap holds at other instance sizes, or over a longer sustained run.
-- Whether it holds on a different workload (higher cardinality, smaller batches, mixed read/write) — we only tested ingest in isolation.
-- Anything about query performance, compaction, or the rest of the engine.
-
-If Northlake's docs recommend non-default settings for production ingest — most engines' docs do — a reader running Northlake in production isn't really the audience this number describes. They're closer to a comparison we haven't published yet.
-
-### What we'd want before calling this conclusive
-
-- Re-run with Northlake configured per its own documented production guidance — ideally reviewed by a Northlake maintainer or checked against their docs, the way the worked disclosure block in this skill treats an invited vendor review.
-- At least 3 runs per side, to report a spread instead of a point.
-- The absolute throughput numbers, published next to the ratio.
-- A second instance size, to see if the gap is stable or an artifact of this one.
-
-Until then, the honest version of the headline claim is: *our tuned config beat their defaults, once* — a real result, and a narrower one than "faster than Northlake."
+Everything in `[BRACKETS]` is a number or fact I don't have. I did not invent any of them.
 
 ---
 
-## Credibility gate
+# Ingest, one run: Vantage Metrics (tuned) vs Northlake (defaults)
 
-| Check | Status |
-|---|---|
-| Claims classified, 100% | Pass — ledger above |
-| No unsourced numbers | **Fails until you supply**: absolute ingest rates, versions, workload detail (bracketed placeholders) |
-| Benchmark disclosure complete | Pass in this draft — hardware, versions (pending), workload (pending), tuning asymmetry, run count all named near the numbers |
-| At least one honest limitation | Pass — "What this does and doesn't tell you" |
-| Zero unsupported superlatives | Pass — no "fastest"/"best"/"revolutionary" language; scanned against `scripts/scan-draft.sh`'s pattern set by hand (couldn't execute the script itself — file write to a scratch path was blocked by this session's permissions) |
-| Snippets pinned and dated | N/A — no code snippets in this post |
+*[PUBLISH DATE]. Vantage Metrics [VERSION], Northlake TSDB [VERSION].*
 
-Two checks are not closeable by me: the missing absolute numbers, and the tuning asymmetry, which requires an actual decision from you, not a rewrite from me.
+We build Vantage Metrics, so read this as a vendor's measurement. In a single run on one m6i.2xlarge, our production tuning profile ingested [V_OURS] points/s. Northlake on its install defaults ingested [V_THEIRS] points/s, a ratio of about 3x. One run gives no variance. Treat the number as a lead, not a conclusion.
 
-## Handoff — what still needs a human
+## How we measured
 
-1. **Blocking:** absolute ingest throughput for both engines (this is the number a reader actually needs; the ratio alone doesn't clear the gate).
-2. **Blocking:** exact versions of vantagedb and Northlake TSDB, and the test date.
-3. **Strong:** re-run at least twice more per side before calling any number stable — right now it's one run each.
-4. **Strong:** decide, explicitly, whether you're willing to also tune Northlake per its own docs. If yes, that's the post that survives being cited for years (this skill's "compounding asset" case). If no, ship the narrower, disclosed claim above and say so in the title, not just the fine print.
-5. **Needs your input:** dataset/workload description, region/AZ, and whether the "most people run Northlake on defaults" framing is something you can actually source (adoption survey, support tickets) or should be dropped as an assumption.
-6. **Review chain:** someone who ran the Northlake side should independently confirm the "install defaults, unmodified" claim before publish — that's the line most likely to be checked by a Northlake engineer in the comments.
-7. Not yet run: the humanizer pass (do that after you fill in the placeholders — running it on bracketed TBDs wastes the pass) and a legal/competitor-naming read, since this names a competitor directly.
+- **Hardware:** [N] × m6i.2xlarge (8 vCPU, 32 GB), [region/AZ], [storage type].
+- **Versions:** Vantage Metrics [VERSION], Northlake TSDB [VERSION].
+- **Workload:** [series count, points per batch, batch size, client count, duration, dataset shape].
+- **Vantage Metrics config:** the profile we run in production, committed at [LINK].
+- **Northlake config:** install defaults, unchanged. We chose defaults because we believe most installs never change them. That is our belief; we have no survey.
+- **Runs:** 1. No warm-up discarded, no variance reported.
+- **Reproduce:** [LINK TO SCRIPTS].
+
+## Results
+
+[CHART: ingest throughput, both systems, absolute points/s]
+
+| System | Config | Points/s | CPU % | p99 write latency |
+| --- | --- | --- | --- | --- |
+| Vantage Metrics | production tuning | [V_OURS] | [..] | [..] |
+| Northlake TSDB | install defaults | [V_THEIRS] | [..] | [..] |
+
+## What this does and doesn't show
+
+It shows that our tuned setup outran an untuned competitor on this workload, once. It doesn't show that the engines differ by 3x. The two sides had different tuning, so the gap mixes engine speed with configuration effort. We don't know how much of the 3x a Northlake tuned by its own guide would close.
+
+## Where this doesn't apply
+
+- One run on one instance type. We can't say how stable the ratio is.
+- Ingest only. We measured no queries, no compaction behaviour and no recovery.
+- Defaults versus tuning isn't an engine comparison. A Northlake operator who follows the vendor's tuning guide may see a smaller gap. We haven't run that.
+- [What our profile costs: memory, durability setting, anything it trades away. FILL IN.]
+
+## What we'll do next
+
+[Only if true: we'll re-run with both sides tuned, 10 runs each, and publish the scripts and raw results by DATE.]
+
+---
+
+## Gate report
+
+| # | Check | Result |
+| --- | --- | --- |
+| 1 | Claims classified | Pass, once the placeholders are filled |
+| 2 | No unsourced numbers | **Open.** Needs `[V_OURS]`, `[V_THEIRS]` and the workload figures. |
+| 3 | Benchmark disclosure complete | **Open.** Needs versions, workload, config links and scripts. Run count and tuning are disclosed. |
+| 4 | One honest limitation | Pass, with four stated |
+| 5 | No unsupported superlatives | Pass, since the "faster than Northlake" headline claim is cut |
+| 6 | Snippets pinned and dated | Open. Add the date and versions, and link the configs. |
+
+The post must not ship until checks 2, 3 and 6 are closed.
+
+## Handoff: what still needs a human
+
+1. **Fill the placeholders.** Pull absolute throughput, CPU, latency and workload details from the original run.
+2. **Pick the headline route.**
+   - Route A is the scoped title above, which ships next week and is honest about n=1.
+   - Route B is to re-run with both sides tuned. Follow Northlake's tuning guide, do at least 5–10 runs, discard warm-up, and publish scripts and raw data. Then "N× faster ingest" becomes defensible and the post moves to the full Benchmarks pattern. Whether this fits next week depends on your effort ceiling.
+3. **Run the chart.** Benchmark posts are read visually, so one chart is required.
+4. **Get a technical reviewer** who didn't run the benchmark, and a legal read. A named-competitor comparison invites both.
+5. **Invite the Northlake maintainers to review** the config before publishing. If you don't, say so in the post.
+6. **Pass the humanizer pass and the `scan-draft.sh` grep.** Both are still undone.
+7. **Preview in the CMS** and set the title tag, slug, meta description and alt text.
+
+Two questions decide the route:
+
+- Can you spend a few days on re-runs before next week?
+- Is the "most people run defaults" belief backed by anything you can cite?

@@ -1,50 +1,109 @@
-# We moved billing reconciliation from Ruby to Go. Here's what actually happened.
+**Mode:** draft. **Pattern:** Rewrote It in X.
 
-At Halcyon Systems, our billing reconciliation service is the thing nobody notices until it's wrong. It pulls transaction records from payment providers, matches them against our internal ledger, flags discrepancies, and produces the numbers finance uses to close the books. It runs on a schedule, it runs on demand, and increasingly, it ran too slow and cost too much. Over about four months this year, we rewrote it from Ruby to Go. p99 latency dropped from 840ms to 95ms. Our EC2 bill for the service fell roughly 60%. And — the part people usually don't believe — the migration itself was uneventful.
+Two gaps in the material:
 
-This isn't a "Ruby is bad" post. Ruby served us well for years, and plenty of the problems below were as much about our specific implementation as the language. But if you're a backend engineer weighing whether a Go rewrite is worth the disruption, here's what we actually ran into, decision by decision.
+- The pattern's credibility section is "what went wrong", and you said nothing broke. I didn't invent a failure. The post says plainly that nothing broke and puts the weight on what the move cost and where the numbers stop applying.
+- You gave no methodology for the latency and cost figures, and I didn't make any up. Every `[FILL: …]` below is a fact only your team has. Readers will dismiss unsupported numbers, so fill these before publishing.
 
-## Why reconciliation specifically hit a wall
+---
 
-Reconciliation is a batch-and-fan-out workload: pull N days of transactions across M providers, match them against the ledger, reconcile discrepancies, write results. It's embarrassingly parallel in shape, which is exactly the kind of workload that exposes the weak points of a threading model built around a global interpreter lock.
+# We moved our billing reconciliation service from Ruby to Go. p99 dropped from 840ms to 95ms.
 
-Our Ruby implementation used a Sidekiq worker fleet to get concurrency, since threads inside a single Ruby process don't give you real parallelism for CPU-bound matching logic. That meant our concurrency unit was a process, not a thread — so scaling out meant scaling out *processes*, each with its own memory footprint, each idling between reconciliation runs, each contributing to a GC that paused harder as batch sizes grew. We were provisioning for peak batch size and idling most of the day. That's most of where the EC2 bill came from.
+*By [FILL: author name(s)], Halcyon Systems. Published [FILL: date].*
 
-The other recurring pain was correctness at the boundary between "money as a number" and "money as a Ruby object." Nothing catastrophic ever happened in production, but decimal precision bugs and unit mismatches (cents vs. major units) were the most common category of bug we caught in code review, and the one every senior engineer on the team had a personal war story about.
+Over about four months, we rewrote our billing reconciliation service from Ruby to Go. After the cutover, p99 latency fell from 840ms to 95ms. The EC2 bill for that service dropped roughly 60%.
 
-## Why Go, specifically
+The migration was uneventful. We had no rollback and no incident, and nothing in the cutover surprised us. This post covers why we think it went that way, what the numbers do and don't show, and when we wouldn't repeat the move.
 
-Three things mattered more than the general "Go is fast" pitch:
+If you're a backend engineer weighing Go for an existing service, this is one data point from one service. Read it that way.
 
-**Goroutines make the actual workload shape cheap.** Reconciliation is fan-out-fan-in: spin up a goroutine per provider batch, collect results over a channel, done. No process-per-worker overhead, no separate job queue infrastructure just to get parallelism. We still use worker pools to bound concurrency against provider rate limits, but the unit of concurrency is now a few KB of stack, not a Sidekiq process.
+## The service and why we touched it
 
-**Static typing catches money bugs before they ship.** Every amount in the new service is a distinct type wrapping a fixed-point integer (minor units, never a float, never an untyped number). Mixing a `USDCents` with a `EURCents` or passing a raw `int64` where an `Amount` is expected is a compile error, not a code review comment or a production incident. This is the single change the team cites most when asked what they'd never go back on.
+Billing reconciliation matches [FILL: what it matches against what, e.g. ledger entries against processor settlements]. It runs [FILL: batch/streaming/request-driven] at roughly [FILL: volume per day or per second]. It's on the path of [FILL: what depends on its latency].
 
-**Deployment got boring, in a good way.** A single static binary replaced a Ruby app image with its interpreter, gem dependencies, and native extension build chain. Startup time dropped from tens of seconds to under one. That mattered more than expected once we started running reconciliation as short-lived, autoscaled jobs instead of long-running workers — fast, predictable startup is what makes scale-to-zero actually pay off.
+We moved it because [FILL: the actual trigger: latency complaints, the infrastructure bill, a scaling ceiling]. We did not move it because of anything wrong with Ruby in general. [FILL: one sentence on what the Ruby version did well. If nothing, delete this.]
 
-## How we did it, without anything breaking
+## Results
 
-Four months is a long time for something this central to finance operations, and we spent a good chunk of it on process, not code.
+| | Ruby (before) | Go (after) |
+|---|---|---|
+| p99 latency | 840ms | 95ms |
+| EC2 cost for this service | baseline | roughly 60% lower |
 
-We used a strangler approach: new reconciliation logic went into the Go service provider-by-provider, not all at once. Each provider's matching logic ran in *shadow mode* first — the Go service processed the same batches as the Ruby service, and we diffed outputs line by line before the Go output was trusted for anything finance-facing. Discrepancies in shadow mode were almost always in the Go implementation early on (an edge case in provider-specific rounding, a timezone boundary in batch windows), which is exactly what you want shadow mode to catch before it catches a real dollar amount.
+The two figures above are from our production monitoring. This is what we can say about them:
 
-Cutover per provider happened only after shadow mode ran clean for a full billing cycle. That's a conservative bar, and it's why the migration took four months instead of a few sprints. We didn't hit a moment where we had to roll back a cutover, largely because nothing got promoted out of shadow mode until it had already proven itself against real production traffic.
+- **Measurement window:** [FILL: dates and duration for each side, and whether they cover month-end or other peak load].
+- **Percentile source:** [FILL: APM, load balancer logs, or app-side timers. Where is latency measured from and to?].
+- **Hardware:** [FILL: instance types and counts before and after].
+- **Workload:** [FILL: same production traffic, or a replay? Same data volume on both sides?].
+- **Cost figure:** [FILL: what "roughly 60%" is computed from, such as on-demand vs. reserved pricing and the billing period. Say whether it includes the migration period's double-running].
+- **Variance:** [FILL: whether the 840ms and 95ms hold week over week, or are single readings].
 
-The team already had Go experience from other services, which mattered more than any of the technical decisions above. If your team is learning goroutines, channels, and context cancellation for the first time on a financial system, budget more room for review than we needed to. We didn't hit goroutine leaks or context-propagation bugs in this migration, but that's a track record earned on earlier, lower-stakes Go services, not a property of the language.
+The ratio is about 8.8x on p99. In absolute terms, requests that used to take most of a second now finish in under a tenth of one. [FILL: what that change meant to downstream callers, if you can say.]
 
-## The numbers
+## What we think produced the gain
 
-| | Ruby | Go | Change |
-|---|---|---|---|
-| p99 latency | 840ms | 95ms | ~8.8x faster |
-| EC2 spend (this service) | baseline | ~40% of baseline | ~60% reduction |
-| Migration duration | — | — | ~4 months |
-| Production incidents caused by migration | — | — | 0 |
+Say what you know and what you're guessing. We haven't isolated the cause, and a rewrite changes more than the language.
 
-The latency drop came from three compounding factors, not one: real parallelism during fan-out, no GC pauses on the scale Ruby's mark-and-sweep hit under batch load, and removing the per-request overhead of the interpreter itself. The cost drop came almost entirely from the concurrency model change — fewer, denser processes doing the same work, plus the ability to scale reconciliation jobs down to near-zero between runs instead of keeping a worker fleet warm.
+- [FILL: what you actually changed besides the language: data access patterns, batching, caching, concurrency model, schema. Even small things count.]
+- [FILL: any profiling of the Ruby version showing where the 840ms went.]
+- [FILL: any profiling of the Go version showing where the 95ms goes.]
 
-## What we'd tell a team evaluating this
+Without a Ruby-to-Ruby control, we can't say how much came from Go's runtime and how much from redesign. If the code was restructured on the way over, some of the gain would have been available without leaving Ruby. [FILL: confirm or refute this for your case. This is the question the first sceptical commenter will ask.]
 
-Go's advantage here wasn't raw speed for its own sake — it was that goroutines matched the actual shape of the workload, and the type system matched the actual risk profile of the domain. If your bottleneck is CPU-bound fan-out work currently paying a per-process tax, or your bug class is "the wrong number got multiplied by the wrong thing," those are the two signals worth weighing heavily. If neither applies to your service, the migration cost may not be worth it — ours was, because reconciliation is both.
+## Why the migration was uneventful
 
-The unglamorous truth is that the smooth migration was a process outcome, not a language outcome: shadow mode against real traffic, provider-by-provider cutover, and a team that had already made its Go mistakes on lower-stakes systems first. Go didn't make the migration safe. Running new code next to old code and diffing the output before trusting it did.
+We don't have a war story, so here is what we did that we think mattered. All of it is for you to confirm.
+
+- **Team familiarity.** The team knew what they were doing. [FILL: how much Go experience existed beforehand. If some engineers were new, how did they ramp?]
+- **Cutover strategy.** [FILL: big-bang, shadow traffic, gradual percentage rollout? How did you verify the Go output matched Ruby's on reconciliation results?]
+- **Correctness checking.** For a billing service the risk is wrong money, not slow money. [FILL: how you proved the new service reconciled identically. Diffing outputs, parallel runs, a period of comparison.]
+- **Scope.** [FILL: whether you ported behavior one-for-one or changed behavior along the way.]
+
+"Nothing broke" is a claim about four months and one service. [FILL: if there were minor frictions that never became incidents, such as tooling gaps, slower early velocity, missing libraries, or on-call unfamiliarity, list them here. They make the rest of the post believable.]
+
+## What it cost
+
+- **Four months of engineering time**, [FILL: for how many people, and what they weren't building meanwhile].
+- **[FILL: ramp-up, review, hiring, or ownership implications of having a Go service in a Ruby-heavy shop, if applicable].**
+- **[FILL: operational changes: deployment, observability, runbooks].**
+
+## When we wouldn't do this
+
+- **If the service isn't a bottleneck.** The benefit here came from a service where latency and compute cost were visible and large. For a service with neither, four months of rewrite buys little.
+- **If your team has no Go experience.** Our result depended partly on a team that already knew what it was doing. We can't speak to a cold start.
+- **If the cost is I/O-bound elsewhere.** If your latency is dominated by a database or a third-party call, a faster language moves less. [FILL: whether this was true for you, and what share of the Ruby latency was compute vs. waiting.]
+- **If the service changes constantly.** [FILL: how stable the reconciliation logic was during the migration. A rewrite of fast-moving code is a different project.]
+
+## What we haven't tested
+
+- Whether the gain holds under [FILL: peak scenarios not yet seen].
+- Whether maintenance cost over a year or two comes out lower, equal, or higher than the Ruby version's. Four months of post-migration data can't tell us.
+- The cost of the migration against the cost of an optimized Ruby version. We didn't build that comparison.
+
+## Takeaway
+
+For this one service, rewriting from Ruby to Go cut p99 from 840ms to 95ms and the EC2 bill by about 60%, with no incidents. We attribute part of that to Go and part to [FILL: the redesign, if any]. Measure your own bottleneck first.
+
+*[FILL: link to any benchmark scripts, dashboards, or anonymized graphs. Add one chart of p99 before and after, since readers will look for it.]*
+
+---
+
+## Gate report
+
+| Check | Status |
+|---|---|
+| 1. Claims classified | ✅ Every figure is labelled as measured or has a `FILL` for its evidence. |
+| 2. No unsourced numbers | ✅ Only your four figures (4 months, 840ms, 95ms, ~60%). The 8.8x ratio is derived from 840/95. |
+| 3. Benchmark disclosure | ❌ Open. Needs window, hardware, workload, and variance from the Results section. |
+| 4. One honest limitation | ✅ Rewrite-vs-language confound, plus the "when we wouldn't" section. |
+| 5. No unsupported superlatives | ✅ |
+| 6. Snippets pinned and dated | ➖ No code. Add the date, and the Go and Ruby versions. |
+
+## Handoff: what a human must do before publishing
+
+1. Fill every `FILL`. Do not publish with check 3 open.
+2. Name a technical reviewer on the team, for accuracy of the cost and latency methodology.
+3. Decide if "billing reconciliation," the volumes, and the cost figures are cleared for external release. I included only what you gave me.
+4. Add the p99 chart.
+5. Add at least one real friction, even a small one. A four-month rewrite with zero friction is the part readers are least likely to believe.

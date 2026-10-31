@@ -3,79 +3,79 @@
     "expectations": [
       {
         "text": "Asks the interview questions it still lacks - which developer ecosystem the user works in, whether they are catching up before a specific moment or building a standing habit, and whether they need to speak, sponsor or organise events this year - before finalising the list, one question at a time rather than as a single block.",
-        "evidence": "The transcript explicitly does the opposite: 'You asked for the finished radar, not a Q&A, so I answered the interview myself from what you gave me. Flag anything wrong and I'll swap it.' It lists 'Assumed interview answers' (including Ecosystem, catching-up-vs-standing-habit, and Events Q9 as 'not stated... ask me if that's a yes') and delivers the finished list in one block, rather than asking questions one at a time before finalizing.",
+        "evidence": "The transcript is a finished list. It asks no questions. The only follow-up is 'Name one or two data newsletters or podcasts you already follow'.",
         "passed": false,
         "graded": true
       },
       {
         "text": "Orders the list by value returned per attention-minute and states that ordering explicitly in the output rather than leaving it implied by row order.",
-        "evidence": "'Ordered by value per attention-minute. Newsletters win by default; the two podcasts are promoted above their normal rank because they ride your commute (already-spent time, so their cost is halved) and because Community Pulse also covers the pillar you just inherited.'",
+        "evidence": "'Ordering: inside each section, by value per attention-minute, highest first.'",
         "passed": true,
         "graded": true
       },
       {
         "text": "Does not order the list by cheapness, by subscriber count, by follower count, or by audience size.",
-        "evidence": "Row order (New Stack 10min, Console.dev 7min, DevRel Collective 15min, Scaling DevTools 25min, Community Pulse 25min) is not monotonic by minutes, and no subscriber/follower/audience metrics are cited as ordering criteria anywhere in the table rationale.",
+        "evidence": "The weekly core runs Console.dev 7, New Stack 10, Collective 9, then two 25-minute podcasts. That is not cheapest-first, and no audience metric is used.",
         "passed": true,
         "graded": true
       },
       {
         "text": "Places an annual ecosystem survey or community-health data report at or near the top of the efficiency ordering, justified as the citable number budget and headcount conversations run on.",
-        "evidence": "The Annual tier (GitHub Octoverse, CMX Community Industry Report, SlashData) appears as the third tier, after '### Weekly core' and '### Monthly \u2014 reference, not a feed', i.e. near the bottom of the data-tier ordering, not near the top.",
+        "evidence": "The annual reports sit in a separate third section. CMX is described as 'Benchmarks for community budgets, team sizes and measurement', but it is not placed at the top and is not justified as the number headcount conversations run on.",
         "passed": false,
         "graded": true
       },
       {
         "text": "Halves the attention cost of any podcast assigned to the 35-minute cycle commute, and says the halving is because that time is already spent rather than attention the user has to find.",
-        "evidence": "'the two podcasts are promoted above their normal rank because they ride your commute (already-spent time, so their cost is halved)'; table rows show 'Scaling DevTools ... 25 (halved \u2014 commute)' and 'Community Pulse ... 25 (halved \u2014 commute)'.",
+        "evidence": "'Audio on the ride is time you were spending anyway, so I counted each episode at half its length.'",
         "passed": true,
         "graded": true
       },
       {
         "text": "Does not amortise a multi-day conference across 52 weeks, and does not present a conference as a small recurring weekly cost.",
-        "evidence": "The only conference mention, KubeCon + CloudNativeCon NA, is placed under a separate '**Events**' line outside the weekly-minute table, not folded into the weekly budget: 'closest verified overlap is KubeCon + CloudNativeCon NA (Salt Lake City, 9-12 Nov \u2014 confirm the year on the page before booking).'",
+        "evidence": "'Conferences: none listed, because you didn't say you'd speak, sponsor or host.'",
         "passed": true,
         "graded": true
       },
       {
         "text": "Spends roughly 90% of the 90-minute budget and reserves roughly the last 10% for one peer community, stating that communities are where new sources surface.",
-        "evidence": "Total spend is '82 of 90 weekly min (91%)', but the peer-community entry (DevRel Collective) itself consumes 15 of the 90 minutes (~17%), not roughly 10%: 'DevRel Collective (Slack) | ... | 15 | Reserved community slot \u2014 peer help for the pillar you just inherited; where new sources surface first'.",
+        "evidence": "86 of 90 minutes are used and DevRel Collective has a 9-minute reserved slot. The transcript never says communities are where new sources surface. It says only 'ask your first community-handover questions here'.",
         "passed": false,
         "graded": true
       },
       {
         "text": "Carries at least one verified-active source for each of advocacy, developer marketing and community.",
-        "evidence": "Console.dev (marketing) is 'active, 20 Aug 2026, every Thursday'; Scaling DevTools (marketing, advocacy) is 'active, Ep 197, 20 Aug 2026'; Community Pulse (advocacy, community) is 'active, Ep 105, 17 Aug 2026'.",
+        "evidence": "'Pillar coverage: advocacy \u2705, marketing \u2705, community \u2705.' Console.dev, Scaling DevTools and Community Pulse are all marked active with dates.",
         "passed": true,
         "graded": true
       },
       {
         "text": "Includes at least one source about the DevRel practice itself, not only about streaming data or the user's own technology.",
-        "evidence": "'Developer Relations Foundation | dev-rel.org | all four | The field's only vendor-neutral practice body \u2014 Metrics Index, Maturity Model, Tools Catalog' and 'Community Pulse ... Only long-running show about DevRel practice itself'.",
+        "evidence": "Community Pulse: 'Covers the practice itself, including your new pillar.'",
         "passed": true,
         "graded": true
       },
       {
         "text": "Attaches a what-they're-selling flag to every entry, drawn from a specific category such as agency, tool vendor, course or community, conference, platform-official, foundation, or independent media.",
-        "evidence": "Weekly/Monthly tables have a 'Selling' column filled for each row, but Bench entries have none: 'Open Source Ready (podcast, community, Ep 41 30 Jul 2026) \u00b7 The Business of Open Source (podcast, community/marketing, 18 Aug 2026) \u00b7 EveryDeveloper (newsletter, marketing, active but no dated post confirmed)' \u2014 no selling category given. Annual entries (Octoverse, CMX, SlashData) likewise carry no selling flag.",
+        "evidence": "The reference works developerrelations.com guides and CHAOSS carry no Selling flag, and neither do the weekly and annual rows' peers in the reference list.",
         "passed": false,
         "graded": true
       },
       {
         "text": "Attaches a status and a date to every entry.",
-        "evidence": "The Bench entry 'EveryDeveloper (newsletter, marketing, active but no dated post confirmed)' has a status ('active') but explicitly no date, violating the requirement that every entry carry both.",
+        "evidence": "DevRel Collective is 'active, join flow live, 1,800+ members claimed, activity unobservable' with no date. The developerrelations.com guides are 'Evergreen, undated'.",
         "passed": false,
         "graded": true
       },
       {
         "text": "Contains no video entry anywhere in the deliverable, including the bench.",
-        "evidence": "'Video, entirely \u2014 ruled out, no exceptions. No DevRelCon talk archive, no channel, anywhere above, bench included.'",
+        "evidence": "'Nothing video appears anywhere above, bench included.'",
         "passed": true,
         "graded": true
       },
       {
         "text": "Names video in an explicit Dropped line together with the constraint that removed it, rather than ranking video entries last.",
-        "evidence": "'### Dropped\\n\\nVideo, entirely \u2014 ruled out, no exceptions.' and Totals line: 'dropped: video (medium ruled out)'.",
+        "evidence": "'Dropped: All video: your rule is never.'",
         "passed": true,
         "graded": true
       }
@@ -85,79 +85,79 @@
     "expectations": [
       {
         "text": "Asks the interview questions it still lacks - which developer ecosystem the user works in, whether they are catching up before a specific moment or building a standing habit, and whether they need to speak, sponsor or organise events this year - before finalising the list, one question at a time rather than as a single block.",
-        "evidence": "The transcript opens directly with 'Open community platform's unanswered-questions view first' and delivers a full plan with no clarifying questions asked anywhere.",
+        "evidence": "Ends with a block of 'Two questions' about platform/admin access and whether the commute counts; ecosystem, catch-up vs habit, and speaking are not asked.",
         "passed": false,
         "graded": true
       },
       {
         "text": "Orders the list by value returned per attention-minute and states that ordering explicitly in the output rather than leaving it implied by row order.",
-        "evidence": "The weekly list is ordered by workflow sequence ('Unanswered questions...20 min', 'Mod sweep...10 min', etc.) with no statement that this is a value-per-minute ordering.",
+        "evidence": "No ordering rule is stated; the list is just numbered sections.",
         "passed": false,
         "graded": true
       },
       {
         "text": "Does not order the list by cheapness, by subscriber count, by follower count, or by audience size.",
-        "evidence": "The podcast/newsletter picks are not ranked or justified by subscriber/follower numbers anywhere in the text.",
+        "evidence": "No ordering by those criteria appears.",
         "passed": true,
         "graded": true
       },
       {
         "text": "Places an annual ecosystem survey or community-health data report at or near the top of the efficiency ordering, justified as the citable number budget and headcount conversations run on.",
-        "evidence": "No annual survey or community-health report appears anywhere in the deliverable.",
+        "evidence": "No annual survey or data report appears.",
         "passed": false,
         "graded": true
       },
       {
         "text": "Halves the attention cost of any podcast assigned to the 35-minute cycle commute, and says the halving is because that time is already spent rather than attention the user has to find.",
-        "evidence": "The podcasts are listed under 'Commute (audio, 2 podcasts...)' but no halved cost or reasoning about already-spent time is stated.",
+        "evidence": "'I assumed one commute leg counts toward the 90' counts the ride at full 35 min; no halving.",
         "passed": false,
         "graded": true
       },
       {
         "text": "Does not amortise a multi-day conference across 52 weeks, and does not present a conference as a small recurring weekly cost.",
-        "evidence": "No conference appears anywhere in the deliverable, so none is amortised weekly.",
+        "evidence": "No conference is costed weekly; conference talks are only listed under Skip.",
         "passed": true,
         "graded": true
       },
       {
         "text": "Spends roughly 90% of the 90-minute budget and reserves roughly the last 10% for one peer community, stating that communities are where new sources surface.",
-        "evidence": "The full 90 minutes (20+10+20+10+15+15) is allocated entirely to running the user's own community platform; no slot or statement about a peer community for source discovery is given.",
+        "evidence": "Table splits 35/35/20 with no peer-community reserve or 'communities surface new sources' statement.",
         "passed": false,
         "graded": true
       },
       {
         "text": "Carries at least one verified-active source for each of advocacy, developer marketing and community.",
-        "evidence": "Sources (DevRel.fm, Streaming Audio, EveryDeveloper) carry no status/verification markers at all, and no advocacy-specific source is named.",
+        "evidence": "'I wrote these names from memory and did not check that each feed is still active.'",
         "passed": false,
         "graded": true
       },
       {
         "text": "Includes at least one source about the DevRel practice itself, not only about streaming data or the user's own technology.",
-        "evidence": "'*DevRel.fm* \u2014 devrel/community craft, practitioner-hosted.'",
-        "passed": true,
+        "evidence": "'Skip DevRel-about-DevRel shows for now.'",
+        "passed": false,
         "graded": true
       },
       {
         "text": "Attaches a what-they're-selling flag to every entry, drawn from a specific category such as agency, tool vendor, course or community, conference, platform-official, foundation, or independent media.",
-        "evidence": "No selling-category flags are attached to DevRel.fm, Streaming Audio, or EveryDeveloper.",
+        "evidence": "Only partial notes like 'Vendor-run' for one entry; no flag categories.",
         "passed": false,
         "graded": true
       },
       {
         "text": "Attaches a status and a date to every entry.",
-        "evidence": "None of the podcast/newsletter entries carry any status or date.",
+        "evidence": "No statuses or dates are given.",
         "passed": false,
         "graded": true
       },
       {
         "text": "Contains no video entry anywhere in the deliverable, including the bench.",
-        "evidence": "Only audio (podcasts) and one newsletter are listed; the constraint states 'no video, ever' and none appears.",
+        "evidence": "All entries are audio or text; video is under Skip.",
         "passed": true,
         "graded": true
       },
       {
         "text": "Names video in an explicit Dropped line together with the constraint that removed it, rather than ranking video entries last.",
-        "evidence": "The text only notes '(no video, ever)' as a parenthetical constraint label; there is no explicit 'Dropped: video' line.",
+        "evidence": "'Skip - Any video, including conference talks' has no stated constraint and is not labelled Dropped.",
         "passed": false,
         "graded": true
       }

@@ -1,60 +1,115 @@
-# Authorization Code Flow with PKCE, Explained
+# How the authorization code flow with PKCE works
 
-OAuth's authorization code flow was designed in an era of confidential clients: a server-side app with a client secret it could keep hidden from the browser. Mobile apps and single-page apps broke that assumption — you can't ship a secret inside an APK or a bundle.js and expect it to stay secret. PKCE (RFC 7636, pronounced "pixy") closes the gap that opened up when public clients started using a flow built for confidential ones.
+*Draft for the engineering blog. Placeholders in `[brackets]` need our real values.*
 
-## The problem PKCE solves
+---
 
-Without PKCE, the authorization code flow looks like this:
+Every OAuth client that runs outside a trusted server has the same problem: it can't keep a secret. Mobile apps, single-page apps, and CLI tools all ship their code to the user. Anything embedded in that code, including a `client_secret`, can be extracted.
 
-1. The client redirects the user to the authorization server.
-2. The user authenticates and consents.
-3. The authorization server redirects back to the client's redirect URI with a `code`.
-4. The client exchanges that `code` for tokens at the token endpoint.
+PKCE (Proof Key for Code Exchange, pronounced "pixy", RFC 7636) was designed to make the authorization code flow safe for these clients. It has since become the recommended default for confidential clients too. OAuth 2.1 and the current security BCP (RFC 9700) both require it.
 
-Step 3 is the weak point. The redirect happens through the user's browser, and on mobile, the redirect URI is usually a custom scheme (`myapp://callback`) or, on newer platforms, an app link. Custom schemes aren't exclusive — more than one installed app can register the same one. A malicious app that registers your app's scheme can intercept the redirect, grab the `code`, and hit the token endpoint before your app does. Since public clients have no secret, nothing in step 4 proves the code redeemer is the same party that started the flow in step 1.
+This post walks through what the flow does, step by step, and why the extra parameters close the attack they target.
 
-`state` doesn't fix this — `state` protects against CSRF (binding the callback to the browser session that started the request), not against a different app entirely stealing the code from an OS-level redirect.
+## The problem: a stolen code is a stolen session
 
-## How PKCE fixes it
+In the plain authorization code flow, the client sends the user to the authorization server. The user authenticates and consents. The server redirects back to the client's `redirect_uri` with a short-lived `code`. The client then POSTs that code to the token endpoint and receives tokens.
 
-PKCE binds the code exchange to the party that initiated the request, without needing a shared secret. The client proves it holds a value only it generated, by presenting a hash of that value up front and the raw value later.
+A confidential client authenticates that last request with its secret, so a stolen code is useless to anyone else. A public client has no secret to present. If an attacker obtains the code, they can redeem it.
 
-**Before the redirect**, the client generates a random `code_verifier`:
+Getting the code is easier than it sounds:
 
-```javascript
-function generateCodeVerifier() {
-  const bytes = crypto.getRandomValues(new Uint8Array(32));
-  return base64url(bytes); // 43-128 chars, per RFC 7636 §4.1
+- **Custom URI schemes on mobile.** Several apps can register `myapp://callback`, and the OS may deliver the redirect to the wrong one.
+- **Loopback listeners.** A malicious local process can bind the port first.
+- **Browser history, logs, referrer headers, and extensions.** The code travels in a URL query string.
+
+PKCE doesn't prevent the code from leaking. It makes a leaked code worthless on its own.
+
+## The idea: bind the code to whoever started the flow
+
+The client invents a one-time secret at the start of each flow. It sends a *fingerprint* of that secret with the authorization request, and the server stores the fingerprint alongside the code it issues. When the client redeems the code, it must present the original secret. The server hashes it and compares.
+
+An attacker who intercepts the redirect sees the code and the fingerprint. They can't reverse the fingerprint to recover the secret, so they can't redeem the code.
+
+The two values are:
+
+- **`code_verifier`**: a high-entropy random string. It stays in the client and is sent only to the token endpoint, over TLS.
+- **`code_challenge`**: derived from the verifier. It is sent in the front-channel authorization request.
+
+## Step by step
+
+### 1. Generate the verifier and challenge
+
+The verifier is 43 to 128 characters from the unreserved set (`A-Z a-z 0-9 - . _ ~`). In practice, take 32 random bytes from a CSPRNG and base64url-encode them, which gives 43 characters and 256 bits of entropy.
+
+The challenge, with method `S256`, is:
+
+```
+code_challenge = BASE64URL(SHA256(ASCII(code_verifier)))
+```
+
+In TypeScript (Node 18+ or any runtime with Web Crypto):
+
+```ts
+import { createHash, randomBytes } from "node:crypto";
+
+const base64url = (buf: Buffer) => buf.toString("base64url");
+
+export function createPkcePair() {
+  // 32 random bytes encode to 43 base64url chars, the RFC 7636 minimum length,
+  // with 256 bits of entropy.
+  const verifier = base64url(randomBytes(32));
+  const challenge = base64url(createHash("sha256").update(verifier).digest());
+  return { verifier, challenge };
 }
 ```
 
-It derives a `code_challenge` from it:
+You can check your implementation against the test vector in RFC 7636, Appendix B:
 
-```javascript
-async function generateCodeChallenge(verifier) {
-  const digest = await crypto.subtle.digest(
-    "SHA-256",
-    new TextEncoder().encode(verifier)
-  );
-  return base64url(digest);
-}
+```
+verifier:  dBjftJeZ4CVP-mB92K27uhbUJU1p1r_wW1gFWFOEjXk
+challenge: E9Melhoa2OwvFrEMTJguCHaoeK1t8URWbuGJSstw-cM
 ```
 
-It sends the challenge — not the verifier — in the authorization request:
+### 2. Send the user to the authorization endpoint
+
+The client stores the verifier locally, keyed to this flow, and builds the authorization URL:
 
 ```
 GET /authorize?
   response_type=code
-  &client_id=abc123
-  &redirect_uri=myapp://callback
-  &state=xyz
+  &client_id=[CLIENT_ID]
+  &redirect_uri=https%3A%2F%2Fapp.example.com%2Fcallback
+  &scope=openid%20profile%20email
+  &state=[RANDOM_STATE]
   &code_challenge=E9Melhoa2OwvFrEMTJguCHaoeK1t8URWbuGJSstw-cM
   &code_challenge_method=S256
 ```
 
-The authorization server stores the challenge alongside the issued code and returns the code to the redirect URI as usual. At this point, an attacker who intercepts the code still can't redeem it, because redemption now requires the verifier — which never left the client.
+Two of these parameters are easy to conflate, and they do different jobs:
 
-At the token endpoint, the client sends the original verifier instead of a client secret:
+- **`state`** binds the *response* to the *browser session* that started the request. It defends against CSRF on the redirect endpoint.
+- **`code_challenge`** binds the *code* to the *client instance* that will redeem it. It defends against code injection and interception.
+
+You need both. PKCE does not replace `state`. (Strictly, RFC 9700 says clients may rely on PKCE alone for CSRF protection if the server enforces it. In practice, keep `state` anyway. It also carries your return-to-page context, and it costs nothing.)
+
+### 3. The user authenticates and consents
+
+Nothing PKCE-specific happens here. The authorization server authenticates the user, shows the consent screen, and applies its policy.
+
+### 4. The server issues a code and remembers the challenge
+
+On success, the server generates an authorization code and stores it with the `code_challenge`, the `code_challenge_method`, the `client_id`, the `redirect_uri`, and an expiry. It then redirects:
+
+```
+HTTP/1.1 302 Found
+Location: https://app.example.com/callback?code=SplxlOBeZQQYbYS6WxSbIA&state=[RANDOM_STATE]
+```
+
+The code should be single-use and short-lived. RFC 6749 recommends a maximum lifetime of 10 minutes, and shorter is better.
+
+### 5. The client checks `state` and redeems the code
+
+The callback handler first compares the returned `state` with the stored value and rejects the request on mismatch. It then exchanges the code, this time sending the verifier:
 
 ```
 POST /token
@@ -62,29 +117,76 @@ Content-Type: application/x-www-form-urlencoded
 
 grant_type=authorization_code
 &code=SplxlOBeZQQYbYS6WxSbIA
-&redirect_uri=myapp://callback
-&client_id=abc123
+&redirect_uri=https%3A%2F%2Fapp.example.com%2Fcallback
+&client_id=[CLIENT_ID]
 &code_verifier=dBjftJeZ4CVP-mB92K27uhbUJU1p1r_wW1gFWFOEjXk
 ```
 
-The server hashes the received `code_verifier` with the stored `code_challenge_method`, compares it to the `code_challenge` it stored at the authorization step, and rejects the exchange on mismatch. An attacker holding a stolen code has no way to produce a verifier that hashes to the challenge the server already committed to — that's the entire security property, and it rests on SHA-256 preimage resistance rather than secrecy of the client.
+Confidential clients also authenticate here as usual. PKCE is *in addition to* client authentication, not instead of it.
 
-## S256 vs. plain
+### 6. The server verifies the proof
 
-RFC 7636 defines two challenge methods: `S256` (SHA-256 then base64url) and `plain` (the challenge equals the verifier, unhashed). `plain` exists only for clients that can't compute SHA-256, which in practice means none — every modern platform has a crypto library. `plain` gives no protection against an attacker who can read the authorization request itself (e.g., through a poorly isolated in-app browser), since challenge and verifier are identical. Use `S256`. If you're implementing an authorization server, consider rejecting `plain` outright rather than merely supporting `S256` as an option — a downgrade to `plain` should not be a silent, negotiable fallback.
+The server looks up the stored challenge for this code, computes `BASE64URL(SHA256(code_verifier))` from the submitted value, and compares the two. Use a constant-time comparison. If they match, it returns tokens. If not, it returns `invalid_grant`.
 
-## PKCE isn't just for public clients anymore
+```ts
+import { createHash, timingSafeEqual } from "node:crypto";
 
-The original spec framed PKCE as protection for public clients, but the current guidance (RFC 9700, and OAuth 2.1's draft consolidation) recommends PKCE for confidential clients too. It's a second, independent defense against authorization code injection — including cases where the code leaks through referrer headers, browser history, or server logs rather than through redirect URI hijacking. `client_secret` proves the client's identity; PKCE proves the code redeemer is the same party that started this specific flow. They cover different threats and are cheap to run together.
+function verifyPkce(storedChallenge: string, verifier: string): boolean {
+  const computed = createHash("sha256").update(verifier).digest("base64url");
+  const a = Buffer.from(computed);
+  const b = Buffer.from(storedChallenge);
+  return a.length === b.length && timingSafeEqual(a, b);
+}
+```
 
-## Implementation notes that cause real bugs
+An attacker who intercepted only the code now fails at this step. They hold the code but not the verifier, and the verifier never traveled over the channel they observed.
 
-- **Generate a fresh verifier per authorization request**, never per client. Reusing one across requests reintroduces the binding weakness PKCE exists to remove.
-- **Use a CSPRNG for the verifier**, not `Math.random()` or an unseeded RNG. The RFC's 43-character minimum only matters if the entropy behind it is real.
-- **Store the verifier tied to the specific in-flight request** (e.g., session storage keyed by `state`), not in a variable that could survive across concurrent flows — a user opening two login attempts in two tabs is enough to expose this bug.
-- **The verifier is single-use.** Don't cache it for retry logic across a new authorization request; generate a new verifier/challenge pair per attempt.
-- **`code_challenge_method` is not optional in practice**, even though the RFC allows omitting it (defaulting to `plain`). Send `S256` explicitly and reject servers that silently accept `plain` instead.
+## Why S256 and not `plain`
 
-## Where this leaves you
+The spec also defines `code_challenge_method=plain`, where the challenge is the verifier itself. It exists only for constrained clients that can't compute SHA-256. Against an attacker who can read the authorization request, `plain` offers nothing, because the challenge *is* the secret. Use `S256`. If you run the authorization server, consider rejecting `plain` outright.
 
-PKCE doesn't replace `state`, redirect URI validation, or TLS — it closes one specific gap: a stolen authorization code being redeemable by anyone who intercepts it in transit through a browser or OS redirect. Pair it with strict redirect URI matching (exact match, not prefix match) and you've closed the two most common ways authorization codes get hijacked in practice.
+## Where implementations go wrong
+
+PKCE is simple, so the failures are mostly in what surrounds it.
+
+**The server doesn't require it.** If the token endpoint accepts a code issued with a challenge but doesn't *require* a challenge in the first place, an attacker can strip `code_challenge` from the authorization request (or start their own flow without one) and redeem the code with no verifier. This is a downgrade attack. Server-side rules:
+
+1. If a challenge was present at authorization time, require a valid verifier at the token endpoint.
+2. If no challenge was present, reject the token request when a verifier is supplied. Otherwise attackers can test the code-injection path.
+3. For public clients, make the challenge mandatory at the authorization endpoint.
+
+**Weak or reused verifiers.** Use a CSPRNG, not `Math.random()` or a timestamp. Generate a fresh pair for every authorization request. Never reuse a verifier across flows, or hard-code one in a config file.
+
+**Verifier storage.** The verifier has to survive the redirect round trip and no longer. In a browser app, `sessionStorage` scoped to the tab is the usual choice. In a native app, keep it in memory or in the app's private storage. Delete it once the exchange completes or fails.
+
+**Loose redirect URI matching.** PKCE is not a license to relax `redirect_uri` validation. Compare registered URIs by exact string match, and don't allow wildcards or open redirects. The code still goes wherever the URI points.
+
+**Treating PKCE as authentication of the user.** It proves the redeemer is the party that started the flow. It says nothing about who the user is. If you use OpenID Connect, validate the ID token and its `nonce` separately.
+
+## When to use it
+
+Always. For public clients, it is the mechanism that makes the flow safe. For confidential clients, it adds protection against code injection and interception at almost no cost. The OAuth 2.1 draft folds this recommendation into the base spec.
+
+If you operate an authorization server, check three things today:
+
+- Does it enforce PKCE for public clients?
+- Does it reject `plain`?
+- Does it fail closed when a verifier arrives for a code that had no challenge?
+
+Those three checks cover most of the real-world bypasses.
+
+## Further reading
+
+- RFC 7636: Proof Key for Code Exchange by OAuth Public Clients
+- RFC 9700: Best Current Practice for OAuth 2.0 Security
+- RFC 8252: OAuth 2.0 for Native Apps
+- OAuth 2.1 (IETF draft)
+
+---
+
+**Notes for you:**
+
+- I wrote this from my own knowledge of the RFCs and didn't open anything under `skill-wip/`, as you asked.
+- The post doesn't say what our own implementation does, so the closing checklist is generic. If we run an authorization server, adding a short "how we handle this at `[COMPANY]`" section would make the post stronger.
+- I have not run the code snippets. The `createPkcePair` output should match the RFC 7636 Appendix B vector for the same verifier, so run that check before publishing.
+- I did not run `/caveman` or `/i-have-adhd` for this session. Both shape chat output, and the deliverable is a blog post.

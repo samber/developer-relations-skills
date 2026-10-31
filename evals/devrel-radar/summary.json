@@ -3,19 +3,27 @@
   "skill": "devrel-radar",
   "scenarios": 15,
   "expectations_total": 184,
-  "expectations_subjective": 1,
-  "expectations_objective": 183,
-  "pass_rate_with_skill_pct": 66.8,
-  "pass_rate_without_skill_pct": 30.4,
-  "delta_pp": 36.4,
-  "uplift_multiplier": 2.2,
-  "trigger_accuracy_pct": 55.4,
+  "expectations_subjective": 2,
+  "expectations_objective": 182,
+  "pass_rate_with_skill_pct": 72.8,
+  "pass_rate_without_skill_pct": 25.5,
+  "delta_pp": 47.3,
+  "uplift_multiplier": 2.85,
+  "trigger_accuracy_pct": 50.6,
   "trigger_queries": 166,
-  "trigger_positive_fire_rate": 0.301,
+  "trigger_positive_fire_rate": 0.06,
   "trigger_run_suspect": true,
   "trigger_suspect_reason": "fewer than half the should-trigger queries fired at all: re-measure with --redo-trigger before reading this as a routing score",
-  "subjective_ac2": 1.0,
-  "subjective_pass_disagreements": [],
+  "subjective_ac2": 0.529,
+  "subjective_pass_disagreements": [
+    {
+      "eval_id": 14,
+      "condition": "without_skill",
+      "expectation": "Does not pad the list with extra entries to hide that gap.",
+      "pass1": false,
+      "pass2": true
+    }
+  ],
   "concern_flag": false,
   "concern_reason": null,
   "models": {
@@ -24,7 +32,7 @@
     "subjective_grader": "opus",
     "trigger": "sonnet"
   },
-  "harness_version": "2.1.267 (Claude Code)",
+  "harness_version": "2.1.309 (Claude Code)",
   "conditions": {
     "mcp_servers": "disabled",
     "project_claude_md": "not loaded (trials and grading)",
@@ -61,19 +69,11 @@
       },
       {
         "eval_id": 2,
-        "expectation": "Notes that a top-down enterprise platform segment adds the ecosystem's own foundation and standards-body sources, without changing which pillars must be covered."
-      },
-      {
-        "eval_id": 2,
-        "expectation": "Attaches a what-they're-selling flag, a status and a date to every entry."
+        "expectation": "Offers an ungated, non-Slack peer community route - such as a public mailing list, an open community calendar, or a public forum - instead of leaving the community pillar uncovered."
       },
       {
         "eval_id": 3,
-        "expectation": "Classifies Karl Hughes as unverified rather than inactive, on the ground that a parked personal domain is evidence about the domain, not about the person."
-      },
-      {
-        "eval_id": 3,
-        "expectation": "Describes finding an organisation through its code-host organisation page - its declared website field, its repositories sorted by last push, and its repository descriptions - instead of guessing another domain."
+        "expectation": "Classifies the Scaling DevTools 403 as unverified for the homepage while naming the podcast feed as the surface that does carry dates."
       },
       {
         "eval_id": 3,
@@ -89,6 +89,10 @@
       },
       {
         "eval_id": 4,
+        "expectation": "Verifies or flags the organiser for every other event it recommends, not only the dates."
+      },
+      {
+        "eval_id": 4,
         "expectation": "States that the event calendar needs refreshing twice a year rather than quarterly, because CFP deadlines land months before the event itself."
       },
       {
@@ -101,15 +105,7 @@
       },
       {
         "eval_id": 5,
-        "expectation": "Attaches a specific what-they're-selling category to every entry - agency, tool vendor, course or community, conference, platform-official, foundation, or independent media - rather than a single blanket disclaimer."
-      },
-      {
-        "eval_id": 5,
         "expectation": "Flags at least one source whose angle changed after an acquisition, noting that cadence can survive an acquisition while the DevRel angle does not."
-      },
-      {
-        "eval_id": 6,
-        "expectation": "Describes them as a one-time read to revisit when scoping work, not as a recurring feed."
       },
       {
         "eval_id": 6,
@@ -121,15 +117,15 @@
       },
       {
         "eval_id": 7,
-        "expectation": "Refuses to rank by subscriber count, and explains that social rating measures reach in an adjacent audience rather than standing in this one."
+        "expectation": "States that video sits last on the efficiency ordering and last on the value ordering."
+      },
+      {
+        "eval_id": 7,
+        "expectation": "Tells the user plainly that a video-only radar is the weakest configuration available and says what it costs them."
       },
       {
         "eval_id": 7,
         "expectation": "Attaches a what-they're-selling flag, a status and a date to every entry it does deliver."
-      },
-      {
-        "eval_id": 7,
-        "expectation": "Offers at least one live or community surface - a conference, a meetup, a recurring community call - as a non-text, non-channel way to cover the gap."
       },
       {
         "eval_id": 8,
@@ -137,7 +133,11 @@
       },
       {
         "eval_id": 8,
-        "expectation": "Explains that long-form is where a practitioner's reasoning is visible, while text mostly reports the conclusion."
+        "expectation": "Distinguishes this catching-up configuration from the standing weekly habit the user will need afterwards, and says what changes between them."
+      },
+      {
+        "eval_id": 8,
+        "expectation": "Does not present the field's evergreen reference works as a recurring weekly cost."
       },
       {
         "eval_id": 8,
@@ -157,11 +157,11 @@
       },
       {
         "eval_id": 9,
-        "expectation": "Asks the peer community and the newest additions for one candidate discovery each, and verifies it before promoting it to the bench or the list."
+        "expectation": "Refreshes the event calendar on a twice-yearly rather than quarterly cadence, because CFP deadlines land months before the event."
       },
       {
         "eval_id": 9,
-        "expectation": "Checks the consumption bar - that the user consumed at least two thirds of the entries - and reports the result against it."
+        "expectation": "Asks the peer community and the newest additions for one candidate discovery each, and verifies it before promoting it to the bench or the list."
       },
       {
         "eval_id": 10,
@@ -170,14 +170,6 @@
       {
         "eval_id": 10,
         "expectation": "Flags the age of the source snapshot it is working from and warns that a snapshot older than roughly six months needs re-verification before being relied on."
-      },
-      {
-        "eval_id": 10,
-        "expectation": "Labels no entry verified-active on the strength of a remembered date."
-      },
-      {
-        "eval_id": 10,
-        "expectation": "Opens the artifact by saying what it is not - a reading list verified on one date, not a monitoring service that alerts the user when a source dies."
       },
       {
         "eval_id": 11,
@@ -221,10 +213,6 @@
       },
       {
         "eval_id": 12,
-        "expectation": "Describes the Developer Relations Foundation Metrics Index as an early-stage definitions reference rather than a benchmark dataset to quote numbers from."
-      },
-      {
-        "eval_id": 12,
         "expectation": "Treats the annual data family as a first-class source category precisely because this user must justify budget or headcount upward, not as background reading."
       },
       {
@@ -236,28 +224,8 @@
         "expectation": "Places the annual data report at the top of the efficiency ordering while stating it is not the most valuable source type."
       },
       {
-        "eval_id": 12,
-        "expectation": "Fabricates no specific percentage, developer population figure, median team size or budget number."
-      },
-      {
         "eval_id": 13,
-        "expectation": "Gives each person a fetchable verifying surface - a podcast feed or episode page, a company site, a talk listing, a foundation project page - rather than a social profile."
-      },
-      {
-        "eval_id": 13,
-        "expectation": "Labels any handle it does record as stated on the page where it appeared, never independently verified."
-      },
-      {
-        "eval_id": 13,
-        "expectation": "Frames that disclosure as weighing advice rather than disqualifying anyone, noting that nearly everyone in this field sells something."
-      },
-      {
-        "eval_id": 13,
-        "expectation": "Marks anyone whose only surface is stale as stale with its approximate age, rather than presenting them as current."
-      },
-      {
-        "eval_id": 13,
-        "expectation": "Does not link a personal domain without confirming that the page's content is actually about developer relations."
+        "expectation": "Attaches a what-they're-selling disclosure to every person listed."
       },
       {
         "eval_id": 13,
@@ -274,10 +242,6 @@
       {
         "eval_id": 14,
         "expectation": "Turns the event line on because the user speaks, giving one CFP target and one attend-or-sponsor candidate, each with a confirmed date and a confirmed organiser."
-      },
-      {
-        "eval_id": 15,
-        "expectation": "Attributes that change to the curator's own announced wind-down of the weekly cadence, explicitly not to the site being dead or to an infrastructure failure."
       },
       {
         "eval_id": 15,
@@ -311,6 +275,10 @@
       },
       {
         "eval_id": 1,
+        "expectation": "Includes at least one source about the DevRel practice itself, not only about streaming data or the user's own technology."
+      },
+      {
+        "eval_id": 1,
         "expectation": "Attaches a what-they're-selling flag to every entry, drawn from a specific category such as agency, tool vendor, course or community, conference, platform-official, foundation, or independent media."
       },
       {
@@ -327,15 +295,19 @@
       },
       {
         "eval_id": 2,
+        "expectation": "Removes paywalled newsletters and paid communities or courses outright from the deliverable."
+      },
+      {
+        "eval_id": 2,
         "expectation": "Includes a Dropped line naming each removed source together with the specific constraint that removed it."
       },
       {
         "eval_id": 2,
-        "expectation": "Places no ruled-out source at the bottom of the list, in a nice-to-have section, or in the bench."
+        "expectation": "Offers an ungated, non-Slack peer community route - such as a public mailing list, an open community calendar, or a public forum - instead of leaving the community pillar uncovered."
       },
       {
         "eval_id": 2,
-        "expectation": "Distinguishes the bench from the dropped sources, defining the bench as verified sources the budget merely could not fit."
+        "expectation": "Does not pad the list with sources whose only justification is advocacy or developer marketing, pillars this user does not own."
       },
       {
         "eval_id": 2,
@@ -344,6 +316,18 @@
       {
         "eval_id": 2,
         "expectation": "Attaches a what-they're-selling flag, a status and a date to every entry."
+      },
+      {
+        "eval_id": 3,
+        "expectation": "States explicitly that a resolving URL is not evidence the entity behind it is intact, and that the destination's content must be confirmed rather than only that the URL loads."
+      },
+      {
+        "eval_id": 3,
+        "expectation": "Classifies Karl Hughes as unverified rather than inactive, on the ground that a parked personal domain is evidence about the domain, not about the person."
+      },
+      {
+        "eval_id": 3,
+        "expectation": "Points at the person's company surface, draft.dev, as where to track him instead of the parked personal domain."
       },
       {
         "eval_id": 3,
@@ -356,6 +340,22 @@
       {
         "eval_id": 3,
         "expectation": "Describes finding an organisation through its code-host organisation page - its declared website field, its repositories sorted by last push, and its repository descriptions - instead of guessing another domain."
+      },
+      {
+        "eval_id": 3,
+        "expectation": "Classifies the Scaling DevTools 403 as unverified for the homepage while naming the podcast feed as the surface that does carry dates."
+      },
+      {
+        "eval_id": 3,
+        "expectation": "States that podcast feeds beat marketing homepages for establishing dates."
+      },
+      {
+        "eval_id": 3,
+        "expectation": "Assigns each of the five an explicit verdict from the active / stale / dead / unverified classification rather than a narrative judgement."
+      },
+      {
+        "eval_id": 3,
+        "expectation": "Records a reason alongside every unverified verdict."
       },
       {
         "eval_id": 4,
@@ -395,6 +395,10 @@
       },
       {
         "eval_id": 4,
+        "expectation": "Keeps conferences off the weekly efficiency line, describing their cost as cleared days plus travel rather than as minutes per week."
+      },
+      {
+        "eval_id": 4,
         "expectation": "States that because this user is sponsoring, the event calendar becomes core to the radar rather than an optional extra."
       },
       {
@@ -407,19 +411,15 @@
       },
       {
         "eval_id": 5,
-        "expectation": "Refuses to filter conflicted sources out of the list, and explains that doing so would empty it because almost every strong voice in this field runs an agency, a startup or a paid community."
-      },
-      {
-        "eval_id": 5,
-        "expectation": "Includes at least one foundation or platform-official source beyond the Foundation itself, such as an open community-health metrics project or a code host's maintainer guides."
-      },
-      {
-        "eval_id": 5,
         "expectation": "Flags at least one source whose angle changed after an acquisition, noting that cadence can survive an acquisition while the DevRel angle does not."
       },
       {
         "eval_id": 5,
         "expectation": "States that embedded or IoT ecosystem sources sit next to the practice sources rather than replacing them."
+      },
+      {
+        "eval_id": 5,
+        "expectation": "Totals estimated weekly minutes against the 75-minute budget."
       },
       {
         "eval_id": 5,
@@ -431,7 +431,7 @@
       },
       {
         "eval_id": 6,
-        "expectation": "Judges each on maintenance signals instead - a live event listing, a current copyright, an active repository."
+        "expectation": "Labels each of the three evergreen and undated, or an equivalent explicit classification, rather than stale or dead."
       },
       {
         "eval_id": 6,
@@ -531,15 +531,19 @@
       },
       {
         "eval_id": 8,
+        "expectation": "Distinguishes this catching-up configuration from the standing weekly habit the user will need afterwards, and says what changes between them."
+      },
+      {
+        "eval_id": 8,
         "expectation": "States the ordering used and totals estimated minutes against the 2-hour budget."
       },
       {
         "eval_id": 8,
-        "expectation": "Attaches a what-they're-selling flag, a status and a date to every entry."
+        "expectation": "Does not carry a conference as a weekly line item given there is no travel budget, and drops or benches it explicitly rather than ranking it low."
       },
       {
-        "eval_id": 9,
-        "expectation": "Re-asks which pillars the user owns, and treats the newly acquired developer marketing pillar as voiding the coverage guarantee until a source covers it."
+        "eval_id": 8,
+        "expectation": "Attaches a what-they're-selling flag, a status and a date to every entry."
       },
       {
         "eval_id": 9,
@@ -555,23 +559,11 @@
       },
       {
         "eval_id": 9,
-        "expectation": "Re-ranks against the new conference budget and states that a budget turns an event from a personal expense into a cleared slot."
-      },
-      {
-        "eval_id": 9,
-        "expectation": "Treats the colleague inside the gated community as someone to ask, rather than as a reason to join the community."
-      },
-      {
-        "eval_id": 9,
-        "expectation": "Refreshes the event calendar on a twice-yearly rather than quarterly cadence, because CFP deadlines land months before the event."
-      },
-      {
-        "eval_id": 9,
         "expectation": "Asks the peer community and the newest additions for one candidate discovery each, and verifies it before promoting it to the bench or the list."
       },
       {
         "eval_id": 9,
-        "expectation": "Checks the consumption bar - that the user consumed at least two thirds of the entries - and reports the result against it."
+        "expectation": "Re-totals estimated weekly minutes against the 60-minute budget and trims any overflow."
       },
       {
         "eval_id": 10,
@@ -579,19 +571,7 @@
       },
       {
         "eval_id": 10,
-        "expectation": "States clearly and prominently that it could not re-verify anything in this environment."
-      },
-      {
-        "eval_id": 10,
         "expectation": "Carries each entry's previously recorded status and date rather than presenting any of them as freshly confirmed."
-      },
-      {
-        "eval_id": 10,
-        "expectation": "Hands the user the manual check as explicit steps: open each URL, find the newest dated item, confirm the owner, apply the classifications."
-      },
-      {
-        "eval_id": 10,
-        "expectation": "Gives the thresholds to apply: a dated item within roughly three months is active, and a newest dated item older than roughly six months is stale."
       },
       {
         "eval_id": 10,
@@ -643,10 +623,6 @@
       },
       {
         "eval_id": 11,
-        "expectation": "States the ordering used and totals estimated weekly minutes against the 90-minute budget."
-      },
-      {
-        "eval_id": 11,
         "expectation": "Attaches a what-they're-selling flag, a status and a date to every entry."
       },
       {
@@ -671,10 +647,6 @@
       },
       {
         "eval_id": 12,
-        "expectation": "Names SlashData for developer population sizing and ecosystem segment sizing."
-      },
-      {
-        "eval_id": 12,
         "expectation": "Names a community-profession benchmark source for team size and budget figures, specifically the CMX Community Industry Report and its 2026 seventh edition."
       },
       {
@@ -692,6 +664,10 @@
       {
         "eval_id": 12,
         "expectation": "Places the annual data report at the top of the efficiency ordering while stating it is not the most valuable source type."
+      },
+      {
+        "eval_id": 12,
+        "expectation": "Fabricates no specific percentage, developer population figure, median team size or budget number."
       },
       {
         "eval_id": 13,
@@ -727,6 +703,10 @@
       },
       {
         "eval_id": 13,
+        "expectation": "Filters the people list to the community and advocacy pillars the user owns rather than returning an undifferentiated roster."
+      },
+      {
+        "eval_id": 13,
         "expectation": "Marks anyone whose only surface is stale as stale with its approximate age, rather than presenting them as current."
       },
       {
@@ -735,11 +715,23 @@
       },
       {
         "eval_id": 14,
+        "expectation": "States that the field's source population is predominantly B2B devtool sources, rather than implying the list is segment-neutral."
+      },
+      {
+        "eval_id": 14,
         "expectation": "Keeps the four pillars unchanged for a consumer and education-facing product, and says so explicitly."
       },
       {
         "eval_id": 14,
         "expectation": "States that reach and community sources differ for this segment - student and hackathon networks, creator platforms - and names at least one such source."
+      },
+      {
+        "eval_id": 14,
+        "expectation": "Warns that the consumer and education-facing segment is covered thinly compared with the B2B population, and that the user should treat that as a real gap."
+      },
+      {
+        "eval_id": 14,
+        "expectation": "Does not pad the list with extra entries to hide that gap."
       },
       {
         "eval_id": 14,
@@ -767,6 +759,10 @@
       },
       {
         "eval_id": 15,
+        "expectation": "Defines the compressor as one daily developer-news site or weekly roundup that substitutes for following several vendor blogs individually, and names a specific one."
+      },
+      {
+        "eval_id": 15,
         "expectation": "Answers the DevRel Weekly question directly: the newsletter changed format and should be listed as sporadic or occasional, not weekly."
       },
       {
@@ -776,6 +772,10 @@
       {
         "eval_id": 15,
         "expectation": "Deletes every audio source outright and names the deletion with the constraint that caused it."
+      },
+      {
+        "eval_id": 15,
+        "expectation": "Stops when the 25-minute budget is spent, even though strong sources remain unlisted."
       },
       {
         "eval_id": 15,

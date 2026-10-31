@@ -3,85 +3,85 @@
     "expectations": [
       {
         "text": "Rejects line-for-line transliteration as the definition of parity",
-        "evidence": "\"The plan as stated \u2014 Go and Java as line-for-line equivalents of Python... violates this skill's own tie-breaker.\"",
+        "evidence": "\"A transliteration fails idiomaticity even when the diff is clean.\"",
         "passed": true,
         "graded": true
       },
       {
         "text": "Names the ranked sample principles in the order clarity, idiomaticity, consistency, simplicity, portability, maintainability, with the higher principle winning a collision",
-        "evidence": "\"clarity \u2192 idiomaticity \u2192 consistency \u2192 simplicity \u2192 portability \u2192 maintainability, higher wins on conflict\"",
+        "evidence": "\"clarity, idiomaticity, consistency, simplicity, portability, maintainability, and the higher principle wins.\"",
         "passed": true,
         "graded": true
       },
       {
         "text": "States that idiomaticity outranks consistency, so a transliterated sample fails even when it is byte-consistent with its siblings",
-        "evidence": "\"this plan explicitly optimizes for consistency at idiomaticity's expense. That's the one trade the policy says never to make.\"",
+        "evidence": "\"Idiomaticity outranks consistency.\"",
         "passed": true,
         "graded": true
       },
       {
         "text": "Defines parity as an identical sample identifier, an identical scenario and step order, and an identical testing approach across languages",
-        "evidence": "\"Identical across tier 1: sample identifier, scenario, step order, testing approach.\"",
+        "evidence": "\"the sample identifier, the scenario and step order, and the testing approach.\"",
         "passed": true,
         "graded": true
       },
       {
         "text": "States that everything else - variable names, helper structure, style - may legitimately differ between languages",
-        "evidence": "\"Free to differ: everything else.\"",
+        "evidence": "\"Variable names and helper structure are free to differ.\"",
         "passed": true,
         "graded": true
       },
       {
         "text": "Computes parity coverage as tested cells divided by (scenarios multiplied by tier-1 languages)",
-        "evidence": "\"Parity coverage (tier-1 only) = T-cells \u00f7 (scenarios \u00d7 tier-1 languages) = (6+5+4+2) / (6\u00d74) = 17/24 = 71%\"",
+        "evidence": "\"17 \u00f7 (6 scenarios \u00d7 4 languages) = 17/24\"",
         "passed": true,
         "graded": true
       },
       {
         "text": "Excludes Ruby from the denominator because it is a community language rather than tier 1",
-        "evidence": "Ruby listed as \"Community\" tier separately, excluded from the 6\u00d74 parity denominator",
+        "evidence": "\"Ruby: it sits outside the denominator. It is community, unowned.\"",
         "passed": true,
         "graded": true
       },
       {
         "text": "Reports parity coverage of 17 divided by 24, approximately 71%",
-        "evidence": "\"17/24 = 71%\"",
+        "evidence": "\"= 70.8%\"",
         "passed": true,
         "graded": true
       },
       {
         "text": "Compares that figure against the 90% parity target and labels the target as a baseline this policy sets rather than a published industry standard",
-        "evidence": "Table headed \"Gate scorecard against this skill's pass thresholds\" listing \"Parity coverage \u226590%... 71%... \ud83d\udd34 fail\"",
+        "evidence": "\"The baseline gate is \u226590%... This is a skill baseline, not an industry standard.\"",
         "passed": true,
         "graded": true
       },
       {
         "text": "Uses the matrix cell vocabulary T for tested, P for present but untested, M for missing and S for stale",
-        "evidence": "Uses \"T-cells\" and \"P (exists, untested) vs M (doesn't exist)\" but never uses S for stale anywhere",
-        "passed": false,
+        "evidence": "\"Mark each non-`T` cell as `P` or `M` (and `S` if stale).\"",
+        "passed": true,
         "graded": true
       },
       {
         "text": "Reads the matrix by row and by column, stating that a sparse row is a scenario supported in only one language and a sparse column is a language tiered above what the team actually staffs",
-        "evidence": "No such row/column reading discussion appears in the transcript",
+        "evidence": "Only the sparse column (Java) is discussed. Sparse rows are not.",
         "passed": false,
         "graded": true
       },
       {
         "text": "Recommends either funding Java properly or demoting it, rather than leaving the column sparse under a tier-1 commitment",
-        "evidence": "No explicit recommendation to fund or demote Java is made; only effort-ranking discussion",
-        "passed": false,
-        "graded": true
-      },
-      {
-        "text": "States that language tiers should be chosen from download or telemetry share and support-ticket volume rather than from team preference",
-        "evidence": "\"the matrix guidance is specific that tiers should come from download/telemetry share and support-ticket volume, not team preference\"",
+        "evidence": "\"The skill says to fund it or demote it.\"",
         "passed": true,
         "graded": true
       },
       {
+        "text": "States that language tiers should be chosen from download or telemetry share and support-ticket volume rather than from team preference",
+        "evidence": "Q4 asks only whether Java usage is large enough. Download share and ticket volume are not named.",
+        "passed": false,
+        "graded": true
+      },
+      {
         "text": "Requires the tiers to be published, including Ruby's community status and its untested label",
-        "evidence": "\"Make sure the rendered docs actually say that on the page \u2014 an unlabelled community sample reads as neglect, not as a stated decision.\"",
+        "evidence": "\"Label Ruby community, untested and unowned on the page.\"",
         "passed": true,
         "graded": true
       }
@@ -91,85 +91,85 @@
     "expectations": [
       {
         "text": "Rejects line-for-line transliteration as the definition of parity",
-        "evidence": "'Fix target: structural parity, not string parity... \"same variable name\" becomes \"same variable identity, idiomatic casing.\"'",
+        "evidence": "'keep your goal, but define parity structurally instead of line by line.'",
         "passed": true,
         "graded": true
       },
       {
         "text": "Names the ranked sample principles in the order clarity, idiomaticity, consistency, simplicity, portability, maintainability, with the higher principle winning a collision",
-        "evidence": "No such six-principle ranked list appears anywhere in the transcript.",
+        "evidence": "The six ranked principles are not named.",
         "passed": false,
         "graded": true
       },
       {
         "text": "States that idiomaticity outranks consistency, so a transliterated sample fails even when it is byte-consistent with its siblings",
-        "evidence": "'Literal read breaks idiom... Copying literal Python names into Go/Java fails those gates or reads as foreign code to native reviewers' \u2014 literal (consistent) naming is rejected in favor of idiomatic convention.",
-        "passed": true,
+        "evidence": "It argues literal translation is unidiomatic but states no ranking.",
+        "passed": false,
         "graded": true
       },
       {
         "text": "Defines parity as an identical sample identifier, an identical scenario and step order, and an identical testing approach across languages",
-        "evidence": "The transcript defines parity via 'same scenario order, same step sequence, same helper decomposition, same comments' but never mentions an identical sample identifier or identical testing approach.",
+        "evidence": "It specifies scenario names, step order and helper names, but nothing about a common testing approach.",
         "passed": false,
         "graded": true
       },
       {
         "text": "States that everything else - variable names, helper structure, style - may legitimately differ between languages",
-        "evidence": "The transcript actually requires 'same helper decomposition, same comments' as fixed across languages, contradicting the claim that helper structure may legitimately differ; only casing is allowed to vary.",
+        "evidence": "It requires the same helper names and variable meanings, so it does not let style and helpers vary.",
         "passed": false,
         "graded": true
       },
       {
         "text": "Computes parity coverage as tested cells divided by (scenarios multiplied by tier-1 languages)",
-        "evidence": "'4 owned languages (Python, TypeScript, Go, Java) \u00d7 6 scenarios = 24 slots. 17 filled and in CI today.'",
+        "evidence": "'Four committed languages times six scenarios gives 24 cells.' with '17/24 (71%)'.",
         "passed": true,
         "graded": true
       },
       {
         "text": "Excludes Ruby from the denominator because it is a community language rather than tier 1",
-        "evidence": "'Ruby: 1/6. Unowned, community-contributed. Not part of parity math.'",
+        "evidence": "Ruby is listed as 'not committed' and left out of the 'Committed total'.",
         "passed": true,
         "graded": true
       },
       {
         "text": "Reports parity coverage of 17 divided by 24, approximately 71%",
-        "evidence": "The transcript states '17 filled' out of '24 slots' but never computes or states the percentage (~71%).",
-        "passed": false,
+        "evidence": "'Committed total | 17/24 (71%)'.",
+        "passed": true,
         "graded": true
       },
       {
         "text": "Compares that figure against the 90% parity target and labels the target as a baseline this policy sets rather than a published industry standard",
-        "evidence": "No 90% parity target or any target percentage is mentioned in the transcript.",
+        "evidence": "No 90% target appears.",
         "passed": false,
         "graded": true
       },
       {
         "text": "Uses the matrix cell vocabulary T for tested, P for present but untested, M for missing and S for stale",
-        "evidence": "No such T/P/M/S cell vocabulary appears; the transcript uses plain counts like '5/6' and 'gap' instead.",
+        "evidence": "It uses 'exists, runs in CI, or is absent' instead.",
         "passed": false,
         "graded": true
       },
       {
         "text": "Reads the matrix by row and by column, stating that a sparse row is a scenario supported in only one language and a sparse column is a language tiered above what the team actually staffs",
-        "evidence": "No row/column reading of the matrix in this framing is present.",
+        "evidence": "No row and column interpretation is given.",
         "passed": false,
         "graded": true
       },
       {
         "text": "Recommends either funding Java properly or demoting it, rather than leaving the column sparse under a tier-1 commitment",
-        "evidence": "The plan instead commits to fully rewriting Java to 6/6 parity ('Rewrite Java to full Python parity (6/6)') rather than proposing to fund-or-demote it.",
+        "evidence": "No demotion option is raised for Java.",
         "passed": false,
         "graded": true
       },
       {
         "text": "States that language tiers should be chosen from download or telemetry share and support-ticket volume rather than from team preference",
-        "evidence": "No discussion of how language tiers should be chosen appears in the transcript.",
+        "evidence": "Not mentioned.",
         "passed": false,
         "graded": true
       },
       {
         "text": "Requires the tiers to be published, including Ruby's community status and its untested label",
-        "evidence": "Ruby's community status is mentioned ('Ruby: no work assigned. Community-owned, no commitment to bring to parity') but there is no requirement to publish tiers as a policy artifact.",
+        "evidence": "It suggests labelling Ruby as community-maintained, but never requires publishing language tiers.",
         "passed": false,
         "graded": true
       }

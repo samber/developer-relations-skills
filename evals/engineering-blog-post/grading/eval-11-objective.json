@@ -3,55 +3,55 @@
     "expectations": [
       {
         "text": "Refuses to produce the single combined post as requested",
-        "evidence": "'\"everything that broke, so people can upgrade\" \u2192 migration-guide skill's job, not this one.' / '\"walk a new reader through their first integration\" \u2192 tutorial/quickstart skill's job, not this one.'",
+        "evidence": "\"I haven't drafted the post\"; recommends splitting.",
         "passed": true,
         "graded": true
       },
       {
         "text": "States that two patterns in one post produce a piece that satisfies neither reader",
-        "evidence": "\"'split rather than merge \u2014 two patterns in one post satisfy neither reader'\"",
+        "evidence": "\"Split rather than merge. Two patterns in one post produce a piece that satisfies neither reader.\"",
         "passed": true,
         "graded": true
       },
       {
         "text": "Routes the v1-to-v2 breaking-change content to a version migration guide instead of writing it here",
-        "evidence": "'the exhaustive method-by-method changes...live in the v2 migration guide and the v2 quickstart, linked from our docs site.'",
+        "evidence": "\"Migration guide | `version-migration-guide` skill\"",
         "passed": true,
         "graded": true
       },
       {
         "text": "Routes the build-your-first-integration walkthrough to a tutorial instead of writing it here",
-        "evidence": "'\"walk a new reader through their first integration\" \u2192 tutorial/quickstart skill's job, not this one.'",
+        "evidence": "\"`developer-quickstart-guide` or `developer-tutorial` skill\"",
         "passed": true,
         "graded": true
       },
       {
         "text": "Keeps only the auth-layer redesign story in scope for the engineering blog post",
-        "evidence": "'this post is the reasoning behind the shape of the change, not the checklist for making it.'",
+        "evidence": "\"Pattern: How We Built It, with the auth redesign as the spine.\"",
         "passed": true,
         "graded": true
       },
       {
         "text": "Proposes linking to the migration guide and the tutorial from the post rather than containing them",
-        "evidence": "'link out for the exhaustive versions.'",
+        "evidence": "Outline item 6: \"Takeaways, plus links to the migration guide and quickstart\"",
         "passed": true,
         "graded": true
       },
       {
         "text": "States that writing those companion artefacts is outside this scope",
-        "evidence": "'migration-guide skill's job, not this one' / 'tutorial/quickstart skill's job, not this one.'",
+        "evidence": "\"'writing that companion artefact' is out\"",
         "passed": true,
         "graded": true
       },
       {
         "text": "Names the pattern for the surviving auth-layer material, such as How We Built It",
-        "evidence": "'**Mode: draft. Pattern: How We Built It.**'",
+        "evidence": "\"How We Built It\"",
         "passed": true,
         "graded": true
       },
       {
         "text": "Asks for the decisions and trade-offs behind the auth redesign rather than a feature list",
-        "evidence": "'## The decisions, and what each one cost' section detailing trade-offs per decision, plus handoff item 'Have someone who worked the actual redesign confirm the six decisions and their costs are true, not just plausible.'",
+        "evidence": "Outline has \"Key decisions, each framed as options, choice and cost\"; asks for the design doc and the issues that triggered the redesign.",
         "passed": true,
         "graded": true
       }
@@ -61,55 +61,55 @@
     "expectations": [
       {
         "text": "Refuses to produce the single combined post as requested",
-        "evidence": "The transcript delivers the entire combined post \u2014 auth story, 'Everything That Broke' migration table, and 'Your First Integration' tutorial \u2014 as one document.",
+        "evidence": "It writes the combined post.",
         "passed": false,
         "graded": true
       },
       {
         "text": "States that two patterns in one post produce a piece that satisfies neither reader",
-        "evidence": "No such statement appears anywhere.",
+        "evidence": "It says \"Each section serves a different reader\" and keeps one post.",
         "passed": false,
         "graded": true
       },
       {
         "text": "Routes the v1-to-v2 breaking-change content to a version migration guide instead of writing it here",
-        "evidence": "The full 'Everything That Broke' table and code diffs are written directly in this post.",
+        "evidence": "The migration reference is written inside the post.",
         "passed": false,
         "graded": true
       },
       {
         "text": "Routes the build-your-first-integration walkthrough to a tutorial instead of writing it here",
-        "evidence": "The full 'Your First Integration' six-step walkthrough with troubleshooting is written directly in this post.",
+        "evidence": "The tutorial is written inside the post.",
         "passed": false,
         "graded": true
       },
       {
         "text": "Keeps only the auth-layer redesign story in scope for the engineering blog post",
-        "evidence": "The post's scope spans the auth story plus the complete migration guide and tutorial, not auth alone.",
+        "evidence": "All three jobs are kept.",
         "passed": false,
         "graded": true
       },
       {
         "text": "Proposes linking to the migration guide and the tutorial from the post rather than containing them",
-        "evidence": "No proposal to link out; all content is contained directly in the post.",
+        "evidence": "Contained, not linked.",
         "passed": false,
         "graded": true
       },
       {
         "text": "States that writing those companion artefacts is outside this scope",
-        "evidence": "No such scope statement appears.",
+        "evidence": "Not stated.",
         "passed": false,
         "graded": true
       },
       {
         "text": "Names the pattern for the surviving auth-layer material, such as How We Built It",
-        "evidence": "No pattern name such as 'How We Built It' appears anywhere.",
+        "evidence": "No pattern named.",
         "passed": false,
         "graded": true
       },
       {
         "text": "Asks for the decisions and trade-offs behind the auth redesign rather than a feature list",
-        "evidence": "No question is asked; the redesign's rationale is delivered directly and completely.",
+        "evidence": "It includes a CONFIRM slot for alternatives considered, but does not ask for the decisions and trade-offs in general.",
         "passed": false,
         "graded": true
       }

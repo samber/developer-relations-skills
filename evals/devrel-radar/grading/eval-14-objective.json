@@ -3,67 +3,67 @@
     "expectations": [
       {
         "text": "States that the field's source population is predominantly B2B devtool sources, rather than implying the list is segment-neutral.",
-        "evidence": "\"this skill's canon is built for B2B devtool DevRel (podcasts about devtool growth, newsletters pitched at software buyers). Your audience is teachers, parents and teenagers, not developers. Most of that canon doesn't transfer.\"",
+        "evidence": "'The DevRel canon is dense for B2B devtools and thin for education-facing products.'",
         "passed": true,
         "graded": true
       },
       {
         "text": "Keeps the four pillars unchanged for a consumer and education-facing product, and says so explicitly.",
-        "evidence": "The transcript only states \"Pillars owned: community, enablement (advocacy not claimed, though your conference talks function like it)\" and tags entries with pillar names (e.g. \"all four\" for DeveloperRelations.com guides) without ever explicitly saying the four-pillar framework itself remains unchanged/still applies despite the product being consumer/education-facing.",
+        "evidence": "It says only that advocacy and marketing are not owned. It never says the pillars are unchanged for this segment.",
         "passed": false,
         "graded": true
       },
       {
         "text": "States that reach and community sources differ for this segment - student and hackathon networks, creator platforms - and names at least one such source.",
-        "evidence": "No mention of student networks, hackathon networks, or creator platforms anywhere in the transcript; the community/reach sources listed (Nova Escola, Porvir, CSTA, DRF, Write the Docs) are teacher-media, teacher-professional-body, or DevRel-practitioner sources, not audience-reach networks like student/hackathon/creator platforms, and no statement contrasts reach sources against the B2B baseline.",
+        "evidence": "It names Porvir, Nova Escola and Cetic.br, which are education media and not student, hackathon or creator networks.",
         "passed": false,
         "graded": true
       },
       {
         "text": "Warns that the consumer and education-facing segment is covered thinly compared with the B2B population, and that the user should treat that as a real gap.",
-        "evidence": "\"3. The existing audit says its own Brazilian/education-facing coverage is thin \u2014 that's still true here; nobody has done a dedicated sweep for \\\"Brazilian EdTech + coding-for-teens\\\" sources.\" listed under the Gaps section.",
+        "evidence": "The 'Gap in the field' section says the canon is thin for education-facing products.",
         "passed": true,
         "graded": true
       },
       {
         "text": "Names at least one Portuguese-language Brazilian DevRel source, specifically the Abacate DevRel work by Pachi Parra, with its status.",
-        "evidence": "\"Abacate DevRel (Pachi Parra) | abacatedevrel.com.br | all four | Only Portuguese-language DevRel-craft source the audit found | stale ~9-11mo \u2014 check-in, don't expect cadence\"",
+        "evidence": "'Abacate DevRel... The author is Pachi Parra... stale'.",
         "passed": true,
         "graded": true
       },
       {
         "text": "Marks that Portuguese-language source as stale with its approximate age rather than presenting it as current.",
-        "evidence": "\"stale ~9-11mo\" appears both in the Monthly table row for Abacate DevRel and in the People to follow table: \"Pachi Parra (Abacate DevRel) | ... | stale ~9-11mo\"",
+        "evidence": "'Posts ran through Dec 2025, about 9-10 months ago.'",
         "passed": true,
         "graded": true
       },
       {
         "text": "Invents no additional Portuguese-language DevRel podcast, newsletter or community to fill out the regional section.",
-        "evidence": "Only Abacate DevRel is labeled a DevRel-craft PT-BR source (\"Only Portuguese-language DevRel-craft source the audit found\"); other Brazilian entries (Nova Escola, Porvir) are explicitly education media, not DevRel sources, so no extra PT-BR DevRel source is fabricated.",
+        "evidence": "'I found one, and it is stale.' The other Portuguese entries are education media, not DevRel.",
         "passed": true,
         "graded": true
       },
       {
         "text": "Includes English-language practice sources alongside the regional ones rather than substituting one for the other.",
-        "evidence": "English-language practice sources (DRF community list, Write the Docs, Community Pulse, DeveloperRelations.com guides, Di\u00e1taxis, CHAOSS) are kept in the Weekly core and Monthly tables alongside regional entries like Nova Escola and Abacate DevRel.",
+        "evidence": "DeveloperRelations.com, Community Pulse and the DRF list.",
         "passed": true,
         "graded": true
       },
       {
         "text": "Turns the event line on because the user speaks, giving one CFP target and one attend-or-sponsor candidate, each with a confirmed date and a confirmed organiser.",
-        "evidence": "\"CFP target: CSTA Annual Conference \u2014 not verified this session, confirm current CFP window before submitting.\" and \"Attend target: Bett Brasil (S\u00e3o Paulo) \u2014 not verified this session, confirm date/organiser before booking.\" \u2014 both are explicitly flagged as unconfirmed rather than carrying a confirmed date and organiser.",
+        "evidence": "'Events: no confirmed target... all unverified'.",
         "passed": false,
         "graded": true
       },
       {
         "text": "Carries at least one verified-active source for community and at least one for enablement.",
-        "evidence": "\"Pillar coverage on verified-active sources only: community \u2705 (DRF, Community Pulse), enablement \u2705 (Write the Docs). Nova Escola doesn't count toward this \u2014 it's unverified \u2014 coverage already holds without it.\"",
+        "evidence": "Community Pulse and the DRF list are active; Write the Docs is 'active. Conferences are listed through May 2027'.",
         "passed": true,
         "graded": true
       },
       {
         "text": "Totals estimated weekly minutes against the 60-minute budget and states the ordering used.",
-        "evidence": "\"## Weekly core \u2014 54 of 60 min\" with \"Ordered by value per attention-minute, highest first.\" and confirmed again in Totals: \"54/60 weekly min (90%).\"",
+        "evidence": "'55 of 60 per week'; 'Order inside each section is value per attention-minute'.",
         "passed": true,
         "graded": true
       }
@@ -73,67 +73,67 @@
     "expectations": [
       {
         "text": "States that the field's source population is predominantly B2B devtool sources, rather than implying the list is segment-neutral.",
-        "evidence": "'\"DevRel\" as a literature/community is written almost entirely by and for API/SDK/cloud companies talking to professional developers. Your actual audience is teachers, schools, and families \u2014 not developers.'",
-        "passed": true,
+        "evidence": "There is no such statement.",
+        "passed": false,
         "graded": true
       },
       {
         "text": "Keeps the four pillars unchanged for a consumer and education-facing product, and says so explicitly.",
-        "evidence": "No explicit statement affirms that the same four pillars (advocacy/enablement/community/marketing) still apply to this segment.",
+        "evidence": "There is no such statement.",
         "passed": false,
         "graded": true
       },
       {
         "text": "States that reach and community sources differ for this segment - student and hackathon networks, creator platforms - and names at least one such source.",
-        "evidence": "No student/hackathon network or creator platform is named anywhere in the transcript.",
+        "evidence": "There is no such statement. Segment-specific names such as Hora do C\u00f3digo and Scratch Day appear only in peer and event lists.",
         "passed": false,
         "graded": true
       },
       {
         "text": "Warns that the consumer and education-facing segment is covered thinly compared with the B2B population, and that the user should treat that as a real gap.",
-        "evidence": "'Portuguese-language resources \u2014 honest gap...the discipline is still overwhelmingly English/US-UK-centric, and I'd rather say that than invent Brazilian books or communities that may not exist.'",
-        "passed": true,
+        "evidence": "The Gaps section covers only the lack of Portuguese DevRel newsletters and the unknown teacher channel.",
+        "passed": false,
         "graded": true
       },
       {
         "text": "Names at least one Portuguese-language Brazilian DevRel source, specifically the Abacate DevRel work by Pachi Parra, with its status.",
-        "evidence": "No mention of 'Abacate DevRel' or 'Pachi Parra' anywhere in the transcript; only TDC, Python Brasil, and BrazilJS are mentioned as loose adjacent options.",
+        "evidence": "It says it found \"no Portuguese DevRel-specific newsletter that I could name confidently.\"",
         "passed": false,
         "graded": true
       },
       {
         "text": "Marks that Portuguese-language source as stale with its approximate age rather than presenting it as current.",
-        "evidence": "Not applicable/not done \u2014 the specific source is never named, so no staleness marking of it occurs.",
+        "evidence": "No such source is named.",
         "passed": false,
         "graded": true
       },
       {
         "text": "Invents no additional Portuguese-language DevRel podcast, newsletter or community to fill out the regional section.",
-        "evidence": "'\"DevRel BR\" (Telegram/LinkedIn groups have existed under names like this in the past but I can't verify they're still active)' is explicitly hedged rather than confidently invented.",
+        "evidence": "\"I found no Portuguese DevRel-specific newsletter that I could name confidently.\"",
         "passed": true,
         "graded": true
       },
       {
         "text": "Includes English-language practice sources alongside the regional ones rather than substituting one for the other.",
-        "evidence": "DevRel Collective, CMX, FeverBee, Thengvall/Spinks books, and DevRelCon are all listed alongside the Brazilian-context exploration.",
+        "evidence": "Section 3 lists Thengvall, Bacon, the Orbit model and DevRel Collective.",
         "passed": true,
         "graded": true
       },
       {
         "text": "Turns the event line on because the user speaks, giving one CFP target and one attend-or-sponsor candidate, each with a confirmed date and a confirmed organiser.",
-        "evidence": "'Education-conference speaking: this is closer to EdTech marketing...If you want resources tailored to that specifically, say so' defers rather than giving a confirmed CFP target/date/organiser.",
+        "evidence": "The CFP is \"usually... the middle of the year, but verify\". No confirmed dates are given.",
         "passed": false,
         "graded": true
       },
       {
         "text": "Carries at least one verified-active source for community and at least one for enablement.",
-        "evidence": "No status/date tags accompany FeverBee, CMX, or DevRel Collective; the transcript explicitly says it lacks live web access to verify.",
+        "evidence": "\"I did not check any URL or event date live.\"",
         "passed": false,
         "graded": true
       },
       {
         "text": "Totals estimated weekly minutes against the 60-minute budget and states the ordering used.",
-        "evidence": "The guidance ('Pick one Slack/community space and one newsletter, skim on a fixed day') gives no explicit minute breakdown summing to 60 nor an ordering methodology.",
+        "evidence": "The plan sums 10+15+20+10+5=60, but no ordering is stated and no total is stated against the budget.",
         "passed": false,
         "graded": true
       }

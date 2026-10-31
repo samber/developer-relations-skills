@@ -1,35 +1,79 @@
+# Northbeam SDK samples: status and plan
+
+I worked only from your numbers. I didn't open the repo, so none of this is verified against CI.
+
 ## Where we stand
 
-4 owned languages (Python, TypeScript, Go, Java) × 6 scenarios = 24 slots. 17 filled and in CI today:
+Four committed languages times six scenarios gives 24 cells.
 
-- Python: 6/6. Done.
-- TypeScript: 5/6. 1 gap.
-- Go: 4/6. 2 gap.
-- Java: 2/6. 4 gap.
-- Ruby: 1/6. Unowned, community-contributed. Not part of parity math.
+| Language | Tested in CI | Missing or untested | Status |
+|---|---|---|---|
+| Python | 6/6 | 0 | Reference, complete |
+| TypeScript | 5/6 | 1 | Nearly done |
+| Go | 4/6 | 2 | Tested, but quality is poor |
+| Java | 2/6 | 4 | Worst on coverage and quality |
+| **Committed total** | **17/24 (71%)** | **7** | |
+| Ruby (not committed) | 1/6 | n/a | Unowned, community-contributed |
 
-7 slots missing before 4-language parity true: 1 TypeScript, 2 Go, 4 Java. "Exists untested" and "doesn't exist" both count as gap — same fix needed, write + wire into CI, since done means tested and running, not just present.
+- **Coverage gap:** 7 cells are not tested. Each one is either an untested sample or a missing one, and those need different work. Only an inventory can tell them apart.
+- **Docs risk:** untested samples in the docs can rot silently. A documented scenario with no CI is a claim we can't back.
+- **Rewrite risk:** the rewrite targets Go and Java, which are the languages with the weakest coverage. Only 6 tested Go/Java cells (4 Go, 2 Java) protect it.
+- **Ruby:** one sample runs in CI with no owner. Every SDK change can break it, and nobody is accountable for fixing it.
 
-## Risk in plan as stated
+## Concerns with "line-for-line equivalents"
 
-Plan says: rewrite Go/Java "same variable names" as Python. Literal read breaks idiom. Python uses snake_case. Go and Java use camelCase by convention, enforced by gofmt/checkstyle-type gates. Copying literal Python names into Go/Java fails those gates or reads as foreign code to native reviewers.
+I'd change one thing before starting.
 
-Fix target: structural parity, not string parity. Same scenario order, same step sequence, same helper decomposition, same comments — casing transliterated per language convention (snake_case → camelCase). Side-by-side diff still shows only syntax differences under this rule; "same variable name" becomes "same variable identity, idiomatic casing."
+1. **A diff can't show "only syntax differences" across languages.** Nothing mechanical checks the claim. Parity then depends on review discipline and erodes after the first edit.
+2. **Literal translation produces unidiomatic code.**
+   - Go has `(val, err)` returns, `context.Context` and no exceptions.
+   - Java has checked exceptions, builders and `try-with-resources`.
+   - Python-shaped helpers in those languages read as foreign code to the Go and Java developers who copy these samples.
+   - Samples are a first impression of the SDK, so this is a real DX cost.
+3. **TypeScript is not in the plan.** It is a committed language and 5/6 done. The parity rule needs to say whether TS follows Python too.
 
-## Missing info before rewrite starts
+**Recommendation:** keep your goal, but define parity structurally instead of line by line.
+- Same scenario names and the same numbered steps, in the same order.
+- Same helper names, adapted to each language's casing (`load_features` / `loadFeatures` / `LoadFeatures`).
+- Same variable meanings.
+- Idiomatic syntax and error handling.
 
-Don't know which 4 of 6 scenarios Go covers, or which 2 of 6 Java covers. Can't plan rewrite-vs-new-build per scenario without that map. First step is an audit, not code.
+Then enforce it with a check instead of eyeballing a diff. Tag each step with a marker comment such as `# step: create-client`, and have CI verify that every language has the same markers in the same order per scenario. That gives you the side-by-side comparison you want, and it keeps working after future edits.
+
+If you still want true line-for-line, that is your call. In that case Go and Java reviewers should read the result as a deliberate trade-off.
 
 ## Plan
 
-1. Audit Go's 4 covered scenarios and Java's 2 covered scenarios against Python's 6. Confirm which are structural matches already, which need full rewrite, which are net-new.
-2. Close TypeScript's 1 gap. Small, isolated, doesn't block Go/Java work. Same CI-wired bar as Python.
-3. Rewrite Go to full Python parity (6/6): fix structure on 4 existing scenarios, build 2 new ones, wire all into CI. Go first — smaller gap, proves the parity pattern before applying it to the harder case.
-4. Rewrite Java to full Python parity (6/6): fix structure on 2 existing scenarios, build 4 new ones, wire all into CI. Apply the pattern proven in step 3.
-5. Lock a parity gate: script or checklist that checks scenario order and helper-name correspondence across Python/Go/Java/TypeScript. Prevents future scenario additions from landing in one language only.
+Order matters. The tests are the safety net, so refactor under green tests first, and only then add scenarios.
 
-One scenario = one PR. Small, reviewable, matches conventional-commit style already in use.
+1. **Inventory (small).** Build one 24-cell matrix: the file exists, runs in CI, or is absent. Record the exact scenario IDs per language. The "four in Go, two in Java" counts don't say which scenarios those are. If Go's four differ from Java's two, the order below changes.
+2. **Freeze Python as the reference.**
+   - Declare each scenario's step list and helper names, taken from the Python samples.
+   - Add a rule that any Python sample change updates the parity manifest.
+   - Add the structural parity check from the recommendation above.
+3. **Go: refactor its 4 tested scenarios.** Do one scenario per PR, with CI green before and after. Check that the pre-rewrite and post-rewrite test output match.
+4. **Java: refactor its 2 tested scenarios**, same method. Do Go first because it has the larger safety net.
+5. **Close the 7 gaps, written to the parity manifest from the start.** Don't rewrite then add.
+   - TS: 1 scenario. Do it first because it is the cheapest win.
+   - Go: 2 scenarios.
+   - Java: 4 scenarios.
+   - For each cell that is untested but exists, put it under CI or remove it from the docs. Don't leave docs that claim support we don't verify.
+6. **Decide Ruby.** The options:
+   - **Keep as community-maintained.** Label it that way in the docs. Keep its one CI job as non-blocking, with a stated "may break, unsupported" policy.
+   - **Drop it.** Remove the sample and the CI job.
+   - **Promote it to a committed language.** That means five more scenarios and an owner.
 
-Ruby: no work assigned. Community-owned, no commitment to bring to parity.
+   I recommend the first option. It costs nothing new and states the support level honestly.
+7. **Done means:**
+   - 24/24 committed cells run in CI.
+   - The parity check is green.
+   - The docs list only tested samples.
+   - Ruby's status is stated.
 
-**Next action:** audit Go's 4 covered scenarios against Python's 6 scenario list, name the 2 missing. Under 15 minutes once scenario list is in hand.
+## Questions
+
+1. Is TypeScript meant to follow the Python structure too? It is not in your plan.
+2. Do you accept structural parity with a CI check instead of literal line-for-line?
+3. For the 7 gaps, do you know which samples exist untested and which are missing? If not, step 1 answers it.
+4. What is your Ruby decision: keep as community-maintained, drop, or promote?
+5. Should we freeze Python while the rewrite runs? Changes to Python mid-rewrite mean the Go and Java work has to follow them.

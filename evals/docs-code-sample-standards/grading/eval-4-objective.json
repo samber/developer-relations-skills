@@ -3,79 +3,79 @@
     "expectations": [
       {
         "text": "Places F3 first on harm rather than on any ratio or reader-count calculation",
-        "evidence": "\"1. F3 \u2014 P0 \u2014 auth setup page embeds a live-format API key\" leads the ranked queue",
+        "evidence": "\"Harms the reader who copies it. P0 goes first whatever the other numbers say.\"",
         "passed": true,
         "graded": true
       },
       {
         "text": "States explicitly that P0 findings are ordered by harm and not by the efficiency ratio",
-        "evidence": "\"Per the skill, P0 always leads 'on harm, not efficiency'; its tiny fix cost is irrelevant to the ranking\"",
+        "evidence": "\"P0 goes first whatever the other numbers say.\"",
         "passed": true,
         "graded": true
       },
       {
         "text": "Says the suspected leaked key is reported immediately rather than held for the end of the report",
-        "evidence": "F3 is placed as item #1 at the very top of the ranked queue, not deferred",
-        "passed": true,
+        "evidence": "No statement about immediate reporting. The key is only first in the queue.",
+        "passed": false,
         "graded": true
       },
       {
         "text": "Pairs the placeholder fix for F3 with rotating the exposed key, not just editing the page",
-        "evidence": "\"Fix: replace with a placeholder credential and rotate the exposed key. ~20 min + rotation.\"",
+        "evidence": "\"Rotate the key before editing the page.\"",
         "passed": true,
         "graded": true
       },
       {
         "text": "Declines to order the remaining findings strictly by severity as the user asked",
-        "evidence": "Main deliverable explicitly says \"Ordering strictly by severity gives an unambiguous first split (P0 \u2192 P1 \u2192 P2)\" and complies with that order",
+        "evidence": "\"The queue is strictly severity-first, as you asked.\"",
         "passed": false,
         "graded": true
       },
       {
         "text": "Ranks the non-P0 findings by (readers affected multiplied by severity) divided by fix effort",
-        "evidence": "\"Under that method F2 (72,000/hr) and F1 (20,000/hr) beat F5 (2,500/hr) and F4 (~12/hr)\"",
-        "passed": true,
+        "evidence": "The delivered queue uses strict severity. The ratio appears only as the skill's alternative.",
+        "passed": false,
         "graded": true
       },
       {
         "text": "States in the deliverable that the queue is a ratio rather than a severity list",
-        "evidence": "\"The skill's own ranking method (workflow step 9) is *not* a strict severity sort \u2014 it ranks below P0 by (readers affected \u00d7 severity) \u00f7 fix effort\"",
-        "passed": true,
+        "evidence": "\"This report is a severity list, not the skill's ratio queue.\"",
+        "passed": false,
         "graded": true
       },
       {
         "text": "Names F4 as the finding the ratio starves: low traffic combined with high fix effort",
-        "evidence": "\"that ratio starves the low-traffic sample that needs a whole harness built to fix it\"",
+        "evidence": "\"ratio starves a low-traffic sample that needs a whole harness... F4\".",
         "passed": true,
         "graded": true
       },
       {
         "text": "Promotes F4 by hand anyway because it sits on the primary adoption path of quickstart, auth and first call",
-        "evidence": "Main order keeps F4 at position 3, above the P2 findings; \"The skill's own guidance is to hand-promote exactly this case\"",
+        "evidence": "\"F4 is on the adoption path, so the strict order is defensible here.\"",
         "passed": true,
         "graded": true
       },
       {
         "text": "Gives the reason for that promotion rather than presenting it as an unexplained exception",
-        "evidence": "\"it's the literal 'quickstart, first call' sample the skill's pass threshold names as the primary adoption path, and it has never been compiled by anything\"",
+        "evidence": "The reason given is that F4 is on the adoption path and the ratio would starve it.",
         "passed": true,
         "graded": true
       },
       {
         "text": "Places at least one P2 finding above at least one P1 finding, showing the ratio and not severity drove the order",
-        "evidence": "Ratio order \"F3 \u2192 F2 \u2192 F1 \u2192 F5 \u2192 F4\" places F1 (P2) above F4 (P1)",
-        "passed": true,
+        "evidence": "The queue runs P0, P1, P1, P2, P2.",
+        "passed": false,
         "graded": true
       },
       {
         "text": "Identifies the missing C++ build as F4's actual blocker, making standing up that build the queue item rather than editing the sample",
-        "evidence": "\"Fix: stand up a C++ compile-only CI job for the SDK samples. ~3 engineer-weeks.\"",
+        "evidence": "\"With no C++ build in CI, every C++ sample... unverified... building it the first queue item for that language.\"",
         "passed": true,
         "graded": true
       },
       {
         "text": "Assigns an owner and a time window to each queue item",
-        "evidence": "Each item has a time estimate (e.g. \"~20 min + rotation\") but no named owner or team assigned to any finding",
+        "evidence": "No owners are assigned.",
         "passed": false,
         "graded": true
       }
@@ -85,79 +85,79 @@
     "expectations": [
       {
         "text": "Places F3 first on harm rather than on any ratio or reader-count calculation",
-        "evidence": "'P0 always first (security trump reach)... low reader count no matter.'",
+        "evidence": "'F3: auth page embeds a live-format API key | P0'. 'Rotate the key first... The key is exposed until it's rotated'.",
         "passed": true,
         "graded": true
       },
       {
         "text": "States explicitly that P0 findings are ordered by harm and not by the efficiency ratio",
-        "evidence": "'Rule used: P0 always first (security trump reach)... Reader count alone never override severity tier.'",
-        "passed": true,
+        "evidence": "There is no ratio discussion.",
+        "passed": false,
         "graded": true
       },
       {
         "text": "Says the suspected leaked key is reported immediately rather than held for the end of the report",
-        "evidence": "F3 is listed as item #1 at the top of the work order, and the closing line is 'Next: knock out F3 now \u2014 rotate key, strip from page.'",
+        "evidence": "F3 is rank 1 and the caveat says 'Rotate the key first, before you edit the page.'",
         "passed": true,
         "graded": true
       },
       {
         "text": "Pairs the placeholder fix for F3 with rotating the exposed key, not just editing the page",
-        "evidence": "'Fix 20 min + key rotation' and 'Next: knock out F3 now \u2014 rotate key, strip from page.'",
+        "evidence": "'Rotate the key first, before you edit the page.'",
         "passed": true,
         "graded": true
       },
       {
         "text": "Declines to order the remaining findings strictly by severity as the user asked",
-        "evidence": "The final order strictly preserves severity tiers (P0 > P1, P1 > P2 in all cases: F3, F2, F4, F5, F1), and the stated rule explicitly defends severity-tier ordering rather than deviating from it.",
+        "evidence": "It orders by P-level, with reader count as the tie-break.",
         "passed": false,
         "graded": true
       },
       {
         "text": "Ranks the non-P0 findings by (readers affected multiplied by severity) divided by fix effort",
-        "evidence": "No ratio formula is used or stated; ordering is explained via 'confirmed/guaranteed break + reach outrank unverified/low-reach' and 'functional/trust impact + reach outrank pure cosmetic' within severity tiers, not a readers\u00d7severity/effort ratio.",
+        "evidence": "It explicitly says 'I did not use fix effort.'",
         "passed": false,
         "graded": true
       },
       {
         "text": "States in the deliverable that the queue is a ratio rather than a severity list",
-        "evidence": "The transcript explicitly frames it as severity-tier based: 'Reader count alone never override severity tier,' the opposite of stating it is a ratio.",
+        "evidence": "It presents a severity ordering.",
         "passed": false,
         "graded": true
       },
       {
         "text": "Names F4 as the finding the ratio starves: low traffic combined with high fix effort",
-        "evidence": "F4's low readers (700/mo) and high effort (~3 eng-weeks) are noted, but not framed as being 'starved' by any ratio calculation.",
+        "evidence": "F4 is ranked above P2s purely because it is P1.",
         "passed": false,
         "graded": true
       },
       {
         "text": "Promotes F4 by hand anyway because it sits on the primary adoption path of quickstart, auth and first call",
-        "evidence": "F4 is not promoted above its natural P1 position; it simply sits third, after F2, consistent with plain severity-tier ordering, with no adoption-path reasoning given.",
+        "evidence": "No manual promotion is made.",
         "passed": false,
         "graded": true
       },
       {
         "text": "Gives the reason for that promotion rather than presenting it as an unexplained exception",
-        "evidence": "No promotion of F4 occurs, so no such reasoning is given.",
+        "evidence": "No promotion occurs.",
         "passed": false,
         "graded": true
       },
       {
         "text": "Places at least one P2 finding above at least one P1 finding, showing the ratio and not severity drove the order",
-        "evidence": "The final order is F3(P0), F2(P1), F4(P1), F5(P2), F1(P2) \u2014 no P2 item is placed above any P1 item.",
+        "evidence": "Both P1s rank above both P2s.",
         "passed": false,
         "graded": true
       },
       {
         "text": "Identifies the missing C++ build as F4's actual blocker, making standing up that build the queue item rather than editing the sample",
-        "evidence": "'F4 \u2014 P1, C++ quickstart never compiled, no CI... Fix ~3 eng-weeks (stand up CI).'",
-        "passed": true,
+        "evidence": "The C++ build is not identified as the blocker.",
+        "passed": false,
         "graded": true
       },
       {
         "text": "Assigns an owner and a time window to each queue item",
-        "evidence": "Only effort estimates are given (e.g., '20 min', '~3 eng-weeks'); no named owner is assigned to any item.",
+        "evidence": "No owners or time windows are given.",
         "passed": false,
         "graded": true
       }

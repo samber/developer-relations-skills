@@ -1,26 +1,46 @@
-## DevRelCon dates — two problems, not one
+# DevRelCon sponsorship: don't email Hoopy, and the 2026 edition has already happened
 
-**1. Wrong recipient.** Hoopy (the agency that ran DevRelCon and developerrelations.com since 2016) wound down in 2026 and handed the conference to **Major League Hacking (MLH)**. Hoopy's own site now carries only a wind-down notice — no team, no ticket desk, no sponsorship inbox behind it anymore. An email to Hoopy about packages will land nowhere useful; route the ask to MLH / the DevRelCon NYC team directly (via nyc.devrelcon.dev or MLH's own channels).
+**Verification status:** ⚠️ I couldn't re-verify any of this today because web fetch and search were denied. Everything below comes from the skill's source audit, last confirmed in August 2026. Check the first two points on the event page before you act.
 
-**2. The date on record has already passed.** The most recent confirmed DevRelCon edition is **New York, 22–23 Jul 2026, at Industry City, Brooklyn** (plus a mini-hackathon the evening of Jul 21), independently confirmed through MLH's own announcement post — ~300 attendees, 2026 programming themed on AI's effect on DevRel. Today is **23 Sep 2026**. That edition ran two months ago. There is no currently-confirmed *upcoming* DevRelCon edition anywhere in my source list — the regional editions are all stale too (Bengaluru: one edition, Dec 2024, no follow-up confirmed; Prague: last confirmed Dec 2022; China: no edition page found at all).
+## Do first
 
-So "sponsor DevRelCon this year" isn't actionable as stated — the 2026 flagship already happened. What to actually ask MLH when you email them: *is there a second 2026 edition, and if not, when's the next flagship (presumably 2027) and what are sponsorship/booth tiers and pricing.* I wasn't able to re-fetch nyc.devrelcon.dev live this session (web access was denied in this environment) — before you commit budget, confirm the next date yourself at nyc.devrelcon.dev or by asking MLH directly, since my numbers are a ~4-week-old snapshot, not a live check.
+1. **Don't email Hoopy.** The agency wound down in 2026 and handed DevRelCon to **Major League Hacking (MLH)**. Hoopy's site is now only a closure notice. Hoopy no longer runs the sponsor desk, so a message there likely goes nowhere. If you emailed Hoopy earlier, expect no reply.
+2. **Ask MLH for packages.** Start from the event page (nyc.devrelcon.dev), because MLH's own homepage doesn't mention DevRelCon. Confirm the handover on that page before you quote it in your request.
 
-One more thing worth knowing before you email: DevRelCon's audience is **DevRel practitioners**, not CI/CD buyers. A booth there buys community standing, recruiting reach, and goodwill with other DevRel people — not pipeline for Ambervale's own product. That's not a reason to skip it, just don't budget it as a lead-gen line.
+## Dates
 
-## What else is worth the $15k + booth, given a 30-person CI/CD tooling shop
+- **DevRelCon New York 2026:** 22–23 Jul 2026 at Industry City, Brooklyn, with a mini-hackathon on the evening of 21 Jul. It was about 300 attendees, themed on AI's effect on DevRel. MLH's own announcement post confirms the date and the organiser.
+- **That edition is over.** Today is 30 Oct 2026, so there is nothing left to sponsor this year.
+- **The next edition is unconfirmed.** I found no 2027 date.
+- **Other DevRelCon cities are stale or unconfirmed.** Bengaluru last ran in Dec 2024, Prague in Dec 2022, and China has no confirmed edition.
 
-Ranked by fit for you specifically — a small B2B devtool team, bottom-up developer adoption, budget-conscious:
+When you write to MLH, ask for:
+- The 2027 date and city.
+- Sponsor tiers and prices.
+- Attendee composition by role and employer type.
+- Whether the booth tier includes lead scans.
 
-| Event | Dates | Organiser | Why it ranks here | Price | Status |
-|---|---|---|---|---|---|
-| **KubeCon + CloudNativeCon NA** | Salt Lake City, 9–12 Nov | CNCF / Linux Foundation | Best audience-to-product fit on this list — CI/CD tooling buyers live in this crowd (platform engineers, cloud-native ops). Likely your strongest ROI candidate, but **verify the year before booking** — the page I have doesn't render it, and full-size KubeCon booths routinely run well past $15k, so confirm the startup/community-tier pricing before assuming it fits your budget | not fetched — confirm | active, year unconfirmed on the page |
-| **DevRelCon (next edition, via MLH)** | TBD, likely 2027 | MLH | Small (~300 people) means $15k + booth is plausible relative to scale, but it's a DevRel-practitioner audience, not your buyers — value here is community/recruiting, not pipeline | not fetched — ask MLH | date TBD, see above |
-| **WeAreDevelopers World Congress** | Berlin, 14–16 Jul **2027** | WeAreDevelopers | Large general developer audience (15,000+ claimed) — real reach, but it's a 2027 date (not this year's budget) and a 500+-sponsor event; a booth that's actually visible in that crowd is likely priced well above what you're describing. Worth a CFP submission more than a booth spend at your scale | ticket-only price known (€329–799); sponsorship cost not fetched | active |
-| **Write the Docs** | Berlin 6–8 Sep 2026 (passed), Melbourne 3–4 Dec 2026, Portland 2–4 May 2027 | Write the Docs community | Niche, enablement-pillar audience. Only worth it if docs/DX is a specific priority for you this cycle — otherwise skip | tickets, not fetched | active |
-| **CMX Loop** | 25–26 Aug 2026 (passed), 2027 edition announced | CMX (Bevy) | Online-only — no booth presence possible, so it doesn't fit a "booth budget" ask at all | not fetched | active |
-| **DeveloperWeek** | — | Informa Connect | Couldn't confirm — site blocked the automated check (403), which is not evidence it's dead, just unverified. Check manually before ruling it in or out | not fetched | unverified |
+## Is it worth $15k?
 
-**Gap worth naming honestly:** this source list is scoped to *DevRel-practice* events (conferences about the discipline itself), not the wider universe of platform-engineering/CI-CD-specific conferences. KubeCon is on the list because it crosses over; something like a dedicated DevOps/platform-engineering event wouldn't show up here even if it existed and fit you better — that's a real blind spot in this particular list, not a signal nothing else exists. If reaching CI/CD buyers directly is the actual goal (versus DevRel-community standing), it's worth a separate pass through developer-conference calendars outside this skill's scope.
+Probably not as the main spend. DevRelCon's audience is DevRel practitioners, not CI/CD buyers. That's the question you flagged on 23 Sep. The audit shows no data on how many attendees buy or influence a CI/CD tool. Treat it as a brand and peer-network play, and get the attendee breakdown from MLH before you commit.
 
-**Bottom line:** confirm KubeCon's year and pricing tier first — it's the one event here that actually reaches your buyers, and it's also the one most likely to blow the $15k+booth number. For DevRelCon, redirect the email from Hoopy to MLH, and ask about the *next* edition, not "this year's," since 2026's has already run.
+## Rest of the calendar
+
+The skill's calendar is DevRel-centric. It has **no CI/CD or DevOps buyer event**, and I won't invent one. For your buyers, check DevOps-specific events separately.
+
+| Event | Date | What it offers | Verdict for Ambervale |
+|---|---|---|---|
+| KubeCon + CloudNativeCon NA (CNCF/LF), Salt Lake City | 9–12 Nov | Cloud-native audience closest to CI/CD buyers | ⚠️ The year isn't rendered on the page, so confirm it. It's 10 days out, so sponsor slots are almost surely gone, and I have no price data. Attend or scout rather than sponsor. |
+| WeAreDevelopers World Congress, Berlin | 14–16 Jul 2027 | Large general developer audience (15,000+ claimed) | 🎯 The best-fit sponsorship candidate here. Passes are €329 early-bird, €799 regular. Booth pricing wasn't fetched. |
+| Write the Docs | Melbourne 3–4 Dec 2026; Portland 2–4 May 2027 | Docs and DX practitioners | Cheap for talks and peer learning, but not a buyer audience. |
+| CMX Summit 2027 | Announced, no date | Community-profession network | Low fit. |
+| DeveloperWeek (Informa) | Unverified | Large developer conference with a DevRel/dev-exec track | ⚠️ The site returned a 403 to my check, which is a bot-block and not evidence it's dead. Check it manually. |
+| DevFest.cz | 30 Oct 2026 (today) | Regional general developer event | Not actionable. |
+
+## Recommendation
+
+1. Request the 2027 DevRelCon dates, tiers and attendee mix from MLH. Don't commit the $15k yet.
+2. Price a WeAreDevelopers 2027 booth alongside it. It's the only event on the list with a developer-buyer audience that a $15k budget plausibly covers.
+3. Before you sign anything, write down the metric you'll judge it by, such as qualified meetings per dollar.
+
+Two questions would sharpen this. Do you also need to speak at events? And would you rather the list be built around reaching buyers or around DevRel peers? I defaulted to the first.

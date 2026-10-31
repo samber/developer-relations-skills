@@ -1,32 +1,41 @@
-Here's the minimum viable version, sized to actually fit in 25 minutes a week.
+**First action: pick one place where developers ask Ostley questions** (forum, Discord, Slack, GitHub Discussions, or Stack Overflow tag). Treat that place as "the community" for now. Don't try to cover everywhere.
 
-## The one weekly block (25 min, same time each week)
+I couldn't check DevRel Weekly. Web search wasn't granted in this session. Details are at the bottom.
 
-Pick one 25-minute slot, same day/time weekly. Don't spread it across the week in small check-ins — task-switching into "community mode" five times costs more than doing it once.
+## Minimum viable version: 25 min/week
 
-1. **Open one place only** (2 min). If people can currently reach you through more than one channel (Slack + Discord + GitHub Discussions + a forum), that's the first problem, not something to monitor. Pick the one with the most traffic, post a pinned note in the others saying "questions now go to X," and stop checking the rest. Multi-channel is a "more headcount" feature, not an MVP one.
-2. **Triage, don't chat** (15 min). Scan everything since last week. Answer only:
-   - Unanswered technical questions sitting in public — these are the ones that make the community look abandoned to a prospect evaluating your payments API.
-   - Anything from an account that matters (a known customer, a partner).
-   - Anything that's a moderation/abuse flag — use the platform's built-in mute/report tools, don't try to de-escalate personally.
-   Everything else (chit-chat, opinions, "cool, thanks") gets left alone. Silence on low-stakes threads is normal, not a failure.
-3. **Log recurring questions, don't re-answer them** (5 min). If you see the same question twice, that's a docs gap, not a chat task. Drop it in a running list. This is your actual leverage as a technical writer: fixing the doc removes the question permanently, answering it in chat removes it once.
-4. **One visible presence signal** (3 min). React/heart 2-3 good posts, or forward one interesting thread to the product/eng Slack. Costs nothing, keeps you visibly present without generating content.
+Put one fixed 25-minute block on your calendar. Do the steps in this order every week.
 
-That's it. That's the whole program.
+1. **Unanswered questions (10 min).** Sort the venue by "no replies". Answer what you can. Tag a named engineer for anything you can't answer.
+2. **Docs fix (10 min).** Find the question that came up most this week. Fix or add the docs page that answers it, then reply with the link. This is your edge as a technical writer: every repeated question becomes a docs fix.
+3. **Log (5 min).** Add one row to a spreadsheet: date, questions seen, questions with no reply, docs pages changed, and one sentence on what stood out.
 
-## Explicitly drop these (permission, not a gap)
+Anything that doesn't fit in the block waits for next week. If you add things, you'll quit by week 4.
 
-Everything a normal "developer community" playbook tells you to run — engagement calendars, onboarding sequences, recognition programs, events, ambassador programs, metrics dashboards — assumes a person or team whose job this is. You have 25 minutes. Running any of that badly is worse than not running it, because a half-alive program signals decline louder than an honestly quiet one. Don't build anything new. You're maintaining, not growing.
+## Monthly, inside the same block (about 5 min, taken from step 3)
 
-## One thing worth a single one-time hour, if you ever get it
+Read your log and write 3 lines for your manager:
 
-A pinned FAQ/canned-reply post in your main channel, linking to docs, covering your 5 most-repeated questions. This is a one-time cost that directly reduces your weekly triage load afterward. Everything else (welcome bots, auto-roles) is optional polish, not MVP.
+- Median time to first reply (read the oldest few threads).
+- Number of questions that got no reply.
+- Docs pages changed because of community questions.
 
-## Say the quiet part to your manager, in writing
+Tracking those three gives you proof that the work matters. Record them from week 1 so you have a baseline. Don't set targets until you have about 3 months of data.
 
-"I'm running community at monitoring-only capacity — triage and safety, not growth or engagement programs" is a sentence worth sending once, now, while it's fresh that this landed on you post-layoff. It sets expectations before someone notices "engagement is down" in three months and it becomes a surprise conversation instead of an already-agreed constraint.
+## What to refuse or defer
+
+- **No events, no content calendar, no social accounts.** None of them fit in 25 minutes.
+- **No new channels.** If there are several venues, watch the one with the most traffic and say the others are unattended. Better to say so than to leave a silent room looking staffed.
+- **No sentiment surveys and no champion program.** Revisit these only if you get more hours.
+- **Get answer coverage from engineers.** Ask for one named engineer per week as "on call" for community questions, about 15 minutes each. Without that, you'll be the only answerer, and you can't cover every question type alone.
+- **Tell your manager the scope in writing.** Something like: "25 min/week covers triage and docs fixes, not growth." After a layoff round, an unwritten expectation tends to grow.
 
 ## DevRel Weekly
 
-As of my knowledge (through Jan 2026), DevRel Weekly is a real, respected newsletter — a link roundup of DevRel articles curated by Matthew Revell (also behind the DevRel Collective / DevRel podcast), not a personality-driven essay newsletter. That format is a genuinely good fit for your constraint: it's skimmable in 2-3 minutes, no audio/video, no long reads required. I can't confirm from here whether it's still actively publishing right now in September 2026 — I don't have live web access in this conversation to check. Before subscribing, do a 10-second gut check: search the name, look at the most recent issue date. If it's gone quiet, don't chase a replacement — a quiet newsletter is a "nice to have" you can drop without consequence, not part of your MVP.
+I can't confirm it's still active. From memory, a newsletter by that name has existed, but I can't verify that it still publishes. To check in 2 minutes, open its archive and look at the date of the latest issue. If nothing is newer than about 3 months, skip it.
+
+You also don't need it right now. At 25 minutes a week, a newsletter competes with the block above. If you do subscribe, give it 5 minutes every other week and skip the issue if it doesn't help with the three steps. Text-only suits you, and email newsletters are text-only.
+
+## Next action (under 2 minutes)
+
+Reply with the venue name and your rough weekly question count (for example, "Discord, about 20"). I'll tighten the block to match.

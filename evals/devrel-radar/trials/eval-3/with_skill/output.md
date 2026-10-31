@@ -1,17 +1,42 @@
-## DevRel source audit — 5 inherited entries checked
+# DevRel inherited-source triage (2026-10-30)
 
-I cross-checked your five manual browser results against this skill's own dated source audit (`references/sources.md`, last confirmed Aug–Sep 2026). I don't have live web access approved in this session, so I can't re-fetch these myself right now — but all five of your findings match a documented, already-diagnosed issue, so the verdicts below are solid, not guesses. Three of five turn out to be the same trap: a dead **domain** was mistaken for a dead **source**.
+**What this is:** a verdict on the five sources you checked, based on your browser results plus the skill's recorded audit. It is not a monitoring service. Nothing here alerts you when a source dies.
 
-| # | Source | What you saw | Verdict | Why |
-|---|--------|-------------|---------|-----|
-| 1 | devrelx.com | Loads fine, but it's a brewing company | ❌ **Bin — dead** | Confirmed resold. It now points to `showmebrewing.com`, an unrelated business. Nothing to salvage here — there's no known "real" devrelx.com elsewhere. Delete outright, don't bookmark the new site by accident. |
-| 2 | karlhughes.com | "This domain is for sale" | ✅ **Keep the person, bin the URL** | A parked personal domain is a verdict on the *URL*, not on Karl Hughes. He runs Draft.dev, which was confirmed actively publishing in 2026 (a Common Room acquisition breakdown among recent posts, 3,000+ newsletter subscribers claimed). **Swap your bookmark to `draft.dev/learn`.** |
-| 3 | devrelfoundation.org | DNS error | ✅ **Keep the org, bin the URL** | That domain was always a guess, never the real one — hence NXDOMAIN, not evidence the org died. The actual Developer Relations Foundation is alive at **`dev-rel.org`**, hosted by the Linux Foundation, with a governance repo commit (28 Aug 2026), a seated Steering Committee since Nov 2025 elections, and biweekly community calls restarting 2 Sep 2026. It's also the field's only vendor-neutral practice body — worth keeping regardless. **Replace the bookmark with `dev-rel.org`.** |
-| 4 | developerweek.com | HTTP 403 | ⚠️ **Keep, unresolved — don't bin yet** | A 403 is a bot/WAF block, never proof of death — that's true even hitting it from a real browser: could be a CDN/WAF rule, a temporary block, or geo/IP reputation, none of which say anything about whether Informa Connect (a real, large events publisher) still runs the conference. Don't delete on this signal alone. Try a different network, or search "DeveloperWeek 2027" / check Informa Connect's own event listings directly, before deciding. |
-| 5 | Scaling DevTools (podcast site) | HTTP 403 | ✅ **Keep — wrong surface, not a dead show** | Already-known quirk: the marketing homepage 403s every automated fetcher, but the podcast is alive. Check the **feed** instead of the site: `feeds.transistor.fm/scaling-devtools` — last confirmed at Episode 197 (20 Aug 2026), Jack Bridger still hosting. Never judge this one by its homepage again. |
+**What I could not do:** WebFetch permission was denied, so I did not re-fetch anything live. The "recorded" evidence below comes from the skill's source audit, which was last verified in Aug–Sep 2026, about 2 months ago and inside the ~6-month window. Your own checks this morning are the only live evidence here.
 
-**Bottom line:** 1 clean bin (devrelx.com), 3 keeps that need a URL swap or a different surface (Karl Hughes → draft.dev, DevRel Foundation → dev-rel.org, Scaling DevTools → its feed, not its site), and 1 genuinely unresolved (DeveloperWeek — 403 isn't a verdict either way, dig one layer further before deciding).
+## Verdicts
 
-**Pattern worth remembering for the rest of your inherited list:** a resolving-but-wrong URL (devrelx.com), a parked domain, and a guessed domain all *look* identical to "this source is dead" — but only the first one actually is. Before binning anything else on your list, check whether the person or org publishes somewhere else (their company site, a podcast feed, a GitHub org) before you delete based on one dead link.
+| Source | What you saw | Verdict | Why |
+|---|---|---|---|
+| **devrelx.com** | Loads, but it's a brewing company | **Bin ❌** (dead) | The skill's audit records the same thing: the domain 301s to `showmebrewing.com`, an unrelated business. A resolving URL is not a live source. Remove it and don't link it. |
+| **karlhughes.com** | "Domain for sale" parking page | **Bin the URL ❌, keep the person** | The domain is dead. The skill's audit finds Karl Hughes's agency, **Draft.dev** (`draft.dev/learn`), publishing actively in 2026. It covers technical content marketing and devtool GTM. A parked personal domain says nothing about the person, so he is unverified through that URL, not inactive. Replace it with draft.dev (marketing pillar). The skill's audit says he isn't named on the pages it fetched, so you'd be following the agency, not him by name. |
+| **devrelfoundation.org** | DNS error | **Bin the URL ❌, keep the organisation** | This is a guessed domain, and a DNS failure is evidence about the guess. The real **Developer Relations Foundation** lives at **dev-rel.org** (code host: `github.com/DevRel-Foundation`). The skill's audit records it as verified-active: a Linux Foundation project, a governance commit on 28 Aug 2026, and bi-weekly community calls from 2 Sep 2026. Swap in dev-rel.org. It is the field's only vendor-neutral practice body, so it belongs near the top if you distrust vendor content. |
+| **developerweek.com** | HTTP 403 | **Keep, as unverified ⚠️** | A 403 is a bot block, not a death certificate. The skill treats 403, 5xx and consent walls as unverified, never dead. Open it in your browser. If it shows a current-year event with a date, promote it. It matters only if you speak, sponsor or host this year. |
+| **Scaling DevTools podcast** | HTTP 403 on the site | **Keep ✅** (verified-active per the audit) | The site blocks fetchers, but the feed is the datable surface: `feeds.transistor.fm/scaling-devtools`. The audit saw Ep 197 on 20 Aug 2026. Host is Jack Bridger. It covers devtool growth, DevRel and developer marketing. Add the feed to a podcast app and check the newest episode date yourself. Anything over ~3 months old means downgrade it. |
 
-If you paste in the rest of the inherited list, I'll run the same check on it. And if you want it turned into an actual prioritized, budgeted watch list (rather than just a keep/bin pass), I can run the short interview this skill uses for that — role, pillars you own, weekly time budget — that's a five-minute conversation, not a re-audit.
+## What this leaves you with
+
+- **Keep:** Scaling DevTools (feed), dev-rel.org, Draft.dev.
+- **Keep, unverified:** DeveloperWeek, until your browser shows a dated event.
+- **Bin:** devrelx.com, karlhughes.com, devrelfoundation.org. The last two are bad URLs for sources that are still alive elsewhere.
+
+## What they're selling
+
+- **Scaling DevTools:** a podcast plus a community and sponsorships.
+- **Draft.dev:** a content agency.
+- **dev-rel.org:** nothing, it's a foundation.
+- **DeveloperWeek:** conference tickets and sponsorships (Informa Connect).
+
+## Caveats
+
+- **Five of an unknown number.** You only gave me five sources from the inherited list. Send the rest and I'll triage them the same way. Before running any check, search the code host for the organisation name and read its declared website field instead of guessing domains.
+- **No full radar yet.** The skill's interview (role, pillars you own, weekly time budget, mediums, ecosystem, event plans) is needed to build a ranked watch list. I haven't asked it, because you only asked what to keep and what to bin.
+- **My checks of your 403s.** Treat my statuses for DeveloperWeek and Scaling DevTools as recorded, not re-observed today.
+
+## Manual check for the keepers (about 5 minutes)
+
+1. Open the Scaling DevTools feed and read the newest episode date. Active means within ~3 months.
+2. Open dev-rel.org, or the `DevRel-Foundation` GitHub organisation, and confirm a recent commit.
+3. Open developerweek.com in your browser. Find a dated 2026 or 2027 event and confirm the organiser.
+
+If you share the rest of the inherited list and your role, pillars and weekly time budget, I'll turn this into the full ranked watch list.
