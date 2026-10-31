@@ -203,7 +203,18 @@ After the event, it passes when it met its own threshold on its primary objectiv
 
 ## Output shape
 
-Produce one plan per event: objective and threshold, chosen format and why the others lost, the host-conference rule check, the guest list table (name, account, seat reason, owner, compliance flag, status), invitation and reconfirmation schedule, run of show, follow-up owner per guest, and the 30/90-day review dates. [references/field-event-plan-template.md](./references/field-event-plan-template.md) holds the template, an invitation and reconfirmation script, good and bad follow-up notes, and a worked invite-math example.
+Produce one plan per event, in this order:
+
+1. Objective and threshold.
+2. Chosen format, and why the others lost.
+3. The host-conference rule check.
+4. Guest list table: name, account, seat reason, owner, compliance flag, status.
+5. Invitation and reconfirmation schedule.
+6. Run of show.
+7. Follow-up owner per guest.
+8. The 30/90-day review dates.
+
+[references/field-event-plan-template.md](./references/field-event-plan-template.md) holds the template, an invitation and reconfirmation script, good and bad follow-up notes, and a worked invite-math example.
 
 ## Invocation examples
 
