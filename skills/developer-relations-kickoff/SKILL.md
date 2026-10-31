@@ -4,12 +4,12 @@ description: Before starting any developer-relations work - and again at the sta
 license: MIT
 metadata:
   author: Samuel Berthe
-  version: "1.0.22"
+  version: "1.0.23"
 ---
 
 # Developer Relations Kickoff
 
-You are the router for the 64-skill developer-relations-skills collection. Route the current DevRel task to exactly one sibling skill - or say plainly that none fits - and leave the next session warm instead of cold. Never perform a sibling's job yourself; everything else in this file serves the routing.
+You are the router for the 65-skill developer-relations-skills collection. Route the current DevRel task to exactly one sibling skill - or say plainly that none fits - and leave the next session warm instead of cold. Never perform a sibling's job yourself; everything else in this file serves the routing.
 
 Run this skill at every project start, even when the collection's skills are already in daily use elsewhere - a new project is a new context. On later sessions of the same project, re-run it to resummarize and re-route, never to re-interview.
 
@@ -154,6 +154,7 @@ These tables are deliberately unranked, and must stay that way - inside a block 
 | `samber/developer-relations-skills@engineering-blog-post`       | Write or edit a technical post for a skeptical developer reader                     |
 | `samber/developer-relations-skills@devto-playbook`              | Run the vendor's or maintainer's dev.to presence - organization, canonical cross-posting, tag rules, AI disclosure, earn-first cadence |
 | `samber/developer-relations-skills@dailydev-playbook`           | Run the vendor's or maintainer's daily.dev presence - entry path, reputation, Squads and posting gates, content policy, Boost and ads vs organic |
+| `samber/developer-relations-skills@bluesky-dev-playbook`        | Run the vendor's, advocate's or maintainer's Bluesky presence - go or skip, people-first accounts, domain handles, starter packs, dev feeds, bot and cross-posting rules |
 | `samber/developer-relations-skills@developer-case-study`        | Turn a customer deployment into a technical case study engineers believe            |
 | `samber/developer-relations-skills@technical-video-script`      | A shooting-ready screencast or motion design explainer script - beat sheet, chapters, cut list |
 | `samber/developer-relations-skills@tech-podcast-interview-prep` | Prepare to be the guest on someone else's podcast, interview or livestream          |
@@ -197,7 +198,7 @@ Name the gap explicitly when the task needs something no skill covers. Collectio
 - student and campus programs
 - writing exam items or running exam delivery (the credential program itself is `developer-certification-program`)
 - choosing a docs platform, or brand-mention monitoring, including brand share in AI answers (docs cited at the right version is covered by `developer-docs-ai-visibility`)
-- per-community playbooks for Reddit, Lobsters, X or LinkedIn (Hacker News is covered by `hackernews-playbook`, Discord by `discord-community-playbook`, daily.dev by `dailydev-playbook`); Discord bots, apps and App Directory listings
+- per-community playbooks for Reddit, Lobsters, X or LinkedIn (Hacker News is covered by `hackernews-playbook`, Discord by `discord-community-playbook`, daily.dev by `dailydev-playbook`, Bluesky by `bluesky-dev-playbook`); Discord bots, apps and App Directory listings
 - writing the slides, editing the video, or legal sign-off on anything
 
 Say "the collection has no skill for this" - never promise a skill exists or invent one.
@@ -228,7 +229,7 @@ The user's question at that moment is never "which of these 64 exists" but "whic
 1. **Diagnosis** - `developer-journey-map`, `developer-docs-structure-audit`, `devrel-competitor-analysis`, `developer-keyword-research`. Buys a named, evidenced answer to which class below is actually the problem, instead of a hunch. Costs one session over docs and signals already available; needs no engineering time and publishes nothing.
 2. **First-run surfaces** - `readme-optimization`, `developer-quickstart-guide`, `oss-contributor-onboarding`, `github-profile-optimization`, `docs-code-sample-standards`. Buys the bail-fast funnel for every developer who arrives after it ships: fewer abandonments between landing and first successful call. Costs an editing session plus one merged pull request, and it is reversible by another commit.
 3. **Release and support cadence** - `changelog-writing`, `version-migration-guide`, `developer-troubleshooting-docs`, `oss-issue-triage`, `oss-security-disclosure`, `oss-release-policy`, `docs-versioning-strategy`, `oss-maintainer-sustainability`. Buys users who can upgrade and self-serve their own errors instead of opening an issue. Costs a pass per release and a maintainer answering what the triage surfaces - it never finishes; it is a standing job, not a fix.
-4. **Content and visibility** - `engineering-blog-post`, `devto-playbook`, `dailydev-playbook`, `developer-tutorial`, `developer-how-to-guide`, `technical-video-script`, `developer-case-study`, `docs-seo`, `developer-docs-ai-visibility`, `docs-localization-strategy`, `devrel-content-calendar`, `devrel-newsletter-program`, `devrel-newsletter-issue`, `devrel-newsletter-sourcing`, `devrel-newsletter-deliverability`, `devrel-newsletter-growth`, `devrel-newsletter-sponsorship`, `build-in-public`, `oss-launch`, `producthunt-playbook`, `hackernews-playbook`, `oss-distribution-strategy`, `tech-press-relations`, `tech-podcast-interview-prep`. Buys reach that compounds - a post or a registry listing keeps earning for years. Costs a full production cycle per artefact plus review, and the payoff arrives a quarter after the work, not the week of it.
+4. **Content and visibility** - `engineering-blog-post`, `devto-playbook`, `bluesky-dev-playbook`, `dailydev-playbook`, `developer-tutorial`, `developer-how-to-guide`, `technical-video-script`, `developer-case-study`, `docs-seo`, `developer-docs-ai-visibility`, `docs-localization-strategy`, `devrel-content-calendar`, `devrel-newsletter-program`, `devrel-newsletter-issue`, `devrel-newsletter-sourcing`, `devrel-newsletter-deliverability`, `devrel-newsletter-growth`, `devrel-newsletter-sponsorship`, `build-in-public`, `oss-launch`, `producthunt-playbook`, `hackernews-playbook`, `oss-distribution-strategy`, `tech-press-relations`, `tech-podcast-interview-prep`. Buys reach that compounds - a post or a registry listing keeps earning for years. Costs a full production cycle per artefact plus review, and the payoff arrives a quarter after the work, not the week of it.
 5. **Community and events** - `developer-community-launch`, `developer-community-moderation`, `discord-community-playbook`, `developer-champions`, `developer-community-health`, `developer-meetup-program`, `developer-office-hours-program`, `devrel-webinar-program`, `developer-feedback-loop`, `developer-event-sponsorship`, `conference-cfp-submission`, `tech-talk-outline`, `developer-live-demo-design`, `oss-sponsors-fundraising`, `oss-sponsors-brand-strategy`. Buys the relationships nothing else in the collection produces. Costs the longest lead time here - a calendar someone else controls, a standing moderation duty, and months between opening a space and it being worth reading.
 6. **Program and company foundations** - `devrel-strategy`, `developer-segmentation`, `devrel-metrics`, `devrel-analytics`, `developer-survey-design`, `devrel-budget-allocation`, `devrel-team-structure`, `developer-education-strategy`, `developer-certification-program`, `devtools-business-model`, `devtools-pricing-strategy`, `developer-first-gtm`, `open-source-company-strategy`, `developer-ecosystem-strategy`, `open-standards-strategy`, `oss-governance`, `oss-license-strategy`, `oss-monetization`, `tech-employer-branding`. Buys the rule every later session is decided against: what the program is judged on, who may merge, what the company gives away. Costs sign-off outside DevRel - engineering, legal, exec - and most of it is reversible only by another negotiation.
 
