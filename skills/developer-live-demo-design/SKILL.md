@@ -4,7 +4,7 @@ description: Engineers a technical demo so it survives the stage - risk triage, 
 license: MIT
 metadata:
   author: Samuel Berthe
-  version: "1.0.3"
+  version: "1.0.4"
 ---
 
 # Live Demo Design
@@ -229,3 +229,4 @@ The engineering above is identical for every audience. The demo data and the acc
 - samber/developer-relations-skills@tech-talk-outline for where the demo belongs in the talk and how many minutes it may spend.
 - samber/developer-relations-skills@technical-video-script for scripting the recorded version of the demo.
 - samber/developer-relations-skills@developer-quickstart-guide for turning the demo path into a documented first-success path afterwards.
+- samber/developer-relations-skills@devrel-live-streaming for the recurring live coding show a demo runs inside: platform, moderation, on-screen secret safety.

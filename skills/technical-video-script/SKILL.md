@@ -17,6 +17,7 @@ Route to the matching skill in the References section instead of stretching this
 
 - a written page a reader scrolls
 - a live stage demo
+- a live stream or recurring live show (samber/developer-relations-skills@devrel-live-streaming)
 - a conference talk
 - a podcast appearance
 - deciding which videos to make this quarter, or what the company channel is for (samber/developer-relations-skills@devrel-youtube-channel)

@@ -33,6 +33,7 @@ Scope is the recurring series for developers. Siblings cover adjacent jobs:
 - Which replays and cut-downs the company YouTube channel carries: samber/developer-relations-skills@devrel-youtube-channel
 - Fitting episodes into the quarter's content plan: samber/developer-relations-skills@devrel-content-calendar
 - A private hands-on workshop for one customer or prospect account: samber/developer-relations-skills@developer-workshop-program
+- An open, chat-led live show with no registration on Twitch, YouTube Live, LinkedIn Live or X: samber/developer-relations-skills@devrel-live-streaming
 
 Typical invocations:
 
