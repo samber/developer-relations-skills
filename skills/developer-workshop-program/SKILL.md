@@ -136,7 +136,15 @@ Build each module backward: the use case the account must prove, then the eviden
 
 Effort is preparation, delivery and follow-up hours per workshop. Value is progress on the program's first job.
 
-Rough effort per workshop, order of magnitude (baseline), counting logistics, dry run, delivery and recap: short virtual follow-along, about a day; guided lab half-day from existing modules, two to three days; challenge event, about a week the first time; full day with executive session, about a week; build-on-your-use-case, a week or more plus the customer's review wait. Building a new module adds a week or more. Multiply by requests per quarter and compare with the delivery hours named in the interview.
+Rough effort per workshop, order of magnitude (baseline), counting logistics, dry run, delivery and recap:
+
+- Short virtual follow-along: about a day.
+- Guided lab half-day from existing modules: two to three days.
+- Challenge event: about a week the first time.
+- Full day with executive session: about a week.
+- Build-on-your-use-case: a week or more, plus the customer's review wait.
+
+Building a new module adds a week or more. Multiply by requests per quarter and compare with the delivery hours named in the interview.
 
 - efficiency (technical win): `guided lab half-day > short virtual follow-along > build-on-your-use-case > full day with executive session > challenge event`
 - efficiency (adoption): `short virtual follow-along > guided lab half-day > challenge event > build-on-your-use-case > full day with executive session`
