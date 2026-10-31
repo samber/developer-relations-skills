@@ -4,7 +4,7 @@ description: Builds a developer-event sponsorship plan - which conferences, meet
 license: MIT
 metadata:
   author: Samuel Berthe
-  version: "1.0.5"
+  version: "1.0.6"
 ---
 
 # Developer Event Sponsorship
@@ -110,7 +110,7 @@ No compliance-cost line at this altitude: contracts, consent and code-of-conduct
 
 - **Ecosystem-anchored** - every event sits inside one technology community. Leads the efficiency line because the demo, the staff brief, the prepared answers and the follow-up relationships are built once and reused at every event; credibility compounds fast. Effort: a month or two of preparation, then a standing job for whoever owns that community. Fails the moment the strategy needs a second ecosystem.
 - **Flagship-led** - one deep sponsorship plus small presences elsewhere. Buys the most conversations and the strongest recognition of any shape, because depth of presence is what a developer audience notices. Effort: a month or two of preparation and a standing job for the week itself. Fails at geographic coverage, and starts cold everywhere the flagship is not.
-- **Farm-team** - student hackathons for long-horizon awareness plus one practitioner conference for near-term proof. Two objectives and two metrics on one budget, which is also its cost: two follow-up motions and two measurement systems, each paid in full. Effort: the preparation of the flagship shape, doubled, and two owners.
+- **Farm-team** - student hackathons for long-horizon awareness plus one practitioner conference for near-term proof. Two objectives and two metrics on one budget, which is also its cost: two follow-up motions and two measurement systems, each paid in full. Effort: the preparation of the flagship shape, doubled, and two owners. When the student side is a standing program rather than a few events, plan it with samber/developer-relations-skills@student-developer-programs.
 - **Regional spread** - many small local events. Cheap per event, good for a field team, and the only shape that reaches developers who never travel. Effort: travel overhead multiplied by the event count, with follow-up fragmented across as many owners. Rarely reaches decision-makers.
 
 - Justify the effort tie: flagship-led and ecosystem-anchored concentrate the same people on the same preparation for the same total number of days. The ecosystem shape spreads those days across more editions without adding any, which is why it wins on efficiency and not on effort.
