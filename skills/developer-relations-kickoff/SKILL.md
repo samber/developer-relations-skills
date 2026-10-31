@@ -4,7 +4,7 @@ description: Before starting any developer-relations work - and again at the sta
 license: MIT
 metadata:
   author: Samuel Berthe
-  version: "1.0.24"
+  version: "1.0.25"
 ---
 
 # Developer Relations Kickoff
@@ -95,6 +95,7 @@ These tables are deliberately unranked, and must stay that way - inside a block 
 | `samber/developer-relations-skills@coding-agent-docs-optimization` | Make docs machine-readable so a coding agent can integrate unattended                          |
 | `samber/developer-relations-skills@docs-localization-strategy`     | Whether and how to translate the docs - locale evidence, page set, drift pins, locale ownership |
 | `samber/developer-relations-skills@docs-versioning-strategy`       | How the docs track several versions - docs state per version, switcher or latest-only, backports, banners, retirement |
+| `samber/developer-relations-skills@docs-site-platform-selection`   | Which platform the docs site runs on - whether to switch, requirements register, platform class, pilot, standing and exit cost |
 
 **Search demand for technical content:**
 
@@ -197,7 +198,7 @@ Name the gap explicitly when the task needs something no skill covers. Collectio
 - organizing your own conference or hackathon, or post-event follow-up (working the booth itself is `developer-booth-playbook`)
 - student and campus programs
 - writing exam items or running exam delivery (the credential program itself is `developer-certification-program`)
-- choosing a docs platform, or brand-mention monitoring, including brand share in AI answers (docs cited at the right version is covered by `developer-docs-ai-visibility`)
+- brand-mention monitoring, including brand share in AI answers (docs cited at the right version is covered by `developer-docs-ai-visibility`)
 - per-community playbooks for Reddit, Lobsters, X or LinkedIn (Hacker News is covered by `hackernews-playbook`, Discord by `discord-community-playbook`, daily.dev by `dailydev-playbook`); Discord bots, apps and App Directory listings
 - writing the slides, editing the video, or legal sign-off on anything
 
@@ -231,7 +232,7 @@ The user's question at that moment is never "which of these 64 exists" but "whic
 3. **Release and support cadence** - `changelog-writing`, `version-migration-guide`, `developer-troubleshooting-docs`, `oss-issue-triage`, `oss-security-disclosure`, `oss-release-policy`, `docs-versioning-strategy`, `oss-maintainer-sustainability`. Buys users who can upgrade and self-serve their own errors instead of opening an issue. Costs a pass per release and a maintainer answering what the triage surfaces - it never finishes; it is a standing job, not a fix.
 4. **Content and visibility** - `engineering-blog-post`, `devto-playbook`, `dailydev-playbook`, `developer-tutorial`, `developer-how-to-guide`, `technical-video-script`, `developer-case-study`, `docs-seo`, `developer-docs-ai-visibility`, `docs-localization-strategy`, `devrel-content-calendar`, `devrel-newsletter-program`, `devrel-newsletter-issue`, `devrel-newsletter-sourcing`, `devrel-newsletter-deliverability`, `devrel-newsletter-growth`, `devrel-newsletter-sponsorship`, `build-in-public`, `oss-launch`, `producthunt-playbook`, `hackernews-playbook`, `oss-distribution-strategy`, `tech-press-relations`, `tech-podcast-interview-prep`. Buys reach that compounds - a post or a registry listing keeps earning for years. Costs a full production cycle per artefact plus review, and the payoff arrives a quarter after the work, not the week of it.
 5. **Community and events** - `developer-community-launch`, `developer-community-moderation`, `discord-community-playbook`, `developer-champions`, `developer-community-health`, `developer-meetup-program`, `developer-office-hours-program`, `devrel-webinar-program`, `developer-feedback-loop`, `developer-event-sponsorship`, `developer-booth-playbook`, `conference-cfp-submission`, `tech-talk-outline`, `developer-live-demo-design`, `oss-sponsors-fundraising`, `oss-sponsors-brand-strategy`. Buys the relationships nothing else in the collection produces. Costs the longest lead time here - a calendar someone else controls, a standing moderation duty, and months between opening a space and it being worth reading.
-6. **Program and company foundations** - `devrel-strategy`, `developer-segmentation`, `devrel-metrics`, `devrel-analytics`, `devrel-exec-reporting`, `developer-survey-design`, `devrel-budget-allocation`, `devrel-team-structure`, `developer-education-strategy`, `developer-certification-program`, `devtools-business-model`, `devtools-pricing-strategy`, `developer-first-gtm`, `open-source-company-strategy`, `developer-ecosystem-strategy`, `open-standards-strategy`, `oss-governance`, `oss-license-strategy`, `oss-monetization`, `tech-employer-branding`. Buys the rule every later session is decided against: what the program is judged on, who may merge, what the company gives away. Costs sign-off outside DevRel - engineering, legal, exec - and most of it is reversible only by another negotiation.
+6. **Program and company foundations** - `devrel-strategy`, `developer-segmentation`, `devrel-metrics`, `devrel-analytics`, `devrel-exec-reporting`, `developer-survey-design`, `devrel-budget-allocation`, `devrel-team-structure`, `developer-education-strategy`, `developer-certification-program`, `devtools-business-model`, `devtools-pricing-strategy`, `developer-first-gtm`, `open-source-company-strategy`, `developer-ecosystem-strategy`, `open-standards-strategy`, `oss-governance`, `oss-license-strategy`, `oss-monetization`, `tech-employer-branding`, `docs-site-platform-selection`. Buys the rule every later session is decided against: what the program is judged on, who may merge, what the company gives away. Costs sign-off outside DevRel - engineering, legal, exec - and most of it is reversible only by another negotiation.
 
 `devrel-career` and `devrel-radar` sit outside this ladder, not at the bottom of it. They answer a personal-practice or stay-current question, not a program question; when that _is_ the goal they are rung 1 by definition, and otherwise they don't belong on the short-list at all.
 

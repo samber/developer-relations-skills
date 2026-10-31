@@ -147,6 +147,7 @@ This collection covers the full developer-relations surface.
 - [`coding-agent-docs-optimization`](./skills/coding-agent-docs-optimization): Makes SDK, API or protocol docs something a coding agent integrates from unattended: crawler access, machine-readable entry points, self-contained pages, a measured success rate.
 - [`docs-versioning-strategy`](./skills/docs-versioning-strategy): Decides how developer docs track several product, library or API versions: whether to version at all, a docs state per version (next, current, maintained, frozen, archived) derived from the support table, a ranked topology ladder from latest-only to a version switcher, source layout, a priced doc-fix backport rule, outdated-version banners and a retirement procedure.
 - [`docs-localization-strategy`](./skills/docs-localization-strategy): Decides whether and how to localize developer docs per language: evidence that the source language is the barrier, a ranked translation ladder, the page set, source-commit pins with a bundled drift check, and an ownership gate before launch.
+- [`docs-site-platform-selection`](./skills/docs-site-platform-selection): Decides whether a developer docs site should change platform, then picks the platform class and product through a requirements register, a pilot on the hardest pages, and standing and exit cost.
 
 ### Discoverability & SEO
 
