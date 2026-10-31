@@ -58,7 +58,12 @@ Answers 2, 4 and 5 re-rank the surfaces below; say which answer moved which row.
 
 1. Named engineers publish under their own accounts; Boost weighs first-hand experience [platform].
 2. Solo maintainer: own profile, no publication. Two or more writers: a company publication, owned by a company-controlled account with a paid membership, never a departing engineer's [platform: creating one needs membership; one user owns up to 7].
-3. Before the first import, agree with each engineer, in their employment or IP terms rather than as a publication condition: they may import company posts, canonicals stay on the company domain, and on departure stories stay up, free and in the publication. Each story stays under its author's control; editors may not delete it or remove it from the paywall without the writer [platform]. Never require outside or partner writers to grant republishing rights to submit [platform].
+3. Sign a retention agreement with each engineer before the first import. Put it in their employment or IP terms, not in a publication condition. It covers three points:
+   - they may import company posts;
+   - canonicals stay on the company domain;
+   - on departure, their stories stay up, free and in the publication.
+
+   The agreement is needed because each story stays under its author's control: editors may not delete it or remove it from the paywall without the writer [platform]. Never require outside or partner writers to grant republishing rights to submit [platform].
 4. Keep a brand account for release notes only, written to be useful without the product link, expecting followers-only reach.
 5. Keep the canonical original on the company domain: it is the copy you control. A publication owner may not move authors' stories off Medium without each author's permission, and a custom domain pointed away gets disconnected [platform]. Medium can also redirect a custom domain's URLs to medium.com, as Towards Data Science reported in 2025 [practitioner].
 
