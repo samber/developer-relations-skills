@@ -106,6 +106,8 @@ Read the question's subject. "Which tier should we pick on this maintainer's pag
 3. `samber/developer-relations-skills@developer-community-health` - measurement, once there is enough activity to have a baseline.
 4. `samber/developer-relations-skills@developer-champions` - recognition and obligations for the top members, once a reliable top exists.
 
+The venue's own operations sit beside this timeline once the venue is Discourse or a similar self-hosted forum: `samber/developer-relations-skills@discourse-forums-playbook` owns categories and tags, trust levels, spam controls, seeding a chosen forum without sock puppets, Solved, what Hot, Top and the summary email reward, and forum SEO. "Should we open a forum or a Discord" stays with community-launch; "our Discourse has 41 categories and nobody answers" routes to the playbook; a code of conduct stays with moderation, even on Discourse.
+
 Recurring question sessions sit beside this timeline, not on it: `samber/developer-relations-skills@developer-office-hours-program` designs office hours or a standing AMA at any stage - format, time-zone slot, engineer rotation, scope card, write-up loop. "Our office hours get three people" routes there, not to community health; the requests those sessions surface route on to `samber/developer-relations-skills@developer-feedback-loop`.
 
 Platform mechanics sit beside the timeline too: `samber/developer-relations-skills@discord-community-playbook` runs a Discord server once the venue is chosen (onboarding, forum help, announcements, Discovery, web pages) and staff posting in other people's servers. "Should we open a Discord" stays with community launch; "our Discord got raided" or its code of conduct stays with moderation; a metric framework across Discord, Slack and forums stays with community health.
@@ -199,6 +201,7 @@ Ask who is hiring whom.
 - Product-user onboarding (in-app) → not `samber/developer-relations-skills@oss-contributor-onboarding`, which is about code contribution.
 - Reading or tracking Product Hunt launches, topics or leaderboards through its API → not `samber/developer-relations-skills@producthunt-playbook`, which covers how to take part on the site; outside the collection.
 - Building a Discord bot, a Discord app or an App Directory listing → not `samber/developer-relations-skills@discord-community-playbook`, which covers native server features and posting conduct; outside the collection. A conference's or hackathon's event-time Discord → `samber/dev-event-organizer-skills`.
+- Installing, upgrading, theming or writing plugins for a Discourse instance, or a member asking how to rank up on someone else's forum → not `samber/developer-relations-skills@discourse-forums-playbook`, which covers the operator's community decisions; outside the collection. Forum single sign-on, embedding and the forum API → `samber/developer-platform-skills@developer-portal-design`.
 - Fetching, summarizing or monitoring Hacker News stories through its API → not `samber/developer-relations-skills@hackernews-playbook`, which covers how to take part on the site; outside the collection.
 - Brand or marketing-page share in AI answers, or the docs site's own AI assistant → not `samber/developer-relations-skills@developer-docs-ai-visibility`, which covers third-party assistants citing the docs; outside the collection.
 
