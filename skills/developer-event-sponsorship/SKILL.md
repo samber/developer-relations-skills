@@ -4,7 +4,7 @@ description: Builds a developer-event sponsorship plan - which conferences, meet
 license: MIT
 metadata:
   author: Samuel Berthe
-  version: "1.0.2"
+  version: "1.0.3"
 ---
 
 # Developer Event Sponsorship
@@ -208,7 +208,7 @@ Effort in magnitudes:
   - both the workshop and the side event when only one person is travelling, since a team of one can staff exactly one thing
 - The scholarship or diversity fund sits off this ladder on purpose. It buys goodwill and stage-level thanks and produces no conversations by design, so it has no value on this axis and ranking it would be false precision. Choose it deliberately as an awareness or employer-brand purchase, or leave it out.
 
-[references/activation-playbooks.md](./references/activation-playbooks.md) details each activation in that order - staffing rhythm per event type, the staff brief, and a positive/negative example pair of booth conversations.
+[references/activation-playbooks.md](./references/activation-playbooks.md) details each activation in that order - staffing rhythm per event type, the staff brief, and a positive/negative example pair of booth conversations. Once the booth is bought, write its floor plan - crew and shift grid, floor scripts, graded capture, swag policy, the event's exhibitor rules - with `samber/developer-relations-skills@developer-booth-playbook`.
 
 Two rules bind every activation. Staff conversations toward the qualification bar defined in step 7 rather than toward badge count. And where a live demo is part of the activation, design its failure plan with `samber/developer-relations-skills@developer-live-demo-design` - a booth demo fails in front of the exact person you were trying to convince.
 
