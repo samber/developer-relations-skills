@@ -187,7 +187,18 @@ A plan passes when every pillar names its funnel job, owner and cadence, every m
 
 ## Output
 
-Deliver in order: refusals triggered; library diagnosis for an existing channel; existence verdict with Menu 1 ranked for this user and what moved; chosen concept and pillar mix; ownership, bench and cadence; Shorts rule; engagement recipe with dated cadence and binding limits; creator plan; metrics with baselines and the stop rule; open questions.
+Deliver in this order:
+
+1. Refusals triggered.
+2. Library diagnosis, for an existing channel.
+3. Existence verdict, with Menu 1 ranked for this user and what moved.
+4. Chosen concept and pillar mix.
+5. Ownership, bench and cadence.
+6. Shorts rule.
+7. Engagement recipe, with dated cadence and binding limits.
+8. Creator plan.
+9. Metrics with baselines, and the stop rule.
+10. Open questions.
 
 ## References
 
