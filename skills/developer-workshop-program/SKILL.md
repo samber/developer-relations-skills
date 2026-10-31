@@ -22,6 +22,8 @@ You are an experienced developer-education and field-engineering lead. The user 
 
 A workshop for one account is a step in that account's buying or adoption path, not a training gift. It earns its cost only when three things are true before the date is set: the account qualifies, the lab works on the account's own network, and a next step is already agreed. Most failed workshops miss one of the three, and a bad workshop is worse than none: attendees leave believing the product is hard.
 
+Attention is the scarcest input. People drift: they check email, get stuck alone, or lose the thread during a talk. A drifting room produces no checkpoint and no next step, so the workshop is wasted. Keep a steady rhythm, make every minute concrete, and send attendees to a hands-on exercise within minutes, never after a long talk (Step 6a).
+
 Scope is the vendor-delivered workshop for a single account. Siblings cover adjacent jobs:
 
 - A hands-on session inside a conference or public event, room and helper mechanics: samber/dev-event-organizer-skills@workshop-program-design
@@ -125,6 +127,7 @@ Build each module backward: the use case the account must prove, then the eviden
 - Keep a catalog of reusable modules; pick and order modules per account from the discovery notes. Build a new module only when two or more qualified accounts need the same missing use case (baseline).
 - Title each module by the developer's problem, not the product feature.
 - Give every exercise a checkpoint that a script can verify, and ship its solution state, so a stuck attendee can skip forward without the room waiting.
+- Open each module with an exercise, not an explanation. Give the concept in a block of 5-10 minutes, only when the next checkpoint needs it.
 - Keep modules 60-90 minutes each; one lab-platform vendor recommends this size because short modules are easier to finish, maintain and reuse as demos.
 
 ```
@@ -160,7 +163,7 @@ Building a new module adds a week or more. Multiply by requests per quarter and 
 - **Full day with executive session** - labs plus a roadmap or architecture readout for decision makers (MongoDB's full-day kit ends with a 75-minute executive session). Serves the sale more than the learning.
 
 - Justify the compliance tie: the three tied formats run on vendor-held environments with synthetic data, so none triggers a customer review.
-- Default: guided lab half-day, lecture blocks under 15 minutes, hands-on most of the time, a 20-minute closing readout with the decision maker (baseline). No vendor publishes a hands-on ratio; MongoDB's full-day kit gives two 90-minute workshop blocks out of about six hours.
+- Default: guided lab half-day, first exercise within 10 minutes of the start, lecture blocks under 10 minutes, hands-on most of the time, a 20-minute closing readout with the decision maker (baseline). No vendor publishes a hands-on ratio; MongoDB's full-day kit gives two 90-minute workshop blocks out of about six hours.
 - What this order starves: build-on-your-use-case, highest value for a technical win and highest effort. Promote it when the opportunity has a written evaluation plan and the champion has cleared the data question.
 - Cap a workshop at one day of delivery: anything longer is paid training or professional services. A build-on-your-use-case split into sessions over an evaluation stays presales.
 
@@ -213,6 +216,25 @@ Rehearse every workshop: never walk in with an untested lab, and dry-run on the 
 4. Dry run on the customer network (Step 5) and the automated checkpoint test (Step 4).
 5. Brief the AE: their role in the room is the opening, the readout and the next-step conversation with the champion. An AE who sits at the back while the SE carries the day wastes the one meeting the workshop bought.
 
+## Step 6a - Keep the room moving on the day
+
+Attendees disperse when the pace drops or the task turns abstract. Hold the rhythm, and keep every step concrete.
+
+1. Open in 5-10 minutes: the goal, the one use case, the result each attendee will hold at the end. No company or product overview.
+2. Start exercise 1 within 10 minutes of the start (baseline). The first win comes early, so attendees see the product work before attention fades.
+3. Cap every talk block at 10 minutes. Follow each block with an exercise that ends in a checkpoint. Never run a 30-minute talk before the first lab.
+4. End every exercise in something visible: a running query, a deployed endpoint, a passing check. Never write "explore" or "try it out".
+5. Time-box each exercise on a visible clock. Take a 10-15 minute break every 60-90 minutes, and regroup on a checkpoint after it.
+6. Show progress live: the check scripts post to a shared board or channel. A helper goes to anyone stuck for 5 minutes (baseline) without waiting for a question.
+7. Cut explanation, never the exercise, when the room runs late. Send stuck attendees to the solution state of that checkpoint.
+8. Move architecture and background to a one-page handout read at the point of need, not a slide block ahead of the lab.
+9. Virtual: ask for a checkpoint result in chat after each module. Silence means stuck; a named helper per breakout room follows up.
+
+```
+✓ Good - 5-minute goal, then "ingest ten events and see them in the dashboard" at minute 8; concept block after checkpoint 1
+✗ Bad - 30 minutes of architecture slides, then "now try the lab" at minute 40
+```
+
 ## Step 7 - Agree the next step, then follow up
 
 Write the next-step agreement with the champion before the date is set:
@@ -258,15 +280,16 @@ Review the program each quarter. The first gated quarter sets the baselines; app
 
 ## Failure modes
 
-| Failure                    | What it looks like                                          | Fix                                                       |
-| -------------------------- | ----------------------------------------------------------- | --------------------------------------------------------- |
-| Goodwill workshop          | Granted to soothe a renewal; no champion, no next step      | Grant rule, decline-with-alternative                      |
-| Feature tour               | Two hours of slides, one lab at the end                     | Backward design, lecture blocks under 15 minutes          |
-| Lab dies at minute zero    | VPN blocks the trial cluster, sign-ups fail                 | Provisioned environments, dry run on the customer network |
-| Free professional services | Third workshop for the same account, now on their migration | Route to paid training or services                        |
-| Wrong room                 | Twenty practitioners, nobody who chooses the vendor         | Decision maker at the opening or readout                  |
-| Sales theatre              | Attendees get cold calls the next day                       | Attendees get help; AE works the champion                 |
-| Vendor-stat business case  | "Labs lift trials from 14% to 40%" in the deck              | Own baseline and matched comparison                       |
+| Failure                    | What it looks like                                                 | Fix                                                                          |
+| -------------------------- | ------------------------------------------------------------------ | ---------------------------------------------------------------------------- |
+| Goodwill workshop          | Granted to soothe a renewal; no champion, no next step             | Grant rule, decline-with-alternative                                         |
+| Feature tour               | Two hours of slides, one lab at the end                            | Backward design, lecture blocks under 10 minutes                             |
+| Room drifts                | Long opening talk, attendees on email, nobody reaches checkpoint 1 | Exercise 1 within 10 minutes, talk blocks under 10, progress board (Step 6a) |
+| Lab dies at minute zero    | VPN blocks the trial cluster, sign-ups fail                        | Provisioned environments, dry run on the customer network                    |
+| Free professional services | Third workshop for the same account, now on their migration        | Route to paid training or services                                           |
+| Wrong room                 | Twenty practitioners, nobody who chooses the vendor                | Decision maker at the opening or readout                                     |
+| Sales theatre              | Attendees get cold calls the next day                              | Attendees get help; AE works the champion                                    |
+| Vendor-stat business case  | "Labs lift trials from 14% to 40%" in the deck                     | Own baseline and matched comparison                                          |
 
 ## References
 

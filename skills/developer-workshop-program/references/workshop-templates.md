@@ -71,12 +71,11 @@ Input: prospect, use case "ingest events and query them", 14 engineers, champion
 Output:
 
 ```
-09:00  Welcome, goal of the day, success criterion (champion + SE)          10 min
-09:10  Problem framing: the use case in their words                         10 min
-09:20  Module 1 - lab (checkpoints 1-3)                                     60 min
-10:20  Break                                                                15 min
-10:35  Debrief module 1, 10-minute concept block                            15 min
-10:50  Module 2 - lab (checkpoints 4-6)                                     60 min
+09:00  Welcome, goal of the day, success criterion (champion + SE)          5 min
+09:05  Module 1 - lab (checkpoints 1-3, checkpoint 1 within 10 minutes)     70 min
+10:15  Break                                                                15 min
+10:30  Debrief module 1, 10-minute concept block                            10 min
+10:40  Module 2 - lab (checkpoints 4-6)                                     70 min
 11:50  Readout with the director: checkpoint results, next step             20 min
 12:10  Close; take-home lab path and help channel                           5 min
 Staffing: 1 instructor + 2 helpers (14 attendees, ~1 per 10, rounded up)
@@ -86,8 +85,7 @@ Staffing: 1 instructor + 2 helpers (14 attendees, ~1 per 10, rounded up)
 
 ```
 00:00  Goal and success criterion                    5 min
-00:05  Concept block                                 10 min
-00:15  Lab, instructor builds while attendees build  60 min (helpers in breakout rooms, one each)
+00:05  Lab, instructor builds while attendees build  70 min (helpers in breakout rooms, one each; concept in 5-minute inserts between checkpoints)
 01:15  Results, questions, next step                 15 min
 ```
 
@@ -134,7 +132,7 @@ Attendees keep the lab here: <take-home path>; questions go to <help channel>.
 [ ] Dry run on the customer network with one onsite attendee
 [ ] Environment time-to-live longer than the session
 [ ] Helpers briefed: attendees type, helpers point
-[ ] Lecture blocks under 15 minutes
+[ ] First exercise within 10 minutes; lecture blocks under 10 minutes
 [ ] Readout slot with the decision maker held
 [ ] Teardown scheduled; take-home path and cleanup steps sent
 ```

@@ -35,7 +35,7 @@
         "Adds level 2 checkpoint completion, level 3 attendee activity in their own account at 30 and 60 days, and level 4 next-step execution or POC start",
         "Proposes comparing workshop accounts with declined or deferred qualified requests or matched opportunities without a workshop",
         "States that workshop accounts are selected for momentum so raw influenced pipeline overstates the effect",
-        "Replaces two hours of slides with a hands-on majority and lecture blocks under about 15 minutes",
+        "Replaces two hours of slides with a hands-on majority and lecture blocks under about 10 minutes and a first exercise within 10 minutes",
         "Gives a quarterly continue rule tied to next-step execution rate rather than survey score",
         "Labels thresholds it sets itself as baselines to replace with the program's own figures"
       ]
@@ -111,7 +111,7 @@
         "Ships a solution state per checkpoint so a stuck attendee can skip forward",
         "Titles modules by the developer's problem rather than product features, with a good/bad example",
         "Defaults to a half-day guided lab rather than a full day",
-        "Caps lecture blocks at about 15 minutes with hands-on taking most of the time",
+        "Caps lecture blocks at about 10 minutes with hands-on taking most of the time",
         "Ranks workshop formats by efficiency and names build-on-your-use-case as the high-value, high-effort option the order starves, with a promotion condition",
         "Keeps a closing readout slot with the decision maker"
       ]
