@@ -137,7 +137,10 @@ Hackathon sponsorship and student credentials sit outside this table: route them
 
 - Leaders 18 or older with more than a year left before graduating, the GitHub Campus Experts rule.
 - Two co-leads from different years per campus, a written handover before the last term, alumni status after.
-- Choose an intake shape. Selective cohort with training (GitHub Campus Experts) when the owner has few hours or few campuses. Open registration with milestones (Microsoft Student Ambassadors since 2026) only when reach is the job and someone reviews milestones weekly. Milestones reward what the student learns and ships, never reach or signup counts: those are the banned quota renamed.
+- Choose an intake shape:
+  - Selective cohort with training (GitHub Campus Experts): when the owner has few hours or few campuses.
+  - Open registration with milestones (Microsoft Student Ambassadors since 2026): only when reach is the job and someone reviews milestones weekly.
+- Reward what the student learns and ships in milestones, never reach or signup counts: those are the banned quota renamed.
 - A club belongs to the university: check its student-organization rules on names, sponsors and money before branding one.
 - Perks are access and learning: credits, training, a non-transferable certification voucher, a reference letter, a guaranteed intern interview where headcount exists.
 
