@@ -174,6 +174,7 @@ This collection covers the full developer-relations surface.
 - [`developer-live-demo-design`](./skills/developer-live-demo-design): Engineers a technical demo so it survives the stage: risk triage, enterable checkpoints, a one-command reset, offline mode, and a recorded fallback, shipped as a runbook.
 - [`developer-event-sponsorship`](./skills/developer-event-sponsorship): Builds a developer-event sponsorship plan: which events to sponsor at which tier, the on-site activation, and how to prove the money worked.
 - [`developer-booth-playbook`](./skills/developer-booth-playbook): Writes the floor plan for a booth already bought: crew and shifts, floor scripts, graded lead capture, swag policy, and the event's exhibitor rules.
+- [`developer-event-followup`](./skills/developer-event-followup): Plans the week after a developer event: who may be emailed and for what, personal notes and promised items, routing to product, community or sales, and cohort activation at 30/60/90 days.
 - [`devrel-webinar-program`](./skills/devrel-webinar-program): Designs a recurring technical webinar series for developers: the series' one job, ranked formats, seasons sized to speaker capacity, attendance diagnosis, a replay plan, and a consent-bounded handoff contract with sales.
 
 ### Open source
