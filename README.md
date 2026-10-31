@@ -164,6 +164,7 @@ This collection covers the full developer-relations surface.
 
 - [`developer-community-launch`](./skills/developer-community-launch): Decides whether, where and when to launch a developer community, then plans its seeding, first 90 days, go/no-go criteria and shutdown criteria.
 - [`developer-community-health`](./skills/developer-community-health): Designs a community health measurement framework: activity, responsiveness, contributor-funnel and sentiment metrics, honest instrumentation, and a report ending in decisions.
+- [`discourse-forums-playbook`](./skills/discourse-forums-playbook): Runs a vendor's own Discourse forum: categories and tags, trust levels, spam controls, honest seeding, Solved answers, and forum search visibility.
 - [`developer-community-moderation`](./skills/developer-community-moderation): Writes a community's code of conduct and the moderation playbook behind it: enforcement ladder, reporting channels, incident runbook, moderator roster, platform controls.
 - [`discord-community-playbook`](./skills/discord-community-playbook): Runs a developer product's Discord presence: own-server setup, forum help, announcements, Discovery and web-indexing decisions, and staff conduct in other people's servers.
 - [`developer-feedback-loop`](./skills/developer-feedback-loop): Designs how developer feedback reaches product and comes back: one record of truth, problem-first records, a product-owned decision review, public status replies including the no, and loop metrics.
