@@ -137,6 +137,7 @@ Two more sound like strategy and are not interchangeable with the five above:
 - `samber/developer-relations-skills@technical-video-script` is for your own recorded video.
 - `samber/developer-relations-skills@engineering-blog-post` is the written form.
 - `samber/developer-relations-skills@devto-playbook` publishes that written form on dev.to - organization account, canonical cross-posting, tag rules, AI disclosure, cadence - and never drafts it.
+- `samber/developer-relations-skills@dailydev-playbook` distributes that written form on daily.dev - entry path (source, New Post, Squad, Verified Company Squad), reputation, Squad posting gates, content policy, Boost and ads vs organic - and never drafts it.
 - `samber/developer-relations-skills@developer-case-study` is the customer's story rather than yours.
 - `samber/developer-relations-skills@devrel-content-calendar` plans the quarter these pieces land in and never writes them.
 - `samber/developer-relations-skills@devrel-newsletter-program` designs a standing newsletter as a programme - whether to run one, cadence, template, owner, sunset - and never writes an issue. Release notes stay with `samber/developer-relations-skills@changelog-writing`; the quarter's slot plan stays with the calendar.
@@ -191,6 +192,7 @@ Ask who is hiring whom.
 - Certifying a partner's connector or integration rather than a person → not `samber/developer-relations-skills@developer-certification-program`; recommend `samber/developer-platform-skills@connector-certification-program`. Admitting a partner's app to a marketplace → `samber/developer-platform-skills@app-marketplace-review`.
 - Building the slides, editing the video, running the camera → outside the collection.
 - Drafting a dev.to article → not `samber/developer-relations-skills@devto-playbook`, which only covers publishing and engaging there; route to `samber/developer-relations-skills@engineering-blog-post`. Administering a self-hosted Forem instance → outside the collection.
+- Drafting the post for daily.dev → not `samber/developer-relations-skills@dailydev-playbook`, which only covers distributing and engaging there; route to `samber/developer-relations-skills@engineering-blog-post`. Reading the daily.dev feed through its API or MCP server, adding "Sign in with daily.dev", or recruiting through Career Mode → outside the collection.
 - Product-user onboarding (in-app) → not `samber/developer-relations-skills@oss-contributor-onboarding`, which is about code contribution.
 - Reading or tracking Product Hunt launches, topics or leaderboards through its API → not `samber/developer-relations-skills@producthunt-playbook`, which covers how to take part on the site; outside the collection.
 - Building a Discord bot, a Discord app or an App Directory listing → not `samber/developer-relations-skills@discord-community-playbook`, which covers native server features and posting conduct; outside the collection. A conference's or hackathon's event-time Discord → `samber/dev-event-organizer-skills`.
@@ -230,7 +232,7 @@ State these plainly as gaps. Do not route to a neighbour.
 - Organizing your own conference or hackathon, conference booth operations, post-event follow-up.
 - Student and campus programs. A developer newsletter is _not_ a gap at programme level - `samber/developer-relations-skills@devrel-newsletter-program` owns it; writing one issue is not a gap either - `samber/developer-relations-skills@devrel-newsletter-issue` owns it; finding each issue's items belongs to `samber/developer-relations-skills@devrel-newsletter-sourcing`; inbox placement belongs to `samber/developer-relations-skills@devrel-newsletter-deliverability`; list growth belongs to `samber/developer-relations-skills@devrel-newsletter-growth`; selling its sponsor slots belongs to `samber/developer-relations-skills@devrel-newsletter-sponsorship`.
 - Choosing a docs platform, and monitoring brand mentions across developer channels or brand share in AI answers. Docs cited at the right version in AI answers is _not_ a gap - `samber/developer-relations-skills@developer-docs-ai-visibility` owns it.
-- Per-community playbooks for Reddit, Lobsters, X or LinkedIn. Hacker News is _not_ a gap - `samber/developer-relations-skills@hackernews-playbook` owns it.
+- Per-community playbooks for Reddit, Lobsters, X or LinkedIn. Hacker News is _not_ a gap - `samber/developer-relations-skills@hackernews-playbook` owns it; nor is daily.dev - `samber/developer-relations-skills@dailydev-playbook` owns it.
 - Producing any final asset: slides, video files, rendered graphics, published pages.
 - Legal advice of any kind.
 
