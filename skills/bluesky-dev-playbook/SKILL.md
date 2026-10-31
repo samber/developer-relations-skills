@@ -50,7 +50,15 @@ One question per message; skip what the request answers. When the user wants one
 
 ## Go or skip
 
-Run this before any setup. **Skip** (say so) when no feed, pack or recognizable person in the audience's stack is active on Bluesky, or when nobody can post as a person for at least an hour a week. **Go small** (one person, replies only) when the audience is present but the product or plan is AI-forward or relies on collecting users' posts or data. **Go** otherwise. A skip verdict is a valid output, not a failure.
+Run this before any setup, and return one verdict:
+
+- **Skip**, and say so, when either holds:
+  - no feed, pack or recognizable person in the audience's stack is active on Bluesky;
+  - nobody can post as a person for at least an hour a week.
+- **Go small** (one person, replies only) when the audience is present but the product or plan is AI-forward or relies on collecting users' posts or data.
+- **Go** otherwise.
+
+A skip verdict is a valid output, not a failure.
 
 ## Accounts and identity
 
