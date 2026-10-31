@@ -54,15 +54,17 @@ A major version usually needs both, in that order. A patch release needs only th
 
 A security fix release still gets its notes from `samber/developer-relations-skills@changelog-writing`, after the advisory is public. Which lines receive the fix comes from the supported-versions table `samber/developer-relations-skills@oss-release-policy` writes. Shipping the patched package to its registry belongs to `samber/developer-platform-skills@sdk-package-publishing`.
 
-### Measurement - four skills, four layers
+### Measurement - five skills, five layers
 
 - `samber/developer-relations-skills@devrel-metrics` - which numbers deserve a target, the attribution rule, and what gets cut. The framework layer.
 - `samber/developer-relations-skills@devrel-analytics` - how those numbers get collected: event taxonomy, identity spine, link tagging, surface register. The instrumentation layer.
+- `samber/developer-relations-skills@devrel-exec-reporting` - what the funder reads: the one-page report, claim labels, leading indicators with pull-through, misses, and the budget-defense case built from the cut list. The reporting layer; it never adds a metric.
 - `samber/developer-relations-skills@developer-community-health` - the community venue only: activity, responsiveness, contributor funnel, sentiment.
 - `samber/developer-relations-skills@developer-survey-design` - asking developers directly: a recurring survey, its sample, its privacy handling, and what its published percentages may claim.
 
 - "Our numbers disagree between tools" routes to `samber/developer-relations-skills@devrel-analytics`.
-- "Leadership isn't convinced" routes to `samber/developer-relations-skills@devrel-metrics`.
+- "Leadership isn't convinced" routes to `samber/developer-relations-skills@devrel-metrics` when no agreed framework exists, and to `samber/developer-relations-skills@devrel-exec-reporting` when the framework exists and the report or the budget review is the problem.
+- "Finance wants to cut DevRel" routes to `samber/developer-relations-skills@devrel-exec-reporting` for the case to the funder; the cut list it argues from comes from `samber/developer-relations-skills@devrel-budget-allocation`.
 - "Is our Discord dying" routes to `samber/developer-relations-skills@developer-community-health`.
 - "We want to run a State of X survey and publish the numbers" routes to `samber/developer-relations-skills@developer-survey-design`; community-health supplies the sentiment items if the survey carries them.
 - "Feature requests pile up in Discord and product never sees them" routes to `samber/developer-relations-skills@developer-feedback-loop` - it carries requests to a product decision and back; community health only measures the venue.
@@ -218,7 +220,7 @@ Offer a chain only when the task genuinely decomposes. Every chain below is in d
 - **Major version release:** `samber/developer-relations-skills@version-migration-guide` → `samber/developer-relations-skills@changelog-writing` → `samber/developer-relations-skills@engineering-blog-post`.
 - **Conference season:** `samber/developer-relations-skills@conference-cfp-submission` → `samber/developer-relations-skills@tech-talk-outline` → `samber/developer-relations-skills@developer-live-demo-design`.
 - **Community from zero:** `samber/developer-relations-skills@developer-community-launch` → `samber/developer-relations-skills@developer-community-moderation` → `samber/developer-relations-skills@developer-community-health` → `samber/developer-relations-skills@developer-champions`.
-- **Proving the program:** `samber/developer-relations-skills@devrel-metrics` → `samber/developer-relations-skills@devrel-analytics` → `samber/developer-relations-skills@devrel-budget-allocation`.
+- **Proving the program:** `samber/developer-relations-skills@devrel-metrics` → `samber/developer-relations-skills@devrel-analytics` → `samber/developer-relations-skills@devrel-budget-allocation` → `samber/developer-relations-skills@devrel-exec-reporting`.
 - **Maintainer sustainability money:** `samber/developer-relations-skills@oss-sponsors-fundraising` → `samber/developer-relations-skills@build-in-public`.
 
 Each link hands the next one a named artifact. If you cannot say what gets handed over, there is no chain - route to one skill instead.
@@ -227,7 +229,6 @@ Each link hands the next one a named artifact. If you cannot say what gets hande
 
 State these plainly as gaps. Do not route to a neighbour.
 
-- The exec-facing DevRel report narrative and budget defense.
 - A trademark _usage and enforcement_ policy aimed at third parties. Who holds the mark, the domains and the registry accounts belongs to `samber/developer-relations-skills@oss-governance`; clearing a name before launch belongs to `samber/developer-relations-skills@oss-launch`; registering it before selling belongs to `samber/developer-relations-skills@oss-monetization`. Monetizing one open-source project is _not_ a gap - `samber/developer-relations-skills@oss-monetization` owns it - nor are maintainer burnout (`samber/developer-relations-skills@oss-maintainer-sustainability`) or succession and bus-factor planning (`samber/developer-relations-skills@oss-governance`: contributor absence factor, trust ladder, inactivity rule, emeritus).
 - Organizing your own conference or hackathon, conference booth operations, post-event follow-up.
 - Student and campus programs. A developer newsletter is _not_ a gap at programme level - `samber/developer-relations-skills@devrel-newsletter-program` owns it; writing one issue is not a gap either - `samber/developer-relations-skills@devrel-newsletter-issue` owns it; finding each issue's items belongs to `samber/developer-relations-skills@devrel-newsletter-sourcing`; inbox placement belongs to `samber/developer-relations-skills@devrel-newsletter-deliverability`; list growth belongs to `samber/developer-relations-skills@devrel-newsletter-growth`; selling its sponsor slots belongs to `samber/developer-relations-skills@devrel-newsletter-sponsorship`.
