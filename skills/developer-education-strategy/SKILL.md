@@ -4,7 +4,7 @@ description: Decides whether and how to invest in structured developer education
 license: MIT
 metadata:
   author: Samuel Berthe
-  version: "1.1.2"
+  version: "1.1.3"
 ---
 
 # Developer Education Strategy
