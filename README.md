@@ -177,6 +177,7 @@ This collection covers the full developer-relations surface.
 - [`developer-booth-playbook`](./skills/developer-booth-playbook): Writes the floor plan for a booth already bought: crew and shifts, floor scripts, graded lead capture, swag policy, and the event's exhibitor rules.
 - [`developer-event-followup`](./skills/developer-event-followup): Plans the week after a developer event: who may be emailed and for what, personal notes and promised items, routing to product, community or sales, and cohort activation at 30/60/90 days.
 - [`devrel-webinar-program`](./skills/devrel-webinar-program): Designs a recurring technical webinar series for developers: the series' one job, ranked formats, seasons sized to speaker capacity, attendance diagnosis, a replay plan, and a consent-bounded handoff contract with sales.
+- [`developer-workshop-program`](./skills/developer-workshop-program): Designs hands-on workshops delivered to one customer or prospect account: a grant rule with sales, a lab catalog, the lab environment standard, instructor certification, the next-step agreement and account-level metrics.
 
 ### Open source
 

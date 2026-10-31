@@ -4,7 +4,7 @@ description: Decides whether and how to invest in structured developer education
 license: MIT
 metadata:
   author: Samuel Berthe
-  version: "1.1.1"
+  version: "1.1.2"
 ---
 
 # Developer Education Strategy
@@ -22,6 +22,7 @@ Route elsewhere before starting:
 - Restructuring a docs site → `samber/developer-relations-skills@developer-docs-structure-audit`.
 - Designing the whole DevRel program → `samber/developer-relations-skills@devrel-strategy`.
 - Splitting spend across DevRel pillars → `samber/developer-relations-skills@devrel-budget-allocation`.
+- A hands-on workshop delivered to one customer or prospect account → `samber/developer-relations-skills@developer-workshop-program`.
 
 Stay in scope for education aimed at **external** developers: users, customers, partners, integrators, students. Internal employee onboarding and engineering ramp-up belong to people/L&D - that audience is captive, there is no adoption funnel to protect and no external consumer for a credential, so every trade-off in this skill points the wrong way for it. Say so and stop if that is the request.
 
