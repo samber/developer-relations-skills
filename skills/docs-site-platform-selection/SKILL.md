@@ -101,7 +101,14 @@ The ladder, ordered by efficiency - requirements met per unit of one-off plus st
 - durability: `self-hosted docs generator == hosted docs platform > spec-driven reference portal > knowledge-base CMS > custom build`
 - compliance cost, only when residency, SSO-gated pages or regulated customers apply: `hosted docs platform == knowledge-base CMS > self-hosted docs generator == custom build`; the two hosted classes tie because each needs a vendor security and subprocessor review, and the self-run classes tie because each stays inside reviews the team already passed.
 
-Read compliance cost as the vendor review it triggers; standing effort as owner hours per month; exit cost as proprietary components to convert plus export gaps; durability as how long the choice holds before pricing, vendor direction or abandoned plugins force another move. Generators and vendors tie on durability: content in Git survives a generator change (Cloudflare moved generators twice in about three years), and a vendor exit is priced on the exit-cost line. The knowledge-base CMS ranks above the custom build on exit cost because its content sits in a vendor database, while a custom build usually keeps Markdown in your own repository.
+Read each axis as follows:
+
+- **Standing effort:** owner hours per month.
+- **Exit cost:** proprietary components to convert, plus export gaps. The knowledge-base CMS ranks above the custom build here because its content sits in a vendor database, while a custom build usually keeps Markdown in your own repository.
+- **Durability:** how long the choice holds before pricing, vendor direction or abandoned plugins force another move. Generators and vendors tie here: content in Git survives a generator change (Cloudflare moved generators twice in about three years), and the exit-cost line prices a vendor exit.
+- **Compliance cost:** the vendor review it triggers.
+
+Apply these scoring rules to the ladder:
 
 - **Stay and fix scores as the current platform's class** on every axis except one-off effort, where it is lowest.
 - **Score a spec-driven portal as hosted or self-hosted** according to where it runs; its own axis is only reference-drift risk.
