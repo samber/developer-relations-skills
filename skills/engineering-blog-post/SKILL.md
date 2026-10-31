@@ -4,7 +4,7 @@ description: Writes or edits a technical blog post a skeptical developer audienc
 license: MIT
 metadata:
   author: Samuel Berthe
-  version: "1.0.3"
+  version: "1.0.4"
 ---
 
 # Engineering Blog Post
@@ -386,6 +386,7 @@ Do not attribute revenue to a single post. Overclaiming attribution costs credib
 - See `samber/developer-relations-skills@developer-case-study` for customer stories.
 - See `samber/developer-relations-skills@oss-launch` for launch announcements and their channel mechanics.
 - See `samber/developer-relations-skills@devrel-content-calendar` for scheduling this post alongside other content.
+- See `samber/developer-relations-skills@dailydev-playbook` for distributing the finished post on daily.dev.
 - See [./references/post-patterns.md](./references/post-patterns.md) for each pattern's section order, proportions and specific traps.
 - See [./references/worked-examples.md](./references/worked-examples.md) for a filled claim ledger, a benchmark disclosure block, before/after rewrites of a marketing-voice draft, a limitations section, and an edit-mode fix list.
 - See [./references/failure-modes.md](./references/failure-modes.md) for the symptom/cause/fix lookup table.
