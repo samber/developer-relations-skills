@@ -140,6 +140,7 @@ Two more sound like strategy and are not interchangeable with the five above:
 - `samber/developer-relations-skills@engineering-blog-post` is the written form.
 - `samber/developer-relations-skills@devto-playbook` publishes that written form on dev.to - organization account, canonical cross-posting, tag rules, AI disclosure, cadence - and never drafts it.
 - `samber/developer-relations-skills@dailydev-playbook` distributes that written form on daily.dev - entry path (source, New Post, Squad, Verified Company Squad), reputation, Squad posting gates, content policy, Boost and ads vs organic - and never drafts it.
+- `samber/developer-relations-skills@kaggle-playbook` publishes notebooks, datasets and models on Kaggle, answers in its competition forums and hosts competitions there; the notebook's teaching content stays with `samber/developer-relations-skills@developer-tutorial`.
 - `samber/developer-relations-skills@developer-case-study` is the customer's story rather than yours.
 - `samber/developer-relations-skills@devrel-content-calendar` plans the quarter these pieces land in and never writes them.
 - `samber/developer-relations-skills@devrel-newsletter-program` designs a standing newsletter as a programme - whether to run one, cadence, template, owner, sunset - and never writes an issue. Release notes stay with `samber/developer-relations-skills@changelog-writing`; the quarter's slot plan stays with the calendar.
@@ -198,6 +199,7 @@ Ask who is hiring whom.
 - Product-user onboarding (in-app) → not `samber/developer-relations-skills@oss-contributor-onboarding`, which is about code contribution.
 - Reading or tracking Product Hunt launches, topics or leaderboards through its API → not `samber/developer-relations-skills@producthunt-playbook`, which covers how to take part on the site; outside the collection.
 - Building a Discord bot, a Discord app or an App Directory listing → not `samber/developer-relations-skills@discord-community-playbook`, which covers native server features and posting conduct; outside the collection. A conference's or hackathon's event-time Discord → `samber/dev-event-organizer-skills`.
+- Competing to win a Kaggle competition, or scripting the Kaggle API or CLI → not `samber/developer-relations-skills@kaggle-playbook`, which covers a vendor's presence on the site; outside the collection. Publishing the same model on the Hugging Face Hub → recommend `samber/developer-platform-skills@huggingface-playbook`.
 - Fetching, summarizing or monitoring Hacker News stories through its API → not `samber/developer-relations-skills@hackernews-playbook`, which covers how to take part on the site; outside the collection.
 - Brand or marketing-page share in AI answers, or the docs site's own AI assistant → not `samber/developer-relations-skills@developer-docs-ai-visibility`, which covers third-party assistants citing the docs; outside the collection.
 
