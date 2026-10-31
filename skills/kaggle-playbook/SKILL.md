@@ -103,7 +103,11 @@ To get a package preinstalled in Kaggle's image, open an issue or PR on the Kagg
 
 ## Hosting a competition
 
-1. Pick the track: Community Competition (free, self-serve, prediction prizes up to about $25,000, host pays and ships prizes), Community Hackathon (self-serve, prize pools up to about $10,000, judged write-ups; confirm who funds the prizes), Featured Competition (partnership with Kaggle; budget class well above the Community prize cap, negotiated), or Research Competition (scientific problems, usually academic or non-profit hosts; Kaggle's research grants go only to those, so a vendor usually joins as data partner or co-sponsor).
+1. Pick the track:
+   - **Community Competition:** free, self-serve, prediction prizes up to about $25,000; the host pays and ships prizes.
+   - **Community Hackathon:** self-serve, prize pools up to about $10,000, judged write-ups; confirm who funds the prizes.
+   - **Featured Competition:** partnership with Kaggle; budget class well above the Community prize cap, negotiated.
+   - **Research Competition:** scientific problems, usually academic or non-profit hosts. Kaggle's research grants go only to those, so a vendor usually joins as data partner or co-sponsor.
 2. Tell the user that Community Competitions, like Getting Started and Playground ones, typically award no points or medals [platform], so expect students and newcomers, not Grandmasters; Featured and Research competitions usually do.
 3. Choose the winner licence before launch (OSI such as Apache 2.0 or MIT, CC-BY 4.0, or write-up only). Never plan to keep winning code proprietary without saying so in the rules.
 4. Exclude your own staff and judges from prizes in the rules.
