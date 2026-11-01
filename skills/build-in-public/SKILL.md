@@ -5,7 +5,7 @@ description: >-
 license: MIT
 metadata:
   author: Samuel Berthe
-  version: "1.0.4"
+  version: "1.0.5"
 ---
 
 # Build in Public

@@ -4,7 +4,7 @@ description: "Runs a devtool vendor's, DevRel team's or open-source maintainer's
 license: MIT
 metadata:
   author: Samuel Berthe
-  version: "1.0.2"
+  version: "1.0.3"
 ---
 
 # dev.to Playbook
