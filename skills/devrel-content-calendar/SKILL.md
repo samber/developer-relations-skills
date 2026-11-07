@@ -4,7 +4,7 @@ description: Plans a quarter of developer-relations content as a dated slot plan
 license: MIT
 metadata:
   author: Samuel Berthe
-  version: "1.0.3"
+  version: "1.0.4"
 ---
 
 # DevRel Content Calendar
@@ -207,6 +207,7 @@ Stop at plan-level metrics, and do not rebuild the following here:
 - samber/developer-relations-skills@oss-launch - the anchors this plan schedules around
 - samber/developer-relations-skills@conference-cfp-submission - the anchors this plan schedules around
 - samber/developer-relations-skills@build-in-public - transparency cadence that feeds slots
+- samber/developer-relations-skills@mastodon-dev-playbook - Mastodon slots: one post per release, never a repeated promo on a timer
 - samber/developer-relations-skills@devrel-strategy - program pillars that set the quarter's mix
 - samber/developer-relations-skills@devrel-budget-allocation - when the constraint is money rather than reviewer time
 - samber/developer-relations-skills@developer-case-study - customer story pipeline feeding this calendar's proof-content slots

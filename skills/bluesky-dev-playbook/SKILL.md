@@ -4,7 +4,7 @@ description: "Runs a devtool vendor's, developer advocate's or open-source maint
 license: MIT
 metadata:
   author: Samuel Berthe
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # Bluesky Developer Playbook
@@ -125,7 +125,7 @@ Per-surface table with each limit's kind and source: [references/platform-facts.
 
 ## Cross-posting from X or Mastodon
 
-- **Mastodon:** prefer the opt-in Bridgy Fed bridge over a copy bot. The Mastodon account opts in by following `@bsky.brid.gy@bsky.brid.gy`; some instances block the bridge, so test it from yours; replies from Bluesky users who have not bridged reach you only as an hourly DM digest, so someone still reads Bluesky directly [practitioner: Bridgy Fed's own docs].
+- **Mastodon:** prefer the opt-in Bridgy Fed bridge over a copy bot; the Mastodon side of the presence is samber/developer-relations-skills@mastodon-dev-playbook. The Mastodon account opts in by following `@bsky.brid.gy@bsky.brid.gy`; some instances block the bridge, so test it from yours; replies from Bluesky users who have not bridged reach you only as an hourly DM digest, so someone still reads Bluesky directly [practitioner: Bridgy Fed's own docs].
 - **X:** pick one home network. Cross-post original posts only, rewritten under 300 characters, with alt text and without x.com links; never cross-post replies or quote-tweets. A person reads Bluesky replies daily, or the mirror stops.
 
 ## Output

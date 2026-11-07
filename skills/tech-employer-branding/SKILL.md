@@ -4,7 +4,7 @@ description: Designs an employer-brand strategy for attracting software engineer
 license: MIT
 metadata:
   author: Samuel Berthe
-  version: "1.0.2"
+  version: "1.0.3"
 ---
 
 # Tech Employer Branding
@@ -274,5 +274,6 @@ Never build the business case on the three refused statistics, and label every s
 - samber/developer-relations-skills@github-profile-optimization: when the audit flags the code-host profile as a weak verification surface.
 - samber/developer-relations-skills@oss-launch: when the OSS-as-funnel branch needs a project actually launched.
 - samber/developer-relations-skills@build-in-public: when a founder-led public-narrative channel fits the stage.
+- samber/developer-relations-skills@mastodon-dev-playbook: posting hiring news on the fediverse from engineers' own accounts.
 - samber/developer-relations-skills@devrel-career: the mirror image of this skill for engineer candidates; route candidates there.
 - samber/developer-relations-skills@devrel-hiring: role definitions, job postings and interview loops for DevRel roles specifically; this skill stays at employer-brand strategy altitude.
