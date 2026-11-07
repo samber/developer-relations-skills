@@ -1,0 +1,460 @@
+{
+  "skill_name": "linkedin-dev-playbook",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "I'm head of marketing at Corvane, 30 people, we sell a hosted feature-flag service to platform teams (CTO or VP eng signs, $25-70k a year). Our LinkedIn company page has 2,400 followers and posts get around 250 impressions. Next quarter I want the page posting every weekday, each post linking to a blog article, and a #li-boost Slack channel where all 30 of us like and comment in the first hour. I'll write the engineers' comments for them so the message stays tight. Also turn on the My Company tab so staff get our posts automatically, and since links get a 60% penalty, I'll move every link to the first comment. Write me the plan.",
+      "expected_output": "Inverts the plan to people-first: named engineers and the founder post, the Page reshares. Refuses the like-and-comment channel as a pre-agreed engagement pod under LinkedIn's policy and refuses marketing-written comments posted by engineers. Says the My Company tab was discontinued. Refuses to quote a 60% link penalty and labels the link question. Gives ranked surfaces, a dated cadence and metrics tied to buyer roles.",
+      "files": [],
+      "expectations": [
+        "Recommends that named people (founder, advocates or engineers) post under their own names as the main channel, with the company Page resharing them.",
+        "Cites LinkedIn's rule against agreeing ahead of time to like or reshare each other's content, or calls the Slack like-and-comment channel an engagement pod.",
+        "Advises against assigning staff to like or comment on posts in the first hour, while allowing the Page to reshare or employees to be told a post exists.",
+        "Refuses or advises against engineers posting comments that marketing wrote for them unless each person rewrites them in their own voice.",
+        "States that the My Company tab or Employee Advocacy tab was discontinued (from November 2024).",
+        "Does not state a 60% link penalty as a fact.",
+        "Says LinkedIn has stated it does not intentionally limit posts with links, or labels the link penalty as practitioner data that disagrees across datasets.",
+        "Advises making each post useful without the click, with the link last or in a comment, tested per person rather than assumed.",
+        "Recommends fewer original Page posts than one every weekday (for example one or two a week).",
+        "Gives a go, go-small or skip verdict with a reason.",
+        "Ranks engagement surfaces or channels with an explicit ordering (for example using '>').",
+        "Proposes 3 to 6 named posters rather than all 30 employees posting.",
+        "Proposes metrics based on viewers in buyer roles (job title, seniority or company size) or comments from target roles, rather than impressions or follower counts as the headline."
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "We're Halyard Labs, an open-source data pipeline framework with a paid cloud. Our CEO wants an employee advocacy program for the 3.0 launch on March 12: all 45 engineers repost the launch post at 9:00 with the same caption I'll provide, we give 50 points per repost and the top 3 on the leaderboard win a Steam Deck, and I'll have ChatGPT write a personal-sounding post for each engineer so it doesn't look copied. Engineers are in the US and UK. How do I set this up and what tool should we use for tracking?",
+      "expected_output": "Redesigns the program: voluntary, briefed not scripted, each person writes from their own role, no identical copy, no assigned reactions. Flags the incentive as a material connection needing disclosure (FTC endorsement guides, UK ASA) and the brand partnership label, and advises legal review. Refuses AI-written posts in engineers' names unless they rewrite them. Gives an employee brief template.",
+      "files": [],
+      "expectations": [
+        "Advises against all 45 engineers posting the same caption, calling it repetitive content or pod-like.",
+        "Says no one may be assigned to like, comment on or reshare the launch post, while the Page resharing staff posts or notifying employees is allowed.",
+        "Recommends a brief (release facts, the hard problem, numbers, who built it) instead of a script, with each engineer writing in their own words.",
+        "States that points-for-posts or prize incentives are a material connection that must be disclosed under the FTC Endorsement Guides (16 CFR 255.5).",
+        "Mentions UK advertising rules (ASA or CAP) for the UK engineers, or says disclosure rules differ by country.",
+        "States that posts made in exchange for value need LinkedIn's brand partnership label.",
+        "Says employees should disclose that they work at Halyard Labs in the post text itself, early (before 'see more'), and that a headline or bio alone is not enough.",
+        "Refuses or advises against publishing AI-written posts in engineers' names that they did not rewrite.",
+        "Mentions LinkedIn's reduced distribution of generic AI content or the 'Seems like AI slop' feedback.",
+        "States that LinkedIn's native Employee Advocacy tab was discontinued and that LinkedIn points to Marketing Partner tools.",
+        "Distinguishes allowed advocacy tools (suggesting content, tracking links) from banned ones that post, comment or react on people's behalf.",
+        "Includes a written-out employee brief or message template, not only a description of one."
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "I'm the solo founder of Brindlepath, an API security scanner. I want LinkedIn to be my main pipeline. Plan: use a tool that sends 150 connection requests a day to every CTO and VP Engineering at Series A-C companies in the US, with a note saying I help teams like theirs cut API incidents by 70%, then an automatic 3-message follow-up sequence offering a demo once they accept. Also auto-like and auto-comment on their posts so I stay top of mind. What's the best tool and what should the messages say?",
+      "expected_output": "Refuses the automation and the pitch-in-invitation sequence, citing the User Agreement 8.2 ban on automated invitations, messages, likes and comments and the policy against promotional invitations to strangers; notes no published weekly invitation number and the practitioner-observed ~100 a week, and that reported or ignored invites restrict the account. Says outbound sequences are outside the skill. Redirects to an earn-first presence: headline, substantive comments, technical posts, invitations only to people met, with a written invitation note.",
+      "files": [],
+      "expectations": [
+        "Says native scheduling of one's own posts is allowed while automated invitations, messages, likes and comments are banned.",
+        "Cites LinkedIn's User Agreement (section 8.2) or its prohibited-software rules as banning bots, automated engagement or browser extensions.",
+        "States that LinkedIn's policies forbid using invitations to send promotional messages to people you do not know.",
+        "States that LinkedIn publishes no weekly invitation number, and labels figures such as about 100 a week as practitioner observation.",
+        "Says that ignored or reported invitations can get the account restricted.",
+        "Says 150 requests a day is far beyond what an account can sustain, or flags it as a restriction risk.",
+        "Says outbound sales sequences or prospecting are outside this skill, or declines to write the 3-message demo sequence.",
+        "Recommends substantive comments on posts the target buyers read as an early step.",
+        "Recommends a headline that names the founder's topic and company.",
+        "Provides an example connection-invitation note with no pitch, addressed to someone the founder has met or talked with.",
+        "Gives a dated or week-by-week cadence."
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "Our devtool company Pellucid (observability for edge functions) has a LinkedIn page with 90 followers. We want to launch a LinkedIn newsletter from the page next week called 'Pellucid Product Updates' - every Tuesday, each edition announces our new features and has a discount code for the Pro plan. Nobody has written one before; our one advocate, Dara, has maybe 2 hours a week. Can you set it up and draft edition 1?",
+      "expected_output": "Says the Page cannot get a newsletter yet (more than 150 followers needed) and offers Dara's personal newsletter instead, or waiting. Says LinkedIn's publishing guidelines bar product promotions in articles, so editions teach and link the product once. Treats the newsletter as the starved high-value, high-effort option and checks the promotion condition (an owner with time, editions of material in hand) against Dara's 2 hours; proposes monthly rather than weekly. Drafts edition 1 as a teaching edition.",
+      "files": [],
+      "expectations": [
+        "States that a Page needs more than 150 followers (and/or connections) to be evaluated for a LinkedIn newsletter, so Pellucid's Page at 90 followers does not qualify.",
+        "Suggests Dara publishing the newsletter from her personal profile, or growing the Page first.",
+        "States that LinkedIn's publishing guidelines call product or service promotions inappropriate in articles or newsletter editions.",
+        "Advises against discount codes or feature announcements as the content of each edition.",
+        "Recommends a monthly or less frequent cadence instead of weekly, given 2 hours a week.",
+        "Says a newsletter is a standing job that needs a named owner.",
+        "Names a condition for starting (for example a named owner and several editions of material already written).",
+        "States that each edition notifies subscribers by push, in-app or email, or that new followers get a subscribe invitation.",
+        "Points to samber/developer-relations-skills@devrel-newsletter-program for the decision to run a newsletter programme.",
+        "Drafts edition 1 teaching a technique, with a product link at most once near the end; naming the employer in the opening as disclosure does not count as a product mention.",
+        "Marks the draft as a draft for Dara to rewrite in her own voice."
+      ]
+    },
+    {
+      "id": 5,
+      "prompt": "I maintain a free open-source CLI that game modders use to package Minecraft resource packs. It's just me, nights and weekends, about 40 minutes a week for promotion. A friend says I need to 'build my LinkedIn' for the project and post every day. Most of my users are teenagers and hobbyists on Discord. Should I? If yes, give me a 30-day LinkedIn plan.",
+      "expected_output": "Returns a skip verdict for LinkedIn: users are individual hobbyists who buy nothing as a team, there is no hiring goal, and the communities live elsewhere; under an hour a week. Says skip is a valid answer, points to where the audience is (Discord, other playbooks), and does not produce a 30-day posting plan.",
+      "files": [],
+      "expectations": [
+        "Returns a skip verdict for LinkedIn rather than a go-small or go verdict.",
+        "Gives as a reason that the users are individual hobbyists with no team purchase or buyer on LinkedIn.",
+        "Gives as a reason that the available time is under an hour a week, or too little to post as a person.",
+        "Says the audience already lives elsewhere (for example Discord).",
+        "Says LinkedIn reach depends on posting as a named person, which 40 minutes a week cannot sustain alongside the project.",
+        "Advises against posting every day on LinkedIn.",
+        "Points to another channel or samber/developer-relations-skills playbook that fits the audience (for example a Discord or Hacker News playbook).",
+        "States that skipping is a valid outcome, not a failure.",
+        "Names a condition under which LinkedIn would become worth it (for example a hiring goal, sponsors or a team buyer appearing)."
+      ]
+    },
+    {
+      "id": 6,
+      "prompt": "Our agency sent me their 2026 LinkedIn algorithm cheat sheet for our devtool page and our two founders: 360Brew now runs the whole feed, saves are the #1 ranking signal, the golden hour is the first 60 minutes so get 20 comments fast, links cost 60% of reach, use exactly 5 hashtags, posts edited after publishing get buried, and carousels should end with 'Comment GUIDE and I'll DM you the PDF'. Which of these are true? I want to brief the founders tomorrow.",
+      "expected_output": "Goes claim by claim, labelling each as LinkedIn-published or practitioner. 360Brew: LinkedIn said it does not run the feed; the paper calls it pre-production. Saves: not a published objective. Golden hour: LinkedIn confirms fast refresh but no fixed window; getting 20 comments fast by arrangement is a pod. Links: LinkedIn denies an intentional limit, datasets disagree, 60% has no source. Hashtags: no measured effect, many hurt. Edits: no source. 'Comment GUIDE' is engagement bait LinkedIn filters. States what LinkedIn has published: dwell, skip, comments, author headline.",
+      "files": [],
+      "expectations": [
+        "Labels each claim as published by LinkedIn or as practitioner reverse-engineering (or unsupported).",
+        "States that LinkedIn said 360Brew does not run the feed, or that 360Brew was described as a research pre-production model.",
+        "States that saves are not among LinkedIn's published ranking objectives.",
+        "Names LinkedIn's published ranking targets, including long dwell or skip, and comments or shares.",
+        "Says LinkedIn has not published a fixed first-60-minute window.",
+        "Warns that arranging 20 comments quickly is a pre-agreed engagement pod or against LinkedIn policy.",
+        "Says the 60% link penalty has no traceable source or that practitioner link datasets disagree.",
+        "Says LinkedIn stated it does not intentionally limit posts with links.",
+        "Rejects 'exactly 5 hashtags' as a ranking rule, citing no measured effect or LinkedIn calling hashtags nice-to-have.",
+        "Says no LinkedIn source supports edited posts being buried.",
+        "Identifies 'Comment GUIDE and I'll DM you the PDF' as engagement bait that LinkedIn filters.",
+        "Mentions that LinkedIn's ranking reads the author's headline or profile, so the founders' headlines matter."
+      ]
+    },
+    {
+      "id": 7,
+      "prompt": "Board meeting in 3 weeks. Our CEO wants a LinkedIn slide for Quarrystack (database migration tool, sells to platform teams). Proposed numbers: page followers grew 2,100 to 3,400, posts got 180k impressions, and our engagement rate is 3.1% vs the 5.2% industry benchmark from Socialinsider so we need to post more. Founder's personal posts did 95k impressions. How should I present this, and what should we measure next quarter?",
+      "expected_output": "Says impressions and followers are exposure estimates, not results. Flags the benchmark mismatch: LinkedIn's Page engagement rate includes clicks while Socialinsider's excludes them, so 3.1% vs 5.2% is not comparable, and 'post more' does not follow. Proposes buyer-role viewer share from post demographics, comments from target roles, link visits plus UTM sessions and signups, a self-reported attribution field, and newsletter net subscribers. Notes founder posts outperform the Page and recommends people-first.",
+      "files": [],
+      "expectations": [
+        "Says impressions and follower counts should not be the headline result.",
+        "States that LinkedIn's Page engagement rate includes clicks.",
+        "States that Socialinsider's benchmark excludes clicks or uses a different definition, so the two numbers are not comparable.",
+        "Rejects 'post more' as a conclusion drawn from the benchmark gap.",
+        "Recommends measuring the share of viewers in buyer roles using post analytics demographics (job title, seniority, company size or company).",
+        "Recommends counting comments from target roles rather than reactions.",
+        "Recommends UTM-tagged links and site-side sessions or signups.",
+        "Recommends a free-text 'how did you hear about us' field or self-reported attribution.",
+        "Notes that the founder's personal posts outperformed the Page and recommends shifting effort to named people.",
+        "Says impressions and members reached are estimates in LinkedIn's analytics."
+      ]
+    },
+    {
+      "id": 8,
+      "prompt": "We're Kestrel Systems, 60 people, three products: a Go SDK, a Terraform provider and a hosted control plane. Our LinkedIn page has 6,800 followers. Marketing wants a Showcase Page per product plus one per region (EMEA, NA, APAC) so each gets its own audience, and wants to hit 'Notify employees' on every post twice a day. Our engineers' posts about the products don't mention they work here because it's in their headline anyway. Also our posts and comments sometimes seem throttled. What should we change?",
+      "expected_output": "Advises against per-region and per-product Showcase Pages unless an audience is distinct and long-term; notes employees cannot be associated with Showcase Pages and suggests Product Pages for B2B software. Says Notify employees is capped once a day and best used at most weekly. Says disclosure must be in the post text before 'see more', not only the headline. Points to Page and workplace verification for posting and comment capacity. Keeps people-first.",
+      "files": [],
+      "expectations": [
+        "Advises against creating Showcase Pages per region, citing LinkedIn's guidance that Showcase Pages are for distinct long-term audiences rather than regions or campaigns.",
+        "States that employees cannot be associated with a Showcase Page.",
+        "Mentions Product Pages as available for B2B software products.",
+        "States that Notify employees is limited to once a day.",
+        "Recommends using Notify employees at most about once a week.",
+        "Says engineers must disclose their employment in the post text itself, not rely on the headline.",
+        "Says the disclosure should appear before the 'see more' cut.",
+        "Recommends verifying the Page or members' workplaces as a lever on posting or comment limits or visibility.",
+        "States that LinkedIn may cap posts or comments per period without publishing a number.",
+        "Recommends that named engineers post and the Page reshares, rather than the Page as main channel.",
+        "Labels the once-a-day Notify employees cap as a LinkedIn limit and the weekly cadence as LinkedIn advice."
+      ]
+    }
+  ],
+  "trigger_queries": [
+    {
+      "query": "should our devtool startup even bother with LinkedIn or is it all sales people",
+      "should_trigger": true
+    },
+    {
+      "query": "our company page on linkedin gets like 200 impressions per post, what are we doing wrong? we sell a CI product",
+      "should_trigger": true
+    },
+    {
+      "query": "is it better to put the link in the post or the first comment on LinkedIn",
+      "should_trigger": true
+    },
+    {
+      "query": "how do I set up an employee advocacy program on LinkedIn for our engineers without it being cringe",
+      "should_trigger": true
+    },
+    {
+      "query": "We sell an API gateway to platform teams. How do we reach CTOs and heads of platform on LinkedIn organically?",
+      "should_trigger": true
+    },
+    {
+      "query": "should our engineers post on linkedin under their own names or should everything go through the company page",
+      "should_trigger": true
+    },
+    {
+      "query": "I'm a developer advocate, what should my LinkedIn headline and posting cadence be to grow awareness of our database",
+      "should_trigger": true
+    },
+    {
+      "query": "we want a LinkedIn newsletter for our dev tool, page or founder profile?",
+      "should_trigger": true
+    },
+    {
+      "query": "is a slack channel where everyone likes our linkedin posts in the first hour against the rules",
+      "should_trigger": true
+    },
+    {
+      "query": "what does the LinkedIn algorithm actually reward in 2026? dwell time? comments? I keep reading conflicting stuff",
+      "should_trigger": true
+    },
+    {
+      "query": "do document carousels still work on LinkedIn for technical content",
+      "should_trigger": true
+    },
+    {
+      "query": "how many connection requests can I send per week on LinkedIn without getting restricted",
+      "should_trigger": true
+    },
+    {
+      "query": "the My Company tab disappeared from our LinkedIn page, how do we get employees to share now",
+      "should_trigger": true
+    },
+    {
+      "query": "plan our LinkedIn presence for the v2 launch of our open source observability tool",
+      "should_trigger": true
+    },
+    {
+      "query": "my founder wants to post daily on linkedin about our kubernetes cost tool, is that a good idea and what should she post",
+      "should_trigger": true
+    },
+    {
+      "query": "LinkedIn page vs showcase page for each of our three SDK products?",
+      "should_trigger": true
+    },
+    {
+      "query": "how should a B2B infra company use LinkedIn without spamming engineers",
+      "should_trigger": true
+    },
+    {
+      "query": "is 360Brew really the LinkedIn algorithm now? our agency keeps saying so",
+      "should_trigger": true
+    },
+    {
+      "query": "we gave engineers swag for sharing our LinkedIn posts, do we need to disclose anything",
+      "should_trigger": true
+    },
+    {
+      "query": "can I use AI to write LinkedIn posts for our CTO about our product",
+      "should_trigger": true
+    },
+    {
+      "query": "what's the invite-to-follow credit limit for company pages now? we used to have 250",
+      "should_trigger": true
+    },
+    {
+      "query": "how do I measure whether our LinkedIn activity actually reaches engineering managers",
+      "should_trigger": true
+    },
+    {
+      "query": "LinkedIn hashtags - how many for a post about Postgres performance?",
+      "should_trigger": true
+    },
+    {
+      "query": "our devrel team wants LinkedIn to be a real channel next quarter, where do we start",
+      "should_trigger": true
+    },
+    {
+      "query": "should we comment as our company page on other people's posts or from personal accounts",
+      "should_trigger": true
+    },
+    {
+      "query": "LinkedIn groups for devops - worth posting our release notes there?",
+      "should_trigger": true
+    },
+    {
+      "query": "can we schedule LinkedIn posts natively or does that hurt reach",
+      "should_trigger": true
+    },
+    {
+      "query": "what is engagement bait on LinkedIn and will 'comment YES for the guide' get us penalized",
+      "should_trigger": true
+    },
+    {
+      "query": "how do I write a LinkedIn post about our benchmark results that engineers won't roll their eyes at",
+      "should_trigger": true
+    },
+    {
+      "query": "is linkedin worth it for a data infra startup selling to platform teams, or should we stick to HN and reddit",
+      "should_trigger": true
+    },
+    {
+      "query": "thought leader ads vs organic employee posts on LinkedIn for a devtool",
+      "should_trigger": true
+    },
+    {
+      "query": "our sales team wants every engineer to connect with prospects on linkedin, good idea?",
+      "should_trigger": true
+    },
+    {
+      "query": "linkedin events for a webinar about our CLI - how do invites and reminders work",
+      "should_trigger": true
+    },
+    {
+      "query": "write a 5-touch outbound sequence of LinkedIn messages and emails for our sales reps targeting CTOs",
+      "should_trigger": false
+    },
+    {
+      "query": "set up a LinkedIn ads campaign with matched audiences and lead gen forms for our devtool",
+      "should_trigger": false
+    },
+    {
+      "query": "help me define our engineering EVP and employer brand to hire senior backend engineers",
+      "should_trigger": false
+    },
+    {
+      "query": "plan a weekly LinkedIn Live show for our devrel team with guests, overlays and chat moderation",
+      "should_trigger": false
+    },
+    {
+      "query": "optimize my personal LinkedIn profile so recruiters find me for a staff engineer job",
+      "should_trigger": false
+    },
+    {
+      "query": "how do we grow our devtool's presence on Bluesky, starter packs and dev feeds",
+      "should_trigger": false
+    },
+    {
+      "query": "write our Show HN post and first comment for the launch",
+      "should_trigger": false
+    },
+    {
+      "query": "should we start a developer newsletter at all and who owns it, email not LinkedIn",
+      "should_trigger": false
+    },
+    {
+      "query": "draft a LinkedIn post announcing I got promoted to engineering manager",
+      "should_trigger": false
+    },
+    {
+      "query": "find the LinkedIn profile and employer history of this person who emailed us threats",
+      "should_trigger": false
+    },
+    {
+      "query": "build-in-public: what should our founder share each week about revenue and roadmap",
+      "should_trigger": false
+    },
+    {
+      "query": "scrape LinkedIn for every platform engineer at Fortune 500 companies into a CSV",
+      "should_trigger": false
+    },
+    {
+      "query": "plan our content calendar for Q3 across blog, YouTube, newsletter and social with owners",
+      "should_trigger": false
+    },
+    {
+      "query": "how do we cross-post our dev.to articles with canonical URLs",
+      "should_trigger": false
+    },
+    {
+      "query": "ghostwrite 10 LinkedIn posts for a sales coach about closing techniques",
+      "should_trigger": false
+    },
+    {
+      "query": "our discord server for our open source project needs channels and moderation rules",
+      "should_trigger": false
+    },
+    {
+      "query": "LinkedIn Sales Navigator search filters to find VPs of engineering in fintech",
+      "should_trigger": false
+    },
+    {
+      "query": "how do I add LinkedIn sign-in (OAuth) to our developer portal",
+      "should_trigger": false
+    },
+    {
+      "query": "set up UTM tracking and attribution for all devrel channels in our analytics",
+      "should_trigger": false
+    },
+    {
+      "query": "audit the fake recruiter that messaged me on LinkedIn, is this a job scam",
+      "should_trigger": false
+    },
+    {
+      "query": "post our job opening for a developer advocate - write the job description",
+      "should_trigger": false
+    },
+    {
+      "query": "use the LinkedIn Marketing API to auto-publish our blog posts to the company page",
+      "should_trigger": false
+    },
+    {
+      "query": "how should we sequence channels on launch day: HN, Product Hunt, X, newsletter",
+      "should_trigger": false
+    },
+    {
+      "query": "write a technical blog post about our Postgres migration for engineers",
+      "should_trigger": false
+    },
+    {
+      "query": "measure our DevRel program's ROI for the board across all channels",
+      "should_trigger": false
+    },
+    {
+      "query": "our X account for developers - threads, replies, posting times",
+      "should_trigger": false
+    },
+    {
+      "query": "what's the right price for our API's team plan",
+      "should_trigger": false
+    },
+    {
+      "query": "help me prepare for a podcast interview about our database",
+      "should_trigger": false
+    },
+    {
+      "query": "LinkedIn profile summary for a marketing director job search",
+      "should_trigger": false
+    },
+    {
+      "query": "how should our employees handle a harassment report in our community Slack",
+      "should_trigger": false
+    },
+    {
+      "query": "create a YouTube channel strategy for our devtool company",
+      "should_trigger": false
+    },
+    {
+      "query": "get our open source project listed in awesome lists and package registries",
+      "should_trigger": false
+    },
+    {
+      "query": "our engineers write great internal design docs, how do we turn them into linkedin posts that platform leads actually read",
+      "should_trigger": true
+    },
+    {
+      "query": "Showcase pages vs product pages for our SDK, CLI and cloud on LinkedIn - which one?",
+      "should_trigger": true
+    },
+    {
+      "query": "does 'notify employees' on our linkedin page spam people, how often can we use it",
+      "should_trigger": true
+    },
+    {
+      "query": "we're a 12-person API company, founder has 9k LinkedIn followers, company page has 400. where should we post the launch?",
+      "should_trigger": true
+    },
+    {
+      "query": "our devrel engineer's linkedin posts mention our product but not that she works here, is that a problem?",
+      "should_trigger": true
+    },
+    {
+      "query": "write a LinkedIn recommendation for my former colleague",
+      "should_trigger": false
+    },
+    {
+      "query": "how to export my LinkedIn connections to a CSV for our CRM",
+      "should_trigger": false
+    },
+    {
+      "query": "LinkedIn Learning course outline for our Kubernetes training",
+      "should_trigger": false
+    },
+    {
+      "query": "compare HubSpot and Salesforce for a 20-person sales team",
+      "should_trigger": false
+    },
+    {
+      "query": "how do I turn on two-factor authentication for our company LinkedIn page admins",
+      "should_trigger": false
+    }
+  ]
+}
