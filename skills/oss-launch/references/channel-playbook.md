@@ -75,6 +75,7 @@ Listing specifics (character limits, image dimensions, topic counts), account el
 - Post where the maintainer already participates. A first-ever post that is a self-link reads as spam whatever its quality.
 - Many communities have a weekly showcase or self-promotion thread - that thread is the sanctioned path, and it works.
 - Lead with the problem and the technical decision, not the announcement. Link at the end.
+- Per-subreddit lanes, showcase days, quotas and account gates belong to `samber/developer-relations-skills@reddit-dev-playbook`.
 
 ### Chat communities (Discord, Slack, Matrix)
 
