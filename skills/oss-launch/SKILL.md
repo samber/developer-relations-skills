@@ -4,7 +4,7 @@ description: Plans and runs an open-source project launch end to end - name and 
 license: MIT
 metadata:
   author: Samuel Berthe
-  version: "1.0.5"
+  version: "1.0.6"
 ---
 
 # OSS Launch
@@ -307,3 +307,4 @@ Related skills in this collection:
 - `samber/developer-relations-skills@tech-press-relations` - embargo and briefing mechanics.
 - `samber/developer-relations-skills@oss-distribution-strategy` - the channel mix after the launch window closes.
 - `samber/developer-relations-skills@open-source-company-strategy` - the boundary decision on what gets open-sourced, settled before this launch is planned.
+- `samber/developer-relations-skills@twitter-dev-playbook` - the X launch post, replies and posting rules on launch day.
