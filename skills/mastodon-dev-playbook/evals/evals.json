@@ -1,0 +1,511 @@
+{
+  "skill_name": "mastodon-dev-playbook",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "I'm the only devrel at Kestrel Labs, 18 people, open-source Go observability agent (Apache-2.0) plus a paid hosted tier. Our users are mostly FOSS / self-hosting folks so I want to go hard on Mastodon before v1.0 on Dec 2. Plan: open @kestrel on fosstodon.org since that's our crowd, a free project account @kestrelagent on hachyderm, a crossposter that pipes our X account over automatically, and a toot every day at 9am ET since that's peak time. CEO also wants impressions per toot. I have about 4 hours a week. Make it a proper plan.",
+      "expected_output": "A plan that rejects the Fosstodon brand account, treats the OSS project as corporate on Hachyderm, drops the unattended mirror and posting-time logic, replaces impressions with observable metrics, and fits a short runway and 4 h/week.",
+      "files": [],
+      "expectations": [
+        "States that Fosstodon is invite-only or bans commercial promotion, so the brand account should not go there",
+        "States that on Hachyderm a project with a single company sponsor or a paid tier is treated as a corporate account, not a free project account",
+        "States that a Hachyderm corporate account must apply to the admins before posting as the brand",
+        "Gives the Hachyderm corporate price band for under 25 employees as $650 a year",
+        "Rejects the automatic X-to-Mastodon crossposter or requires a human to monitor and reply",
+        "Treats 9am ET as a time to check against when the stack's tag followers are active, or rejects repeating the same promo daily, while noting that timing still matters in a chronological feed",
+        "States that Mastodon exposes no impressions or views metric",
+        "Offers replacement metrics including replies or boosts per post",
+        "Recommends UTM-tagged links because Mastodon sends no referrer by default, so clicks arrive as direct traffic",
+        "Puts named people accounts ahead of the brand account in the plan",
+        "Schedules an #introduction post before the Dec 2 launch",
+        "Names hashtags as the main route to people who do not follow the account",
+        "Fits the plan to roughly 4 hours a week, dropping or deferring surfaces that do not fit"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "We're Quarry (42 employees, schema migration CLI, paid team plan). Marketing just created @quarry on hachyderm.io this morning and I'm about to paste the https://community.hachyderm.io/approved link into a profile field called APPROVED so we look official right away. Anything else before we start posting our weekly product updates there?",
+      "expected_output": "Flags that the corporate account needed prior admin contact, that the APPROVED field goes in only after approval, gives the correct price band, and applies Say It Once.",
+      "files": [],
+      "expectations": [
+        "States that Hachyderm corporate accounts apply by emailing the admins, and should post nothing as the brand until approved",
+        "Warns that unapproved entity or corporate accounts on Hachyderm are removed or suspended",
+        "Tells the user not to add the APPROVED link before approval",
+        "Explains that an APPROVED link added before approval stays unverified until the profile is re-saved after approval",
+        "Gives the 25-49 employee Hachyderm corporate price as $1,000 a year",
+        "Mentions the Hachyderm 'Say It Once' expectation against repeated promotional posts",
+        "Recommends rel=me verification of the company website on the profile",
+        "Recommends that named staff accounts carry the conversation rather than the brand account",
+        "Does not recommend a weekly repeated product-update post on a fixed schedule as the main content"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Building a release bot for our secrets-scanning tool. It'll post every merged PR plus each nightly build (so ~40 posts a day) publicly from @leakguard on infosec.exchange, and also auto-reply to anyone on the fediverse who mentions 'leaked API key' with a link to our scanner. Can you write the bot spec?",
+      "expected_output": "A spec that cuts volume to infosec.exchange's automation cap, uses quiet public, sets the bot label, and drops keyword auto-replies.",
+      "files": [],
+      "expectations": [
+        "States that infosec.exchange limits automated public posts to one per hour or 24 per day",
+        "Recommends quiet public (unlisted) visibility for the high-volume feed",
+        "Requires the bot or Automated flag on the account",
+        "Rejects auto-replying to people who mention a keyword",
+        "States that the bot should reply only when tagged, or that unsolicited product replies read as spam",
+        "Recommends one post per release rather than per merged PR or nightly build",
+        "Recommends naming a human operator in the bot's bio",
+        "Keeps the bot account separate from the brand or people accounts",
+        "States that quiet public volume on infosec.exchange is unlimited but still recommends one post per release"
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "Our Mastodon profile link to tidepool.dev never gets the green check. I added a link back to the profile in our site footer (we build the site with a block-based page builder that embeds each block). Also, how do we get the blue checkmark like on X? And can our blog posts show the author's Mastodon handle when shared?",
+      "expected_output": "Explains there is no blue check, diagnoses the iframe and raw-HTML rel=me criteria, and gives fediverse:creator setup.",
+      "files": [],
+      "expectations": [
+        "States that Mastodon has no blue check or document-based verification",
+        "States the link back must carry rel=\"me\"",
+        "States the rel=me link must not sit inside an iframe",
+        "States the link must be in the raw HTML without needing JavaScript",
+        "States the profile link must be HTTPS",
+        "Tells the user to re-save the profile after fixing the page, since verification runs on save",
+        "Gives the fediverse:creator meta tag for author attribution",
+        "States the blog domain must be added to the author's allowed attribution websites setting",
+        "Recommends each author's own handle rather than the brand handle in fediverse:creator"
+      ]
+    },
+    {
+      "id": 5,
+      "prompt": "Our CTO wants us to spin up social.gridform.dev, our own Mastodon server, just for the one @gridform company account, so we look legit and don't depend on anyone. We're a 9-person team selling a GraphQL gateway. Worth it?",
+      "expected_output": "Advises against a single-account brand server as the default, cites closures and the standing job, gives the promote condition, and proposes a shared-server alternative.",
+      "files": [],
+      "expectations": [
+        "Recommends against running an own server for a single brand account by default",
+        "Describes running an own server as a standing job (hosting, moderation or upkeep)",
+        "Cites at least one closed organisation server such as mozilla.social or EU Voice",
+        "Mentions the covenant expectation of three months' notice before shutdown, or the need for a named owner with budget",
+        "States a condition that would justify an own server, such as several project accounts plus a named owner",
+        "Acknowledges that an own domain is the strongest verification signal on Mastodon",
+        "Proposes Hachyderm's corporate tier or another brand-admitting server as the alternative",
+        "Recommends people accounts for staff alongside or instead of the brand account",
+        "Mentions defederation or suspension risk for a server, or that suspended follows are lost permanently"
+      ]
+    },
+    {
+      "id": 6,
+      "prompt": "our devtool's mastodon is dead. we post product updates with #SaaS #Startup #DevTools #AI #Productivity #Growth #Marketing #Tech and screenshots of the dashboard, and we reply to huge accounts like the Mastodon official one to get seen. 0 boosts. what are we doing wrong?",
+      "expected_output": "Diagnoses tag spam and wrong tags, explains reply visibility and no algorithm, adds alt text and CamelCase stack tags.",
+      "files": [],
+      "expectations": [
+        "States that Mastodon has no ranking algorithm",
+        "Recommends one to three hashtags per post",
+        "Recommends hashtags that match the technical stack rather than marketing tags like #Growth or #Marketing",
+        "Recommends CamelCase hashtags for screen readers",
+        "Warns that excessive hashtags can be reported or treated as spam",
+        "Explains that a reply reaches a follower's home feed only if they follow both accounts",
+        "Recommends alt text on the screenshots",
+        "Recommends hashtags in the post body rather than inside a content warning",
+        "Recommends replying under the stack's hashtags or answering questions instead of replying to large accounts",
+        "Recommends that named people post rather than only the brand account"
+      ]
+    },
+    {
+      "id": 7,
+      "prompt": "For our board deck I need fediverse numbers for Cobaltline: impressions and reach per toot, plus brand sentiment. My plan is a small crawler that pulls every public post mentioning us from fosstodon, hachyderm and infosec.exchange daily and runs it through an LLM classifier. Can you write it?",
+      "expected_output": "Refuses the crawler and LLM classification, explains no impressions exist, and offers a consent-respecting weekly metric table.",
+      "files": [],
+      "expectations": [
+        "Declines to build the crawler or scraper",
+        "States that infosec.exchange terms ban scrapers and data-mining tools, or that Hachyderm requires opt-in consent for bots that handle even public data",
+        "States that Mastodon exposes no impressions or reach",
+        "Lists replies, boosts, favourites or quotes as the available per-post counts",
+        "Recommends counting distinct servers among the accounts that boosted",
+        "Recommends UTM-tagged links for traffic attribution",
+        "Offers a weekly table or summary for the board as a substitute",
+        "Advises against using follower totals as the headline number"
+      ]
+    },
+    {
+      "id": 8,
+      "prompt": "We already have a big Threads following through Instagram. If I just switch on fediverse sharing on Threads, that covers Mastodon too, right? No need for a separate account? We're EU-based, Berlin.",
+      "expected_output": "Explains Threads fediverse reach is partial (server blocks, EU availability, non-federating posts) and recommends a native Mastodon presence, pointing to the Threads playbook.",
+      "files": [],
+      "expectations": [
+        "States that many Mastodon servers block Threads or that admins signed a block pledge (FediPact)",
+        "Tells the user to verify that Threads fediverse sharing is available for an EU account before relying on it",
+        "States that posts with restricted replies or polls do not federate from Threads",
+        "Recommends a native Mastodon presence by named people rather than relying on Threads federation",
+        "Points to samber/developer-relations-skills@threads-dev-playbook or a Threads-specific plan",
+        "Recommends rewriting cross-posts with alt text and CamelCase hashtags rather than mirroring"
+      ]
+    },
+    {
+      "id": 9,
+      "prompt": "A competitor's CTO tooted that our Rust SDK is 'bloated garbage'. Draft a spicy quote post from our @ferroline account roasting him. Also, we want our LLM support agent account on infosec.exchange to auto-answer anything tagged #Rust that mentions SDK problems.",
+      "expected_output": "Declines the quote-dunk, explains per-post quote policy and revocation, refuses the LLM auto-responder, and offers a human reply path.",
+      "files": [],
+      "expectations": [
+        "Rejects auto-replies to #Rust keyword hits as unsolicited or against bot rules",
+        "States that the quoted author can revoke the quote irreversibly or set who may quote each post",
+        "States that infosec.exchange bans LLM- or AI-operated accounts",
+        "Recommends that a named person answer #Rust SDK questions instead of an automated support account",
+        "Mentions that AI-generated content must be disclosed on mastodon.social or that drafts must be rewritten by a person",
+        "Offers a factual reply or post by a named engineer as the alternative",
+        "Points hostile threads to a moderation or community-management approach"
+      ]
+    },
+    {
+      "id": 10,
+      "prompt": "Should the Tessellate maintainers be on Mastodon at all? We're 3 volunteers on a niche Elixir graph library, maybe 30 min a week total for social, and nobody has a fediverse account yet.",
+      "expected_output": "Applies the go/skip gate with the hashtag-volume heuristic and the hour-per-week floor, and returns skip or go small with reasons.",
+      "files": [],
+      "expectations": [
+        "Returns an explicit verdict of skip, go small or go",
+        "Uses an hour per week of person posting as a floor for going",
+        "Suggests checking the stack's hashtag volume on a large server before deciding",
+        "Treats a skip verdict as a valid outcome",
+        "States the condition that would move the verdict from skip to go small or go, such as an hour a week of person posting",
+        "If it recommends any server, notes that Fosstodon is invite-only or floss.social has a waitlist",
+        "Does not recommend a self-hosted server"
+      ]
+    },
+    {
+      "id": 11,
+      "prompt": "Helmsman is a CNCF sandbox project (a Kubernetes operator, 6 maintainers from 3 companies). We want: a free project account on hachyderm since it's community-run, the @helmsman handle reserved on mastodon.social, fosstodon and infosec.exchange so nobody squats it, and some kind of shareable 'follow all the maintainers' list for the README. How do we set this up?",
+      "expected_output": "Explains CNCF projects count as corporate on Hachyderm, refuses handle parking, routes impersonation to reports, proposes a Mastodon collection of maintainers, and keeps maintainers on personal accounts.",
+      "files": [],
+      "expectations": [
+        "States that Hachyderm treats CNCF or foundation-hosted projects as corporate accounts rather than free project accounts",
+        "Advises against reserving handles across servers, citing Hachyderm's parking ban or the futility across thousands of servers",
+        "States that collection members must have discovery turned on, or are notified and can remove themselves",
+        "Recommends reporting impersonators to the hosting server's moderators instead of reserving handles",
+        "Recommends a Mastodon collection (4.6+) as the shareable list of maintainers",
+        "States that a collection holds up to 25 accounts",
+        "States that Fosstodon is invite-only",
+        "Recommends each maintainer keep a personal account that discloses the project",
+        "Recommends rel=me verification between the project website and the project account"
+      ]
+    }
+  ],
+  "trigger_queries": [
+    {
+      "query": "How do we grow a developer audience on Mastodon for our Postgres backup tool?",
+      "should_trigger": true
+    },
+    {
+      "query": "should our devtool company be on fosstodon or hachyderm?",
+      "should_trigger": true
+    },
+    {
+      "query": "Set up an official Mastodon account for our open-source CLI project and tell us what to post",
+      "should_trigger": true
+    },
+    {
+      "query": "why do our toots get zero boosts? we're a k8s cost tool",
+      "should_trigger": true
+    },
+    {
+      "query": "we want a mastodon bot that posts our GitHub releases, what are the rules?",
+      "should_trigger": true
+    },
+    {
+      "query": "How do I get the verified green check on our company Mastodon profile?",
+      "should_trigger": true
+    },
+    {
+      "query": "Is it worth running our own Mastodon instance at social.ourcompany.dev?",
+      "should_trigger": true
+    },
+    {
+      "query": "plan our v2 launch on the fediverse, we're a Rust web framework",
+      "should_trigger": true
+    },
+    {
+      "query": "Our devrel team is leaving X; how should we show up on Mastodon instead?",
+      "should_trigger": true
+    },
+    {
+      "query": "How should our engineers' personal Mastodon accounts and the company account split the work?",
+      "should_trigger": true
+    },
+    {
+      "query": "what hashtags should a Go library maintainer use on mastodon",
+      "should_trigger": true
+    },
+    {
+      "query": "Can we cross-post our X account to Mastodon automatically?",
+      "should_trigger": true
+    },
+    {
+      "query": "Hachyderm corporate account: how does approval work and what does it cost?",
+      "should_trigger": true
+    },
+    {
+      "query": "Our CEO wants impressions per toot, what can we actually measure on Mastodon?",
+      "should_trigger": true
+    },
+    {
+      "query": "content warnings, alt text, camelcase hashtags... what's the etiquette for a company account on mastodon?",
+      "should_trigger": true
+    },
+    {
+      "query": "We're a security scanner vendor, can we have a brand account on infosec.exchange?",
+      "should_trigger": true
+    },
+    {
+      "query": "Write an #introduction post for our developer advocate joining Mastodon",
+      "should_trigger": true
+    },
+    {
+      "query": "How do boosts and federated timelines work for reaching devs who don't follow us yet?",
+      "should_trigger": true
+    },
+    {
+      "query": "Mastodon strategy for an open source database with a paid cloud tier",
+      "should_trigger": true
+    },
+    {
+      "query": "Is fediverse:creator worth adding to our engineering blog?",
+      "should_trigger": true
+    },
+    {
+      "query": "how do quote posts work on mastodon now, can our brand quote people?",
+      "should_trigger": true
+    },
+    {
+      "query": "devtools startup, 12 people, should we bother with mastodon before our Show HN?",
+      "should_trigger": true
+    },
+    {
+      "query": "draft a mastodon launch toot for our new terraform provider",
+      "should_trigger": true
+    },
+    {
+      "query": "what got companies kicked off fosstodon?",
+      "should_trigger": true
+    },
+    {
+      "query": "Our project account on Mastodon has 200 followers after a year, what are we missing?",
+      "should_trigger": true
+    },
+    {
+      "query": "we post our changelog to the fediverse daily, is that annoying?",
+      "should_trigger": true
+    },
+    {
+      "query": "Plan a 6-week Mastodon presence for our API monitoring product",
+      "should_trigger": true
+    },
+    {
+      "query": "Which Mastodon server should our Python maintainers join to reach the data science crowd?",
+      "should_trigger": true
+    },
+    {
+      "query": "Is Threads fediverse sharing enough or do we need a real Mastodon account?",
+      "should_trigger": true
+    },
+    {
+      "query": "Our toots link to docs but analytics shows nothing from Mastodon, why?",
+      "should_trigger": true
+    },
+    {
+      "query": "Our maintainers keep asking if they should post about our paid tier from their fosstodon accounts, what's allowed?",
+      "should_trigger": true
+    },
+    {
+      "query": "How do we move our company's Mastodon account from mastodon.social to hachyderm without losing followers?",
+      "should_trigger": true
+    },
+    {
+      "query": "is it ok for our support team to answer product questions on mastodon from a brand account?",
+      "should_trigger": true
+    },
+    {
+      "query": "we're an infra startup in Berlin, what's the fediverse equivalent of a Twitter growth plan for devs?",
+      "should_trigger": true
+    },
+    {
+      "query": "Our status page bot should post outages to Mastodon, which visibility and how often?",
+      "should_trigger": true
+    },
+    {
+      "query": "How do we grow on Bluesky with starter packs and custom feeds?",
+      "should_trigger": false
+    },
+    {
+      "query": "Set up a Bluesky domain handle for our company",
+      "should_trigger": false
+    },
+    {
+      "query": "Write a Show HN post for our launch",
+      "should_trigger": false
+    },
+    {
+      "query": "How do I run a Mastodon server on Kubernetes with Sidekiq scaling?",
+      "should_trigger": false
+    },
+    {
+      "query": "Write a dev.to article announcing our SDK",
+      "should_trigger": false
+    },
+    {
+      "query": "Plan our devrel content calendar for Q1 across all channels",
+      "should_trigger": false
+    },
+    {
+      "query": "Build a Discord server for our open source community",
+      "should_trigger": false
+    },
+    {
+      "query": "How do we write a code of conduct and moderation ladder for our forum?",
+      "should_trigger": false
+    },
+    {
+      "query": "Write the weekly build-in-public update for our startup",
+      "should_trigger": false
+    },
+    {
+      "query": "Investigate who is behind this Mastodon account that's harassing our maintainer",
+      "should_trigger": false
+    },
+    {
+      "query": "Implement ActivityPub federation in our Rails app",
+      "should_trigger": false
+    },
+    {
+      "query": "Help me grow my personal LinkedIn as an engineer",
+      "should_trigger": false
+    },
+    {
+      "query": "How do I get more GitHub stars for our repo?",
+      "should_trigger": false
+    },
+    {
+      "query": "Plan our Threads strategy with Instagram cross-promotion for our devtool",
+      "should_trigger": false
+    },
+    {
+      "query": "Write release notes for v3.2 of our CLI",
+      "should_trigger": false
+    },
+    {
+      "query": "Draft an X thread about our benchmark results",
+      "should_trigger": false
+    },
+    {
+      "query": "Set up UTM tracking and attribution dashboards for all devrel channels",
+      "should_trigger": false
+    },
+    {
+      "query": "How should we handle a pile-on in our GitHub issues after a license change?",
+      "should_trigger": false
+    },
+    {
+      "query": "Choose between Discourse and GitHub Discussions for our community forum",
+      "should_trigger": false
+    },
+    {
+      "query": "Write a job post for a developer advocate role",
+      "should_trigger": false
+    },
+    {
+      "query": "Build a Mastodon client app in Swift",
+      "should_trigger": false
+    },
+    {
+      "query": "What should be in our employer brand campaign for engineers?",
+      "should_trigger": false
+    },
+    {
+      "query": "Optimize our README for conversions",
+      "should_trigger": false
+    },
+    {
+      "query": "Plan a conference sponsorship for KubeCon",
+      "should_trigger": false
+    },
+    {
+      "query": "Write a newsletter issue for our developer list",
+      "should_trigger": false
+    },
+    {
+      "query": "How do I moderate my own Mastodon instance and defederate bad servers as an admin?",
+      "should_trigger": false
+    },
+    {
+      "query": "Plan our Reddit presence in r/golang and r/devops",
+      "should_trigger": false
+    },
+    {
+      "query": "Create a YouTube channel strategy for our devtool",
+      "should_trigger": false
+    },
+    {
+      "query": "Get our talk accepted at FOSDEM",
+      "should_trigger": false
+    },
+    {
+      "query": "Design an OSS launch across HN, Reddit and newsletters",
+      "should_trigger": false
+    },
+    {
+      "query": "Find which subreddits allow self-promotion for devtools",
+      "should_trigger": false
+    },
+    {
+      "query": "Write a Bluesky bot that posts our release notes",
+      "should_trigger": false
+    },
+    {
+      "query": "Set up our Hugging Face org page for our models",
+      "should_trigger": false
+    },
+    {
+      "query": "How do we measure developer community health across Discord and forums?",
+      "should_trigger": false
+    },
+    {
+      "query": "Give me a list of DevRel newsletters and podcasts to follow",
+      "should_trigger": false
+    },
+    {
+      "query": "Write a Python script with Mastodon.py that posts our GitHub releases to our account",
+      "should_trigger": false
+    },
+    {
+      "query": "Add a Share to Mastodon button and Mastodon login to our docs site",
+      "should_trigger": false
+    },
+    {
+      "query": "How do we grow our Lemmy community for our open source game engine?",
+      "should_trigger": false
+    },
+    {
+      "query": "Our maintainers want a shareable list of the people behind our project on Mastodon, how?",
+      "should_trigger": true
+    },
+    {
+      "query": "we're a CNCF sandbox project, can we have a free account on hachyderm?",
+      "should_trigger": true
+    },
+    {
+      "query": "should we reserve @ourbrand on the big mastodon servers so nobody squats it?",
+      "should_trigger": true
+    },
+    {
+      "query": "our advocate wants to bridge her mastodon account to bluesky before our launch next week, anything to watch?",
+      "should_trigger": true
+    },
+    {
+      "query": "Is a company account on mastodon.social fine or will it get banned like on fosstodon?",
+      "should_trigger": true
+    },
+    {
+      "query": "Write the Hachyderm server's new rules for corporate accounts as a volunteer moderator",
+      "should_trigger": false
+    },
+    {
+      "query": "Should our Matrix space or our Discord be the main chat for contributors?",
+      "should_trigger": false
+    }
+  ]
+}
