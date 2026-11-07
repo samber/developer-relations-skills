@@ -5,7 +5,7 @@ description: >-
 license: MIT
 metadata:
   author: Samuel Berthe
-  version: "1.0.5"
+  version: "1.0.6"
 ---
 
 # Build in Public
@@ -262,5 +262,6 @@ A filled example is in [references/post-examples.md](./references/post-examples.
 - `samber/developer-relations-skills@oss-issue-triage` - the support load visibility creates
 - `samber/developer-relations-skills@devrel-content-calendar` - scheduling this output alongside other content
 - `samber/developer-relations-skills@bluesky-dev-playbook` - Bluesky mechanics when the practice posts there: domain handles, starter packs, dev feeds, automation rules
+- `samber/developer-relations-skills@linkedin-dev-playbook` - LinkedIn mechanics when the founder posts there: people versus Page, links, newsletters, employee reshares without pods
 
 Run any draft post through your preferred humanizer skill before publishing - a build-in-public post that reads like a press release defeats the entire practice.
