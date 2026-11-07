@@ -1,0 +1,483 @@
+{
+  "skill_name": "twitter-dev-playbook",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "We're launching Larkspur v3 (embedded vector database, Apache-2.0) next Thursday. Plan for X: our brand account (4,100 followers) posts a 9-tweet thread with a strong hook at 9am PT, the link goes in the last reply because links get zero reach on X, I Slack all 25 employees to like and repost within the first 15 minutes, and everyone posts the same announcement text from their own accounts so it looks big. I'm also buying the $200/month gold check for the brand this week to boost the launch. Can you tighten this and write the thread?",
+      "expected_output": "Rewrites the launch around a named person: founder or maintainer posts one native post with a demo, answers replies for the first hours, staff quote-post with their own angle. Refuses the coordinated like-and-repost push and identical copy as banned engagement and duplicate-content spam. Treats the link-reach claim as contested and proposes testing placement. Puts Premium for the poster before the gold check. Drafts marked for the person to rewrite.",
+      "files": [],
+      "expectations": [
+        "Refuses the plan to have employees like and repost within the first minutes, calling it coordinated engagement or engagement spam that X's rules ban.",
+        "Refuses having every employee post the same announcement text, citing X's ban on identical or substantially similar content across accounts.",
+        "Recommends that a named person (founder, maintainer or advocate) publish the main launch post rather than the brand account.",
+        "Tells staff to quote-post or repost with their own angle or added context instead of identical copy.",
+        "Does not state as fact that links get zero reach on X; labels the link effect as contested, disputed or dependent on account and data source.",
+        "Mentions that X staff have said there is no link rule or that link-in-reply is no longer needed, attributed to X or its staff.",
+        "Proposes testing link-in-post versus link-in-first-reply on the account's own analytics instead of a fixed rule.",
+        "Distinguishes the ranking effect of coordinated likes (no effect in the main ranker for posts reached by shared link, but raw likes still feed the small-account boost) from the policy ban on soliciting them.",
+        "Ties staying for the first two hours to a small-account boost for original posts from accounts under about 50,000 followers.",
+        "Advises against buying the $200/month gold check before the people who post have Premium or are getting replies.",
+        "Warns that benchmark or 'fastest' claims in the launch post invite a Community Note, and asks for a checkable claim or a linked method.",
+        "Labels at least one claim as published by X and at least one as practitioner or third-party data."
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "I maintain tidewater, a Rust async I/O crate (~9k GitHub stars, ~3k people in our Discord). Our Discord is noisy and nobody outside it sees our discussions, so I want to create an X Community for tidewater, move announcements and Q&A there, and get the algorithm reach that Discord can't give us. Walk me through setting it up, the rules I should write, and how to migrate people over.",
+      "expected_output": "Says X shut Communities down on 2026-05-30, so the plan cannot be executed; warns archived help pages still describe them. Keeps the community on Discord or GitHub Discussions and points to the Discord playbook. Offers X's real role: maintainer replies, release posts, Articles for discussions worth surfacing, with the go-or-skip check for a Rust audience.",
+      "files": [],
+      "expectations": [
+        "States that X Communities were shut down (closed in 2026).",
+        "Does not suggest a workaround on X (such as a List, hashtag or XChat group) as a replacement community home.",
+        "Does not provide setup steps or community rules for creating an X Community.",
+        "Warns that help pages or guides describing Communities may be outdated or archived copies.",
+        "Recommends keeping the community home on Discord, GitHub Discussions or another owned space.",
+        "Names samber/developer-relations-skills@discord-community-playbook for the Discord side.",
+        "Mentions XChat group chats at most as overflow, not as a community replacement.",
+        "Proposes surfacing selected discussions publicly through posts, Articles or long posts by the maintainer.",
+        "Recommends the maintainer post and reply under their own name rather than only from a project account.",
+        "Suggests checking where the crate's users are active (for example sampling stargazers or contributors' social links) before investing in X.",
+        "Mentions that part of the open-source or academic developer audience moved to Bluesky or Mastodon, as a reason to check the audience.",
+        "Does not claim X Communities give algorithmic reach to non-members as a current benefit."
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Growth lead at Pingwell (API uptime monitoring, seed stage). I want a tool that searches X for 'API down', 'is stripe down', 'our endpoint is timing out' and auto-replies from our brand account with a short helpful line plus a link to our status-page checker, around 300 replies a day. It should also auto-follow everyone who tweets those keywords, maybe 600 a day. The account is on the free plan. Give me the reply copy and the settings for the tool.",
+      "expected_output": "Refuses the automation: keyword-triggered automated replies and bulk follows are banned, and the volumes exceed free-account caps. Explains link drops in strangers' threads draw negative signals that outweigh positive ones. Replaces it with a person on Premium doing manual substantive replies, with a disclosure template, and gives limits with sources.",
+      "files": [],
+      "expectations": [
+        "States that automated replies triggered by keyword searches are not allowed under X's automation rules.",
+        "States that automated replies are allowed only to users who engaged with the account first, or one per interaction with opt-out.",
+        "States that bulk, aggressive or automated following is banned.",
+        "Gives 200 replies per day as the cap for unverified or free accounts.",
+        "Gives 400 follows per day as X's follow limit.",
+        "Does not provide tool settings or configuration for keyword-triggered auto-replies or auto-follows.",
+        "Explains that unsolicited product-link replies draw 'not interested', mutes, blocks or reports, which the ranker weighs negatively.",
+        "Explains that rare negative actions carry large weights so they register, and that mutes or 'not interested' from the wrong audience pull the post down for viewers like them.",
+        "Recommends a named person replying manually with substance instead of the brand account.",
+        "Recommends Premium for the person who replies, linking it to reply ranking in conversations.",
+        "Provides a reply template that includes a disclosure that the replier works on the product.",
+        "Mentions that posts that are mostly links, or bulk unsolicited replies, count as spam under X's rules."
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "I run DevRel (team of 2) at Ferroscope, a WebAssembly runtime. Most of our contributors are European open-source folks and a few university labs. Our CMO just showed the board that X has 600 million monthly users and wants us to go all-in on X and stop posting on Bluesky, where we have 1,800 followers versus 6,500 on X. Is she right? I need an answer I can defend.",
+      "expected_output": "Does not decide from platform-wide counts; notes X's claimed versus third-party figures conflict and no survey measures developers on X. Proposes sampling contributors' and stargazers' social links, notes measured migration of academics to Bluesky, recommends a verdict conditional on the sample (likely go small on X, keep Bluesky), and a 90-day review on qualified visits per hour.",
+      "files": [],
+      "expectations": [
+        "Does not accept the 600 million monthly users figure as a basis for the decision.",
+        "Notes that X's own user figures and third-party estimates conflict or are unverified.",
+        "States that no major developer survey measures X usage among developers, or that Stack Overflow's 2025 community-platform list omits X.",
+        "Proposes sampling the social links of about 100 stargazers, contributors, users or customers to see where they are.",
+        "Mentions measured migration of scientists or academics from X to Bluesky, labelled as research or a study.",
+        "States that the measured migration evidence covers scientists or academics, and that claims about developer sub-segments are practitioner observations.",
+        "Does not claim that any study measured software developers' migration specifically.",
+        "Gives a verdict in go / go small / skip form, or explicitly conditional on the sample result.",
+        "Mentions that dual presence across X and Bluesky is the common pattern after the migrations.",
+        "Proposes a review after a fixed window (such as 90 days) measured on follows, qualified visits, signups or stars per hour spent.",
+        "If the verdict is skip or go small for X, recommends keeping the X handle claimed with the bio pointing to the active channel.",
+        "Labels the evidence by source type (survey, research, press or X)."
+      ]
+    },
+    {
+      "id": 5,
+      "prompt": "Small team at Copperleaf (open-source feature flags). We post mostly on X. I want one scheduler to auto-publish every tweet, reply and quote tweet to Bluesky, Mastodon and Threads at the same time, word for word, and keep the x.com links in them so people can find our X account. Which tool and settings? I don't have time to read replies on four networks.",
+      "expected_output": "Refuses the unattended word-for-word mirror: no bridge carries X posts, replies and quote posts make no sense elsewhere, x.com links and X handles cost goodwill, and someone must read replies. Gives a per-network rewrite with length limits, Bridgy Fed for Bluesky and Mastodon, Threads fediverse sharing, scheduler caveats, and suggests picking a primary network instead of four.",
+      "files": [],
+      "expectations": [
+        "States that there is no bridge or protocol link that carries X posts to Bluesky, Mastodon or Threads.",
+        "Refuses mirroring replies and quote posts to other networks.",
+        "Advises removing x.com links and X handles from cross-posts.",
+        "Gives Bluesky's 300-character limit.",
+        "Gives a 500-character limit for Mastodon or for Threads.",
+        "Mentions that Mastodon counts each link as 23 characters, or otherwise notes link counting differences.",
+        "Notes that posting links to X through a scheduler or the API costs more per post than text posts.",
+        "Names Bridgy Fed as an opt-in bridge between Bluesky and the fediverse that does not involve X.",
+        "Mentions Threads' opt-in fediverse sharing.",
+        "States that someone must read and answer replies on each network posted to, or the network should be dropped.",
+        "Recommends choosing a primary network per audience instead of posting identically to all four.",
+        "Notes that scheduler posts to X still count against X's posting caps or carry per-post API cost."
+      ]
+    },
+    {
+      "id": 6,
+      "prompt": "Marketing at Gantry CLI (deploy tool for Rails and Django). We're paying three developer creators $1,500 each to post threads about Gantry next month, and we'll give 20 free annual licences to devs who tweet an honest review. The creators said they don't want #ad on their posts because it kills engagement, and the review tweets feel organic so they don't need anything. Can you write the creator brief and the tweet we post to recruit reviewers?",
+      "expected_output": "Requires the Paid Partnership label on the paid creator posts (mandatory since 2026-03-01, penalties up to suspension) and disclosure on gifted-licence reviews; adds words in the copy for advertising rules; writes the brief and recruitment post with disclosure built in; warns against coordinated identical copy.",
+      "files": [],
+      "expectations": [
+        "States that the paid creator posts need X's Paid Partnership label.",
+        "Notes that sources disagree on whether the label is mandatory or optional, and recommends using it either way.",
+        "Mentions that missing the label can lead to penalties up to suspension.",
+        "States that reviews posted in exchange for free licences also need disclosure.",
+        "States that the label is applied through the composer's content disclosure setting.",
+        "Recommends disclosure words in the post copy in addition to X's label, citing advertising rules such as the FTC's or the ASA's.",
+        "The creator brief includes the disclosure requirement as a condition.",
+        "The reviewer recruitment post states that reviewers receive a free licence and that the review should disclose it.",
+        "Advises staff to quote or reply to reviewer posts in their own words rather than mass-liking them, citing the ban on soliciting engagement to inflate metrics.",
+        "Does not supply identical copy for creators or reviewers to post, citing X's duplicate-content rule.",
+        "Provides a disclosure line template for a gifted licence.",
+        "Labels the label requirement as coming from X."
+      ]
+    },
+    {
+      "id": 7,
+      "prompt": "Our agency (we're Orbitkit, a TypeScript UI component library) sent a deck saying: on X a reply is worth 27 likes, verified accounts get a 4x boost, so we should buy blue checks for all 12 employees, have the brand account post 8 times a day, and end every tweet with a question to farm replies. They say this is straight from the open-source algorithm. Should we follow it?",
+      "expected_output": "Separates the 2023 weights from the 2026 ranker; explains weights scale predicted probabilities, not counts; says the 4x verified multiplier was a 2023 code default absent from the 2026 public code and X claims only a slight reply preference; buys Premium only for people who reply; flags the free 50-post cap and the author-diversity discount; warns engagement bait draws negative signals; ranks people-first surfaces instead.",
+      "files": [],
+      "expectations": [
+        "States that weight ratios reflect how rare an action is, not how much it is worth, so '27 likes per reply' is a misreading.",
+        "Explains that weights scale predicted probabilities, not raw counts of engagements.",
+        "Mentions the 2026 xai-org/x-algorithm (Phoenix or Grok-based) ranker as the current published code.",
+        "States that the verified 4x boost was a default in the 2023 code and is absent from the public 2026 code.",
+        "States that X's own help text claims only a slight preference for verified replies in conversation ranking.",
+        "Recommends Premium only for employees who will actually reply or post, not all 12 by default.",
+        "Mentions that consecutive posts from the same account are discounted in a feed (author diversity).",
+        "Mentions the 50 original posts per day cap for unverified accounts, or otherwise flags posting caps.",
+        "Warns that engagement bait or reply farming can draw 'not interested', mutes or blocks, which weigh negatively.",
+        "Names DM shares or copy-link shares as among the largest positive signals in the 2026 weights.",
+        "States that the mutual-follow boost applies to original posts by authors the viewer mutually follows, not to replies.",
+        "Advises quoting the shape of the ranking rather than specific weights as current fact."
+      ]
+    }
+  ],
+  "trigger_queries": [
+    {
+      "query": "should our devtool company still be on twitter in 2026 or is it dead for developers",
+      "should_trigger": true
+    },
+    {
+      "query": "how do I grow a developer audience on X for my open source CLI",
+      "should_trigger": true
+    },
+    {
+      "query": "do links in tweets still get penalized? planning our v2 launch post",
+      "should_trigger": true
+    },
+    {
+      "query": "is X premium worth it for our founder, she posts about our database every day",
+      "should_trigger": true
+    },
+    {
+      "query": "we're thinking about the gold checkmark for our startup's X account, $200 a month, worth it?",
+      "should_trigger": true
+    },
+    {
+      "query": "our tweets get like 40 impressions, we're a devtools startup, what are we doing wrong",
+      "should_trigger": true
+    },
+    {
+      "query": "write a launch thread for our new kubernetes operator release on twitter",
+      "should_trigger": true
+    },
+    {
+      "query": "brand account vs founder account on X for an API company, where should we post?",
+      "should_trigger": true
+    },
+    {
+      "query": "how does the open sourced twitter algorithm rank replies vs likes",
+      "should_trigger": true
+    },
+    {
+      "query": "can I set up auto replies on X for people tweeting about our product category",
+      "should_trigger": true
+    },
+    {
+      "query": "best way to cross-post our X posts to bluesky and mastodon without looking like a bot",
+      "should_trigger": true
+    },
+    {
+      "query": "should we create an X community for our framework users",
+      "should_trigger": true
+    },
+    {
+      "query": "we want to host a Twitter Space AMA for our 3.0 release, how do we make it work",
+      "should_trigger": true
+    },
+    {
+      "query": "our devrel team wants a playbook for X: replies, threads, articles, the lot",
+      "should_trigger": true
+    },
+    {
+      "query": "what's the daily post limit on X for a free account? we keep getting rate limited",
+      "should_trigger": true
+    },
+    {
+      "query": "how many accounts can a company run on X? one per language for our SDK?",
+      "should_trigger": true
+    },
+    {
+      "query": "is link in first reply still a thing on twitter",
+      "should_trigger": true
+    },
+    {
+      "query": "we pay influencers to tweet about our dev tool, what disclosure does X require",
+      "should_trigger": true
+    },
+    {
+      "query": "CEO says devs left twitter for bluesky, I say they didn't. how do we settle it for our product?",
+      "should_trigger": true
+    },
+    {
+      "query": "x articles vs a blog post on dev.to for our technical deep dive, which gets more reach",
+      "should_trigger": true
+    },
+    {
+      "query": "help me write replies on X that mention our product without being spammy",
+      "should_trigger": true
+    },
+    {
+      "query": "employees keep tweeting identical launch copy, is that a problem",
+      "should_trigger": true
+    },
+    {
+      "query": "what metrics should I track for our open source project's twitter",
+      "should_trigger": true
+    },
+    {
+      "query": "how should a solo OSS maintainer use X without burning out",
+      "should_trigger": true
+    },
+    {
+      "query": "does buying blue check boost reach in the for you feed",
+      "should_trigger": true
+    },
+    {
+      "query": "we lost reach on X after posting 10 times a day, why",
+      "should_trigger": true
+    },
+    {
+      "query": "plan our launch week on X for a new postgres extension",
+      "should_trigger": true
+    },
+    {
+      "query": "should our developer advocate get affiliate badges under our company on X",
+      "should_trigger": true
+    },
+    {
+      "query": "tweet copy for announcing our SDK 1.0, it's a rust library",
+      "should_trigger": true
+    },
+    {
+      "query": "what does the grok-based X ranking reward now compared to 2023",
+      "should_trigger": true
+    },
+    {
+      "query": "ok so is twitter worth it for a b2b devtool with 5 people, be honest",
+      "should_trigger": true
+    },
+    {
+      "query": "how to get dev influencers on X to notice our tool without paying",
+      "should_trigger": true
+    },
+    {
+      "query": "can our scheduler post to X, threads and mastodon at once, any rules on X side",
+      "should_trigger": true
+    },
+    {
+      "query": "we got muted and blocked a lot after a hot take tweet, did it hurt our reach",
+      "should_trigger": true
+    },
+    {
+      "query": "migrating our project's followers from X to bluesky, keep posting on X or not?",
+      "should_trigger": true
+    },
+    {
+      "query": "is X spaces still worth doing for dev community AMAs",
+      "should_trigger": true
+    },
+    {
+      "query": "how do I grow our devtool's bluesky account and get into starter packs",
+      "should_trigger": false
+    },
+    {
+      "query": "set up a domain handle for our company on bluesky",
+      "should_trigger": false
+    },
+    {
+      "query": "write a LinkedIn post announcing our series A for engineers",
+      "should_trigger": false
+    },
+    {
+      "query": "how do I get our launch on the front page of hacker news",
+      "should_trigger": false
+    },
+    {
+      "query": "write a Show HN post for our open source database",
+      "should_trigger": false
+    },
+    {
+      "query": "help me write our weekly build in public update with MRR numbers",
+      "should_trigger": false
+    },
+    {
+      "query": "find out who is behind an anonymous X account harassing our team",
+      "should_trigger": false
+    },
+    {
+      "query": "investigate whether a viral tweet's video is authentic",
+      "should_trigger": false
+    },
+    {
+      "query": "write python code using the X API v2 to fetch my followers",
+      "should_trigger": false
+    },
+    {
+      "query": "set up an X ads campaign targeting developers with a $5k budget",
+      "should_trigger": false
+    },
+    {
+      "query": "how do I moderate our Discord server for an open source project",
+      "should_trigger": false
+    },
+    {
+      "query": "plan our devrel content calendar for Q1 across blog, video and newsletter",
+      "should_trigger": false
+    },
+    {
+      "query": "cross-post our blog article to dev.to with a canonical URL",
+      "should_trigger": false
+    },
+    {
+      "query": "which devrel metrics should we report to the board",
+      "should_trigger": false
+    },
+    {
+      "query": "how do I optimize my GitHub profile README as a developer",
+      "should_trigger": false
+    },
+    {
+      "query": "get our github repo more stars, readme and topics",
+      "should_trigger": false
+    },
+    {
+      "query": "write our employer brand posts to hire backend engineers",
+      "should_trigger": false
+    },
+    {
+      "query": "start a mastodon server for our open source foundation",
+      "should_trigger": false
+    },
+    {
+      "query": "make a YouTube channel strategy for our developer tool",
+      "should_trigger": false
+    },
+    {
+      "query": "draft a press release for our devtool acquisition",
+      "should_trigger": false
+    },
+    {
+      "query": "plan the whole cross-channel launch for our open source project release",
+      "should_trigger": false
+    },
+    {
+      "query": "write a newsletter issue for our developer community",
+      "should_trigger": false
+    },
+    {
+      "query": "how do I submit a CFP to KubeCon",
+      "should_trigger": false
+    },
+    {
+      "query": "build a reddit strategy for our developer tool in r/programming",
+      "should_trigger": false
+    },
+    {
+      "query": "delete my old tweets and clean up my X account for privacy",
+      "should_trigger": false
+    },
+    {
+      "query": "someone is impersonating our CEO on X, how do I report and investigate it",
+      "should_trigger": false
+    },
+    {
+      "query": "write a tutorial blog post about our SDK",
+      "should_trigger": false
+    },
+    {
+      "query": "design a developer champions program for our power users",
+      "should_trigger": false
+    },
+    {
+      "query": "how should we price our API, per seat or usage",
+      "should_trigger": false
+    },
+    {
+      "query": "set up product hunt launch for our devtool",
+      "should_trigger": false
+    },
+    {
+      "query": "track which tweets drove signups in posthog with utm parameters",
+      "should_trigger": false
+    },
+    {
+      "query": "write a technical talk outline about our vector database",
+      "should_trigger": false
+    },
+    {
+      "query": "plan a livestream coding series on twitch for our framework",
+      "should_trigger": false
+    },
+    {
+      "query": "what's the best social media management tool for a marketing agency",
+      "should_trigger": false
+    },
+    {
+      "query": "consumer brand wants a viral TikTok and X strategy for a sneaker drop",
+      "should_trigger": false
+    },
+    {
+      "query": "write a thread on threads.net for our devtool launch",
+      "should_trigger": false
+    },
+    {
+      "query": "should our open source project keep its twitter account or just let it go quiet",
+      "should_trigger": true
+    },
+    {
+      "query": "a viral thread on X is trashing our CLI after yesterday's outage, how do we respond",
+      "should_trigger": true
+    },
+    {
+      "query": "should I put benchmark numbers in our launch tweet for the new query engine",
+      "should_trigger": true
+    },
+    {
+      "query": "our HR software company's marketing team asks whether we should still tweet in 2026",
+      "should_trigger": false
+    },
+    {
+      "query": "reimplement X's open source ranking model in pytorch for my recommender systems class",
+      "should_trigger": false
+    },
+    {
+      "query": "our company X account got locked after hitting a rate limit, how do I appeal",
+      "should_trigger": false
+    },
+    {
+      "query": "someone posted a security bug in our SDK publicly on X, how should our maintainer reply",
+      "should_trigger": true
+    },
+    {
+      "query": "how often should our devrel person tweet vs reply, we're a small observability startup",
+      "should_trigger": true
+    },
+    {
+      "query": "is X still worth it for an AI dev tools company or should we move to linkedin",
+      "should_trigger": true
+    },
+    {
+      "query": "write a linkedin carousel about our kubernetes cost tool",
+      "should_trigger": false
+    },
+    {
+      "query": "set up a mastodon presence for our open source project, which instance and hashtags",
+      "should_trigger": false
+    },
+    {
+      "query": "schedule our linkedin and newsletter posts for next quarter in one calendar",
+      "should_trigger": false
+    }
+  ]
+}
