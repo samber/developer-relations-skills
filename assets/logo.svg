@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400" role="img" aria-labelledby="title desc">
+  <title id="title">Developer Relations Skills</title>
+  <desc id="desc">A violet and coral bridge made from two overlapping conversation forms.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="400" gradientUnits="userSpaceOnUse"><stop stop-color="#211633"/><stop offset="1" stop-color="#372044"/></linearGradient>
+    <linearGradient id="link" x1="124" y1="105" x2="284" y2="284" gradientUnits="userSpaceOnUse"><stop stop-color="#A88BFF"/><stop offset="1" stop-color="#FF7B8D"/></linearGradient>
+  </defs>
+  <rect width="1200" height="400" rx="36" fill="url(#bg)"/>
+  <g id="relations-mark">
+    <rect x="80" y="80" width="240" height="240" rx="54" fill="#2B1D3B" stroke="#704C83" stroke-width="2"/>
+    <path d="M119 151c0-25 20-45 45-45h48c25 0 45 20 45 45v23c0 25-20 45-45 45h-18l-31 26v-26c-25 0-44-20-44-45v-23Z" fill="url(#link)"/>
+    <path d="M157 215c0 25 20 45 45 45h18l31 26v-26c25 0 44-20 44-45v-9" fill="none" stroke="#FAD8E0" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M151 157h74M151 177h47" stroke="#281A37" stroke-width="11" stroke-linecap="round"/>
+    <circle cx="274" cy="129" r="9" fill="#FFE0A3"/><circle cx="292" cy="151" r="6" fill="#FFE0A3"/>
+  </g>
+  <g fill="#FFF8FF" font-family="Inter, ui-sans-serif, system-ui, sans-serif">
+    <text x="380" y="170" font-size="28" font-weight="700" letter-spacing="5" fill="#D4C1FF">SAMBER / SKILLS</text>
+    <text x="380" y="232" font-size="58" font-weight="800" letter-spacing="-2">Developer Relations</text>
+    <text x="383" y="282" font-size="25" font-weight="500" fill="#D9C5DC">Docs · open source · community · technical content</text>
+  </g>
+</svg>
