@@ -1,0 +1,484 @@
+{
+  "skill_name": "reddit-dev-playbook",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "We're shipping Pgsnap 1.0 next Tuesday - open-source Go CLI that snapshots Postgres databases for test fixtures, Apache-2.0, about 7 weeks old, 2 contributors (me and my cofounder). There's also a paid cloud version. Plan: I create u/pgsnap_official on Monday, then Tuesday 9am ET I post the same announcement ('Introducing Pgsnap 1.0 - the fastest way to snapshot Postgres!') to r/programming, r/golang, r/PostgreSQL, r/devops, r/webdev and r/selfhosted, and drop the links in our 40-person Slack so the team can upvote and comment early to beat the algorithm. My English isn't great so ChatGPT will polish the text. Can you turn this into a proper Reddit launch plan?",
+      "expected_output": "Replaces the blast with a per-subreddit lane plan: r/programming only via a technical write-up, r/webdev only on Showoff Saturday, r/selfhosted only in the weekly New Project Megathread, r/devops only in the weekly self-promotion thread; refuses the Slack upvote push and the launch-week brand account; addresses LLM polish against AI-text bans; posts from a personal account with a gate check.",
+      "files": [],
+      "expectations": [
+        "States that r/programming does not accept product or 'I made this' posts and that the route there is a technical write-up about how it was built.",
+        "States that r/webdev project posts are allowed only on Showoff Saturday, so a Tuesday post there would be removed.",
+        "States that r/selfhosted allows projects younger than 3 months only in its current weekly New Project Megathread.",
+        "States that r/devops self-promotion goes in its weekly self-promotion thread.",
+        "Identifies asking the Slack team to upvote or comment as coordinated voting and names Reddit's warning, 3-day, 7-day, permanent suspension ladder or equivalent escalating penalties.",
+        "Recommends against creating a new brand account the day before launch, citing account-age, karma or Contributor Quality Score filters.",
+        "Recommends that the person who built it post from their personal account rather than u/pgsnap_official.",
+        "States that r/programming bans LLM-written text including LLM translation or polishing.",
+        "Offers a non-LLM path for the non-native writer, such as plain short sentences, a human proofreader or a non-LLM spellchecker.",
+        "States that Reddit pauses, or is testing a pause on, posting substantially similar content in too many communities ('Try again in 12 hours').",
+        "Tells the user to name the paid cloud tier or disclose being the maintainer in the first lines of posts.",
+        "Tells the user to check each posting account against the subreddit's posting screen or eligibility gates before launch day.",
+        "Labels at least one claim as a Reddit rule versus a written subreddit rule versus practitioner observation.",
+        "States that passing the subreddit's posting eligibility screen does not clear filter-action AutoModerator rules, CQS, the reputation filter or Crowd Control, and recommends checking the post logged out.",
+        "States that r/webdev bans commercial promotion even on Showoff Saturday, so the paid cloud tier must not be pitched there."
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Annoying morning. I'm the DevRel lead at Kelvara (we make a Kubernetes cost operator, open core). Yesterday I posted 'Kelvara 2.0: cut your cluster bill by 40%' in r/kubernetes and it got removed within minutes. Same week, three of us posted different blog posts in r/dataengineering on different days, and now our engineer Tomas got a warning from the mods there. We each only posted once, so what did we do wrong and how do we fix it without getting the domain banned?",
+      "expected_output": "Explains r/kubernetes requires new tools in the weekly 'Show off your new tools and projects' thread plus affiliation in subject or body; explains r/dataengineering's once-a-month limit is shared by all accounts of one organization plus Brand Affiliate flair; proposes modmail and a corrected plan.",
+      "files": [],
+      "expectations": [
+        "States that r/kubernetes requires new tool posts to go as a comment in its weekly 'Show off your new tools and projects' thread.",
+        "States that r/kubernetes requires commercial affiliation to be stated in the subject or body.",
+        "States that r/dataengineering limits self-promotion to once per month and that the limit is shared by all accounts of one organization.",
+        "Concludes that three Kelvara posts in one week exceeded r/dataengineering's limit even though each person posted once.",
+        "States that r/dataengineering requires employees to state the relationship and use the Brand Affiliate flair.",
+        "Recommends a modmail to the moderators asking which rule was broken instead of reposting.",
+        "States that r/dataengineering bans 'looking for feedback' or 'does anybody need this tool' posts.",
+        "Recommends against deleting and reposting the removed r/kubernetes post outside the weekly thread.",
+        "Notes r/kubernetes's blogspam rule or its no-repost-within-a-month rule.",
+        "Proposes a per-subreddit plan going forward that assigns the organization's monthly r/dataengineering slot to one person.",
+        "States that r/kubernetes requires posts to provide value independent of the product and to avoid problem/solution setups where the product is always the answer, which the '40% cheaper' title breaks."
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Quick sanity check. Our growth guy says Reddit's official policy is the 9:1 rule, so as long as each of our 5 engineers leaves 9 helpful comments somewhere on Reddit, they can each post our blog link once in r/learnprogramming, r/SaaS, r/startups and r/programming every week. He says that's literally Reddit's rule so we're covered. Is he right?",
+      "expected_output": "No: 9:1 comes from Reddiquette (user-written, informal) and the moderator help article's 10% rule is per community; Reddit's binding rule is authenticity/spam plus each subreddit's written rules, which here forbid the plan.",
+      "files": [],
+      "expectations": [
+        "States that the 9:1 ratio comes from Reddiquette, which Reddit describes as informal and written by users.",
+        "States that Reddit's moderator help describes a 10% rule that some communities adopt, counted over history in that community.",
+        "States that each subreddit's written rules, not a sitewide ratio, decide what is allowed.",
+        "States that comments elsewhere on Reddit do not satisfy a ratio counted inside the target community.",
+        "States that r/learnprogramming forbids self-promotion from first-time posters without prior participation.",
+        "States r/SaaS's limit of 1 mention or 3 links per 60 days, with alternate accounts counted.",
+        "States that r/startups allows promotion only in its monthly Share Your Startup thread.",
+        "States that r/programming bans product promotion posts and accepts only technical write-ups about how something was built.",
+        "Treats five engineers posting the same company blog weekly as concentrated own-domain linking that moderators read as spam.",
+        "Does not soften the answer with generic 'you might get banned' hedging instead of naming each rule.",
+        "States that r/startups lets comments link only content the poster has no affiliation with.",
+        "States that r/startups submissions must not tie to the poster's own project by name or URL."
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "We're launching Quorumdb v2 (distributed SQL, Apache-2.0) next Thursday and want to do an AMA in r/kubernetes and r/PostgreSQL the same day. Plan: I post 'AMA: we're the Quorumdb team' from our company account at launch time, marketing pre-writes answers to the 30 questions we expect, and our CTO pops in when he can. Anything to add?",
+      "expected_output": "Moderators first by modmail; scheduled AMA post up to 21 days ahead with co-hosts; approved-user status; hosts answer personally for at least an hour; no pre-written answers; not a pure marketing vehicle; one subreddit at a time realistic.",
+      "files": [],
+      "expectations": [
+        "Says to contact each subreddit's moderators by modmail before scheduling, since moderators decide whether an AMA runs.",
+        "States that AMA posts can be scheduled up to 21 days in advance.",
+        "States that an AMA can have up to five co-hosts.",
+        "States that r/kubernetes requires commercial affiliation in the subject or body, which applies to the AMA post title or text.",
+        "Says pre-written or marketing-written answers break Reddit's AMA guidance that answers be authentic and from the host.",
+        "States that r/PostgreSQL's written rules list only 'Be nice' and 'Be helpful', so the AMA depends on asking its moderators first.",
+        "Recommends asking moderators to add the hosts as approved users so filters do not hold their answers.",
+        "States that Reddit pushes an AMA post back up the feed when it starts, so announcing it in advance helps.",
+        "Notes that moderators steer guests away from AMAs used as pure marketing.",
+        "Provides or adapts a modmail proposal including host names, topic, date and identity verification.",
+        "States that users who tap Remind Me on a scheduled AMA get notified 24 hours before and at the start, so the post should go up days ahead."
+      ]
+    },
+    {
+      "id": 5,
+      "prompt": "I lead support at Driftlane (feature-flag SaaS). People in r/webdev and r/SaaS keep asking 'LaunchDarkly alternatives?' and our competitor's employees seem to answer those threads all the time. I want our 6 support engineers to jump in and recommend Driftlane from their personal accounts. They have the company in their Reddit bios, so I think disclosure is covered. Can you write me the guideline and a few reply templates?",
+      "expected_output": "Disclosure must be inside each comment (bio not enough), Brand Affiliate tag, r/SaaS 60-day per-org-ish quota with alts counting, r/webdev no commercial promotion; reply templates with disclosure and named alternatives; no coordinated voting.",
+      "files": [],
+      "expectations": [
+        "States that a bio mentioning the employer is not enough and the disclosure must be in each comment.",
+        "Cites US FTC endorsement guidance or equivalent law requiring employees to disclose in the post itself.",
+        "Recommends Reddit's Brand Affiliate tag for comments with commercial intent.",
+        "States r/SaaS's limit of 1 mention or 3 links per 60 days and that secondary accounts count toward it.",
+        "States that r/webdev bans commercial promotion and that violations can lead to a ban.",
+        "Warns that several employees answering or upvoting the same thread can read as coordinated voting or astroturfing.",
+        "States that in r/webdev a disclosed answer may describe the product but must not become commercial promotion, per its no-commercial-promotion rule.",
+        "Provides a reply template that names competitor or alternative tools fairly alongside Driftlane.",
+        "States that the FTC Endorsement Guides apply to employee comments even on personal accounts.",
+        "Proposes a cap or rotation so the six engineers do not all post in the same thread.",
+        "States that a Reddit Pro or verified business profile confirms identity only and does not change moderation, ranking or filters."
+      ]
+    },
+    {
+      "id": 6,
+      "prompt": "We built a Java MCP server that exposes JDBC databases to coding agents, mostly written with Claude Code over a weekend, MIT licensed, repo is 10 days old. I want to post it to r/java, r/opensource and r/LocalLLaMA tonight. Write me the three posts? Keep it hype, it's a great project.",
+      "expected_output": "States the subreddit rules plainly: r/java bans AI-generated or vibe-coded programs with an instant permanent ban; r/opensource bans AI-related projects (made with, using or for AI, including MCP servers) and requires an OSI license; r/LocalLLaMA allows with 1/10 rule, disclosure, no primarily LLM-written copy; drafts structure only for the person to write.",
+      "files": [],
+      "expectations": [
+        "States that r/java's rules ban AI-generated or vibe-coded programs with an instant permanent ban.",
+        "States that r/opensource bans projects that use, are made by or are intended for AI, MCP servers included.",
+        "States that r/opensource treats AI-generated content as ban-worthy.",
+        "States that r/LocalLLaMA limits self-promotion with a 1/10th guideline and requires affiliation to be disclosed.",
+        "States that r/LocalLLaMA does not allow primarily LLM-written copy.",
+        "Does not deliver three ready-to-post hype posts written for the user.",
+        "Provides structure or a skeleton for the person to write the r/LocalLLaMA post in their own words.",
+        "States that r/LocalLLaMA lets non-native speakers use an LLM only if they make that use transparent.",
+        "States the rules as facts and leaves the choice to the user rather than refusing to discuss the subreddits.",
+        "Labels each rule by source: a written sidebar rule for r/java and r/LocalLLaMA, and a pinned moderator announcement or press report for r/opensource's AI-project ban.",
+        "States that r/opensource requires accounts to be at least a year old or projects to have an existing community and several contributors, making a 10-day-old repo ineligible.",
+        "States that r/java has no written self-promotion rule but its AI rule alone excludes this project."
+      ]
+    },
+    {
+      "id": 7,
+      "prompt": "Data question for our Reddit launch of Brisket (open-source TypeScript ORM). What's the exact Reddit hot algorithm right now, what hour should we post to r/webdev and r/typescript, and how many upvotes do we need in the first hour to hit the top of the sub? Our CMO wants numbers.",
+      "expected_output": "Separates the archived open-source hot formula from the unpublished current ranking, gives Reddit's one-line Hot description and hidden early votes, refuses invented upvote thresholds, and redirects to lanes: r/webdev Showoff Saturday, r/typescript open-source with repo link and TS utility.",
+      "files": [],
+      "expectations": [
+        "Gives the archived open-source hot formula with log10 of net score and the 45,000-second time term.",
+        "States that the archived formula is not the current production ranking and the current one is unpublished.",
+        "Quotes or paraphrases Reddit's own description that Hot prioritizes posts recently getting upvotes and comments.",
+        "States that Reddit hides vote counts for the first hours of a post.",
+        "Does not give a specific number of first-hour upvotes needed to reach the top of a subreddit as fact.",
+        "Labels posting-hour advice as practitioner observation rather than a Reddit rule.",
+        "States that r/webdev project posts are only allowed on Showoff Saturday, so the day is fixed by the rule.",
+        "States that r/typescript requires project posts to be open source with a repo link and to add TypeScript utility.",
+        "Derives that 10 net votes weigh as much as the next 90, or that a tenfold score equals 12.5 hours, from the archived formula.",
+        "States that the comment 'Best' sort in Reddit's archived code uses a Wilson lower bound, or that votes being hidden early means first-hour upvote targets cannot be tracked."
+      ]
+    },
+    {
+      "id": 8,
+      "prompt": "Context: Ledgerline is a closed-source, paid ($49/mo) API monitoring tool. We have budget for organic only this quarter. Marketing wants weekly posts in r/golang, r/typescript, r/javascript, r/sysadmin and r/devops about our new Go and TS SDKs. Can you build me a 6-week Reddit calendar?",
+      "expected_output": "Drops subreddits whose rules exclude closed paid products (r/golang closed/paid not aimed at Go devs, r/typescript open source only, r/javascript no paid products); r/sysadmin vendors only in existing discussions with disclosure, own blog counts as product; r/devops weekly thread; prioritizes disclosed answers; ads footnote.",
+      "files": [],
+      "expectations": [
+        "States that r/typescript accepts project posts only for open-source projects with a repo link.",
+        "States that r/javascript prohibits advertising paid products and services.",
+        "States that r/golang asks people not to post closed-source or paid software not specifically aimed at Go developers.",
+        "Considers whether open-source SDKs aimed at Go developers could fit r/golang, rather than treating the product as one unit.",
+        "States that r/sysadmin lets vendors discuss their product only inside existing discussions, with disclosure, and that own blog articles count as product.",
+        "States that r/devops self-promotion belongs in the weekly self-promotion thread with affiliation disclosed at the top.",
+        "Replaces weekly standalone posts with disclosed answers in existing threads as the main recurring activity.",
+        "Removes or demotes subreddits whose rules exclude the product rather than keeping them as low-priority rows.",
+        "Mentions paid promoted posts only briefly, as the route for subreddits that ban organic promotion.",
+        "States that a promoted post stops if moderators remove the original post, or that engagement does not return to the original.",
+        "Recommends running a community-targeted Reddit Ads campaign rather than 'Promote your post' for subreddits that ban organic promotion."
+      ]
+    }
+  ],
+  "trigger_queries": [
+    {
+      "query": "can we post our new open source Go library on r/programming or will it get removed?",
+      "should_trigger": true
+    },
+    {
+      "query": "my post in r/webdev got removed in 5 minutes, it was just a link to our devtool's landing page. why?",
+      "should_trigger": true
+    },
+    {
+      "query": "plan our Reddit launch for a Postgres extension next month - which subreddits and what to post",
+      "should_trigger": true
+    },
+    {
+      "query": "how much karma does a brand new account need before posting in dev subreddits?",
+      "should_trigger": true
+    },
+    {
+      "query": "is it ok if our engineers recommend our SaaS in reddit threads asking for alternatives?",
+      "should_trigger": true
+    },
+    {
+      "query": "we want to do an AMA in r/rust about our new async runtime, how do we set it up",
+      "should_trigger": true
+    },
+    {
+      "query": "is the 9:1 self promotion rule actually a reddit rule",
+      "should_trigger": true
+    },
+    {
+      "query": "should our devtool startup have an official reddit account or should founders post as themselves",
+      "should_trigger": true
+    },
+    {
+      "query": "reddit shadowbanned our company account after we posted our blog to 5 subs, what happened",
+      "should_trigger": true
+    },
+    {
+      "query": "best way to get developers to notice our CLI on reddit without getting banned",
+      "should_trigger": true
+    },
+    {
+      "query": "what does reddit's hot ranking reward, should we get upvotes early",
+      "should_trigger": true
+    },
+    {
+      "query": "what's showoff saturday on r/webdev and how do I use it for my side project",
+      "should_trigger": true
+    },
+    {
+      "query": "our k8s operator post got removed from r/kubernetes, where should tool announcements go",
+      "should_trigger": true
+    },
+    {
+      "query": "write me a reddit post announcing our open source observability tool for r/devops",
+      "should_trigger": true
+    },
+    {
+      "query": "Reddit strategy for DevRel: we're a database company, 2 advocates, 3 hours a week",
+      "should_trigger": true
+    },
+    {
+      "query": "do I need to disclose that I work for the company when I mention our product on reddit",
+      "should_trigger": true
+    },
+    {
+      "query": "what's the Brand Affiliate tag on reddit and do we need it for our dev tool posts",
+      "should_trigger": true
+    },
+    {
+      "query": "is Reddit Pro worth setting up for an API company",
+      "should_trigger": true
+    },
+    {
+      "query": "can I post my MCP server in r/opensource",
+      "should_trigger": true
+    },
+    {
+      "query": "r/dataengineering mods warned us about self promotion, how often can our company post there",
+      "should_trigger": true
+    },
+    {
+      "query": "how do subreddit karma filters and Contributor Quality Score affect a new founder account",
+      "should_trigger": true
+    },
+    {
+      "query": "we're a 3 person OSS company, where on reddit should we share our Python library release",
+      "should_trigger": true
+    },
+    {
+      "query": "competitor's employees keep answering reddit threads about our category - how should we respond there",
+      "should_trigger": true
+    },
+    {
+      "query": "my English isn't great, can I use chatgpt to write my reddit post for r/programming?",
+      "should_trigger": true
+    },
+    {
+      "query": "how often can we post our engineering blog articles to reddit",
+      "should_trigger": true
+    },
+    {
+      "query": "is it fine to ask our discord to upvote our reddit launch post",
+      "should_trigger": true
+    },
+    {
+      "query": "which developer subreddits allow self promotion for a paid devtool",
+      "should_trigger": true
+    },
+    {
+      "query": "reddit vs hacker news for launching a rust crate - what are the reddit rules",
+      "should_trigger": true
+    },
+    {
+      "query": "our selfhosted app is 6 weeks old - when can we post it on r/selfhosted",
+      "should_trigger": true
+    },
+    {
+      "query": "help me get our devtool some traction on reddit, even small subs",
+      "should_trigger": true
+    },
+    {
+      "query": "plan our Show HN post for next Tuesday and the first comment",
+      "should_trigger": false
+    },
+    {
+      "query": "build a cross-channel launch plan for our open source project: HN, Product Hunt, newsletter, X",
+      "should_trigger": false
+    },
+    {
+      "query": "set up a Reddit Ads campaign targeting r/devops with a $5k budget and conversion tracking",
+      "should_trigger": false
+    },
+    {
+      "query": "write moderation rules and an AutoModerator config for the subreddit we run for our users",
+      "should_trigger": false
+    },
+    {
+      "query": "scrape r/programming posts mentioning our product for sentiment analysis with the Reddit API",
+      "should_trigger": false
+    },
+    {
+      "query": "how do I grow our devtool's presence on Bluesky and get into starter packs",
+      "should_trigger": false
+    },
+    {
+      "query": "our Discord server for the SDK is dead, how do we revive it",
+      "should_trigger": false
+    },
+    {
+      "query": "write a dev.to article about our new CLI and pick the tags",
+      "should_trigger": false
+    },
+    {
+      "query": "what should we post every week to build in public as an indie dev",
+      "should_trigger": false
+    },
+    {
+      "query": "create a quarterly devrel content calendar across blog, YouTube and newsletter",
+      "should_trigger": false
+    },
+    {
+      "query": "our Product Hunt launch flopped, can we relaunch",
+      "should_trigger": false
+    },
+    {
+      "query": "find out who is behind a throwaway reddit account harassing our maintainer",
+      "should_trigger": false
+    },
+    {
+      "query": "how do I build a Reddit bot in Python with PRAW that replies to mentions",
+      "should_trigger": false
+    },
+    {
+      "query": "measure signups attributed to our community channels with UTMs and a dashboard",
+      "should_trigger": false
+    },
+    {
+      "query": "write our code of conduct and ban policy for the community forum",
+      "should_trigger": false
+    },
+    {
+      "query": "which tech newsletters should we pitch for our v2 release",
+      "should_trigger": false
+    },
+    {
+      "query": "help me answer this r/cscareerquestions thread about whether to accept a job offer",
+      "should_trigger": false
+    },
+    {
+      "query": "LinkedIn post for our engineering team's hiring push",
+      "should_trigger": false
+    },
+    {
+      "query": "we're getting flamed on Hacker News for our pricing change, how do we respond in the thread",
+      "should_trigger": false
+    },
+    {
+      "query": "which developer communities should we launch: Discord, Slack or Discourse",
+      "should_trigger": false
+    },
+    {
+      "query": "analyze r/webdev sentiment about Next.js over the last year",
+      "should_trigger": false
+    },
+    {
+      "query": "write a technical blog post about how we cut Postgres migration locks",
+      "should_trigger": false
+    },
+    {
+      "query": "is our OSS project healthy enough to apply to the CNCF sandbox",
+      "should_trigger": false
+    },
+    {
+      "query": "draft a press release for our Series A",
+      "should_trigger": false
+    },
+    {
+      "query": "how do I moderate a toxic thread in our own subreddit r/ourproduct",
+      "should_trigger": false
+    },
+    {
+      "query": "recommend a few good programming subreddits for me to learn Rust",
+      "should_trigger": false
+    },
+    {
+      "query": "how should our devtool show up on X/Twitter for developers",
+      "should_trigger": false
+    },
+    {
+      "query": "set up GitHub Sponsors tiers for our maintainers",
+      "should_trigger": false
+    },
+    {
+      "query": "what's the best time to post on LinkedIn for B2B engineers",
+      "should_trigger": false
+    },
+    {
+      "query": "explain the Reddit IPO and its revenue from data licensing",
+      "should_trigger": false
+    },
+    {
+      "query": "our cofounder and I both want to post our launch in r/golang, is that ok?",
+      "should_trigger": true
+    },
+    {
+      "query": "where do I share a C++ library I wrote on reddit, r/cpp keeps removing it",
+      "should_trigger": true
+    },
+    {
+      "query": "we keep getting 'you don't meet the requirements to post' in r/sysadmin, what does that mean for our vendor account",
+      "should_trigger": true
+    },
+    {
+      "query": "how should a developer advocate build a reddit presence from zero for an API company",
+      "should_trigger": true
+    },
+    {
+      "query": "r/MachineLearning removed our [P] post about our eval framework, what's allowed there",
+      "should_trigger": true
+    },
+    {
+      "query": "what are the best subreddits to find beta users for a consumer mobile app",
+      "should_trigger": false
+    },
+    {
+      "query": "write a reply to this angry customer email about our outage",
+      "should_trigger": false
+    },
+    {
+      "query": "compare Reddit and Stack Overflow as sources of developer survey data for our report",
+      "should_trigger": false
+    },
+    {
+      "query": "help me plan our booth at KubeCon",
+      "should_trigger": false
+    },
+    {
+      "query": "how do we get our project trending on GitHub",
+      "should_trigger": false
+    },
+    {
+      "query": "AutoMod removed my post in r/personalfinance within a minute, why?",
+      "should_trigger": false
+    },
+    {
+      "query": "our skincare brand wants to run an AMA in r/SkincareAddiction next month, how do we set it up",
+      "should_trigger": false
+    },
+    {
+      "query": "can our customer-success team answer r/humanresources threads asking about our HR software?",
+      "should_trigger": false
+    },
+    {
+      "query": "our post in r/selfhosted got removed, it's a 2 month old self-hosted git dashboard",
+      "should_trigger": true
+    },
+    {
+      "query": "is a Reddit AMA in r/devops a good idea for our observability launch, and how do we pitch the mods",
+      "should_trigger": true
+    },
+    {
+      "query": "can our SDK team answer r/aws threads about S3 tooling and mention our open-source CLI",
+      "should_trigger": true
+    },
+    {
+      "query": "we're a devtools startup, is reddit even worth it vs twitter for reaching backend engineers? which subs",
+      "should_trigger": true
+    },
+    {
+      "query": "r/dotnet removed our library announcement on a Wednesday, what are their rules for promotion",
+      "should_trigger": true
+    },
+    {
+      "query": "write a hacker news 'Who is hiring' post for our backend role",
+      "should_trigger": false
+    },
+    {
+      "query": "our community manager wants to start a Discourse forum for our product users, should we?",
+      "should_trigger": false
+    }
+  ]
+}
