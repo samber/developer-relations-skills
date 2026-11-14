@@ -4,7 +4,7 @@ description: "Runs a devtool vendor's, DevRel team's or open-source maintainer's
 license: MIT
 metadata:
   author: Samuel Berthe
-  version: "1.0.3"
+  version: "1.0.4"
 ---
 
 # dev.to Playbook
@@ -135,3 +135,4 @@ In order: fit verdict; setup (organization, members, CTA, RSS); ranked surfaces 
 - samber/developer-relations-skills@devrel-content-calendar - fitting dev.to slots into the quarter.
 - samber/developer-relations-skills@devrel-analytics - attributing referral signups.
 - samber/developer-relations-skills@bluesky-dev-playbook - sharing the article on Bluesky through starter packs and dev feeds.
+- samber/developer-relations-skills@threads-dev-playbook - sharing the article on Threads with one topic tag and a text attachment.

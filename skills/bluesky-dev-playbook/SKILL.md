@@ -4,7 +4,7 @@ description: "Runs a devtool vendor's, developer advocate's or open-source maint
 license: MIT
 metadata:
   author: Samuel Berthe
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # Bluesky Developer Playbook
@@ -150,3 +150,4 @@ Bluesky shows no impression or reach counts on posts [practitioner]; measure wha
 - samber/developer-relations-skills@oss-launch - the cross-channel launch plan this post belongs to.
 - samber/developer-relations-skills@developer-community-moderation - when a pile-on starts in your replies.
 - samber/developer-relations-skills@devrel-analytics - attributing Bluesky referrals to signups.
+- samber/developer-relations-skills@threads-dev-playbook - when Threads is the target, or a federated Threads profile is bridged to Bluesky.

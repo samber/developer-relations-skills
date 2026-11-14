@@ -1,0 +1,471 @@
+{
+  "skill_name": "threads-dev-playbook",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "We're two founders building Ferrule, an open-source Rust CLI for database migrations (about 3k GitHub stars). Our investor keeps saying Threads has 500 million monthly users and passed X on daily users, so we should go all in there instead of X. Plan: create a @ferrule brand account, post every day from it for the next quarter, and stop posting on X. Can you build the posting plan?",
+      "expected_output": "Does not accept platform size as the verdict. Runs a go-or-skip check on named people and projects in the Rust and database-tooling stack, returns skip or go small with a dated check when unknown, recommends a named founder's account over a brand-only presence, says to claim the handle either way, and keeps X rather than abandoning it on size alone.",
+      "files": [],
+      "expectations": [
+        "Does not use the monthly or daily user count as sufficient reason to go all in on Threads.",
+        "Bases the verdict on whether named people or projects in the user's own stack (Rust, database tooling) post on Threads recently.",
+        "Returns an explicit verdict from the set skip, go small or go, rather than an unconditional posting plan.",
+        "When stack presence is unknown, returns go small with a dated check rather than go.",
+        "Describes how to run the check, such as searching the stack's topic tag and named people in the app and counting recent posts.",
+        "Recommends that a named founder post from a personal account, with the brand account as a hub or parked.",
+        "Says to claim the @ferrule handle (and project handles) even if the verdict is skip.",
+        "Says developer presence on Threads is thin or that devtool brand accounts are often parked or dormant.",
+        "Advises against abandoning X solely because of Threads' user numbers.",
+        "Labels at least one claim as coming from Meta and at least one as practitioner or third-party."
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "I'm the community lead at Kelpie DB, an open-source time-series database. We're based in Amsterdam. Most of our contributors hang out on hachyderm and fosstodon. I already set up a company Threads account last week with our team email (we don't use Instagram). My idea is to turn on fediverse sharing so all our Mastodon folks can follow the Threads account and we only have to run one account instead of two. Then I'd shut down our Mastodon account. Sound good?",
+      "expected_output": "Explains that fediverse sharing is unavailable for this account twice over: it is in the European Region and was created with email, not Instagram. Notes that many FOSS-leaning Mastodon servers suspend or limit threads.net, tells them to check their audience's servers, advises keeping the native Mastodon account run by a person and points to the Mastodon playbook, and warns about fediverse follower counting and reply limits.",
+      "files": [],
+      "expectations": [
+        "States that fediverse sharing is not available to accounts located in the European Region.",
+        "States that fediverse sharing requires a Threads profile created with an Instagram account, so an email-created profile cannot share.",
+        "States that a large share of Mastodon servers with a published Threads policy suspend or limit threads.net.",
+        "Labels the server-blocking share as a third-party or practitioner figure rather than a Meta figure.",
+        "Suggests checking whether hachyderm or fosstodon block threads.net, and says a missing or empty public block list does not mean the server allows it.",
+        "Advises keeping the native Mastodon account rather than shutting it down.",
+        "Recommends that a named person run the Mastodon presence or that people post rather than only a brand account.",
+        "Points to samber/developer-relations-skills@mastodon-dev-playbook for the Mastodon presence.",
+        "Mentions that Threads users cannot reply back to fediverse replies, or that fediverse followers are counted separately from Threads followers.",
+        "Warns that turning fediverse sharing off or deleting content only asks other servers to delete, with no guarantee."
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Can you adapt this X thread for Threads? It's 8 tweets about how we cut cold-start time in our serverless Python runtime from 1.9s to 240ms. Keep the 1/8 numbering and the hook, add #Python #Serverless #AWS #DevOps #Performance, and put the blog link in the first reply since everyone knows Threads buries posts with links. The first tweet is: '1/8 We cut Python cold starts by 87%. Here's exactly how 🧵'",
+      "expected_output": "Rewrites for Threads: one main post under 500 characters, details in a text attachment rather than a numbered chain, one topic tag only, the link in the post by default with a conversation hook. Corrects the link-burial claim with Meta's own statements, labels it, and offers a test if they still want to compare.",
+      "files": [],
+      "expectations": [
+        "Uses exactly one topic tag rather than five hashtags.",
+        "States that Threads allows one topic tag per post.",
+        "Drops the 1/8 numbered chain in favour of a single post, a text attachment, or both.",
+        "Mentions the text attachment (up to 10,000 characters) as the place for the long-form detail.",
+        "Corrects the claim that Threads buries link posts, citing Meta or its Instagram head saying links are not deliberately downranked.",
+        "Labels the link statement as coming from Meta, or labels the burial claim as unconfirmed practitioner belief.",
+        "Places the blog link in the main post by default rather than the first reply.",
+        "Offers a test comparing link-in-post versus link-in-reply on the account's own numbers if they want to check.",
+        "Produces an actual rewritten Threads post under 500 characters.",
+        "Includes a question or claim that invites replies in the rewritten post."
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "Launch week plan for Brindle, our feature-flag SaaS (12 employees, 6 of them engineers). On Threads: the brand account posts the announcement Tuesday 9am, all 12 of us like and repost within the first 15 minutes since the first hour decides reach, and we ask our community Slack to post 'Dear Algo, show me more Brindle' so the algorithm learns. Then the brand posts 5 times a day all week. Anything to tweak?",
+      "expected_output": "Refuses the coordinated staff like-and-repost burst as fake engagement, refuses the brand Dear Algo campaign while allowing a reader's own topic request, labels the first-hour rule as unconfirmed folklore, replaces 5 brand posts a day with person-led posts at Meta's 2-5 a week guidance, and has the builder post with staff replying with disclosure.",
+      "files": [],
+      "expectations": [
+        "Advises against all employees liking and reposting in the first minutes as a coordinated push.",
+        "Cites Meta rules against fake engagement or inauthentic behaviour as the reason.",
+        "Advises against asking the community to post a Dear Algo request naming the brand.",
+        "Distinguishes a person's own topic-level Dear Algo request (such as a technology) as acceptable from a coordinated brand request.",
+        "Labels the claim that the first hour decides reach as unconfirmed or practitioner folklore.",
+        "Cites Meta's guidance of at least two to five posts a week per person, and says the problem with five brand posts a day is brand broadcast rather than volume alone.",
+        "Recommends that the engineer or person who built the feature post the announcement from their own account, with the brand account reposting.",
+        "Tells staff to answer questions in replies with a disclosure line rather than mass-liking.",
+        "Mentions that replies account for a large share (almost half) of Threads views, per Meta.",
+        "Says Meta publishes no first-hour or first-30-minutes ranking rule."
+      ]
+    },
+    {
+      "id": 5,
+      "prompt": "We're Mosscap, a small observability startup in Toronto. I want to save time: connect Buffer so every post on our X account (@mosscapio, 15k followers) automatically goes out to Threads, Bluesky and Mastodon too, including replies and quote posts. One workflow, four networks. Which Buffer settings should I use?",
+      "expected_output": "Refuses the unattended four-way mirror, especially replies and quote posts. Gives per-network rewrite rules (length, tags, links, mentions, alt text), notes Buffer drops alt text on Threads, says a person must read replies on each network, explains the Bluesky and Mastodon paths with labels, and points to the Bluesky and Mastodon playbooks.",
+      "files": [],
+      "expectations": [
+        "Recommends against an unattended automatic mirror from X to the other networks.",
+        "Says replies and quote posts should not be cross-posted.",
+        "Says Threads allows one topic tag and a text attachment instead of a numbered chain.",
+        "Says mentions or handles do not translate between networks.",
+        "Tells the user to verify that the chosen scheduler keeps alt text on Threads before relying on it.",
+        "Says to replace multiple hashtags with one topic tag on Threads.",
+        "Says a person must read and answer replies on each network.",
+        "Mentions Threads fediverse sharing or Bridgy Fed as the native or bridged route, labelled by source.",
+        "Points to samber/developer-relations-skills@bluesky-dev-playbook for Bluesky.",
+        "Points to samber/developer-relations-skills@mastodon-dev-playbook for Mastodon."
+      ]
+    },
+    {
+      "id": 6,
+      "prompt": "I need to send my VP a 6-month Threads update for Corvane (we make an open-source API gateway). Numbers: 4,200 Threads followers, and the profile shows 1,100 fediverse followers on top, so I want to headline '5,300 followers, up from zero'. Likes per post average 18. What else should go in the slide?",
+      "expected_output": "Separates Threads and fediverse followers instead of summing them, refuses a raw follower headline, and rebuilds the update around Insights metrics (views, replies, link clicks), UTM referrals and signups against a baseline, plus tests such as tagged versus untagged posts.",
+      "files": [],
+      "expectations": [
+        "Says Threads followers and fediverse followers should be reported as separate numbers.",
+        "States that Meta excludes fediverse followers from the Threads follower count.",
+        "Advises against a raw follower total as the headline.",
+        "Recommends replies per post rather than likes alone.",
+        "Recommends link clicks from Threads Insights.",
+        "Recommends UTM-tagged links to tie Threads to referral sessions or signups.",
+        "Recommends comparing against a pre-launch or earlier baseline.",
+        "Suggests comparing tagged versus untagged posts, or link-in-post versus link-in-reply.",
+        "Mentions follower demographics in Insights or its 100-follower threshold.",
+        "Breaks results down per person or per account rather than only the brand total."
+      ]
+    },
+    {
+      "id": 7,
+      "prompt": "Our CTO, Dana, has a personal Instagram with 20k followers (mostly trail running content). We're launching Pebblecast, a self-hosted CI runner, and we don't have a company Instagram. Plan: create a company Instagram today just so we can sign up the Threads brand account through it and get the verified badge, and have Dana's 20k Instagram followers carry over to her Threads so she starts big. Does that work?",
+      "expected_output": "Explains Instagram follows do not carry over, that Dana's audience is trail running not developers, that an empty Instagram created only to link Threads brings no audience, that a badge cannot be promised, and recommends Dana post from her own account as the person-led channel with a disclosure line, the brand on email signup or parked, handles claimed.",
+      "files": [],
+      "expectations": [
+        "States that Instagram followers do not carry over to Threads automatically.",
+        "Notes that Dana's Instagram audience (trail running) is not a developer audience.",
+        "Advises against creating an empty company Instagram only to link the Threads account.",
+        "Says the brand Threads account can be created with email signup.",
+        "Does not promise a verified badge, or says what Meta Verified adds on Threads is unconfirmed.",
+        "Recommends Dana post about the product from her own account as a named person.",
+        "Recommends a disclosure line in Dana's bio or posts stating she works at Pebblecast.",
+        "Mentions that creating Dana's profile from her Instagram matters for fediverse sharing eligibility, or that email-created profiles cannot share to the fediverse.",
+        "Says to claim the Pebblecast handle on Threads.",
+        "Recommends earning followers through replies in the stack's conversations in the first weeks."
+      ]
+    },
+    {
+      "id": 8,
+      "prompt": "I maintain Gantry, a Go web framework (11k stars, two maintainers, no company yet). Someone grabbed @gantry on Threads a year ago and has zero posts. I want to (1) get the handle, (2) create an official Go Community on Threads so Go devs gather there with us as admins, and (3) put $500 a month into Threads ads to grow the account fast since organic seems slow. Where do I start?",
+      "expected_output": "Says a dormant squatter holding @gantry is usually not reclaimable without impersonation or a registered mark, and gives the variant handle linked from the README and site; explains that Meta decides which topics become Communities and that growing a tag into one is a standing job promoted only when the tracker already shows, routes posting to the existing Go tag or Community first, and ties any ad spend to the go/skip verdict.",
+      "files": [],
+      "expectations": [
+        "Says an impersonation or trademark report only works if the account poses as the project or the project holds a registered mark, and that a dormant squatter is usually not reclaimable.",
+        "Recommends taking a clear handle variant in the meantime.",
+        "Recommends linking the real Threads account from the project's README or website so readers can tell it apart.",
+        "Says Meta, not the user, decides which topics become Communities.",
+        "Mentions the Communities progress tracker for topics near the threshold.",
+        "Frames growing a tag into a Community as a standing job, promoted only when the tracker already shows for the stack's tag.",
+        "Recommends posting in the existing Go topic tag or Community first rather than creating a new one.",
+        "Recommends reading a Community for about a week before posting product links, or keeping product links a small share of posts.",
+        "Says ads are outside the organic playbook and ties any ad spend to the go/skip verdict rather than to growth alone.",
+        "Recommends that a named maintainer post from a personal account rather than only a project account."
+      ]
+    }
+  ],
+  "trigger_queries": [
+    {
+      "query": "should our devtool company even be on Threads or is it a waste of time",
+      "should_trigger": true
+    },
+    {
+      "query": "we're an open source database project, is Meta's Threads worth setting up an account for?",
+      "should_trigger": true
+    },
+    {
+      "query": "our Threads posts get like 200 views each, we have 3k followers, what are we doing wrong? we sell a Kubernetes cost tool",
+      "should_trigger": true
+    },
+    {
+      "query": "which topic tag should I use on Threads for posts about Go performance",
+      "should_trigger": true
+    },
+    {
+      "query": "is it worth turning on fediverse sharing for our company Threads account so Mastodon devs can follow us",
+      "should_trigger": true
+    },
+    {
+      "query": "does Threads really bury posts with links? I'm a dev advocate and I keep putting links in the first reply",
+      "should_trigger": true
+    },
+    {
+      "query": "how do I mirror our X posts to Threads without it looking like a bot account",
+      "should_trigger": true
+    },
+    {
+      "query": "brand account vs personal account on threads for a developer advocate, what works",
+      "should_trigger": true
+    },
+    {
+      "query": "can I join or start a Community on Threads for Rust developers",
+      "should_trigger": true
+    },
+    {
+      "query": "launch plan for our CLI tool on threads.net next week",
+      "should_trigger": true
+    },
+    {
+      "query": "my boss says Threads is bigger than X now so we should move our dev marketing there, is she right",
+      "should_trigger": true
+    },
+    {
+      "query": "how often should a devrel person post on Threads to grow",
+      "should_trigger": true
+    },
+    {
+      "query": "we don't have an Instagram, can our startup still be on Threads properly?",
+      "should_trigger": true
+    },
+    {
+      "query": "how does Threads' For You feed rank posts, I want our engineering posts to reach more devs",
+      "should_trigger": true
+    },
+    {
+      "query": "best way to cross-post between Threads, Bluesky and Mastodon for an OSS maintainer",
+      "should_trigger": true
+    },
+    {
+      "query": "is Dear Algo something a devtool brand should use?",
+      "should_trigger": true
+    },
+    {
+      "query": "we're in Germany and the fediverse toggle isn't showing on our Threads account, why",
+      "should_trigger": true
+    },
+    {
+      "query": "how do I report Threads growth to my VP, followers feel like a vanity metric",
+      "should_trigger": true
+    },
+    {
+      "query": "can our staff all repost the launch on Threads in the first hour to boost it",
+      "should_trigger": true
+    },
+    {
+      "query": "threads strategy for a dev tools startup, 2 people, 3 hours a week",
+      "should_trigger": true
+    },
+    {
+      "query": "how do Mastodon users see a Threads account, will hachyderm folks be able to follow us",
+      "should_trigger": true
+    },
+    {
+      "query": "our founder has a big Instagram, should she use it for Threads to promote our API product",
+      "should_trigger": true
+    },
+    {
+      "query": "what are Threads post limits, characters, links, attachments - planning our devrel content",
+      "should_trigger": true
+    },
+    {
+      "query": "should I use the long text attachment on Threads for technical write-ups",
+      "should_trigger": true
+    },
+    {
+      "query": "Threads vs Bluesky for reaching backend developers, where should our advocate spend time",
+      "should_trigger": true
+    },
+    {
+      "query": "someone squatted our project name on Threads, what do we do and should we claim others",
+      "should_trigger": true
+    },
+    {
+      "query": "posting schedule with best times for Threads for our open source observability project",
+      "should_trigger": true
+    },
+    {
+      "query": "is Threads good for building in public as an indie dev tool maker",
+      "should_trigger": true
+    },
+    {
+      "query": "how to get our serverless platform noticed on Threads (Meta) by developers",
+      "should_trigger": true
+    },
+    {
+      "query": "does Buffer handle Threads well for a devtool account, alt text etc",
+      "should_trigger": true
+    },
+    {
+      "query": "Our @ account on threads has 40 posts and nobody replies. Kotlin library. Help",
+      "should_trigger": true
+    },
+    {
+      "query": "can a Threads account be bridged to Bluesky for our OSS project",
+      "should_trigger": true
+    },
+    {
+      "query": "would you recommend a devtool company run Threads ads or just organic",
+      "should_trigger": true
+    },
+    {
+      "query": "how should our developer advocates disclose they work for us when posting on Threads",
+      "should_trigger": true
+    },
+    {
+      "query": "is Threads worth it for a developer advocate in 2026",
+      "should_trigger": true
+    },
+    {
+      "query": "how do I get our devtool into Bluesky starter packs and dev feeds",
+      "should_trigger": false
+    },
+    {
+      "query": "set up a Mastodon account for our OSS project on fosstodon, what should we post",
+      "should_trigger": false
+    },
+    {
+      "query": "write a Python script that publishes posts to Threads via the Graph API with a long-lived token",
+      "should_trigger": false
+    },
+    {
+      "query": "build a webhook handler for Threads mentions in Node.js",
+      "should_trigger": false
+    },
+    {
+      "query": "how do I grow our devtool's X/Twitter account, threads and hooks",
+      "should_trigger": false
+    },
+    {
+      "query": "LinkedIn strategy for our developer advocate, how often to post",
+      "should_trigger": false
+    },
+    {
+      "query": "Instagram Reels strategy for our consumer fitness app",
+      "should_trigger": false
+    },
+    {
+      "query": "how to plan a quarter of devrel content across blog, YouTube and newsletter",
+      "should_trigger": false
+    },
+    {
+      "query": "help me write a weekly build-in-public update for our indie SaaS",
+      "should_trigger": false
+    },
+    {
+      "query": "our Show HN post died after 20 minutes, what happened",
+      "should_trigger": false
+    },
+    {
+      "query": "how do I post on r/programming without getting banned for self-promotion",
+      "should_trigger": false
+    },
+    {
+      "query": "our Discord server is dead, how do we revive the developer community",
+      "should_trigger": false
+    },
+    {
+      "query": "my Java thread pool deadlocks under load, how do I debug it",
+      "should_trigger": false
+    },
+    {
+      "query": "summarize this long Slack thread about the outage for me",
+      "should_trigger": false
+    },
+    {
+      "query": "how do I find who is behind an anonymous Threads account spreading claims about our company",
+      "should_trigger": false
+    },
+    {
+      "query": "cross-post my dev.to article to Hashnode and Medium with canonical URLs",
+      "should_trigger": false
+    },
+    {
+      "query": "we're hiring 3 backend engineers, how do we build an employer brand developers trust",
+      "should_trigger": false
+    },
+    {
+      "query": "write a code of conduct and moderation playbook for our Discord",
+      "should_trigger": false
+    },
+    {
+      "query": "how do I measure devrel ROI for the board",
+      "should_trigger": false
+    },
+    {
+      "query": "plan our open source launch across HN, Reddit and newsletters",
+      "should_trigger": false
+    },
+    {
+      "query": "should our CI tool sponsor KubeCon this year",
+      "should_trigger": false
+    },
+    {
+      "query": "how do I write a good email thread reply to an angry enterprise customer",
+      "should_trigger": false
+    },
+    {
+      "query": "schedule Instagram posts for our coffee shop with Buffer",
+      "should_trigger": false
+    },
+    {
+      "query": "how do I get my Bluesky bot to reply only when mentioned",
+      "should_trigger": false
+    },
+    {
+      "query": "Meta ads targeting for B2B SaaS, which audiences convert",
+      "should_trigger": false
+    },
+    {
+      "query": "which social platforms do developers actually use according to the Stack Overflow survey, for a market sizing deck",
+      "should_trigger": false
+    },
+    {
+      "query": "help me write a YouTube video script about our API",
+      "should_trigger": false
+    },
+    {
+      "query": "how do I optimize my GitHub profile README as a developer",
+      "should_trigger": false
+    },
+    {
+      "query": "translate our docs into Japanese, what's the strategy",
+      "should_trigger": false
+    },
+    {
+      "query": "set up a Mastodon instance for our company with Docker",
+      "should_trigger": false
+    },
+    {
+      "query": "how should we respond to a pile-on in our GitHub issues after a license change",
+      "should_trigger": false
+    },
+    {
+      "query": "how do I write a press pitch for TechCrunch about our devtool funding",
+      "should_trigger": false
+    },
+    {
+      "query": "Python asyncio vs threads for an I/O bound crawler",
+      "should_trigger": false
+    },
+    {
+      "query": "should our developer newsletter go weekly or monthly",
+      "should_trigger": false
+    },
+    {
+      "query": "best practices for Twitch live coding streams for devrel",
+      "should_trigger": false
+    },
+    {
+      "query": "someone took our framework's name on Threads and never posts, how do we get it back and what do we use meanwhile",
+      "should_trigger": true
+    },
+    {
+      "query": "can we start a Threads Community for Elixir developers or does Meta pick them",
+      "should_trigger": true
+    },
+    {
+      "query": "our devrel team posts 5x a day from the brand Threads account and views keep dropping, why",
+      "should_trigger": true
+    },
+    {
+      "query": "we're a Paris-based API startup, does fediverse sharing on Threads even work for us",
+      "should_trigger": true
+    },
+    {
+      "query": "draft a Threads launch post for our new Postgres extension, the engineer who built it will post it",
+      "should_trigger": true
+    },
+    {
+      "query": "find the person behind a Threads account that leaked our roadmap",
+      "should_trigger": false
+    },
+    {
+      "query": "how do I get the Threads API keyword search permission approved for my app",
+      "should_trigger": false
+    },
+    {
+      "query": "Mastodon vs Bluesky for an open source maintainer, which one should I pick",
+      "should_trigger": false
+    },
+    {
+      "query": "write a Twitter/X launch thread for our devtool",
+      "should_trigger": false
+    },
+    {
+      "query": "how do I grow my Instagram as a food blogger",
+      "should_trigger": false
+    }
+  ]
+}

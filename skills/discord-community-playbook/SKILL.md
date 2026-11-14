@@ -4,7 +4,7 @@ description: "Runs a devtool vendor's or open-source maintainer's presence on Di
 license: MIT
 metadata:
   author: Samuel Berthe
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # Discord Community Playbook
@@ -155,4 +155,5 @@ For a full plan, deliver in order (when the job is others' servers only, drop se
 - samber/developer-relations-skills@developer-feedback-loop - routing feature requests out of Discord.
 - samber/developer-relations-skills@discourse-forums-playbook - an owned async forum for answers that must live for years.
 - samber/developer-relations-skills@developer-troubleshooting-docs - turning repeated help questions into docs pages.
+- samber/developer-relations-skills@threads-dev-playbook - the public Threads channel that points new members into the server.
 - samber/developer-platform-skills@github-engagement-playbook - GitHub Discussions as the indexed support home beside Discord.
