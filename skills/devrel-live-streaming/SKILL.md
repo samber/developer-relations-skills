@@ -4,7 +4,7 @@ description: "Plans a developer-tools company's own live streaming program acros
 license: MIT
 metadata:
   author: Samuel Berthe
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # DevRel Live Streaming
@@ -218,3 +218,4 @@ A plan passes when the home platform, slot, moderator and continue bar each have
 - samber/developer-relations-skills@devrel-analytics - tagged links, signup-source fields, dashboards.
 - samber/developer-relations-skills@devrel-content-calendar - the season on the quarter's calendar.
 - samber/developer-relations-skills@build-in-public - streaming your own product's build as a founder.
+- samber/developer-relations-skills@linkedin-dev-playbook - the LinkedIn presence that promotes a LinkedIn Live Event: people-first posts, Events, Page reshares.

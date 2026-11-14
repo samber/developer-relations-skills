@@ -4,7 +4,7 @@ description: Plans a quarter of developer-relations content as a dated slot plan
 license: MIT
 metadata:
   author: Samuel Berthe
-  version: "1.0.3"
+  version: "1.0.4"
 ---
 
 # DevRel Content Calendar
@@ -210,3 +210,4 @@ Stop at plan-level metrics, and do not rebuild the following here:
 - samber/developer-relations-skills@devrel-strategy - program pillars that set the quarter's mix
 - samber/developer-relations-skills@devrel-budget-allocation - when the constraint is money rather than reviewer time
 - samber/developer-relations-skills@developer-case-study - customer story pipeline feeding this calendar's proof-content slots
+- samber/developer-relations-skills@linkedin-dev-playbook - who posts on LinkedIn, the Page's role and the weekly posting range per person
